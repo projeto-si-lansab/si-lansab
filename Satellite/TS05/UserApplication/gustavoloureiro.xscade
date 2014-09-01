@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Operator kind="node" name="gustavoloureiro">
+			<inputs>
+				<Variable name="Input1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25cf/7EAD/D64/5404b9f927e2"/>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="Output1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25ce/7EAD/D64/5404b9f9399e"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L5">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25cd/7EAD/D64/5404b9f9634b"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L5 = Input1; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L5"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="Input1"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/25ca/7EAD/D64/5404b9f94c91"/>
+					</pragmas>
+				</Equation>
+				<!-- Output1 = _L5; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Output1"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L5"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/25cb/7EAD/D64/5404b9f9784d"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/25c9/7EAD/D64/5404b9f96b2" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
+					<diagrams>
+						<NetDiagram name="diagram_gustavoloureiro_1" landscape="true" format="A4 (210 297)" oid="!ed/25cc/7EAD/D64/5404b9f92384">
+							<presentationElements>
+								<EquationGE presentable="!ed/25ca/7EAD/D64/5404b9f94c91">
+									<position>
+										<Point x="3519" y="6324"/>
+									</position>
+									<size>
+										<Size width="265" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/25cb/7EAD/D64/5404b9f9784d">
+									<position>
+										<Point x="11245" y="6324"/>
+									</position>
+									<size>
+										<Size width="317" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/25ca/7EAD/D64/5404b9f94c91" dstEquation="!ed/25cb/7EAD/D64/5404b9f9784d">
+									<positions>
+										<Point x="3784" y="6588"/>
+										<Point x="7567" y="6588"/>
+										<Point x="7567" y="6588"/>
+										<Point x="11298" y="6588"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>

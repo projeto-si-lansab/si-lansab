@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Operator kind="node" name="ts05">
+			<outputs>
+				<Variable name="ts05_layer_req_active">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2117/7EAD/D64/5404b3963a3e"/>
+					</pragmas>
+				</Variable>
+				<Variable name="ts05_layer_req_visible">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/211d/7EAD/D64/5404b3a215b1"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/20ec/7EAD/D64/5404b34732ca"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/20fa/7EAD/D64/5404b3527423"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L2 = false; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L2"/>
+					</lefts>
+					<right>
+						<ConstValue value="false"/>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/20eb/7EAD/D64/5404b34731dd"/>
+					</pragmas>
+				</Equation>
+				<!-- _L3 = fby(_L2; 1; true); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L3"/>
+					</lefts>
+					<right>
+						<!-- fby(_L2; 1; true) -->
+						<FbyOp name="1">
+							<flows>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L2"/>
+									</path>
+								</IdExpression>
+							</flows>
+							<delay>
+								<ConstValue value="1"/>
+							</delay>
+							<values>
+								<ConstValue value="true"/>
+							</values>
+						</FbyOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/20f9/7EAD/D64/5404b352338d"/>
+					</pragmas>
+				</Equation>
+				<!-- ts05_layer_req_active = _L3; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="ts05_layer_req_active"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L3"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2118/7EAD/D64/5404b3963a7f"/>
+					</pragmas>
+				</Equation>
+				<!-- ts05_layer_req_visible = _L3; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="ts05_layer_req_visible"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L3"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/211e/7EAD/D64/5404b3a22bb4"/>
+					</pragmas>
+				</Equation>
+				<!-- () = guarino_mock_operator(); -->
+				<Equation>
+					<right>
+						<!-- guarino_mock_operator() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="guarino_mock_operator"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2885/7EAD/D64/5404ba5673d6"/>
+					</pragmas>
+				</Equation>
+				<!-- () = hoffmann_mock_operator(); -->
+				<Equation>
+					<right>
+						<!-- hoffmann_mock_operator() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="hoffmann_mock_operator"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2886/7EAD/D64/5404ba56cd7"/>
+					</pragmas>
+				</Equation>
+				<!-- () = mayara_mock_operator(); -->
+				<Equation>
+					<right>
+						<!-- mayara_mock_operator() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="mayara_mock_operator"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2887/7EAD/D64/5404ba56a47"/>
+					</pragmas>
+				</Equation>
+				<!-- () = jobson_mock_operator(); -->
+				<Equation>
+					<right>
+						<!-- jobson_mock_operator() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="jobson_mock_operator"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2888/7EAD/D64/5404ba56378f"/>
+					</pragmas>
+				</Equation>
+				<!-- () = kalil_mock_operator(); -->
+				<Equation>
+					<right>
+						<!-- kalil_mock_operator() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="kalil_mock_operator"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2889/7EAD/D64/5404ba56220"/>
+					</pragmas>
+				</Equation>
+				<!-- () = gustavoloureiro_mock_operator(); -->
+				<Equation>
+					<right>
+						<!-- gustavoloureiro_mock_operator() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="gustavoloureiro_mock_operator"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/288a/7EAD/D64/5404ba56219c"/>
+					</pragmas>
+				</Equation>
+				<!-- () = leonardo_mock_operator(); -->
+				<Equation>
+					<right>
+						<!-- leonardo_mock_operator() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="leonardo_mock_operator"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/288b/7EAD/D64/5404ba56224b"/>
+					</pragmas>
+				</Equation>
+				<!-- () = rhuan_mock_operator(); -->
+				<Equation>
+					<right>
+						<!-- rhuan_mock_operator() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="rhuan_mock_operator"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/288c/7EAD/D64/5404ba562cc8"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/20e2/7EAD/D64/5404b2a84a8f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
+					<diagrams>
+						<NetDiagram name="diagram_ts05_1" landscape="true" format="A4 (210 297)" oid="!ed/20e3/7EAD/D64/5404b2a85d3a">
+							<presentationElements>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/20eb/7EAD/D64/5404b34731dd">
+									<position>
+										<Point x="1773" y="1138"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/20f9/7EAD/D64/5404b352338d">
+									<position>
+										<Point x="3281" y="794"/>
+									</position>
+									<size>
+										<Size width="1005" height="1005"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/20eb/7EAD/D64/5404b34731dd" dstEquation="!ed/20f9/7EAD/D64/5404b352338d">
+									<positions>
+										<Point x="1984" y="1296"/>
+										<Point x="2566" y="1296"/>
+										<Point x="2566" y="1296"/>
+										<Point x="3281" y="1296"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/2118/7EAD/D64/5404b3963a7f">
+									<position>
+										<Point x="5874" y="556"/>
+									</position>
+									<size>
+										<Size width="318" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/211e/7EAD/D64/5404b3a22bb4">
+									<position>
+										<Point x="5900" y="1508"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/20f9/7EAD/D64/5404b352338d" dstEquation="!ed/211e/7EAD/D64/5404b3a22bb4">
+									<positions>
+										<Point x="4286" y="1296"/>
+										<Point x="5530" y="1296"/>
+										<Point x="5530" y="1773"/>
+										<Point x="5953" y="1773"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/20f9/7EAD/D64/5404b352338d" dstEquation="!ed/2118/7EAD/D64/5404b3963a7f">
+									<positions>
+										<Point x="4286" y="1296"/>
+										<Point x="5530" y="1296"/>
+										<Point x="5530" y="820"/>
+										<Point x="5927" y="820"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/2885/7EAD/D64/5404ba5673d6">
+									<position>
+										<Point x="1984" y="2884"/>
+									</position>
+									<size>
+										<Size width="3588" height="1418"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2886/7EAD/D64/5404ba56cd7">
+									<position>
+										<Point x="1984" y="4815"/>
+									</position>
+									<size>
+										<Size width="3588" height="1418"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2887/7EAD/D64/5404ba56a47">
+									<position>
+										<Point x="1984" y="6747"/>
+									</position>
+									<size>
+										<Size width="3588" height="1418"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2888/7EAD/D64/5404ba56378f">
+									<position>
+										<Point x="1984" y="8678"/>
+									</position>
+									<size>
+										<Size width="3588" height="1418"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2889/7EAD/D64/5404ba56220">
+									<position>
+										<Point x="1984" y="10610"/>
+									</position>
+									<size>
+										<Size width="3588" height="1419"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/288a/7EAD/D64/5404ba56219c">
+									<position>
+										<Point x="1984" y="12541"/>
+									</position>
+									<size>
+										<Size width="3588" height="1418"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/288b/7EAD/D64/5404ba56224b">
+									<position>
+										<Point x="1984" y="14473"/>
+									</position>
+									<size>
+										<Size width="3588" height="1419"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/288c/7EAD/D64/5404ba562cc8">
+									<position>
+										<Point x="1984" y="16404"/>
+									</position>
+									<size>
+										<Size width="3588" height="1418"/>
+									</size>
+								</EquationGE>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+		<Type name="T_String">
+			<definition>
+				<Table>
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="char"/>
+							</type>
+						</NamedType>
+					</type>
+					<size>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="STR_SIZE"/>
+							</path>
+						</IdExpression>
+					</size>
+				</Table>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/2afe/7EAD/D64/5404c0834f26"/>
+			</pragmas>
+		</Type>
+		<Constant name="STR_SIZE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="32"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2aff/7EAD/D64/5404c0b6302d"/>
+			</pragmas>
+		</Constant>
+		<Constant name="TEXT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['T', 'E', 'X', 'T', 'O', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ... -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'T'"/>
+						<ConstValue value="'E'"/>
+						<ConstValue value="'X'"/>
+						<ConstValue value="'T'"/>
+						<ConstValue value="'O'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2c08/7EAD/D64/5404c2da5fa2"/>
+			</pragmas>
+		</Constant>
+	</declarations>
+</File>

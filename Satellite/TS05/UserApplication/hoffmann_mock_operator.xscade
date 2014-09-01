@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Operator kind="node" name="hoffmann_mock_operator">
+			<locals>
+				<Variable name="_L4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23ac/7EAD/D64/5404b9f05796"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23ad/7EAD/D64/5404b9f048c2"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23ae/7EAD/D64/5404b9f01236"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23af/7EAD/D64/5404b9f05921"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L5">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23b0/7EAD/D64/5404b9f06bff"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L6">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="T_String"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2922/7EAD/D64/5404bca03f8f"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L5 = hoffmann(_L1); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L5"/>
+					</lefts>
+					<right>
+						<!-- hoffmann(_L1) -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="hoffmann"/>
+									</operator>
+								</OpCall>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/23a8/7EAD/D64/5404b9f05b96"/>
+					</pragmas>
+				</Equation>
+				<!-- _L1, _L2, _L3, _L4, _L6 = hoffmann_mock_inputs(); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L1"/>
+						<VariableRef name="_L2"/>
+						<VariableRef name="_L3"/>
+						<VariableRef name="_L4"/>
+						<VariableRef name="_L6"/>
+					</lefts>
+					<right>
+						<!-- hoffmann_mock_inputs() -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="hoffmann_mock_inputs"/>
+									</operator>
+								</OpCall>
+							</operator>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/23a9/7EAD/D64/5404b9f0786"/>
+					</pragmas>
+				</Equation>
+				<!-- () = hoffmann_mock_outputs(_L5, _L2, _L3, _L4, _L6); -->
+				<Equation>
+					<right>
+						<!-- hoffmann_mock_outputs(_L5, _L2, _L3, _L4, _L6) -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="hoffmann_mock_outputs"/>
+									</operator>
+								</OpCall>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L5"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L2"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L4"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L6"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/23aa/7EAD/D64/5404b9f0155d"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/23a7/7EAD/D64/5404b9f077de" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
+					<diagrams>
+						<NetDiagram name="diagram_hoffmann_mock_operator_1" landscape="true" format="A4 (210 297)" oid="!ed/23ab/7EAD/D64/5404b9f03217">
+							<presentationElements>
+								<EquationGE presentable="!ed/23a8/7EAD/D64/5404b9f05b96">
+									<position>
+										<Point x="7329" y="2990"/>
+									</position>
+									<size>
+										<Size width="1789" height="1418"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/23a9/7EAD/D64/5404b9f0786">
+									<position>
+										<Point x="741" y="4392"/>
+									</position>
+									<size>
+										<Size width="2794" height="4699"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/23aa/7EAD/D64/5404b9f0155d">
+									<position>
+										<Point x="12745" y="4384"/>
+									</position>
+									<size>
+										<Size width="2715" height="4726"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/23a9/7EAD/D64/5404b9f0786" dstEquation="!ed/23a8/7EAD/D64/5404b9f05b96">
+									<positions>
+										<Point x="3545" y="5186"/>
+										<Point x="5424" y="5186"/>
+										<Point x="5424" y="3704"/>
+										<Point x="7329" y="3704"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="2" rightExprIndex="2" srcEquation="!ed/23a9/7EAD/D64/5404b9f0786" dstEquation="!ed/23aa/7EAD/D64/5404b9f0155d">
+									<positions>
+										<Point x="3545" y="5953"/>
+										<Point x="8149" y="5953"/>
+										<Point x="8149" y="5953"/>
+										<Point x="12753" y="5953"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="3" rightExprIndex="3" srcEquation="!ed/23a9/7EAD/D64/5404b9f0786" dstEquation="!ed/23aa/7EAD/D64/5404b9f0155d">
+									<positions>
+										<Point x="3545" y="6747"/>
+										<Point x="8149" y="6747"/>
+										<Point x="8149" y="6747"/>
+										<Point x="12753" y="6747"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="4" rightExprIndex="4" srcEquation="!ed/23a9/7EAD/D64/5404b9f0786" dstEquation="!ed/23aa/7EAD/D64/5404b9f0155d">
+									<positions>
+										<Point x="3545" y="7541"/>
+										<Point x="8149" y="7541"/>
+										<Point x="8149" y="7541"/>
+										<Point x="12753" y="7541"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="5" rightExprIndex="5" srcEquation="!ed/23a9/7EAD/D64/5404b9f0786" dstEquation="!ed/23aa/7EAD/D64/5404b9f0155d">
+									<positions>
+										<Point x="3545" y="8308"/>
+										<Point x="8149" y="8308"/>
+										<Point x="8149" y="8308"/>
+										<Point x="12753" y="8308"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/23a8/7EAD/D64/5404b9f05b96" dstEquation="!ed/23aa/7EAD/D64/5404b9f0155d">
+									<positions>
+										<Point x="9128" y="3704"/>
+										<Point x="10927" y="3704"/>
+										<Point x="10927" y="5186"/>
+										<Point x="12753" y="5186"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>
