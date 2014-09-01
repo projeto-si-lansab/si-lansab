@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?dom version="6.4.2" ?>
+
+<?scade_release version="6.4.2" ?>
+
+<specification>
+    <IDE>
+        <environment_id value="-2133961615"/>
+        <ratio horizontal="1" vertical="1"/>
+        <reporter authors="Luiz Guarino, Luiz Hoffmann, Mayara Valéria, Jobson Gilberto, Kalil Gebrim, Leonardo Cesar, Gustavo Loureiro, Rhuan Carlos" classification="Academic Project" company="ITA - Instituto Tecnológico de Aeronáutica" date="2014, December 1" distribution_list="" index="" reference="" subtitle="Sattelite - TS05" title="SI-LANSAB">
+            <description>Definition File report for SI-LANSAB Sattelite Ground Control Center (Team Segment 05) display.</description>
+            <summary>Definition File for SI-LANSAB Sattelite Ground Control Center.
+Project for academic purpose only.</summary>
+        </reporter>
+    </IDE>
+    <symbology>
+        <dimension height="512" width="1024"/>
+    </symbology>
+    <A661 library_version="1" supp_version="4">
+        <intprop name="ApplicationId">1</intprop>
+    </A661>
+    <children>
+        <A661Layer name="ts05_layer" oid="483fe5bd-c6d9-4e49-b9c8-4405fb885559">
+            <IDE>
+                <ratio horizontal="20" vertical="20"/>
+            </IDE>
+            <model>
+                <intprop name="LayerId">1</intprop>
+                <intprop name="ContextNumber">0</intprop>
+                <intprop name="Width">20480</intprop>
+                <intprop name="Height">10240</intprop>
+            </model>
+            <children>
+                <widget name="BasicContainer_ts05" oid="5afe9665-3b98-4982-b3a2-e26d1f422a4d" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">1</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+                <widget name="BasicContainer_jobson" oid="81cb3d7f-ef11-47a6-b2ee-e6b3421e791d" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">1000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+                <widget name="BasicContainer_kalil" oid="f080553c-fd43-4d50-84c5-61b0a55a669d" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">2000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+                <widget name="BasicContainer_gustavoloureiro" oid="96768178-9f1e-4f0c-9069-32303b400b71" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">3000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+                <widget name="BasicContainer_leonardo" oid="7f6503c6-85cd-4bb6-8c6d-e8f89a9888ae" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">4000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+                <widget name="BasicContainer_rhuan" oid="a8a4affb-744d-4bc5-94ce-150a3d8e0eba" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">5000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+                <widget name="BasicContainer_guarino" oid="fbcdeb10-ab64-41f0-be87-ff9c36a343b4" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">6000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+                <widget name="BasicContainer_hoffmann" oid="67879b5f-3b97-4945-be93-fc2ca9c4cfd9" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">7000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+                <widget name="BasicContainer_mayara" oid="afac4967-cc17-40b6-b4ea-5377545a5538" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">8000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children/>
+                </widget>
+            </children>
+        </A661Layer>
+    </children>
+</specification>
+
+<!-- crc32 : 1697395692 -->
+
