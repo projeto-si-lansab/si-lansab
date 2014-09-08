@@ -12,12 +12,216 @@
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="SSStart" type="bool" oid="!ed/40a2/DBE/AB0/540b94b76558" instancepath="ts05/"/>
+						<Variable name="CDS_SatteliteStatus_InitializationButton_Pressed" type="bool" oid="!ed/4aef/19ED/1BEC/540ccb6711bc" instancepath="ts05/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="ts05_layer_req_active" type="bool" oid="!ed/2117/7EAD/D64/5404b3963a3e" instancepath="ts05/"/>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1012" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="CDS_EquipmentStatus_GyroscopeButton_Pressed" type="bool" oid="!ed/4641/44E0/1ABC/540d27d939c4" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1022" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="CDS_EquipmentStatus_HorizonSensorButton_Pressed" type="bool" oid="!ed/464e/44E0/1ABC/540d28237d86" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1032" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="CDS_EquipmentStatus_PropellersButton_Pressed" type="bool" oid="!ed/465b/44E0/1ABC/540d28432ee" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1042" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="CDS_EquipmentStatus_CameraButton_Pressed" type="bool" oid="!ed/4662/44E0/1ABC/540d28506ab7" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7502" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Ejected">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Ejection_Signal" type="bool" oid="!ed/4afc/19ED/1BEC/540ccf866f41" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7503" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Initialization_Success">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Initialization_Success" type="bool" oid="!ed/4b03/19ED/1BEC/540ccf8d6140" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7504" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Initialization_Fail">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Initialization_Fail" type="bool" oid="!ed/4b10/19ED/1BEC/540cd0142b4d" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1502" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="OperationMode">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_OperationMode_Received" type="bool" oid="!ed/4778/44E0/1ABC/540d2e1455d1" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1502" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="OperationMode">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_OperationMode_Value" type="int" oid="!ed/4779/44E0/1ABC/540d2e2c61be" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1512" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="ComboBox">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_GyroscopeState_Received" type="bool" oid="!ed/4b09/44E0/1ABC/540d3119115f" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1512" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="ComboBox">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_GyroscopeState_Value" type="int" oid="!ed/4b0a/44E0/1ABC/540d312b65e0" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1522" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="ComboBox">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_HorizonSensorState_Received" type="bool" oid="!ed/4b18/44E0/1ABC/540d3140719b" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1522" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="ComboBox">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_HorizonSensorState_Value" type="int" oid="!ed/4b1e/44E0/1ABC/540d31407d16" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1532" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="ComboBox">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_PropellersState_Received" type="bool" oid="!ed/4b24/44E0/1ABC/540d31431cdb" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1532" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="ComboBox">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_PropellersState_Value" type="int" oid="!ed/4b2a/44E0/1ABC/540d31433704" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1542" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="ComboBox">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_CameraState_Received" type="bool" oid="!ed/4b30/44E0/1ABC/540d31441e7e" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1542" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="ComboBox">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_CameraState_Value" type="int" oid="!ed/4b36/44E0/1ABC/540d31443484" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_Layer_Req_Active" type="bool" oid="!ed/2117/7EAD/D64/5404b3963a3e" instancepath="ts05/"/>
 					</output>
 					<inputs>
 						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
@@ -29,7 +233,7 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="ts05_layer_req_visible" type="bool" oid="!ed/211d/7EAD/D64/5404b3a215b1" instancepath="ts05/"/>
+						<Variable name="CDS_Layer_Req_Visible" type="bool" oid="!ed/211d/7EAD/D64/5404b3a215b1" instancepath="ts05/"/>
 					</output>
 					<inputs>
 						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
@@ -41,30 +245,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="SSEmit" type="bool" oid="!ed/418f/DBE/AB0/540b97b0608e" instancepath="ts05/"/>
+						<Variable name="CDS_Emit" type="bool" oid="!ed/418f/DBE/AB0/540b97b0608e" instancepath="ts05/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7012" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircle">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7012" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircle">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
 						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7022" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7023" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourBackground">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7023" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="ContourBackground">
 							<A661Data>
 								<Emit/>
 							</A661Data>
@@ -74,17 +258,107 @@
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7024" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7011" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Label">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
 						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7022" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7011" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="LED">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7501" ParameterIdent="A661_ENABLE" WidgetType="BasicContainer" WidgetName="SatelliteStatus_Test">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7501" ParameterIdent="A661_VISIBLE" WidgetType="BasicContainer" WidgetName="SatelliteStatus_Test">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7011" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpArcCircle" WidgetName="LED">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7501" ParameterIdent="A661_POS_XY" WidgetType="BasicContainer" WidgetName="SatelliteStatus_Test">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1501" ParameterIdent="A661_ENABLE" WidgetType="BasicContainer" WidgetName="EquipmentStatus_Test">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1501" ParameterIdent="A661_VISIBLE" WidgetType="BasicContainer" WidgetName="EquipmentStatus_Test">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1501" ParameterIdent="A661_POS_XY" WidgetType="BasicContainer" WidgetName="EquipmentStatus_Test">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1012" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1012" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1014" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1022" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1022" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1024" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1032" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1032" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1034" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1042" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1042" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1044" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
 							<A661Data>
 								<Emit/>
 							</A661Data>
@@ -93,7 +367,36 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="SSButtonEnabled" type="int" oid="!ed/3aff/6B22/444/540c606e16e4" instancepath="ts05/"/>
+						<Variable name="CDS_SatteliteStatus_String_Size" type="int" oid="!ed/7c7c/19ED/1BEC/540d16ced7f" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7022" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_SatteliteStatus_EjectionLED_Color" type="int" oid="!ed/4190/DBE/AB0/540b97b66dbb" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7011" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="LED">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7011" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpArcCircle" WidgetName="LED">
+							<A661Data>
+								<DataField value="ColorIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_SatteliteStatus_InitializationButton_Enabled" type="int" oid="!ed/3aff/6B22/444/540c606e16e4" instancepath="ts05/"/>
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7022" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
@@ -105,64 +408,85 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="SSColor" type="int" oid="!ed/4190/DBE/AB0/540b97b66dbb" instancepath="ts05/"/>
+						<Variable name="CDS_SatteliteStatus_InitializationButton_Action" type="char^16" oid="!ed/4666/6B22/444/540c74731ff5" instancepath="ts05/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7012" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircle">
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7022" ParameterIdent="A661_STRING" Size="16" WidgetType="PushButton" WidgetName="PushButton">
 							<A661Data>
-								<DataField value="ColorIndex"/>
+								<DataField value="LabelString"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7012" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircle">
-							<A661Data>
-								<DataField value="FillIndex"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7023" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourBackground">
-							<A661Data>
-								<DataField value="ColorIndex"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7023" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="ContourBackground">
-							<A661Data>
-								<DataField value="FillIndex"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_SatteliteStatus_InitializationButton_Contour" type="int" oid="!ed/4ac6/19ED/1BEC/540cca0a5821" instancepath="ts05/"/>
+					</output>
+					<inputs>
 						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7024" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
 							<A661Data>
 								<DataField value="ColorIndex"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7024" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentsStatus_String_Size" type="int" oid="!ed/473f/44E0/1ABC/540d2b653314" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1012" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
 							<A661Data>
-								<DataField value="FillIndex"/>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1022" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1032" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1042" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="String_size"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="SSStrSize" type="int" oid="!ed/41bc/DBE/AB0/540b996d1aca" instancepath="ts05/"/>
+						<Variable name="CDS_EquipmentStatus_GyroscopeButton_Enabled" type="int" oid="!ed/4669/44E0/1ABC/540d29116ce2" instancepath="ts05/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7011" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Label">
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1012" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
 							<A661Data>
-								<DataField value="String_size"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7022" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
-							<A661Data>
-								<DataField value="String_size"/>
+								<DataField value="Enable"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="SSStatusStr" type="char^10" oid="!ed/41a7/6B22/444/540c730d732d" instancepath="ts05/"/>
+						<Variable name="CDS_EquipmentStatus_GyroscopeButton_Contour" type="int" oid="!ed/466f/44E0/1ABC/540d29331407" instancepath="ts05/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7011" ParameterIdent="A661_STRING" Size="10" WidgetType="Label" WidgetName="Label">
+						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1014" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
+							<A661Data>
+								<DataField value="ColorIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_GyroscopeButton_Label" type="char^13" oid="!ed/4675/44E0/1ABC/540d29352ec6" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1012" ParameterIdent="A661_STRING" Size="13" WidgetType="PushButton" WidgetName="PushButton">
 							<A661Data>
 								<DataField value="LabelString"/>
 							</A661Data>
@@ -171,12 +495,204 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="SSButtonStr" type="char^10" oid="!ed/4666/6B22/444/540c74731ff5" instancepath="ts05/"/>
+						<Variable name="CDS_EquipmentStatus_HorizonSensorButton_Enabled" type="int" oid="!ed/4699/44E0/1ABC/540d295229e8" instancepath="ts05/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7022" ParameterIdent="A661_STRING" Size="10" WidgetType="PushButton" WidgetName="PushButton">
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1022" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="Enable"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_HorizonSensorButton_Contour" type="int" oid="!ed/469f/44E0/1ABC/540d29522f0c" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1024" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
+							<A661Data>
+								<DataField value="ColorIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_HorizonSensorButton_Label" type="char^13" oid="!ed/46a5/44E0/1ABC/540d295227c8" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1022" ParameterIdent="A661_STRING" Size="13" WidgetType="PushButton" WidgetName="PushButton">
 							<A661Data>
 								<DataField value="LabelString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_PropellersButton_Enabled" type="int" oid="!ed/46ab/44E0/1ABC/540d2954220e" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1032" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="Enable"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_PropellersButton_Contour" type="int" oid="!ed/46b1/44E0/1ABC/540d29542747" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1034" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
+							<A661Data>
+								<DataField value="ColorIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_PropellersButton_Label" type="char^13" oid="!ed/46b7/44E0/1ABC/540d29546fc" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1032" ParameterIdent="A661_STRING" Size="13" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="LabelString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_CameraButton_Enabled" type="int" oid="!ed/46bd/44E0/1ABC/540d2955434a" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1042" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="Enable"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_CameraButton_Contour" type="int" oid="!ed/46c3/44E0/1ABC/540d29553f4a" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1044" ParameterIdent="A661_COLOR_INDEX" WidgetType="GpRectangle" WidgetName="ContourForeground">
+							<A661Data>
+								<DataField value="ColorIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_EquipmentStatus_CameraButton_Label" type="char^13" oid="!ed/46c9/44E0/1ABC/540d29552efc" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1042" ParameterIdent="A661_STRING" Size="13" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="LabelString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SS_Visible" type="bool" oid="!ed/4c74/19ED/1BEC/540cd21f545f" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7501" ParameterIdent="A661_VISIBLE" WidgetType="BasicContainer" WidgetName="SatelliteStatus_Test">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SS_Enabled" type="int" oid="!ed/5048/19ED/1BEC/540cd98f6fe6" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7501" ParameterIdent="A661_ENABLE" WidgetType="BasicContainer" WidgetName="SatelliteStatus_Test">
+							<A661Data>
+								<DataField value="Enable"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SS_X" type="int" oid="!ed/7e06/19ED/1BEC/540d22c526b6" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="PosX" type="long" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7501" ParameterIdent="A661_POS_XY" WidgetType="BasicContainer" WidgetName="SatelliteStatus_Test">
+							<A661Data>
+								<DataField value="PosX"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SS_Y" type="int" oid="!ed/7e07/19ED/1BEC/540d22d060bf" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="PosY" type="long" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7501" ParameterIdent="A661_POS_XY" WidgetType="BasicContainer" WidgetName="SatelliteStatus_Test">
+							<A661Data>
+								<DataField value="PosY"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_ES_Visible" type="bool" oid="!ed/45a0/44E0/1ABC/540d24cb5a3c" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1501" ParameterIdent="A661_VISIBLE" WidgetType="BasicContainer" WidgetName="EquipmentStatus_Test">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_ES_Enabled" type="int" oid="!ed/45a6/44E0/1ABC/540d24cb3dcf" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1501" ParameterIdent="A661_ENABLE" WidgetType="BasicContainer" WidgetName="EquipmentStatus_Test">
+							<A661Data>
+								<DataField value="Enable"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_ES_X" type="int" oid="!ed/45ac/44E0/1ABC/540d24cb2076" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="PosX" type="long" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1501" ParameterIdent="A661_POS_XY" WidgetType="BasicContainer" WidgetName="EquipmentStatus_Test">
+							<A661Data>
+								<DataField value="PosX"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_ES_Y" type="int" oid="!ed/45b2/44E0/1ABC/540d24cb35c7" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="PosY" type="long" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1501" ParameterIdent="A661_POS_XY" WidgetType="BasicContainer" WidgetName="EquipmentStatus_Test">
+							<A661Data>
+								<DataField value="PosY"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>

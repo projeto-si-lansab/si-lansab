@@ -51,18 +51,6 @@
 						<ed:Variable oid="!ed/4569/3FE3/1B00/5405162e6f75"/>
 					</pragmas>
 				</Variable>
-				<Variable name="Input5">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="T_String"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/456a/3FE3/1B00/5405162e4ecb"/>
-					</pragmas>
-				</Variable>
 			</inputs>
 			<outputs>
 				<Variable name="Output1">
@@ -113,18 +101,6 @@
 						<ed:Variable oid="!ed/4564/3FE3/1B00/5405162e4338"/>
 					</pragmas>
 				</Variable>
-				<Variable name="Output5">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="T_String"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/4565/3FE3/1B00/5405162e4da0"/>
-					</pragmas>
-				</Variable>
 			</outputs>
 			<locals>
 				<Variable name="_L5">
@@ -173,18 +149,6 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/455f/3FE3/1B00/5405162e5835"/>
-					</pragmas>
-				</Variable>
-				<Variable name="_L13">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="T_String"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/4560/3FE3/1B00/5405162e403f"/>
 					</pragmas>
 				</Variable>
 			</locals>
@@ -269,22 +233,6 @@
 						<ed:Equation oid="!ed/4555/3FE3/1B00/5405162e7b04"/>
 					</pragmas>
 				</Equation>
-				<!-- _L13 = Input5; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="_L13"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="Input5"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/4556/3FE3/1B00/5405162e17a0"/>
-					</pragmas>
-				</Equation>
 				<!-- Output2 = _L10; -->
 				<Equation>
 					<lefts>
@@ -333,22 +281,6 @@
 						<ed:Equation oid="!ed/4559/3FE3/1B00/5405162e2ca8"/>
 					</pragmas>
 				</Equation>
-				<!-- Output5 = _L13; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Output5"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L13"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/455a/3FE3/1B00/5405162e4c48"/>
-					</pragmas>
-				</Equation>
 			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/4550/3FE3/1B00/5405162e50f5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -395,14 +327,6 @@
 										<Size width="265" height="502"/>
 									</size>
 								</EquationGE>
-								<EquationGE presentable="!ed/4556/3FE3/1B00/5405162e17a0">
-									<position>
-										<Point x="3519" y="10134"/>
-									</position>
-									<size>
-										<Size width="265" height="503"/>
-									</size>
-								</EquationGE>
 								<EquationGE presentable="!ed/4557/3FE3/1B00/5405162e14f2">
 									<position>
 										<Point x="11245" y="7329"/>
@@ -427,14 +351,6 @@
 										<Size width="318" height="503"/>
 									</size>
 								</EquationGE>
-								<EquationGE presentable="!ed/455a/3FE3/1B00/5405162e4c48">
-									<position>
-										<Point x="11139" y="10134"/>
-									</position>
-									<size>
-										<Size width="317" height="503"/>
-									</size>
-								</EquationGE>
 								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4554/3FE3/1B00/5405162e17d3" dstEquation="!ed/4558/3FE3/1B00/5405162e7277">
 									<positions>
 										<Point x="3731" y="8652"/>
@@ -451,19 +367,11 @@
 										<Point x="11139" y="9525"/>
 									</positions>
 								</Edge>
-								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4556/3FE3/1B00/5405162e17a0" dstEquation="!ed/455a/3FE3/1B00/5405162e4c48">
-									<positions>
-										<Point x="3784" y="10398"/>
-										<Point x="7488" y="10398"/>
-										<Point x="7488" y="10398"/>
-										<Point x="11192" y="10398"/>
-									</positions>
-								</Edge>
 								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4551/3FE3/1B00/5405162e308f" dstEquation="!ed/4552/3FE3/1B00/5405162e79f3">
 									<positions>
 										<Point x="3784" y="6588"/>
-										<Point x="7567" y="6588"/>
-										<Point x="7567" y="6588"/>
+										<Point x="7541" y="6588"/>
+										<Point x="7541" y="6588"/>
 										<Point x="11298" y="6588"/>
 									</positions>
 								</Edge>
