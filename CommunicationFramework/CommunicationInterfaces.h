@@ -30,6 +30,7 @@ typedef struct {
 
 typedef struct {
     /*TS02 inputs*/
+    kcg_bool EjectionSignal;
 } TS02_INPUT_INTERFACE;
 
 typedef struct {
