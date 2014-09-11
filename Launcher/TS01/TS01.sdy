@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="Main" oid="!ed/9/76C2/2290/540d0ce92b29">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="Emit2CDS" type="bool" oid="!ed/77/76C2/2290/540d0e3f1156" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="DefinitionFile\DisplayTS01_V1.1.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="49" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Speed">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Layer1Active" type="bool" oid="!ed/96/76C2/2290/540d0ec73f97" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="DefinitionFile\DisplayTS01_V1.1.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_ACTIVE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Layer1Visible" type="bool" oid="!ed/97/76C2/2290/540d0ed1329b" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="DefinitionFile\DisplayTS01_V1.1.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Speed_OUT" type="real" oid="!ed/a3/3814/AAC/54110e353d7f" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="DefinitionFile\DisplayTS01_V1.1.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="49" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Speed">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>
