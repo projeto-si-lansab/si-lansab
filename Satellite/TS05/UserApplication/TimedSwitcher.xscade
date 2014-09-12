@@ -37,6 +37,12 @@
 							</type>
 						</NamedType>
 					</type>
+					<default>
+						<ConstValue value="0"/>
+					</default>
+					<last>
+						<ConstValue value="0"/>
+					</last>
 					<pragmas>
 						<ed:Variable oid="!ed/2978/3F78/1C64/540873435cc1"/>
 					</pragmas>
@@ -115,18 +121,6 @@
 						<ed:Variable oid="!ed/2881/3F78/1C64/540870c34cc9"/>
 					</pragmas>
 				</Variable>
-				<Variable name="_L8">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="bool"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/2885/3F78/1C64/540870c35f96"/>
-					</pragmas>
-				</Variable>
 				<Variable name="_L10">
 					<type>
 						<NamedType>
@@ -173,6 +167,18 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/29bd/3F78/1C64/540874067cf9"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L8">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2885/3F78/1C64/540870c35f96"/>
 					</pragmas>
 				</Variable>
 			</locals>
@@ -311,33 +317,6 @@
 						<ed:Equation oid="!ed/2880/3F78/1C64/540870c360e5"/>
 					</pragmas>
 				</Equation>
-				<!-- _L8 = fby(_L10; 1; true); -->
-				<Equation>
-					<lefts>
-						<VariableRef name="_L8"/>
-					</lefts>
-					<right>
-						<!-- fby(_L10; 1; true) -->
-						<FbyOp name="3">
-							<flows>
-								<IdExpression>
-									<path>
-										<ConstVarRef name="_L10"/>
-									</path>
-								</IdExpression>
-							</flows>
-							<delay>
-								<ConstValue value="1"/>
-							</delay>
-							<values>
-								<ConstValue value="true"/>
-							</values>
-						</FbyOp>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/2884/3F78/1C64/540870c32d6"/>
-					</pragmas>
-				</Equation>
 				<!-- _L10 = _L6 >= _L2; -->
 				<Equation>
 					<lefts>
@@ -433,6 +412,33 @@
 						<ed:Equation oid="!ed/29c2/3F78/1C64/5408742965e2"/>
 					</pragmas>
 				</Equation>
+				<!-- _L8 = fby(_L10; 1; false); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L8"/>
+					</lefts>
+					<right>
+						<!-- fby(_L10; 1; false) -->
+						<FbyOp name="3">
+							<flows>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L10"/>
+									</path>
+								</IdExpression>
+							</flows>
+							<delay>
+								<ConstValue value="1"/>
+							</delay>
+							<values>
+								<ConstValue value="false"/>
+							</values>
+						</FbyOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2884/3F78/1C64/540870c32d6"/>
+					</pragmas>
+				</Equation>
 			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/2976/3F78/1C64/5408734366" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -487,14 +493,6 @@
 										<Size width="1772" height="1402"/>
 									</size>
 								</EquationGE>
-								<EquationGE presentable="!ed/2884/3F78/1C64/540870c32d6">
-									<position>
-										<Point x="1164" y="2223"/>
-									</position>
-									<size>
-										<Size width="1005" height="1005"/>
-									</size>
-								</EquationGE>
 								<EquationGE presentable="!ed/2888/3F78/1C64/540870c3a7c">
 									<position>
 										<Point x="7276" y="2117"/>
@@ -503,24 +501,6 @@
 										<Size width="1005" height="662"/>
 									</size>
 								</EquationGE>
-								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2888/3F78/1C64/540870c3a7c" dstEquation="!ed/2884/3F78/1C64/540870c32d6">
-									<positions>
-										<Point x="8281" y="2461"/>
-										<Point x="8467" y="2461"/>
-										<Point x="8467" y="1826"/>
-										<Point x="873" y="1826"/>
-										<Point x="873" y="2725"/>
-										<Point x="1164" y="2725"/>
-									</positions>
-								</Edge>
-								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2884/3F78/1C64/540870c32d6" dstEquation="!ed/2880/3F78/1C64/540870c360e5">
-									<positions>
-										<Point x="2170" y="2725"/>
-										<Point x="2540" y="2725"/>
-										<Point x="2540" y="2725"/>
-										<Point x="2990" y="2725"/>
-									</positions>
-								</Edge>
 								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2880/3F78/1C64/540870c360e5" dstEquation="!ed/2888/3F78/1C64/540870c3a7c">
 									<positions>
 										<Point x="4763" y="3175"/>
@@ -631,6 +611,32 @@
 										<Point x="12568" y="3731"/>
 										<Point x="12568" y="3731"/>
 										<Point x="13070" y="3731"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/2884/3F78/1C64/540870c32d6">
+									<position>
+										<Point x="1164" y="2223"/>
+									</position>
+									<size>
+										<Size width="1005" height="1005"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2888/3F78/1C64/540870c3a7c" dstEquation="!ed/2884/3F78/1C64/540870c32d6">
+									<positions>
+										<Point x="8281" y="2461"/>
+										<Point x="8467" y="2461"/>
+										<Point x="8467" y="1826"/>
+										<Point x="873" y="1826"/>
+										<Point x="873" y="2725"/>
+										<Point x="1164" y="2725"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2884/3F78/1C64/540870c32d6" dstEquation="!ed/2880/3F78/1C64/540870c360e5">
+									<positions>
+										<Point x="2170" y="2725"/>
+										<Point x="2540" y="2725"/>
+										<Point x="2540" y="2725"/>
+										<Point x="2990" y="2725"/>
 									</positions>
 								</Edge>
 							</presentationElements>
