@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="110" defaultConfiguration="21">
+<Project id="1" oid_count="124" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -283,7 +283,7 @@
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="98" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
-			<value>DefinitionFile\DisplayTS01_V1.1.sgfx</value>
+			<value>DefinitionFile\DisplayTS01.sgfx</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="99" name="@SCADE:CHECKED">
@@ -309,6 +309,10 @@
 			<value></value>
 			<configuration>13</configuration>
 		</Prop>
+		<Prop id="124" name="@GENERATOR:INPUT_THRESHOLD">
+			<value>0</value>
+			<configuration>13</configuration>
+		</Prop>
 	</props>
 	<roots>
 		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries"/>
@@ -318,6 +322,8 @@
 				<FileRef id="92" persistAs="Main.xscade"/>
 				<FileRef id="93" persistAs="UA\TS01.xscade"/>
 				<FileRef id="94" persistAs="Switch.xscade"/>
+				<FileRef id="112" persistAs="Sat_Control.xscade"/>
+				<FileRef id="123" persistAs="Speed_Status.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="84" name="Design Verifier File">
@@ -327,7 +333,7 @@
 		</Folder>
 		<Folder id="89" name="DF">
 			<elements>
-				<FileRef id="110" persistAs="DefinitionFile\DisplayTS01_V1.1.sgfx"/>
+				<FileRef id="113" persistAs="DefinitionFile\DisplayTS01.sgfx"/>
 			</elements>
 		</Folder>
 	</roots>

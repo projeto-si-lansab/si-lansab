@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
 	<declarations>
-		<Constant name="STR_SIZE">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="int"/>
-					</type>
-				</NamedType>
-			</type>
-			<value>
-				<ConstValue value="20"/>
-			</value>
-			<pragmas>
-				<ed:Constant oid="!ed/b/76C2/2290/540d0d1222a4"/>
-			</pragmas>
-		</Constant>
 		<Type name="T_String">
 			<definition>
 				<Table>
@@ -39,7 +24,7 @@
 				<ed:Type oid="!ed/2c/76C2/2290/540d0d3d4e3"/>
 			</pragmas>
 		</Type>
-		<Constant name="Black">
+		<Constant name="BLACK">
 			<type>
 				<NamedType>
 					<type>
@@ -54,7 +39,7 @@
 				<ed:Constant oid="!ed/52/5D19/9B8/540db3911828"/>
 			</pragmas>
 		</Constant>
-		<Constant name="White">
+		<Constant name="WHITE">
 			<type>
 				<NamedType>
 					<type>
@@ -69,7 +54,7 @@
 				<ed:Constant oid="!ed/53/5D19/9B8/540db3986fbe"/>
 			</pragmas>
 		</Constant>
-		<Constant name="Green">
+		<Constant name="GREEN">
 			<type>
 				<NamedType>
 					<type>
@@ -84,7 +69,7 @@
 				<ed:Constant oid="!ed/54/5D19/9B8/540db39f15d"/>
 			</pragmas>
 		</Constant>
-		<Constant name="Yellow">
+		<Constant name="YELLOW">
 			<type>
 				<NamedType>
 					<type>
@@ -99,7 +84,7 @@
 				<ed:Constant oid="!ed/55/5D19/9B8/540db3a644ca"/>
 			</pragmas>
 		</Constant>
-		<Constant name="Red">
+		<Constant name="RED">
 			<type>
 				<NamedType>
 					<type>
@@ -114,7 +99,7 @@
 				<ed:Constant oid="!ed/56/5D19/9B8/540db3acd52"/>
 			</pragmas>
 		</Constant>
-		<Constant name="Orange">
+		<Constant name="ORANGE">
 			<type>
 				<NamedType>
 					<type>
@@ -129,7 +114,7 @@
 				<ed:Constant oid="!ed/57/5D19/9B8/540db3b44840"/>
 			</pragmas>
 		</Constant>
-		<Constant name="Light_Gray">
+		<Constant name="LIGHT_GRAY">
 			<type>
 				<NamedType>
 					<type>
@@ -144,7 +129,7 @@
 				<ed:Constant oid="!ed/58/5D19/9B8/540db3c03317"/>
 			</pragmas>
 		</Constant>
-		<Constant name="Dark_Gray">
+		<Constant name="DARK_GRAY">
 			<type>
 				<NamedType>
 					<type>
@@ -157,6 +142,129 @@
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/59/5D19/9B8/540db3c7541b"/>
+			</pragmas>
+		</Constant>
+		<Constant name="SAT_LAUNCHED_TXT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['S', 'A', 'T', ' ', 'L', 'A', 'U', 'N', 'C', 'H', 'E', 'D', ' ', ' ', ' ', ' ', ... -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'S'"/>
+						<ConstValue value="'A'"/>
+						<ConstValue value="'T'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="'L'"/>
+						<ConstValue value="'A'"/>
+						<ConstValue value="'U'"/>
+						<ConstValue value="'N'"/>
+						<ConstValue value="'C'"/>
+						<ConstValue value="'H'"/>
+						<ConstValue value="'E'"/>
+						<ConstValue value="'D'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/35e/71A4/524/541466514f6e"/>
+			</pragmas>
+		</Constant>
+		<Constant name="SAT_OFF_TXT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['S', 'A', 'T', ' ', 'O', 'F', 'F', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ... -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'S'"/>
+						<ConstValue value="'A'"/>
+						<ConstValue value="'T'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="'O'"/>
+						<ConstValue value="'F'"/>
+						<ConstValue value="'F'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/416/71A4/524/541466b86d2d"/>
+			</pragmas>
+		</Constant>
+		<Constant name="STR_SIZE_SMALL">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="13"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/4d8/71A4/524/54146ac83f2c"/>
+			</pragmas>
+		</Constant>
+		<Constant name="STR_SIZE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="20"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/b/76C2/2290/540d0d1222a4"/>
+			</pragmas>
+		</Constant>
+		<Constant name="TARGET_ORBIT_SPEED">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="900.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2bc/69FF/A1C/5414c66d5a4b"/>
 			</pragmas>
 		</Constant>
 	</declarations>
