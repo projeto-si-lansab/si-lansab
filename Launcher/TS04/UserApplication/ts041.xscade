@@ -2,6 +2,32 @@
 <File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
 	<declarations>
 		<Operator kind="node" name="ts04">
+			<inputs>
+				<Variable name="ToogleIniciar">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/873e/1980/DF0/541a03663177"/>
+					</pragmas>
+				</Variable>
+				<Variable name="PushAbortar">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/8744/1980/DF0/541a0366f08"/>
+					</pragmas>
+				</Variable>
+			</inputs>
 			<outputs>
 				<Variable name="Emit2CDS">
 					<type>
@@ -13,6 +39,18 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/20ee/CF3/1AD4/54190cc63364"/>
+					</pragmas>
+				</Variable>
+				<Variable name="ValContagem">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/874a/1980/DF0/541a0366161f"/>
 					</pragmas>
 				</Variable>
 			</outputs>
@@ -27,6 +65,42 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/2120/CF3/1AD4/54190cec48d2"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/8734/1980/DF0/541a0357ce8"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L3">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/874c/1980/DF0/541a0369713c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/874e/1980/DF0/541a03692b3d"/>
 					</pragmas>
 				</Variable>
 			</locals>
@@ -59,6 +133,87 @@
 						<ed:Equation oid="!ed/211f/CF3/1AD4/54190cec7b3b"/>
 					</pragmas>
 				</Equation>
+				<!-- _L2 = lucasamaral(_L3, _L4); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L2"/>
+					</lefts>
+					<right>
+						<!-- lucasamaral(_L3, _L4) -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="lucasamaral"/>
+									</operator>
+								</OpCall>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L3"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L4"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/8733/1980/DF0/541a035726d9"/>
+					</pragmas>
+				</Equation>
+				<!-- _L3 = ToogleIniciar; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L3"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="ToogleIniciar"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/874b/1980/DF0/541a03697c21"/>
+					</pragmas>
+				</Equation>
+				<!-- _L4 = PushAbortar; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L4"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="PushAbortar"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/874d/1980/DF0/541a03693e7a"/>
+					</pragmas>
+				</Equation>
+				<!-- ValContagem = _L2; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="ValContagem"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L2"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/874f/1980/DF0/541a036918ed"/>
+					</pragmas>
+				</Equation>
 			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/20de/CF3/1AD4/54190c7e2d4f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -87,6 +242,62 @@
 										<Point x="2619" y="767"/>
 										<Point x="2619" y="873"/>
 										<Point x="3704" y="873"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/8733/1980/DF0/541a035726d9">
+									<position>
+										<Point x="5265" y="4154"/>
+									</position>
+									<size>
+										<Size width="2794" height="2635"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/874b/1980/DF0/541a03697c21">
+									<position>
+										<Point x="2434" y="4815"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/874d/1980/DF0/541a03693e7a">
+									<position>
+										<Point x="2328" y="5794"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/874f/1980/DF0/541a036918ed">
+									<position>
+										<Point x="9260" y="5265"/>
+									</position>
+									<size>
+										<Size width="318" height="502"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/874b/1980/DF0/541a03697c21" dstEquation="!ed/8733/1980/DF0/541a035726d9">
+									<positions>
+										<Point x="2699" y="5080"/>
+										<Point x="3969" y="5080"/>
+										<Point x="3969" y="5027"/>
+										<Point x="5265" y="5027"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/874d/1980/DF0/541a03693e7a" dstEquation="!ed/8733/1980/DF0/541a035726d9">
+									<positions>
+										<Point x="2593" y="6059"/>
+										<Point x="3281" y="6059"/>
+										<Point x="3281" y="5900"/>
+										<Point x="5265" y="5900"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/8733/1980/DF0/541a035726d9" dstEquation="!ed/874f/1980/DF0/541a036918ed">
+									<positions>
+										<Point x="8043" y="5477"/>
+										<Point x="8678" y="5477"/>
+										<Point x="8678" y="5530"/>
+										<Point x="9313" y="5530"/>
 									</positions>
 								</Edge>
 							</presentationElements>

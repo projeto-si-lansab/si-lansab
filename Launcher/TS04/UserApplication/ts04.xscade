@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Constant name="NUM_CYCLES">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="300000"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/8762/1980/DF0/541a05277050"/>
+			</pragmas>
+		</Constant>
+		<Constant name="FREQ_PROCESSADOR">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="5000"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/8781/1980/DF0/541a08e841b6"/>
+			</pragmas>
+		</Constant>
+	</declarations>
+</File>
