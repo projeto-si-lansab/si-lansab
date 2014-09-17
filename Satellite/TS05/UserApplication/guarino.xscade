@@ -3,7 +3,7 @@
 	<declarations>
 		<Operator kind="node" name="guarino">
 			<inputs>
-				<Variable name="SAT_AirSpeed_Received">
+				<Variable name="SAT_AirSpeed_Update">
 					<type>
 						<NamedType>
 							<type>
@@ -27,7 +27,7 @@
 						<ed:Variable oid="!ed/4b6c/60A1/18A0/541358bb4fbf"/>
 					</pragmas>
 				</Variable>
-				<Variable name="SAT_Altitude_Received">
+				<Variable name="SAT_Altitude_Update">
 					<type>
 						<NamedType>
 							<type>
@@ -51,7 +51,7 @@
 						<ed:Variable oid="!ed/4b80/60A1/18A0/541358c938a5"/>
 					</pragmas>
 				</Variable>
-				<Variable name="SAT_Latitude_Received">
+				<Variable name="SAT_Latitude_Update">
 					<type>
 						<NamedType>
 							<type>
@@ -75,7 +75,7 @@
 						<ed:Variable oid="!ed/4b8c/60A1/18A0/541358cb3c85"/>
 					</pragmas>
 				</Variable>
-				<Variable name="SAT_Longitude_Received">
+				<Variable name="SAT_Longitude_Update">
 					<type>
 						<NamedType>
 							<type>
@@ -99,7 +99,7 @@
 						<ed:Variable oid="!ed/4b98/60A1/18A0/541358cc1381"/>
 					</pragmas>
 				</Variable>
-				<Variable name="SAT_DeclinationAngle_Received">
+				<Variable name="SAT_DeclinationAngle_Update">
 					<type>
 						<NamedType>
 							<type>
@@ -123,7 +123,7 @@
 						<ed:Variable oid="!ed/4ba4/60A1/18A0/541358cc7be6"/>
 					</pragmas>
 				</Variable>
-				<Variable name="SAT_Period_Received">
+				<Variable name="SAT_Period_Update">
 					<type>
 						<NamedType>
 							<type>
@@ -441,7 +441,7 @@
 				</Variable>
 			</locals>
 			<data>
-				<!-- _L13 = SAT_AirSpeed_Received; -->
+				<!-- _L13 = SAT_AirSpeed_Update; -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L13"/>
@@ -449,7 +449,7 @@
 					<right>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="SAT_AirSpeed_Received"/>
+								<ConstVarRef name="SAT_AirSpeed_Update"/>
 							</path>
 						</IdExpression>
 					</right>
@@ -473,7 +473,7 @@
 						<ed:Equation oid="!ed/4bcb/60A1/18A0/541359272c7c"/>
 					</pragmas>
 				</Equation>
-				<!-- _L15 = SAT_Altitude_Received; -->
+				<!-- _L15 = SAT_Altitude_Update; -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L15"/>
@@ -481,7 +481,7 @@
 					<right>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="SAT_Altitude_Received"/>
+								<ConstVarRef name="SAT_Altitude_Update"/>
 							</path>
 						</IdExpression>
 					</right>
@@ -505,7 +505,7 @@
 						<ed:Equation oid="!ed/4bcf/60A1/18A0/5413592762f4"/>
 					</pragmas>
 				</Equation>
-				<!-- _L17 = SAT_Latitude_Received; -->
+				<!-- _L17 = SAT_Latitude_Update; -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L17"/>
@@ -513,7 +513,7 @@
 					<right>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="SAT_Latitude_Received"/>
+								<ConstVarRef name="SAT_Latitude_Update"/>
 							</path>
 						</IdExpression>
 					</right>
@@ -537,7 +537,7 @@
 						<ed:Equation oid="!ed/4bd3/60A1/18A0/541359273115"/>
 					</pragmas>
 				</Equation>
-				<!-- _L19 = SAT_Longitude_Received; -->
+				<!-- _L19 = SAT_Longitude_Update; -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L19"/>
@@ -545,7 +545,7 @@
 					<right>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="SAT_Longitude_Received"/>
+								<ConstVarRef name="SAT_Longitude_Update"/>
 							</path>
 						</IdExpression>
 					</right>
@@ -569,7 +569,7 @@
 						<ed:Equation oid="!ed/4bd7/60A1/18A0/5413592726c9"/>
 					</pragmas>
 				</Equation>
-				<!-- _L21 = SAT_DeclinationAngle_Received; -->
+				<!-- _L21 = SAT_DeclinationAngle_Update; -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L21"/>
@@ -577,7 +577,7 @@
 					<right>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="SAT_DeclinationAngle_Received"/>
+								<ConstVarRef name="SAT_DeclinationAngle_Update"/>
 							</path>
 						</IdExpression>
 					</right>
@@ -601,7 +601,7 @@
 						<ed:Equation oid="!ed/4bdb/60A1/18A0/541359271283"/>
 					</pragmas>
 				</Equation>
-				<!-- _L23 = SAT_Period_Received; -->
+				<!-- _L23 = SAT_Period_Update; -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L23"/>
@@ -609,7 +609,7 @@
 					<right>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="SAT_Period_Received"/>
+								<ConstVarRef name="SAT_Period_Update"/>
 							</path>
 						</IdExpression>
 					</right>

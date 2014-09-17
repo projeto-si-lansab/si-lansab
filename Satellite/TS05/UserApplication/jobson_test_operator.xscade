@@ -3,66 +3,6 @@
 	<declarations>
 		<Operator kind="node" name="jobson_test_operator">
 			<locals>
-				<Variable name="Mock_GyroscopeButtonEnabled">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="int"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/2edb/6A34/1E84/5407af00784d"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_HorizonSensorButtonEnabled">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="int"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/2ee3/6A34/1E84/5407af154cac"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_PropellersButtonEnabled">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="int"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/2eeb/6A34/1E84/5407af201e85"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_CameraButtonEnabled">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="int"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/2ef3/6A34/1E84/5407af2ec44"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_GyroscopeButtonContour">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="int"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/2efb/6A34/1E84/5407af37679b"/>
-					</pragmas>
-				</Variable>
 				<Variable name="Mock_OperationMode_Value">
 					<type>
 						<NamedType>
@@ -111,90 +51,6 @@
 						<ed:Variable oid="!ed/28a1/134F/1E18/5408a5285c0c"/>
 					</pragmas>
 				</Variable>
-				<Variable name="Mock_HorizonSensorButtonContour">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="int"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/3171/134F/1E18/5408bb394662"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_PropellersButtonContour">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="int"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/3276/134F/1E18/5408bee8251b"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_CameraButtonContour">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="int"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/34a0/134F/1E18/5408c2595836"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_GyroscopeButtonLabel">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="String_ES"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/38a6/134F/1E18/5408c82b1562"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_HorizonSensorButtonLabel">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="String_ES"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/4813/134F/1E18/5408d1392b4b"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_PropellersButtonLabel">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="String_ES"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/4819/134F/1E18/5408d14b7afb"/>
-					</pragmas>
-				</Variable>
-				<Variable name="Mock_CameraButtonLabel">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="String_ES"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/481f/134F/1E18/5408d1564625"/>
-					</pragmas>
-				</Variable>
 				<Variable name="Mock_OperationMode_Received">
 					<type>
 						<NamedType>
@@ -205,6 +61,246 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/7346/19ED/1BEC/540d0743ce2"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_GyroscopeButton_Enabled">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a3b/56D9/F3C/5418c22a3067"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_GyroscopeButton_Contour">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a45/56D9/F3C/5418c22c1287"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_GyroscopeButton_Label">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="String_ES"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a4f/56D9/F3C/5418c22f7e20"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_HorizonSensorButton_Enabled">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a59/56D9/F3C/5418c23227b2"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_HorizonSensorButton_Contour">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a63/56D9/F3C/5418c2355a90"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_HorizonSensorButton_Label">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="String_ES"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a6d/56D9/F3C/5418c237227d"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_PropellersButton_Enabled">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a77/56D9/F3C/5418c239660f"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_PropellersButton_Contour">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a81/56D9/F3C/5418c23c73df"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_PropellersButton_Label">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="String_ES"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a8b/56D9/F3C/5418c23f36f8"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_CameraButton_Enabled">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a95/56D9/F3C/5418c2412f05"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_CameraButton_Contour">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4a9f/56D9/F3C/5418c2447725"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="CDS_ES_CameraButton_Label">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="String_ES"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4aa9/56D9/F3C/5418c2472a75"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="SAT_GyroscopeState_Toggle">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4ab3/56D9/F3C/5418c24a5fab"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="SAT_GyroscopeState_ToggleTo">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4abd/56D9/F3C/5418c24d5561"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="SAT_HorizonSensorState_Toggle">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4ac7/56D9/F3C/5418c24f4ed4"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="SAT_HorizonSensorState_ToggleTo">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4ad1/56D9/F3C/5418c2621d49"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="SAT_PropellersState_Toggle">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4adb/56D9/F3C/5418c265745b"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="SAT_PropellersState_ToggleTo">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4ae5/56D9/F3C/5418c2677fd5"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="SAT_CameraState_Toggle">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4aef/56D9/F3C/5418c26a4fed"/>
+					</pragmas>
+				</Variable>
+				<Variable probe="true" name="SAT_CameraState_ToggleTo">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4af9/56D9/F3C/5418c26e24f3"/>
 					</pragmas>
 				</Variable>
 				<Variable name="_L28">
@@ -687,9 +783,105 @@
 						<ed:Variable oid="!ed/4e57/60A1/18A0/541365ed241e"/>
 					</pragmas>
 				</Variable>
+				<Variable name="_L175">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c0a/5DFB/18D8/5418b2ab491d"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L176">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c0d/5DFB/18D8/5418b2c764e"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L177">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c15/5DFB/18D8/5418b30a7d85"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L178">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c1d/5DFB/18D8/5418b30a2af8"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L179">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c25/5DFB/18D8/5418b30d73c4"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L180">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c2d/5DFB/18D8/5418b30d6d1a"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L181">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c35/5DFB/18D8/5418b30e306"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L182">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c3d/5DFB/18D8/5418b30e6f43"/>
+					</pragmas>
+				</Variable>
 			</locals>
 			<data>
-				<!-- _L28, _L32, _L149, _L29, _L109, _L152, _L30, _L123, _L151, _L31, _L140, _L150 = j... -->
+				<!-- _L28, _L32, _L149, _L29, _L109, _L152, _L30, _L123, _L151, _L31, _L140, _L150, _L... -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L28"/>
@@ -704,6 +896,14 @@
 						<VariableRef name="_L31"/>
 						<VariableRef name="_L140"/>
 						<VariableRef name="_L150"/>
+						<VariableRef name="_L175"/>
+						<VariableRef name="_L176"/>
+						<VariableRef name="_L178"/>
+						<VariableRef name="_L177"/>
+						<VariableRef name="_L180"/>
+						<VariableRef name="_L179"/>
+						<VariableRef name="_L182"/>
+						<VariableRef name="_L181"/>
 					</lefts>
 					<right>
 						<!-- jobson(_L153, _L93, _L106, _L107, _L108, _L106, _L107, _L108, _L106, _L107, _L108... -->
@@ -791,86 +991,6 @@
 					</right>
 					<pragmas>
 						<ed:Equation oid="!ed/450e/3FE3/1B00/5405162d79f1"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_GyroscopeButtonEnabled = _L28; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_GyroscopeButtonEnabled"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L28"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/2edc/6A34/1E84/5407af005e36"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_HorizonSensorButtonEnabled = _L29; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_HorizonSensorButtonEnabled"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L29"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/2ee4/6A34/1E84/5407af15787b"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_PropellersButtonEnabled = _L30; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_PropellersButtonEnabled"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L30"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/2eec/6A34/1E84/5407af202008"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_CameraButtonEnabled = _L31; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_CameraButtonEnabled"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L31"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/2ef4/6A34/1E84/5407af2e6e95"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_GyroscopeButtonContour = _L32; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_GyroscopeButtonContour"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L32"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/2efc/6A34/1E84/5407af377bdd"/>
 					</pragmas>
 				</Equation>
 				<!-- _L89 = ( case _L92 of  | 0 :   _L162 | 1 :   _L163 | 2 :   _L164 | 3 :   _L160 | ... -->
@@ -1350,118 +1470,6 @@
 						<ed:Equation oid="!ed/29ad/134F/1E18/5408a9a17a14"/>
 					</pragmas>
 				</Equation>
-				<!-- Mock_HorizonSensorButtonContour = _L109; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_HorizonSensorButtonContour"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L109"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/3172/134F/1E18/5408bb394515"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_PropellersButtonContour = _L123; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_PropellersButtonContour"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L123"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/3277/134F/1E18/5408bef869d2"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_CameraButtonContour = _L140; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_CameraButtonContour"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L140"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/34a1/134F/1E18/5408c25958f8"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_GyroscopeButtonLabel = _L149; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_GyroscopeButtonLabel"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L149"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/38a7/134F/1E18/5408c82b19ad"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_HorizonSensorButtonLabel = _L152; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_HorizonSensorButtonLabel"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L152"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/4814/134F/1E18/5408d1391eda"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_PropellersButtonLabel = _L151; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_PropellersButtonLabel"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L151"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/481a/134F/1E18/5408d14b1506"/>
-					</pragmas>
-				</Equation>
-				<!-- Mock_CameraButtonLabel = _L150; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="Mock_CameraButtonLabel"/>
-					</lefts>
-					<right>
-						<IdExpression>
-							<path>
-								<ConstVarRef name="_L150"/>
-							</path>
-						</IdExpression>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/4820/134F/1E18/5408d1563a51"/>
-					</pragmas>
-				</Equation>
 				<!-- _L153 = Mock_OperationMode_Received; -->
 				<Equation>
 					<lefts>
@@ -1858,6 +1866,326 @@
 						<ed:Equation oid="!ed/4e56/60A1/18A0/541365ed7a8f"/>
 					</pragmas>
 				</Equation>
+				<!-- CDS_ES_GyroscopeButton_Enabled = _L28; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_GyroscopeButton_Enabled"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L28"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a3c/56D9/F3C/5418c22a1312"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_GyroscopeButton_Contour = _L32; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_GyroscopeButton_Contour"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L32"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a46/56D9/F3C/5418c22c4b45"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_GyroscopeButton_Label = _L149; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_GyroscopeButton_Label"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L149"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a50/56D9/F3C/5418c22f275c"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_HorizonSensorButton_Enabled = _L29; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_HorizonSensorButton_Enabled"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L29"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a5a/56D9/F3C/5418c2324d60"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_HorizonSensorButton_Contour = _L109; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_HorizonSensorButton_Contour"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L109"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a64/56D9/F3C/5418c235136d"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_HorizonSensorButton_Label = _L152; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_HorizonSensorButton_Label"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L152"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a6e/56D9/F3C/5418c237705e"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_PropellersButton_Enabled = _L30; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_PropellersButton_Enabled"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L30"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a78/56D9/F3C/5418c2395e2b"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_PropellersButton_Contour = _L123; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_PropellersButton_Contour"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L123"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a82/56D9/F3C/5418c23c7c9"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_PropellersButton_Label = _L151; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_PropellersButton_Label"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L151"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a8c/56D9/F3C/5418c23f571"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_CameraButton_Enabled = _L31; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_CameraButton_Enabled"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L31"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4a96/56D9/F3C/5418c2413186"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_CameraButton_Contour = _L140; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_CameraButton_Contour"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L140"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4aa0/56D9/F3C/5418c24415a3"/>
+					</pragmas>
+				</Equation>
+				<!-- CDS_ES_CameraButton_Label = _L150; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CDS_ES_CameraButton_Label"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L150"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4aaa/56D9/F3C/5418c2476279"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_GyroscopeState_Toggle = _L175; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_GyroscopeState_Toggle"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L175"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4ab4/56D9/F3C/5418c24a2675"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_GyroscopeState_ToggleTo = _L176; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_GyroscopeState_ToggleTo"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L176"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4abe/56D9/F3C/5418c24d5677"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_HorizonSensorState_Toggle = _L178; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_HorizonSensorState_Toggle"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L178"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4ac8/56D9/F3C/5418c24f8f9"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_HorizonSensorState_ToggleTo = _L177; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_HorizonSensorState_ToggleTo"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L177"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4ad2/56D9/F3C/5418c2624f72"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_PropellersState_Toggle = _L180; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_PropellersState_Toggle"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L180"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4adc/56D9/F3C/5418c26532e8"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_PropellersState_ToggleTo = _L179; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_PropellersState_ToggleTo"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L179"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4ae6/56D9/F3C/5418c2674fe1"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_CameraState_Toggle = _L182; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_CameraState_Toggle"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L182"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4af0/56D9/F3C/5418c26a3333"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_CameraState_ToggleTo = _L181; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_CameraState_ToggleTo"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L181"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4afa/56D9/F3C/5418c26e3c6e"/>
+					</pragmas>
+				</Equation>
 			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/450d/3FE3/1B00/5405162d6080" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -1872,78 +2200,6 @@
 										<Size width="6709" height="18801"/>
 									</size>
 								</EquationGE>
-								<EquationGE presentable="!ed/2edc/6A34/1E84/5407af005e36">
-									<position>
-										<Point x="18627" y="1402"/>
-									</position>
-									<size>
-										<Size width="344" height="502"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/2edc/6A34/1E84/5407af005e36">
-									<positions>
-										<Point x="17013" y="1667"/>
-										<Point x="17806" y="1667"/>
-										<Point x="17806" y="1667"/>
-										<Point x="18627" y="1667"/>
-									</positions>
-								</Edge>
-								<EquationGE presentable="!ed/2ee4/6A34/1E84/5407af15787b">
-									<position>
-										<Point x="18627" y="5741"/>
-									</position>
-									<size>
-										<Size width="344" height="503"/>
-									</size>
-								</EquationGE>
-								<EquationGE presentable="!ed/2eec/6A34/1E84/5407af202008">
-									<position>
-										<Point x="18627" y="10081"/>
-									</position>
-									<size>
-										<Size width="344" height="503"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="7" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/2eec/6A34/1E84/5407af202008">
-									<positions>
-										<Point x="17013" y="10345"/>
-										<Point x="17806" y="10345"/>
-										<Point x="17806" y="10345"/>
-										<Point x="18627" y="10345"/>
-									</positions>
-								</Edge>
-								<EquationGE presentable="!ed/2ef4/6A34/1E84/5407af2e6e95">
-									<position>
-										<Point x="18627" y="14420"/>
-									</position>
-									<size>
-										<Size width="344" height="503"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="10" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/2ef4/6A34/1E84/5407af2e6e95">
-									<positions>
-										<Point x="17013" y="14684"/>
-										<Point x="17806" y="14684"/>
-										<Point x="17806" y="14684"/>
-										<Point x="18627" y="14684"/>
-									</positions>
-								</Edge>
-								<EquationGE presentable="!ed/2efc/6A34/1E84/5407af377bdd">
-									<position>
-										<Point x="18627" y="2831"/>
-									</position>
-									<size>
-										<Size width="344" height="503"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="2" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/2efc/6A34/1E84/5407af377bdd">
-									<positions>
-										<Point x="17013" y="3096"/>
-										<Point x="17806" y="3096"/>
-										<Point x="17806" y="3096"/>
-										<Point x="18627" y="3096"/>
-									</positions>
-								</Edge>
 								<EquationGE presentable="!ed/27dd/134F/1E18/5408a3575b05">
 									<position>
 										<Point x="7620" y="2461"/>
@@ -2006,54 +2262,6 @@
 										<Point x="9075" y="3969"/>
 										<Point x="9075" y="3969"/>
 										<Point x="10292" y="3969"/>
-									</positions>
-								</Edge>
-								<EquationGE presentable="!ed/3172/134F/1E18/5408bb394515">
-									<position>
-										<Point x="18627" y="7170"/>
-									</position>
-									<size>
-										<Size width="344" height="502"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="5" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/3172/134F/1E18/5408bb394515">
-									<positions>
-										<Point x="17013" y="7435"/>
-										<Point x="17806" y="7435"/>
-										<Point x="17806" y="7435"/>
-										<Point x="18627" y="7435"/>
-									</positions>
-								</Edge>
-								<EquationGE presentable="!ed/3277/134F/1E18/5408bef869d2">
-									<position>
-										<Point x="18627" y="11536"/>
-									</position>
-									<size>
-										<Size width="265" height="503"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="8" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/3277/134F/1E18/5408bef869d2">
-									<positions>
-										<Point x="17013" y="11800"/>
-										<Point x="17806" y="11800"/>
-										<Point x="17806" y="11800"/>
-										<Point x="18627" y="11800"/>
-									</positions>
-								</Edge>
-								<EquationGE presentable="!ed/34a1/134F/1E18/5408c25958f8">
-									<position>
-										<Point x="18627" y="15875"/>
-									</position>
-									<size>
-										<Size width="344" height="503"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="11" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/34a1/134F/1E18/5408c25958f8">
-									<positions>
-										<Point x="17013" y="16140"/>
-										<Point x="17806" y="16140"/>
-										<Point x="17806" y="16140"/>
-										<Point x="18627" y="16140"/>
 									</positions>
 								</Edge>
 								<Edge leftVarIndex="1" rightExprIndex="6" srcEquation="!ed/29a1/134F/1E18/5408a9981748" dstEquation="!ed/450e/3FE3/1B00/5405162d79f1">
@@ -2128,70 +2336,6 @@
 										<Point x="10292" y="17780"/>
 									</positions>
 								</Edge>
-								<EquationGE presentable="!ed/38a7/134F/1E18/5408c82b19ad">
-									<position>
-										<Point x="18627" y="4286"/>
-									</position>
-									<size>
-										<Size width="344" height="502"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="3" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/38a7/134F/1E18/5408c82b19ad">
-									<positions>
-										<Point x="17013" y="4551"/>
-										<Point x="17806" y="4551"/>
-										<Point x="17806" y="4551"/>
-										<Point x="18627" y="4551"/>
-									</positions>
-								</Edge>
-								<EquationGE presentable="!ed/4814/134F/1E18/5408d1391eda">
-									<position>
-										<Point x="18627" y="8625"/>
-									</position>
-									<size>
-										<Size width="344" height="503"/>
-									</size>
-								</EquationGE>
-								<EquationGE presentable="!ed/481a/134F/1E18/5408d14b1506">
-									<position>
-										<Point x="18627" y="12965"/>
-									</position>
-									<size>
-										<Size width="344" height="503"/>
-									</size>
-								</EquationGE>
-								<EquationGE presentable="!ed/4820/134F/1E18/5408d1563a51">
-									<position>
-										<Point x="18627" y="17304"/>
-									</position>
-									<size>
-										<Size width="344" height="503"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="6" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4814/134F/1E18/5408d1391eda">
-									<positions>
-										<Point x="17013" y="8890"/>
-										<Point x="17806" y="8890"/>
-										<Point x="17806" y="8890"/>
-										<Point x="18627" y="8890"/>
-									</positions>
-								</Edge>
-								<Edge leftVarIndex="9" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/481a/134F/1E18/5408d14b1506">
-									<positions>
-										<Point x="17013" y="13229"/>
-										<Point x="17806" y="13229"/>
-										<Point x="17806" y="13229"/>
-										<Point x="18627" y="13229"/>
-									</positions>
-								</Edge>
-								<Edge leftVarIndex="12" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4820/134F/1E18/5408d1563a51">
-									<positions>
-										<Point x="17013" y="17568"/>
-										<Point x="17806" y="17568"/>
-										<Point x="17806" y="17568"/>
-										<Point x="18627" y="17568"/>
-									</positions>
-								</Edge>
 								<EquationGE presentable="!ed/7347/19ED/1BEC/540d0743453a">
 									<position>
 										<Point x="7620" y="1191"/>
@@ -2208,12 +2352,324 @@
 										<Point x="10292" y="1455"/>
 									</positions>
 								</Edge>
-								<Edge leftVarIndex="4" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/2ee4/6A34/1E84/5407af15787b">
+								<EquationGE presentable="!ed/4a3c/56D9/F3C/5418c22a1312">
+									<position>
+										<Point x="19685" y="873"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a46/56D9/F3C/5418c22c4b45">
+									<position>
+										<Point x="19685" y="1773"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a50/56D9/F3C/5418c22f275c">
+									<position>
+										<Point x="19685" y="2672"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a5a/56D9/F3C/5418c2324d60">
+									<position>
+										<Point x="19685" y="3545"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a64/56D9/F3C/5418c235136d">
+									<position>
+										<Point x="19685" y="4445"/>
+									</position>
+									<size>
+										<Size width="212" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a6e/56D9/F3C/5418c237705e">
+									<position>
+										<Point x="19685" y="5345"/>
+									</position>
+									<size>
+										<Size width="212" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a78/56D9/F3C/5418c2395e2b">
+									<position>
+										<Point x="19685" y="6244"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a82/56D9/F3C/5418c23c7c9">
+									<position>
+										<Point x="19685" y="7144"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a8c/56D9/F3C/5418c23f571">
+									<position>
+										<Point x="19685" y="8043"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4a96/56D9/F3C/5418c2413186">
+									<position>
+										<Point x="19685" y="8943"/>
+									</position>
+									<size>
+										<Size width="211" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4aa0/56D9/F3C/5418c24415a3">
+									<position>
+										<Point x="19685" y="9816"/>
+									</position>
+									<size>
+										<Size width="211" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4aaa/56D9/F3C/5418c2476279">
+									<position>
+										<Point x="19685" y="10716"/>
+									</position>
+									<size>
+										<Size width="212" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4ab4/56D9/F3C/5418c24a2675">
+									<position>
+										<Point x="19685" y="11615"/>
+									</position>
+									<size>
+										<Size width="211" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4abe/56D9/F3C/5418c24d5677">
+									<position>
+										<Point x="19685" y="12515"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4ac8/56D9/F3C/5418c24f8f9">
+									<position>
+										<Point x="19685" y="13414"/>
+									</position>
+									<size>
+										<Size width="212" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4ad2/56D9/F3C/5418c2624f72">
+									<position>
+										<Point x="19685" y="14314"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4adc/56D9/F3C/5418c26532e8">
+									<position>
+										<Point x="19685" y="15214"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4ae6/56D9/F3C/5418c2674fe1">
+									<position>
+										<Point x="19685" y="16087"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4af0/56D9/F3C/5418c26a3333">
+									<position>
+										<Point x="19685" y="16986"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4afa/56D9/F3C/5418c26e3c6e">
+									<position>
+										<Point x="19685" y="17886"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="20" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4afa/56D9/F3C/5418c26e3c6e">
 									<positions>
-										<Point x="17013" y="6006"/>
-										<Point x="17806" y="6006"/>
-										<Point x="17806" y="6006"/>
-										<Point x="18627" y="6006"/>
+										<Point x="17013" y="18124"/>
+										<Point x="18389" y="18124"/>
+										<Point x="18389" y="18124"/>
+										<Point x="19791" y="18124"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="19" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4af0/56D9/F3C/5418c26a3333">
+									<positions>
+										<Point x="17013" y="17224"/>
+										<Point x="18468" y="17224"/>
+										<Point x="18468" y="17224"/>
+										<Point x="19791" y="17224"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="18" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4ae6/56D9/F3C/5418c2674fe1">
+									<positions>
+										<Point x="17013" y="16325"/>
+										<Point x="18362" y="16325"/>
+										<Point x="18362" y="16325"/>
+										<Point x="19791" y="16325"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="17" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4adc/56D9/F3C/5418c26532e8">
+									<positions>
+										<Point x="17013" y="15452"/>
+										<Point x="18336" y="15452"/>
+										<Point x="18336" y="15452"/>
+										<Point x="19791" y="15452"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="16" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4ad2/56D9/F3C/5418c2624f72">
+									<positions>
+										<Point x="17013" y="14552"/>
+										<Point x="18441" y="14552"/>
+										<Point x="18441" y="14552"/>
+										<Point x="19791" y="14552"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="15" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4ac8/56D9/F3C/5418c24f8f9">
+									<positions>
+										<Point x="17013" y="13653"/>
+										<Point x="18336" y="13653"/>
+										<Point x="18336" y="13653"/>
+										<Point x="19791" y="13653"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="14" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4abe/56D9/F3C/5418c24d5677">
+									<positions>
+										<Point x="17013" y="12753"/>
+										<Point x="18336" y="12753"/>
+										<Point x="18336" y="12753"/>
+										<Point x="19791" y="12753"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="13" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4ab4/56D9/F3C/5418c24a2675">
+									<positions>
+										<Point x="17013" y="11853"/>
+										<Point x="18309" y="11853"/>
+										<Point x="18309" y="11853"/>
+										<Point x="19791" y="11853"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="12" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4aaa/56D9/F3C/5418c2476279">
+									<positions>
+										<Point x="17013" y="10954"/>
+										<Point x="18256" y="10954"/>
+										<Point x="18256" y="10954"/>
+										<Point x="19791" y="10954"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="11" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4aa0/56D9/F3C/5418c24415a3">
+									<positions>
+										<Point x="17013" y="10054"/>
+										<Point x="18230" y="10054"/>
+										<Point x="18230" y="10054"/>
+										<Point x="19791" y="10054"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="10" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a96/56D9/F3C/5418c2413186">
+									<positions>
+										<Point x="17013" y="9181"/>
+										<Point x="18309" y="9181"/>
+										<Point x="18309" y="9181"/>
+										<Point x="19791" y="9181"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="9" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a8c/56D9/F3C/5418c23f571">
+									<positions>
+										<Point x="17013" y="8281"/>
+										<Point x="18309" y="8281"/>
+										<Point x="18309" y="8281"/>
+										<Point x="19791" y="8281"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="8" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a82/56D9/F3C/5418c23c7c9">
+									<positions>
+										<Point x="17013" y="7382"/>
+										<Point x="18230" y="7382"/>
+										<Point x="18230" y="7382"/>
+										<Point x="19791" y="7382"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="7" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a78/56D9/F3C/5418c2395e2b">
+									<positions>
+										<Point x="17013" y="6482"/>
+										<Point x="18177" y="6482"/>
+										<Point x="18177" y="6482"/>
+										<Point x="19791" y="6482"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="6" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a6e/56D9/F3C/5418c237705e">
+									<positions>
+										<Point x="17013" y="5583"/>
+										<Point x="18203" y="5583"/>
+										<Point x="18203" y="5583"/>
+										<Point x="19791" y="5583"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="5" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a64/56D9/F3C/5418c235136d">
+									<positions>
+										<Point x="17013" y="4683"/>
+										<Point x="18283" y="4683"/>
+										<Point x="18283" y="4683"/>
+										<Point x="19791" y="4683"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="4" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a5a/56D9/F3C/5418c2324d60">
+									<positions>
+										<Point x="17013" y="3784"/>
+										<Point x="18230" y="3784"/>
+										<Point x="18230" y="3784"/>
+										<Point x="19791" y="3784"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="3" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a50/56D9/F3C/5418c22f275c">
+									<positions>
+										<Point x="17013" y="2910"/>
+										<Point x="18177" y="2910"/>
+										<Point x="18177" y="2910"/>
+										<Point x="19791" y="2910"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="2" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a46/56D9/F3C/5418c22c4b45">
+									<positions>
+										<Point x="17013" y="2011"/>
+										<Point x="18177" y="2011"/>
+										<Point x="18177" y="2011"/>
+										<Point x="19791" y="2011"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/450e/3FE3/1B00/5405162d79f1" dstEquation="!ed/4a3c/56D9/F3C/5418c22a1312">
+									<positions>
+										<Point x="17013" y="1111"/>
+										<Point x="18150" y="1111"/>
+										<Point x="18150" y="1111"/>
+										<Point x="19791" y="1111"/>
 									</positions>
 								</Edge>
 							</presentationElements>

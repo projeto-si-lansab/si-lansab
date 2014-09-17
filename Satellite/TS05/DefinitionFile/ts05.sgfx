@@ -549,7 +549,7 @@ Project for academic purpose only.</summary>
                                         <intprop name="WidgetIdent">1510</intprop>
                                         <enumprop name="Enable">A661_TRUE</enumprop>
                                         <enumprop name="Visible">A661_TRUE</enumprop>
-                                        <intprop name="PosX">16000</intprop>
+                                        <intprop name="PosX">15500</intprop>
                                         <intprop name="PosY">7000</intprop>
                                     </model>
                                     <children>
@@ -573,7 +573,7 @@ Project for academic purpose only.</summary>
                                                 <stringprop name="LabelString">Gyro</stringprop>
                                             </model>
                                         </widget>
-                                        <widget name="ComboBox" oid="0c8137e8-5fda-46c0-b151-c57cd2d5fa02" type="ComboBox">
+                                        <widget name="Input" oid="0c8137e8-5fda-46c0-b151-c57cd2d5fa02" type="ComboBox">
                                             <IDE/>
                                             <model>
                                                 <intprop name="WidgetIdent">1512</intprop>
@@ -601,6 +601,25 @@ Project for academic purpose only.</summary>
                                                 </arrayprop>
                                             </model>
                                         </widget>
+                                        <widget name="Output" oid="603b88a9-c35d-46fe-8393-4e9241be20dc" type="GpArcEllipse">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">1513</intprop>
+                                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">3500</intprop>
+                                                <intprop name="PosY">0</intprop>
+                                                <intprop name="SizeX">800</intprop>
+                                                <intprop name="SizeY">800</intprop>
+                                                <intprop name="StartAngle">0</intprop>
+                                                <intprop name="EndAngle">0</intprop>
+                                                <intprop name="StyleSet">1</intprop>
+                                                <intprop name="ColorIndex">0</intprop>
+                                                <enumprop name="Filled">A661_TRUE</enumprop>
+                                                <intprop name="FillIndex">9</intprop>
+                                                <enumprop name="Halo">A661_FALSE</enumprop>
+                                            </model>
+                                        </widget>
                                     </children>
                                 </widget>
                                 <widget name="HorizonSensor" oid="8ce914f7-67f8-45c1-b9c4-f5b9346673c9" type="BasicContainer">
@@ -609,7 +628,7 @@ Project for academic purpose only.</summary>
                                         <intprop name="WidgetIdent">1520</intprop>
                                         <enumprop name="Enable">A661_TRUE</enumprop>
                                         <enumprop name="Visible">A661_TRUE</enumprop>
-                                        <intprop name="PosX">16000</intprop>
+                                        <intprop name="PosX">15500</intprop>
                                         <intprop name="PosY">6000</intprop>
                                     </model>
                                     <children>
@@ -633,7 +652,7 @@ Project for academic purpose only.</summary>
                                                 <stringprop name="LabelString">HrzS</stringprop>
                                             </model>
                                         </widget>
-                                        <widget name="ComboBox" oid="ad88dcb9-7fd0-41d3-ba37-ca4207b001fb" type="ComboBox">
+                                        <widget name="Input" oid="ad88dcb9-7fd0-41d3-ba37-ca4207b001fb" type="ComboBox">
                                             <IDE/>
                                             <model>
                                                 <intprop name="WidgetIdent">1522</intprop>
@@ -661,6 +680,25 @@ Project for academic purpose only.</summary>
                                                 </arrayprop>
                                             </model>
                                         </widget>
+                                        <widget name="Output" oid="9e5faf79-ce25-48e0-a051-326c2a7c3a51" type="GpArcEllipse">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">1523</intprop>
+                                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">3500</intprop>
+                                                <intprop name="PosY">0</intprop>
+                                                <intprop name="SizeX">800</intprop>
+                                                <intprop name="SizeY">800</intprop>
+                                                <intprop name="StartAngle">0</intprop>
+                                                <intprop name="EndAngle">0</intprop>
+                                                <intprop name="StyleSet">1</intprop>
+                                                <intprop name="ColorIndex">0</intprop>
+                                                <enumprop name="Filled">A661_TRUE</enumprop>
+                                                <intprop name="FillIndex">9</intprop>
+                                                <enumprop name="Halo">A661_FALSE</enumprop>
+                                            </model>
+                                        </widget>
                                     </children>
                                 </widget>
                                 <widget name="Propellers" oid="6e633f9e-6b3e-4dbb-8444-aa62c12395c5" type="BasicContainer">
@@ -669,7 +707,7 @@ Project for academic purpose only.</summary>
                                         <intprop name="WidgetIdent">1530</intprop>
                                         <enumprop name="Enable">A661_TRUE</enumprop>
                                         <enumprop name="Visible">A661_TRUE</enumprop>
-                                        <intprop name="PosX">16000</intprop>
+                                        <intprop name="PosX">15500</intprop>
                                         <intprop name="PosY">5000</intprop>
                                     </model>
                                     <children>
@@ -693,7 +731,7 @@ Project for academic purpose only.</summary>
                                                 <stringprop name="LabelString">Prop</stringprop>
                                             </model>
                                         </widget>
-                                        <widget name="ComboBox" oid="e3a19686-04af-4d57-a2bb-a432de6439a5" type="ComboBox">
+                                        <widget name="Input" oid="e3a19686-04af-4d57-a2bb-a432de6439a5" type="ComboBox">
                                             <IDE/>
                                             <model>
                                                 <intprop name="WidgetIdent">1532</intprop>
@@ -721,6 +759,25 @@ Project for academic purpose only.</summary>
                                                 </arrayprop>
                                             </model>
                                         </widget>
+                                        <widget name="Output" oid="98b5931d-f3b1-4cc2-b200-2d80dad3bf75" type="GpArcEllipse">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">1533</intprop>
+                                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">3500</intprop>
+                                                <intprop name="PosY">0</intprop>
+                                                <intprop name="SizeX">800</intprop>
+                                                <intprop name="SizeY">800</intprop>
+                                                <intprop name="StartAngle">0</intprop>
+                                                <intprop name="EndAngle">0</intprop>
+                                                <intprop name="StyleSet">1</intprop>
+                                                <intprop name="ColorIndex">0</intprop>
+                                                <enumprop name="Filled">A661_TRUE</enumprop>
+                                                <intprop name="FillIndex">9</intprop>
+                                                <enumprop name="Halo">A661_FALSE</enumprop>
+                                            </model>
+                                        </widget>
                                     </children>
                                 </widget>
                                 <widget name="Camera" oid="5e4ada52-f47b-41da-875c-76ec85907904" type="BasicContainer">
@@ -729,7 +786,7 @@ Project for academic purpose only.</summary>
                                         <intprop name="WidgetIdent">1540</intprop>
                                         <enumprop name="Enable">A661_TRUE</enumprop>
                                         <enumprop name="Visible">A661_TRUE</enumprop>
-                                        <intprop name="PosX">16000</intprop>
+                                        <intprop name="PosX">15500</intprop>
                                         <intprop name="PosY">4000</intprop>
                                     </model>
                                     <children>
@@ -753,7 +810,7 @@ Project for academic purpose only.</summary>
                                                 <stringprop name="LabelString">Cam</stringprop>
                                             </model>
                                         </widget>
-                                        <widget name="ComboBox" oid="03148cb7-aa3e-402b-b040-70920030a573" type="ComboBox">
+                                        <widget name="Input" oid="03148cb7-aa3e-402b-b040-70920030a573" type="ComboBox">
                                             <IDE/>
                                             <model>
                                                 <intprop name="WidgetIdent">1542</intprop>
@@ -779,6 +836,25 @@ Project for academic purpose only.</summary>
                                                     <stringprop name="1">ON</stringprop>
                                                     <stringprop name="2">OFF</stringprop>
                                                 </arrayprop>
+                                            </model>
+                                        </widget>
+                                        <widget name="Output" oid="ed751fb3-168a-428c-b8b4-5c5fa65f68ce" type="GpArcEllipse">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">1543</intprop>
+                                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">3500</intprop>
+                                                <intprop name="PosY">0</intprop>
+                                                <intprop name="SizeX">800</intprop>
+                                                <intprop name="SizeY">800</intprop>
+                                                <intprop name="StartAngle">0</intprop>
+                                                <intprop name="EndAngle">0</intprop>
+                                                <intprop name="StyleSet">1</intprop>
+                                                <intprop name="ColorIndex">0</intprop>
+                                                <enumprop name="Filled">A661_TRUE</enumprop>
+                                                <intprop name="FillIndex">9</intprop>
+                                                <enumprop name="Halo">A661_FALSE</enumprop>
                                             </model>
                                         </widget>
                                     </children>
@@ -1653,6 +1729,25 @@ Project for academic purpose only.</summary>
                                         <stringprop name="LabelString">Sign Fail</stringprop>
                                     </model>
                                 </widget>
+                                <widget name="Initialize" oid="aa65b379-8853-4282-80e3-7295071c43b4" type="GpArcEllipse">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">7505</intprop>
+                                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">18150</intprop>
+                                        <intprop name="PosY">5000</intprop>
+                                        <intprop name="SizeX">800</intprop>
+                                        <intprop name="SizeY">800</intprop>
+                                        <intprop name="StartAngle">0</intprop>
+                                        <intprop name="EndAngle">0</intprop>
+                                        <intprop name="StyleSet">1</intprop>
+                                        <intprop name="ColorIndex">0</intprop>
+                                        <enumprop name="Filled">A661_TRUE</enumprop>
+                                        <intprop name="FillIndex">9</intprop>
+                                        <enumprop name="Halo">A661_FALSE</enumprop>
+                                    </model>
+                                </widget>
                             </children>
                         </widget>
                     </children>
@@ -1673,5 +1768,5 @@ Project for academic purpose only.</summary>
     </children>
 </specification>
 
-<!-- crc32 : 941760275 -->
+<!-- crc32 : 1696686885 -->
 
