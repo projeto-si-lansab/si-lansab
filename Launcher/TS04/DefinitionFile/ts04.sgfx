@@ -59,14 +59,14 @@
                         <intprop name="PosY">0</intprop>
                     </model>
                     <children>
-                        <widget name="PushButton" oid="1eb3dab8-0627-46e7-84d4-47bff24aa407" type="PushButton">
+                        <widget name="PushAbortar" oid="1eb3dab8-0627-46e7-84d4-47bff24aa407" type="PushButton">
                             <IDE/>
                             <model>
                                 <intprop name="WidgetIdent">14</intprop>
                                 <enumprop name="Enable">A661_TRUE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">2640</intprop>
-                                <intprop name="PosY">9880</intprop>
+                                <intprop name="PosX">3640</intprop>
+                                <intprop name="PosY">10000</intprop>
                                 <intprop name="SizeX">4600</intprop>
                                 <intprop name="SizeY">560</intprop>
                                 <intprop name="StyleSet">115</intprop>
@@ -77,14 +77,32 @@
                                 <stringprop name="LabelString">ABORTAR LANCAMENTO</stringprop>
                             </model>
                         </widget>
-                        <widget name="EditBoxNumeric" oid="33bcb08e-c0a5-410a-b471-ae146e3d1540" type="EditBoxNumeric">
+                        <widget name="PushIniciar" oid="6b2d8187-db80-481e-a95a-45cca96d99c1" type="PushButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">17</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">540</intprop>
+                                <intprop name="PosY">10860</intprop>
+                                <intprop name="SizeX">1940</intprop>
+                                <intprop name="SizeY">580</intprop>
+                                <intprop name="StyleSet">112</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_LEFT</enumprop>
+                                <stringprop name="LabelString">INICIAR</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="BoxTime" oid="33bcb08e-c0a5-410a-b471-ae146e3d1540" type="EditBoxNumeric">
                             <IDE/>
                             <model>
                                 <intprop name="WidgetIdent">15</intprop>
                                 <enumprop name="Enable">A661_TRUE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">4020</intprop>
-                                <intprop name="PosY">10700</intprop>
+                                <intprop name="PosX">4920</intprop>
+                                <intprop name="PosY">10780</intprop>
                                 <intprop name="SizeX">2400</intprop>
                                 <intprop name="SizeY">700</intprop>
                                 <intprop name="StyleSet">133</intprop>
@@ -109,14 +127,14 @@
                                 <stringprop name="LegendString">s</stringprop>
                             </model>
                         </widget>
-                        <widget name="Label" oid="1ce29a79-32b2-432d-9ca1-7723fbc8ea65" type="Label">
+                        <widget name="LabelContagem" oid="1ce29a79-32b2-432d-9ca1-7723fbc8ea65" type="Label">
                             <IDE/>
                             <model>
                                 <intprop name="WidgetIdent">16</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">2640</intprop>
-                                <intprop name="PosY">11540</intprop>
+                                <intprop name="PosX">3260</intprop>
+                                <intprop name="PosY">11580</intprop>
                                 <intprop name="SizeX">5440</intprop>
                                 <intprop name="SizeY">600</intprop>
                                 <intprop name="RotationAngle">0</intprop>
@@ -169,5 +187,5 @@
     </children>
 </specification>
 
-<!-- crc32 : 3858428462 -->
+<!-- crc32 : 1115314344 -->
 
