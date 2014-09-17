@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="lucasamaral" oid="!ed/20e0/CF3/1AD4/54190c842511">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04" LayerIdent="1" WidgetIdent="17" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushIniciar">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="PushIniciar" type="bool" oid="!ed/20e2/CF3/1AD4/54190c97770d" instancepath="lucasamaral/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04" LayerIdent="1" WidgetIdent="14" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushAbortar">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="PushAbortar" type="bool" oid="!ed/20e3/CF3/1AD4/54190ca062d8" instancepath="lucasamaral/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="ValContagem" type="real" oid="!ed/20e4/CF3/1AD4/54190ca7330d" instancepath="lucasamaral/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04" LayerIdent="1" WidgetIdent="15" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="BoxTime">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Emit2CDS" type="bool" oid="!ed/20f4/CF3/1AD4/54190ccc685d" instancepath="lucasamaral/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04" LayerIdent="1" WidgetIdent="15" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="BoxTime">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>

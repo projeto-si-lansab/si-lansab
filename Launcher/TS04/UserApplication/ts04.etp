@@ -211,10 +211,10 @@
 			<configuration>63</configuration>
 		</Prop>
 		<Prop id="71" name="@SCADE:DEFAULTFILE">
-			<value>ts05.xscade</value>
+			<value>ts04.xscade</value>
 		</Prop>
 		<Prop id="72" name="@SCADE:SEMFILE">
-			<value>ts05.err</value>
+			<value>ts04.err</value>
 		</Prop>
 		<Prop id="73" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
@@ -297,15 +297,16 @@
 		<Folder id="11" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="90" persistAs="ts04.xscade"/>
+				<FileRef id="90" persistAs="ts041.xscade"/>
 				<FileRef id="92" persistAs="lucasamaral.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="84" name="Design Verifier File">
 			<elements>
-				<FileRef id="85" persistAs="ts05.l4"/>
+				<FileRef id="85" persistAs="ts04.l4"/>
 			</elements>
 		</Folder>
+		<FileRef id="93" persistAs="..\DefinitionFile\ts04.sgfx"/>
 	</roots>
 	<configurations>
 		<Configuration id="13" name="KCG"/>

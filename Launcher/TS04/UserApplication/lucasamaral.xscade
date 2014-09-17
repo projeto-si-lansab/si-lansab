@@ -2,10 +2,133 @@
 <File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
 	<declarations>
 		<Operator kind="node" name="lucasamaral">
+			<inputs>
+				<Variable name="PushIniciar">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/20e2/CF3/1AD4/54190c97770d"/>
+					</pragmas>
+				</Variable>
+				<Variable name="PushAbortar">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/20e3/CF3/1AD4/54190ca062d8"/>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="ValContagem">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/20e4/CF3/1AD4/54190ca7330d"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Emit2CDS">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/20f4/CF3/1AD4/54190ccc685d"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/20f6/CF3/1AD4/54190cd52af2"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L1 = true; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L1"/>
+					</lefts>
+					<right>
+						<ConstValue value="true"/>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/20f5/CF3/1AD4/54190cd551bc"/>
+					</pragmas>
+				</Equation>
+				<!-- Emit2CDS = _L1; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Emit2CDS"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L1"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2103/CF3/1AD4/54190cda3909"/>
+					</pragmas>
+				</Equation>
+			</data>
 			<pragmas>
-				<ed:Operator oid="!ed/20e0/279D/16EC/5418ff5bf51" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
+				<ed:Operator oid="!ed/20e0/CF3/1AD4/54190c842511" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
 					<diagrams>
-						<NetDiagram name="diagram_lucasamaral_1" landscape="true" format="A4 (210 297)" oid="!ed/20e1/279D/16EC/5418ff5bdac"/>
+						<NetDiagram name="diagram_lucasamaral_1" landscape="true" format="A4 (210 297)" oid="!ed/20e1/CF3/1AD4/54190c846ea3">
+							<presentationElements>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/20f5/CF3/1AD4/54190cd551bc">
+									<position>
+										<Point x="1323" y="688"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2103/CF3/1AD4/54190cda3909">
+									<position>
+										<Point x="3651" y="688"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/20f5/CF3/1AD4/54190cd551bc" dstEquation="!ed/2103/CF3/1AD4/54190cda3909">
+									<positions>
+										<Point x="1535" y="847"/>
+										<Point x="2619" y="847"/>
+										<Point x="2619" y="953"/>
+										<Point x="3704" y="953"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
 					</diagrams>
 				</ed:Operator>
 			</pragmas>
