@@ -460,7 +460,7 @@
                         </widget>
                     </children>
                 </widget>
-                <widget name="PushButton" oid="1ea64495-8ea3-43c4-b28d-214b1ca93c79" type="PushButton">
+                <widget name="PushDestruct" oid="1ea64495-8ea3-43c4-b28d-214b1ca93c79" type="PushButton">
                     <IDE/>
                     <model>
                         <intprop name="WidgetIdent">29</intprop>
@@ -476,26 +476,6 @@
                         <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                         <enumprop name="Alignment">A661_CENTER</enumprop>
                         <stringprop name="LabelString">Self-Destruct</stringprop>
-                    </model>
-                </widget>
-                <widget name="Label" oid="c794c240-e1ff-444f-965f-732393f793ed" type="Label">
-                    <IDE/>
-                    <model>
-                        <intprop name="WidgetIdent">31</intprop>
-                        <enumprop name="Anonymous">A661_FALSE</enumprop>
-                        <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">3140</intprop>
-                        <intprop name="PosY">7960</intprop>
-                        <intprop name="SizeX">3940</intprop>
-                        <intprop name="SizeY">1540</intprop>
-                        <intprop name="RotationAngle">0</intprop>
-                        <intprop name="StyleSet">1</intprop>
-                        <intprop name="MaxStringLength">32</intprop>
-                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
-                        <intprop name="Font">3</intprop>
-                        <intprop name="ColorIndex">1</intprop>
-                        <enumprop name="Alignment">A661_CENTER</enumprop>
-                        <stringprop name="LabelString">60:00</stringprop>
                     </model>
                 </widget>
                 <widget name="ToggleStartCount" oid="9007cd1d-f73c-466b-85d3-437a80446067" type="ToggleButton">
@@ -537,10 +517,42 @@
                         <stringprop name="LabelString">Cancel Launch</stringprop>
                     </model>
                 </widget>
+                <widget name="BoxCountVal" oid="3d02a021-f45b-4d7e-b61e-51e94e3f10e2" type="EditBoxNumeric">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">36</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">3780</intprop>
+                        <intprop name="PosY">8340</intprop>
+                        <intprop name="SizeX">3000</intprop>
+                        <intprop name="SizeY">800</intprop>
+                        <intprop name="StyleSet">110</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <floatprop name="Value">60.0</floatprop>
+                        <floatprop name="TicsCoarse">10.0</floatprop>
+                        <floatprop name="TicsFine">0.1</floatprop>
+                        <floatprop name="MinValue">0.0</floatprop>
+                        <floatprop name="MaxValue">61.0</floatprop>
+                        <intprop name="LegendAreaSizeX">800</intprop>
+                        <intprop name="StartCursorPosByte">32</intprop>
+                        <intprop name="MaxFormatStringLength">16</intprop>
+                        <intprop name="MaxLegendStringLength">16</intprop>
+                        <enumprop name="LegendPosition">A661_RIGHT</enumprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
+                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                        <enumprop name="LegendRemoved">A661_FALSE</enumprop>
+                        <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
+                        <enumprop name="CyclicFlag">A661_TRUE</enumprop>
+                        <stringprop name="FormatString">0:##</stringprop>
+                        <stringprop name="LegendString">s</stringprop>
+                    </model>
+                </widget>
             </children>
         </A661Layer>
     </children>
 </specification>
 
-<!-- crc32 : 2018186862 -->
+<!-- crc32 : 3167743697 -->
 
