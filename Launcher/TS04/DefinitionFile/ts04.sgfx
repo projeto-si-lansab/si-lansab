@@ -23,8 +23,8 @@
             <model>
                 <intprop name="LayerId">1</intprop>
                 <intprop name="ContextNumber">0</intprop>
-                <intprop name="Width">512</intprop>
-                <intprop name="Height">1024</intprop>
+                <intprop name="Width">10240</intprop>
+                <intprop name="Height">20480</intprop>
             </model>
             <children>
                 <widget name="Rec_Status_System" oid="dcfa1cdf-f67d-4fd2-8725-be0d9f3cd8bc" type="GpRectangle">
@@ -33,7 +33,7 @@
                         <intprop name="WidgetIdent">2</intprop>
                         <enumprop name="Anonymous">A661_FALSE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">140</intprop>
+                        <intprop name="PosX">120</intprop>
                         <intprop name="PosY">40</intprop>
                         <intprop name="SizeX">9940</intprop>
                         <intprop name="SizeY">20300</intprop>
@@ -460,24 +460,6 @@
                         </widget>
                     </children>
                 </widget>
-                <widget name="PushDestruct" oid="1ea64495-8ea3-43c4-b28d-214b1ca93c79" type="PushButton">
-                    <IDE/>
-                    <model>
-                        <intprop name="WidgetIdent">29</intprop>
-                        <enumprop name="Enable">A661_TRUE</enumprop>
-                        <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">4900</intprop>
-                        <intprop name="PosY">280</intprop>
-                        <intprop name="SizeX">5000</intprop>
-                        <intprop name="SizeY">1140</intprop>
-                        <intprop name="StyleSet">115</intprop>
-                        <intprop name="NextFocusedWidget">0</intprop>
-                        <intprop name="MaxStringLength">32</intprop>
-                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
-                        <enumprop name="Alignment">A661_CENTER</enumprop>
-                        <stringprop name="LabelString">Self-Destruct</stringprop>
-                    </model>
-                </widget>
                 <widget name="ToggleStartCount" oid="9007cd1d-f73c-466b-85d3-437a80446067" type="ToggleButton">
                     <IDE/>
                     <model>
@@ -492,7 +474,7 @@
                         <intprop name="NextFocusedWidget">0</intprop>
                         <intprop name="MaxStringLength">32</intprop>
                         <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
-                        <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                        <enumprop name="AlternateFlag">A661_TRUE</enumprop>
                         <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                         <enumprop name="Alignment">A661_CENTER</enumprop>
                         <stringprop name="LabelString">Start Counting</stringprop>
@@ -549,10 +531,28 @@
                         <stringprop name="LegendString">s</stringprop>
                     </model>
                 </widget>
+                <widget name="PushDestruct" oid="e057643f-82cf-4ecb-aa1d-cbc8c5d93663" type="PushButton">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">38</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">4900</intprop>
+                        <intprop name="PosY">280</intprop>
+                        <intprop name="SizeX">5000</intprop>
+                        <intprop name="SizeY">1140</intprop>
+                        <intprop name="StyleSet">115</intprop>
+                        <intprop name="NextFocusedWidget">0</intprop>
+                        <intprop name="MaxStringLength">32</intprop>
+                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                        <stringprop name="LabelString">Self-Destruct</stringprop>
+                    </model>
+                </widget>
             </children>
         </A661Layer>
     </children>
 </specification>
 
-<!-- crc32 : 3167743697 -->
+<!-- crc32 : 78038712 -->
 
