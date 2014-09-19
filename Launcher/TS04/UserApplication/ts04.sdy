@@ -29,6 +29,18 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="28" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Phase">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="VerificarEstagios" type="bool" oid="!ed/eb2a/1DBD/1530/541b98e87469" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
 						<Variable name="Emit2CDS" type="bool" oid="!ed/20ee/CF3/1AD4/54190cc63364" instancepath="ts04/"/>
 					</output>
 					<inputs>
