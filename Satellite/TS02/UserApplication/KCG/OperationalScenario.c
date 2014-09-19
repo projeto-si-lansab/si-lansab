@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-09-18T22:19:01
+** Command: s2c613 -config C:/ITA/TS02/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-09-18T22:42:16
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -302,6 +302,8 @@ void OperationalScenario(
   /* OperationalScenario::_L4 */ kcg_bool _L4;
   /* OperationalScenario::_L6 */ kcg_bool _L6;
   /* OperationalScenario::_L7 */ kcg_bool _L7;
+  /* OperationalScenario::_L8 */ kcg_bool _L8;
+  /* OperationalScenario::_L9 */ kcg_bool _L9;
   
   if (outC->init3) {
     OpPhases_state_sel = SSM_st_Ground_OpPhases;
@@ -495,6 +497,10 @@ void OperationalScenario(
   else {
     last_Power = outC->rem_Power;
   }
+  _L9 = kcg_true;
+  _L8 = kcg_true;
+  outC->Layer1Visible = _L9;
+  outC->Layer1Active = _L8;
   _L7 = inC->PassarFaseBtn;
   _L1 = outC->LaunchPhase;
   switch (_126_OpPhases_state_act) {
@@ -1482,6 +1488,6 @@ void OperationalScenario(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** OperationalScenario.c
-** Generation date: 2014-09-18T22:19:01
+** Generation date: 2014-09-18T22:42:16
 *************************************************************$ */
 

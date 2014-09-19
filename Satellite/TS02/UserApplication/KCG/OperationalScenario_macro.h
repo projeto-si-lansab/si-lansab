@@ -81,6 +81,12 @@ typedef struct {
 #define VARC_OperationalScenario_picture(context) context.SAO_CTX_outC_OperationalScenario.picture  /* OperationalScenario/picture */
 #define VAR_OperationalScenario_picture VARC_OperationalScenario_picture(CTX_OperationalScenario)
 
+#define VARC_OperationalScenario_Layer1Active(context) context.SAO_CTX_outC_OperationalScenario.Layer1Active  /* OperationalScenario/Layer1Active */
+#define VAR_OperationalScenario_Layer1Active VARC_OperationalScenario_Layer1Active(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_Layer1Visible(context) context.SAO_CTX_outC_OperationalScenario.Layer1Visible  /* OperationalScenario/Layer1Visible */
+#define VAR_OperationalScenario_Layer1Visible VARC_OperationalScenario_Layer1Visible(CTX_OperationalScenario)
+
 
 /*$**********************************************************
 *                           ELEMENT ACCESS
@@ -119,6 +125,10 @@ typedef struct {
 #define CPY_payMode(DST, SRC) DST = SRC
 #define T_picture kcg_real
 #define CPY_picture(DST, SRC) DST = SRC
+#define T_Layer1Active kcg_bool
+#define CPY_Layer1Active(DST, SRC) DST = SRC
+#define T_Layer1Visible kcg_bool
+#define CPY_Layer1Visible(DST, SRC) DST = SRC
 
 
 /*$**********************************************************

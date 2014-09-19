@@ -144,12 +144,14 @@ void _SCSIM_Mapping_OperationalScenario() {
 	pSimulator->m_pfnAddOutput(pSimulator, "NormalPhase", &_SCSIM_kcg_bool_Utils, 18, valid, 0, 0);
 	pSimulator->m_pfnAddOutput(pSimulator, "payMode", &_SCSIM_kcg_bool_Utils, 19, valid, 0, 0);
 	pSimulator->m_pfnAddOutput(pSimulator, "picture", &_SCSIM_kcg_real_Utils, 20, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Power", &_SCSIM_kcg_bool_Utils, 21, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Telemetry", &_SCSIM_kcg_int_Utils, 22, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "AttitudeReference", &_SCSIM_kcg_int_Utils, 23, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "takePict", &_SCSIM_kcg_bool_Utils, 24, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "picLocation", &_SCSIM_kcg_real_Utils, 25, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "PassarFaseBtn", &_SCSIM_kcg_bool_Utils, 26, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "Layer1Active", &_SCSIM_kcg_bool_Utils, 21, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "Layer1Visible", &_SCSIM_kcg_bool_Utils, 22, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Power", &_SCSIM_kcg_bool_Utils, 23, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Telemetry", &_SCSIM_kcg_int_Utils, 24, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "AttitudeReference", &_SCSIM_kcg_int_Utils, 25, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "takePict", &_SCSIM_kcg_bool_Utils, 26, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "picLocation", &_SCSIM_kcg_real_Utils, 27, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "PassarFaseBtn", &_SCSIM_kcg_bool_Utils, 28, valid, 0, 0);
 }
 
 void* _SCSIM_Get_OperationalScenario_Handle(void* pInstance, int nHandleIdent, int* pIteratorFilter, int nSize) {
@@ -193,16 +195,20 @@ void* _SCSIM_Get_OperationalScenario_Handle(void* pInstance, int nHandleIdent, i
 		case 20:
 			return &(outputs_ctx.picture);
 		case 21:
-			return &(inputs_ctx.Power);
+			return &(outputs_ctx.Layer1Active);
 		case 22:
-			return &(inputs_ctx.Telemetry);
+			return &(outputs_ctx.Layer1Visible);
 		case 23:
-			return &(inputs_ctx.AttitudeReference);
+			return &(inputs_ctx.Power);
 		case 24:
-			return &(inputs_ctx.takePict);
+			return &(inputs_ctx.Telemetry);
 		case 25:
-			return &(inputs_ctx.picLocation);
+			return &(inputs_ctx.AttitudeReference);
 		case 26:
+			return &(inputs_ctx.takePict);
+		case 27:
+			return &(inputs_ctx.picLocation);
+		case 28:
 			return &(inputs_ctx.PassarFaseBtn);
 		default:
 			break;

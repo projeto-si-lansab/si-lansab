@@ -45,16 +45,16 @@ MAP_DECL(scope_9, 5);
 MAP_DECL(scope_6, 2);
 MAP_DECL(scope_5, 2);
 MAP_DECL(scope_2, 4);
-MAP_DECL(scope_1, 26);
+MAP_DECL(scope_1, 28);
 MAP_DECL(scope_0, 1);
 
-/* struct__5451 */
+/* struct__5459 */
 static const MappingEntry scope_57_entries[2] = {
-  /* 0 */ { MAP_FIELD, ".f", NULL, sizeof(kcg_real), offsetof(struct__5451, f), &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 1 */ { MAP_FIELD, ".k", NULL, sizeof(kcg_int), offsetof(struct__5451, k), &_Type_kcg_int_Utils, NULL, NULL, NULL}
+  /* 0 */ { MAP_FIELD, ".f", NULL, sizeof(kcg_real), offsetof(struct__5459, f), &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 1 */ { MAP_FIELD, ".k", NULL, sizeof(kcg_int), offsetof(struct__5459, k), &_Type_kcg_int_Utils, NULL, NULL, NULL}
 };
 static const MappingScope scope_57 = {
-  "struct__5451",
+  "struct__5459",
   scope_57_entries, 2,
 };
 
@@ -368,7 +368,7 @@ static const MappingScope scope_2 = {
 };
 
 /* OperationalScenario/ OperationalScenario */
-static const MappingEntry scope_1_entries[26] = {
+static const MappingEntry scope_1_entries[28] = {
   /* 0 */ { MAP_LOCAL, "@kcg0", NULL, sizeof(kcg_bool), (int)&outputs_ctx.init3, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
   /* 1 */ { MAP_LOCAL, "@kcg1", NULL, sizeof(kcg_bool), (int)&outputs_ctx.init2, &_Type_kcg_bool_Utils, NULL, NULL /* CLOCK _126_OpPhases_state_act */, NULL},
   /* 2 */ { MAP_LOCAL, "@kcg2", NULL, sizeof(kcg_bool), (int)&outputs_ctx.init1, &_Type_kcg_bool_Utils, NULL, NULL /* CLOCK _126_OpPhases_state_act */, NULL},
@@ -377,28 +377,30 @@ static const MappingEntry scope_1_entries[26] = {
   /* 5 */ { MAP_INPUT, "AttitudeReference", NULL, sizeof(kcg_int), (int)&inputs_ctx.AttitudeReference, &_Type_kcg_int_Utils, NULL, NULL, NULL},
   /* 6 */ { MAP_LOCAL, "AttitudeReference@mem", NULL, sizeof(kcg_int), (int)&outputs_ctx.rem_AttitudeReference, &_Type_kcg_int_Utils, NULL, NULL, NULL},
   /* 7 */ { MAP_LOCAL, "LaunchPhase@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.LaunchPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 8 */ { MAP_LOCAL, "NPhase@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.NPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 9 */ { MAP_OUTPUT, "NormalPhase", NULL, sizeof(kcg_bool), (int)&outputs_ctx.NormalPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 10 */ { MAP_AUTOMATON, "OpPhases:", NULL, 0, 0, NULL, NULL, NULL, &scope_2},
-  /* 11 */ { MAP_INPUT, "PassarFaseBtn", NULL, sizeof(kcg_bool), (int)&inputs_ctx.PassarFaseBtn, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 12 */ { MAP_INPUT, "Power", NULL, sizeof(kcg_bool), (int)&inputs_ctx.Power, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 13 */ { MAP_LOCAL, "Power@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_Power, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 14 */ { MAP_OUTPUT, "RefAttitude", NULL, sizeof(kcg_bool), (int)&outputs_ctx.RefAttitude, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 15 */ { MAP_OUTPUT, "StartAtAcquisition", NULL, sizeof(kcg_bool), (int)&outputs_ctx.StartAtAcquisition, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 16 */ { MAP_OUTPUT, "StartLaunchPhase", NULL, sizeof(kcg_bool), (int)&outputs_ctx.StartLaunchPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 17 */ { MAP_INPUT, "Telemetry", NULL, sizeof(kcg_int), (int)&inputs_ctx.Telemetry, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 18 */ { MAP_LOCAL, "Telemetry@mem", NULL, sizeof(kcg_int), (int)&outputs_ctx.rem_Telemetry, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 19 */ { MAP_OUTPUT, "payMode", NULL, sizeof(kcg_bool), (int)&outputs_ctx.payMode, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 20 */ { MAP_INPUT, "picLocation", NULL, sizeof(kcg_real), (int)&inputs_ctx.picLocation, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 21 */ { MAP_LOCAL, "picLocation@mem", NULL, sizeof(kcg_real), (int)&outputs_ctx.rem_picLocation, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 22 */ { MAP_OUTPUT, "picture", NULL, sizeof(kcg_real), (int)&outputs_ctx.picture, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 23 */ { MAP_OUTPUT, "safeMode", NULL, sizeof(kcg_bool), (int)&outputs_ctx.safeMode, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 24 */ { MAP_INPUT, "takePict", NULL, sizeof(kcg_bool), (int)&inputs_ctx.takePict, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 25 */ { MAP_LOCAL, "takePict@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_takePict, &_Type_kcg_bool_Utils, NULL, NULL, NULL}
+  /* 8 */ { MAP_OUTPUT, "Layer1Active", NULL, sizeof(kcg_bool), (int)&outputs_ctx.Layer1Active, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 9 */ { MAP_OUTPUT, "Layer1Visible", NULL, sizeof(kcg_bool), (int)&outputs_ctx.Layer1Visible, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 10 */ { MAP_LOCAL, "NPhase@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.NPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 11 */ { MAP_OUTPUT, "NormalPhase", NULL, sizeof(kcg_bool), (int)&outputs_ctx.NormalPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 12 */ { MAP_AUTOMATON, "OpPhases:", NULL, 0, 0, NULL, NULL, NULL, &scope_2},
+  /* 13 */ { MAP_INPUT, "PassarFaseBtn", NULL, sizeof(kcg_bool), (int)&inputs_ctx.PassarFaseBtn, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 14 */ { MAP_INPUT, "Power", NULL, sizeof(kcg_bool), (int)&inputs_ctx.Power, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 15 */ { MAP_LOCAL, "Power@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_Power, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 16 */ { MAP_OUTPUT, "RefAttitude", NULL, sizeof(kcg_bool), (int)&outputs_ctx.RefAttitude, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 17 */ { MAP_OUTPUT, "StartAtAcquisition", NULL, sizeof(kcg_bool), (int)&outputs_ctx.StartAtAcquisition, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 18 */ { MAP_OUTPUT, "StartLaunchPhase", NULL, sizeof(kcg_bool), (int)&outputs_ctx.StartLaunchPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 19 */ { MAP_INPUT, "Telemetry", NULL, sizeof(kcg_int), (int)&inputs_ctx.Telemetry, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 20 */ { MAP_LOCAL, "Telemetry@mem", NULL, sizeof(kcg_int), (int)&outputs_ctx.rem_Telemetry, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 21 */ { MAP_OUTPUT, "payMode", NULL, sizeof(kcg_bool), (int)&outputs_ctx.payMode, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 22 */ { MAP_INPUT, "picLocation", NULL, sizeof(kcg_real), (int)&inputs_ctx.picLocation, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 23 */ { MAP_LOCAL, "picLocation@mem", NULL, sizeof(kcg_real), (int)&outputs_ctx.rem_picLocation, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 24 */ { MAP_OUTPUT, "picture", NULL, sizeof(kcg_real), (int)&outputs_ctx.picture, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 25 */ { MAP_OUTPUT, "safeMode", NULL, sizeof(kcg_bool), (int)&outputs_ctx.safeMode, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 26 */ { MAP_INPUT, "takePict", NULL, sizeof(kcg_bool), (int)&inputs_ctx.takePict, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 27 */ { MAP_LOCAL, "takePict@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_takePict, &_Type_kcg_bool_Utils, NULL, NULL, NULL}
 };
 static const MappingScope scope_1 = {
   "OperationalScenario/ OperationalScenario",
-  scope_1_entries, 26,
+  scope_1_entries, 28,
 };
 
 /*  */

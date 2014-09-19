@@ -1,9 +1,9 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/OperationalScenario.xscade
-** Generation date: 2014-09-18T22:18:57
+** Command: x2s613 C:/ITA/TS02/UserApplication/OperationalScenario.xscade
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
-/* xscade source: C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/OperationalScenario.xscade */
+/* xscade source: C:/ITA/TS02/UserApplication/OperationalScenario.xscade */
 node OperationalScenario(
     Power : bool last = false;
     Telemetry : int last = 0;
@@ -18,7 +18,9 @@ node OperationalScenario(
     RefAttitude : bool last = false;
     NormalPhase : bool last = false;
     payMode : bool last = false;
-    picture : real last = 0.0)
+    picture : real last = 0.0;
+    Layer1Active : bool;
+    Layer1Visible : bool)
 var
   LaunchPhase : bool last = false;
   AtAcquisition : bool last = false;
@@ -28,6 +30,8 @@ var
   _L4 : bool;
   _L6 : bool;
   _L7 : bool;
+  _L8 : bool;
+  _L9 : bool;
 let
   
   automaton OpPhases
@@ -282,18 +286,22 @@ let
   _L6= last 'NormalPhase;
   NPhase= _L6;
   _L7= PassarFaseBtn;
+  Layer1Active= _L8;
+  Layer1Visible= _L9;
+  _L8= true;
+  _L9= true;
 tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/ReadSensors.xscade
-** Generation date: 2014-09-18T22:18:57
+** Command: x2s613 C:/ITA/TS02/UserApplication/ReadSensors.xscade
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
-/* xscade source: C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/ReadSensors.xscade */
+/* xscade source: C:/ITA/TS02/UserApplication/ReadSensors.xscade */
 node ReadSensors() returns (SensorsActive : bool)
 var
   _L1 : bool;
@@ -304,14 +312,14 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/TestActuators.xscade
-** Generation date: 2014-09-18T22:18:57
+** Command: x2s613 C:/ITA/TS02/UserApplication/TestActuators.xscade
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
-/* xscade source: C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/TestActuators.xscade */
+/* xscade source: C:/ITA/TS02/UserApplication/TestActuators.xscade */
 node TestActuators() returns (TestingActuators : bool)
 var
   _L1 : bool;
@@ -322,14 +330,14 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/TakePicture.xscade
-** Generation date: 2014-09-18T22:18:57
+** Command: x2s613 C:/ITA/TS02/UserApplication/TakePicture.xscade
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
-/* xscade source: C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/TakePicture.xscade */
+/* xscade source: C:/ITA/TS02/UserApplication/TakePicture.xscade */
 node TakePicture() returns (TakingPicture : bool)
 var
   _L1 : bool;
@@ -340,14 +348,14 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/controlAlgorithm.xscade
-** Generation date: 2014-09-18T22:18:57
+** Command: x2s613 C:/ITA/TS02/UserApplication/controlAlgorithm.xscade
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
-/* xscade source: C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/controlAlgorithm.xscade */
+/* xscade source: C:/ITA/TS02/UserApplication/controlAlgorithm.xscade */
 node controlAlgorithm() returns (ControlAlgorithmActive : bool)
 var
   _L1 : bool;
@@ -358,14 +366,14 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/upDateSw.xscade
-** Generation date: 2014-09-18T22:18:57
+** Command: x2s613 C:/ITA/TS02/UserApplication/upDateSw.xscade
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
-/* xscade source: C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/upDateSw.xscade */
+/* xscade source: C:/ITA/TS02/UserApplication/upDateSw.xscade */
 node upDateSw() returns (Updating : bool)
 var
   _L1 : bool;
@@ -376,11 +384,11 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libdigital/digital.xscade
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libdigital/digital.xscade */
@@ -766,11 +774,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libdigital/TruthTables.xscade
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libdigital/TruthTables.xscade */
@@ -929,11 +937,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/liblinear/linear.xscade
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/liblinear/linear.xscade */
@@ -1274,11 +1282,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/liblinear/filters.xscade
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:12
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/liblinear/filters.xscade */
@@ -1960,11 +1968,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmath/vect.xscade
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmath/vect.xscade */
@@ -2041,11 +2049,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmath/math.xscade
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmath/math.xscade */
@@ -2552,11 +2560,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmathext/mathext.xscade
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmathext/mathext.xscade */
@@ -2690,11 +2698,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libpwlinear/pwlinear.xscade
-** Generation date: 2014-09-18T22:18:57
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libpwlinear/pwlinear.xscade */
@@ -3058,11 +3066,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:58
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libpwlinear/lut.xscade
-** Generation date: 2014-09-18T22:18:58
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libpwlinear/lut.xscade */
@@ -4181,11 +4189,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:58
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libverif/libverif.xscade
-** Generation date: 2014-09-18T22:18:58
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libverif/libverif.xscade */
@@ -4311,5 +4319,5 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-09-18T22:18:58
+** Generation date: 2014-09-18T22:42:13
 *************************************************************$ */
