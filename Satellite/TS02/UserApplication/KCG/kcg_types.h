@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-09-18T21:59:38
+** Generation date: 2014-09-18T22:19:01
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -131,6 +131,6 @@ extern kcg_bool kcg_comp_struct__5451(
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2014-09-18T21:59:38
+** Generation date: 2014-09-18T22:19:01
 *************************************************************$ */
 
