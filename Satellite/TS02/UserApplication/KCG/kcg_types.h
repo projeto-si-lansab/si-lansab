@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/ITA/TS02/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-09-18T22:42:16
+** Generation date: 2014-09-19T00:33:13
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -60,7 +60,8 @@ typedef enum {
   SSM_TR_no_trans_OpPhases,
   SSM_TR_Ground_1_OpPhases,
   SSM_TR_Launch_1_OpPhases,
-  SSM_TR_AttitudeAcquisition_1_OpPhases
+  SSM_TR_AttitudeAcquisition_1_OpPhases,
+  SSM_TR_NormalPhase_1_OpPhases
 } SSM_TR_OpPhases;
 /* OperationalScenario::OpPhases */
 typedef enum {
@@ -69,17 +70,6 @@ typedef enum {
   SSM_st_AttitudeAcquisition_OpPhases,
   SSM_st_NormalPhase_OpPhases
 } SSM_ST_OpPhases;
-/* OperationalScenario::OpPhases::Ground::SM2 */
-typedef enum {
-  SSM_TR_no_trans_SM2_OpPhases_Ground,
-  SSM_TR_SupportMode_1_SM2_OpPhases_Ground,
-  SSM_TR_SafeMode_1_SM2_OpPhases_Ground
-} SSM_TR_SM2_OpPhases_Ground;
-/* OperationalScenario::OpPhases::Ground::SM2 */
-typedef enum {
-  SSM_st_SupportMode_OpPhases_Ground_SM2,
-  SSM_st_SafeMode_OpPhases_Ground_SM2
-} SSM_ST_SM2_OpPhases_Ground;
 /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */
 typedef enum {
   SSM_TR_no_trans_atacquisition_OpPhases_AttitudeAcquisition,
@@ -109,28 +99,28 @@ typedef enum {
   SSM_st_Payload_OpPhases_NormalPhase_NPhase,
   SSM_st_SafeMode_OpPhases_NormalPhase_NPhase
 } SSM_ST_NPhase_OpPhases_NormalPhase;
-typedef struct { kcg_int k; kcg_real f; } struct__5459;
+typedef struct { kcg_int k; kcg_real f; } struct__5411;
 
 /* lut::LutIndex */
-typedef struct__5459 LutIndex_lut;
+typedef struct__5411 LutIndex_lut;
 
-#ifndef kcg_copy_struct__5459
-#define kcg_copy_struct__5459(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5459)))
-#endif /* kcg_copy_struct__5459 */
+#ifndef kcg_copy_struct__5411
+#define kcg_copy_struct__5411(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5411)))
+#endif /* kcg_copy_struct__5411 */
 
-#ifndef kcg_comp_struct__5459
-extern kcg_bool kcg_comp_struct__5459(
-  struct__5459 *kcg_c1,
-  struct__5459 *kcg_c2);
-#endif /* kcg_comp_struct__5459 */
+#ifndef kcg_comp_struct__5411
+extern kcg_bool kcg_comp_struct__5411(
+  struct__5411 *kcg_c1,
+  struct__5411 *kcg_c2);
+#endif /* kcg_comp_struct__5411 */
 
-#define kcg_comp_LutIndex_lut kcg_comp_struct__5459
+#define kcg_comp_LutIndex_lut kcg_comp_struct__5411
 
-#define kcg_copy_LutIndex_lut kcg_copy_struct__5459
+#define kcg_copy_LutIndex_lut kcg_copy_struct__5411
 
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2014-09-18T22:42:16
+** Generation date: 2014-09-19T00:33:13
 *************************************************************$ */
 

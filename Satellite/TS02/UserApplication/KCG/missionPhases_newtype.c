@@ -187,6 +187,8 @@ static EnumValUtils SSM_TR_OpPhases_values[] = {
     { "Launch:<1>", SSM_TR_Launch_1_OpPhases},
     { "AttitudeAcquisition:<1>", SSM_TR_AttitudeAcquisition_1_OpPhases},
     { "AttitudeAcquisition:<1>", SSM_TR_AttitudeAcquisition_1_OpPhases},
+    { "NormalPhase:<1>", SSM_TR_NormalPhase_1_OpPhases},
+    { "NormalPhase:<1>", SSM_TR_NormalPhase_1_OpPhases},
 };
 
 int SSM_TR_OpPhases_to_string(const void* pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData)
@@ -195,7 +197,7 @@ int SSM_TR_OpPhases_to_string(const void* pValue, int (*pfnStrAppend)(const char
         && pSimSSM_TR_OpPhasesVTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
         return pfnStrAppend(*(char**)pSimSSM_TR_OpPhasesVTable->m_pfnToType(SptString, pValue), pData);
     }
-    return pConverter->m_pfnEnumToString(*(SSM_TR_OpPhases*)pValue, SSM_TR_OpPhases_values, 8, pfnStrAppend, pData);
+    return pConverter->m_pfnEnumToString(*(SSM_TR_OpPhases*)pValue, SSM_TR_OpPhases_values, 10, pfnStrAppend, pData);
 }
 
 int string_to_SSM_TR_OpPhases(const char* str, void* pValue, const char** endptr)
@@ -207,7 +209,7 @@ int string_to_SSM_TR_OpPhases(const char* str, void* pValue, const char** endptr
     }
     {
         int nTemp = 0;
-        int nRet = pConverter->m_pfnStringToEnum(str, &nTemp, SSM_TR_OpPhases_values, 8, endptr);
+        int nRet = pConverter->m_pfnStringToEnum(str, &nTemp, SSM_TR_OpPhases_values, 10, endptr);
         if (pValue != NULL && nRet != 0)
             *(SSM_TR_OpPhases*)pValue = nTemp;
         return nRet;
@@ -228,7 +230,7 @@ int compare_SSM_TR_OpPhases(int *pStatus, const void* pValue1, const void* pValu
         && pSimSSM_TR_OpPhasesVTable->m_version >= Scv612
         && pSimSSM_TR_OpPhasesVTable->m_pfnCompare != NULL)
         return pSimSSM_TR_OpPhasesVTable->m_pfnCompare(pStatus, pValue1, pValue2);
-    return pConverter->m_pfnEnumComparison(pStatus, *(SSM_TR_OpPhases*)pValue1, *(SSM_TR_OpPhases*)pValue2, SSM_TR_OpPhases_values, 8, pData);
+    return pConverter->m_pfnEnumComparison(pStatus, *(SSM_TR_OpPhases*)pValue1, *(SSM_TR_OpPhases*)pValue2, SSM_TR_OpPhases_values, 10, pData);
 }
 
 int SSM_TR_OpPhases_to_double(const void *pValue, double *nRetValue)
@@ -242,7 +244,7 @@ int SSM_TR_OpPhases_to_double(const void *pValue, double *nRetValue)
 
 int get_SSM_TR_OpPhases_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
 {
-    return get_enum_signature(SSM_TR_OpPhases_values, 8, pfnStrAppend, pData);
+    return get_enum_signature(SSM_TR_OpPhases_values, 10, pfnStrAppend, pData);
 }
 
 int set_SSM_TR_OpPhases_default_value(void *pValue)
@@ -266,192 +268,6 @@ TypeUtils _Type_SSM_TR_OpPhases_Utils = {
     get_SSM_TR_OpPhases_signature,
     set_SSM_TR_OpPhases_default_value,
     sizeof(SSM_TR_OpPhases)
-};
-
-/****************************************************************
- ** SSM_ST_SM2_OpPhases_Ground 
- ****************************************************************/
-
-struct SimTypeVTable* pSimSSM_ST_SM2_OpPhases_GroundVTable;
-
-static EnumValUtils SSM_ST_SM2_OpPhases_Ground_values[] = {
-    { "SupportMode", SSM_st_SupportMode_OpPhases_Ground_SM2},
-    { "SupportMode", SSM_st_SupportMode_OpPhases_Ground_SM2},
-    { "SafeMode", SSM_st_SafeMode_OpPhases_Ground_SM2},
-    { "SafeMode", SSM_st_SafeMode_OpPhases_Ground_SM2},
-};
-
-int SSM_ST_SM2_OpPhases_Ground_to_string(const void* pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData)
-{
-    if (pSimSSM_ST_SM2_OpPhases_GroundVTable != NULL
-        && pSimSSM_ST_SM2_OpPhases_GroundVTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
-        return pfnStrAppend(*(char**)pSimSSM_ST_SM2_OpPhases_GroundVTable->m_pfnToType(SptString, pValue), pData);
-    }
-    return pConverter->m_pfnEnumToString(*(SSM_ST_SM2_OpPhases_Ground*)pValue, SSM_ST_SM2_OpPhases_Ground_values, 4, pfnStrAppend, pData);
-}
-
-int string_to_SSM_ST_SM2_OpPhases_Ground(const char* str, void* pValue, const char** endptr)
-{
-    skip_whitespace(str);
-    if (pSimSSM_ST_SM2_OpPhases_GroundVTable != NULL
-        && pSimSSM_ST_SM2_OpPhases_GroundVTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
-        return string_to_VTable(str, pSimSSM_ST_SM2_OpPhases_GroundVTable, pValue, endptr);
-    }
-    {
-        int nTemp = 0;
-        int nRet = pConverter->m_pfnStringToEnum(str, &nTemp, SSM_ST_SM2_OpPhases_Ground_values, 4, endptr);
-        if (pValue != NULL && nRet != 0)
-            *(SSM_ST_SM2_OpPhases_Ground*)pValue = nTemp;
-        return nRet;
-    }
-}
-
-int is_SSM_ST_SM2_OpPhases_Ground_double_convertion_allowed()
-{
-    if (pSimSSM_ST_SM2_OpPhases_GroundVTable != NULL) {
-        return is_VTable_double_convertion_allowed(pSimSSM_ST_SM2_OpPhases_GroundVTable);
-    }
-    return 1;
-}
-
-int compare_SSM_ST_SM2_OpPhases_Ground(int *pStatus, const void* pValue1, const void* pValue2, void *pData)
-{
-    if (pSimSSM_ST_SM2_OpPhases_GroundVTable != NULL
-        && pSimSSM_ST_SM2_OpPhases_GroundVTable->m_version >= Scv612
-        && pSimSSM_ST_SM2_OpPhases_GroundVTable->m_pfnCompare != NULL)
-        return pSimSSM_ST_SM2_OpPhases_GroundVTable->m_pfnCompare(pStatus, pValue1, pValue2);
-    return pConverter->m_pfnEnumComparison(pStatus, *(SSM_ST_SM2_OpPhases_Ground*)pValue1, *(SSM_ST_SM2_OpPhases_Ground*)pValue2, SSM_ST_SM2_OpPhases_Ground_values, 4, pData);
-}
-
-int SSM_ST_SM2_OpPhases_Ground_to_double(const void *pValue, double *nRetValue)
-{
-    if (pSimSSM_ST_SM2_OpPhases_GroundVTable != NULL) {
-        return  VTable_to_double(pValue, pSimSSM_ST_SM2_OpPhases_GroundVTable, nRetValue);
-    }
-    *nRetValue = (double)*((SSM_ST_SM2_OpPhases_Ground*)pValue);
-    return 1;
-}
-
-int get_SSM_ST_SM2_OpPhases_Ground_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
-{
-    return get_enum_signature(SSM_ST_SM2_OpPhases_Ground_values, 4, pfnStrAppend, pData);
-}
-
-int set_SSM_ST_SM2_OpPhases_Ground_default_value(void *pValue)
-{
-    *(SSM_ST_SM2_OpPhases_Ground*)pValue = SSM_st_SupportMode_OpPhases_Ground_SM2;
-    return 1;
-}
-
-int check_SSM_ST_SM2_OpPhases_Ground_string(const char* str, const char** endptr)
-{
-    return string_to_SSM_ST_SM2_OpPhases_Ground(str, NULL, endptr);
-}
-
-TypeUtils _Type_SSM_ST_SM2_OpPhases_Ground_Utils = {
-    SSM_ST_SM2_OpPhases_Ground_to_string,
-    check_SSM_ST_SM2_OpPhases_Ground_string,
-    string_to_SSM_ST_SM2_OpPhases_Ground,
-    is_SSM_ST_SM2_OpPhases_Ground_double_convertion_allowed,
-    SSM_ST_SM2_OpPhases_Ground_to_double,
-    compare_SSM_ST_SM2_OpPhases_Ground,
-    get_SSM_ST_SM2_OpPhases_Ground_signature,
-    set_SSM_ST_SM2_OpPhases_Ground_default_value,
-    sizeof(SSM_ST_SM2_OpPhases_Ground)
-};
-
-/****************************************************************
- ** SSM_TR_SM2_OpPhases_Ground 
- ****************************************************************/
-
-struct SimTypeVTable* pSimSSM_TR_SM2_OpPhases_GroundVTable;
-
-static EnumValUtils SSM_TR_SM2_OpPhases_Ground_values[] = {
-    { "SSM_TR_SM2_OpPhases_Ground_no_trans", 0},
-    { "SSM_TR_SM2_OpPhases_Ground_no_trans", 0},
-    { "SupportMode:<1>", SSM_TR_SupportMode_1_SM2_OpPhases_Ground},
-    { "SupportMode:<1>", SSM_TR_SupportMode_1_SM2_OpPhases_Ground},
-    { "SafeMode:<1>", SSM_TR_SafeMode_1_SM2_OpPhases_Ground},
-    { "SafeMode:<1>", SSM_TR_SafeMode_1_SM2_OpPhases_Ground},
-};
-
-int SSM_TR_SM2_OpPhases_Ground_to_string(const void* pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData)
-{
-    if (pSimSSM_TR_SM2_OpPhases_GroundVTable != NULL
-        && pSimSSM_TR_SM2_OpPhases_GroundVTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
-        return pfnStrAppend(*(char**)pSimSSM_TR_SM2_OpPhases_GroundVTable->m_pfnToType(SptString, pValue), pData);
-    }
-    return pConverter->m_pfnEnumToString(*(SSM_TR_SM2_OpPhases_Ground*)pValue, SSM_TR_SM2_OpPhases_Ground_values, 6, pfnStrAppend, pData);
-}
-
-int string_to_SSM_TR_SM2_OpPhases_Ground(const char* str, void* pValue, const char** endptr)
-{
-    skip_whitespace(str);
-    if (pSimSSM_TR_SM2_OpPhases_GroundVTable != NULL
-        && pSimSSM_TR_SM2_OpPhases_GroundVTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
-        return string_to_VTable(str, pSimSSM_TR_SM2_OpPhases_GroundVTable, pValue, endptr);
-    }
-    {
-        int nTemp = 0;
-        int nRet = pConverter->m_pfnStringToEnum(str, &nTemp, SSM_TR_SM2_OpPhases_Ground_values, 6, endptr);
-        if (pValue != NULL && nRet != 0)
-            *(SSM_TR_SM2_OpPhases_Ground*)pValue = nTemp;
-        return nRet;
-    }
-}
-
-int is_SSM_TR_SM2_OpPhases_Ground_double_convertion_allowed()
-{
-    if (pSimSSM_TR_SM2_OpPhases_GroundVTable != NULL) {
-        return is_VTable_double_convertion_allowed(pSimSSM_TR_SM2_OpPhases_GroundVTable);
-    }
-    return 1;
-}
-
-int compare_SSM_TR_SM2_OpPhases_Ground(int *pStatus, const void* pValue1, const void* pValue2, void *pData)
-{
-    if (pSimSSM_TR_SM2_OpPhases_GroundVTable != NULL
-        && pSimSSM_TR_SM2_OpPhases_GroundVTable->m_version >= Scv612
-        && pSimSSM_TR_SM2_OpPhases_GroundVTable->m_pfnCompare != NULL)
-        return pSimSSM_TR_SM2_OpPhases_GroundVTable->m_pfnCompare(pStatus, pValue1, pValue2);
-    return pConverter->m_pfnEnumComparison(pStatus, *(SSM_TR_SM2_OpPhases_Ground*)pValue1, *(SSM_TR_SM2_OpPhases_Ground*)pValue2, SSM_TR_SM2_OpPhases_Ground_values, 6, pData);
-}
-
-int SSM_TR_SM2_OpPhases_Ground_to_double(const void *pValue, double *nRetValue)
-{
-    if (pSimSSM_TR_SM2_OpPhases_GroundVTable != NULL) {
-        return  VTable_to_double(pValue, pSimSSM_TR_SM2_OpPhases_GroundVTable, nRetValue);
-    }
-    *nRetValue = (double)*((SSM_TR_SM2_OpPhases_Ground*)pValue);
-    return 1;
-}
-
-int get_SSM_TR_SM2_OpPhases_Ground_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
-{
-    return get_enum_signature(SSM_TR_SM2_OpPhases_Ground_values, 6, pfnStrAppend, pData);
-}
-
-int set_SSM_TR_SM2_OpPhases_Ground_default_value(void *pValue)
-{
-    *(SSM_TR_SM2_OpPhases_Ground*)pValue = 0;
-    return 1;
-}
-
-int check_SSM_TR_SM2_OpPhases_Ground_string(const char* str, const char** endptr)
-{
-    return string_to_SSM_TR_SM2_OpPhases_Ground(str, NULL, endptr);
-}
-
-TypeUtils _Type_SSM_TR_SM2_OpPhases_Ground_Utils = {
-    SSM_TR_SM2_OpPhases_Ground_to_string,
-    check_SSM_TR_SM2_OpPhases_Ground_string,
-    string_to_SSM_TR_SM2_OpPhases_Ground,
-    is_SSM_TR_SM2_OpPhases_Ground_double_convertion_allowed,
-    SSM_TR_SM2_OpPhases_Ground_to_double,
-    compare_SSM_TR_SM2_OpPhases_Ground,
-    get_SSM_TR_SM2_OpPhases_Ground_signature,
-    set_SSM_TR_SM2_OpPhases_Ground_default_value,
-    sizeof(SSM_TR_SM2_OpPhases_Ground)
 };
 
 /****************************************************************
@@ -1181,87 +997,87 @@ TypeUtils _Type_kcg_int_Utils = {
 };
 
 /****************************************************************
- ** struct__5459 
+ ** struct__5411 
  ****************************************************************/
 
-struct SimTypeVTable* pSimstruct__5459VTable;
+struct SimTypeVTable* pSimstruct__5411VTable;
 
-static FieldUtils struct__5459_fields[] = {
-    {"k", offsetof(struct__5459,k), &_Type_kcg_int_Utils},
-    {"f", offsetof(struct__5459,f), &_Type_kcg_real_Utils},
+static FieldUtils struct__5411_fields[] = {
+    {"k", offsetof(struct__5411,k), &_Type_kcg_int_Utils},
+    {"f", offsetof(struct__5411,f), &_Type_kcg_real_Utils},
 };
 
-int struct__5459_to_string(const void* pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData)
+int struct__5411_to_string(const void* pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData)
 {
-    if (pSimstruct__5459VTable != NULL
-        && pSimstruct__5459VTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
-        return pfnStrAppend(*(char**)pSimstruct__5459VTable->m_pfnToType(SptString, pValue), pData);
+    if (pSimstruct__5411VTable != NULL
+        && pSimstruct__5411VTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
+        return pfnStrAppend(*(char**)pSimstruct__5411VTable->m_pfnToType(SptString, pValue), pData);
     }
-    return pConverter->m_pfnStructureToString(pValue, struct__5459_fields, 2, pfnStrAppend, pData);
+    return pConverter->m_pfnStructureToString(pValue, struct__5411_fields, 2, pfnStrAppend, pData);
 }
 
-int string_to_struct__5459(const char* str, void* pValue, const char** endptr)
+int string_to_struct__5411(const char* str, void* pValue, const char** endptr)
 {
     skip_whitespace(str);
-    if (pSimstruct__5459VTable != NULL
-        && pSimstruct__5459VTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
-        return string_to_VTable(str, pSimstruct__5459VTable, pValue, endptr);
+    if (pSimstruct__5411VTable != NULL
+        && pSimstruct__5411VTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
+        return string_to_VTable(str, pSimstruct__5411VTable, pValue, endptr);
     }
-    return pConverter->m_pfnStringToStructure(str, pValue, struct__5459_fields, 2, endptr);
+    return pConverter->m_pfnStringToStructure(str, pValue, struct__5411_fields, 2, endptr);
 }
 
-int is_struct__5459_double_convertion_allowed()
+int is_struct__5411_double_convertion_allowed()
 {
-    if (pSimstruct__5459VTable != NULL) {
-        return is_VTable_double_convertion_allowed(pSimstruct__5459VTable);
-    }
-    return 0;
-}
-
-int compare_struct__5459(int *pStatus, const void* pValue1, const void* pValue2, void *pData)
-{
-    if (pSimstruct__5459VTable != NULL
-        && pSimstruct__5459VTable->m_version >= Scv612
-        && pSimstruct__5459VTable->m_pfnCompare != NULL)
-        return pSimstruct__5459VTable->m_pfnCompare(pStatus, pValue1, pValue2);
-    return pConverter->m_pfnStructureComparison(pStatus, pValue1, pValue2, struct__5459_fields, 2, pData);
-}
-
-int struct__5459_to_double(const void *pValue, double *nRetValue)
-{
-    if (pSimstruct__5459VTable != NULL) {
-        return  VTable_to_double(pValue, pSimstruct__5459VTable, nRetValue);
+    if (pSimstruct__5411VTable != NULL) {
+        return is_VTable_double_convertion_allowed(pSimstruct__5411VTable);
     }
     return 0;
 }
 
-int get_struct__5459_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
+int compare_struct__5411(int *pStatus, const void* pValue1, const void* pValue2, void *pData)
 {
-    return get_structure_signature(struct__5459_fields, 2, pfnStrAppend, pData);
+    if (pSimstruct__5411VTable != NULL
+        && pSimstruct__5411VTable->m_version >= Scv612
+        && pSimstruct__5411VTable->m_pfnCompare != NULL)
+        return pSimstruct__5411VTable->m_pfnCompare(pStatus, pValue1, pValue2);
+    return pConverter->m_pfnStructureComparison(pStatus, pValue1, pValue2, struct__5411_fields, 2, pData);
 }
 
-int set_struct__5459_default_value(void *pValue)
+int struct__5411_to_double(const void *pValue, double *nRetValue)
 {
-    set_kcg_int_default_value(&(((struct__5459*)pValue)->k));
-    set_kcg_real_default_value(&(((struct__5459*)pValue)->f));
+    if (pSimstruct__5411VTable != NULL) {
+        return  VTable_to_double(pValue, pSimstruct__5411VTable, nRetValue);
+    }
+    return 0;
+}
+
+int get_struct__5411_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
+{
+    return get_structure_signature(struct__5411_fields, 2, pfnStrAppend, pData);
+}
+
+int set_struct__5411_default_value(void *pValue)
+{
+    set_kcg_int_default_value(&(((struct__5411*)pValue)->k));
+    set_kcg_real_default_value(&(((struct__5411*)pValue)->f));
     return 1;
 }
 
-int check_struct__5459_string(const char* str, const char** endptr)
+int check_struct__5411_string(const char* str, const char** endptr)
 {
-    return string_to_struct__5459(str, NULL, endptr);
+    return string_to_struct__5411(str, NULL, endptr);
 }
 
-TypeUtils _Type_struct__5459_Utils = {
-    struct__5459_to_string,
-    check_struct__5459_string,
-    string_to_struct__5459,
-    is_struct__5459_double_convertion_allowed,
-    struct__5459_to_double,
-    compare_struct__5459,
-    get_struct__5459_signature,
-    set_struct__5459_default_value,
-    sizeof(struct__5459)
+TypeUtils _Type_struct__5411_Utils = {
+    struct__5411_to_string,
+    check_struct__5411_string,
+    string_to_struct__5411,
+    is_struct__5411_double_convertion_allowed,
+    struct__5411_to_double,
+    compare_struct__5411,
+    get_struct__5411_signature,
+    set_struct__5411_default_value,
+    sizeof(struct__5411)
 };
 
 /****************************************************************
@@ -1370,7 +1186,7 @@ int LutIndex_lut_to_string(const void* pValue, int (*pfnStrAppend)(const char *s
         && pSimLutIndex_lutVTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
         return pfnStrAppend(*(char**)pSimLutIndex_lutVTable->m_pfnToType(SptString, pValue), pData);
     }
-    return struct__5459_to_string(pValue, pfnStrAppend, pData);
+    return struct__5411_to_string(pValue, pfnStrAppend, pData);
 }
 
 int string_to_LutIndex_lut(const char* str, void* pValue, const char** endptr)
@@ -1380,7 +1196,7 @@ int string_to_LutIndex_lut(const char* str, void* pValue, const char** endptr)
         && pSimLutIndex_lutVTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
         return string_to_VTable(str, pSimLutIndex_lutVTable, pValue, endptr);
     }
-    return string_to_struct__5459(str, pValue, endptr);
+    return string_to_struct__5411(str, pValue, endptr);
 }
 
 int is_LutIndex_lut_double_convertion_allowed()
@@ -1388,7 +1204,7 @@ int is_LutIndex_lut_double_convertion_allowed()
     if (pSimLutIndex_lutVTable != NULL) {
         return is_VTable_double_convertion_allowed(pSimLutIndex_lutVTable);
     }
-    return is_struct__5459_double_convertion_allowed();
+    return is_struct__5411_double_convertion_allowed();
 }
 
 int compare_LutIndex_lut(int *pStatus, const void* pValue1, const void* pValue2, void *pData)
@@ -1397,7 +1213,7 @@ int compare_LutIndex_lut(int *pStatus, const void* pValue1, const void* pValue2,
         && pSimLutIndex_lutVTable->m_version >= Scv612
         && pSimLutIndex_lutVTable->m_pfnCompare != NULL)
         return pSimLutIndex_lutVTable->m_pfnCompare(pStatus, pValue1, pValue2);
-    return compare_struct__5459(pStatus, pValue1, pValue2, pData);
+    return compare_struct__5411(pStatus, pValue1, pValue2, pData);
 }
 
 int LutIndex_lut_to_double(const void *pValue, double *nRetValue)
@@ -1405,17 +1221,17 @@ int LutIndex_lut_to_double(const void *pValue, double *nRetValue)
     if (pSimLutIndex_lutVTable != NULL) {
         return  VTable_to_double(pValue, pSimLutIndex_lutVTable, nRetValue);
     }
-    return struct__5459_to_double(pValue, nRetValue);
+    return struct__5411_to_double(pValue, nRetValue);
 }
 
 int get_LutIndex_lut_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
 {
-    return get_struct__5459_signature(pfnStrAppend, pData);
+    return get_struct__5411_signature(pfnStrAppend, pData);
 }
 
 int set_LutIndex_lut_default_value(void *pValue)
 {
-    return set_struct__5459_default_value(pValue);
+    return set_struct__5411_default_value(pValue);
 }
 
 int check_LutIndex_lut_string(const char* str, const char** endptr)

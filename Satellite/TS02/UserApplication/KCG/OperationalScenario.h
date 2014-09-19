@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/ITA/TS02/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-09-18T22:42:16
+** Generation date: 2014-09-19T00:33:13
 *************************************************************$ */
 #ifndef _OperationalScenario_H_
 #define _OperationalScenario_H_
@@ -29,16 +29,17 @@ typedef struct {
   kcg_real /* OperationalScenario::picture */ picture;
   kcg_bool /* OperationalScenario::Layer1Active */ Layer1Active;
   kcg_bool /* OperationalScenario::Layer1Visible */ Layer1Visible;
+  kcg_bool /* OperationalScenario::Emit2CDS */ Emit2CDS;
+  kcg_int /* OperationalScenario::ColorIndex */ ColorIndex;
+  kcg_int /* OperationalScenario::ColorIndex2 */ ColorIndex2;
+  kcg_int /* OperationalScenario::ColorIndex3 */ ColorIndex3;
+  kcg_int /* OperationalScenario::ColorIndex4 */ ColorIndex4;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
-  kcg_bool init3;
   kcg_bool init2;
   kcg_bool init1;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  kcg_bool /* OperationalScenario::OpPhases::Ground::SM2 */ SM2_reset_nxt_OpPhases_Ground;
-  kcg_bool /* OperationalScenario::OpPhases::Ground::SM2 */ SM2_reset_act_OpPhases_Ground;
-  SSM_ST_SM2_OpPhases_Ground /* OperationalScenario::OpPhases::Ground::SM2 */ SM2_state_nxt_OpPhases_Ground;
   kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::NPhase */ NPhase_OpPhases_AttitudeAcquisition;
   kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::RefAtt */ RefAtt_OpPhases_AttitudeAcquisition;
   kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::sMode */ sMode_OpPhases_AttitudeAcquisition;
@@ -75,6 +76,6 @@ extern void OperationalScenario_reset(outC_OperationalScenario *outC);
 #endif /* _OperationalScenario_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** OperationalScenario.h
-** Generation date: 2014-09-18T22:42:16
+** Generation date: 2014-09-19T00:33:13
 *************************************************************$ */
 
