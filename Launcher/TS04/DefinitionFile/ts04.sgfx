@@ -33,8 +33,8 @@
                         <intprop name="WidgetIdent">2</intprop>
                         <enumprop name="Anonymous">A661_FALSE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">120</intprop>
-                        <intprop name="PosY">40</intprop>
+                        <intprop name="PosX">140</intprop>
+                        <intprop name="PosY">80</intprop>
                         <intprop name="SizeX">9940</intprop>
                         <intprop name="SizeY">20300</intprop>
                         <intprop name="StyleSet">1</intprop>
@@ -466,8 +466,8 @@
                         <intprop name="WidgetIdent">32</intprop>
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">3200</intprop>
-                        <intprop name="PosY">10440</intprop>
+                        <intprop name="PosX">2960</intprop>
+                        <intprop name="PosY">9560</intprop>
                         <intprop name="SizeX">3820</intprop>
                         <intprop name="SizeY">840</intprop>
                         <intprop name="StyleSet">110</intprop>
@@ -478,25 +478,7 @@
                         <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                         <enumprop name="Alignment">A661_CENTER</enumprop>
                         <stringprop name="LabelString">Start Counting</stringprop>
-                        <stringprop name="AlternateLabelString">Stop Counting</stringprop>
-                    </model>
-                </widget>
-                <widget name="PushCancel" oid="537a448f-45ed-4e11-900d-63a32b1deaec" type="PushButton">
-                    <IDE/>
-                    <model>
-                        <intprop name="WidgetIdent">33</intprop>
-                        <enumprop name="Enable">A661_TRUE</enumprop>
-                        <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">2605</intprop>
-                        <intprop name="PosY">6060</intprop>
-                        <intprop name="SizeX">5010</intprop>
-                        <intprop name="SizeY">860</intprop>
-                        <intprop name="StyleSet">110</intprop>
-                        <intprop name="NextFocusedWidget">0</intprop>
-                        <intprop name="MaxStringLength">32</intprop>
-                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
-                        <enumprop name="Alignment">A661_CENTER</enumprop>
-                        <stringprop name="LabelString">Cancel Launch</stringprop>
+                        <stringprop name="AlternateLabelString">Cancel Launch</stringprop>
                     </model>
                 </widget>
                 <widget name="BoxCountVal" oid="3d02a021-f45b-4d7e-b61e-51e94e3f10e2" type="EditBoxNumeric">
@@ -671,10 +653,40 @@
                         </widget>
                     </children>
                 </widget>
+                <widget name="BlinkingLaunch" oid="2a4fd56b-96bd-4f52-9adb-180f59df9ccd" type="BlinkingContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">49</intprop>
+                        <intprop name="BlinkingType">2</intprop>
+                        <enumprop name="Visible">A661_FALSE</enumprop>
+                    </model>
+                    <children>
+                        <widget name="LabelLaunching" oid="fce93cf4-2240-42e8-8747-b9e106762163" type="Label">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">50</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">3580</intprop>
+                                <intprop name="PosY">6980</intprop>
+                                <intprop name="SizeX">2700</intprop>
+                                <intprop name="SizeY">820</intprop>
+                                <intprop name="RotationAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                <intprop name="Font">1</intprop>
+                                <intprop name="ColorIndex">56</intprop>
+                                <enumprop name="Alignment">A661_LEFT</enumprop>
+                                <stringprop name="LabelString">Launching!!</stringprop>
+                            </model>
+                        </widget>
+                    </children>
+                </widget>
             </children>
         </A661Layer>
     </children>
 </specification>
 
-<!-- crc32 : 3721090441 -->
+<!-- crc32 : 3792024543 -->
 
