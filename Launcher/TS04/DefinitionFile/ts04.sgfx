@@ -549,10 +549,132 @@
                         <stringprop name="LabelString">Self-Destruct</stringprop>
                     </model>
                 </widget>
+                <widget name="ThiagoRamos" oid="671e4887-a5c0-4a6b-9adb-f3b731fc4f9e" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">39</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">-180</intprop>
+                        <intprop name="PosY">11400</intprop>
+                    </model>
+                    <children>
+                        <widget name="Rec_Computador" oid="ce3488a3-f40d-4ca4-8112-58ebb445badb" type="GpRectangle">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">42</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">1620</intprop>
+                                <intprop name="PosY">1041</intprop>
+                                <intprop name="SizeX">3980</intprop>
+                                <intprop name="SizeY">600</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Filled">A661_TRUE</enumprop>
+                                <intprop name="FillIndex">51</intprop>
+                                <enumprop name="Halo">A661_FALSE</enumprop>
+                            </model>
+                        </widget>
+                        <widget name="Rec_Camera" oid="9c4e9a7f-d2ae-4685-92fb-7f446245a394" type="GpRectangle">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">43</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">1620</intprop>
+                                <intprop name="PosY">161</intprop>
+                                <intprop name="SizeX">3980</intprop>
+                                <intprop name="SizeY">600</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Filled">A661_TRUE</enumprop>
+                                <intprop name="FillIndex">51</intprop>
+                                <enumprop name="Halo">A661_FALSE</enumprop>
+                            </model>
+                        </widget>
+                        <widget name="Label" oid="953555f1-b0c7-47d0-aefb-5a8c4867e3a0" type="Label">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">40</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">1620</intprop>
+                                <intprop name="PosY">161</intprop>
+                                <intprop name="SizeX">3959</intprop>
+                                <intprop name="SizeY">600</intprop>
+                                <intprop name="RotationAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                <intprop name="Font">0</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Camera</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="Label" oid="b44691ba-90f3-4eae-9dcf-02cfc16f7c64" type="Label">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">41</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">1620</intprop>
+                                <intprop name="PosY">1041</intprop>
+                                <intprop name="SizeX">3860</intprop>
+                                <intprop name="SizeY">600</intprop>
+                                <intprop name="RotationAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                <intprop name="Font">0</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Computador Bordo</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="Pb_Verify_Computador" oid="680de7d9-583c-462a-afb7-96c23fe2c63a" type="PushButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">45</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">5761</intprop>
+                                <intprop name="PosY">1041</intprop>
+                                <intprop name="SizeX">2500</intprop>
+                                <intprop name="SizeY">600</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Verificar</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="Pb_Verify_Camera" oid="8dea0b34-02ee-45ee-b265-03a14806c920" type="PushButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">47</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">5761</intprop>
+                                <intprop name="PosY">161</intprop>
+                                <intprop name="SizeX">2500</intprop>
+                                <intprop name="SizeY">600</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Verificar</stringprop>
+                            </model>
+                        </widget>
+                    </children>
+                </widget>
             </children>
         </A661Layer>
     </children>
 </specification>
 
-<!-- crc32 : 78038712 -->
+<!-- crc32 : 3721090441 -->
 
