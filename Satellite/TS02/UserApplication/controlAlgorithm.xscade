@@ -2,10 +2,95 @@
 <File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
 	<declarations>
 		<Operator kind="node" name="controlAlgorithm">
+			<outputs>
+				<Variable name="ControlAlgorithmActive">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25c9/4A71/258C/541b7fa3508a"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25da/4A71/258C/541b7fc06a13"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L1 = false; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L1"/>
+					</lefts>
+					<right>
+						<ConstValue value="false"/>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/25d9/4A71/258C/541b7fc06fd0"/>
+					</pragmas>
+				</Equation>
+				<!-- ControlAlgorithmActive = _L1; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="ControlAlgorithmActive"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L1"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/25db/4A71/258C/541b7fc12a80"/>
+					</pragmas>
+				</Equation>
+			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/2377/4995/1C44/540655423213" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
 					<diagrams>
-						<NetDiagram name="diagram_controlAlgorithm_1" landscape="true" format="A4 (210 297)" oid="!ed/2378/4995/1C44/540655423a71"/>
+						<NetDiagram name="diagram_controlAlgorithm_1" landscape="true" format="A4 (210 297)" oid="!ed/2378/4995/1C44/540655423a71">
+							<presentationElements>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/25d9/4A71/258C/541b7fc06fd0">
+									<position>
+										<Point x="6932" y="4022"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/25db/4A71/258C/541b7fc12a80">
+									<position>
+										<Point x="8123" y="3889"/>
+									</position>
+									<size>
+										<Size width="317" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/25d9/4A71/258C/541b7fc06fd0" dstEquation="!ed/25db/4A71/258C/541b7fc12a80">
+									<positions>
+										<Point x="7144" y="4180"/>
+										<Point x="7646" y="4180"/>
+										<Point x="7646" y="4154"/>
+										<Point x="8176" y="4154"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
 					</diagrams>
 				</ed:Operator>
 			</pragmas>

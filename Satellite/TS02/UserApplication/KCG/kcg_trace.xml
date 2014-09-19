@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-09-18T22:19:01
+*************************************************************$-->
+<Model date="2014-09-18T22:19:01" commandLine="s2c613 -config C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt">
+  <RootNode scadeName="OperationalScenario" headerFile="OperationalScenario.h" targetCycleFct="OperationalScenario"
+      targetInitFct="OperationalScenario_reset">
+    <Input scadeName="Power" scadeType="bool" targetName="Power" targetType="kcg_bool" inCtx="true"/>
+    <Memory scadeName="Power" scadeType="bool" targetName="rem_Power" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="Telemetry" scadeType="int" targetName="Telemetry" targetType="kcg_int" inCtx="true"/>
+    <Memory scadeName="Telemetry" scadeType="int" targetName="rem_Telemetry" targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="AttitudeReference" scadeType="int" targetName="AttitudeReference" targetType="kcg_int"
+        inCtx="true"/>
+    <Memory scadeName="AttitudeReference" scadeType="int" targetName="rem_AttitudeReference" targetType="kcg_int"
+        inCtx="true"/>
+    <Input scadeName="takePict" scadeType="bool" targetName="takePict" targetType="kcg_bool" inCtx="true"/>
+    <Memory scadeName="takePict" scadeType="bool" targetName="rem_takePict" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="picLocation" scadeType="real" targetName="picLocation" targetType="kcg_real" inCtx="true"/>
+    <Memory scadeName="picLocation" scadeType="real" targetName="rem_picLocation" targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="PassarFaseBtn" scadeType="bool" targetName="PassarFaseBtn" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="StartLaunchPhase" scadeType="bool" targetName="StartLaunchPhase" targetType="kcg_bool" mem="true"
+        inCtx="true"/>
+    <Output scadeName="StartAtAcquisition" scadeType="bool" targetName="StartAtAcquisition" targetType="kcg_bool"
+        mem="true" inCtx="true"/>
+    <Output scadeName="safeMode" scadeType="bool" targetName="safeMode" targetType="kcg_bool" mem="true" inCtx="true"/>
+    <Output scadeName="RefAttitude" scadeType="bool" targetName="RefAttitude" targetType="kcg_bool" mem="true"
+        inCtx="true"/>
+    <Output scadeName="NormalPhase" scadeType="bool" targetName="NormalPhase" targetType="kcg_bool" mem="true"
+        inCtx="true"/>
+    <Output scadeName="payMode" scadeType="bool" targetName="payMode" targetType="kcg_bool" mem="true" inCtx="true"/>
+    <Output scadeName="picture" scadeType="real" targetName="picture" targetType="kcg_real" mem="true" inCtx="true"/>
+    <Memory scadeName="LaunchPhase" scadeType="bool" targetName="LaunchPhase" targetType="kcg_bool" inCtx="true"/>
+    <Memory scadeName="AtAcquisition" scadeType="bool" targetName="AtAcquisition" targetType="kcg_bool" inCtx="true"/>
+    <Memory scadeName="NPhase" scadeType="bool" targetName="NPhase" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L1" scadeType="bool" targetName="_L1" targetType="kcg_bool"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="_L4" targetType="kcg_bool"/>
+    <Local scadeName="_L6" scadeType="bool" targetName="_L6" targetType="kcg_bool"/>
+    <Local scadeName="_L7" scadeType="bool" targetName="_L7" targetType="kcg_bool"/>
+    <Automaton scadeName="OpPhases" targetStatesType="SSM_ST_OpPhases" targetTransitionsType="SSM_TR_OpPhases">
+      <State scadeName="Ground" targetName="SSM_st_Ground_OpPhases">
+        <Local scadeName="PowerOn" scadeType="bool" targetName="PowerOn_OpPhases_Ground" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_L1_OpPhases_Ground" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases"/>
+        <Automaton scadeName="SM2" targetStatesType="SSM_ST_SM2_OpPhases_Ground"
+            targetTransitionsType="SSM_TR_SM2_OpPhases_Ground">
+          <State scadeName="SupportMode" targetName="SSM_st_SupportMode_OpPhases_Ground_SM2">
+            <Local scadeName="_L1" scadeType="int" targetName="_L1_OpPhases_Ground_SM2_SupportMode" targetType="kcg_int"
+                clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+            <Local scadeName="_L2" scadeType="bool" targetName="_L2_OpPhases_Ground_SM2_SupportMode"
+                targetType="kcg_bool" clockVar="SM2_clock_OpPhases_Ground"
+                clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+            <Local scadeName="_L3" scadeType="bool" targetName="_L3_OpPhases_Ground_SM2_SupportMode"
+                targetType="kcg_bool" clockVar="SM2_clock_OpPhases_Ground"
+                clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+            <Local scadeName="_L4" scadeType="bool" targetName="_L4_OpPhases_Ground_SM2_SupportMode"
+                targetType="kcg_bool" clockVar="SM2_clock_OpPhases_Ground"
+                clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+            <ActivateIf scadeName="DiagnosticPass">
+              <Condition targetName="DiagnosticPass_clock_OpPhases_Ground_SM2_SupportMode"/>
+              <Then>
+              </Then>
+              <Else>
+              </Else>
+            </ActivateIf>
+            <NodeInlining scadeName="ReadSensors" instName="1">
+              <Output scadeName="SensorsActive" scadeType="bool" targetName="SensorsActive_1" targetType="kcg_bool"
+                  clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_14" targetType="kcg_bool"
+                  clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+            </NodeInlining>
+            <NodeInlining scadeName="TestActuators" instName="1">
+              <Output scadeName="TestingActuators" scadeType="bool" targetName="TestingActuators_1"
+                  targetType="kcg_bool" clockVar="SM2_clock_OpPhases_Ground"
+                  clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_15" targetType="kcg_bool"
+                  clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+            </NodeInlining>
+            <NodeInlining scadeName="TakePicture" instName="1">
+              <Output scadeName="TakingPicture" scadeType="bool" targetName="TakingPicture_1" targetType="kcg_bool"
+                  clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_16" targetType="kcg_bool"
+                  clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SupportMode_OpPhases_Ground_SM2"/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Transition targetName="SSM_TR_SupportMode_1_SM2_OpPhases_Ground" kind="strong" scadeDest="SafeMode"/>
+            </Fork>
+          </State>
+          <State scadeName="SafeMode" targetName="SSM_st_SafeMode_OpPhases_Ground_SM2">
+            <Local scadeName="_L1" scadeType="int" targetName="_L1_OpPhases_Ground_SM2_SafeMode" targetType="kcg_int"
+                clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SafeMode_OpPhases_Ground_SM2"/>
+            <Local scadeName="_L4" scadeType="bool" targetName="_L4_OpPhases_Ground_SM2_SafeMode" targetType="kcg_bool"
+                clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SafeMode_OpPhases_Ground_SM2"/>
+            <Local scadeName="_L5" scadeType="bool" targetName="_L5_OpPhases_Ground_SM2_SafeMode" targetType="kcg_bool"
+                clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SafeMode_OpPhases_Ground_SM2"/>
+            <Local scadeName="_L6" scadeType="bool" targetName="_L6_OpPhases_Ground_SM2_SafeMode" targetType="kcg_bool"
+                clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SafeMode_OpPhases_Ground_SM2"/>
+            <Local scadeName="_L7" scadeType="bool" targetName="_L7_OpPhases_Ground_SM2_SafeMode" targetType="kcg_bool"
+                clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SafeMode_OpPhases_Ground_SM2"/>
+            <Local scadeName="_L8" scadeType="bool" targetName="_L8_OpPhases_Ground_SM2_SafeMode" targetType="kcg_bool"
+                clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SafeMode_OpPhases_Ground_SM2"/>
+            <NodeInlining scadeName="ReadSensors" instName="2">
+              <Output scadeName="SensorsActive" scadeType="bool" targetName="SensorsActive_2" targetType="kcg_bool"
+                  clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SafeMode_OpPhases_Ground_SM2"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_23" targetType="kcg_bool"
+                  clockVar="SM2_clock_OpPhases_Ground" clockVal="SSM_st_SafeMode_OpPhases_Ground_SM2"/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Transition targetName="SSM_TR_SafeMode_1_SM2_OpPhases_Ground" kind="strong" scadeDest="SupportMode"/>
+            </Fork>
+          </State>
+          <ActiveState targetName="_123_SM2_state_act_OpPhases_Ground"/>
+          <NextState targetName="SM2_state_nxt_OpPhases_Ground" inCtx="true"/>
+          <SelectedState targetName="SM2_state_sel_OpPhases_Ground"/>
+          <ResetActiveState targetName="SM2_reset_act_OpPhases_Ground" inCtx="true"/>
+          <ResetNextState targetName="SM2_reset_nxt_OpPhases_Ground" inCtx="true"/>
+          <ResetSelectedState targetName="SM2_reset_sel_OpPhases_Ground"/>
+          <StrongTransition targetName="_122_SM2_fired_strong_OpPhases_Ground"/>
+          <WeakTransition targetName="_121_SM2_fired_OpPhases_Ground"/>
+          <Clock targetName="_107_SM2_clock_OpPhases_Ground" targetType="SSM_ST_SM2_OpPhases_Ground"
+              clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases"/>
+          <Clock targetName="SM2_clock_OpPhases_Ground" targetType="SSM_ST_SM2_OpPhases_Ground"
+              clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases"/>
+        </Automaton>
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_Ground_1_OpPhases" kind="strong" scadeDest="Launch"/>
+        </Fork>
+      </State>
+      <State scadeName="Launch" targetName="SSM_st_Launch_OpPhases">
+        <Local scadeName="_L1" scadeType="int" targetName="_L1_OpPhases_Launch" targetType="kcg_int"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_L2_OpPhases_Launch" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases"/>
+        <Local scadeName="_L3" scadeType="bool" targetName="_L3_OpPhases_Launch" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases"/>
+        <NodeInlining scadeName="ReadSensors" instName="3">
+          <Output scadeName="SensorsActive" scadeType="bool" targetName="SensorsActive_3" targetType="kcg_bool"
+              clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases"/>
+          <Local scadeName="_L1" scadeType="bool" targetName="_L1_3" targetType="kcg_bool"
+              clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases"/>
+        </NodeInlining>
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_Launch_1_OpPhases" kind="strong" scadeDest="AttitudeAcquisition"/>
+        </Fork>
+      </State>
+      <State scadeName="AttitudeAcquisition" targetName="SSM_st_AttitudeAcquisition_OpPhases">
+        <Memory scadeName="sMode" scadeType="bool" targetName="sMode_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Memory scadeName="RefAtt" scadeType="bool" targetName="RefAtt_OpPhases_AttitudeAcquisition"
+            targetType="kcg_bool" clockVar="_126_OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases"
+            inCtx="true"/>
+        <Memory scadeName="NPhase" scadeType="bool" targetName="NPhase_OpPhases_AttitudeAcquisition"
+            targetType="kcg_bool" clockVar="_126_OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases"
+            inCtx="true"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_L1151_OpPhases_AttitudeAcquisition" targetType="kcg_int"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_L2150_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases"/>
+        <Local scadeName="_L3" scadeType="bool" targetName="_L3149_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5148_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases"/>
+        <Automaton scadeName="atacquisition" targetStatesType="SSM_ST_atacquisition_OpPhases_AttitudeAcquisition"
+            targetTransitionsType="SSM_TR_atacquisition_OpPhases_AttitudeAcquisition">
+          <State scadeName="readsensors" targetName="SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition">
+            <Local scadeName="_L1" scadeType="bool"
+                targetName="_L1147_OpPhases_AttitudeAcquisition_atacquisition_readsensors" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L2" scadeType="bool"
+                targetName="_L2146_OpPhases_AttitudeAcquisition_atacquisition_readsensors" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <NodeInlining scadeName="ReadSensors" instName="5">
+              <Output scadeName="SensorsActive" scadeType="bool" targetName="SensorsActive_5" targetType="kcg_bool"
+                  clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                  clockVal="SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_5" targetType="kcg_bool"
+                  clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                  clockVal="SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition"/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Transition targetName="SSM_TR_readsensors_1_atacquisition_OpPhases_AttitudeAcquisition" kind="strong"
+                  scadeDest="refAttitude"/>
+            </Fork>
+            <Fork priority="2">
+              <Transition targetName="SSM_TR_readsensors_2_atacquisition_OpPhases_AttitudeAcquisition" kind="strong"
+                  scadeDest="SafeMode"/>
+            </Fork>
+          </State>
+          <State scadeName="refAttitude" targetName="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition">
+            <Local scadeName="_L1" scadeType="bool"
+                targetName="_L1145_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L2" scadeType="bool"
+                targetName="_L2144_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L3" scadeType="bool"
+                targetName="_L3143_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L4" scadeType="bool"
+                targetName="_L4142_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L5" scadeType="bool"
+                targetName="_L5141_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L6" scadeType="bool"
+                targetName="_L6_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L7" scadeType="bool"
+                targetName="_L7_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L8" scadeType="bool"
+                targetName="_L8_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L9" scadeType="bool"
+                targetName="_L9_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L10" scadeType="bool"
+                targetName="_L10_OpPhases_AttitudeAcquisition_atacquisition_refAttitude" targetType="kcg_bool"
+                clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <NodeInlining scadeName="controlAlgorithm" instName="1">
+              <Output scadeName="ControlAlgorithmActive" scadeType="bool" targetName="ControlAlgorithmActive_1"
+                  targetType="kcg_bool" clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                  clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_12" targetType="kcg_bool"
+                  clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                  clockVal="SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition"/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Transition targetName="SSM_TR_refAttitude_1_atacquisition_OpPhases_AttitudeAcquisition" kind="strong"
+                  scadeDest="SafeMode"/>
+            </Fork>
+          </State>
+          <State scadeName="SafeMode" targetName="SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition">
+            <Local scadeName="_L1" scadeType="bool" targetName="_L1_OpPhases_AttitudeAcquisition_atacquisition_SafeMode"
+                targetType="kcg_bool" clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L2" scadeType="bool" targetName="_L2_OpPhases_AttitudeAcquisition_atacquisition_SafeMode"
+                targetType="kcg_bool" clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L3" scadeType="bool" targetName="_L3_OpPhases_AttitudeAcquisition_atacquisition_SafeMode"
+                targetType="kcg_bool" clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L4" scadeType="bool" targetName="_L4_OpPhases_AttitudeAcquisition_atacquisition_SafeMode"
+                targetType="kcg_bool" clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <Local scadeName="_L5" scadeType="bool" targetName="_L5_OpPhases_AttitudeAcquisition_atacquisition_SafeMode"
+                targetType="kcg_bool" clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                clockVal="SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition"/>
+            <NodeInlining scadeName="upDateSw" instName="1">
+              <Output scadeName="Updating" scadeType="bool" targetName="Updating_1" targetType="kcg_bool"
+                  clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                  clockVal="SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_1" targetType="kcg_bool"
+                  clockVar="atacquisition_clock_OpPhases_AttitudeAcquisition"
+                  clockVal="SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition"/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Transition targetName="SSM_TR_SafeMode_1_atacquisition_OpPhases_AttitudeAcquisition" kind="strong"
+                  scadeDest="readsensors"/>
+            </Fork>
+          </State>
+          <ActiveState targetName="_118_atacquisition_state_act_OpPhases_AttitudeAcquisition"/>
+          <NextState targetName="atacquisition_state_nxt_OpPhases_AttitudeAcquisition" inCtx="true"/>
+          <SelectedState targetName="atacquisition_state_sel_OpPhases_AttitudeAcquisition"/>
+          <ResetActiveState targetName="atacquisition_reset_act_OpPhases_AttitudeAcquisition" inCtx="true"/>
+          <ResetNextState targetName="atacquisition_reset_nxt_OpPhases_AttitudeAcquisition" inCtx="true"/>
+          <ResetSelectedState targetName="atacquisition_reset_sel_OpPhases_AttitudeAcquisition"/>
+          <StrongTransition targetName="_117_atacquisition_fired_strong_OpPhases_AttitudeAcquisition"/>
+          <WeakTransition targetName="_116_atacquisition_fired_OpPhases_AttitudeAcquisition"/>
+          <Clock targetName="_106_atacquisition_clock_OpPhases_AttitudeAcquisition"
+              targetType="SSM_ST_atacquisition_OpPhases_AttitudeAcquisition" clockVar="_126_OpPhases_state_act"
+              clockVal="SSM_st_AttitudeAcquisition_OpPhases"/>
+          <Clock targetName="atacquisition_clock_OpPhases_AttitudeAcquisition"
+              targetType="SSM_ST_atacquisition_OpPhases_AttitudeAcquisition" clockVar="_126_OpPhases_state_act"
+              clockVal="SSM_st_AttitudeAcquisition_OpPhases"/>
+        </Automaton>
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_AttitudeAcquisition_1_OpPhases" kind="strong" scadeDest="NormalPhase"/>
+        </Fork>
+      </State>
+      <State scadeName="NormalPhase" targetName="SSM_st_NormalPhase_OpPhases">
+        <Local scadeName="pMode" scadeType="bool" targetName="pMode_OpPhases_NormalPhase" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases"/>
+        <Memory scadeName="sMode" scadeType="bool" targetName="sMode_OpPhases_NormalPhase" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_L1_OpPhases_NormalPhase" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_L2_OpPhases_NormalPhase" targetType="kcg_bool"
+            clockVar="_126_OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases"/>
+        <Automaton scadeName="NPhase" targetStatesType="SSM_ST_NPhase_OpPhases_NormalPhase"
+            targetTransitionsType="SSM_TR_NPhase_OpPhases_NormalPhase">
+          <State scadeName="AttControl" targetName="SSM_st_AttControl_OpPhases_NormalPhase_NPhase">
+            <Local scadeName="_L1" scadeType="int" targetName="_L1140_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_int" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L2" scadeType="bool" targetName="_L2139_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L3" scadeType="real" targetName="_L3138_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_real" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L4" scadeType="bool" targetName="_L4137_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L5" scadeType="bool" targetName="_L5136_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L6" scadeType="bool" targetName="_L6135_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L7" scadeType="bool" targetName="_L7134_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L8" scadeType="bool" targetName="_L8133_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L9" scadeType="bool" targetName="_L9132_OpPhases_NormalPhase_NPhase_AttControl"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            <NodeInlining scadeName="controlAlgorithm" instName="2">
+              <Output scadeName="ControlAlgorithmActive" scadeType="bool" targetName="ControlAlgorithmActive_2"
+                  targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                  clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_21" targetType="kcg_bool"
+                  clockVar="NPhase_clock_OpPhases_NormalPhase"
+                  clockVal="SSM_st_AttControl_OpPhases_NormalPhase_NPhase"/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Transition targetName="SSM_TR_AttControl_1_NPhase_OpPhases_NormalPhase" kind="strong"
+                  scadeDest="Payload"/>
+            </Fork>
+            <Fork priority="2">
+              <Transition targetName="SSM_TR_AttControl_2_NPhase_OpPhases_NormalPhase" kind="strong"
+                  scadeDest="SafeMode"/>
+            </Fork>
+          </State>
+          <State scadeName="Payload" targetName="SSM_st_Payload_OpPhases_NormalPhase_NPhase">
+            <Local scadeName="_L1" scadeType="bool" targetName="_L1131_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L2" scadeType="bool" targetName="_L2130_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L3" scadeType="real" targetName="_L3129_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_real" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L4" scadeType="bool" targetName="_L4128_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L5" scadeType="bool" targetName="_L5127_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L6" scadeType="bool" targetName="_L6_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L7" scadeType="bool" targetName="_L7_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L8" scadeType="bool" targetName="_L8_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L9" scadeType="bool" targetName="_L9_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L10" scadeType="real" targetName="_L10_OpPhases_NormalPhase_NPhase_Payload"
+                targetType="kcg_real" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+            <Fork priority="2">
+              <Transition targetName="SSM_TR_Payload_2_NPhase_OpPhases_NormalPhase" kind="weak" scadeDest="SafeMode"/>
+            </Fork>
+            <Fork priority="1">
+              <Condition/>
+              <Transition targetName="SSM_TR_Payload_1_NPhase_OpPhases_NormalPhase" kind="strong"
+                  scadeDest="AttControl"/>
+            </Fork>
+            <Clock targetName="Payload_weakb_clock_OpPhases_NormalPhase_NPhase" targetType="kcg_bool"
+                clockVar="NPhase_clock_OpPhases_NormalPhase" clockVal="SSM_st_Payload_OpPhases_NormalPhase_NPhase"/>
+          </State>
+          <State scadeName="SafeMode" targetName="SSM_st_SafeMode_OpPhases_NormalPhase_NPhase">
+            <Local scadeName="_L1" scadeType="bool" targetName="_L1_OpPhases_NormalPhase_NPhase_SafeMode"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_SafeMode_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L2" scadeType="bool" targetName="_L2_OpPhases_NormalPhase_NPhase_SafeMode"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_SafeMode_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L3" scadeType="bool" targetName="_L3_OpPhases_NormalPhase_NPhase_SafeMode"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_SafeMode_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L4" scadeType="bool" targetName="_L4_OpPhases_NormalPhase_NPhase_SafeMode"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_SafeMode_OpPhases_NormalPhase_NPhase"/>
+            <Local scadeName="_L5" scadeType="bool" targetName="_L5_OpPhases_NormalPhase_NPhase_SafeMode"
+                targetType="kcg_bool" clockVar="NPhase_clock_OpPhases_NormalPhase"
+                clockVal="SSM_st_SafeMode_OpPhases_NormalPhase_NPhase"/>
+            <NodeInlining scadeName="upDateSw" instName="2">
+              <Output scadeName="Updating" scadeType="bool" targetName="Updating_2" targetType="kcg_bool"
+                  clockVar="NPhase_clock_OpPhases_NormalPhase" clockVal="SSM_st_SafeMode_OpPhases_NormalPhase_NPhase"/>
+              <Local scadeName="_L1" scadeType="bool" targetName="_L1_2" targetType="kcg_bool"
+                  clockVar="NPhase_clock_OpPhases_NormalPhase" clockVal="SSM_st_SafeMode_OpPhases_NormalPhase_NPhase"/>
+            </NodeInlining>
+            <Fork priority="1">
+              <Condition/>
+              <Transition targetName="SSM_TR_SafeMode_1_NPhase_OpPhases_NormalPhase" kind="strong"
+                  scadeDest="AttControl"/>
+            </Fork>
+          </State>
+          <ActiveState targetName="_113_NPhase_state_act_OpPhases_NormalPhase"/>
+          <NextState targetName="NPhase_state_nxt_OpPhases_NormalPhase" inCtx="true"/>
+          <SelectedState targetName="NPhase_state_sel_OpPhases_NormalPhase"/>
+          <ResetActiveState targetName="NPhase_reset_act_OpPhases_NormalPhase" inCtx="true"/>
+          <ResetNextState targetName="NPhase_reset_nxt_OpPhases_NormalPhase" inCtx="true"/>
+          <ResetSelectedState targetName="NPhase_reset_sel_OpPhases_NormalPhase"/>
+          <StrongTransition targetName="_112_NPhase_fired_strong_OpPhases_NormalPhase"/>
+          <WeakTransition targetName="_111_NPhase_fired_OpPhases_NormalPhase"/>
+          <Clock targetName="_105_NPhase_clock_OpPhases_NormalPhase" targetType="SSM_ST_NPhase_OpPhases_NormalPhase"
+              clockVar="_126_OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases"/>
+          <Clock targetName="NPhase_clock_OpPhases_NormalPhase" targetType="SSM_ST_NPhase_OpPhases_NormalPhase"
+              clockVar="_126_OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases"/>
+        </Automaton>
+      </State>
+      <ActiveState targetName="_126_OpPhases_state_act"/>
+      <NextState targetName="OpPhases_state_nxt" inCtx="true"/>
+      <SelectedState targetName="OpPhases_state_sel"/>
+      <ResetActiveState targetName="OpPhases_reset_act" inCtx="true"/>
+      <ResetNextState targetName="OpPhases_reset_nxt" inCtx="true"/>
+      <ResetSelectedState targetName="OpPhases_reset_sel"/>
+      <StrongTransition targetName="_125_OpPhases_fired_strong"/>
+      <WeakTransition targetName="_124_OpPhases_fired"/>
+    </Automaton>
+    <Init targetName="init3" targetType="kcg_bool" inCtx="true"/>
+    <Init targetName="init2" targetType="kcg_bool" clockVar="_126_OpPhases_state_act"
+        clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+    <Init targetName="init1" targetType="kcg_bool" clockVar="_126_OpPhases_state_act"
+        clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+    <Init targetName="init" targetType="kcg_bool" clockVar="_126_OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases"
+        inCtx="true"/>
+    <OutCtxType targetName="outC_OperationalScenario"/>
+    <InCtxType targetName="inC_OperationalScenario"/>
+  </RootNode>
+  <ExpNode scadeName="ReadSensors"/>
+  <ExpNode scadeName="TestActuators"/>
+  <ExpNode scadeName="TakePicture"/>
+  <ExpNode scadeName="controlAlgorithm"/>
+  <ExpNode scadeName="upDateSw"/>
+  <Package scadeName="digital"/>
+  <Package scadeName="truthtables">
+    <EnumType scadeName="TruthTableValues" targetName="TruthTableValues_truthtables">
+      <EnumVal scadeName="T" targetName="T_truthtables"/>
+      <EnumVal scadeName="F" targetName="F_truthtables"/>
+      <EnumVal scadeName="X" targetName="X_truthtables"/>
+    </EnumType>
+  </Package>
+  <Package scadeName="linear"/>
+  <Package scadeName="filters"/>
+  <Package scadeName="vect"/>
+  <Package scadeName="math"/>
+  <Package scadeName="mathext"/>
+  <Package scadeName="pwlinear"/>
+  <Package scadeName="lut">
+    <NamedType scadeName="LutIndex" targetName="LutIndex_lut" refType="struct__5451"/>
+  </Package>
+  <Package scadeName="verif"/>
+  <Option name="root_node_name" value="OperationalScenario"/>
+  <Option name="target" value="C"/>
+  <Option name="target_dir" value="C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/KCG"/>
+  <Option name="expall" value="#on#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="optimization_level" value="0"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="global_prefix" value="#off#"/>
+  <Option name="name_length" value="200"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="header" value="#off#"/>
+  <Option name="input_threshold" value="2"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="debug" value="#off#"/>
+  <Option name="probes" value="#off#"/>
+  <Option name="input_file"
+      value="C:/Users/vsmon_000/Documents/code/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_xml_filter_out.scade"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+  <StructType targetName="struct__5451" targetCopyFct="kcg_copy_struct__5451" targetCompFct="kcg_comp_struct__5451">
+    <Field scadeName="k" scadeType="int" targetName="k" targetType="kcg_int"/>
+    <Field scadeName="f" scadeType="real" targetName="f" targetType="kcg_real"/>
+  </StructType>
+</Model>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** kcg_trace.xml
+** Generation date: 2014-09-18T22:19:01
+*************************************************************$-->

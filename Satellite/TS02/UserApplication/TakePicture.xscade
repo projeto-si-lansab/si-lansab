@@ -2,10 +2,95 @@
 <File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
 	<declarations>
 		<Operator kind="node" name="TakePicture">
+			<outputs>
+				<Variable name="TakingPicture">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25c2/4A71/258C/541b7f854ce7"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25c1/4A71/258C/541b7f7f78e5"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L1 = false; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L1"/>
+					</lefts>
+					<right>
+						<ConstValue value="false"/>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/25c0/4A71/258C/541b7f7f58e5"/>
+					</pragmas>
+				</Equation>
+				<!-- TakingPicture = _L1; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="TakingPicture"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L1"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/25c4/4A71/258C/541b7f90477"/>
+					</pragmas>
+				</Equation>
+			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/21c7/4995/1C44/540650a0540b" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
 					<diagrams>
-						<NetDiagram name="diagram_TakePicture_1" landscape="true" format="A4 (210 297)" oid="!ed/21c8/4995/1C44/540650a06fac"/>
+						<NetDiagram name="diagram_TakePicture_1" landscape="true" format="A4 (210 297)" oid="!ed/21c8/4995/1C44/540650a06fac">
+							<presentationElements>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/25c0/4A71/258C/541b7f7f58e5">
+									<position>
+										<Point x="4974" y="4657"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/25c4/4A71/258C/541b7f90477">
+									<position>
+										<Point x="6085" y="4683"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/25c0/4A71/258C/541b7f7f58e5" dstEquation="!ed/25c4/4A71/258C/541b7f90477">
+									<positions>
+										<Point x="5186" y="4815"/>
+										<Point x="5662" y="4815"/>
+										<Point x="5662" y="4948"/>
+										<Point x="6138" y="4948"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
 					</diagrams>
 				</ed:Operator>
 			</pragmas>
