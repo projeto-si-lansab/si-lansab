@@ -29,38 +29,6 @@ void _SCSIM_Mapping_OperationalScenario() {
 	pSimulator->m_pfnAddLocal(pSimulator, "NPhase", &_SCSIM_kcg_bool_Utils, 8, valid, 0, 0);
 	pSimulator->m_pfnPushStateMachine(pSimulator, "OpPhases");
 	pSimulator->m_pfnPushState(pSimulator, "Ground", 0, -1);
-	pSimulator->m_pfnPushStateMachine(pSimulator, "SM2");
-	pSimulator->m_pfnPushState(pSimulator, "SupportMode", 0, -1);
-	/*<< Inlined ReadSensors*/
-	pSimulator->m_pfnPushInstance(pSimulator, "ReadSensors", "1", 0, 0, 0, 0);
-	pSimulator->m_pfnPopInstance(pSimulator);
-	/*>>*/
-	/*<< Inlined TestActuators*/
-	pSimulator->m_pfnPushInstance(pSimulator, "TestActuators", "1", 0, 0, 0, 0);
-	pSimulator->m_pfnPopInstance(pSimulator);
-	/*>>*/
-	/*<< Inlined TakePicture*/
-	pSimulator->m_pfnPushInstance(pSimulator, "TakePicture", "1", 0, 0, 0, 0);
-	pSimulator->m_pfnPopInstance(pSimulator);
-	/*>>*/
-	pSimulator->m_pfnPushActivateIf(pSimulator, "DiagnosticPass");
-	pSimulator->m_pfnPushBranch(pSimulator, "else", 0, -1);
-	pSimulator->m_pfnPopBranch(pSimulator);
-	pSimulator->m_pfnPushBranch(pSimulator, "then", 0, -1);
-	pSimulator->m_pfnPopBranch(pSimulator);
-	pSimulator->m_pfnPopActivateIf(pSimulator);
-	pSimulator->m_pfnPushStrongTransition(pSimulator, "1", 0, -1);
-	pSimulator->m_pfnPopStrongTransition(pSimulator);
-	pSimulator->m_pfnPopState(pSimulator);
-	pSimulator->m_pfnPushState(pSimulator, "SafeMode", 0, -1);
-	/*<< Inlined ReadSensors*/
-	pSimulator->m_pfnPushInstance(pSimulator, "ReadSensors", "2", 0, 0, 0, 0);
-	pSimulator->m_pfnPopInstance(pSimulator);
-	/*>>*/
-	pSimulator->m_pfnPushStrongTransition(pSimulator, "1", 0, -1);
-	pSimulator->m_pfnPopStrongTransition(pSimulator);
-	pSimulator->m_pfnPopState(pSimulator);
-	pSimulator->m_pfnPopStateMachine(pSimulator);
 	pSimulator->m_pfnPushStrongTransition(pSimulator, "1", 0, -1);
 	pSimulator->m_pfnPopStrongTransition(pSimulator);
 	pSimulator->m_pfnPopState(pSimulator);
@@ -135,6 +103,8 @@ void _SCSIM_Mapping_OperationalScenario() {
 	pSimulator->m_pfnPopStrongTransition(pSimulator);
 	pSimulator->m_pfnPopState(pSimulator);
 	pSimulator->m_pfnPopStateMachine(pSimulator);
+	pSimulator->m_pfnPushStrongTransition(pSimulator, "1", 0, -1);
+	pSimulator->m_pfnPopStrongTransition(pSimulator);
 	pSimulator->m_pfnPopState(pSimulator);
 	pSimulator->m_pfnPopStateMachine(pSimulator);
 	pSimulator->m_pfnAddOutput(pSimulator, "StartLaunchPhase", &_SCSIM_kcg_bool_Utils, 14, valid, 0, 0);
@@ -146,12 +116,17 @@ void _SCSIM_Mapping_OperationalScenario() {
 	pSimulator->m_pfnAddOutput(pSimulator, "picture", &_SCSIM_kcg_real_Utils, 20, valid, 0, 0);
 	pSimulator->m_pfnAddOutput(pSimulator, "Layer1Active", &_SCSIM_kcg_bool_Utils, 21, valid, 0, 0);
 	pSimulator->m_pfnAddOutput(pSimulator, "Layer1Visible", &_SCSIM_kcg_bool_Utils, 22, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Power", &_SCSIM_kcg_bool_Utils, 23, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Telemetry", &_SCSIM_kcg_int_Utils, 24, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "AttitudeReference", &_SCSIM_kcg_int_Utils, 25, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "takePict", &_SCSIM_kcg_bool_Utils, 26, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "picLocation", &_SCSIM_kcg_real_Utils, 27, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "PassarFaseBtn", &_SCSIM_kcg_bool_Utils, 28, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "Emit2CDS", &_SCSIM_kcg_bool_Utils, 23, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex", &_SCSIM_kcg_int_Utils, 24, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex2", &_SCSIM_kcg_int_Utils, 25, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex3", &_SCSIM_kcg_int_Utils, 26, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex4", &_SCSIM_kcg_int_Utils, 27, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Power", &_SCSIM_kcg_bool_Utils, 28, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Telemetry", &_SCSIM_kcg_int_Utils, 29, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "AttitudeReference", &_SCSIM_kcg_int_Utils, 30, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "takePict", &_SCSIM_kcg_bool_Utils, 31, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "picLocation", &_SCSIM_kcg_real_Utils, 32, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "PassarFaseBtn", &_SCSIM_kcg_bool_Utils, 33, valid, 0, 0);
 }
 
 void* _SCSIM_Get_OperationalScenario_Handle(void* pInstance, int nHandleIdent, int* pIteratorFilter, int nSize) {
@@ -199,16 +174,26 @@ void* _SCSIM_Get_OperationalScenario_Handle(void* pInstance, int nHandleIdent, i
 		case 22:
 			return &(outputs_ctx.Layer1Visible);
 		case 23:
-			return &(inputs_ctx.Power);
+			return &(outputs_ctx.Emit2CDS);
 		case 24:
-			return &(inputs_ctx.Telemetry);
+			return &(outputs_ctx.ColorIndex);
 		case 25:
-			return &(inputs_ctx.AttitudeReference);
+			return &(outputs_ctx.ColorIndex2);
 		case 26:
-			return &(inputs_ctx.takePict);
+			return &(outputs_ctx.ColorIndex3);
 		case 27:
-			return &(inputs_ctx.picLocation);
+			return &(outputs_ctx.ColorIndex4);
 		case 28:
+			return &(inputs_ctx.Power);
+		case 29:
+			return &(inputs_ctx.Telemetry);
+		case 30:
+			return &(inputs_ctx.AttitudeReference);
+		case 31:
+			return &(inputs_ctx.takePict);
+		case 32:
+			return &(inputs_ctx.picLocation);
+		case 33:
 			return &(inputs_ctx.PassarFaseBtn);
 		default:
 			break;

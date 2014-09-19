@@ -87,6 +87,21 @@ typedef struct {
 #define VARC_OperationalScenario_Layer1Visible(context) context.SAO_CTX_outC_OperationalScenario.Layer1Visible  /* OperationalScenario/Layer1Visible */
 #define VAR_OperationalScenario_Layer1Visible VARC_OperationalScenario_Layer1Visible(CTX_OperationalScenario)
 
+#define VARC_OperationalScenario_Emit2CDS(context) context.SAO_CTX_outC_OperationalScenario.Emit2CDS  /* OperationalScenario/Emit2CDS */
+#define VAR_OperationalScenario_Emit2CDS VARC_OperationalScenario_Emit2CDS(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_ColorIndex(context) context.SAO_CTX_outC_OperationalScenario.ColorIndex  /* OperationalScenario/ColorIndex */
+#define VAR_OperationalScenario_ColorIndex VARC_OperationalScenario_ColorIndex(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_ColorIndex2(context) context.SAO_CTX_outC_OperationalScenario.ColorIndex2  /* OperationalScenario/ColorIndex2 */
+#define VAR_OperationalScenario_ColorIndex2 VARC_OperationalScenario_ColorIndex2(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_ColorIndex3(context) context.SAO_CTX_outC_OperationalScenario.ColorIndex3  /* OperationalScenario/ColorIndex3 */
+#define VAR_OperationalScenario_ColorIndex3 VARC_OperationalScenario_ColorIndex3(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_ColorIndex4(context) context.SAO_CTX_outC_OperationalScenario.ColorIndex4  /* OperationalScenario/ColorIndex4 */
+#define VAR_OperationalScenario_ColorIndex4 VARC_OperationalScenario_ColorIndex4(CTX_OperationalScenario)
+
 
 /*$**********************************************************
 *                           ELEMENT ACCESS
@@ -129,6 +144,16 @@ typedef struct {
 #define CPY_Layer1Active(DST, SRC) DST = SRC
 #define T_Layer1Visible kcg_bool
 #define CPY_Layer1Visible(DST, SRC) DST = SRC
+#define T_Emit2CDS kcg_bool
+#define CPY_Emit2CDS(DST, SRC) DST = SRC
+#define T_ColorIndex kcg_int
+#define CPY_ColorIndex(DST, SRC) DST = SRC
+#define T_ColorIndex2 kcg_int
+#define CPY_ColorIndex2(DST, SRC) DST = SRC
+#define T_ColorIndex3 kcg_int
+#define CPY_ColorIndex3(DST, SRC) DST = SRC
+#define T_ColorIndex4 kcg_int
+#define CPY_ColorIndex4(DST, SRC) DST = SRC
 
 
 /*$**********************************************************
