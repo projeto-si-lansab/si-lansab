@@ -2,10 +2,95 @@
 <File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
 	<declarations>
 		<Operator kind="node" name="upDateSw">
+			<outputs>
+				<Variable name="Updating">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25e0/4A71/258C/541b7fdd54a3"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/25f6/4A71/258C/541b7fe53080"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- Updating = _L1; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Updating"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L1"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/25e3/4A71/258C/541b7fe47fe1"/>
+					</pragmas>
+				</Equation>
+				<!-- _L1 = false; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L1"/>
+					</lefts>
+					<right>
+						<ConstValue value="false"/>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/25f5/4A71/258C/541b7fe5604d"/>
+					</pragmas>
+				</Equation>
+			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/242f/4995/1C44/540657183849" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
 					<diagrams>
-						<NetDiagram name="diagram_upDateSw_1" landscape="true" format="A4 (210 297)" oid="!ed/2430/4995/1C44/54065718199b"/>
+						<NetDiagram name="diagram_upDateSw_1" landscape="true" format="A4 (210 297)" oid="!ed/2430/4995/1C44/54065718199b">
+							<presentationElements>
+								<EquationGE presentable="!ed/25e3/4A71/258C/541b7fe47fe1">
+									<position>
+										<Point x="7646" y="3360"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/25f5/4A71/258C/541b7fe5604d">
+									<position>
+										<Point x="6826" y="3360"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/25f5/4A71/258C/541b7fe5604d" dstEquation="!ed/25e3/4A71/258C/541b7fe47fe1">
+									<positions>
+										<Point x="7038" y="3519"/>
+										<Point x="7355" y="3519"/>
+										<Point x="7355" y="3625"/>
+										<Point x="7699" y="3625"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
 					</diagrams>
 				</ed:Operator>
 			</pragmas>
