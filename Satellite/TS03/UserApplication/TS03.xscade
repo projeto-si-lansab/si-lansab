@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Type name="T_String">
+			<definition>
+				<Table>
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="char"/>
+							</type>
+						</NamedType>
+					</type>
+					<size>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="STR_SIZE"/>
+							</path>
+						</IdExpression>
+					</size>
+				</Table>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/23dc/1F06/1FBC/5416e6564c66"/>
+			</pragmas>
+		</Type>
+		<Constant name="YELLOW">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="41"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/254c/1F06/1FBC/5416e679272e"/>
+			</pragmas>
+		</Constant>
+		<Constant name="WHITTE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="1"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/253e/1F06/1FBC/5416e6796622"/>
+			</pragmas>
+		</Constant>
+		<Constant name="STR_SIZE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="10"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2530/1F06/1FBC/5416e67921ae"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ST_CAMERA_STANDBY_TEXT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['S', 'T', 'A', 'N', 'D', ' ', 'B', 'Y', ' ', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'S'"/>
+						<ConstValue value="'T'"/>
+						<ConstValue value="'A'"/>
+						<ConstValue value="'N'"/>
+						<ConstValue value="'D'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="'B'"/>
+						<ConstValue value="'Y'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2522/1F06/1FBC/5416e67979ac"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ST_CAM_BTN__ON_TEXT">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="T_String"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['C', 'A', 'M', 'E', 'R', 'A', ' ', 'O', 'N', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'C'"/>
+						<ConstValue value="'A'"/>
+						<ConstValue value="'M'"/>
+						<ConstValue value="'E'"/>
+						<ConstValue value="'R'"/>
+						<ConstValue value="'A'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="'O'"/>
+						<ConstValue value="'N'"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/24d3/1F06/1FBC/5416e6795ce5"/>
+			</pragmas>
+		</Constant>
+		<Constant name="RED">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="21"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2484/1F06/1FBC/5416e67915e4"/>
+			</pragmas>
+		</Constant>
+		<Constant name="GREEN">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="51"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2476/1F06/1FBC/5416e6791e63"/>
+			</pragmas>
+		</Constant>
+		<Constant name="GRAY50">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="9"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2468/1F06/1FBC/5416e6792b59"/>
+			</pragmas>
+		</Constant>
+		<Constant name="DARKEST_GREEN">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="57"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/245a/1F06/1FBC/5416e6791273"/>
+			</pragmas>
+		</Constant>
+		<Constant name="BLACK">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/244c/1F06/1FBC/5416e6796b47"/>
+			</pragmas>
+		</Constant>
+		<Constant name="BATTERY_LOW_LEVEL">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="150.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/243e/1F06/1FBC/5416e6793e33"/>
+			</pragmas>
+		</Constant>
+		<Constant name="BATTERY_INCR">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="-1.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2430/1F06/1FBC/5416e679271a"/>
+			</pragmas>
+		</Constant>
+		<Constant name="BATTERY_FULL">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="0.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2422/1F06/1FBC/5416e679237c"/>
+			</pragmas>
+		</Constant>
+		<Constant name="BATTERY_EMPTY">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="180.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2414/1F06/1FBC/5416e67955b7"/>
+			</pragmas>
+		</Constant>
+		<Constant name="AMBAR">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="31"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/2406/1F06/1FBC/5416e6795b80"/>
+			</pragmas>
+		</Constant>
+		<Constant name="A661_TRUE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="1"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/23f8/1F06/1FBC/5416e6797bcd"/>
+			</pragmas>
+		</Constant>
+		<Constant name="A661_FALSE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/23ea/1F06/1FBC/5416e67978c0"/>
+			</pragmas>
+		</Constant>
+		<Constant name="MEMORY_INCR">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="100"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/246b/3A68/147C/5418eb8656e6"/>
+			</pragmas>
+		</Constant>
+		<Constant name="MEMORY_FULL">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="3500"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/24f8/3A68/147C/5418ecba24f4"/>
+			</pragmas>
+		</Constant>
+		<Constant name="MEMORY_LOW_LEVEL">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="2800"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/255f/3A68/147C/5418ee7f810"/>
+			</pragmas>
+		</Constant>
+	</declarations>
+</File>
