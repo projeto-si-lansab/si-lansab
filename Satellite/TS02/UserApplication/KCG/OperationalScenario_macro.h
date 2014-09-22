@@ -102,6 +102,18 @@ typedef struct {
 #define VARC_OperationalScenario_ColorIndex4(context) context.SAO_CTX_outC_OperationalScenario.ColorIndex4  /* OperationalScenario/ColorIndex4 */
 #define VAR_OperationalScenario_ColorIndex4 VARC_OperationalScenario_ColorIndex4(CTX_OperationalScenario)
 
+#define VARC_OperationalScenario_GroundVisible(context) context.SAO_CTX_outC_OperationalScenario.GroundVisible  /* OperationalScenario/GroundVisible */
+#define VAR_OperationalScenario_GroundVisible VARC_OperationalScenario_GroundVisible(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_LaunchVisible(context) context.SAO_CTX_outC_OperationalScenario.LaunchVisible  /* OperationalScenario/LaunchVisible */
+#define VAR_OperationalScenario_LaunchVisible VARC_OperationalScenario_LaunchVisible(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_AttitudeVisible(context) context.SAO_CTX_outC_OperationalScenario.AttitudeVisible  /* OperationalScenario/AttitudeVisible */
+#define VAR_OperationalScenario_AttitudeVisible VARC_OperationalScenario_AttitudeVisible(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_NormalPhaseVisible(context) context.SAO_CTX_outC_OperationalScenario.NormalPhaseVisible  /* OperationalScenario/NormalPhaseVisible */
+#define VAR_OperationalScenario_NormalPhaseVisible VARC_OperationalScenario_NormalPhaseVisible(CTX_OperationalScenario)
+
 
 /*$**********************************************************
 *                           ELEMENT ACCESS
@@ -154,6 +166,14 @@ typedef struct {
 #define CPY_ColorIndex3(DST, SRC) DST = SRC
 #define T_ColorIndex4 kcg_int
 #define CPY_ColorIndex4(DST, SRC) DST = SRC
+#define T_GroundVisible kcg_bool
+#define CPY_GroundVisible(DST, SRC) DST = SRC
+#define T_LaunchVisible kcg_bool
+#define CPY_LaunchVisible(DST, SRC) DST = SRC
+#define T_AttitudeVisible kcg_bool
+#define CPY_AttitudeVisible(DST, SRC) DST = SRC
+#define T_NormalPhaseVisible kcg_bool
+#define CPY_NormalPhaseVisible(DST, SRC) DST = SRC
 
 
 /*$**********************************************************
