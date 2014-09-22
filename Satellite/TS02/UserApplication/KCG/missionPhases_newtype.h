@@ -134,17 +134,17 @@ extern int set_kcg_int_default_value(void *pValue);
 extern TypeUtils _Type_kcg_int_Utils;
 
 /****************************************************************
- ** struct__5411 
+ ** struct__5499 
  ****************************************************************/
-extern int struct__5411_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int check_struct__5411_string(const char *str, const char** endptr);
-extern int string_to_struct__5411(const char *str, void* pValue, const char** endptr);
-extern int is_struct__5411_allow_double_convertion();
-extern int struct__5411_to_double(const void* pValue, double *nValue);
-extern int get_struct__5411_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int compare_struct__5411(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
-extern int set_struct__5411_default_value(void *pValue);
-extern TypeUtils _Type_struct__5411_Utils;
+extern int struct__5499_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_struct__5499_string(const char *str, const char** endptr);
+extern int string_to_struct__5499(const char *str, void* pValue, const char** endptr);
+extern int is_struct__5499_allow_double_convertion();
+extern int struct__5499_to_double(const void* pValue, double *nValue);
+extern int get_struct__5499_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_struct__5499(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_struct__5499_default_value(void *pValue);
+extern TypeUtils _Type_struct__5499_Utils;
 
 /****************************************************************
  ** TruthTableValues_truthtables 
