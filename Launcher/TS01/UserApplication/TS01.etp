@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="126" defaultConfiguration="21">
+<Project id="1" oid_count="130" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -198,12 +198,6 @@
 			<value>true</value>
 			<configuration>63</configuration>
 		</Prop>
-		<Prop id="71" name="@SCADE:DEFAULTFILE">
-			<value>UA\TS01.xscade</value>
-		</Prop>
-		<Prop id="72" name="@SCADE:SEMFILE">
-			<value>ERR\TS01_ERR.err</value>
-		</Prop>
 		<Prop id="73" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
 		</Prop>
@@ -283,7 +277,7 @@
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="98" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
-			<value>DefinitionFile\DisplayTS01.sgfx</value>
+			<value>..\DefinitionFile\DisplayTS01.sgfx</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="99" name="@SCADE:CHECKED">
@@ -313,6 +307,12 @@
 			<value>0</value>
 			<configuration>13</configuration>
 		</Prop>
+		<Prop id="128" name="@SCADE:DEFAULTFILE">
+			<value>TS01.xscade</value>
+		</Prop>
+		<Prop id="130" name="@SCADE:SEMFILE">
+			<value>TS01.err</value>
+		</Prop>
 	</props>
 	<roots>
 		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries"/>
@@ -320,12 +320,12 @@
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files"/>
 				<FileRef id="92" persistAs="Main.xscade"/>
-				<FileRef id="93" persistAs="UA\TS01.xscade"/>
 				<FileRef id="94" persistAs="Switch.xscade"/>
 				<FileRef id="112" persistAs="Sat_Control.xscade"/>
 				<FileRef id="123" persistAs="Speed_Status.xscade"/>
 				<FileRef id="125" persistAs="Operator5.xscade"/>
 				<FileRef id="126" persistAs="Operator6.xscade"/>
+				<FileRef id="129" persistAs="TS01.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="84" name="Design Verifier File">
@@ -335,7 +335,7 @@
 		</Folder>
 		<Folder id="89" name="DF">
 			<elements>
-				<FileRef id="113" persistAs="DefinitionFile\DisplayTS01.sgfx"/>
+				<FileRef id="113" persistAs="..\DefinitionFile\DisplayTS01.sgfx"/>
 			</elements>
 		</Folder>
 	</roots>
