@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="101" defaultConfiguration="21">
+<Project id="1" oid_count="114" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -376,7 +376,7 @@
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="97" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
-			<value>..\..\DefinitionFile\TS03.sgfx</value>
+			<value>..\DefinitionFile\TS03.sgfx</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="98" name="@GENERATOR:ROOTNODE">
@@ -385,6 +385,12 @@
 		</Prop>
 		<Prop id="99" name="@SCADE:CHECKED">
 			<value>false</value>
+		</Prop>
+		<Prop id="105" name="@SCADE:ASSTRING_TRIM">
+			<value></value>
+		</Prop>
+		<Prop id="106" name="@TRACEABILITY:Project">
+			<value>TS03.rqtf</value>
 		</Prop>
 	</props>
 	<roots>
@@ -401,11 +407,12 @@
 		<Folder id="11" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="89" persistAs="TS031.xscade"/>
 				<FileRef id="90" persistAs="TS03Battery.xscade"/>
 				<FileRef id="91" persistAs="TS03Memory.xscade"/>
 				<FileRef id="92" persistAs="Switch.xscade"/>
-				<FileRef id="93" persistAs="TS03.xscade"/>
+				<FileRef id="102" persistAs="ConvertIntToBool.xscade"/>
+				<FileRef id="103" persistAs="CameraOptions.xscade"/>
+				<FileRef id="114" persistAs="TS03.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="84" name="Design Verifier File">
@@ -413,7 +420,7 @@
 				<FileRef id="85" persistAs="TS03.l4"/>
 			</elements>
 		</Folder>
-		<FileRef id="94" persistAs="..\..\DefinitionFile\TS03.sgfx"/>
+		<FileRef id="94" persistAs="..\DefinitionFile\TS03.sgfx"/>
 	</roots>
 	<configurations>
 		<Configuration id="13" name="KCG"/>
