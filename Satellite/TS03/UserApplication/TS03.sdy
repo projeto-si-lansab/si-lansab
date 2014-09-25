@@ -5,7 +5,7 @@
 			<mappingItems>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3701" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButtonCamera">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3701" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButtonCamera">
 							<A661Data>
 								<Notify/>
 							</A661Data>
@@ -17,7 +17,7 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3700" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButtonDownload">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3700" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButtonDownload">
 							<A661Data>
 								<Notify/>
 							</A661Data>
@@ -29,7 +29,7 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3055" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton_Picture">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3055" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton_Picture">
 							<A661Data>
 								<Notify/>
 							</A661Data>
@@ -41,10 +41,106 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="7003" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="SB_Panchromatic">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SB_PanchromaticBtn" type="int" oid="!ed/2565/61E2/12A4/54240a84619a" instancepath="TS03/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="7004" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="SB_Blue">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SB_BlueBtn" type="int" oid="!ed/2584/61E2/12A4/54240afc6c45" instancepath="TS03/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="7005" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="SB_Green">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SB_GreenBtn" type="int" oid="!ed/258a/61E2/12A4/54240afd1cb1" instancepath="TS03/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="7006" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="SB_Red">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SB_RedBtn" type="int" oid="!ed/2590/61E2/12A4/54240afe2fa7" instancepath="TS03/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="7007" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="SB_Infrared">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SB_InfraredBtn" type="int" oid="!ed/2596/61E2/12A4/54240aff7275" instancepath="TS03/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="7009" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="IR_ColourMerge">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="IR_ColourMergeBtn" type="int" oid="!ed/259c/61E2/12A4/54240b256339" instancepath="TS03/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="7010" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="IR_Multispectral">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="IR_MultispectralBtn" type="int" oid="!ed/25a2/61E2/12A4/54240b395931" instancepath="TS03/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="7008" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="IR_Panchromatic">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="IR_PanchromaticBtn" type="int" oid="!ed/25a8/61E2/12A4/54240b3bdc6" instancepath="TS03/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
 						<Variable name="Layer1Active" type="bool" oid="!ed/214b/1F06/1FBC/5416e61e2ea8" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
 							<A661Data>
 								<Emit/>
 							</A661Data>
@@ -56,7 +152,7 @@
 						<Variable name="Layer1Vixible" type="bool" oid="!ed/214c/1F06/1FBC/5416e61e462a" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
 							<A661Data>
 								<Emit/>
 							</A661Data>
@@ -68,32 +164,32 @@
 						<Variable name="Emit2CDS" type="bool" oid="!ed/214f/1F06/1FBC/5416e61e2693" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2055" ParameterIdent="A661_ROTATION_ANGLE" WidgetType="GpLinePolar" WidgetName="GpLinePolar_Battery">
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2055" ParameterIdent="A661_ROTATION_ANGLE" WidgetType="GpLinePolar" WidgetName="GpLinePolar_Battery">
 							<A661Data>
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2500" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="GpRectangle_BatteryWarn">
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2500" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="GpRectangle_BatteryWarn">
 							<A661Data>
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3550" ParameterIdent="A661_SIZE_X" WidgetType="GpRectangle" WidgetName="GpRectangleMemoryGauge">
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3550" ParameterIdent="A661_SIZE_X" WidgetType="GpRectangle" WidgetName="GpRectangleMemoryGauge">
 							<A661Data>
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3200" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="GpRectangle_MemoryWarn">
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3200" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="GpRectangle_MemoryWarn">
 							<A661Data>
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3400" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircleDownloadOn">
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3400" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircleDownloadOn">
 							<A661Data>
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2700" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircleCameraOn">
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2700" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircleCameraOn">
 							<A661Data>
 								<Emit/>
 							</A661Data>
@@ -105,7 +201,7 @@
 						<Variable name="ST_BatteryLevel" type="real" oid="!ed/2150/1F06/1FBC/5416e61e5ae9" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="RotationAngle" type="fr" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2055" ParameterIdent="A661_ROTATION_ANGLE" WidgetType="GpLinePolar" WidgetName="GpLinePolar_Battery">
+						<A661_CMD_SET_PARAMETER name="RotationAngle" type="fr" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2055" ParameterIdent="A661_ROTATION_ANGLE" WidgetType="GpLinePolar" WidgetName="GpLinePolar_Battery">
 							<A661Data>
 								<DataField value="RotationAngle"/>
 							</A661Data>
@@ -117,7 +213,7 @@
 						<Variable name="BatteryWarn" type="int" oid="!ed/2974/41BC/2740/5417a1854674" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2500" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="GpRectangle_BatteryWarn">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2500" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="GpRectangle_BatteryWarn">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -129,7 +225,7 @@
 						<Variable name="ST_MemoryGauge" type="int" oid="!ed/2416/3A68/147C/5418e5a63c45" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="SizeX" type="ulong" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3550" ParameterIdent="A661_SIZE_X" WidgetType="GpRectangle" WidgetName="GpRectangleMemoryGauge">
+						<A661_CMD_SET_PARAMETER name="SizeX" type="ulong" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3550" ParameterIdent="A661_SIZE_X" WidgetType="GpRectangle" WidgetName="GpRectangleMemoryGauge">
 							<A661Data>
 								<DataField value="SizeX"/>
 							</A661Data>
@@ -141,7 +237,7 @@
 						<Variable name="MemoryWarn" type="int" oid="!ed/2418/3A68/147C/5418e5be444b" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3200" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="GpRectangle_MemoryWarn">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3200" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="GpRectangle_MemoryWarn">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -153,7 +249,7 @@
 						<Variable name="ST_CameraOnIndicator" type="int" oid="!ed/241a/3A68/147C/5418e6b240ae" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2700" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircleCameraOn">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="2700" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircleCameraOn">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -165,7 +261,7 @@
 						<Variable name="ST_MemoryDownloadIndicator" type="int" oid="!ed/241b/3A68/147C/5418e6c72f2b" instancepath="TS03/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3400" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircleDownloadOn">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS03.sgfx" layer="ts03" LayerIdent="1" WidgetIdent="3400" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircleDownloadOn">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>

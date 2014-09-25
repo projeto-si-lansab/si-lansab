@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="114" defaultConfiguration="21">
+<Project id="1" oid_count="124" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -203,10 +203,10 @@
 			<configuration>63</configuration>
 		</Prop>
 		<Prop id="71" name="@SCADE:DEFAULTFILE">
-			<value>TS03.xscade</value>
+			<value>ts04.xscade</value>
 		</Prop>
 		<Prop id="72" name="@SCADE:SEMFILE">
-			<value>TS03.err</value>
+			<value>ts04.err</value>
 		</Prop>
 		<Prop id="73" name="@SCADE:NOTEFILE">
 			<value>$(SCADE)/lib/DefaultAty.aty</value>
@@ -274,123 +274,51 @@
 			<value>60</value>
 			<value>63</value>
 		</Prop>
-		<Prop id="95" name="@GENERATOR:EXPANDED_NODES">
-			<value>digital::FallingEdge</value>
-			<value>mathext::HypotR</value>
-			<value>pwlinear::DeadBandUnSymmetrical</value>
-			<value>lut::Lut2DNoSat</value>
-			<value>lut::Limiter</value>
-			<value>linear::MeanCycle2</value>
-			<value>linear::HitCrossingRising</value>
-			<value>linear::MeanCycle3</value>
-			<value>linear::IntegrTrapez</value>
-			<value>linear::IntegrFwd</value>
-			<value>filters::FilterND</value>
-			<value>math::Round</value>
-			<value>lut::Lut3DNoSat</value>
-			<value>filters::TransferFcnND</value>
-			<value>pwlinear::Counter</value>
-			<value>TS03</value>
-			<value>filters::Filter0D</value>
-			<value>lut::CalculateNearest</value>
-			<value>lut::Lut2DNearest</value>
-			<value>filters::TransferFcn0D</value>
-			<value>math::Max3</value>
-			<value>digital::FallingEdgeRetrigger</value>
-			<value>truthtables::TruthTableExh</value>
-			<value>vect::MatProd</value>
-			<value>mathext::Square</value>
-			<value>mathext::Inv</value>
-			<value>lut::Lut1DNearest</value>
-			<value>lut::Lut3DNearest</value>
-			<value>TS03Battery</value>
-			<value>vect::MatVectProd</value>
-			<value>math::RoundCeil</value>
-			<value>verif::ImpliesWithinNTick</value>
-			<value>truthtables::TruthTable</value>
-			<value>pwlinear::DeadBandSymmetrical</value>
-			<value>pwlinear::PreLoadSymmetrical</value>
-			<value>digital::FlipFlopJK</value>
-			<value>lut::Interp2DFloor</value>
-			<value>lut::PreLutDirect</value>
-			<value>digital::FallingEdgeNoRetrigger</value>
-			<value>digital::Int2BoolVectElt</value>
-			<value>digital::Int2BoolVect</value>
-			<value>verif::AtLeastNTicks</value>
-			<value>filters::FilterNN</value>
-			<value>lut::Interp1DFloor</value>
-			<value>digital::BoolVect2Int</value>
-			<value>filters::Filter02Norm</value>
-			<value>verif::AfterNthTick</value>
-			<value>filters::Filter12Norm</value>
-			<value>linear::Derivative</value>
-			<value>lut::Lut1DFloor</value>
-			<value>linear::HitCrossingEither</value>
-			<value>filters::Filter01</value>
-			<value>vect::VectMatProd</value>
-			<value>math::OctetToInt</value>
-			<value>verif::AlwaysAfterFirstCond</value>
-			<value>filters::TransferFcn01</value>
-			<value>filters::Filter02</value>
-			<value>math::Min3</value>
-			<value>math::Sign</value>
-			<value>pwlinear::RisingHysteresis</value>
-			<value>lut::Lut2DFloor</value>
-			<value>digital::EitherEdge</value>
-			<value>filters::Filter11</value>
-			<value>filters::TransferFcn02</value>
-			<value>filters::Filter12</value>
-			<value>lut::SearchNearest</value>
-			<value>linear::HitCrossingFalling</value>
-			<value>filters::TransferFcn12</value>
-			<value>math::RoundFloor</value>
-			<value>filters::FilterNDNorm</value>
-			<value>pwlinear::Quantizer</value>
-			<value>filters::Filter0DNorm</value>
-			<value>digital::count_down</value>
-			<value>filters::SumDelay</value>
-			<value>lut::Lut1DCeil</value>
-			<value>digital::RisingEdgeRetrigger</value>
-			<value>truthtables::TruthTableElt</value>
-			<value>lut::Lut2DCeil</value>
-			<value>truthtables::TruthTableLine</value>
-			<value>filters::FilterNNNorm</value>
-			<value>lut::Interp1D</value>
-			<value>TS03Memory</value>
-			<value>Switch</value>
-			<value>filters::Filter01Norm</value>
-			<value>pwlinear::ClockCounter</value>
-			<value>lut::Interp2D</value>
-			<value>digital::RisingEdge</value>
-			<value>truthtables::TruthTableIdx</value>
-			<value>filters::Filter11Norm</value>
-			<value>pwlinear::RateLimiter</value>
-			<value>pwlinear::FallingHysteresis</value>
-			<value>lut::Lut1DNoSat</value>
-			<value>digital::RisingEdgeNoRetrigger</value>
-			<value>truthtables::TruthTableLineIdx</value>
+		<Prop id="94" name="@SCADE:CHECKED">
+			<value>false</value>
+		</Prop>
+		<Prop id="96" name="@GENERATOR:OBSERVE_MODE">
+			<value>4</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="97" name="@GENERATOR:ROOTNODE">
+			<value>ts04</value>
 			<configuration>21</configuration>
 		</Prop>
-		<Prop id="96" name="@GENERATOR:EXPAND_MODE">
+		<Prop id="98" name="@GENERATOR:INPUT_THRESHOLD">
 			<value>2</value>
 			<configuration>21</configuration>
 		</Prop>
-		<Prop id="97" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
-			<value>..\DefinitionFile\TS03.sgfx</value>
+		<Prop id="99" name="@GENERATOR:EXPAND_MODE">
+			<value>1</value>
 			<configuration>21</configuration>
 		</Prop>
-		<Prop id="98" name="@GENERATOR:ROOTNODE">
-			<value>TS03</value>
+		<Prop id="100" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
+			<value>..\DefinitionFile\TS04.sgfx</value>
 			<configuration>21</configuration>
 		</Prop>
-		<Prop id="99" name="@SCADE:CHECKED">
-			<value>false</value>
+		<Prop id="101" name="@GENERATOR:SKIP_UNUSED">
+			<value>true</value>
+			<configuration>13</configuration>
 		</Prop>
-		<Prop id="105" name="@SCADE:ASSTRING_TRIM">
+		<Prop id="102" name="@GENERATOR:ROOTNODE">
+			<value>ts04</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="103" name="@GENERATOR:INPUT_THRESHOLD">
+			<value>2</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="104" name="@GENERATOR:EXPAND_MODE">
+			<value>1</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="105" name="@GENERATOR:TARGET_ADAPTOR">
 			<value></value>
+			<configuration>13</configuration>
 		</Prop>
-		<Prop id="106" name="@TRACEABILITY:Project">
-			<value>TS03.rqtf</value>
+		<Prop id="106" name="@SCADE:CHECKED">
+			<value>false</value>
 		</Prop>
 	</props>
 	<roots>
@@ -407,20 +335,23 @@
 		<Folder id="11" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files"/>
-				<FileRef id="90" persistAs="TS03Battery.xscade"/>
-				<FileRef id="91" persistAs="TS03Memory.xscade"/>
-				<FileRef id="92" persistAs="Switch.xscade"/>
-				<FileRef id="102" persistAs="ConvertIntToBool.xscade"/>
-				<FileRef id="103" persistAs="CameraOptions.xscade"/>
-				<FileRef id="114" persistAs="TS03.xscade"/>
+				<FileRef id="90" persistAs="ts041.xscade"/>
+				<FileRef id="92" persistAs="lucasamaral.xscade"/>
+				<FileRef id="103" persistAs="ts04.xscade"/>
+				<FileRef id="107" persistAs="cor_status2.xscade"/>
+				<FileRef id="109" persistAs="thiagoribeiro.xscade"/>
+				<FileRef id="111" persistAs="ff.xscade"/>
+				<FileRef id="115" persistAs="juan.xscade"/>
+				<FileRef id="119" persistAs="joaonones.xscade"/>
+				<FileRef id="123" persistAs="lucianoyukio.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="84" name="Design Verifier File">
 			<elements>
-				<FileRef id="85" persistAs="TS03.l4"/>
+				<FileRef id="85" persistAs="ts04.l4"/>
 			</elements>
 		</Folder>
-		<FileRef id="94" persistAs="..\DefinitionFile\TS03.sgfx"/>
+		<FileRef id="93" persistAs="..\DefinitionFile\TS04.sgfx"/>
 	</roots>
 	<configurations>
 		<Configuration id="13" name="KCG"/>
