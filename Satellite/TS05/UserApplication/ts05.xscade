@@ -2586,15 +2586,15 @@
 						<ed:Equation oid="!ed/3d6e/19ED/1BEC/540cb3121384"/>
 					</pragmas>
 				</Equation>
-				<!-- () = jobson_test_operator(); -->
+				<!-- () = us05_test_operator(); -->
 				<Equation>
 					<right>
-						<!-- jobson_test_operator() -->
+						<!-- us05_test_operator() -->
 						<CallExpression>
 							<operator>
 								<OpCall name="1">
 									<operator>
-										<OperatorRef name="jobson_test_operator"/>
+										<OperatorRef name="us05_test_operator"/>
 									</operator>
 								</OpCall>
 							</operator>
@@ -11716,7 +11716,7 @@
 						<ed:Equation oid="!ed/7cb5/19ED/1BEC/540d17a42181"/>
 					</pragmas>
 				</Equation>
-				<!-- _L38, _L39, _L40, _L41, _L99 = hoffmann(_L43, _L37, _L36); -->
+				<!-- _L38, _L39, _L40, _L41, _L99 = us11(_L43, _L37, _L36); -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L38"/>
@@ -11726,12 +11726,12 @@
 						<VariableRef name="_L99"/>
 					</lefts>
 					<right>
-						<!-- hoffmann(_L43, _L37, _L36) -->
+						<!-- us11(_L43, _L37, _L36) -->
 						<CallExpression>
 							<operator>
 								<OpCall name="2">
 									<operator>
-										<OperatorRef name="hoffmann"/>
+										<OperatorRef name="us11"/>
 									</operator>
 								</OpCall>
 							</operator>
@@ -11847,12 +11847,12 @@
 						<VariableRef name="_L97"/>
 					</lefts>
 					<right>
-						<!-- jobson(_L64, _L65, _L68, _L59, _L60, _L69, _L61, _L62, _L70, _L66, _L67, _L71, _L... -->
+						<!-- us05(_L64, _L65, _L68, _L59, _L60, _L69, _L61, _L62, _L70, _L66, _L67, _L71, _L56... -->
 						<CallExpression>
 							<operator>
 								<OpCall name="1">
 									<operator>
-										<OperatorRef name="jobson"/>
+										<OperatorRef name="us05"/>
 									</operator>
 								</OpCall>
 							</operator>
@@ -12670,7 +12670,7 @@
 						<ed:Equation oid="!ed/4b5d/60A1/18A0/5413581d459d"/>
 					</pragmas>
 				</Equation>
-				<!-- _L85, _L86, _L87, _L88, _L89, _L90 = guarino(_L73, _L74, _L75, _L76, _L79, _L80, ... -->
+				<!-- _L85, _L86, _L87, _L88, _L89, _L90 = us01(_L73, _L74, _L75, _L76, _L79, _L80, _L8... -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L85"/>
@@ -12681,12 +12681,12 @@
 						<VariableRef name="_L90"/>
 					</lefts>
 					<right>
-						<!-- guarino(_L73, _L74, _L75, _L76, _L79, _L80, _L81, _L82, _L77, _L78, _L83, _L84) -->
+						<!-- us01(_L73, _L74, _L75, _L76, _L79, _L80, _L81, _L82, _L77, _L78, _L83, _L84) -->
 						<CallExpression>
 							<operator>
 								<OpCall name="1">
 									<operator>
-										<OperatorRef name="guarino"/>
+										<OperatorRef name="us01"/>
 									</operator>
 								</OpCall>
 							</operator>
