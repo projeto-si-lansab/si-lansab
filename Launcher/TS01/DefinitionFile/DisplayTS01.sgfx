@@ -111,26 +111,6 @@
                                 <stringprop name="LabelString">Automatic</stringprop>
                             </model>
                         </widget>
-                        <widget name="Lab_Automatic" oid="d55a55d2-4f82-4db6-96c2-28ec4091d7d8" type="Label">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">261</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">-8280</intprop>
-                                <intprop name="PosY">430</intprop>
-                                <intprop name="SizeX">3830</intprop>
-                                <intprop name="SizeY">750</intprop>
-                                <intprop name="RotationAngle">0</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="MaxStringLength">32</intprop>
-                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
-                                <intprop name="Font">1</intprop>
-                                <intprop name="ColorIndex">21</intprop>
-                                <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">DESTROYED</stringprop>
-                            </model>
-                        </widget>
                         <widget name="Lab_Manual" oid="4fd0ecad-91f9-429d-9e75-61b29ce1fbee" type="Label">
                             <IDE/>
                             <model>
@@ -151,6 +131,36 @@
                                 <stringprop name="LabelString">Manual</stringprop>
                             </model>
                         </widget>
+                        <widget name="Destroyed_BlinkingContainer" oid="dc7276eb-c72b-445c-9b6a-1494ca1ab3c8" type="BlinkingContainer">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">275</intprop>
+                                <intprop name="BlinkingType">4</intprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                            </model>
+                            <children>
+                                <widget name="Lab_Destroyed" oid="d55a55d2-4f82-4db6-96c2-28ec4091d7d8" type="Label">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">261</intprop>
+                                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">-8280</intprop>
+                                        <intprop name="PosY">430</intprop>
+                                        <intprop name="SizeX">3830</intprop>
+                                        <intprop name="SizeY">750</intprop>
+                                        <intprop name="RotationAngle">0</intprop>
+                                        <intprop name="StyleSet">1</intprop>
+                                        <intprop name="MaxStringLength">32</intprop>
+                                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                        <intprop name="Font">1</intprop>
+                                        <intprop name="ColorIndex">21</intprop>
+                                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                                        <stringprop name="LabelString">DESTROYED</stringprop>
+                                    </model>
+                                </widget>
+                            </children>
+                        </widget>
                     </children>
                 </widget>
                 <widget name="Status_BasicContainer" oid="67c3579d-e4e4-418e-839a-47eb784c2965" type="BasicContainer">
@@ -159,8 +169,8 @@
                         <intprop name="WidgetIdent">258</intprop>
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">635</intprop>
-                        <intprop name="PosY">-375</intprop>
+                        <intprop name="PosX">1700</intprop>
+                        <intprop name="PosY">-450</intprop>
                     </model>
                     <children>
                         <widget name="EBN_Altitude" oid="22106b69-3b24-4e6d-a3f6-e4dc4f3b7142" type="EditBoxNumeric">
@@ -171,15 +181,15 @@
                                 <enumprop name="Visible">A661_TRUE</enumprop>
                                 <intprop name="PosX">5220</intprop>
                                 <intprop name="PosY">11467</intprop>
-                                <intprop name="SizeX">5300</intprop>
+                                <intprop name="SizeX">5800</intprop>
                                 <intprop name="SizeY">765</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">130</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <floatprop name="Value">0.0</floatprop>
                                 <floatprop name="TicsCoarse">10.0</floatprop>
-                                <floatprop name="TicsFine">0.1</floatprop>
+                                <floatprop name="TicsFine">1.0</floatprop>
                                 <floatprop name="MinValue">0.0</floatprop>
-                                <floatprop name="MaxValue">200.0</floatprop>
+                                <floatprop name="MaxValue">800000.0</floatprop>
                                 <intprop name="LegendAreaSizeX">800</intprop>
                                 <intprop name="StartCursorPosByte">32</intprop>
                                 <intprop name="MaxFormatStringLength">16</intprop>
@@ -203,15 +213,15 @@
                                 <enumprop name="Visible">A661_TRUE</enumprop>
                                 <intprop name="PosX">5220</intprop>
                                 <intprop name="PosY">9321</intprop>
-                                <intprop name="SizeX">5300</intprop>
+                                <intprop name="SizeX">5800</intprop>
                                 <intprop name="SizeY">765</intprop>
                                 <intprop name="StyleSet">110</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <floatprop name="Value">0.0</floatprop>
                                 <floatprop name="TicsCoarse">10.0</floatprop>
                                 <floatprop name="TicsFine">0.1</floatprop>
-                                <floatprop name="MinValue">0.0</floatprop>
-                                <floatprop name="MaxValue">100.0</floatprop>
+                                <floatprop name="MinValue">-90.0</floatprop>
+                                <floatprop name="MaxValue">90.0</floatprop>
                                 <intprop name="LegendAreaSizeX">800</intprop>
                                 <intprop name="StartCursorPosByte">32</intprop>
                                 <intprop name="MaxFormatStringLength">16</intprop>
@@ -235,15 +245,15 @@
                                 <enumprop name="Visible">A661_TRUE</enumprop>
                                 <intprop name="PosX">5220</intprop>
                                 <intprop name="PosY">7135</intprop>
-                                <intprop name="SizeX">5300</intprop>
+                                <intprop name="SizeX">5800</intprop>
                                 <intprop name="SizeY">765</intprop>
                                 <intprop name="StyleSet">110</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <floatprop name="Value">0.0</floatprop>
                                 <floatprop name="TicsCoarse">10.0</floatprop>
                                 <floatprop name="TicsFine">0.1</floatprop>
-                                <floatprop name="MinValue">0.0</floatprop>
-                                <floatprop name="MaxValue">100.0</floatprop>
+                                <floatprop name="MinValue">-180.0</floatprop>
+                                <floatprop name="MaxValue">180.0</floatprop>
                                 <intprop name="LegendAreaSizeX">800</intprop>
                                 <intprop name="StartCursorPosByte">32</intprop>
                                 <intprop name="MaxFormatStringLength">16</intprop>
@@ -267,9 +277,9 @@
                                 <enumprop name="Visible">A661_TRUE</enumprop>
                                 <intprop name="PosX">5220</intprop>
                                 <intprop name="PosY">4910</intprop>
-                                <intprop name="SizeX">5300</intprop>
+                                <intprop name="SizeX">5800</intprop>
                                 <intprop name="SizeY">765</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">130</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <floatprop name="Value">0.0</floatprop>
                                 <floatprop name="TicsCoarse">10.0</floatprop>
@@ -287,8 +297,8 @@
                                 <enumprop name="LegendRemoved">A661_FALSE</enumprop>
                                 <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
                                 <enumprop name="CyclicFlag">A661_TRUE</enumprop>
-                                <stringprop name="FormatString">###</stringprop>
-                                <stringprop name="LegendString">o</stringprop>
+                                <stringprop name="FormatString">###.##</stringprop>
+                                <stringprop name="LegendString"></stringprop>
                             </model>
                         </widget>
                         <widget name="EBN_Speed" oid="92aff8bd-e300-413d-920d-a7666dfda672" type="EditBoxNumeric">
@@ -299,9 +309,9 @@
                                 <enumprop name="Visible">A661_TRUE</enumprop>
                                 <intprop name="PosX">5185</intprop>
                                 <intprop name="PosY">2710</intprop>
-                                <intprop name="SizeX">6465</intprop>
+                                <intprop name="SizeX">6900</intprop>
                                 <intprop name="SizeY">765</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">130</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <floatprop name="Value">0.0</floatprop>
                                 <floatprop name="TicsCoarse">10.0</floatprop>
@@ -319,8 +329,8 @@
                                 <enumprop name="LegendRemoved">A661_FALSE</enumprop>
                                 <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
                                 <enumprop name="CyclicFlag">A661_TRUE</enumprop>
-                                <stringprop name="FormatString">####.##</stringprop>
-                                <stringprop name="LegendString">km/h</stringprop>
+                                <stringprop name="FormatString">#####</stringprop>
+                                <stringprop name="LegendString"></stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_Altitude" oid="6913b3ec-91d9-4cb3-91da-34704921eb10" type="Label">
@@ -329,7 +339,7 @@
                                 <intprop name="WidgetIdent">40</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">5220</intprop>
+                                <intprop name="PosX">5420</intprop>
                                 <intprop name="PosY">12300</intprop>
                                 <intprop name="SizeX">4540</intprop>
                                 <intprop name="SizeY">595</intprop>
@@ -340,7 +350,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Altitude</stringprop>
+                                <stringprop name="LabelString">Altitude (m)</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_Latitude" oid="f8bfa1ac-98a0-4e69-a8da-3a0e348c0504" type="Label">
@@ -349,7 +359,7 @@
                                 <intprop name="WidgetIdent">41</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">5220</intprop>
+                                <intprop name="PosX">5320</intprop>
                                 <intprop name="PosY">10144</intprop>
                                 <intprop name="SizeX">4575</intprop>
                                 <intprop name="SizeY">591</intprop>
@@ -369,7 +379,7 @@
                                 <intprop name="WidgetIdent">42</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">5220</intprop>
+                                <intprop name="PosX">5320</intprop>
                                 <intprop name="PosY">7958</intprop>
                                 <intprop name="SizeX">4575</intprop>
                                 <intprop name="SizeY">517</intprop>
@@ -391,7 +401,7 @@
                                 <enumprop name="Visible">A661_TRUE</enumprop>
                                 <intprop name="PosX">5220</intprop>
                                 <intprop name="PosY">5712</intprop>
-                                <intprop name="SizeX">4610</intprop>
+                                <intprop name="SizeX">5300</intprop>
                                 <intprop name="SizeY">703</intprop>
                                 <intprop name="RotationAngle">0</intprop>
                                 <intprop name="StyleSet">1</intprop>
@@ -409,7 +419,7 @@
                                 <intprop name="WidgetIdent">50</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">5220</intprop>
+                                <intprop name="PosX">5320</intprop>
                                 <intprop name="PosY">3512</intprop>
                                 <intprop name="SizeX">4645</intprop>
                                 <intprop name="SizeY">663</intprop>
@@ -420,7 +430,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Speed</stringprop>
+                                <stringprop name="LabelString">Speed (km/h)</stringprop>
                             </model>
                         </widget>
                         <widget name="Label" oid="1cb0908d-8e7a-42bb-9030-1708ccf23e4e" type="Label">
@@ -1119,6 +1129,27 @@
                                 <stringprop name="LabelString">Input Testing</stringprop>
                             </model>
                         </widget>
+                        <widget name="TG_Manual_Override" oid="a17e7627-7ff8-4097-8d52-fc90bd1deb6b" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">274</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">-660</intprop>
+                                <intprop name="PosY">-17000</intprop>
+                                <intprop name="SizeX">4445</intprop>
+                                <intprop name="SizeY">740</intprop>
+                                <intprop name="StyleSet">114</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_TRUE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Auto</stringprop>
+                                <stringprop name="AlternateLabelString">Manual</stringprop>
+                            </model>
+                        </widget>
                         <widget name="PB_Test_Self_Destruct" oid="b622ea6e-315c-4063-aaba-8aa5940f1322" type="PushButton">
                             <IDE/>
                             <model>
@@ -1144,5 +1175,5 @@
     </children>
 </specification>
 
-<!-- crc32 : 284645714 -->
+<!-- crc32 : 667042087 -->
 

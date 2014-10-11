@@ -256,12 +256,12 @@
 			<type>
 				<NamedType>
 					<type>
-						<TypeRef name="real"/>
+						<TypeRef name="int"/>
 					</type>
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="900.0"/>
+				<ConstValue value="28000"/>
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/2bc/69FF/A1C/5414c66d5a4b"/>
@@ -271,12 +271,12 @@
 			<type>
 				<NamedType>
 					<type>
-						<TypeRef name="real"/>
+						<TypeRef name="int"/>
 					</type>
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="200.0"/>
+				<ConstValue value="720000"/>
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/621/5F94/7B4/5433421c7a6d"/>
@@ -291,7 +291,7 @@
 				</NamedType>
 			</type>
 			<value>
-				<!-- ['I', 'N', ' ', 'P', 'R', 'O', 'C', 'E', 'S', 'S', ' ', ' ', ' ', ' ', ' ', ' ', ... -->
+				<!-- ['I', 'N', ' ', 'P', 'R', 'O', 'G', 'R', 'E', 'S', 'S', ' ', ' ', ' ', ' ', ' ', ... -->
 				<DataArrayOp>
 					<data>
 						<ConstValue value="'I'"/>
@@ -300,11 +300,11 @@
 						<ConstValue value="'P'"/>
 						<ConstValue value="'R'"/>
 						<ConstValue value="'O'"/>
-						<ConstValue value="'C'"/>
+						<ConstValue value="'G'"/>
+						<ConstValue value="'R'"/>
 						<ConstValue value="'E'"/>
 						<ConstValue value="'S'"/>
 						<ConstValue value="'S'"/>
-						<ConstValue value="' '"/>
 						<ConstValue value="' '"/>
 						<ConstValue value="' '"/>
 						<ConstValue value="' '"/>
@@ -451,6 +451,261 @@
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/a3b/5F94/7B4/54334e86132c"/>
+			</pragmas>
+		</Constant>
+		<Constant name="TARGET_ORBIT_INCLINATION">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="98.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/6f8/6831/AD0/54384efc5dc8"/>
+			</pragmas>
+		</Constant>
+		<Constant name="STARTING_LATITUDE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="-23.209475"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/709/6831/AD0/54384f2a4a32"/>
+			</pragmas>
+		</Constant>
+		<Constant name="STARTING_LONGITUDE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="-45.876359"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/722/6831/AD0/54384f5c27e"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ACCELERATION_PH1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="183"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/acc/6831/AD0/543860da7a77"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ACCELERATION_PH2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="143"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/aea/6831/AD0/543860eb4463"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ACCELERATION_PH3">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="103"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/af8/6831/AD0/543860ed1bc6"/>
+			</pragmas>
+		</Constant>
+		<Constant name="ACCELERATION_PH4">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="83"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/b06/6831/AD0/543860ed330d"/>
+			</pragmas>
+		</Constant>
+		<Constant name="PHASE1_MAX_ALTITUDE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="90000"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/bda/6831/AD0/54386f4e59ad"/>
+			</pragmas>
+		</Constant>
+		<Constant name="PHASE2_MAX_ALTITUDE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="230000"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/bf8/6831/AD0/54386f776616"/>
+			</pragmas>
+		</Constant>
+		<Constant name="PHASE3_MAX_ALTITUDE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="640000"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/c16/6831/AD0/54386f953bb8"/>
+			</pragmas>
+		</Constant>
+		<Constant name="INCLINATION_PH1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="3.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/f87/6831/AD0/54387f664d8c"/>
+			</pragmas>
+		</Constant>
+		<Constant name="INCLINATION_PH2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="8.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/fa5/6831/AD0/54387f7918ed"/>
+			</pragmas>
+		</Constant>
+		<Constant name="INCLINATION_PH3">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="real"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="32.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/fb3/6831/AD0/54387f7a7aec"/>
+			</pragmas>
+		</Constant>
+		<Constant name="A661_SELECTED">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="1"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/1500/6831/AD0/54388e6b5401"/>
+			</pragmas>
+		</Constant>
+		<Constant name="A661_UNSELECTED">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/1511/6831/AD0/54388e7f1e10"/>
+			</pragmas>
+		</Constant>
+		<Constant name="A661_FALSE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="false"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/1606/6831/AD0/5438941a6764"/>
+			</pragmas>
+		</Constant>
+		<Constant name="A661_TRUE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="true"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/1614/6831/AD0/543894213edb"/>
 			</pragmas>
 		</Constant>
 	</declarations>
