@@ -138,6 +138,36 @@
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="58" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaComb">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="59" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaIncl">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="60" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaGeral">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="61" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeComb">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="62" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeIncl">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="63" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeGeral">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
@@ -278,6 +308,78 @@
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="49" ParameterIdent="A661_VISIBLE" WidgetType="BlinkingContainer" WidgetName="BlinkingLaunch">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="NadaComb" type="bool" oid="!ed/235e/14E6/1AB0/54408fa75cb0" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="58" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaComb">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="NadaIncl" type="bool" oid="!ed/235f/14E6/1AB0/54408fb04fa3" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="59" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaIncl">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="NadaGeral" type="bool" oid="!ed/2360/14E6/1AB0/54408fb75e29" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="60" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaGeral">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="AlarmeComb" type="bool" oid="!ed/2362/14E6/1AB0/54408fc7166a" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="61" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeComb">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="AlarmeIncl" type="bool" oid="!ed/2363/14E6/1AB0/54408fd07c1a" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="62" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeIncl">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="AlarmeGeral" type="bool" oid="!ed/2364/14E6/1AB0/54408fd93a11" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="63" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeGeral">
 							<A661Data>
 								<DataField value="Visible"/>
 							</A661Data>
