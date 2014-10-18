@@ -1651,6 +1651,102 @@
 						<ed:Variable oid="!ed/4b40/2504/1448/5418d2345b98"/>
 					</pragmas>
 				</Variable>
+				<Variable name="Testable_SAT_PropellersState_Toggle1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/536e/446B/EBC/543c3dc362c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Testable_SAT_GyroscopeState_ToggleTo1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/5370/446B/EBC/543c3dc32d3d"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Testable_SAT_CameraState_ToggleTo1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/5372/446B/EBC/543c3dc3310c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Testable_SAT_GyroscopeState_Toggle1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/5374/446B/EBC/543c3dc31bb8"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Testable_SAT_HorizonSensorState_Toggle1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/5376/446B/EBC/543c3dc37db1"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Testable_SAT_CameraState_Toggle1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/5378/446B/EBC/543c3dc36b7e"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Testable_SAT_PropellersState_ToggleTo1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/537a/446B/EBC/543c3dc34275"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Testable_SAT_HorizonSensorState_ToggleTo1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/537c/446B/EBC/543c3dc3345d"/>
+					</pragmas>
+				</Variable>
 				<Variable name="_L2">
 					<type>
 						<NamedType>
@@ -2464,7 +2560,7 @@
 					</lefts>
 					<right>
 						<!-- fby(_L2; 1; true) -->
-						<FbyOp name="1">
+						<FbyOp name="2">
 							<flows>
 								<IdExpression>
 									<path>
@@ -2538,7 +2634,7 @@
 						<!-- guarino_test_operator() -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
 										<OperatorRef name="guarino_test_operator"/>
 									</operator>
@@ -2556,7 +2652,7 @@
 						<!-- gustavoloureiro_test_operator() -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
 										<OperatorRef name="gustavoloureiro_test_operator"/>
 									</operator>
@@ -2574,7 +2670,7 @@
 						<!-- hoffmann_test_operator() -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
 										<OperatorRef name="hoffmann_test_operator"/>
 									</operator>
@@ -2586,15 +2682,15 @@
 						<ed:Equation oid="!ed/3d6e/19ED/1BEC/540cb3121384"/>
 					</pragmas>
 				</Equation>
-				<!-- () = us05_test_operator(); -->
+				<!-- () = us14_test_operator(); -->
 				<Equation>
 					<right>
-						<!-- us05_test_operator() -->
+						<!-- us14_test_operator() -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
-										<OperatorRef name="us05_test_operator"/>
+										<OperatorRef name="us14_test_operator"/>
 									</operator>
 								</OpCall>
 							</operator>
@@ -2610,7 +2706,7 @@
 						<!-- kalil_test_operator() -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
 										<OperatorRef name="kalil_test_operator"/>
 									</operator>
@@ -2628,7 +2724,7 @@
 						<!-- leonardo_test_operator() -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
 										<OperatorRef name="leonardo_test_operator"/>
 									</operator>
@@ -2646,7 +2742,7 @@
 						<!-- mayara_test_operator() -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
 										<OperatorRef name="mayara_test_operator"/>
 									</operator>
@@ -2664,7 +2760,7 @@
 						<!-- rhuan_test_operator() -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
 										<OperatorRef name="rhuan_test_operator"/>
 									</operator>
@@ -7096,7 +7192,7 @@
 												</Edge>
 											</presentationElements>
 										</NetDiagram>
-										<NetDiagram name="diagram_Debug_us05inputs" landscape="true" format="A4 (210 297)" oid="!ed/4546/44E0/1ABC/540d246d1c82">
+										<NetDiagram name="diagram_Debug_us14inputs" landscape="true" format="A4 (210 297)" oid="!ed/4546/44E0/1ABC/540d246d1c82">
 											<presentationElements>
 												<EquationGE presentable="!ed/4755/44E0/1ABC/540d2d676a11">
 													<position>
@@ -8293,7 +8389,7 @@
 												</Edge>
 											</presentationElements>
 										</NetDiagram>
-										<NetDiagram name="diagram_Debug_us05outputs" landscape="true" format="A4 (210 297)" oid="!ed/4d52/3F38/15D4/5418dba529e4">
+										<NetDiagram name="diagram_Debug_us14outputs" landscape="true" format="A4 (210 297)" oid="!ed/4d52/3F38/15D4/5418dba529e4">
 											<presentationElements>
 												<EquationGE presentable="!ed/4d6f/3F38/15D4/5418dbc275bd">
 													<position>
@@ -10731,7 +10827,7 @@
 												</Edge>
 											</presentationElements>
 										</NetDiagram>
-										<NetDiagram name="diagram_Deploy_us05" landscape="true" format="A4 (210 297)" oid="!ed/458c/44E0/1ABC/540d24a41b37">
+										<NetDiagram name="diagram_Deploy_us14" landscape="true" format="A4 (210 297)" oid="!ed/458c/44E0/1ABC/540d24a41b37">
 											<presentationElements>
 												<EquationGE kind="OBJ_LIT" presentable="!ed/4595/44E0/1ABC/540d24a4cb2">
 													<position>
@@ -11729,7 +11825,7 @@
 						<!-- us11(_L43, _L37, _L36) -->
 						<CallExpression>
 							<operator>
-								<OpCall name="2">
+								<OpCall name="3">
 									<operator>
 										<OperatorRef name="us11"/>
 									</operator>
@@ -11847,12 +11943,12 @@
 						<VariableRef name="_L97"/>
 					</lefts>
 					<right>
-						<!-- us05(_L64, _L65, _L68, _L59, _L60, _L69, _L61, _L62, _L70, _L66, _L67, _L71, _L56... -->
+						<!-- us14(_L64, _L65, _L68, _L59, _L60, _L69, _L61, _L62, _L70, _L66, _L67, _L71, _L56... -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
-										<OperatorRef name="us05"/>
+										<OperatorRef name="us14"/>
 									</operator>
 								</OpCall>
 							</operator>
@@ -11925,6 +12021,16 @@
 								<IdExpression>
 									<path>
 										<ConstVarRef name="_L57"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
 									</path>
 								</IdExpression>
 							</callParameters>
@@ -12684,7 +12790,7 @@
 						<!-- us01(_L73, _L74, _L75, _L76, _L79, _L80, _L81, _L82, _L77, _L78, _L83, _L84) -->
 						<CallExpression>
 							<operator>
-								<OpCall name="1">
+								<OpCall name="2">
 									<operator>
 										<OperatorRef name="us01"/>
 									</operator>
@@ -13335,7 +13441,7 @@
 								</Edge>
 							</presentationElements>
 						</NetDiagram>
-						<NetDiagram name="diagram_ts05_us05" landscape="true" format="A4 (210 297)" oid="!ed/7cc4/19ED/1BEC/540d19479c2">
+						<NetDiagram name="diagram_ts05_us14" landscape="true" format="A4 (210 297)" oid="!ed/7cc4/19ED/1BEC/540d19479c2">
 							<presentationElements>
 								<EquationGE presentable="!ed/7cd8/19ED/1BEC/540d19be4c09">
 									<position>
@@ -14712,6 +14818,38 @@
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/4ddf/3F38/15D4/5418dc44790a"/>
+			</pragmas>
+		</Constant>
+		<Constant name="CDS_TEXT_ES_FAIL">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="String_ES"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<!-- ['F', 'A', 'I', 'L', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] -->
+				<DataArrayOp>
+					<data>
+						<ConstValue value="'F'"/>
+						<ConstValue value="'A'"/>
+						<ConstValue value="'I'"/>
+						<ConstValue value="'L'"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+						<ConstValue value="' '"/>
+					</data>
+				</DataArrayOp>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/4d03/7E54/BCC/5442c5555a57"/>
 			</pragmas>
 		</Constant>
 	</declarations>
