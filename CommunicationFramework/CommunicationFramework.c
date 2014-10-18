@@ -16,7 +16,7 @@
 #include <unistd.h>
 
 #include "CommunicationInterfaces.h"
-#include "OperatorInformation.h"
+#include "IntegrationCode.h"
 
 extern int gethostname(char *, size_t);
 extern int clock_gettime(clockid_t, struct timespec*);
@@ -189,16 +189,29 @@ void sendMessagesToPeers() {
     FRAMEWORK_MESSAGE message;
 
     memset(&message, 0, sizeof(message));
-    message.to = TS01;
+    message.to = TS01ID;
     buildMessage(&message);
     sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
 
     memset(&message, 0, sizeof(message));
-    message.to = TS02;
+    message.to = TS02ID;
     buildMessage(&message);
     sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
 
-    /* Send a message to each peer */
+    memset(&message, 0, sizeof(message));
+    message.to = TS03ID;
+    buildMessage(&message);
+    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
+
+    memset(&message, 0, sizeof(message));
+    message.to = TS04ID;
+    buildMessage(&message);
+    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
+
+    memset(&message, 0, sizeof(message));
+    message.to = TS05ID;
+    buildMessage(&message);
+    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
 }
 
 void usage() {

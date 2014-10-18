@@ -5,60 +5,19 @@
 			<mappingItems>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="267" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PB_Test_Self_Destruct">
-							<A661Data>
-								<Notify/>
-							</A661Data>
-						</A661_NOTIFY_WIDGET_EVENT>
-					</output>
-					<inputs>
-						<Variable name="AutoDestruct" type="bool" oid="!ed/34d/5F94/7B4/54333c7f29f6" instancepath="Main/"/>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="274" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="TG_Manual_Override">
-							<A661Data>
-								<DataField value="EvtToggleState"/>
-							</A661Data>
-						</A661_NOTIFY_WIDGET_EVENT>
-					</output>
-					<inputs>
-						<Variable name="Manual_Override" type="int" oid="!ed/1573/6831/AD0/54388fab6943" instancepath="Main/"/>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="StringSize" type="int" oid="!ed/6b/76C2/2290/540d0df41946" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_Ph1">
-							<A661Data>
-								<DataField value="String_size"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="44" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_Ph2">
-							<A661Data>
-								<DataField value="String_size"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="45" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_Ph3">
-							<A661Data>
-								<DataField value="String_size"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="46" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_PhF">
-							<A661Data>
-								<DataField value="String_size"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
 						<Variable name="Emit2CDS" type="bool" oid="!ed/77/76C2/2290/540d0e3f1156" instancepath="Main/"/>
 					</output>
 					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="257" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_Satelite_Status">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="257" ParameterIdent="A661_COLOR_INDEX" WidgetType="Label" WidgetName="Lab_Satelite_Status">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
 						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="49" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Speed">
 							<A661Data>
 								<Emit/>
@@ -70,71 +29,6 @@
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="28" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Inclination">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_Ph1">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="12" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="44" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_Ph2">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="15" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="45" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_Ph3">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="14" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="46" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_PhF">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="11" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="26" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Latitude">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="27" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Longitude">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="32" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="Lab_Automatic">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="33" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="Lab_Manual">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="275" ParameterIdent="A661_VISIBLE" WidgetType="BlinkingContainer" WidgetName="Destroyed_BlinkingContainer">
 							<A661Data>
 								<Emit/>
 							</A661Data>
@@ -167,7 +61,7 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="Speed_Out" type="real" oid="!ed/a3/3814/AAC/54110e353d7f" instancepath="Main/"/>
+						<Variable name="Speed_OUT" type="real" oid="!ed/a3/3814/AAC/54110e353d7f" instancepath="Main/"/>
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="49" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Speed">
@@ -179,7 +73,43 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="Altitude_Out" type="real" oid="!ed/52c/7C13/358/541b1ca42a38" instancepath="Main/"/>
+						<Variable name="Sat_Status_Lbl" type="char^20" oid="!ed/471/71A4/524/5414681848f" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="257" ParameterIdent="A661_STRING" Size="20" WidgetType="Label" WidgetName="Lab_Satelite_Status">
+							<A661Data>
+								<DataField value="LabelString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Sat_Status_Lbl_Color" type="int" oid="!ed/4c8/71A4/524/54146a7f3da3" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="ColorIndex" type="uchar" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="257" ParameterIdent="A661_COLOR_INDEX" WidgetType="Label" WidgetName="Lab_Satelite_Status">
+							<A661Data>
+								<DataField value="ColorIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="StringSizeSmall" type="int" oid="!ed/4fd/71A4/524/54146afa67ed" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="257" ParameterIdent="A661_STRING" WidgetType="Label" WidgetName="Lab_Satelite_Status">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Altitude_OUT" type="real" oid="!ed/52c/7C13/358/541b1ca42a38" instancepath="Main/"/>
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="255" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Altitude">
@@ -191,168 +121,12 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="Inclination_Out" type="real" oid="!ed/593/7C13/358/541b1eb65c08" instancepath="Main/"/>
+						<Variable name="Inclination_OUT" type="real" oid="!ed/593/7C13/358/541b1eb65c08" instancepath="Main/"/>
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="28" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Inclination">
 							<A661Data>
 								<DataField value="Value"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Ph1_Label" type="char^20" oid="!ed/65e/5F94/7B4/5433454d68a5" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_STRING" Size="20" WidgetType="Label" WidgetName="Lab_Ph1">
-							<A661Data>
-								<DataField value="LabelString"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Ph1_Color" type="int" oid="!ed/65f/5F94/7B4/543345624bff" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="12" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
-							<A661Data>
-								<DataField value="FillIndex"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Ph2_Label" type="char^20" oid="!ed/9d2/5F94/7B4/54334d804d18" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="44" ParameterIdent="A661_STRING" Size="20" WidgetType="Label" WidgetName="Lab_Ph2">
-							<A661Data>
-								<DataField value="LabelString"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Ph2_Color" type="int" oid="!ed/9d3/5F94/7B4/54334d8b5203" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="15" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
-							<A661Data>
-								<DataField value="FillIndex"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Ph3_Label" type="char^20" oid="!ed/9d4/5F94/7B4/54334d92419c" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="45" ParameterIdent="A661_STRING" Size="20" WidgetType="Label" WidgetName="Lab_Ph3">
-							<A661Data>
-								<DataField value="LabelString"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Ph3_Color" type="int" oid="!ed/9d5/5F94/7B4/54334d9a4ff7" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="14" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
-							<A661Data>
-								<DataField value="FillIndex"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="PhF_Label" type="char^20" oid="!ed/9d6/5F94/7B4/54334da244e2" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="LabelString" type="str" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="46" ParameterIdent="A661_STRING" Size="20" WidgetType="Label" WidgetName="Lab_PhF">
-							<A661Data>
-								<DataField value="LabelString"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="PhF_Color" type="int" oid="!ed/9d7/5F94/7B4/54334daf1fe0" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="11" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
-							<A661Data>
-								<DataField value="FillIndex"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Latitude_Out" type="real" oid="!ed/7df/6831/AD0/543850bd6dc3" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="26" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Latitude">
-							<A661Data>
-								<DataField value="Value"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Longitude_Out" type="real" oid="!ed/7e5/6831/AD0/543850f46bac" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="27" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="EBN_Longitude">
-							<A661Data>
-								<DataField value="Value"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Auto_Txt_En" type="bool" oid="!ed/159b/6831/AD0/54388fe06631" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="32" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="Lab_Automatic">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Manual_Txt_En" type="bool" oid="!ed/15be/6831/AD0/54388ff57c21" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="33" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="Lab_Manual">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="Destroyed_Label" type="bool" oid="!ed/15f0/6831/AD0/543893de41e8" instancepath="Main/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="275" ParameterIdent="A661_VISIBLE" WidgetType="BlinkingContainer" WidgetName="Destroyed_BlinkingContainer">
-							<A661Data>
-								<DataField value="Visible"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
