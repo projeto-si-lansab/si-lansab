@@ -147,18 +147,57 @@
 						<ed:Variable oid="!ed/50c2/3FE3/1B00/54051630403"/>
 					</pragmas>
 				</Variable>
+				<Variable name="_L27">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4b41/69F2/B7C/543c5a6c126"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L28">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4b70/69F2/B7C/543c5b023b5c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L29">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4bdc/69F2/B7C/543c5c022979"/>
+					</pragmas>
+				</Variable>
 			</locals>
 			<data>
-				<!-- _L5, _L13, _L14, _L15 = rhuan(_L22, _L23, _L25, _L26); -->
+				<!-- _L5, _L13, _L14, _L15, _L27, _L28, _L29 = rhuan(_L22, _L23, _L25, _L26, _null); -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L5"/>
 						<VariableRef name="_L13"/>
 						<VariableRef name="_L14"/>
 						<VariableRef name="_L15"/>
+						<VariableRef name="_L27"/>
+						<VariableRef name="_L28"/>
+						<VariableRef name="_L29"/>
 					</lefts>
 					<right>
-						<!-- rhuan(_L22, _L23, _L25, _L26) -->
+						<!-- rhuan(_L22, _L23, _L25, _L26, _null) -->
 						<CallExpression>
 							<operator>
 								<OpCall name="1">
@@ -186,6 +225,11 @@
 								<IdExpression>
 									<path>
 										<ConstVarRef name="_L26"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
 									</path>
 								</IdExpression>
 							</callParameters>
