@@ -45,6 +45,7 @@ void clear_ua_inputs() {
     ua_receive_clear(&ua_inputs, NULL);
 
     ua_inputs.AutoDestruct = FALSE;
+    ua_inputs.EnableRocketLaunch = FALSE;
 }
 
 void clear_ua_outputs() {
