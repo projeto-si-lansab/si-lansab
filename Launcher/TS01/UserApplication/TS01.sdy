@@ -5,30 +5,6 @@
 			<mappingItems>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="267" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PB_Test_Self_Destruct">
-							<A661Data>
-								<Notify/>
-							</A661Data>
-						</A661_NOTIFY_WIDGET_EVENT>
-					</output>
-					<inputs>
-						<Variable name="AutoDestruct" type="bool" oid="!ed/34d/5F94/7B4/54333c7f29f6" instancepath="Main/"/>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="274" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="TG_Manual_Override">
-							<A661Data>
-								<DataField value="EvtToggleState"/>
-							</A661Data>
-						</A661_NOTIFY_WIDGET_EVENT>
-					</output>
-					<inputs>
-						<Variable name="Manual_Override" type="int" oid="!ed/1573/6831/AD0/54388fab6943" instancepath="Main/"/>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
 						<Variable name="StringSize" type="int" oid="!ed/6b/76C2/2290/540d0df41946" instancepath="Main/"/>
 					</output>
 					<inputs>
