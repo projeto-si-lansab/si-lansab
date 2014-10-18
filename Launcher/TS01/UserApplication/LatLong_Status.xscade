@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Operator kind="node" name="LatLong_Status">
+			<outputs>
+				<Variable name="Latitude">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/79c/6831/AD0/5438505a56d9"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Longitude">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/7b6/6831/AD0/543850627dca"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L6">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/9bb/6831/AD0/54385a445655"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L7">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/9c1/6831/AD0/54385a466368"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- Latitude = _L6; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Latitude"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L6"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/79d/6831/AD0/5438505a25b6"/>
+					</pragmas>
+				</Equation>
+				<!-- Longitude = _L7; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Longitude"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L7"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/7b7/6831/AD0/54385062650a"/>
+					</pragmas>
+				</Equation>
+				<!-- _L6 = STARTING_LATITUDE; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L6"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="STARTING_LATITUDE"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/9ba/6831/AD0/54385a445cbd"/>
+					</pragmas>
+				</Equation>
+				<!-- _L7 = STARTING_LONGITUDE; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L7"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="STARTING_LONGITUDE"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/9c0/6831/AD0/54385a46bd0"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/73c/6831/AD0/54385012d95" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
+					<diagrams>
+						<NetDiagram name="diagram_LatLong_Status_1" landscape="true" format="A4 (210 297)" oid="!ed/73d/6831/AD0/543850122277">
+							<presentationElements>
+								<EquationGE presentable="!ed/79d/6831/AD0/5438505a25b6">
+									<position>
+										<Point x="12435" y="3519"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/7b7/6831/AD0/54385062650a">
+									<position>
+										<Point x="12383" y="4366"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/9ba/6831/AD0/54385a445cbd">
+									<position>
+										<Point x="7673" y="3625"/>
+									</position>
+									<size>
+										<Size width="212" height="318"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/9c0/6831/AD0/54385a46bd0">
+									<position>
+										<Point x="7673" y="4471"/>
+									</position>
+									<size>
+										<Size width="211" height="318"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/9ba/6831/AD0/54385a445cbd" dstEquation="!ed/79d/6831/AD0/5438505a25b6">
+									<positions>
+										<Point x="7885" y="3784"/>
+										<Point x="10213" y="3784"/>
+										<Point x="10213" y="3784"/>
+										<Point x="12488" y="3784"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/9c0/6831/AD0/54385a46bd0" dstEquation="!ed/7b7/6831/AD0/54385062650a">
+									<positions>
+										<Point x="7885" y="4630"/>
+										<Point x="10081" y="4630"/>
+										<Point x="10081" y="4630"/>
+										<Point x="12435" y="4630"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>
