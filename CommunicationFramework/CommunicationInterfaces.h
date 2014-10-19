@@ -11,6 +11,8 @@
 #define TS05ID 5
 
 typedef struct {
+	kcg_bool AutoDestruct;
+    kcg_bool EnableRocketLaunch;
 } TS01_INPUT_INTERFACE;
 
 typedef struct {
