@@ -77,6 +77,54 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="74" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh1Button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="desacoplar_ph1" type="bool" oid="!ed/22d7/3E0/4C4/5443a8f32c88" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="75" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh2Button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="desacoplar_ph2" type="bool" oid="!ed/23e9/3E0/4C4/5443ad194020" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="76" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh3Button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="desacoplar_ph3" type="bool" oid="!ed/23ef/3E0/4C4/5443ad1a5fd8" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="77" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh4Button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="desacoplar_ph4" type="bool" oid="!ed/23f5/3E0/4C4/5443ad1baa6" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
 						<Variable name="Emit2CDS" type="bool" oid="!ed/20ee/CF3/1AD4/54190cc63364" instancepath="ts04/"/>
 					</output>
 					<inputs>
@@ -176,6 +224,26 @@
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="63" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeGeral">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="66" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh1Rectangle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh2Rectangle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh3Rectangle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="70" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh4Rectangle">
 							<A661Data>
 								<Emit/>
 							</A661Data>
@@ -394,6 +462,54 @@
 						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="63" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeGeral">
 							<A661Data>
 								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="cor_ph1" type="int" oid="!ed/244e/3E0/4C4/5443aed8c2f" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="66" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh1Rectangle">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="cor_ph2" type="int" oid="!ed/245c/3E0/4C4/5443aee7903" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh2Rectangle">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="cor_ph3" type="int" oid="!ed/2462/3E0/4C4/5443aee9c58" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh3Rectangle">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="cor_ph4" type="int" oid="!ed/2468/3E0/4C4/5443aeeb68b2" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="70" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh4Rectangle">
+							<A661Data>
+								<DataField value="FillIndex"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
