@@ -1,5 +1,7 @@
 @echo off
 
+set PATH=C:\cygwin\bin;%PATH%
+
 call Configuration.bat
 
 set INCLUDE=C:/cygwin/usr/include
