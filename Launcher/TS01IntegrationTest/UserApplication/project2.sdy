@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="project2" oid="!ed/20de/2DD0/12BC/542d5d1079db">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="1" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="DestroyPushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalAutoDestruct" type="bool" oid="!ed/214f/672A/DB4/5441c9884e29" instancepath="project2/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="5" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="LaunchPushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalLaunch" type="bool" oid="!ed/2162/672A/DB4/5441caa47e5a" instancepath="project2/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="6" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ManualToggleButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalManual" type="bool" oid="!ed/2150/3E6E/394/5442d2f260b2" instancepath="project2/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="7" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="StartPhase2PushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalStartPhase2" type="bool" oid="!ed/215a/3E6E/394/5442d3865bd3" instancepath="project2/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="8" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="StartPhase3PushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalStartPhase3" type="bool" oid="!ed/215b/3E6E/394/5442d3915345" instancepath="project2/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="9" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="StartFinalPushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalStartFinal" type="bool" oid="!ed/215c/3E6E/394/5442d39958e0" instancepath="project2/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="10" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="SatLaunchPushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="SignalSatLaunch" type="bool" oid="!ed/215d/3E6E/394/5442d3a04ee7" instancepath="project2/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="ReqLayerActive" type="bool" oid="!ed/214e/7798/1194/542d65312b4" instancepath="project2/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_ACTIVE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="ReqLayerVisible" type="bool" oid="!ed/214d/7798/1194/542d65317baf" instancepath="project2/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\df.sgfx" layer="a661_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>

@@ -20,8 +20,6 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
         switch (message.from) {
         case TS01ID:
             printf("Received: Message from TS01 to TS01 \n");
-            ua_inputs.AutoDestruct = input.AutoDestruct;
-            ua_inputs.EnableRocketLaunch = input.EnableRocketLaunch;
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS01 \n");
@@ -45,7 +43,8 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
     case TS01ID:
         printf("Sent: Message from TS01 to TS01 \n");
         TS01_INPUT_INTERFACE *output1 = &(message->input_interface.ts01_input_interface);
-        /*output->SignalFromTeam1 = ua_outputs.SignalToTeam1;*/
+        output1->AutoDestruct = ua_outputs.AutoDestruct;
+        output1->EnableRocketLaunch = ua_outputs.EnableRocketLaunch;
         break;
     case TS02ID:
         printf("Sent: Message from TS01 to TS02 \n");
@@ -71,19 +70,19 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
 }
 
 void executeOperator() {
-    Main(&ua_inputs, &ua_outputs);
+    project2(&ua_inputs, &ua_outputs);
 }
 
 void clear_ua_inputs() {
     ua_receive_clear(&ua_inputs, NULL);
 
     /* clear external inputs, may need additional logic */
-    ua_inputs.AutoDestruct = FALSE;
-    ua_inputs.EnableRocketLaunch = FALSE;
+    ua_inputs.SignalAutoDestruct = FALSE;
+    ua_inputs.SignalLaunch = FALSE;
 }
 
 void clear_ua_outputs() {
-    Main_reset(&ua_outputs);
+    project2_reset(&ua_outputs);
 }
 
 void initializeCustomLogic() {
