@@ -2,6 +2,7 @@
 
 call Configuration.bat
 
+set PATH=C:\cygwin\bin;%PATH%
 set INCLUDE=C:/cygwin/usr/include
 set LIB=C:/cygwin/lib
 
