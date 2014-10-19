@@ -458,7 +458,57 @@ Project for academic purpose only.</summary>
                         <intprop name="PosX">0</intprop>
                         <intprop name="PosY">0</intprop>
                     </model>
-                    <children/>
+                    <children>
+                        <widget name="EnviarFoto" oid="7c3b27fc-3174-4359-b0f3-e1bb5e18b8d8" type="BasicContainer">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">5100</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">-1420</intprop>
+                                <intprop name="PosY">600</intprop>
+                            </model>
+                            <children>
+                                <widget name="EnviaFoto" oid="14d6b6df-a665-4e74-b2c5-9a40420048af" type="PushButton">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">5101</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">17000</intprop>
+                                        <intprop name="PosY">8000</intprop>
+                                        <intprop name="SizeX">3000</intprop>
+                                        <intprop name="SizeY">800</intprop>
+                                        <intprop name="StyleSet">110</intprop>
+                                        <intprop name="NextFocusedWidget">0</intprop>
+                                        <intprop name="MaxStringLength">32</intprop>
+                                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                                        <stringprop name="LabelString">Enviar Foto</stringprop>
+                                    </model>
+                                </widget>
+                                <widget name="StatusEnvioFoto" oid="94fd6511-3d46-4684-9790-994820bf825a" type="GpArcEllipse">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">5104</intprop>
+                                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">18110</intprop>
+                                        <intprop name="PosY">6920</intprop>
+                                        <intprop name="SizeX">800</intprop>
+                                        <intprop name="SizeY">800</intprop>
+                                        <intprop name="StartAngle">0</intprop>
+                                        <intprop name="EndAngle">0</intprop>
+                                        <intprop name="StyleSet">1</intprop>
+                                        <intprop name="ColorIndex">0</intprop>
+                                        <enumprop name="Filled">A661_TRUE</enumprop>
+                                        <intprop name="FillIndex">9</intprop>
+                                        <enumprop name="Halo">A661_FALSE</enumprop>
+                                    </model>
+                                </widget>
+                            </children>
+                        </widget>
+                    </children>
                 </widget>
                 <widget name="BasicContainer_guarino" oid="fbcdeb10-ab64-41f0-be87-ff9c36a343b4" type="BasicContainer">
                     <IDE/>
@@ -937,5 +987,5 @@ Project for academic purpose only.</summary>
     </children>
 </specification>
 
-<!-- crc32 : 3790627162 -->
+<!-- crc32 : 2096867927 -->
 

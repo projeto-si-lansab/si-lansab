@@ -38,8 +38,8 @@ Project for academic purpose only.</summary>
                         <intprop name="WidgetIdent">1</intprop>
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">0</intprop>
-                        <intprop name="PosY">0</intprop>
+                        <intprop name="PosX">-15040</intprop>
+                        <intprop name="PosY">-9460</intprop>
                     </model>
                     <children>
                         <widget name="DebugSelector" oid="46b5ed85-dc97-459c-829a-3e92377314e8" type="ComboBox">
@@ -906,6 +906,193 @@ Project for academic purpose only.</summary>
                         <intprop name="PosY">-2420</intprop>
                     </model>
                     <children>
+                        <widget name="CapturaFoto" oid="ea8417a0-64a8-4631-b2a2-1265d3fe4b2f" type="BasicContainer">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">5100</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">0</intprop>
+                                <intprop name="PosY">0</intprop>
+                            </model>
+                            <children>
+                                <widget name="CapturaFotoButton" oid="704a6e34-8a1c-4fdd-99e0-54fe557f6bd1" type="BasicContainer">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">5110</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">0</intprop>
+                                        <intprop name="PosY">0</intprop>
+                                    </model>
+                                    <children>
+                                        <widget name="ContourForeGroundCF" oid="17d7e0db-a8c5-4235-ad92-50c4c54db253" type="GpRectangle">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">5113</intprop>
+                                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">30420</intprop>
+                                                <intprop name="PosY">9720</intprop>
+                                                <intprop name="SizeX">3580</intprop>
+                                                <intprop name="SizeY">780</intprop>
+                                                <intprop name="StyleSet">1</intprop>
+                                                <intprop name="ColorIndex">54</intprop>
+                                                <enumprop name="Filled">A661_FALSE</enumprop>
+                                                <intprop name="FillIndex">0</intprop>
+                                                <enumprop name="Halo">A661_FALSE</enumprop>
+                                            </model>
+                                        </widget>
+                                        <widget name="PushButtonCapturaFoto" oid="a6f5d1a8-602d-42d6-8f40-a5db0a195558" type="PushButton">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">5111</intprop>
+                                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">30380</intprop>
+                                                <intprop name="PosY">9700</intprop>
+                                                <intprop name="SizeX">3580</intprop>
+                                                <intprop name="SizeY">800</intprop>
+                                                <intprop name="StyleSet">110</intprop>
+                                                <intprop name="NextFocusedWidget">0</intprop>
+                                                <intprop name="MaxStringLength">32</intprop>
+                                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                                <stringprop name="LabelString">Captura Foto</stringprop>
+                                            </model>
+                                        </widget>
+                                        <widget name="ContourBackGroundCF" oid="b623001b-dfde-4745-b978-620b2b9c386c" type="GpRectangle">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">5112</intprop>
+                                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">30440</intprop>
+                                                <intprop name="PosY">9740</intprop>
+                                                <intprop name="SizeX">3600</intprop>
+                                                <intprop name="SizeY">780</intprop>
+                                                <intprop name="StyleSet">1</intprop>
+                                                <intprop name="ColorIndex">0</intprop>
+                                                <enumprop name="Filled">A661_FALSE</enumprop>
+                                                <intprop name="FillIndex">0</intprop>
+                                                <enumprop name="Halo">A661_FALSE</enumprop>
+                                            </model>
+                                        </widget>
+                                    </children>
+                                </widget>
+                                <widget name="Picture" oid="eaa1a858-b00e-4349-a090-75efe4844a6d" type="Panel">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">5140</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">29720</intprop>
+                                        <intprop name="PosY">2680</intprop>
+                                        <intprop name="SizeX">5380</intprop>
+                                        <intprop name="SizeY">3700</intprop>
+                                        <intprop name="StyleSet">200</intprop>
+                                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                    </model>
+                                    <children/>
+                                </widget>
+                                <widget name="Latitude" oid="526c261f-2a02-4682-a1b2-d0c3a8638656" type="EditBoxNumeric">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">5114</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">29840</intprop>
+                                        <intprop name="PosY">8640</intprop>
+                                        <intprop name="SizeX">4500</intprop>
+                                        <intprop name="SizeY">800</intprop>
+                                        <intprop name="StyleSet">110</intprop>
+                                        <intprop name="NextFocusedWidget">0</intprop>
+                                        <floatprop name="Value">0.0</floatprop>
+                                        <floatprop name="TicsCoarse">10.0</floatprop>
+                                        <floatprop name="TicsFine">0.1</floatprop>
+                                        <floatprop name="MinValue">0.0</floatprop>
+                                        <floatprop name="MaxValue">100.0</floatprop>
+                                        <intprop name="LegendAreaSizeX">2300</intprop>
+                                        <intprop name="StartCursorPosByte">32</intprop>
+                                        <intprop name="MaxFormatStringLength">16</intprop>
+                                        <intprop name="MaxLegendStringLength">16</intprop>
+                                        <enumprop name="LegendPosition">A661_LEFT</enumprop>
+                                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                        <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
+                                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                                        <enumprop name="LegendRemoved">A661_FALSE</enumprop>
+                                        <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
+                                        <enumprop name="CyclicFlag">A661_TRUE</enumprop>
+                                        <stringprop name="FormatString">+##.## graus</stringprop>
+                                        <stringprop name="LegendString">Latidude</stringprop>
+                                    </model>
+                                </widget>
+                                <widget name="Longitude" oid="9705948b-f97a-4f91-bc6c-6db360e688fb" type="EditBoxNumeric">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">5115</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">29820</intprop>
+                                        <intprop name="PosY">7680</intprop>
+                                        <intprop name="SizeX">4480</intprop>
+                                        <intprop name="SizeY">820</intprop>
+                                        <intprop name="StyleSet">110</intprop>
+                                        <intprop name="NextFocusedWidget">0</intprop>
+                                        <floatprop name="Value">0.0</floatprop>
+                                        <floatprop name="TicsCoarse">10.0</floatprop>
+                                        <floatprop name="TicsFine">0.1</floatprop>
+                                        <floatprop name="MinValue">0.0</floatprop>
+                                        <floatprop name="MaxValue">100.0</floatprop>
+                                        <intprop name="LegendAreaSizeX">2300</intprop>
+                                        <intprop name="StartCursorPosByte">32</intprop>
+                                        <intprop name="MaxFormatStringLength">16</intprop>
+                                        <intprop name="MaxLegendStringLength">16</intprop>
+                                        <enumprop name="LegendPosition">A661_LEFT</enumprop>
+                                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                        <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
+                                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                                        <enumprop name="LegendRemoved">A661_FALSE</enumprop>
+                                        <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
+                                        <enumprop name="CyclicFlag">A661_TRUE</enumprop>
+                                        <stringprop name="FormatString">+##.## graus</stringprop>
+                                        <stringprop name="LegendString">Longitude</stringprop>
+                                    </model>
+                                </widget>
+                                <widget name="Tempo" oid="5c355a95-f60e-4dea-ba31-88033da6db68" type="EditBoxNumeric">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">5116</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">29820</intprop>
+                                        <intprop name="PosY">6700</intprop>
+                                        <intprop name="SizeX">4480</intprop>
+                                        <intprop name="SizeY">820</intprop>
+                                        <intprop name="StyleSet">110</intprop>
+                                        <intprop name="NextFocusedWidget">0</intprop>
+                                        <floatprop name="Value">0.0</floatprop>
+                                        <floatprop name="TicsCoarse">10.0</floatprop>
+                                        <floatprop name="TicsFine">0.1</floatprop>
+                                        <floatprop name="MinValue">0.0</floatprop>
+                                        <floatprop name="MaxValue">100.0</floatprop>
+                                        <intprop name="LegendAreaSizeX">1900</intprop>
+                                        <intprop name="StartCursorPosByte">32</intprop>
+                                        <intprop name="MaxFormatStringLength">16</intprop>
+                                        <intprop name="MaxLegendStringLength">16</intprop>
+                                        <enumprop name="LegendPosition">A661_LEFT</enumprop>
+                                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                        <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
+                                        <enumprop name="Alignment">A661_LEFT</enumprop>
+                                        <enumprop name="LegendRemoved">A661_FALSE</enumprop>
+                                        <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
+                                        <enumprop name="CyclicFlag">A661_TRUE</enumprop>
+                                        <stringprop name="FormatString">+### min</stringprop>
+                                        <stringprop name="LegendString">Tempo</stringprop>
+                                    </model>
+                                </widget>
+                            </children>
+                        </widget>
                         <widget name="Foto" oid="a97c8e0f-8850-4535-8210-084ef054e2eb" type="Label">
                             <IDE/>
                             <model>
@@ -924,169 +1111,6 @@ Project for academic purpose only.</summary>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
                                 <stringprop name="LabelString">FOTO</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="PushButtonCapturaFoto" oid="a6f5d1a8-602d-42d6-8f40-a5db0a195558" type="PushButton">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">5111</intprop>
-                                <enumprop name="Enable">A661_TRUE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">30380</intprop>
-                                <intprop name="PosY">9700</intprop>
-                                <intprop name="SizeX">3580</intprop>
-                                <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
-                                <intprop name="NextFocusedWidget">0</intprop>
-                                <intprop name="MaxStringLength">32</intprop>
-                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
-                                <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Captura Foto</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="ContourForeGroundCF" oid="17d7e0db-a8c5-4235-ad92-50c4c54db253" type="GpRectangle">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">5113</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">30420</intprop>
-                                <intprop name="PosY">9720</intprop>
-                                <intprop name="SizeX">3580</intprop>
-                                <intprop name="SizeY">780</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="ColorIndex">54</intprop>
-                                <enumprop name="Filled">A661_FALSE</enumprop>
-                                <intprop name="FillIndex">0</intprop>
-                                <enumprop name="Halo">A661_FALSE</enumprop>
-                            </model>
-                        </widget>
-                        <widget name="ContourBackGroundCF" oid="b623001b-dfde-4745-b978-620b2b9c386c" type="GpRectangle">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">5112</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">30440</intprop>
-                                <intprop name="PosY">9740</intprop>
-                                <intprop name="SizeX">3600</intprop>
-                                <intprop name="SizeY">780</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="ColorIndex">0</intprop>
-                                <enumprop name="Filled">A661_FALSE</enumprop>
-                                <intprop name="FillIndex">0</intprop>
-                                <enumprop name="Halo">A661_FALSE</enumprop>
-                            </model>
-                        </widget>
-                        <widget name="Picture" oid="eaa1a858-b00e-4349-a090-75efe4844a6d" type="Panel">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">5140</intprop>
-                                <enumprop name="Enable">A661_TRUE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">29720</intprop>
-                                <intprop name="PosY">2680</intprop>
-                                <intprop name="SizeX">5380</intprop>
-                                <intprop name="SizeY">3700</intprop>
-                                <intprop name="StyleSet">200</intprop>
-                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
-                            </model>
-                            <children/>
-                        </widget>
-                        <widget name="Latitude" oid="526c261f-2a02-4682-a1b2-d0c3a8638656" type="EditBoxNumeric">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">5114</intprop>
-                                <enumprop name="Enable">A661_TRUE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">29840</intprop>
-                                <intprop name="PosY">8640</intprop>
-                                <intprop name="SizeX">4500</intprop>
-                                <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
-                                <intprop name="NextFocusedWidget">0</intprop>
-                                <floatprop name="Value">0.0</floatprop>
-                                <floatprop name="TicsCoarse">10.0</floatprop>
-                                <floatprop name="TicsFine">0.1</floatprop>
-                                <floatprop name="MinValue">0.0</floatprop>
-                                <floatprop name="MaxValue">100.0</floatprop>
-                                <intprop name="LegendAreaSizeX">2300</intprop>
-                                <intprop name="StartCursorPosByte">32</intprop>
-                                <intprop name="MaxFormatStringLength">16</intprop>
-                                <intprop name="MaxLegendStringLength">16</intprop>
-                                <enumprop name="LegendPosition">A661_LEFT</enumprop>
-                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
-                                <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
-                                <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <enumprop name="LegendRemoved">A661_FALSE</enumprop>
-                                <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
-                                <enumprop name="CyclicFlag">A661_TRUE</enumprop>
-                                <stringprop name="FormatString">+##.## graus</stringprop>
-                                <stringprop name="LegendString">Latidude</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="Longitude" oid="9705948b-f97a-4f91-bc6c-6db360e688fb" type="EditBoxNumeric">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">5115</intprop>
-                                <enumprop name="Enable">A661_TRUE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">29820</intprop>
-                                <intprop name="PosY">7680</intprop>
-                                <intprop name="SizeX">4480</intprop>
-                                <intprop name="SizeY">820</intprop>
-                                <intprop name="StyleSet">110</intprop>
-                                <intprop name="NextFocusedWidget">0</intprop>
-                                <floatprop name="Value">0.0</floatprop>
-                                <floatprop name="TicsCoarse">10.0</floatprop>
-                                <floatprop name="TicsFine">0.1</floatprop>
-                                <floatprop name="MinValue">0.0</floatprop>
-                                <floatprop name="MaxValue">100.0</floatprop>
-                                <intprop name="LegendAreaSizeX">2300</intprop>
-                                <intprop name="StartCursorPosByte">32</intprop>
-                                <intprop name="MaxFormatStringLength">16</intprop>
-                                <intprop name="MaxLegendStringLength">16</intprop>
-                                <enumprop name="LegendPosition">A661_LEFT</enumprop>
-                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
-                                <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
-                                <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <enumprop name="LegendRemoved">A661_FALSE</enumprop>
-                                <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
-                                <enumprop name="CyclicFlag">A661_TRUE</enumprop>
-                                <stringprop name="FormatString">+##.## graus</stringprop>
-                                <stringprop name="LegendString">Longitude</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="Tempo" oid="5c355a95-f60e-4dea-ba31-88033da6db68" type="EditBoxNumeric">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">5116</intprop>
-                                <enumprop name="Enable">A661_TRUE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">29820</intprop>
-                                <intprop name="PosY">6700</intprop>
-                                <intprop name="SizeX">4480</intprop>
-                                <intprop name="SizeY">820</intprop>
-                                <intprop name="StyleSet">110</intprop>
-                                <intprop name="NextFocusedWidget">0</intprop>
-                                <floatprop name="Value">0.0</floatprop>
-                                <floatprop name="TicsCoarse">10.0</floatprop>
-                                <floatprop name="TicsFine">0.1</floatprop>
-                                <floatprop name="MinValue">0.0</floatprop>
-                                <floatprop name="MaxValue">100.0</floatprop>
-                                <intprop name="LegendAreaSizeX">1900</intprop>
-                                <intprop name="StartCursorPosByte">32</intprop>
-                                <intprop name="MaxFormatStringLength">16</intprop>
-                                <intprop name="MaxLegendStringLength">16</intprop>
-                                <enumprop name="LegendPosition">A661_LEFT</enumprop>
-                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
-                                <enumprop name="ReportAllChanges">A661_EDB_CHANGE_CONFIRMED</enumprop>
-                                <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <enumprop name="LegendRemoved">A661_FALSE</enumprop>
-                                <enumprop name="NumericKeyFlag">A661_TRUE</enumprop>
-                                <enumprop name="CyclicFlag">A661_TRUE</enumprop>
-                                <stringprop name="FormatString">+### min</stringprop>
-                                <stringprop name="LegendString">Tempo</stringprop>
                             </model>
                         </widget>
                     </children>
@@ -2385,5 +2409,5 @@ Project for academic purpose only.</summary>
     </children>
 </specification>
 
-<!-- crc32 : 2166555608 -->
+<!-- crc32 : 4166649648 -->
 
