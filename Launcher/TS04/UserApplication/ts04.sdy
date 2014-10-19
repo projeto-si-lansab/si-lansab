@@ -65,6 +65,18 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="78" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="abrirCapsulaButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="enviarComando" type="bool" oid="!ed/2327/133F/1A3C/5443326d7ea9" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
 						<Variable name="Emit2CDS" type="bool" oid="!ed/20ee/CF3/1AD4/54190cc63364" instancepath="ts04/"/>
 					</output>
 					<inputs>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Operator kind="node" name="ComandSatelite">
+			<inputs>
+				<Variable name="enviarComando">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/22a0/133F/1A3C/544329fb4ab1"/>
+					</pragmas>
+				</Variable>
+				<Variable name="confirmacao">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/22f8/133F/1A3C/544330643dfb"/>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="sinal">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/231b/133F/1A3C/5443319b6710"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/22a2/133F/1A3C/54432a0f4f7f"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/22f3/133F/1A3C/544330587333"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L5">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/22fa/133F/1A3C/5443306b3b5a"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L6">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2310/133F/1A3C/54433136352"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L1 = enviarComando; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L1"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="enviarComando"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/22a1/133F/1A3C/54432a0f6ccb"/>
+					</pragmas>
+				</Equation>
+				<!-- _L4 = switch(_L6); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L4"/>
+					</lefts>
+					<right>
+						<!-- switch(_L6) -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="switch"/>
+									</operator>
+								</OpCall>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L6"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/22f2/133F/1A3C/5443305853d3"/>
+					</pragmas>
+				</Equation>
+				<!-- _L5 = confirmacao; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L5"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="confirmacao"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/22f9/133F/1A3C/5443306b4b0d"/>
+					</pragmas>
+				</Equation>
+				<!-- _L6 = _L1 or _L5; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L6"/>
+					</lefts>
+					<right>
+						<!-- _L1 or _L5 -->
+						<NAryOp name="1" operator="or">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L5"/>
+									</path>
+								</IdExpression>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/230f/133F/1A3C/544331367cb3"/>
+					</pragmas>
+				</Equation>
+				<!-- sinal = _L4; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="sinal"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L4"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/231c/133F/1A3C/544331a64b16"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/229e/133F/1A3C/5443242d66c5" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
+					<diagrams>
+						<NetDiagram name="diagram_ComandSatelite_1" landscape="true" format="A4 (210 297)" oid="!ed/229f/133F/1A3C/5443242d6137">
+							<presentationElements>
+								<EquationGE presentable="!ed/22a1/133F/1A3C/54432a0f6ccb">
+									<position>
+										<Point x="2408" y="3625"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/22f2/133F/1A3C/5443305853d3">
+									<position>
+										<Point x="5583" y="3387"/>
+									</position>
+									<size>
+										<Size width="1772" height="1402"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/22f9/133F/1A3C/5443306b4b0d">
+									<position>
+										<Point x="2831" y="5080"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/230f/133F/1A3C/544331367cb3">
+									<position>
+										<Point x="3598" y="3757"/>
+									</position>
+									<size>
+										<Size width="1006" height="661"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/230f/133F/1A3C/544331367cb3" dstEquation="!ed/22f2/133F/1A3C/5443305853d3">
+									<positions>
+										<Point x="4604" y="4101"/>
+										<Point x="5080" y="4101"/>
+										<Point x="5080" y="4101"/>
+										<Point x="5583" y="4101"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/22a1/133F/1A3C/54432a0f6ccb" dstEquation="!ed/230f/133F/1A3C/544331367cb3">
+									<positions>
+										<Point x="2672" y="3889"/>
+										<Point x="3122" y="3889"/>
+										<Point x="3122" y="3969"/>
+										<Point x="3598" y="3969"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/22f9/133F/1A3C/5443306b4b0d" dstEquation="!ed/230f/133F/1A3C/544331367cb3">
+									<positions>
+										<Point x="3096" y="5345"/>
+										<Point x="3096" y="5345"/>
+										<Point x="3096" y="4180"/>
+										<Point x="3069" y="4180"/>
+										<Point x="3069" y="4207"/>
+										<Point x="3598" y="4207"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/231c/133F/1A3C/544331a64b16">
+									<position>
+										<Point x="8784" y="3863"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/22f2/133F/1A3C/5443305853d3" dstEquation="!ed/231c/133F/1A3C/544331a64b16">
+									<positions>
+										<Point x="7355" y="4101"/>
+										<Point x="8096" y="4101"/>
+										<Point x="8096" y="4128"/>
+										<Point x="8837" y="4128"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>
