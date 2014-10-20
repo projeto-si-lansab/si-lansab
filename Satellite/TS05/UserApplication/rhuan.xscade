@@ -3,7 +3,7 @@
 	<declarations>
 		<Operator kind="node" name="rhuan">
 			<inputs>
-				<Variable name="picture_loaded_cam">
+				<Variable name="cam_picture_loaded">
 					<type>
 						<NamedType>
 							<type>
@@ -15,7 +15,7 @@
 						<ed:Variable oid="!ed/4dad/2B06/650/544430f471f5"/>
 					</pragmas>
 				</Variable>
-				<Variable name="load_picture_btn">
+				<Variable name="display_load_picture_btn">
 					<type>
 						<NamedType>
 							<type>
@@ -29,7 +29,7 @@
 				</Variable>
 			</inputs>
 			<outputs>
-				<Variable name="load_picture_btn_border_display">
+				<Variable name="display_load_picture_btn_border">
 					<type>
 						<NamedType>
 							<type>
@@ -41,7 +41,7 @@
 						<ed:Variable oid="!ed/4b3b/69F2/B7C/543c5a64110"/>
 					</pragmas>
 				</Variable>
-				<Variable name="load_picture_text_color_display">
+				<Variable name="display_load_picture_text_color">
 					<type>
 						<NamedType>
 							<type>
@@ -53,7 +53,7 @@
 						<ed:Variable oid="!ed/4b6a/69F2/B7C/543c5afe4a57"/>
 					</pragmas>
 				</Variable>
-				<Variable name="status_envio_foto_cam">
+				<Variable name="cam_status_envio_foto">
 					<type>
 						<NamedType>
 							<type>
@@ -281,10 +281,10 @@
 										<ed:Equation oid="!ed/4ae6/2B06/650/54442a3a2598"/>
 									</pragmas>
 								</Equation>
-								<!-- status_envio_foto_cam = _L1; -->
+								<!-- cam_status_envio_foto = _L1; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="status_envio_foto_cam"/>
+										<VariableRef name="cam_status_envio_foto"/>
 									</lefts>
 									<right>
 										<IdExpression>
@@ -443,7 +443,7 @@
 										<ed:Equation oid="!ed/4da0/2B06/650/54443075694c"/>
 									</pragmas>
 								</Equation>
-								<!-- _L15 = picture_loaded_cam; -->
+								<!-- _L15 = cam_picture_loaded; -->
 								<Equation>
 									<lefts>
 										<VariableRef name="_L15"/>
@@ -451,7 +451,7 @@
 									<right>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="picture_loaded_cam"/>
+												<ConstVarRef name="cam_picture_loaded"/>
 											</path>
 										</IdExpression>
 									</right>
@@ -475,10 +475,10 @@
 										<ed:Equation oid="!ed/4b25/6453/A74/54444b7aa76"/>
 									</pragmas>
 								</Equation>
-								<!-- load_picture_btn_border_display = _L17; -->
+								<!-- display_load_picture_btn_border = _L17; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="load_picture_btn_border_display"/>
+										<VariableRef name="display_load_picture_btn_border"/>
 									</lefts>
 									<right>
 										<IdExpression>
@@ -507,10 +507,10 @@
 										<ed:Equation oid="!ed/4bd1/6453/A74/54444db671ca"/>
 									</pragmas>
 								</Equation>
-								<!-- load_picture_text_color_display = _L18; -->
+								<!-- display_load_picture_text_color = _L18; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="load_picture_text_color_display"/>
+										<VariableRef name="display_load_picture_text_color"/>
 									</lefts>
 									<right>
 										<IdExpression>
@@ -759,7 +759,7 @@
 									<condition>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="load_picture_btn"/>
+												<ConstVarRef name="display_load_picture_btn"/>
 											</path>
 										</IdExpression>
 									</condition>
@@ -819,10 +819,10 @@
 								</Variable>
 							</locals>
 							<data>
-								<!-- load_picture_btn_border_display = _L1; -->
+								<!-- display_load_picture_btn_border = _L1; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="load_picture_btn_border_display"/>
+										<VariableRef name="display_load_picture_btn_border"/>
 									</lefts>
 									<right>
 										<IdExpression>
@@ -835,10 +835,10 @@
 										<ed:Equation oid="!ed/4b25/5F54/F60/543d41c17ace"/>
 									</pragmas>
 								</Equation>
-								<!-- load_picture_text_color_display = _L2; -->
+								<!-- display_load_picture_text_color = _L2; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="load_picture_text_color_display"/>
+										<VariableRef name="display_load_picture_text_color"/>
 									</lefts>
 									<right>
 										<IdExpression>
@@ -883,10 +883,10 @@
 										<ed:Equation oid="!ed/4b47/5F54/F60/543d425e100c"/>
 									</pragmas>
 								</Equation>
-								<!-- status_envio_foto_cam = _L1; -->
+								<!-- cam_status_envio_foto = _L1; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="status_envio_foto_cam"/>
+										<VariableRef name="cam_status_envio_foto"/>
 									</lefts>
 									<right>
 										<IdExpression>
@@ -1088,7 +1088,7 @@
 									<condition>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="load_picture_btn"/>
+												<ConstVarRef name="display_load_picture_btn"/>
 											</path>
 										</IdExpression>
 									</condition>
@@ -1152,10 +1152,10 @@
 										<ed:Equation oid="!ed/4b0c/5F54/F60/543d41a46bc8"/>
 									</pragmas>
 								</Equation>
-								<!-- load_picture_btn_border_display = _L1; -->
+								<!-- display_load_picture_btn_border = _L1; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="load_picture_btn_border_display"/>
+										<VariableRef name="display_load_picture_btn_border"/>
 									</lefts>
 									<right>
 										<IdExpression>
@@ -1168,10 +1168,10 @@
 										<ed:Equation oid="!ed/4b0e/5F54/F60/543d41a414fd"/>
 									</pragmas>
 								</Equation>
-								<!-- load_picture_text_color_display = _L1; -->
+								<!-- display_load_picture_text_color = _L1; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="load_picture_text_color_display"/>
+										<VariableRef name="display_load_picture_text_color"/>
 									</lefts>
 									<right>
 										<IdExpression>
@@ -1184,10 +1184,10 @@
 										<ed:Equation oid="!ed/4b0f/5F54/F60/543d41a46006"/>
 									</pragmas>
 								</Equation>
-								<!-- status_envio_foto_cam = _L1; -->
+								<!-- cam_status_envio_foto = _L1; -->
 								<Equation>
 									<lefts>
-										<VariableRef name="status_envio_foto_cam"/>
+										<VariableRef name="cam_status_envio_foto"/>
 									</lefts>
 									<right>
 										<IdExpression>
