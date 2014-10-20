@@ -59,7 +59,7 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             printf("Received: Message from TS03 to TS05 \n");
 			
 			/* US 12 */
-			ua_inputs.cam_picture_loaded = input.cam_picture_lodaded;
+			ua_inputs.cam_picture_loaded = input.cam_picture_loaded;
 			
             break;
         case TS04ID:
