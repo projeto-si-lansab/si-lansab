@@ -84,6 +84,7 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         output->SAT_Initialization_Signal = ua_outputs.SAT_Initialization_Signal;
         
         /* US 14 */
+        output->SAT_Fix_Response = ua_outputs.SAT_Fix_Response;
         output->SAT_CameraState_Fail = ua_outputs.SAT_CameraState_Fail;
         output->SAT_GyroscopeState_Fail = ua_outputs.SAT_GyroscopeState_Fail;
         output->SAT_HorizonSensorState_Fail = ua_outputs.SAT_HorizonSensorState_Fail;

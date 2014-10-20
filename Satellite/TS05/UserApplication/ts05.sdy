@@ -401,6 +401,18 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="8006" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="CDS_Auto_Verify" type="bool" oid="!ed/4e16/1E79/878/54447bb46a9a" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
 						<Variable name="CDS_Layer_Req_Active" type="bool" oid="!ed/2117/7EAD/D64/5404b3963a3e" instancepath="ts05/"/>
 					</output>
 					<inputs>

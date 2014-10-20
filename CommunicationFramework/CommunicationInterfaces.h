@@ -62,6 +62,7 @@ typedef struct {
     kcg_bool cam_picture_loaded;
 
     /* US 14 */
+    kcg_bool SAT_Fix_Response;
     kcg_bool SAT_CameraState_Fail;
     kcg_bool SAT_GyroscopeState_Fail;
     kcg_bool SAT_HorizonSensorState_Fail;

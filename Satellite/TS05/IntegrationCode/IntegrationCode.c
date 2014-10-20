@@ -55,6 +55,7 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             ua_inputs.SAT_Initialization_Signal = input.SAT_Initialization_Signal;
             
             /* US 14 */
+            ua_inputs.SAT_Fix_Response = input.SAT_Fix_Response;
             ua_inputs.SAT_CameraState_Fail = input.SAT_CameraState_Fail;
             ua_inputs.SAT_GyroscopeState_Fail = input.SAT_GyroscopeState_Fail;
             ua_inputs.SAT_HorizonSensorState_Fail = input.SAT_HorizonSensorState_Fail;
@@ -174,6 +175,7 @@ void clear_ua_inputs() {
 	ua_inputs.cam_picture_loaded = FALSE;
 	
     /* US 14 */
+    ua_inputs.SAT_Fix_Response = FALSE;
     ua_inputs.SAT_CameraState_Fail = FALSE;
     ua_inputs.SAT_GyroscopeState_Fail = FALSE;
     ua_inputs.SAT_HorizonSensorState_Fail = FALSE;
