@@ -58,6 +58,9 @@ typedef struct {
     kcg_bool SAT_Ejection_Signal;
     kcg_bool SAT_Initialization_Signal;
 
+    /* US 12 */
+    kcg_bool cam_picture_loaded;
+
 } TS05_INPUT_INTERFACE;
 
 typedef struct {
@@ -74,6 +77,9 @@ typedef struct {
     
     /* US 11 */
     kcg_bool SAT_Initialize;    
+
+    /* US 12 */
+    kcg_bool cam_take_picture;
 
 } TS05TEST_INPUT_INTERFACE;
 

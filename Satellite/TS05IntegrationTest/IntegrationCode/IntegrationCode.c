@@ -33,6 +33,9 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             /* US 11 */
             ua_inputs.SAT_Initialize = input.SAT_Initialize;
             
+			/* US12 */
+			ua_inputs.cam_take_picture = input.cam_take_picture;
+			
             break;
         }
     }
@@ -76,6 +79,11 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         output->SAT_Ejection_Signal = ua_outputs.SAT_Ejection_Signal;
         output->SAT_Initialization_Signal = ua_outputs.SAT_Initialization_Signal;
         
+		break;
+	case TS03ID:
+		/* US 12 */
+		output->cam_picture_loaded = ua_outputs.cam_picture_loaded;
+		
         break;
     }
 }
@@ -99,6 +107,9 @@ void clear_ua_inputs() {
     
     /* US 11 */
     ua_inputs.SAT_Initialize = FALSE;
+	
+	/* US 12 */
+	ua_inputs.cam_take_picture = FALSE;
 }
 
 void clear_ua_outputs() {

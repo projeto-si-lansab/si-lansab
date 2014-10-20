@@ -57,6 +57,10 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             break;
         case TS03ID:
             printf("Received: Message from TS03 to TS05 \n");
+			
+			/* US 12 */
+			ua_inputs.cam_picture_loaded = input.cam_picture_lodaded;
+			
             break;
         case TS04ID:
             printf("Received: Message from TS04 to TS05 \n");
@@ -113,6 +117,9 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         /* US 11 */
         output5t->SAT_Initialize = ua_outputs.SAT_Initialize;
         
+		/* US12 */
+		output5t->cam_take_picture = ua_outputs.cam_take_picture;
+		
         break;
     }
 }
@@ -153,6 +160,10 @@ void clear_ua_inputs() {
     /* US 11 */
     /*ua_inputs.SAT_Ejection_Signal = FALSE;*/
     /*ua_inputs.SAT_Initialization_Signal = FALSE;*/
+	
+	/* US 12 */
+	ua_inputs.cam_picture_loaded = FALSE;
+	
 }
 
 void clear_ua_outputs() {
