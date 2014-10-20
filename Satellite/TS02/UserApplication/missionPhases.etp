@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="118" defaultConfiguration="21">
+<Project id="1" oid_count="116" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -39,6 +39,10 @@
 			<value>C QUAL613</value>
 			<configuration>21</configuration>
 		</Prop>
+		<Prop id="25" name="@GENERATOR:OPTLEVEL">
+			<value>0</value>
+			<configuration>21</configuration>
+		</Prop>
 		<Prop id="26" name="@GENERATOR:DEBUG">
 			<value>true</value>
 			<configuration>21</configuration>
@@ -49,6 +53,10 @@
 		</Prop>
 		<Prop id="28" name="@GENERATOR:SKIP_UNUSED">
 			<value>true</value>
+			<configuration>21</configuration>
+		</Prop>
+		<Prop id="29" name="@GENERATOR:TARGET_ADAPTOR">
+			<value>Simulator</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="30" name="@GENERATOR:USER_CONFIG">
@@ -297,34 +305,6 @@
 			<value>true</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="112" name="@GENERATOR:ROOTNODE">
-			<value>OperationalScenario</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="113" name="@GENERATOR:INPUT_THRESHOLD">
-			<value>2</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="114" name="@GENERATOR:EXPAND_MODE">
-			<value>1</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="115" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
-			<value>..\DefinitionFile\SatelliteControlCommunication_DF.sgfx</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="116" name="@GENERATOR:SKIP_UNUSED">
-			<value>true</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="117" name="@GENERATOR:ENABLE_EXTENSIONS">
-			<value>false</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="118" name="@GENERATOR:TARGET_ADAPTOR">
-			<value></value>
-			<configuration>13</configuration>
-		</Prop>
 	</props>
 	<roots>
 		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries">
@@ -345,7 +325,6 @@
 				<FileRef id="95" persistAs="TestActuators.xscade"/>
 				<FileRef id="97" persistAs="TakePicture.xscade"/>
 				<FileRef id="99" persistAs="controlAlgorithm.xscade"/>
-				<FileRef id="101" persistAs="upDateSw.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="84" name="Design Verifier File">
@@ -353,7 +332,7 @@
 				<FileRef id="85" persistAs="missionPhases.l4"/>
 			</elements>
 		</Folder>
-		<FileRef id="111" persistAs="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx"/>
+		<FileRef id="116" persistAs="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx"/>
 	</roots>
 	<configurations>
 		<Configuration id="13" name="KCG"/>
