@@ -60,8 +60,8 @@ Project for academic purpose only.</summary>
                         <intprop name="WidgetIdent">1501</intprop>
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">-14500</intprop>
-                        <intprop name="PosY">-3500</intprop>
+                        <intprop name="PosX">-15000</intprop>
+                        <intprop name="PosY">-3000</intprop>
                     </model>
                     <children>
                         <widget name="OperationMode" oid="58b8409f-c811-4e65-8cbb-4448317bb588" type="ComboBox">
@@ -175,6 +175,27 @@ Project for academic purpose only.</summary>
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
+                                <widget name="ToggleButton" oid="1d3fb6c6-b2b6-45da-a8d6-96b26193aa2b" type="ToggleButton">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">1515</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">4800</intprop>
+                                        <intprop name="PosY">40</intprop>
+                                        <intprop name="SizeX">2000</intprop>
+                                        <intprop name="SizeY">800</intprop>
+                                        <intprop name="StyleSet">110</intprop>
+                                        <intprop name="NextFocusedWidget">0</intprop>
+                                        <intprop name="MaxStringLength">32</intprop>
+                                        <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                        <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                                        <stringprop name="LabelString">Normal</stringprop>
+                                        <stringprop name="AlternateLabelString">Falha</stringprop>
+                                    </model>
+                                </widget>
                             </children>
                         </widget>
                         <widget name="HorizonSensor" oid="8ce914f7-67f8-45c1-b9c4-f5b9346673c9" type="BasicContainer">
@@ -254,16 +275,37 @@ Project for academic purpose only.</summary>
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
+                                <widget name="ToggleButton" oid="84996f9b-e458-4aa9-bb59-7d4f355e4cf1" type="ToggleButton">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">1525</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">4800</intprop>
+                                        <intprop name="PosY">40</intprop>
+                                        <intprop name="SizeX">2000</intprop>
+                                        <intprop name="SizeY">800</intprop>
+                                        <intprop name="StyleSet">110</intprop>
+                                        <intprop name="NextFocusedWidget">0</intprop>
+                                        <intprop name="MaxStringLength">32</intprop>
+                                        <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                        <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                                        <stringprop name="LabelString">Normal</stringprop>
+                                        <stringprop name="AlternateLabelString">Falha</stringprop>
+                                    </model>
+                                </widget>
                             </children>
                         </widget>
                         <widget name="Propellers" oid="6e633f9e-6b3e-4dbb-8444-aa62c12395c5" type="BasicContainer">
                             <IDE/>
                             <model>
                                 <intprop name="WidgetIdent">1530</intprop>
-                                <enumprop name="Enable">A661_TRUE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <enumprop name="Enable">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_FALSE</enumprop>
                                 <intprop name="PosX">15500</intprop>
-                                <intprop name="PosY">5000</intprop>
+                                <intprop name="PosY">4000</intprop>
                             </model>
                             <children>
                                 <widget name="Label" oid="66b55e2d-e30b-41f5-a7d2-7052ef12760b" type="Label">
@@ -342,7 +384,7 @@ Project for academic purpose only.</summary>
                                 <enumprop name="Enable">A661_TRUE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
                                 <intprop name="PosX">15500</intprop>
-                                <intprop name="PosY">4000</intprop>
+                                <intprop name="PosY">5000</intprop>
                             </model>
                             <children>
                                 <widget name="Label" oid="9b1ad1ac-dc7c-4da7-a083-94c475e93ca8" type="Label">
@@ -410,6 +452,27 @@ Project for academic purpose only.</summary>
                                         <enumprop name="Filled">A661_TRUE</enumprop>
                                         <intprop name="FillIndex">9</intprop>
                                         <enumprop name="Halo">A661_FALSE</enumprop>
+                                    </model>
+                                </widget>
+                                <widget name="ToggleButton" oid="14d4c53f-853e-437d-8815-09c96b3ff107" type="ToggleButton">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">1545</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">4800</intprop>
+                                        <intprop name="PosY">40</intprop>
+                                        <intprop name="SizeX">2000</intprop>
+                                        <intprop name="SizeY">800</intprop>
+                                        <intprop name="StyleSet">110</intprop>
+                                        <intprop name="NextFocusedWidget">0</intprop>
+                                        <intprop name="MaxStringLength">32</intprop>
+                                        <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                        <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                                        <stringprop name="LabelString">Normal</stringprop>
+                                        <stringprop name="AlternateLabelString">Falha</stringprop>
                                     </model>
                                 </widget>
                             </children>
@@ -982,10 +1045,55 @@ Project for academic purpose only.</summary>
                     </model>
                     <children/>
                 </widget>
+                <widget name="EquipmentStatus_Test" oid="16b9cb01-05ff-466d-ac94-e0c35b06febf" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">8001</intprop>
+                        <enumprop name="Enable">A661_FALSE</enumprop>
+                        <enumprop name="Visible">A661_FALSE</enumprop>
+                        <intprop name="PosX">0</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children>
+                        <widget name="Camera" oid="798a2529-a376-42a7-9ac7-06ca55402169" type="BasicContainer">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">8003</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">15500</intprop>
+                                <intprop name="PosY">6000</intprop>
+                            </model>
+                            <children/>
+                        </widget>
+                        <widget name="Gyroscope" oid="c1877f89-c4f5-441d-a05f-d5de8a1cfbd2" type="BasicContainer">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">8006</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">15500</intprop>
+                                <intprop name="PosY">7000</intprop>
+                            </model>
+                            <children/>
+                        </widget>
+                        <widget name="HorizonSensor" oid="23ca44ad-568c-471b-9f51-637a35a449ec" type="BasicContainer">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">8009</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">15500</intprop>
+                                <intprop name="PosY">5000</intprop>
+                            </model>
+                            <children/>
+                        </widget>
+                    </children>
+                </widget>
             </children>
         </A661Layer>
     </children>
 </specification>
 
-<!-- crc32 : 2160498274 -->
+<!-- crc32 : 3354611566 -->
 

@@ -317,6 +317,78 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1545" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_Camera_Fail_Status_Changed" type="bool" oid="!ed/3c58/648F/E64/54448f8950a4" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1515" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Test_Gyroscope_Fail_Status_Changed" type="bool" oid="!ed/3c62/648F/E64/54448f996ad5" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1525" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Test_HorizonSensor_Fail_Status_Changed" type="bool" oid="!ed/3c6c/648F/E64/54448f9e7bf5" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1545" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButton">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_Camera_Fail_Status_Value" type="int" oid="!ed/3c97/648F/E64/5444906b39a9" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1515" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButton">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Test_Gyroscope_Fail_Status_Value" type="int" oid="!ed/3ca1/648F/E64/5444906e547" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1525" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleButton">
+							<A661Data>
+								<DataField value="EvtToggleState"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Test_HorizonSensor_Fail_Status_Value" type="int" oid="!ed/3cab/648F/E64/544490712eb6" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
 						<Variable name="CDS_Layer_Req_Active" type="bool" oid="!ed/2117/7EAD/D64/5404b3963a3e" instancepath="ts05/"/>
 					</output>
 					<inputs>

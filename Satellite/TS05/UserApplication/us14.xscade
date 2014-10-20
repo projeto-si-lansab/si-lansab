@@ -243,7 +243,7 @@
 						<ed:Variable oid="!ed/4e57/4657/39C/5444137551b8"/>
 					</pragmas>
 				</Variable>
-				<Variable name="Auto_Verify_Test">
+				<Variable name="CDS_Auto_Verify">
 					<type>
 						<NamedType>
 							<type>
@@ -531,6 +531,30 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/4ff5/4A33/2BC/54446b7974ed"/>
+					</pragmas>
+				</Variable>
+				<Variable name="SAT_Auto_Verify">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4df1/6985/B18/54448e5b2534"/>
+					</pragmas>
+				</Variable>
+				<Variable name="SAT_Fix_Equipments">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e24/1A8E/E70/544495331c46"/>
 					</pragmas>
 				</Variable>
 			</outputs>
@@ -11953,7 +11977,7 @@
 				</Equation>
 				<StateMachine name="AutoVerifyUS14">
 					<states>
-						<State initial="true" name="Ativo">
+						<State name="Ativo">
 							<unless>
 								<Transition kind="restart">
 									<target>
@@ -11962,7 +11986,7 @@
 									<condition>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="Auto_Verify_Test"/>
+												<ConstVarRef name="CDS_Auto_Verify"/>
 											</path>
 										</IdExpression>
 									</condition>
@@ -11977,7 +12001,7 @@
 									<condition>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="Auto_Verify_Test"/>
+												<ConstVarRef name="CDS_Auto_Verify"/>
 											</path>
 										</IdExpression>
 									</condition>
@@ -12153,6 +12177,30 @@
 									</type>
 									<pragmas>
 										<ed:Variable oid="!ed/52e4/4657/39C/54441ca710b2"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L41">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/4e43/1A8E/E70/54449578319e"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L40">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/4e41/1A8E/E70/544495781fef"/>
 									</pragmas>
 								</Variable>
 							</locals>
@@ -12530,6 +12578,66 @@
 										<ed:Equation oid="!ed/52e3/4657/39C/54441ca76b3e"/>
 									</pragmas>
 								</Equation>
+								<!-- SAT_Fix_Equipments = _L41; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="SAT_Fix_Equipments"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L41"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4e3f/1A8E/E70/54449578563d"/>
+									</pragmas>
+								</Equation>
+								<!-- _L40 = false; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L40"/>
+									</lefts>
+									<right>
+										<ConstValue value="false"/>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4e40/1A8E/E70/544495787ab9"/>
+									</pragmas>
+								</Equation>
+								<!-- _L41 = CDS_Auto_Verify; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L41"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="CDS_Auto_Verify"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4e42/1A8E/E70/544495783d01"/>
+									</pragmas>
+								</Equation>
+								<!-- SAT_Auto_Verify = _L40; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="SAT_Auto_Verify"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L40"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4e44/1A8E/E70/544495785a78"/>
+									</pragmas>
+								</Equation>
 							</data>
 							<pragmas>
 								<ed:State oid="!ed/4ebe/4657/39C/544415b61aea" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -12799,13 +12907,61 @@
 														<Point x="22119" y="12726"/>
 													</positions>
 												</Edge>
+												<EquationGE presentable="!ed/4e3f/1A8E/E70/54449578563d">
+													<position>
+														<Point x="14711" y="4763"/>
+													</position>
+													<size>
+														<Size width="317" height="502"/>
+													</size>
+												</EquationGE>
+												<EquationGE kind="OBJ_LIT" presentable="!ed/4e40/1A8E/E70/544495787ab9">
+													<position>
+														<Point x="10980" y="4128"/>
+													</position>
+													<size>
+														<Size width="212" height="317"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/4e42/1A8E/E70/544495783d01">
+													<position>
+														<Point x="11007" y="4868"/>
+													</position>
+													<size>
+														<Size width="264" height="503"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/4e44/1A8E/E70/544495785a78">
+													<position>
+														<Point x="14367" y="4022"/>
+													</position>
+													<size>
+														<Size width="317" height="502"/>
+													</size>
+												</EquationGE>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e40/1A8E/E70/544495787ab9" dstEquation="!ed/4e44/1A8E/E70/544495785a78">
+													<positions>
+														<Point x="11192" y="4286"/>
+														<Point x="12991" y="4286"/>
+														<Point x="12991" y="4286"/>
+														<Point x="14420" y="4286"/>
+													</positions>
+												</Edge>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e42/1A8E/E70/544495783d01" dstEquation="!ed/4e3f/1A8E/E70/54449578563d">
+													<positions>
+														<Point x="11271" y="5133"/>
+														<Point x="13018" y="5133"/>
+														<Point x="13018" y="5027"/>
+														<Point x="14764" y="5027"/>
+													</positions>
+												</Edge>
 											</presentationElements>
 										</NetDiagram>
 									</diagrams>
 								</ed:State>
 							</pragmas>
 						</State>
-						<State name="NaoAtivo">
+						<State initial="true" name="NaoAtivo">
 							<unless>
 								<Transition kind="restart">
 									<target>
@@ -12814,7 +12970,7 @@
 									<condition>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="Auto_Verify_Test"/>
+												<ConstVarRef name="CDS_Auto_Verify"/>
 											</path>
 										</IdExpression>
 									</condition>
@@ -12829,7 +12985,7 @@
 									<condition>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="Auto_Verify_Test"/>
+												<ConstVarRef name="CDS_Auto_Verify"/>
 											</path>
 										</IdExpression>
 									</condition>
@@ -12873,6 +13029,30 @@
 									</type>
 									<pragmas>
 										<ed:Variable oid="!ed/4ea2/1E79/878/54447cb82907"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L11">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/4e4e/1A8E/E70/544495885dba"/>
+									</pragmas>
+								</Variable>
+								<Variable name="_L13">
+									<type>
+										<NamedType>
+											<type>
+												<TypeRef name="bool"/>
+											</type>
+										</NamedType>
+									</type>
+									<pragmas>
+										<ed:Variable oid="!ed/4e77/1A8E/E70/5444960f3552"/>
 									</pragmas>
 								</Variable>
 							</locals>
@@ -12973,6 +13153,66 @@
 										<ed:Equation oid="!ed/4ea1/1E79/878/54447cb83c92"/>
 									</pragmas>
 								</Equation>
+								<!-- _L11 = CDS_Auto_Verify; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L11"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="CDS_Auto_Verify"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4e4d/1A8E/E70/5444958835fe"/>
+									</pragmas>
+								</Equation>
+								<!-- SAT_Auto_Verify = _L11; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="SAT_Auto_Verify"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L11"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4e4f/1A8E/E70/54449588637b"/>
+									</pragmas>
+								</Equation>
+								<!-- SAT_Fix_Equipments = _L13; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="SAT_Fix_Equipments"/>
+									</lefts>
+									<right>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L13"/>
+											</path>
+										</IdExpression>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4e6f/1A8E/E70/5444960b5be2"/>
+									</pragmas>
+								</Equation>
+								<!-- _L13 = false; -->
+								<Equation>
+									<lefts>
+										<VariableRef name="_L13"/>
+									</lefts>
+									<right>
+										<ConstValue value="false"/>
+									</right>
+									<pragmas>
+										<ed:Equation oid="!ed/4e76/1A8E/E70/5444960f62f1"/>
+									</pragmas>
+								</Equation>
 							</data>
 							<pragmas>
 								<ed:State oid="!ed/4ec8/4657/39C/544415c91b57" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -13051,6 +13291,54 @@
 														<Point x="12488" y="9922"/>
 														<Point x="12488" y="10134"/>
 														<Point x="14235" y="10134"/>
+													</positions>
+												</Edge>
+												<EquationGE presentable="!ed/4e4d/1A8E/E70/5444958835fe">
+													<position>
+														<Point x="11589" y="6429"/>
+													</position>
+													<size>
+														<Size width="264" height="503"/>
+													</size>
+												</EquationGE>
+												<EquationGE presentable="!ed/4e4f/1A8E/E70/54449588637b">
+													<position>
+														<Point x="18389" y="6429"/>
+													</position>
+													<size>
+														<Size width="317" height="503"/>
+													</size>
+												</EquationGE>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e4d/1A8E/E70/5444958835fe" dstEquation="!ed/4e4f/1A8E/E70/54449588637b">
+													<positions>
+														<Point x="11853" y="6694"/>
+														<Point x="14552" y="6694"/>
+														<Point x="14552" y="6694"/>
+														<Point x="18441" y="6694"/>
+													</positions>
+												</Edge>
+												<EquationGE presentable="!ed/4e6f/1A8E/E70/5444960b5be2">
+													<position>
+														<Point x="16536" y="7885"/>
+													</position>
+													<size>
+														<Size width="318" height="502"/>
+													</size>
+												</EquationGE>
+												<EquationGE kind="OBJ_LIT" presentable="!ed/4e76/1A8E/E70/5444960f62f1">
+													<position>
+														<Point x="10769" y="8070"/>
+													</position>
+													<size>
+														<Size width="211" height="317"/>
+													</size>
+												</EquationGE>
+												<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e76/1A8E/E70/5444960f62f1" dstEquation="!ed/4e6f/1A8E/E70/5444960b5be2">
+													<positions>
+														<Point x="10980" y="8229"/>
+														<Point x="13785" y="8229"/>
+														<Point x="13785" y="8149"/>
+														<Point x="16589" y="8149"/>
 													</positions>
 												</Edge>
 											</presentationElements>
