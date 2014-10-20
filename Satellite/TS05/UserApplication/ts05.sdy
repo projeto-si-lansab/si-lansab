@@ -633,6 +633,11 @@
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="8006" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
@@ -1158,6 +1163,18 @@
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="8009" ParameterIdent="A661_ENABLE" WidgetType="BasicContainer" WidgetName="EquipmentStatus_Test">
+							<A661Data>
+								<DataField value="Enable"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_AutoVerifyButton_Enabled" type="int" oid="!ed/4e89/3CCE/970/5444a2a56bdd" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="8006" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
 							<A661Data>
 								<DataField value="Enable"/>
 							</A661Data>

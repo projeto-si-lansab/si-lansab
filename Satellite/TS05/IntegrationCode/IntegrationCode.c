@@ -51,8 +51,13 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             ua_inputs.SAT_CameraState_Value = input.SAT_CameraState_Value;
             
             /* US 11 */
-            /*ua_inputs.SAT_Ejection_Signal = input.SAT_Ejection_Signal;*/
-            /*ua_inputs.SAT_Initialization_Signal = input.SAT_Initialization_Signal;*/
+            ua_inputs.SAT_Ejection_Signal = input.SAT_Ejection_Signal;
+            ua_inputs.SAT_Initialization_Signal = input.SAT_Initialization_Signal;
+            
+            /* US 14 */
+            ua_inputs.SAT_CameraState_Fail = input.SAT_CameraState_Fail;
+            ua_inputs.SAT_GyroscopeState_Fail = input.SAT_GyroscopeState_Fail;
+            ua_inputs.SAT_HorizonSensorState_Fail = input.SAT_HorizonSensorState_Fail;
             
             break;
         case TS03ID:
@@ -120,6 +125,10 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
 		/* US12 */
 		output5t->cam_take_picture = ua_outputs.cam_take_picture;
 		
+        /* US14 */
+        output5t->SAT_Auto_Verify = ua_outputs.SAT_Auto_Verify;
+        output5t->SAT_Fix_Equipments = ua_outputs.SAT_Fix_Equipments;
+        
         break;
     }
 }
@@ -158,12 +167,16 @@ void clear_ua_inputs() {
     ua_inputs.SAT_CameraState_Value = FALSE;
     
     /* US 11 */
-    /*ua_inputs.SAT_Ejection_Signal = FALSE;*/
-    /*ua_inputs.SAT_Initialization_Signal = FALSE;*/
+    ua_inputs.SAT_Ejection_Signal = FALSE;
+    ua_inputs.SAT_Initialization_Signal = 0;
 	
 	/* US 12 */
 	ua_inputs.cam_picture_loaded = FALSE;
 	
+    /* US 14 */
+    ua_inputs.SAT_CameraState_Fail = FALSE;
+    ua_inputs.SAT_GyroscopeState_Fail = FALSE;
+    ua_inputs.SAT_HorizonSensorState_Fail = FALSE;
 }
 
 void clear_ua_outputs() {

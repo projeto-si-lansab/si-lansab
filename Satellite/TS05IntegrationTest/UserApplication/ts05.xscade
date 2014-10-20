@@ -941,7 +941,7 @@
 						<ed:Variable oid="!ed/3c7a/74CD/C28/544464ea724b"/>
 					</pragmas>
 				</Variable>
-				<Variable name="SAT_Camera_Fail">
+				<Variable name="SAT_CameraState_Fail">
 					<type>
 						<NamedType>
 							<type>
@@ -953,7 +953,7 @@
 						<ed:Variable oid="!ed/3d65/648F/E64/5444925c605c"/>
 					</pragmas>
 				</Variable>
-				<Variable name="SAT_Gyroscope_Fail">
+				<Variable name="SAT_GyroscopeState_Fail">
 					<type>
 						<NamedType>
 							<type>
@@ -965,7 +965,7 @@
 						<ed:Variable oid="!ed/3db6/648F/E64/544492e22c01"/>
 					</pragmas>
 				</Variable>
-				<Variable name="SAT_HorizonSensor_Fail">
+				<Variable name="SAT_HorizonSensorState_Fail">
 					<type>
 						<NamedType>
 							<type>
@@ -4724,10 +4724,10 @@
 						<ed:Equation oid="!ed/3d61/648F/E64/5444924034f4"/>
 					</pragmas>
 				</Equation>
-				<!-- SAT_Camera_Fail = _L247; -->
+				<!-- SAT_CameraState_Fail = _L247; -->
 				<Equation>
 					<lefts>
-						<VariableRef name="SAT_Camera_Fail"/>
+						<VariableRef name="SAT_CameraState_Fail"/>
 					</lefts>
 					<right>
 						<IdExpression>
@@ -4913,10 +4913,10 @@
 						<ed:Equation oid="!ed/3db2/648F/E64/5444929e59a5"/>
 					</pragmas>
 				</Equation>
-				<!-- SAT_Gyroscope_Fail = _L254; -->
+				<!-- SAT_GyroscopeState_Fail = _L254; -->
 				<Equation>
 					<lefts>
-						<VariableRef name="SAT_Gyroscope_Fail"/>
+						<VariableRef name="SAT_GyroscopeState_Fail"/>
 					</lefts>
 					<right>
 						<IdExpression>
@@ -5134,10 +5134,10 @@
 						<ed:Equation oid="!ed/3e51/648F/E64/5444934f1f00"/>
 					</pragmas>
 				</Equation>
-				<!-- SAT_HorizonSensor_Fail = _L267; -->
+				<!-- SAT_HorizonSensorState_Fail = _L267; -->
 				<Equation>
 					<lefts>
-						<VariableRef name="SAT_HorizonSensor_Fail"/>
+						<VariableRef name="SAT_HorizonSensorState_Fail"/>
 					</lefts>
 					<right>
 						<IdExpression>
@@ -6812,8 +6812,8 @@
 									<positions>
 										<Point x="3889" y="4392"/>
 										<Point x="4551" y="4392"/>
-										<Point x="4551" y="4366"/>
-										<Point x="5609" y="4366"/>
+										<Point x="4551" y="4392"/>
+										<Point x="5609" y="4392"/>
 									</positions>
 								</Edge>
 								<EquationGE presentable="!ed/3d2a/1DD5/9E0/544496e05a1a">
@@ -6836,8 +6836,8 @@
 									<positions>
 										<Point x="6615" y="4498"/>
 										<Point x="7752" y="4498"/>
-										<Point x="7752" y="4445"/>
-										<Point x="8916" y="4445"/>
+										<Point x="7752" y="4419"/>
+										<Point x="8916" y="4419"/>
 									</positions>
 								</Edge>
 							</presentationElements>
@@ -7313,8 +7313,8 @@
 									<positions>
 										<Point x="7250" y="5106"/>
 										<Point x="7646" y="5106"/>
-										<Point x="7646" y="5080"/>
-										<Point x="8070" y="5080"/>
+										<Point x="7646" y="5106"/>
+										<Point x="8070" y="5106"/>
 									</positions>
 								</Edge>
 								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3c59/648F/E64/54448f893a26" dstEquation="!ed/3cb4/648F/E64/5444911248ce">
