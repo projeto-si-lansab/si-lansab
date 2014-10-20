@@ -411,6 +411,30 @@
 						<ed:Variable oid="!ed/4a08/60A1/18A0/541353cf55c7"/>
 					</pragmas>
 				</Variable>
+				<Variable name="envia_foto_btn">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c39/64F8/660/5444638969fe"/>
+					</pragmas>
+				</Variable>
+				<Variable name="cam_take_picture">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c54/74CD/C28/544464767b5e"/>
+					</pragmas>
+				</Variable>
 			</inputs>
 			<outputs>
 				<Variable name="CDS_Layer_Req_Active">
@@ -795,6 +819,30 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/4f6f/637/2AD0/5443e3f75c8a"/>
+					</pragmas>
+				</Variable>
+				<Variable name="cam_picture_loaded">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c40/64F8/660/544463a5368d"/>
+					</pragmas>
+				</Variable>
+				<Variable name="display_picture_resquest_state">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c7a/74CD/C28/544464ea724b"/>
 					</pragmas>
 				</Variable>
 			</outputs>
@@ -1663,6 +1711,66 @@
 						<ed:Variable oid="!ed/3c61/5DE1/CA0/5443f23f7d01"/>
 					</pragmas>
 				</Variable>
+				<Variable name="_L227">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c42/74CD/C28/5444645b585c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L228">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c56/74CD/C28/544464761c28"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L229">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c67/74CD/C28/544464c0560"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L230">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c6f/74CD/C28/544464d45d27"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L231">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3c75/74CD/C28/544464df50e5"/>
+					</pragmas>
+				</Variable>
 			</locals>
 			<data>
 				<!-- _L2 = false; -->
@@ -1684,7 +1792,7 @@
 					</lefts>
 					<right>
 						<!-- fby(_L2; 1; true) -->
-						<FbyOp name="3">
+						<FbyOp name="4">
 							<flows>
 								<IdExpression>
 									<path>
@@ -2171,7 +2279,7 @@
 					</lefts>
 					<right>
 						<!-- (OPMODE_GROUND_SAFE) -> (_L166) -->
-						<InitOp name="19">
+						<InitOp name="21">
 							<value>
 								<ListExpression>
 									<items>
@@ -2287,7 +2395,7 @@
 					</lefts>
 					<right>
 						<!-- (true) -> (_L182) -->
-						<InitOp name="20">
+						<InitOp name="22">
 							<value>
 								<ListExpression>
 									<items>
@@ -2319,7 +2427,7 @@
 					</lefts>
 					<right>
 						<!-- ( case _L171 of  | 1 :   _L179 | _ :   _L178) -->
-						<CaseOp name="73">
+						<CaseOp name="78">
 							<switch>
 								<IdExpression>
 									<path>
@@ -2436,7 +2544,7 @@
 					</lefts>
 					<right>
 						<!-- ( case _L174 of  | 1 :   _L186 | 2 :   _L188 | 3 :   _L167 | 4 :   _L172 | 5 :   ... -->
-						<CaseOp name="74">
+						<CaseOp name="79">
 							<switch>
 								<IdExpression>
 									<path>
@@ -2708,7 +2816,7 @@
 					</lefts>
 					<right>
 						<!-- ( case _L170 of  | 1 :   _L169 | _ :   _L173) -->
-						<CaseOp name="75">
+						<CaseOp name="80">
 							<switch>
 								<IdExpression>
 									<path>
@@ -2821,7 +2929,7 @@
 					</lefts>
 					<right>
 						<!-- ( case _L180 of  | 1 :   _L189 | _ :   _L165) -->
-						<CaseOp name="76">
+						<CaseOp name="81">
 							<switch>
 								<IdExpression>
 									<path>
@@ -2950,7 +3058,7 @@
 					</lefts>
 					<right>
 						<!-- ( case _L157 of  | 1 :   _L183 | _ :   _L184) -->
-						<CaseOp name="77">
+						<CaseOp name="82">
 							<switch>
 								<IdExpression>
 									<path>
@@ -3069,7 +3177,7 @@
 						<!-- TEST_SAT_Signal(_L197, _L192) -->
 						<CallExpression>
 							<operator>
-								<OpCall name="9">
+								<OpCall name="13">
 									<operator>
 										<OperatorRef name="TEST_SAT_Signal"/>
 									</operator>
@@ -3150,7 +3258,7 @@
 						<!-- TEST_SAT_Signal(_L193, _L199) -->
 						<CallExpression>
 							<operator>
-								<OpCall name="10">
+								<OpCall name="14">
 									<operator>
 										<OperatorRef name="TEST_SAT_Signal"/>
 									</operator>
@@ -3247,7 +3355,7 @@
 						<!-- TEST_SAT_Signal(_L201, _L194) -->
 						<CallExpression>
 							<operator>
-								<OpCall name="11">
+								<OpCall name="15">
 									<operator>
 										<OperatorRef name="TEST_SAT_Signal"/>
 									</operator>
@@ -3312,7 +3420,7 @@
 						<!-- TEST_SAT_Signal(_L190, _L196) -->
 						<CallExpression>
 							<operator>
-								<OpCall name="12">
+								<OpCall name="16">
 									<operator>
 										<OperatorRef name="TEST_SAT_Signal"/>
 									</operator>
@@ -3407,7 +3515,7 @@
 					</lefts>
 					<right>
 						<!-- if _L206 then (_L202) else (_L204) -->
-						<IfThenElseOp name="69">
+						<IfThenElseOp name="74">
 							<if>
 								<IdExpression>
 									<path>
@@ -3466,7 +3574,7 @@
 					</lefts>
 					<right>
 						<!-- if _L215 then (_L224) else (_L219) -->
-						<IfThenElseOp name="73">
+						<IfThenElseOp name="75">
 							<if>
 								<IdExpression>
 									<path>
@@ -3577,7 +3685,7 @@
 					</lefts>
 					<right>
 						<!-- if _L217 then (_L221) else (_L220) -->
-						<IfThenElseOp name="71">
+						<IfThenElseOp name="76">
 							<if>
 								<IdExpression>
 									<path>
@@ -3659,6 +3767,145 @@
 					</right>
 					<pragmas>
 						<ed:Equation oid="!ed/3c60/5DE1/CA0/5443f23f2d11"/>
+					</pragmas>
+				</Equation>
+				<!-- _L227 = envia_foto_btn; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L227"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="envia_foto_btn"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3c41/74CD/C28/5444645b516b"/>
+					</pragmas>
+				</Equation>
+				<!-- cam_picture_loaded = _L227; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="cam_picture_loaded"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L227"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3c43/74CD/C28/5444645b250b"/>
+					</pragmas>
+				</Equation>
+				<!-- _L228 = cam_take_picture; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L228"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="cam_take_picture"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3c55/74CD/C28/544464763fb3"/>
+					</pragmas>
+				</Equation>
+				<!-- _L229 = if _L228 then (_L230) else (_L231); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L229"/>
+					</lefts>
+					<right>
+						<!-- if _L228 then (_L230) else (_L231) -->
+						<IfThenElseOp name="77">
+							<if>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L228"/>
+									</path>
+								</IdExpression>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L230"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L231"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3c66/74CD/C28/544464c05f32"/>
+					</pragmas>
+				</Equation>
+				<!-- _L230 = CDS_COLOR_GREEN; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L230"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="CDS_COLOR_GREEN"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3c6e/74CD/C28/544464d47813"/>
+					</pragmas>
+				</Equation>
+				<!-- _L231 = CDS_COLOR_GRAY; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L231"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="CDS_COLOR_GRAY"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3c74/74CD/C28/544464df3ef7"/>
+					</pragmas>
+				</Equation>
+				<!-- display_picture_resquest_state = _L229; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="display_picture_resquest_state"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L229"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3c7b/74CD/C28/544464ea5426"/>
 					</pragmas>
 				</Equation>
 			</data>
@@ -5101,6 +5348,111 @@
 										<Point x="10398" y="8176"/>
 										<Point x="16219" y="8176"/>
 										<Point x="16219" y="9578"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
+						<NetDiagram name="diagram_ts05_us12_inputs" landscape="true" format="A4 (210 297)" oid="!ed/3c32/64F8/660/544463474441">
+							<presentationElements>
+								<EquationGE presentable="!ed/3c55/74CD/C28/544464763fb3">
+									<position>
+										<Point x="3413" y="5715"/>
+									</position>
+									<size>
+										<Size width="264" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/3c66/74CD/C28/544464c05f32">
+									<position>
+										<Point x="8837" y="8361"/>
+									</position>
+									<size>
+										<Size width="1006" height="926"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3c55/74CD/C28/544464763fb3" dstEquation="!ed/3c66/74CD/C28/544464c05f32">
+									<positions>
+										<Point x="3678" y="5980"/>
+										<Point x="5477" y="5980"/>
+										<Point x="5477" y="5900"/>
+										<Point x="9340" y="5900"/>
+										<Point x="9340" y="8361"/>
+									</positions>
+								</Edge>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/3c6e/74CD/C28/544464d47813">
+									<position>
+										<Point x="6641" y="8573"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/3c6e/74CD/C28/544464d47813" dstEquation="!ed/3c66/74CD/C28/544464c05f32">
+									<positions>
+										<Point x="6853" y="8731"/>
+										<Point x="7938" y="8731"/>
+										<Point x="7938" y="8678"/>
+										<Point x="8837" y="8678"/>
+									</positions>
+								</Edge>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/3c74/74CD/C28/544464df3ef7">
+									<position>
+										<Point x="6509" y="9393"/>
+									</position>
+									<size>
+										<Size width="211" height="317"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="!ed/3c74/74CD/C28/544464df3ef7" dstEquation="!ed/3c66/74CD/C28/544464c05f32">
+									<positions>
+										<Point x="6720" y="9551"/>
+										<Point x="7779" y="9551"/>
+										<Point x="7779" y="8969"/>
+										<Point x="8837" y="8969"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/3c7b/74CD/C28/544464ea5426">
+									<position>
+										<Point x="13388" y="9049"/>
+									</position>
+									<size>
+										<Size width="317" height="502"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3c66/74CD/C28/544464c05f32" dstEquation="!ed/3c7b/74CD/C28/544464ea5426">
+									<positions>
+										<Point x="9843" y="8837"/>
+										<Point x="11642" y="8837"/>
+										<Point x="11642" y="9313"/>
+										<Point x="13441" y="9313"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
+						<NetDiagram name="diagram_ts05_us12_outputs" landscape="true" format="A4 (210 297)" oid="!ed/3c38/64F8/660/5444635f351e">
+							<presentationElements>
+								<EquationGE presentable="!ed/3c41/74CD/C28/5444645b516b">
+									<position>
+										<Point x="5609" y="5212"/>
+									</position>
+									<size>
+										<Size width="265" height="477"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/3c43/74CD/C28/5444645b250b">
+									<position>
+										<Point x="18309" y="5398"/>
+									</position>
+									<size>
+										<Size width="318" height="502"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3c41/74CD/C28/5444645b516b" dstEquation="!ed/3c43/74CD/C28/5444645b250b">
+									<positions>
+										<Point x="5874" y="5450"/>
+										<Point x="12118" y="5450"/>
+										<Point x="12118" y="5689"/>
+										<Point x="18362" y="5689"/>
 									</positions>
 								</Edge>
 							</presentationElements>
