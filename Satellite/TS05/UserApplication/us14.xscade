@@ -2941,7 +2941,7 @@
 														<Size width="212" height="317"/>
 													</size>
 												</EquationGE>
-												<EquationGE kind="OBJ_VAR_OUT" presentable="!ed/4cd0/4657/39C/54440f9211ef">
+												<EquationGE presentable="!ed/4cd0/4657/39C/54440f9211ef">
 													<position>
 														<Point x="10081" y="6271"/>
 													</position>
@@ -3375,11 +3375,16 @@
 										<StateRef name="Off"/>
 									</target>
 									<condition>
-										<IdExpression>
-											<path>
-												<ConstVarRef name="Gyroscope_Fixed"/>
-											</path>
-										</IdExpression>
+										<!--  not Gyroscope_fail -->
+										<UnaryOp name="36" operator="not">
+											<operand>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="Gyroscope_fail"/>
+													</path>
+												</IdExpression>
+											</operand>
+										</UnaryOp>
 									</condition>
 									<pragmas>
 										<ed:Transition oid="!ed/52e0/7E54/BCC/5442c9e165af"/>
@@ -6519,11 +6524,16 @@
 										<StateRef name="Off"/>
 									</target>
 									<condition>
-										<IdExpression>
-											<path>
-												<ConstVarRef name="HorizonSensor_Fixed"/>
-											</path>
-										</IdExpression>
+										<!--  not HorizonSensor_Fail -->
+										<UnaryOp name="38" operator="not">
+											<operand>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="HorizonSensor_Fail"/>
+													</path>
+												</IdExpression>
+											</operand>
+										</UnaryOp>
 									</condition>
 									<pragmas>
 										<ed:Transition oid="!ed/52eb/7E54/BCC/5442c9fc1c72"/>
@@ -10200,11 +10210,16 @@
 										<StateRef name="Off"/>
 									</target>
 									<condition>
-										<IdExpression>
-											<path>
-												<ConstVarRef name="Camera_Fixed"/>
-											</path>
-										</IdExpression>
+										<!--  not Camera_Fail -->
+										<UnaryOp name="35" operator="not">
+											<operand>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="Camera_Fail"/>
+													</path>
+												</IdExpression>
+											</operand>
+										</UnaryOp>
 									</condition>
 									<pragmas>
 										<ed:Transition oid="!ed/4c28/7E54/BCC/5442c4611c74"/>

@@ -977,6 +977,18 @@
 						<ed:Variable oid="!ed/3e55/648F/E64/544493606666"/>
 					</pragmas>
 				</Variable>
+				<Variable name="Test_Auto_Verify">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3d30/4B8D/D94/5444a9907e90"/>
+					</pragmas>
+				</Variable>
 			</outputs>
 			<locals>
 				<Variable name="AutoVerify">
@@ -2309,6 +2321,42 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/3cb5/648F/E64/544491123a96"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L277">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3d37/4B8D/D94/5444a9c07aa9"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L278">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3d3d/4B8D/D94/5444a9cf2f2"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L279">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/3d43/4B8D/D94/5444a9d3305c"/>
 					</pragmas>
 				</Variable>
 			</locals>
@@ -5233,6 +5281,97 @@
 						<ed:Equation oid="!ed/3cb4/648F/E64/5444911248ce"/>
 					</pragmas>
 				</Equation>
+				<!-- Test_Auto_Verify = _L277; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Test_Auto_Verify"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L277"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3d31/4B8D/D94/5444a990465c"/>
+					</pragmas>
+				</Equation>
+				<!-- _L277 = if _L275 then (_L279) else (_L278); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L277"/>
+					</lefts>
+					<right>
+						<!-- if _L275 then (_L279) else (_L278) -->
+						<IfThenElseOp name="82">
+							<if>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L275"/>
+									</path>
+								</IdExpression>
+							</if>
+							<then>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L279"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</then>
+							<else>
+								<ListExpression>
+									<items>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L278"/>
+											</path>
+										</IdExpression>
+									</items>
+								</ListExpression>
+							</else>
+						</IfThenElseOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3d36/4B8D/D94/5444a9c07c18"/>
+					</pragmas>
+				</Equation>
+				<!-- _L278 = CDS_COLOR_GRAY; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L278"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="CDS_COLOR_GRAY"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3d3c/4B8D/D94/5444a9cf2171"/>
+					</pragmas>
+				</Equation>
+				<!-- _L279 = CDS_COLOR_GREEN; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L279"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="CDS_COLOR_GREEN"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/3d42/4B8D/D94/5444a9d37710"/>
+					</pragmas>
+				</Equation>
 			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/20e2/7EAD/D64/5404b2a84a8f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -6838,6 +6977,69 @@
 										<Point x="7752" y="4498"/>
 										<Point x="7752" y="4419"/>
 										<Point x="8916" y="4419"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/3d31/4B8D/D94/5444a990465c">
+									<position>
+										<Point x="11113" y="6668"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/3d36/4B8D/D94/5444a9c07c18">
+									<position>
+										<Point x="7964" y="6562"/>
+									</position>
+									<size>
+										<Size width="1006" height="926"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3d23/1DD5/9E0/544496d84088" dstEquation="!ed/3d36/4B8D/D94/5444a9c07c18">
+									<positions>
+										<Point x="6615" y="4498"/>
+										<Point x="8467" y="4498"/>
+										<Point x="8467" y="6562"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/3d36/4B8D/D94/5444a9c07c18" dstEquation="!ed/3d31/4B8D/D94/5444a990465c">
+									<positions>
+										<Point x="8969" y="7038"/>
+										<Point x="9181" y="7038"/>
+										<Point x="9181" y="6932"/>
+										<Point x="11165" y="6932"/>
+									</positions>
+								</Edge>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/3d3c/4B8D/D94/5444a9cf2171">
+									<position>
+										<Point x="6456" y="7435"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/3d42/4B8D/D94/5444a9d37710">
+									<position>
+										<Point x="6588" y="6800"/>
+									</position>
+									<size>
+										<Size width="211" height="317"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/3d42/4B8D/D94/5444a9d37710" dstEquation="!ed/3d36/4B8D/D94/5444a9c07c18">
+									<positions>
+										<Point x="6800" y="6959"/>
+										<Point x="7382" y="6959"/>
+										<Point x="7382" y="6879"/>
+										<Point x="7964" y="6879"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="!ed/3d3c/4B8D/D94/5444a9cf2171" dstEquation="!ed/3d36/4B8D/D94/5444a9c07c18">
+									<positions>
+										<Point x="6668" y="7594"/>
+										<Point x="7303" y="7594"/>
+										<Point x="7303" y="7170"/>
+										<Point x="7964" y="7170"/>
 									</positions>
 								</Edge>
 							</presentationElements>
