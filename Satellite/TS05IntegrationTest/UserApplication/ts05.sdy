@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="ts05" oid="!ed/20e2/7EAD/D64/5404b2a84a8f">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7502" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Ejected">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Ejection_Signal" type="bool" oid="!ed/4afc/19ED/1BEC/540ccf866f41" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7503" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Initialization_Success">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Initialization_Success" type="bool" oid="!ed/4b03/19ED/1BEC/540ccf8d6140" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7504" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Initialization_Fail">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Initialization_Fail" type="bool" oid="!ed/4b10/19ED/1BEC/540cd0142b4d" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1502" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="OperationMode">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_OperationMode_Update" type="bool" oid="!ed/4778/44E0/1ABC/540d2e1455d1" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1502" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="OperationMode">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_OperationMode_Value" type="int" oid="!ed/4779/44E0/1ABC/540d2e2c61be" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1512" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="Input">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_GyroscopeState_Update" type="bool" oid="!ed/4b09/44E0/1ABC/540d3119115f" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1512" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="Input">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_GyroscopeState_Value" type="int" oid="!ed/4b0a/44E0/1ABC/540d312b65e0" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1522" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="Input">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_HorizonSensorState_Update" type="bool" oid="!ed/4b18/44E0/1ABC/540d3140719b" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1522" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="Input">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_HorizonSensorState_Value" type="int" oid="!ed/4b1e/44E0/1ABC/540d31407d16" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1532" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="Input">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_PropellersState_Update" type="bool" oid="!ed/4b24/44E0/1ABC/540d31431cdb" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1532" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="Input">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_PropellersState_Value" type="int" oid="!ed/4b2a/44E0/1ABC/540d31433704" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1542" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="Input">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_CameraState_Update" type="bool" oid="!ed/4b30/44E0/1ABC/540d31441e7e" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtEntryNumber" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1542" ParameterIdent="A661_EVT_SEL_ENTRY_CHANGE" WidgetType="ComboBox" WidgetName="Input">
+							<A661Data>
+								<DataField value="EvtEntryNumber"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_CameraState_Value" type="int" oid="!ed/4b36/44E0/1ABC/540d31443484" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6512" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_AirSpeed_Update" type="bool" oid="!ed/49fd/60A1/18A0/541352a3da5" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6512" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_AirSpeed_Value" type="real" oid="!ed/49fe/60A1/18A0/541352d4563d" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6522" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Altitude_Update" type="bool" oid="!ed/49ff/60A1/18A0/541353551276" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6522" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Altitude_Value" type="real" oid="!ed/4a00/60A1/18A0/54135379773c" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6532" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Latitude_Update" type="bool" oid="!ed/4a01/60A1/18A0/541353802a4a" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6532" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Latitude_Value" type="real" oid="!ed/4a02/60A1/18A0/5413538623ef" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6542" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Longitude_Update" type="bool" oid="!ed/4a03/60A1/18A0/5413538e19c8" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6542" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Longitude_Value" type="real" oid="!ed/4a04/60A1/18A0/541353947e50" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6552" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_DeclinationAngle_Update" type="bool" oid="!ed/4a05/60A1/18A0/5413539b7328" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6552" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_DeclinationAngle_Value" type="real" oid="!ed/4a06/60A1/18A0/541353a8f42" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6562" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Period_Update" type="bool" oid="!ed/4a07/60A1/18A0/541353b66543" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtValue" type="float" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="6562" ParameterIdent="A661_EVT_VALUE_CHANGE" WidgetType="Slider" WidgetName="Slider">
+							<A661Data>
+								<DataField value="EvtValue"/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="TEST_SAT_Period_Value" type="real" oid="!ed/4a08/60A1/18A0/541353cf55c7" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5101" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="EnviaFoto">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="envia_foto_btn" type="bool" oid="!ed/3c39/64F8/660/5444638969fe" instancepath="ts05/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_Layer_Req_Active" type="bool" oid="!ed/2117/7EAD/D64/5404b3963a3e" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_ACTIVE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_Layer_Req_Visible" type="bool" oid="!ed/211d/7EAD/D64/5404b3a215b1" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_REQ_LAYER_VISIBLE>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CDS_Emit" type="bool" oid="!ed/418f/DBE/AB0/540b97b0608e" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1513" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Output">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1523" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Output">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1533" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Output">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1543" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Output">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7505" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Initialize">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5104" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="PedidoEnviaFoto">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SAT_Initialize_Signal" type="int" oid="!ed/4aff/2504/1448/5418d06949d0" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7505" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Initialize">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SAT_GyroscopeState_Signal" type="int" oid="!ed/4b0b/2504/1448/5418d0697f1a" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1513" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Output">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SAT_HorizonSensorState_Signal" type="int" oid="!ed/4b17/2504/1448/5418d0692f93" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1523" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Output">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SAT_PropellersState_Signal" type="int" oid="!ed/4b23/2504/1448/5418d06967c8" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1533" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Output">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="TEST_SAT_CameraState_Signal" type="int" oid="!ed/4b2f/2504/1448/5418d0692871" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="1543" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="Output">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="display_picture_resquest_state" type="int" oid="!ed/3c7a/74CD/C28/544464ea724b" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5104" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcEllipse" WidgetName="PedidoEnviaFoto">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>
