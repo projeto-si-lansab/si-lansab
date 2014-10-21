@@ -1,0 +1,2246 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config E:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-10-20T13:22:58
+*************************************************************$-->
+<Model date="2014-10-20T13:22:58" commandLine="s2c613 -config E:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt">
+  <Constant scadeName="A661_TRUE" scadeType="int" targetName="A661_TRUE" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="A661_FALSE" scadeType="int" targetName="A661_FALSE" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="CDS_COLOR_GRAY" scadeType="int" targetName="CDS_COLOR_GRAY" targetType="kcg_int"
+      macroDef="true"/>
+  <Constant scadeName="CDS_COLOR_GREEN" scadeType="int" targetName="CDS_COLOR_GREEN" targetType="kcg_int"
+      macroDef="true"/>
+  <Constant scadeName="CDS_COLOR_YELLOW" scadeType="int" targetName="CDS_COLOR_YELLOW" targetType="kcg_int"
+      macroDef="true"/>
+  <Constant scadeName="CDS_TEXT_SS_INITIALIZE" scadeType="String_SS" targetName="CDS_TEXT_SS_INITIALIZE"
+      targetType="String_SS"/>
+  <Constant scadeName="CDS_TEXT_SS_STR_SIZE" scadeType="int" targetName="CDS_TEXT_SS_STR_SIZE" targetType="kcg_int"
+      macroDef="true"/>
+  <Constant scadeName="CDS_TEXT_SS_INITIALIZING" scadeType="String_SS" targetName="CDS_TEXT_SS_INITIALIZING"
+      targetType="String_SS"/>
+  <Constant scadeName="CDS_INT_SS_INITIALIZATION_TIMEOUT" scadeType="int" targetName="CDS_INT_SS_INITIALIZATION_TIMEOUT"
+      targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="CDS_TEXT_SS_INITIALIZED" scadeType="String_SS" targetName="CDS_TEXT_SS_INITIALIZED"
+      targetType="String_SS"/>
+  <Constant scadeName="CDS_COLOR_RED" scadeType="int" targetName="CDS_COLOR_RED" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="CDS_TEXT_ES_STR_SIZE" scadeType="int" targetName="CDS_TEXT_ES_STR_SIZE" targetType="kcg_int"
+      macroDef="true"/>
+  <Constant scadeName="CDS_TEXT_ES_TURNON" scadeType="String_ES" targetName="CDS_TEXT_ES_TURNON"
+      targetType="String_ES"/>
+  <Constant scadeName="CDS_TEXT_ES_TURNOFF" scadeType="String_ES" targetName="CDS_TEXT_ES_TURNOFF"
+      targetType="String_ES"/>
+  <Constant scadeName="CDS_TEXT_ES_TURNINGOFF" scadeType="String_ES" targetName="CDS_TEXT_ES_TURNINGOFF"
+      targetType="String_ES"/>
+  <Constant scadeName="CDS_TEXT_ES_FAIL" scadeType="String_ES" targetName="CDS_TEXT_ES_FAIL" targetType="String_ES"/>
+  <Constant scadeName="CDS_TEXT_ES_TURNINGON" scadeType="String_ES" targetName="CDS_TEXT_ES_TURNINGON"
+      targetType="String_ES"/>
+  <Constant scadeName="CDS_TEXT_AUTOVERIFY_FAIL" scadeType="String_ES" targetName="CDS_TEXT_AUTOVERIFY_FAIL"
+      targetType="String_ES"/>
+  <Constant scadeName="CDS_TEXT_AUTOVERIFY_CORRECT" scadeType="String_ES" targetName="CDS_TEXT_AUTOVERIFY_CORRECT"
+      targetType="String_ES"/>
+  <EnumType scadeName="OperationMode" targetName="OperationMode">
+    <EnumVal scadeName="OPMODE_GROUND_SAFE" targetName="OPMODE_GROUND_SAFE"/>
+    <EnumVal scadeName="OPMODE_GROUND_SUPPORT" targetName="OPMODE_GROUND_SUPPORT"/>
+    <EnumVal scadeName="OPMODE_LAUNCH" targetName="OPMODE_LAUNCH"/>
+    <EnumVal scadeName="OPMODE_ATTITUDE_CONTROL" targetName="OPMODE_ATTITUDE_CONTROL"/>
+    <EnumVal scadeName="OPMODE_ATTITUDE_SAFE" targetName="OPMODE_ATTITUDE_SAFE"/>
+    <EnumVal scadeName="OPMODE_NORMAL_SAFE" targetName="OPMODE_NORMAL_SAFE"/>
+    <EnumVal scadeName="OPMODE_NORMAL_ATTITUDE" targetName="OPMODE_NORMAL_ATTITUDE"/>
+    <EnumVal scadeName="OPMODE_NORMAL_PAYLOAD" targetName="OPMODE_NORMAL_PAYLOAD"/>
+  </EnumType>
+  <NamedType scadeName="String_SS" targetName="String_SS" refType="array_char_16"/>
+  <NamedType scadeName="String_ES" targetName="String_ES" refType="array_char_13"/>
+  <RootNode scadeName="ts05" headerFile="ts05.h" targetCycleFct="ts05" targetInitFct="ts05_reset">
+    <Input scadeName="CDS_SS_InitializationButton_Pressed" scadeType="bool"
+        targetName="CDS_SS_InitializationButton_Pressed" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="CDS_ES_GyroscopeButton_Pressed" scadeType="bool" targetName="CDS_ES_GyroscopeButton_Pressed"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="CDS_ES_HorizonSensorButton_Pressed" scadeType="bool"
+        targetName="CDS_ES_HorizonSensorButton_Pressed" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="CDS_ES_PropellersButton_Pressed" scadeType="bool" targetName="CDS_ES_PropellersButton_Pressed"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="CDS_ES_CameraButton_Pressed" scadeType="bool" targetName="CDS_ES_CameraButton_Pressed"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_DebugSelector_Received" scadeType="bool" targetName="TEST_DebugSelector_Received"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_DebugSelector_Value" scadeType="int" targetName="TEST_DebugSelector_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Ejection_Signal" scadeType="bool" targetName="TEST_SAT_Ejection_Signal"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Initialization_Success" scadeType="bool" targetName="TEST_SAT_Initialization_Success"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Initialization_Fail" scadeType="bool" targetName="TEST_SAT_Initialization_Fail"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_OperationMode_Update" scadeType="bool" targetName="TEST_SAT_OperationMode_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_OperationMode_Value" scadeType="int" targetName="TEST_SAT_OperationMode_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_GyroscopeState_Update" scadeType="bool" targetName="TEST_SAT_GyroscopeState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_GyroscopeState_Value" scadeType="int" targetName="TEST_SAT_GyroscopeState_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_HorizonSensorState_Update" scadeType="bool"
+        targetName="TEST_SAT_HorizonSensorState_Update" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_HorizonSensorState_Value" scadeType="int" targetName="TEST_SAT_HorizonSensorState_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_PropellersState_Update" scadeType="bool" targetName="TEST_SAT_PropellersState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_PropellersState_Value" scadeType="int" targetName="TEST_SAT_PropellersState_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_CameraState_Update" scadeType="bool" targetName="TEST_SAT_CameraState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_CameraState_Value" scadeType="int" targetName="TEST_SAT_CameraState_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_AirSpeed_Update" scadeType="bool" targetName="TEST_SAT_AirSpeed_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_AirSpeed_Value" scadeType="real" targetName="TEST_SAT_AirSpeed_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Altitude_Update" scadeType="bool" targetName="TEST_SAT_Altitude_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Altitude_Value" scadeType="real" targetName="TEST_SAT_Altitude_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Latitude_Update" scadeType="bool" targetName="TEST_SAT_Latitude_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Latitude_Value" scadeType="real" targetName="TEST_SAT_Latitude_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Longitude_Update" scadeType="bool" targetName="TEST_SAT_Longitude_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Longitude_Value" scadeType="real" targetName="TEST_SAT_Longitude_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_DeclinationAngle_Update" scadeType="bool" targetName="TEST_SAT_DeclinationAngle_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_DeclinationAngle_Value" scadeType="real" targetName="TEST_SAT_DeclinationAngle_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Period_Update" scadeType="bool" targetName="TEST_SAT_Period_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="TEST_SAT_Period_Value" scadeType="real" targetName="TEST_SAT_Period_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Input scadeName="SAT_AirSpeed_Update" scadeType="bool" targetName="SAT_AirSpeed_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_AirSpeed_Value" scadeType="real" targetName="SAT_AirSpeed_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Input scadeName="SAT_Altitude_Update" scadeType="bool" targetName="SAT_Altitude_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_Altitude_Value" scadeType="real" targetName="SAT_Altitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Input scadeName="SAT_Latitude_Update" scadeType="bool" targetName="SAT_Latitude_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_Latitude_Value" scadeType="real" targetName="SAT_Latitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Input scadeName="SAT_Longitude_Update" scadeType="bool" targetName="SAT_Longitude_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_Longitude_Value" scadeType="real" targetName="SAT_Longitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Input scadeName="SAT_DeclinationAngle_Update" scadeType="bool" targetName="SAT_DeclinationAngle_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_DeclinationAngle_Value" scadeType="real" targetName="SAT_DeclinationAngle_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="SAT_Period_Update" scadeType="bool" targetName="SAT_Period_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_Period_Value" scadeType="real" targetName="SAT_Period_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Input scadeName="SAT_OperationMode_Update" scadeType="bool" targetName="SAT_OperationMode_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_OperationMode_Value" scadeType="OperationMode" targetName="SAT_OperationMode_Value"
+        targetType="OperationMode" inCtx="true"/>
+    <Input scadeName="SAT_GyroscopeState_Update" scadeType="bool" targetName="SAT_GyroscopeState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_GyroscopeState_Value" scadeType="bool" targetName="SAT_GyroscopeState_Value"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_HorizonSensorState_Update" scadeType="bool" targetName="SAT_HorizonSensorState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_HorizonSensorState_Value" scadeType="bool" targetName="SAT_HorizonSensorState_Value"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_PropellersState_Update" scadeType="bool" targetName="SAT_PropellersState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_PropellersState_Value" scadeType="bool" targetName="SAT_PropellersState_Value"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_CameraState_Update" scadeType="bool" targetName="SAT_CameraState_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_CameraState_Value" scadeType="bool" targetName="SAT_CameraState_Value" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="cam_picture_loaded" scadeType="bool" targetName="cam_picture_loaded" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="display_load_picture_btn" scadeType="bool" targetName="display_load_picture_btn"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_CameraState_Fail" scadeType="bool" targetName="SAT_CameraState_Fail" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_GyroscopeState_Fail" scadeType="bool" targetName="SAT_GyroscopeState_Fail"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_HorizonSensorState_Fail" scadeType="bool" targetName="SAT_HorizonSensorState_Fail"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="CDS_Auto_Verify" scadeType="bool" targetName="CDS_Auto_Verify" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_Ejection_Signal" scadeType="bool" targetName="SAT_Ejection_Signal" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_Initialization_Signal" scadeType="int" targetName="SAT_Initialization_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="SAT_Fix_Response" scadeType="bool" targetName="SAT_Fix_Response" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="CDS_Layer_Req_Active" scadeType="bool" targetName="CDS_Layer_Req_Active" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="CDS_Layer_Req_Visible" scadeType="bool" targetName="CDS_Layer_Req_Visible" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="CDS_Emit" scadeType="bool" targetName="CDS_Emit" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="CDS_SS_String_Size" scadeType="int" targetName="CDS_SS_String_Size" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="CDS_SS_EjectionLED_Color" scadeType="int" targetName="CDS_SS_EjectionLED_Color"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_SS_InitializationButton_Enabled" scadeType="int"
+        targetName="CDS_SS_InitializationButton_Enabled" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_SS_InitializationButton_Contour" scadeType="int"
+        targetName="CDS_SS_InitializationButton_Contour" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_SS_InitializationButton_Action" scadeType="String_SS"
+        targetName="CDS_SS_InitializationButton_Action" targetType="String_SS" inCtx="true"/>
+    <Output scadeName="CDS_ES_String_Size" scadeType="int" targetName="CDS_ES_String_Size" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="CDS_ES_GyroscopeButton_Enabled" scadeType="int" targetName="CDS_ES_GyroscopeButton_Enabled"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_ES_GyroscopeButton_Contour" scadeType="int" targetName="CDS_ES_GyroscopeButton_Contour"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_ES_GyroscopeButton_Label" scadeType="String_ES" targetName="CDS_ES_GyroscopeButton_Label"
+        targetType="String_ES" inCtx="true"/>
+    <Output scadeName="CDS_ES_HorizonSensorButton_Enabled" scadeType="int"
+        targetName="CDS_ES_HorizonSensorButton_Enabled" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_ES_HorizonSensorButton_Contour" scadeType="int"
+        targetName="CDS_ES_HorizonSensorButton_Contour" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_ES_HorizonSensorButton_Label" scadeType="String_ES"
+        targetName="CDS_ES_HorizonSensorButton_Label" targetType="String_ES" inCtx="true"/>
+    <Output scadeName="CDS_ES_PropellersButton_Enabled" scadeType="int" targetName="CDS_ES_PropellersButton_Enabled"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_ES_PropellersButton_Contour" scadeType="int" targetName="CDS_ES_PropellersButton_Contour"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_ES_PropellersButton_Label" scadeType="String_ES" targetName="CDS_ES_PropellersButton_Label"
+        targetType="String_ES" inCtx="true"/>
+    <Output scadeName="CDS_ES_CameraButton_Enabled" scadeType="int" targetName="CDS_ES_CameraButton_Enabled"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_ES_CameraButton_Contour" scadeType="int" targetName="CDS_ES_CameraButton_Contour"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_ES_CameraButton_Label" scadeType="String_ES" targetName="CDS_ES_CameraButton_Label"
+        targetType="String_ES" inCtx="true"/>
+    <Output scadeName="CDS_SI_AirSpeed_Value" scadeType="real" targetName="CDS_SI_AirSpeed_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="CDS_SI_Altitude_Value" scadeType="real" targetName="CDS_SI_Altitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="CDS_SI_Latitude_Value" scadeType="real" targetName="CDS_SI_Latitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="CDS_SI_Longitude_Value" scadeType="real" targetName="CDS_SI_Longitude_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="CDS_SI_DeclinationAngle_Value" scadeType="real" targetName="CDS_SI_DeclinationAngle_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="CDS_SI_Period_Value" scadeType="real" targetName="CDS_SI_Period_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="SAT_Initialize" scadeType="bool" targetName="SAT_Initialize" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_GyroscopeState_Toggle" scadeType="bool" targetName="SAT_GyroscopeState_Toggle"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_GyroscopeState_ToggleTo" scadeType="bool" targetName="SAT_GyroscopeState_ToggleTo"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_HorizonSensorState_Toggle" scadeType="bool" targetName="SAT_HorizonSensorState_Toggle"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_HorizonSensorState_ToggleTo" scadeType="bool" targetName="SAT_HorizonSensorState_ToggleTo"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_PropellersState_Toggle" scadeType="bool" targetName="SAT_PropellersState_Toggle"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_PropellersState_ToggleTo" scadeType="bool" targetName="SAT_PropellersState_ToggleTo"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_CameraState_Toggle" scadeType="bool" targetName="SAT_CameraState_Toggle"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_CameraState_ToggleTo" scadeType="bool" targetName="SAT_CameraState_ToggleTo"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="TEST_DebugSelector_Visible" scadeType="bool" targetName="TEST_DebugSelector_Visible"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="TEST_DebugSelector_Enabled" scadeType="int" targetName="TEST_DebugSelector_Enabled"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SS_Visible" scadeType="bool" targetName="TEST_SS_Visible" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="TEST_SS_Enabled" scadeType="int" targetName="TEST_SS_Enabled" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_ES_Visible" scadeType="bool" targetName="TEST_ES_Visible" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="TEST_ES_Enabled" scadeType="int" targetName="TEST_ES_Enabled" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SI_Visible" scadeType="bool" targetName="TEST_SI_Visible" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="TEST_SI_Enabled" scadeType="int" targetName="TEST_SI_Enabled" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_Initialize_Signal" scadeType="int" targetName="TEST_SAT_Initialize_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_GyroscopeState_Signal" scadeType="int" targetName="TEST_SAT_GyroscopeState_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_HorizonSensorState_Signal" scadeType="int"
+        targetName="TEST_SAT_HorizonSensorState_Signal" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_PropellersState_Signal" scadeType="int" targetName="TEST_SAT_PropellersState_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_CameraState_Signal" scadeType="int" targetName="TEST_SAT_CameraState_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="display_load_picture_btn_border" scadeType="int" targetName="display_load_picture_btn_border"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="display_load_picture_enabled" scadeType="int" targetName="display_load_picture_enabled"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="cam_take_picture" scadeType="bool" targetName="cam_take_picture" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="CDS_Auto_Verify_Contorno" scadeType="int" targetName="CDS_Auto_Verify_Contorno"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="CDS_Auto_Verify_Label" scadeType="String_ES" targetName="CDS_Auto_Verify_Label"
+        targetType="String_ES" inCtx="true"/>
+    <Output scadeName="CDS_Auto_VerifyButton_Test_Enable" scadeType="int" targetName="CDS_Auto_VerifyButton_Test_Enable"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="SAT_Auto_Verify" scadeType="bool" targetName="SAT_Auto_Verify" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="CDS_AutoVerifyButton_Enabled" scadeType="int" targetName="CDS_AutoVerifyButton_Enabled"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="SAT_Fix_Equipments" scadeType="bool" targetName="SAT_Fix_Equipments" targetType="kcg_bool"
+        inCtx="true"/>
+    <Local scadeName="deploy" scadeType="bool" targetName="deploy" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_Initialization_Signal" scadeType="int"
+        targetName="_533_Testable_SAT_Initialization_Signal" targetType="kcg_int"/>
+    <Local scadeName="Testable_SAT_Ejection_Signal" scadeType="bool" targetName="_532_Testable_SAT_Ejection_Signal"
+        targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_OperationMode_Update" scadeType="bool"
+        targetName="_531_Testable_SAT_OperationMode_Update" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_OperationMode_Value" scadeType="OperationMode"
+        targetName="_530_Testable_SAT_OperationMode_Value" targetType="OperationMode"/>
+    <Local scadeName="Testable_SAT_GyroscopeState_Update" scadeType="bool"
+        targetName="_529_Testable_SAT_GyroscopeState_Update" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_GyroscopeState_Value" scadeType="bool"
+        targetName="_528_Testable_SAT_GyroscopeState_Value" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_HorizonSensorState_Value" scadeType="bool"
+        targetName="_527_Testable_SAT_HorizonSensorState_Value" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_HorizonSensorState_Update" scadeType="bool"
+        targetName="_526_Testable_SAT_HorizonSensorState_Update" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_PropellersState_Value" scadeType="bool"
+        targetName="_525_Testable_SAT_PropellersState_Value" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_PropellersState_Update" scadeType="bool"
+        targetName="_524_Testable_SAT_PropellersState_Update" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_CameraState_Value" scadeType="bool" targetName="_523_Testable_SAT_CameraState_Value"
+        targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_CameraState_Update" scadeType="bool"
+        targetName="_522_Testable_SAT_CameraState_Update" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_AirSpeed_Update" scadeType="bool" targetName="_521_Testable_SAT_AirSpeed_Update"
+        targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_AirSpeed_Value" scadeType="real" targetName="_520_Testable_SAT_AirSpeed_Value"
+        targetType="kcg_real"/>
+    <Local scadeName="Testable_SAT_Altitude_Update" scadeType="bool" targetName="_519_Testable_SAT_Altitude_Update"
+        targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_Altitude_Value" scadeType="real" targetName="_518_Testable_SAT_Altitude_Value"
+        targetType="kcg_real"/>
+    <Local scadeName="Testable_SAT_Latitude_Update" scadeType="bool" targetName="_517_Testable_SAT_Latitude_Update"
+        targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_Latitude_Value" scadeType="real" targetName="_516_Testable_SAT_Latitude_Value"
+        targetType="kcg_real"/>
+    <Local scadeName="Testable_SAT_Longitude_Update" scadeType="bool" targetName="_515_Testable_SAT_Longitude_Update"
+        targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_Longitude_Value" scadeType="real" targetName="_514_Testable_SAT_Longitude_Value"
+        targetType="kcg_real"/>
+    <Local scadeName="Testable_SAT_DeclinationAngle_Update" scadeType="bool"
+        targetName="_513_Testable_SAT_DeclinationAngle_Update" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_DeclinationAngle_Value" scadeType="real"
+        targetName="_512_Testable_SAT_DeclinationAngle_Value" targetType="kcg_real"/>
+    <Local scadeName="Testable_SAT_Period_Update" scadeType="bool" targetName="_511_Testable_SAT_Period_Update"
+        targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_Period_Value" scadeType="real" targetName="_510_Testable_SAT_Period_Value"
+        targetType="kcg_real"/>
+    <Local scadeName="Testable_SAT_GyroscopeState_Toggle" scadeType="bool"
+        targetName="_509_Testable_SAT_GyroscopeState_Toggle" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_GyroscopeState_ToggleTo" scadeType="bool"
+        targetName="Testable_SAT_GyroscopeState_ToggleTo" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_CameraState_ToggleTo" scadeType="bool"
+        targetName="_508_Testable_SAT_CameraState_ToggleTo" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_CameraState_Toggle" scadeType="bool" targetName="Testable_SAT_CameraState_Toggle"
+        targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_HorizonSensorState_ToggleTo" scadeType="bool"
+        targetName="_507_Testable_SAT_HorizonSensorState_ToggleTo" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_HorizonSensorState_Toggle" scadeType="bool"
+        targetName="_506_Testable_SAT_HorizonSensorState_Toggle" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_PropellersState_ToggleTo" scadeType="bool"
+        targetName="_505_Testable_SAT_PropellersState_ToggleTo" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_PropellersState_Toggle" scadeType="bool"
+        targetName="Testable_SAT_PropellersState_Toggle" targetType="kcg_bool"/>
+    <Local scadeName="Testable_SAT_Initialize" scadeType="bool" targetName="Testable_SAT_Initialize"
+        targetType="kcg_bool"/>
+    <Memory scadeName="_L2" scadeType="bool" targetName="_L2" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
+    <Local scadeName="_L14" scadeType="bool" targetName="_L14" targetType="kcg_bool"/>
+    <Local scadeName="_L30" scadeType="bool" targetName="_L30" targetType="kcg_bool"/>
+    <Local scadeName="_L43" scadeType="bool" targetName="_L43" targetType="kcg_bool"/>
+    <Local scadeName="_L42" scadeType="int" targetName="_L42" targetType="kcg_int"/>
+    <Local scadeName="_L38" scadeType="int" targetName="_L38" targetType="kcg_int"/>
+    <Local scadeName="_L39" scadeType="int" targetName="_L39" targetType="kcg_int"/>
+    <Local scadeName="_L40" scadeType="int" targetName="_L40" targetType="kcg_int"/>
+    <Local scadeName="_L41" scadeType="String_SS" targetName="_L41" targetType="String_SS"/>
+    <Local scadeName="_L37" scadeType="int" targetName="_L37" targetType="kcg_int"/>
+    <Local scadeName="_L36" scadeType="bool" targetName="_L36" targetType="kcg_bool"/>
+    <Local scadeName="_L56" scadeType="bool" targetName="_L56" targetType="kcg_bool"/>
+    <Local scadeName="_L57" scadeType="bool" targetName="_L57" targetType="kcg_bool"/>
+    <Local scadeName="_L59" scadeType="bool" targetName="_L59" targetType="kcg_bool"/>
+    <Local scadeName="_L60" scadeType="bool" targetName="_L60" targetType="kcg_bool"/>
+    <Local scadeName="_L61" scadeType="bool" targetName="_L61" targetType="kcg_bool"/>
+    <Local scadeName="_L62" scadeType="bool" targetName="_L62" targetType="kcg_bool"/>
+    <Local scadeName="_L64" scadeType="bool" targetName="_L64" targetType="kcg_bool"/>
+    <Local scadeName="_L65" scadeType="OperationMode" targetName="_L65" targetType="OperationMode"/>
+    <Local scadeName="_L66" scadeType="bool" targetName="_L66" targetType="kcg_bool"/>
+    <Local scadeName="_L67" scadeType="bool" targetName="_L67" targetType="kcg_bool"/>
+    <Local scadeName="_L68" scadeType="bool" targetName="_L68" targetType="kcg_bool"/>
+    <Local scadeName="_L69" scadeType="bool" targetName="_L69" targetType="kcg_bool"/>
+    <Local scadeName="_L70" scadeType="bool" targetName="_L70" targetType="kcg_bool"/>
+    <Local scadeName="_L71" scadeType="bool" targetName="_L71" targetType="kcg_bool"/>
+    <Local scadeName="_L72" scadeType="int" targetName="_L72" targetType="kcg_int"/>
+    <Local scadeName="_L73" scadeType="bool" targetName="_L73" targetType="kcg_bool"/>
+    <Local scadeName="_L74" scadeType="real" targetName="_L74" targetType="kcg_real"/>
+    <Local scadeName="_L75" scadeType="bool" targetName="_L75" targetType="kcg_bool"/>
+    <Local scadeName="_L76" scadeType="real" targetName="_L76" targetType="kcg_real"/>
+    <Local scadeName="_L77" scadeType="bool" targetName="_L77" targetType="kcg_bool"/>
+    <Local scadeName="_L78" scadeType="real" targetName="_L78" targetType="kcg_real"/>
+    <Local scadeName="_L79" scadeType="bool" targetName="_L79" targetType="kcg_bool"/>
+    <Local scadeName="_L80" scadeType="real" targetName="_L80" targetType="kcg_real"/>
+    <Local scadeName="_L81" scadeType="bool" targetName="_L81" targetType="kcg_bool"/>
+    <Local scadeName="_L82" scadeType="real" targetName="_L82" targetType="kcg_real"/>
+    <Local scadeName="_L83" scadeType="bool" targetName="_L83" targetType="kcg_bool"/>
+    <Local scadeName="_L84" scadeType="real" targetName="_L84" targetType="kcg_real"/>
+    <Local scadeName="_L90" scadeType="real" targetName="_L90" targetType="kcg_real"/>
+    <Local scadeName="_L89" scadeType="real" targetName="_L89" targetType="kcg_real"/>
+    <Local scadeName="_L88" scadeType="real" targetName="_L88" targetType="kcg_real"/>
+    <Local scadeName="_L87" scadeType="real" targetName="_L87" targetType="kcg_real"/>
+    <Local scadeName="_L86" scadeType="real" targetName="_L86" targetType="kcg_real"/>
+    <Local scadeName="_L85" scadeType="real" targetName="_L85" targetType="kcg_real"/>
+    <Local scadeName="_L99" scadeType="bool" targetName="_L99" targetType="kcg_bool"/>
+    <Local scadeName="_L101" scadeType="int" targetName="_L101" targetType="kcg_int"/>
+    <Local scadeName="_L100" scadeType="int" targetName="_L100" targetType="kcg_int"/>
+    <Local scadeName="_L103" scadeType="bool" targetName="_L103" targetType="kcg_bool"/>
+    <Local scadeName="_L104" scadeType="bool" targetName="_L104" targetType="kcg_bool"/>
+    <Local scadeName="_L105" scadeType="bool" targetName="_L105" targetType="kcg_bool"/>
+    <Local scadeName="_L132" scadeType="int" targetName="_L132" targetType="kcg_int"/>
+    <Local scadeName="_L127" scadeType="String_ES" targetName="_L127" targetType="String_ES"/>
+    <Local scadeName="_L126" scadeType="int" targetName="_L126" targetType="kcg_int"/>
+    <Local scadeName="_L125" scadeType="bool" targetName="_L125" targetType="kcg_bool"/>
+    <Local scadeName="_L124" scadeType="bool" targetName="_L124" targetType="kcg_bool"/>
+    <Local scadeName="_L123" scadeType="bool" targetName="_L123" targetType="kcg_bool"/>
+    <Local scadeName="_L122" scadeType="bool" targetName="_L122" targetType="kcg_bool"/>
+    <Local scadeName="_L121" scadeType="bool" targetName="_L121" targetType="kcg_bool"/>
+    <Local scadeName="_L120" scadeType="bool" targetName="_L120" targetType="kcg_bool"/>
+    <Local scadeName="_L119" scadeType="bool" targetName="_L119" targetType="kcg_bool"/>
+    <Local scadeName="_L118" scadeType="bool" targetName="_L118" targetType="kcg_bool"/>
+    <Local scadeName="_L117" scadeType="String_ES" targetName="_L117" targetType="String_ES"/>
+    <Local scadeName="_L116" scadeType="int" targetName="_L116" targetType="kcg_int"/>
+    <Local scadeName="_L115" scadeType="int" targetName="_L115" targetType="kcg_int"/>
+    <Local scadeName="_L114" scadeType="String_ES" targetName="_L114" targetType="String_ES"/>
+    <Local scadeName="_L113" scadeType="int" targetName="_L113" targetType="kcg_int"/>
+    <Local scadeName="_L112" scadeType="int" targetName="_L112" targetType="kcg_int"/>
+    <Local scadeName="_L111" scadeType="String_ES" targetName="_L111" targetType="String_ES"/>
+    <Local scadeName="_L110" scadeType="int" targetName="_L110" targetType="kcg_int"/>
+    <Local scadeName="_L109" scadeType="int" targetName="_L109" targetType="kcg_int"/>
+    <Local scadeName="_L108" scadeType="String_ES" targetName="_L108" targetType="String_ES"/>
+    <Local scadeName="_L107" scadeType="int" targetName="_L107" targetType="kcg_int"/>
+    <Local scadeName="_L106" scadeType="int" targetName="_L106" targetType="kcg_int"/>
+    <Local scadeName="_L136" scadeType="bool" targetName="_L136" targetType="kcg_bool"/>
+    <Local scadeName="_L137" scadeType="bool" targetName="_L137" targetType="kcg_bool"/>
+    <Local scadeName="_L138" scadeType="bool" targetName="_L138" targetType="kcg_bool"/>
+    <Local scadeName="_L139" scadeType="bool" targetName="_L139" targetType="kcg_bool"/>
+    <Local scadeName="_L140" scadeType="bool" targetName="_L140" targetType="kcg_bool"/>
+    <Local scadeName="_L141" scadeType="bool" targetName="_L141" targetType="kcg_bool"/>
+    <Local scadeName="_L142" scadeType="int" targetName="_L142" targetType="kcg_int"/>
+    <Local scadeName="_L143" scadeType="bool" targetName="_L143" targetType="kcg_bool"/>
+    <NodeInlining scadeName="guarino_test_operator" instName="1">
+    </NodeInlining>
+    <NodeInlining scadeName="gustavoloureiro_test_operator" instName="1">
+      <Local scadeName="Probe1" scadeType="bool" targetName="Probe1_1" targetType="kcg_bool"/>
+      <Local scadeName="Probe2" scadeType="bool" targetName="Probe2_1" targetType="kcg_bool"/>
+      <Local scadeName="Probe3" scadeType="int" targetName="Probe3_1" targetType="kcg_int"/>
+      <Local scadeName="Probe4" scadeType="int" targetName="Probe4_1" targetType="kcg_int"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="_L5_1" targetType="kcg_bool"/>
+      <Local scadeName="_L13" scadeType="bool" targetName="_L13_1" targetType="kcg_bool"/>
+      <Local scadeName="_L14" scadeType="int" targetName="_L14_1" targetType="kcg_int"/>
+      <Local scadeName="_L15" scadeType="int" targetName="_L15_1" targetType="kcg_int"/>
+      <Local scadeName="_L22" scadeType="bool" targetName="_L22_1" targetType="kcg_bool"/>
+      <Local scadeName="_L23" scadeType="bool" targetName="_L23_1" targetType="kcg_bool"/>
+      <Local scadeName="_L25" scadeType="int" targetName="_L25_1" targetType="kcg_int"/>
+      <Local scadeName="_L26" scadeType="int" targetName="_L26_1" targetType="kcg_int"/>
+      <NodeInlining scadeName="gustavoloureiro" instName="1">
+        <Input scadeName="Input1" scadeType="bool" targetName="Input1_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Input2" scadeType="bool" targetName="Input2_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Input3" scadeType="int" targetName="Input3_1_1" targetType="kcg_int"/>
+        <Input scadeName="Input4" scadeType="int" targetName="Input4_1_1" targetType="kcg_int"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="Output1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output2" scadeType="bool" targetName="Output2_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output3" scadeType="int" targetName="Output3_1_1" targetType="kcg_int"/>
+        <Output scadeName="Output4" scadeType="int" targetName="Output4_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L10" scadeType="bool" targetName="_L10_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L11" scadeType="int" targetName="_L11_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L12" scadeType="int" targetName="_L12_1_1" targetType="kcg_int"/>
+      </NodeInlining>
+    </NodeInlining>
+    <NodeInlining scadeName="hoffmann_test_operator" instName="1">
+    </NodeInlining>
+    <NodeInlining scadeName="kalil_test_operator" instName="1">
+      <Local scadeName="Probe1" scadeType="bool" targetName="_12_Probe1_1" targetType="kcg_bool"/>
+      <Local scadeName="Probe2" scadeType="bool" targetName="_11_Probe2_1" targetType="kcg_bool"/>
+      <Local scadeName="Probe3" scadeType="int" targetName="_10_Probe3_1" targetType="kcg_int"/>
+      <Local scadeName="Probe4" scadeType="int" targetName="_9_Probe4_1" targetType="kcg_int"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="_L5_18" targetType="kcg_bool"/>
+      <Local scadeName="_L13" scadeType="bool" targetName="_7__L13_1" targetType="kcg_bool"/>
+      <Local scadeName="_L14" scadeType="int" targetName="_6__L14_1" targetType="kcg_int"/>
+      <Local scadeName="_L15" scadeType="int" targetName="_5__L15_1" targetType="kcg_int"/>
+      <Local scadeName="_L22" scadeType="bool" targetName="_4__L22_1" targetType="kcg_bool"/>
+      <Local scadeName="_L23" scadeType="bool" targetName="_3__L23_1" targetType="kcg_bool"/>
+      <Local scadeName="_L25" scadeType="int" targetName="_2__L25_1" targetType="kcg_int"/>
+      <Local scadeName="_L26" scadeType="int" targetName="_1__L26_1" targetType="kcg_int"/>
+      <NodeInlining scadeName="kalil" instName="1">
+        <Input scadeName="Input1" scadeType="bool" targetName="_13_Input1_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Input2" scadeType="bool" targetName="_14_Input2_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Input3" scadeType="int" targetName="_15_Input3_1_1" targetType="kcg_int"/>
+        <Input scadeName="Input4" scadeType="int" targetName="_16_Input4_1_1" targetType="kcg_int"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="_17_Output1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output2" scadeType="bool" targetName="_18_Output2_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output3" scadeType="int" targetName="_19_Output3_1_1" targetType="kcg_int"/>
+        <Output scadeName="Output4" scadeType="int" targetName="_20_Output4_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_24__L5_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L10" scadeType="bool" targetName="_23__L10_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L11" scadeType="int" targetName="_22__L11_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L12" scadeType="int" targetName="_21__L12_1_1" targetType="kcg_int"/>
+      </NodeInlining>
+    </NodeInlining>
+    <NodeInlining scadeName="leonardo_test_operator" instName="1">
+      <Local scadeName="Probe1" scadeType="bool" targetName="_36_Probe1_1" targetType="kcg_bool"/>
+      <Local scadeName="Probe2" scadeType="bool" targetName="_35_Probe2_1" targetType="kcg_bool"/>
+      <Local scadeName="Probe3" scadeType="int" targetName="_34_Probe3_1" targetType="kcg_int"/>
+      <Local scadeName="Probe4" scadeType="int" targetName="_33_Probe4_1" targetType="kcg_int"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="_L5_132" targetType="kcg_bool"/>
+      <Local scadeName="_L13" scadeType="bool" targetName="_31__L13_1" targetType="kcg_bool"/>
+      <Local scadeName="_L14" scadeType="int" targetName="_30__L14_1" targetType="kcg_int"/>
+      <Local scadeName="_L15" scadeType="int" targetName="_29__L15_1" targetType="kcg_int"/>
+      <Local scadeName="_L22" scadeType="bool" targetName="_28__L22_1" targetType="kcg_bool"/>
+      <Local scadeName="_L23" scadeType="bool" targetName="_27__L23_1" targetType="kcg_bool"/>
+      <Local scadeName="_L25" scadeType="int" targetName="_26__L25_1" targetType="kcg_int"/>
+      <Local scadeName="_L26" scadeType="int" targetName="_25__L26_1" targetType="kcg_int"/>
+      <NodeInlining scadeName="leonardo" instName="2">
+        <Input scadeName="Input1" scadeType="bool" targetName="Input1_2_1" targetType="kcg_bool"/>
+        <Input scadeName="Input2" scadeType="bool" targetName="Input2_2_1" targetType="kcg_bool"/>
+        <Input scadeName="Input3" scadeType="int" targetName="Input3_2_1" targetType="kcg_int"/>
+        <Input scadeName="Input4" scadeType="int" targetName="Input4_2_1" targetType="kcg_int"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="Output1_2_1" targetType="kcg_bool"/>
+        <Output scadeName="Output2" scadeType="bool" targetName="Output2_2_1" targetType="kcg_bool"/>
+        <Output scadeName="Output3" scadeType="int" targetName="Output3_2_1" targetType="kcg_int"/>
+        <Output scadeName="Output4" scadeType="int" targetName="Output4_2_1" targetType="kcg_int"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5_2_1" targetType="kcg_bool"/>
+        <Local scadeName="_L10" scadeType="bool" targetName="_L10_2_1" targetType="kcg_bool"/>
+        <Local scadeName="_L11" scadeType="int" targetName="_L11_2_1" targetType="kcg_int"/>
+        <Local scadeName="_L12" scadeType="int" targetName="_L12_2_1" targetType="kcg_int"/>
+      </NodeInlining>
+    </NodeInlining>
+    <NodeInlining scadeName="mayara_test_operator" instName="1">
+      <Local scadeName="Probe1" scadeType="bool" targetName="_48_Probe1_1" targetType="kcg_bool"/>
+      <Local scadeName="Probe2" scadeType="bool" targetName="_47_Probe2_1" targetType="kcg_bool"/>
+      <Local scadeName="Probe3" scadeType="int" targetName="_46_Probe3_1" targetType="kcg_int"/>
+      <Local scadeName="Probe4" scadeType="int" targetName="_45_Probe4_1" targetType="kcg_int"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="_L5_144" targetType="kcg_bool"/>
+      <Local scadeName="_L13" scadeType="bool" targetName="_43__L13_1" targetType="kcg_bool"/>
+      <Local scadeName="_L14" scadeType="int" targetName="_42__L14_1" targetType="kcg_int"/>
+      <Local scadeName="_L15" scadeType="int" targetName="_41__L15_1" targetType="kcg_int"/>
+      <Local scadeName="_L22" scadeType="bool" targetName="_40__L22_1" targetType="kcg_bool"/>
+      <Local scadeName="_L23" scadeType="bool" targetName="_39__L23_1" targetType="kcg_bool"/>
+      <Local scadeName="_L25" scadeType="int" targetName="_38__L25_1" targetType="kcg_int"/>
+      <Local scadeName="_L26" scadeType="int" targetName="_37__L26_1" targetType="kcg_int"/>
+      <NodeInlining scadeName="mayara" instName="1">
+        <Input scadeName="Input1" scadeType="bool" targetName="_49_Input1_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Input2" scadeType="bool" targetName="_50_Input2_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Input3" scadeType="int" targetName="_51_Input3_1_1" targetType="kcg_int"/>
+        <Input scadeName="Input4" scadeType="int" targetName="_52_Input4_1_1" targetType="kcg_int"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="_53_Output1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output2" scadeType="bool" targetName="_54_Output2_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output3" scadeType="int" targetName="_55_Output3_1_1" targetType="kcg_int"/>
+        <Output scadeName="Output4" scadeType="int" targetName="_56_Output4_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_60__L5_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L10" scadeType="bool" targetName="_59__L10_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L11" scadeType="int" targetName="_58__L11_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L12" scadeType="int" targetName="_57__L12_1_1" targetType="kcg_int"/>
+      </NodeInlining>
+    </NodeInlining>
+    <NodeInlining scadeName="rhuan_test_operator" instName="1">
+    </NodeInlining>
+    <Automaton scadeName="DebugOrDeploy" targetStatesType="SSM_ST_DebugOrDeploy"
+        targetTransitionsType="SSM_TR_DebugOrDeploy">
+      <State scadeName="Debug" targetName="SSM_st_Debug_DebugOrDeploy">
+        <Local scadeName="DebugSelectedInterface" scadeType="int"
+            targetName="DebugSelectedInterface_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L62" scadeType="int" targetName="_L62_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L61" scadeType="int" targetName="_L61_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L60" scadeType="int" targetName="_L60_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L59" scadeType="bool" targetName="_L59_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L58" scadeType="int" targetName="_L58_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L57" scadeType="bool" targetName="_L57_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L56" scadeType="bool" targetName="_L56_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L55" scadeType="int" targetName="_L55_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L92" scadeType="bool" targetName="_L92_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L93" scadeType="int" targetName="_L93_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L129" scadeType="OperationMode" targetName="_L129_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L128" scadeType="OperationMode" targetName="_L128_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L127" scadeType="OperationMode" targetName="_L127_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L126" scadeType="OperationMode" targetName="_L126_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L125" scadeType="OperationMode" targetName="_L125_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L124" scadeType="OperationMode" targetName="_L124_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L123" scadeType="OperationMode" targetName="_L123_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L122" scadeType="OperationMode" targetName="_L122_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L121" scadeType="OperationMode" targetName="_L121_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L133" scadeType="bool" targetName="_L133_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L134" scadeType="bool" targetName="_L134_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L135" scadeType="bool" targetName="_L135_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L138" scadeType="bool" targetName="_L138_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L137" scadeType="bool" targetName="_L137_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L136" scadeType="bool" targetName="_L136_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L144" scadeType="bool" targetName="_L144_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L143" scadeType="bool" targetName="_L143_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L142" scadeType="bool" targetName="_L142_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L147" scadeType="bool" targetName="_L147_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L146" scadeType="bool" targetName="_L146_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L145" scadeType="bool" targetName="_L145_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L148" scadeType="bool" targetName="_L148_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L149" scadeType="int" targetName="_L149_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L150" scadeType="bool" targetName="_L150_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L151" scadeType="int" targetName="_L151_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L152" scadeType="bool" targetName="_L152_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L153" scadeType="int" targetName="_L153_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L154" scadeType="bool" targetName="_L154_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L155" scadeType="int" targetName="_L155_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L156" scadeType="bool" targetName="_L156_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L157" scadeType="int" targetName="_L157_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L162" scadeType="bool" targetName="_L162_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L163" scadeType="int" targetName="_L163_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L165" scadeType="int" targetName="_L165_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L166" scadeType="bool" targetName="_L166_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L167" scadeType="bool" targetName="_L167_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L168" scadeType="bool" targetName="_L168_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L169" scadeType="int" targetName="_L169_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L170" scadeType="int" targetName="_L170_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L171" scadeType="int" targetName="_L171_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L185" scadeType="bool" targetName="_L185_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L184" scadeType="bool" targetName="_L184_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L183" scadeType="int" targetName="_L183_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L181" scadeType="int" targetName="_L181_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L180" scadeType="int" targetName="_L180_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L179" scadeType="bool" targetName="_L179_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L186" scadeType="int" targetName="_L186_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L199" scadeType="bool" targetName="_L199_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L200" scadeType="real" targetName="_L200_DebugOrDeploy_Debug" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L201" scadeType="bool" targetName="_L201_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L202" scadeType="real" targetName="_L202_DebugOrDeploy_Debug" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L203" scadeType="bool" targetName="_L203_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L204" scadeType="real" targetName="_L204_DebugOrDeploy_Debug" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L205" scadeType="bool" targetName="_L205_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L206" scadeType="real" targetName="_L206_DebugOrDeploy_Debug" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L207" scadeType="bool" targetName="_L207_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L208" scadeType="real" targetName="_L208_DebugOrDeploy_Debug" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L209" scadeType="bool" targetName="_L209_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L210" scadeType="real" targetName="_L210_DebugOrDeploy_Debug" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L211" scadeType="int" targetName="_L211_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L212" scadeType="bool" targetName="_L212_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L213" scadeType="OperationMode" targetName="_L213_DebugOrDeploy_Debug"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L222" scadeType="bool" targetName="_L222_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L223" scadeType="bool" targetName="_L223_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L334" scadeType="bool" targetName="_L334_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L333" scadeType="bool" targetName="_L333_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L332" scadeType="bool" targetName="_L332_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L331" scadeType="bool" targetName="_L331_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L330" scadeType="bool" targetName="_L330_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L329" scadeType="bool" targetName="_L329_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L328" scadeType="bool" targetName="_L328_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L327" scadeType="bool" targetName="_L327_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L341" scadeType="bool" targetName="_L341_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L340" scadeType="bool" targetName="_L340_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L339" scadeType="int" targetName="_L339_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L338" scadeType="int" targetName="_L338_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L337" scadeType="int" targetName="_L337_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L336" scadeType="int" targetName="_L336_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L335" scadeType="bool" targetName="_L335_DebugOrDeploy_Debug" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L342" scadeType="int" targetName="_L342_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L343" scadeType="int" targetName="_L343_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L344" scadeType="int" targetName="_L344_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L350" scadeType="int" targetName="_L350_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L351" scadeType="int" targetName="_L351_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L352" scadeType="int" targetName="_L352_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <Local scadeName="_L355" scadeType="int" targetName="_L355_DebugOrDeploy_Debug" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        <NodeInlining scadeName="linear::MemoryBasic" instName="5">
+          <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_5" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Input scadeName="Init" scadeType="&apos;T" targetName="Init_5" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Input scadeName="Write" scadeType="bool" targetName="Write_5" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_5" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_5" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_5" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy" inCtx="true"/>
+          <Local scadeName="_L5" scadeType="bool" targetName="_L5_5" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_5" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_5" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        </NodeInlining>
+        <NodeInlining scadeName="TEST_SAT_Signal" instName="1">
+          <Input scadeName="Notify" scadeType="bool" targetName="Notify_1" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Input scadeName="NewState" scadeType="bool" targetName="NewState_1" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Output scadeName="CDS_Color" scadeType="int" targetName="CDS_Color_1" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_161" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_1" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_1" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L2" scadeType="int" targetName="_L2_1" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_1" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_1" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        </NodeInlining>
+        <NodeInlining scadeName="TEST_SAT_Signal" instName="2">
+          <Input scadeName="Notify" scadeType="bool" targetName="Notify_2" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Input scadeName="NewState" scadeType="bool" targetName="NewState_2" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Output scadeName="CDS_Color" scadeType="int" targetName="CDS_Color_2" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_2" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_2" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_2" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L2" scadeType="int" targetName="_L2_2" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_2" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_2" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_2" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        </NodeInlining>
+        <NodeInlining scadeName="TEST_SAT_Signal" instName="3">
+          <Input scadeName="Notify" scadeType="bool" targetName="Notify_3" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Input scadeName="NewState" scadeType="bool" targetName="NewState_3" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Output scadeName="CDS_Color" scadeType="int" targetName="CDS_Color_3" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_3" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_3" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_3" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L2" scadeType="int" targetName="_L2_3" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_3" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_3" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_3" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        </NodeInlining>
+        <NodeInlining scadeName="TEST_SAT_Signal" instName="4">
+          <Input scadeName="Notify" scadeType="bool" targetName="Notify_4" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Input scadeName="NewState" scadeType="bool" targetName="NewState_4" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Output scadeName="CDS_Color" scadeType="int" targetName="CDS_Color_4" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_4" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_4" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_4" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L2" scadeType="int" targetName="_L2_4" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_4" targetType="kcg_int"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_4" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_4" targetType="kcg_bool"
+              clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Debug_DebugOrDeploy"/>
+        </NodeInlining>
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_Debug_1_DebugOrDeploy" kind="strong" scadeDest="Deploy"/>
+        </Fork>
+      </State>
+      <State scadeName="Deploy" targetName="SSM_st_Deploy_DebugOrDeploy">
+        <Local scadeName="_L39" scadeType="int" targetName="_L39_DebugOrDeploy_Deploy" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L38" scadeType="bool" targetName="_L38_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L43" scadeType="int" targetName="_L43_DebugOrDeploy_Deploy" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L42" scadeType="bool" targetName="_L42_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L61" scadeType="int" targetName="_L61_DebugOrDeploy_Deploy" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L60" scadeType="bool" targetName="_L60_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L77" scadeType="bool" targetName="_L77_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L76" scadeType="int" targetName="_L76_DebugOrDeploy_Deploy" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L78" scadeType="bool" targetName="_L78_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L79" scadeType="real" targetName="_L79_DebugOrDeploy_Deploy" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L80" scadeType="bool" targetName="_L80_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L81" scadeType="real" targetName="_L81_DebugOrDeploy_Deploy" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L82" scadeType="bool" targetName="_L82_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L83" scadeType="real" targetName="_L83_DebugOrDeploy_Deploy" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L84" scadeType="bool" targetName="_L84_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L85" scadeType="real" targetName="_L85_DebugOrDeploy_Deploy" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L86" scadeType="bool" targetName="_L86_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L87" scadeType="real" targetName="_L87_DebugOrDeploy_Deploy" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L88" scadeType="bool" targetName="_L88_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L89" scadeType="real" targetName="_L89_DebugOrDeploy_Deploy" targetType="kcg_real"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L90" scadeType="bool" targetName="_L90_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L91" scadeType="OperationMode" targetName="_L91_DebugOrDeploy_Deploy"
+            targetType="OperationMode" clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L92" scadeType="bool" targetName="_L92_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L93" scadeType="bool" targetName="_L93_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L94" scadeType="bool" targetName="_L94_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L95" scadeType="bool" targetName="_L95_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L96" scadeType="bool" targetName="_L96_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L97" scadeType="bool" targetName="_L97_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L98" scadeType="bool" targetName="_L98_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L99" scadeType="bool" targetName="_L99_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L100" scadeType="bool" targetName="_L100_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L101" scadeType="bool" targetName="_L101_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L102" scadeType="bool" targetName="_L102_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L103" scadeType="bool" targetName="_L103_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L104" scadeType="bool" targetName="_L104_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L105" scadeType="bool" targetName="_L105_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L106" scadeType="bool" targetName="_L106_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L107" scadeType="bool" targetName="_L107_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L108" scadeType="bool" targetName="_L108_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L109" scadeType="int" targetName="_L109_DebugOrDeploy_Deploy" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L110" scadeType="bool" targetName="_L110_DebugOrDeploy_Deploy" targetType="kcg_bool"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+        <Local scadeName="_L111" scadeType="int" targetName="_L111_DebugOrDeploy_Deploy" targetType="kcg_int"
+            clockVar="_504_DebugOrDeploy_state_act" clockVal="SSM_st_Deploy_DebugOrDeploy"/>
+      </State>
+      <ActiveState targetName="_504_DebugOrDeploy_state_act"/>
+      <NextState targetName="DebugOrDeploy_state_nxt" inCtx="true"/>
+      <SelectedState targetName="DebugOrDeploy_state_sel"/>
+      <ResetActiveState targetName="DebugOrDeploy_reset_act" inCtx="true"/>
+      <ResetNextState targetName="DebugOrDeploy_reset_nxt" inCtx="true"/>
+      <ResetSelectedState targetName="DebugOrDeploy_reset_sel"/>
+      <StrongTransition targetName="_503_DebugOrDeploy_fired_strong"/>
+      <WeakTransition targetName="_502_DebugOrDeploy_fired"/>
+    </Automaton>
+    <NodeInlining scadeName="us11" instName="2">
+      <Input scadeName="SAT_Ejection_Signal" scadeType="bool" targetName="SAT_Ejection_Signal_2" targetType="kcg_bool"/>
+      <Input scadeName="SAT_Initialization_Signal" scadeType="int" targetName="SAT_Initialization_Signal_2"
+          targetType="kcg_int"/>
+      <Input scadeName="CDS_SS_InitializationButton_Pressed" scadeType="bool"
+          targetName="CDS_SS_InitializationButton_Pressed_2" targetType="kcg_bool"/>
+      <Output scadeName="CDS_SS_EjectionLED_Color" scadeType="int" targetName="_119_CDS_SS_EjectionLED_Color_2"
+          targetType="kcg_int"/>
+      <Output scadeName="CDS_SS_InitializationButton_Enabled" scadeType="int"
+          targetName="_118_CDS_SS_InitializationButton_Enabled_2" targetType="kcg_int"/>
+      <Output scadeName="CDS_SS_InitializationButton_Contour" scadeType="int"
+          targetName="_117_CDS_SS_InitializationButton_Contour_2" targetType="kcg_int"/>
+      <Output scadeName="CDS_SS_InitializationButton_Label" scadeType="String_SS"
+          targetName="_116_CDS_SS_InitializationButton_Label_2" targetType="String_SS"/>
+      <Output scadeName="SAT_Initialize" scadeType="bool" targetName="SAT_Initialize_2" targetType="kcg_bool"/>
+      <Local scadeName="timeout" scadeType="bool" targetName="timeout_2" targetType="kcg_bool"/>
+      <Local scadeName="Ejected" scadeType="bool" targetName="Ejected_2" targetType="kcg_bool"/>
+      <Local scadeName="Initialize" scadeType="bool" targetName="Initialize_2" targetType="kcg_bool"/>
+      <Local scadeName="Fail" scadeType="bool" targetName="Fail_2" targetType="kcg_bool"/>
+      <Local scadeName="Success" scadeType="bool" targetName="Success_2" targetType="kcg_bool"/>
+      <Local scadeName="_L87" scadeType="bool" targetName="_L87_2" targetType="kcg_bool"/>
+      <Local scadeName="_L88" scadeType="bool" targetName="_L88_2" targetType="kcg_bool"/>
+      <Local scadeName="_L89" scadeType="int" targetName="_L89_2" targetType="kcg_int"/>
+      <Local scadeName="_L92" scadeType="bool" targetName="_L92_2" targetType="kcg_bool"/>
+      <Local scadeName="_L93" scadeType="bool" targetName="_L93_2" targetType="kcg_bool"/>
+      <Local scadeName="_L95" scadeType="bool" targetName="_L95_2" targetType="kcg_bool"/>
+      <Local scadeName="_L97" scadeType="bool" targetName="_L97_2" targetType="kcg_bool"/>
+      <Automaton scadeName="Initialization" targetStatesType="SSM_ST_Initialization"
+          targetTransitionsType="SSM_TR_Initialization">
+        <State scadeName="Off" targetName="SSM_st_Off_Initialization">
+          <Local scadeName="_L10" scadeType="int" targetName="_L10_2_Initialization_Off" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Off_Initialization"/>
+          <Local scadeName="_L11" scadeType="int" targetName="_L11_2_Initialization_Off" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Off_Initialization"/>
+          <Local scadeName="_L12" scadeType="int" targetName="_L12_2_Initialization_Off" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Off_Initialization"/>
+          <Local scadeName="_L13" scadeType="String_SS" targetName="_L13_2_Initialization_Off" targetType="String_SS"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Off_Initialization"/>
+          <Local scadeName="_L14" scadeType="bool" targetName="_L14_2_Initialization_Off" targetType="kcg_bool"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Off_Initialization"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Off_1_Initialization" kind="strong" scadeDest="Ejected"/>
+          </Fork>
+        </State>
+        <State scadeName="Ejected" targetName="SSM_st_Ejected_Initialization">
+          <Local scadeName="_L7" scadeType="int" targetName="_L7_2_Initialization_Ejected" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Ejected_Initialization"/>
+          <Local scadeName="_L5" scadeType="String_SS" targetName="_L5_2_Initialization_Ejected" targetType="String_SS"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Ejected_Initialization"/>
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_2_Initialization_Ejected" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Ejected_Initialization"/>
+          <Local scadeName="_L8" scadeType="int" targetName="_L8_2_Initialization_Ejected" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Ejected_Initialization"/>
+          <Local scadeName="_L10" scadeType="bool" targetName="_L10_2_Initialization_Ejected" targetType="kcg_bool"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Ejected_Initialization"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Ejected_1_Initialization" kind="strong" scadeDest="Initializing"/>
+          </Fork>
+        </State>
+        <State scadeName="Initializing" targetName="SSM_st_Initializing_Initialization">
+          <Local scadeName="_L16" scadeType="String_SS" targetName="_L16_2_Initialization_Initializing"
+              targetType="String_SS" clockVar="Initialization_state_act_2"
+              clockVal="SSM_st_Initializing_Initialization"/>
+          <Local scadeName="_L15" scadeType="int" targetName="_L15_2_Initialization_Initializing" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
+          <Local scadeName="_L14" scadeType="int" targetName="_L14_2_Initialization_Initializing" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
+          <Local scadeName="_L13" scadeType="int" targetName="_L13_2_Initialization_Initializing" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
+          <Local scadeName="_L18" scadeType="int" targetName="_L18_2_Initialization_Initializing" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
+          <Local scadeName="_L17" scadeType="int" targetName="_L17_2_Initialization_Initializing" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
+          <Memory scadeName="_L20" scadeType="int" targetName="_L20_2_Initialization_Initializing" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization" inCtx="true"/>
+          <Local scadeName="_L22" scadeType="int" targetName="_L22_2_Initialization_Initializing" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
+          <Local scadeName="_L23" scadeType="bool" targetName="_L23_2_Initialization_Initializing" targetType="kcg_bool"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
+          <NodeInstance scadeName="+" instName="2"/>
+          <NodeInstance scadeName="&gt;=" instName="1"/>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_Initializing_3_Initialization" kind="weak" scadeDest="Fail"/>
+          </Fork>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Initializing_1_Initialization" kind="strong" scadeDest="Initialized"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Initializing_2_Initialization" kind="strong" scadeDest="Fail"/>
+          </Fork>
+          <Clock targetName="Initializing_weakb_clock_2_Initialization" targetType="kcg_bool"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
+        </State>
+        <State scadeName="Initialized" targetName="SSM_st_Initialized_Initialization">
+          <Local scadeName="_L5" scadeType="String_SS" targetName="_L5_2_Initialization_Initialized"
+              targetType="String_SS" clockVar="Initialization_state_act_2"
+              clockVal="SSM_st_Initialized_Initialization"/>
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_2_Initialization_Initialized" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initialized_Initialization"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_2_Initialization_Initialized" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initialized_Initialization"/>
+          <Local scadeName="_L2" scadeType="int" targetName="_L2_2_Initialization_Initialized" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initialized_Initialization"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_2_Initialization_Initialized" targetType="kcg_bool"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Initialized_Initialization"/>
+        </State>
+        <State scadeName="Fail" targetName="SSM_st_Fail_Initialization">
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_2_Initialization_Fail" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Fail_Initialization"/>
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_2_Initialization_Fail" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Fail_Initialization"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_2_Initialization_Fail" targetType="kcg_int"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Fail_Initialization"/>
+          <Local scadeName="_L2" scadeType="String_SS" targetName="_L2_2_Initialization_Fail" targetType="String_SS"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Fail_Initialization"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_2_Initialization_Fail" targetType="kcg_bool"
+              clockVar="Initialization_state_act_2" clockVal="SSM_st_Fail_Initialization"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Fail_1_Initialization" kind="strong" scadeDest="Initializing"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="Initialization_state_sel_2"/>
+        <ActiveState targetName="Initialization_state_act_2"/>
+        <NextState targetName="Initialization_state_nxt_2" inCtx="true"/>
+        <ResetSelectedState targetName="Initialization_reset_sel_2"/>
+        <ResetActiveState targetName="Initialization_reset_act_2" inCtx="true"/>
+        <ResetNextState targetName="Initialization_reset_nxt_2" inCtx="true"/>
+        <StrongTransition targetName="Initialization_fired_strong_2"/>
+        <WeakTransition targetName="Initialization_fired_2"/>
+      </Automaton>
+    </NodeInlining>
+    <NodeInlining scadeName="us01" instName="1">
+      <Input scadeName="SAT_AirSpeed_Update" scadeType="bool" targetName="SAT_AirSpeed_Update_1" targetType="kcg_bool"/>
+      <Input scadeName="SAT_AirSpeed_Value" scadeType="real" targetName="SAT_AirSpeed_Value_1" targetType="kcg_real"/>
+      <Input scadeName="SAT_Altitude_Update" scadeType="bool" targetName="SAT_Altitude_Update_1" targetType="kcg_bool"/>
+      <Input scadeName="SAT_Altitude_Value" scadeType="real" targetName="SAT_Altitude_Value_1" targetType="kcg_real"/>
+      <Input scadeName="SAT_Latitude_Update" scadeType="bool" targetName="SAT_Latitude_Update_1" targetType="kcg_bool"/>
+      <Input scadeName="SAT_Latitude_Value" scadeType="real" targetName="SAT_Latitude_Value_1" targetType="kcg_real"/>
+      <Input scadeName="SAT_Longitude_Update" scadeType="bool" targetName="SAT_Longitude_Update_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_Longitude_Value" scadeType="real" targetName="SAT_Longitude_Value_1" targetType="kcg_real"/>
+      <Input scadeName="SAT_DeclinationAngle_Update" scadeType="bool" targetName="SAT_DeclinationAngle_Update_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_DeclinationAngle_Value" scadeType="real" targetName="SAT_DeclinationAngle_Value_1"
+          targetType="kcg_real"/>
+      <Input scadeName="SAT_Period_Update" scadeType="bool" targetName="SAT_Period_Update_1" targetType="kcg_bool"/>
+      <Input scadeName="SAT_Period_Value" scadeType="real" targetName="SAT_Period_Value_1" targetType="kcg_real"/>
+      <Output scadeName="CDS_SI_AirSpeed_Value" scadeType="real" targetName="CDS_SI_AirSpeed_Value_1"
+          targetType="kcg_real"/>
+      <Output scadeName="CDS_SI_Altitude_Value" scadeType="real" targetName="CDS_SI_Altitude_Value_1"
+          targetType="kcg_real"/>
+      <Output scadeName="CDS_SI_Latitude_Value" scadeType="real" targetName="CDS_SI_Latitude_Value_1"
+          targetType="kcg_real"/>
+      <Output scadeName="CDS_SI_Longitude_Value" scadeType="real" targetName="CDS_SI_Longitude_Value_1"
+          targetType="kcg_real"/>
+      <Output scadeName="CDS_SI_DeclinationAngle_Value" scadeType="real" targetName="CDS_SI_DeclinationAngle_Value_1"
+          targetType="kcg_real"/>
+      <Output scadeName="CDS_SI_Period_Value" scadeType="real" targetName="CDS_SI_Period_Value_1"
+          targetType="kcg_real"/>
+      <Local scadeName="_L13" scadeType="bool" targetName="_124__L13_1" targetType="kcg_bool"/>
+      <Local scadeName="_L14" scadeType="real" targetName="_123__L14_1" targetType="kcg_real"/>
+      <Local scadeName="_L15" scadeType="bool" targetName="_122__L15_1" targetType="kcg_bool"/>
+      <Local scadeName="_L16" scadeType="real" targetName="_L16_1" targetType="kcg_real"/>
+      <Local scadeName="_L17" scadeType="bool" targetName="_L17_1" targetType="kcg_bool"/>
+      <Local scadeName="_L18" scadeType="real" targetName="_L18_1" targetType="kcg_real"/>
+      <Local scadeName="_L19" scadeType="bool" targetName="_L19_1" targetType="kcg_bool"/>
+      <Local scadeName="_L20" scadeType="real" targetName="_L20_1" targetType="kcg_real"/>
+      <Local scadeName="_L21" scadeType="bool" targetName="_L21_1" targetType="kcg_bool"/>
+      <Local scadeName="_L22" scadeType="real" targetName="_121__L22_1" targetType="kcg_real"/>
+      <Local scadeName="_L23" scadeType="bool" targetName="_120__L23_1" targetType="kcg_bool"/>
+      <Local scadeName="_L24" scadeType="real" targetName="_L24_1" targetType="kcg_real"/>
+      <Local scadeName="_L41" scadeType="real" targetName="_L41_1" targetType="kcg_real"/>
+      <Local scadeName="_L42" scadeType="real" targetName="_L42_1" targetType="kcg_real"/>
+      <Local scadeName="_L43" scadeType="real" targetName="_L43_1" targetType="kcg_real"/>
+      <Local scadeName="_L45" scadeType="real" targetName="_L45_1" targetType="kcg_real"/>
+      <Local scadeName="_L47" scadeType="real" targetName="_L47_1" targetType="kcg_real"/>
+      <Local scadeName="_L48" scadeType="real" targetName="_L48_1" targetType="kcg_real"/>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="1">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_1_1" targetType="kcg_real"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="Init_1_1" targetType="kcg_real"/>
+        <Input scadeName="Write" scadeType="bool" targetName="Write_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_1_1" targetType="kcg_real"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_1_1" targetType="kcg_real"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_1_1" targetType="kcg_real" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_125__L5_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_1_1" targetType="kcg_real"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_1_1" targetType="kcg_real"/>
+      </NodeInlining>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="2">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_2_1" targetType="kcg_real"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="Init_2_1" targetType="kcg_real"/>
+        <Input scadeName="Write" scadeType="bool" targetName="Write_2_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_2_1" targetType="kcg_real"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_2_1" targetType="kcg_real"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_2_1" targetType="kcg_real" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_126__L5_2_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_2_1" targetType="kcg_real"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_2_1" targetType="kcg_real"/>
+      </NodeInlining>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="3">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_3_1" targetType="kcg_real"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="Init_3_1" targetType="kcg_real"/>
+        <Input scadeName="Write" scadeType="bool" targetName="Write_3_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_3_1" targetType="kcg_real"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_3_1" targetType="kcg_real"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_3_1" targetType="kcg_real" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5_3_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_3_1" targetType="kcg_real"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_3_1" targetType="kcg_real"/>
+      </NodeInlining>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="5">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_5_1" targetType="kcg_real"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="Init_5_1" targetType="kcg_real"/>
+        <Input scadeName="Write" scadeType="bool" targetName="Write_5_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_5_1" targetType="kcg_real"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_5_1" targetType="kcg_real"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_5_1" targetType="kcg_real" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5_5_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_5_1" targetType="kcg_real"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_5_1" targetType="kcg_real"/>
+      </NodeInlining>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="7">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_7_1" targetType="kcg_real"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="Init_7_1" targetType="kcg_real"/>
+        <Input scadeName="Write" scadeType="bool" targetName="Write_7_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_7_1" targetType="kcg_real"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_7_1" targetType="kcg_real"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_7_1" targetType="kcg_real" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5_7_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_7_1" targetType="kcg_real"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_7_1" targetType="kcg_real"/>
+      </NodeInlining>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="8">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_8_1" targetType="kcg_real"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="Init_8_1" targetType="kcg_real"/>
+        <Input scadeName="Write" scadeType="bool" targetName="Write_8_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_8_1" targetType="kcg_real"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_8_1" targetType="kcg_real"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_8_1" targetType="kcg_real" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5_8_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_8_1" targetType="kcg_real"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_8_1" targetType="kcg_real"/>
+      </NodeInlining>
+    </NodeInlining>
+    <NodeInlining scadeName="rhuan" instName="1">
+      <Input scadeName="cam_picture_loaded" scadeType="bool" targetName="cam_picture_loaded_1" targetType="kcg_bool"/>
+      <Input scadeName="display_load_picture_btn" scadeType="bool" targetName="display_load_picture_btn_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="display_load_picture_btn_border" scadeType="int"
+          targetName="_163_display_load_picture_btn_border_1" targetType="kcg_int"/>
+      <Output scadeName="display_load_picture_btn_enabled" scadeType="int"
+          targetName="_162_display_load_picture_btn_enabled_1" targetType="kcg_int"/>
+      <Output scadeName="cam_take_picture" scadeType="bool" targetName="cam_take_picture_1" targetType="kcg_bool"/>
+      <Local scadeName="load_success" scadeType="bool" targetName="load_success_1" targetType="kcg_bool"/>
+      <Local scadeName="load_fail" scadeType="bool" targetName="load_fail_1" targetType="kcg_bool"/>
+      <Local scadeName="_L1" scadeType="bool" targetName="_L1_1128" targetType="kcg_bool"/>
+      <Local scadeName="_L2" scadeType="bool" targetName="_L2_1127" targetType="kcg_bool"/>
+      <Automaton scadeName="SM1" targetStatesType="SSM_ST_SM1" targetTransitionsType="SSM_TR_SM1">
+        <State scadeName="Validando" targetName="SSM_st_Validando_SM1">
+          <Local scadeName="_L2" scadeType="int" targetName="_L2_1_SM1_Validando" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_1_SM1_Validando" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+          <Local scadeName="_L10" scadeType="bool" targetName="_L10_1_SM1_Validando" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+          <Local scadeName="_L12" scadeType="bool" targetName="_L12_1_SM1_Validando" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+          <Local scadeName="_L13" scadeType="bool" targetName="_L13_1_SM1_Validando" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+          <Local scadeName="_L14" scadeType="bool" targetName="_L14_1_SM1_Validando" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+          <Local scadeName="_L17" scadeType="int" targetName="_L17_1_SM1_Validando" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+          <Local scadeName="_L19" scadeType="int" targetName="_L19_1_SM1_Validando" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+          <NodeInlining scadeName="TimedSwitcher" instName="1">
+            <Input scadeName="ResetAt" scadeType="int" targetName="ResetAt_1_1" targetType="kcg_int"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Input scadeName="IncAt" scadeType="int" targetName="IncAt_1_1" targetType="kcg_int"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Output scadeName="Count" scadeType="int" targetName="Count_1_1" targetType="kcg_int"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1" mem="true" inCtx="true"/>
+            <Local scadeName="_L1" scadeType="real" targetName="_L1_1_1" targetType="kcg_real"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Local scadeName="_L2" scadeType="int" targetName="_161__L2_1_1" targetType="kcg_int"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Local scadeName="_L3" scadeType="int" targetName="_L3_1_1" targetType="kcg_int" clockVar="SM1_state_act_1"
+                clockVal="SSM_st_Validando_SM1"/>
+            <Local scadeName="_L4" scadeType="real" targetName="_L4_1_1" targetType="kcg_real"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Local scadeName="_L5" scadeType="int" targetName="_160__L5_1_1" targetType="kcg_int"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Local scadeName="_L6" scadeType="int" targetName="_159__L6_1_1" targetType="kcg_int"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Memory scadeName="_L10" scadeType="bool" targetName="_L10_1_1" targetType="kcg_bool"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1" inCtx="true"/>
+            <Local scadeName="_L11" scadeType="int" targetName="_158__L11_1_1" targetType="kcg_int"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Local scadeName="_L12" scadeType="int" targetName="_157__L12_1_1" targetType="kcg_int"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Local scadeName="_L13" scadeType="real" targetName="_L13_1_1" targetType="kcg_real"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <Local scadeName="_L8" scadeType="bool" targetName="_L8_1_1" targetType="kcg_bool"
+                clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+            <NodeInstance scadeName="/" instName="2"/>
+            <NodeInstance scadeName="mod" instName="2"/>
+            <NodeInstance scadeName="real " instName="2"/>
+            <NodeInstance scadeName="int " instName="2"/>
+            <NodeInlining scadeName="pwlinear::ClockCounter" instName="2">
+              <Input scadeName="Reset" scadeType="bool" targetName="Reset_2_1_1" targetType="kcg_bool"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <Output scadeName="Count" scadeType="int" targetName="Count_2_1_1" targetType="kcg_int"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <Memory scadeName="_L1" scadeType="int" targetName="_L1_2_1_1" targetType="kcg_int"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1" inCtx="true"/>
+              <Local scadeName="_L2" scadeType="int" targetName="_L2_2_1_1" targetType="kcg_int"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <Local scadeName="_L6" scadeType="int" targetName="_L6_2_1_1" targetType="kcg_int"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <Local scadeName="_L7" scadeType="int" targetName="_L7_2_1_1" targetType="kcg_int"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <Local scadeName="_L8" scadeType="int" targetName="_L8_2_1_1" targetType="kcg_int"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <Local scadeName="_L11" scadeType="int" targetName="_L11_2_1_1" targetType="kcg_int"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <Local scadeName="_L13" scadeType="bool" targetName="_L13_2_1_1" targetType="kcg_bool"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <Local scadeName="_L16" scadeType="int" targetName="_L16_2_1_1" targetType="kcg_int"
+                  clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"/>
+              <NodeInstance scadeName="+" instName="5"/>
+            </NodeInlining>
+            <NodeInstance scadeName="&gt;=" instName="2"/>
+            <NodeInstance scadeName="real " instName="1"/>
+          </NodeInlining>
+          <NodeInstance scadeName="&gt;=" instName="1"/>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Validando_2_SM1" kind="weak" scadeDest="Erro"/>
+          </Fork>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Validando_1_SM1" kind="strong" scadeDest="Funcionando"/>
+          </Fork>
+          <Clock targetName="Validando_weakb_clock_1_SM1" targetType="kcg_bool" clockVar="SM1_state_act_1"
+              clockVal="SSM_st_Validando_SM1"/>
+        </State>
+        <State scadeName="Funcionando" targetName="SSM_st_Funcionando_SM1">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_SM1_Funcionando" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Funcionando_SM1"/>
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_SM1_Funcionando" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Funcionando_SM1"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_1_SM1_Funcionando" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Funcionando_SM1"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Funcionando_1_SM1" kind="strong" scadeDest="Validando"/>
+          </Fork>
+        </State>
+        <State scadeName="Erro" targetName="SSM_st_Erro_SM1">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_SM1_Erro" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Erro_SM1"/>
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_SM1_Erro" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Erro_SM1"/>
+          <Local scadeName="_L6" scadeType="int" targetName="_L6_1_SM1_Erro" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Erro_SM1"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Erro_1_SM1" kind="strong" scadeDest="Validando"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="SM1_state_sel_1"/>
+        <ActiveState targetName="SM1_state_act_1"/>
+        <NextState targetName="SM1_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="SM1_reset_sel_1"/>
+        <ResetActiveState targetName="SM1_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="SM1_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="SM1_fired_strong_1"/>
+        <WeakTransition targetName="SM1_fired_1"/>
+      </Automaton>
+    </NodeInlining>
+    <NodeInlining scadeName="us14" instName="1">
+      <Input scadeName="SAT_OperationMode_Update" scadeType="bool" targetName="SAT_OperationMode_Update_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_OperationMode_Value" scadeType="OperationMode" targetName="SAT_OperationMode_Value_1"
+          targetType="OperationMode"/>
+      <Input scadeName="CDS_ES_GyroscopeButton_Pressed" scadeType="bool" targetName="CDS_ES_GyroscopeButton_Pressed_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_GyroscopeState_Update" scadeType="bool" targetName="SAT_GyroscopeState_Update_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_GyroscopeState_Value" scadeType="bool" targetName="SAT_GyroscopeState_Value_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="CDS_ES_HorizonSensorButton_Pressed" scadeType="bool"
+          targetName="CDS_ES_HorizonSensorButton_Pressed_1" targetType="kcg_bool"/>
+      <Input scadeName="SAT_HorizonSensorState_Update" scadeType="bool" targetName="SAT_HorizonSensorState_Update_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_HorizonSensorState_Value" scadeType="bool" targetName="SAT_HorizonSensorState_Value_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="CDS_ES_PropellersButton_Pressed" scadeType="bool" targetName="CDS_ES_PropellersButton_Pressed_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_PropellersState_Update" scadeType="bool" targetName="SAT_PropellersState_Update_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_PropellersState_Value" scadeType="bool" targetName="SAT_PropellersState_Value_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="CDS_ES_CameraButton_Pressed" scadeType="bool" targetName="CDS_ES_CameraButton_Pressed_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_CameraState_Update" scadeType="bool" targetName="SAT_CameraState_Update_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_CameraState_Value" scadeType="bool" targetName="SAT_CameraState_Value_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_CameraState_Fail" scadeType="bool" targetName="SAT_CameraState_Fail_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_GyroscopeState_Fail" scadeType="bool" targetName="SAT_GyroscopeState_Fail_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="SAT_HorizonSensorState_Fail" scadeType="bool" targetName="SAT_HorizonSensorState_Fail_1"
+          targetType="kcg_bool"/>
+      <Input scadeName="CDS_Auto_Verify" scadeType="bool" targetName="CDS_Auto_Verify_1" targetType="kcg_bool"/>
+      <Input scadeName="SAT_Fix_Response" scadeType="bool" targetName="SAT_Fix_Response_1" targetType="kcg_bool"/>
+      <Output scadeName="CDS_ES_GyroscopeButton_Enabled" scadeType="int" targetName="CDS_ES_GyroscopeButton_Enabled_1"
+          targetType="kcg_int"/>
+      <Output scadeName="CDS_ES_GyroscopeButton_Contour" scadeType="int"
+          targetName="_447_CDS_ES_GyroscopeButton_Contour_1" targetType="kcg_int"/>
+      <Output scadeName="CDS_ES_GyroscopeButton_Label" scadeType="String_ES"
+          targetName="_446_CDS_ES_GyroscopeButton_Label_1" targetType="String_ES"/>
+      <Output scadeName="CDS_ES_HorizonSensorButton_Enabled" scadeType="int"
+          targetName="CDS_ES_HorizonSensorButton_Enabled_1" targetType="kcg_int"/>
+      <Output scadeName="CDS_ES_HorizonSensorButton_Contour" scadeType="int"
+          targetName="_445_CDS_ES_HorizonSensorButton_Contour_1" targetType="kcg_int"/>
+      <Output scadeName="CDS_ES_HorizonSensorButton_Label" scadeType="String_ES"
+          targetName="_444_CDS_ES_HorizonSensorButton_Label_1" targetType="String_ES"/>
+      <Output scadeName="CDS_ES_PropellersButton_Enabled" scadeType="int" targetName="CDS_ES_PropellersButton_Enabled_1"
+          targetType="kcg_int"/>
+      <Output scadeName="CDS_ES_PropellersButton_Contour" scadeType="int"
+          targetName="_443_CDS_ES_PropellersButton_Contour_1" targetType="kcg_int"/>
+      <Output scadeName="CDS_ES_PropellersButton_Label" scadeType="String_ES"
+          targetName="_442_CDS_ES_PropellersButton_Label_1" targetType="String_ES"/>
+      <Output scadeName="CDS_ES_CameraButton_Enabled" scadeType="int" targetName="CDS_ES_CameraButton_Enabled_1"
+          targetType="kcg_int"/>
+      <Output scadeName="CDS_ES_CameraButton_Contour" scadeType="int" targetName="_441_CDS_ES_CameraButton_Contour_1"
+          targetType="kcg_int"/>
+      <Output scadeName="CDS_ES_CameraButton_Label" scadeType="String_ES" targetName="_440_CDS_ES_CameraButton_Label_1"
+          targetType="String_ES"/>
+      <Output scadeName="SAT_GyroscopeState_Toggle" scadeType="bool" targetName="SAT_GyroscopeState_Toggle_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="SAT_GyroscopeState_ToggleTo" scadeType="bool" targetName="SAT_GyroscopeState_ToggleTo_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="SAT_HorizonSensorState_Toggle" scadeType="bool" targetName="SAT_HorizonSensorState_Toggle_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="SAT_HorizonSensorState_ToggleTo" scadeType="bool"
+          targetName="SAT_HorizonSensorState_ToggleTo_1" targetType="kcg_bool"/>
+      <Output scadeName="SAT_PropellersState_Toggle" scadeType="bool" targetName="SAT_PropellersState_Toggle_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="SAT_PropellersState_ToggleTo" scadeType="bool" targetName="SAT_PropellersState_ToggleTo_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="SAT_CameraState_Toggle" scadeType="bool" targetName="SAT_CameraState_Toggle_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="SAT_CameraState_ToggleTo" scadeType="bool" targetName="SAT_CameraState_ToggleTo_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="CDS_Auto_Verify_Contorno" scadeType="int" targetName="_439_CDS_Auto_Verify_Contorno_1"
+          targetType="kcg_int"/>
+      <Output scadeName="CDS_Auto_Verify_Label" scadeType="String_ES" targetName="_438_CDS_Auto_Verify_Label_1"
+          targetType="String_ES"/>
+      <Output scadeName="CDS_Auto_Verify_Test" scadeType="int" targetName="_437_CDS_Auto_Verify_Test_1"
+          targetType="kcg_int"/>
+      <Output scadeName="SAT_Auto_Verify" scadeType="bool" targetName="_436_SAT_Auto_Verify_1" targetType="kcg_bool"/>
+      <Output scadeName="SAT_Fix_Equipments" scadeType="bool" targetName="_435_SAT_Fix_Equipments_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="CDS_AutoVerifyButton_Enabled" scadeType="int" targetName="CDS_AutoVerifyButton_Enabled_1"
+          targetType="kcg_int"/>
+      <Local scadeName="Toggle_Gyroscope" scadeType="bool" targetName="Toggle_Gyroscope_1" targetType="kcg_bool"/>
+      <Local scadeName="Gyroscope_On" scadeType="bool" targetName="Gyroscope_On_1" targetType="kcg_bool"/>
+      <Local scadeName="Gyroscope_Off" scadeType="bool" targetName="Gyroscope_Off_1" targetType="kcg_bool"/>
+      <Local scadeName="GyroscopeButton_Enabled" scadeType="bool" targetName="GyroscopeButton_Enabled_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="Operating" scadeType="bool" targetName="Operating_1" targetType="kcg_bool"/>
+      <Local scadeName="Toggle_HorizonSensor" scadeType="bool" targetName="Toggle_HorizonSensor_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="HorizonSensor_Off" scadeType="bool" targetName="HorizonSensor_Off_1" targetType="kcg_bool"/>
+      <Local scadeName="HorizonSensor_On" scadeType="bool" targetName="HorizonSensor_On_1" targetType="kcg_bool"/>
+      <Local scadeName="Toggle_Propellers" scadeType="bool" targetName="Toggle_Propellers_1" targetType="kcg_bool"/>
+      <Local scadeName="Propellers_Off" scadeType="bool" targetName="Propellers_Off_1" targetType="kcg_bool"/>
+      <Local scadeName="Propellers_On" scadeType="bool" targetName="Propellers_On_1" targetType="kcg_bool"/>
+      <Local scadeName="Toggle_Camera" scadeType="bool" targetName="Toggle_Camera_1" targetType="kcg_bool"/>
+      <Local scadeName="Camera_Off" scadeType="bool" targetName="Camera_Off_1" targetType="kcg_bool"/>
+      <Local scadeName="Camera_On" scadeType="bool" targetName="Camera_On_1" targetType="kcg_bool"/>
+      <Local scadeName="HorizonSensorButton_Enabled" scadeType="bool" targetName="HorizonSensorButton_Enabled_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="PropellersButton_Enabled" scadeType="bool" targetName="PropellersButton_Enabled_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="CameraButton_Enabled" scadeType="bool" targetName="CameraButton_Enabled_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="Gyroscope_Toggling" scadeType="bool" targetName="Gyroscope_Toggling_1" targetType="kcg_bool"/>
+      <Local scadeName="HorizonSensor_Toggling" scadeType="bool" targetName="HorizonSensor_Toggling_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="Propellers_Toggling" scadeType="bool" targetName="Propellers_Toggling_1" targetType="kcg_bool"/>
+      <Local scadeName="Camera_Toggling" scadeType="bool" targetName="Camera_Toggling_1" targetType="kcg_bool"/>
+      <Local scadeName="Toggle_CameraTo" scadeType="bool" targetName="Toggle_CameraTo_1" targetType="kcg_bool"/>
+      <Local scadeName="Toggle_GyroscopeTo" scadeType="bool" targetName="Toggle_GyroscopeTo_1" targetType="kcg_bool"/>
+      <Local scadeName="Toggle_HorizonSensorTo" scadeType="bool" targetName="Toggle_HorizonSensorTo_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="Toggle_PropellersTo" scadeType="bool" targetName="Toggle_PropellersTo_1" targetType="kcg_bool"/>
+      <Local scadeName="GyroscopeButton_Fail" scadeType="bool" targetName="GyroscopeButton_Fail_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="HorizonSensorButton_Fail" scadeType="bool" targetName="HorizonSensorButton_Fail_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="CameraButton_Fail" scadeType="bool" targetName="CameraButton_Fail_1" targetType="kcg_bool"/>
+      <Local scadeName="Camera_Fail" scadeType="bool" targetName="Camera_Fail_1" targetType="kcg_bool"/>
+      <Local scadeName="Gyroscope_fail" scadeType="bool" targetName="Gyroscope_fail_1" targetType="kcg_bool"/>
+      <Local scadeName="HorizonSensor_Fail" scadeType="bool" targetName="HorizonSensor_Fail_1" targetType="kcg_bool"/>
+      <Local scadeName="AutoVerifyButton_Enabled" scadeType="bool" targetName="AutoVerifyButton_Enabled_1"
+          targetType="kcg_bool"/>
+      <Local scadeName="Fails" scadeType="bool" targetName="Fails_1" targetType="kcg_bool"/>
+      <Local scadeName="_L33" scadeType="bool" targetName="_L33_1" targetType="kcg_bool"/>
+      <Local scadeName="_L43" scadeType="bool" targetName="_166__L43_1" targetType="kcg_bool"/>
+      <Local scadeName="_L42" scadeType="bool" targetName="_165__L42_1" targetType="kcg_bool"/>
+      <Local scadeName="_L41" scadeType="bool" targetName="_164__L41_1" targetType="kcg_bool"/>
+      <Local scadeName="_L40" scadeType="bool" targetName="_L40_1" targetType="kcg_bool"/>
+      <Local scadeName="_L39" scadeType="bool" targetName="_L39_1" targetType="kcg_bool"/>
+      <Local scadeName="_L38" scadeType="bool" targetName="_L38_1" targetType="kcg_bool"/>
+      <Local scadeName="_L35" scadeType="bool" targetName="_L35_1" targetType="kcg_bool"/>
+      <Local scadeName="_L44" scadeType="bool" targetName="_L44_1" targetType="kcg_bool"/>
+      <Local scadeName="_L57" scadeType="bool" targetName="_L57_1" targetType="kcg_bool"/>
+      <Local scadeName="_L58" scadeType="bool" targetName="_L58_1" targetType="kcg_bool"/>
+      <Local scadeName="_L70" scadeType="bool" targetName="_L70_1" targetType="kcg_bool"/>
+      <Local scadeName="_L69" scadeType="bool" targetName="_L69_1" targetType="kcg_bool"/>
+      <Local scadeName="_L68" scadeType="bool" targetName="_L68_1" targetType="kcg_bool"/>
+      <Local scadeName="_L67" scadeType="bool" targetName="_L67_1" targetType="kcg_bool"/>
+      <Local scadeName="_L65" scadeType="bool" targetName="_L65_1" targetType="kcg_bool"/>
+      <Local scadeName="_L61" scadeType="bool" targetName="_L61_1" targetType="kcg_bool"/>
+      <Local scadeName="_L83" scadeType="bool" targetName="_L83_1" targetType="kcg_bool"/>
+      <Local scadeName="_L82" scadeType="bool" targetName="_L82_1" targetType="kcg_bool"/>
+      <Local scadeName="_L81" scadeType="bool" targetName="_L81_1" targetType="kcg_bool"/>
+      <Local scadeName="_L80" scadeType="bool" targetName="_L80_1" targetType="kcg_bool"/>
+      <Local scadeName="_L78" scadeType="bool" targetName="_L78_1" targetType="kcg_bool"/>
+      <Local scadeName="_L74" scadeType="bool" targetName="_L74_1" targetType="kcg_bool"/>
+      <Local scadeName="_L96" scadeType="bool" targetName="_L96_1" targetType="kcg_bool"/>
+      <Local scadeName="_L95" scadeType="bool" targetName="_L95_1" targetType="kcg_bool"/>
+      <Local scadeName="_L94" scadeType="bool" targetName="_L94_1" targetType="kcg_bool"/>
+      <Local scadeName="_L93" scadeType="bool" targetName="_L93_1" targetType="kcg_bool"/>
+      <Local scadeName="_L91" scadeType="bool" targetName="_L91_1" targetType="kcg_bool"/>
+      <Local scadeName="_L87" scadeType="bool" targetName="_L87_1" targetType="kcg_bool"/>
+      <Local scadeName="_L98" scadeType="bool" targetName="_L98_1" targetType="kcg_bool"/>
+      <Local scadeName="_L99" scadeType="bool" targetName="_L99_1" targetType="kcg_bool"/>
+      <Local scadeName="_L100" scadeType="bool" targetName="_L100_1" targetType="kcg_bool"/>
+      <Local scadeName="_L101" scadeType="bool" targetName="_L101_1" targetType="kcg_bool"/>
+      <Local scadeName="_L102" scadeType="bool" targetName="_L102_1" targetType="kcg_bool"/>
+      <Local scadeName="_L103" scadeType="bool" targetName="_L103_1" targetType="kcg_bool"/>
+      <Local scadeName="_L104" scadeType="bool" targetName="_L104_1" targetType="kcg_bool"/>
+      <Local scadeName="_L105" scadeType="bool" targetName="_L105_1" targetType="kcg_bool"/>
+      <Local scadeName="_L106" scadeType="bool" targetName="_L106_1" targetType="kcg_bool"/>
+      <Local scadeName="_L107" scadeType="bool" targetName="_L107_1" targetType="kcg_bool"/>
+      <Local scadeName="_L108" scadeType="bool" targetName="_L108_1" targetType="kcg_bool"/>
+      <Local scadeName="_L109" scadeType="bool" targetName="_L109_1" targetType="kcg_bool"/>
+      <Local scadeName="_L110" scadeType="bool" targetName="_L110_1" targetType="kcg_bool"/>
+      <Local scadeName="_L111" scadeType="bool" targetName="_L111_1" targetType="kcg_bool"/>
+      <Local scadeName="_L112" scadeType="bool" targetName="_L112_1" targetType="kcg_bool"/>
+      <Local scadeName="_L123" scadeType="bool" targetName="_L123_1" targetType="kcg_bool"/>
+      <Local scadeName="_L122" scadeType="OperationMode" targetName="_L122_1" targetType="OperationMode"/>
+      <Local scadeName="_L121" scadeType="bool" targetName="_L121_1" targetType="kcg_bool"/>
+      <Local scadeName="_L120" scadeType="bool" targetName="_L120_1" targetType="kcg_bool"/>
+      <Local scadeName="_L119" scadeType="bool" targetName="_L119_1" targetType="kcg_bool"/>
+      <Local scadeName="_L124" scadeType="int" targetName="_L124_1" targetType="kcg_int"/>
+      <Local scadeName="_L125" scadeType="int" targetName="_L125_1" targetType="kcg_int"/>
+      <Local scadeName="_L126" scadeType="int" targetName="_L126_1" targetType="kcg_int"/>
+      <Local scadeName="_L129" scadeType="int" targetName="_L129_1" targetType="kcg_int"/>
+      <Local scadeName="_L128" scadeType="int" targetName="_L128_1" targetType="kcg_int"/>
+      <Local scadeName="_L127" scadeType="int" targetName="_L127_1" targetType="kcg_int"/>
+      <Local scadeName="_L132" scadeType="int" targetName="_L132_1" targetType="kcg_int"/>
+      <Local scadeName="_L131" scadeType="int" targetName="_L131_1" targetType="kcg_int"/>
+      <Local scadeName="_L130" scadeType="int" targetName="_L130_1" targetType="kcg_int"/>
+      <Local scadeName="_L138" scadeType="int" targetName="_L138_1" targetType="kcg_int"/>
+      <Local scadeName="_L137" scadeType="int" targetName="_L137_1" targetType="kcg_int"/>
+      <Local scadeName="_L136" scadeType="int" targetName="_L136_1" targetType="kcg_int"/>
+      <Local scadeName="_L139" scadeType="bool" targetName="_L139_1" targetType="kcg_bool"/>
+      <Local scadeName="_L140" scadeType="bool" targetName="_L140_1" targetType="kcg_bool"/>
+      <Local scadeName="_L142" scadeType="bool" targetName="_L142_1" targetType="kcg_bool"/>
+      <Local scadeName="_L141" scadeType="bool" targetName="_L141_1" targetType="kcg_bool"/>
+      <Local scadeName="_L144" scadeType="bool" targetName="_L144_1" targetType="kcg_bool"/>
+      <Local scadeName="_L143" scadeType="bool" targetName="_L143_1" targetType="kcg_bool"/>
+      <Local scadeName="_L148" scadeType="bool" targetName="_L148_1" targetType="kcg_bool"/>
+      <Local scadeName="_L147" scadeType="bool" targetName="_L147_1" targetType="kcg_bool"/>
+      <Local scadeName="_L149" scadeType="bool" targetName="_L149_1" targetType="kcg_bool"/>
+      <Local scadeName="_L150" scadeType="bool" targetName="_L150_1" targetType="kcg_bool"/>
+      <Local scadeName="_L151" scadeType="bool" targetName="_L151_1" targetType="kcg_bool"/>
+      <Local scadeName="_L152" scadeType="bool" targetName="_L152_1" targetType="kcg_bool"/>
+      <Local scadeName="_L155" scadeType="OperationMode" targetName="_L155_1" targetType="OperationMode"/>
+      <Local scadeName="_L160" scadeType="bool" targetName="_L160_1" targetType="kcg_bool"/>
+      <Local scadeName="_L161" scadeType="bool" targetName="_L161_1" targetType="kcg_bool"/>
+      <Local scadeName="_L162" scadeType="bool" targetName="_L162_1" targetType="kcg_bool"/>
+      <Local scadeName="_L163" scadeType="bool" targetName="_L163_1" targetType="kcg_bool"/>
+      <Local scadeName="_L164" scadeType="bool" targetName="_L164_1" targetType="kcg_bool"/>
+      <Local scadeName="_L165" scadeType="bool" targetName="_L165_1" targetType="kcg_bool"/>
+      <Local scadeName="_L166" scadeType="bool" targetName="_L166_1" targetType="kcg_bool"/>
+      <Local scadeName="_L167" scadeType="bool" targetName="_L167_1" targetType="kcg_bool"/>
+      <Local scadeName="_L170" scadeType="bool" targetName="_L170_1" targetType="kcg_bool"/>
+      <Local scadeName="_L171" scadeType="bool" targetName="_L171_1" targetType="kcg_bool"/>
+      <Local scadeName="_L172" scadeType="bool" targetName="_L172_1" targetType="kcg_bool"/>
+      <Local scadeName="_L174" scadeType="bool" targetName="_L174_1" targetType="kcg_bool"/>
+      <Local scadeName="_L175" scadeType="bool" targetName="_L175_1" targetType="kcg_bool"/>
+      <Local scadeName="_L176" scadeType="bool" targetName="_L176_1" targetType="kcg_bool"/>
+      <Local scadeName="_L177" scadeType="bool" targetName="_L177_1" targetType="kcg_bool"/>
+      <Local scadeName="_L178" scadeType="bool" targetName="_L178_1" targetType="kcg_bool"/>
+      <Local scadeName="_L180" scadeType="bool" targetName="_L180_1" targetType="kcg_bool"/>
+      <Local scadeName="_L182" scadeType="bool" targetName="_L182_1" targetType="kcg_bool"/>
+      <Local scadeName="_L183" scadeType="bool" targetName="_L183_1" targetType="kcg_bool"/>
+      <Local scadeName="_L184" scadeType="bool" targetName="_L184_1" targetType="kcg_bool"/>
+      <Local scadeName="_L185" scadeType="bool" targetName="_L185_1" targetType="kcg_bool"/>
+      <Local scadeName="_L186" scadeType="int" targetName="_L186_1" targetType="kcg_int"/>
+      <Local scadeName="_L187" scadeType="int" targetName="_L187_1" targetType="kcg_int"/>
+      <Local scadeName="_L188" scadeType="int" targetName="_L188_1" targetType="kcg_int"/>
+      <Local scadeName="_L190" scadeType="bool" targetName="_L190_1" targetType="kcg_bool"/>
+      <Local scadeName="_L192" scadeType="bool" targetName="_L192_1" targetType="kcg_bool"/>
+      <Local scadeName="_L193" scadeType="bool" targetName="_L193_1" targetType="kcg_bool"/>
+      <Local scadeName="_L194" scadeType="bool" targetName="_L194_1" targetType="kcg_bool"/>
+      <Local scadeName="_L196" scadeType="bool" targetName="_L196_1" targetType="kcg_bool"/>
+      <Local scadeName="_L195" scadeType="bool" targetName="_L195_1" targetType="kcg_bool"/>
+      <Automaton scadeName="StateGyroscope" targetStatesType="SSM_ST_StateGyroscope"
+          targetTransitionsType="SSM_TR_StateGyroscope">
+        <State scadeName="Off" targetName="SSM_st_Off_StateGyroscope">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_StateGyroscope_Off" targetType="kcg_int"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Off_StateGyroscope"/>
+          <Local scadeName="_L3" scadeType="String_ES" targetName="_L3_1_StateGyroscope_Off" targetType="String_ES"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Off_StateGyroscope"/>
+          <Local scadeName="_L5" scadeType="bool" targetName="_L5_1_StateGyroscope_Off" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Off_StateGyroscope"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_1_StateGyroscope_Off" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Off_StateGyroscope"/>
+          <Local scadeName="_L9" scadeType="bool" targetName="_L9_1_StateGyroscope_Off" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Off_StateGyroscope"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Off_1_StateGyroscope" kind="strong" scadeDest="TurningOn"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Off_2_StateGyroscope" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_Off_3_StateGyroscope" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="On" targetName="SSM_st_On_StateGyroscope">
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_1_StateGyroscope_On" targetType="kcg_int"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_On_StateGyroscope"/>
+          <Local scadeName="_L3" scadeType="String_ES" targetName="_L3_1_StateGyroscope_On" targetType="String_ES"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_On_StateGyroscope"/>
+          <Local scadeName="_L5" scadeType="bool" targetName="_L5_1_StateGyroscope_On" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_On_StateGyroscope"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_1_StateGyroscope_On" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_On_StateGyroscope"/>
+          <Local scadeName="_L8" scadeType="bool" targetName="_L8_1_StateGyroscope_On" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_On_StateGyroscope"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_On_1_StateGyroscope" kind="strong" scadeDest="TurningOff"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_On_2_StateGyroscope" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_On_3_StateGyroscope" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="TurningOff" targetName="SSM_st_TurningOff_StateGyroscope">
+          <Local scadeName="_L26" scadeType="String_ES" targetName="_L26_1_StateGyroscope_TurningOff"
+              targetType="String_ES" clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOff_StateGyroscope"/>
+          <Local scadeName="_L25" scadeType="int" targetName="_L25_1_StateGyroscope_TurningOff" targetType="kcg_int"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOff_StateGyroscope"/>
+          <Local scadeName="_L27" scadeType="bool" targetName="_L27_1_StateGyroscope_TurningOff" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOff_StateGyroscope"/>
+          <Local scadeName="_L28" scadeType="bool" targetName="_L28_1_StateGyroscope_TurningOff" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOff_StateGyroscope"/>
+          <Local scadeName="_L30" scadeType="bool" targetName="_L30_1_StateGyroscope_TurningOff" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOff_StateGyroscope"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_TurningOff_1_StateGyroscope" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_TurningOff_2_StateGyroscope" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_TurningOff_3_StateGyroscope" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="Fail" targetName="SSM_st_Fail_StateGyroscope">
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_StateGyroscope_Fail" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Fail_StateGyroscope"/>
+          <Local scadeName="_L1" scadeType="bool" targetName="_L1_1_StateGyroscope_Fail" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Fail_StateGyroscope"/>
+          <Local scadeName="_L6" scadeType="int" targetName="_L6_1_StateGyroscope_Fail" targetType="kcg_int"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Fail_StateGyroscope"/>
+          <Local scadeName="_L7" scadeType="String_ES" targetName="_L7_1_StateGyroscope_Fail" targetType="String_ES"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Fail_StateGyroscope"/>
+          <Local scadeName="_L10" scadeType="bool" targetName="_L10_1_StateGyroscope_Fail" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_Fail_StateGyroscope"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="not" instName="36"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Fail_1_StateGyroscope" kind="strong" scadeDest="Off"/>
+          </Fork>
+        </State>
+        <State scadeName="TurningOn" targetName="SSM_st_TurningOn_StateGyroscope">
+          <Local scadeName="_L14" scadeType="int" targetName="_L14_1_StateGyroscope_TurningOn" targetType="kcg_int"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOn_StateGyroscope"/>
+          <Local scadeName="_L15" scadeType="String_ES" targetName="_L15_1_StateGyroscope_TurningOn"
+              targetType="String_ES" clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOn_StateGyroscope"/>
+          <Local scadeName="_L16" scadeType="bool" targetName="_L16_1_StateGyroscope_TurningOn" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOn_StateGyroscope"/>
+          <Local scadeName="_L17" scadeType="bool" targetName="_L17_1_StateGyroscope_TurningOn" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOn_StateGyroscope"/>
+          <Local scadeName="_L19" scadeType="bool" targetName="_L19_1_StateGyroscope_TurningOn" targetType="kcg_bool"
+              clockVar="StateGyroscope_state_act_1" clockVal="SSM_st_TurningOn_StateGyroscope"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_TurningOn_1_StateGyroscope" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_TurningOn_2_StateGyroscope" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_TurningOn_3_StateGyroscope" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="StateGyroscope_state_sel_1"/>
+        <ActiveState targetName="StateGyroscope_state_act_1"/>
+        <NextState targetName="StateGyroscope_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="StateGyroscope_reset_sel_1"/>
+        <ResetActiveState targetName="StateGyroscope_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="StateGyroscope_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="StateGyroscope_fired_strong_1"/>
+        <WeakTransition targetName="StateGyroscope_fired_1"/>
+      </Automaton>
+      <NodeInstance scadeName="not" instName="23"/>
+      <NodeInstance scadeName="and" instName="7"/>
+      <Automaton scadeName="ManualOperation" targetStatesType="SSM_ST_ManualOperation"
+          targetTransitionsType="SSM_TR_ManualOperation">
+        <State scadeName="Enabled" targetName="SSM_st_Enabled_ManualOperation">
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_ManualOperation_Enabled" targetType="kcg_bool"
+              clockVar="ManualOperation_state_act_1" clockVal="SSM_st_Enabled_ManualOperation"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="not" instName="16"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Enabled_1_ManualOperation" kind="strong" scadeDest="Disabled"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Enabled_2_ManualOperation" kind="strong" scadeDest="Enabled"/>
+          </Fork>
+        </State>
+        <State scadeName="Disabled" targetName="SSM_st_Disabled_ManualOperation">
+          <Local scadeName="_L2" scadeType="bool" targetName="_L2_1_ManualOperation_Disabled" targetType="kcg_bool"
+              clockVar="ManualOperation_state_act_1" clockVal="SSM_st_Disabled_ManualOperation"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Disabled_1_ManualOperation" kind="strong" scadeDest="Enabled"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition>
+              <NodeInstance scadeName="not" instName="17"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Disabled_2_ManualOperation" kind="strong" scadeDest="Disabled"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="ManualOperation_state_sel_1"/>
+        <ActiveState targetName="ManualOperation_state_act_1"/>
+        <NextState targetName="ManualOperation_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="ManualOperation_reset_sel_1"/>
+        <ResetActiveState targetName="ManualOperation_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="ManualOperation_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="ManualOperation_fired_strong_1"/>
+        <WeakTransition targetName="ManualOperation_fired_1"/>
+      </Automaton>
+      <NodeInstance scadeName="and" instName="8"/>
+      <NodeInstance scadeName="not" instName="24"/>
+      <Automaton scadeName="StateHorizonSensor" targetStatesType="SSM_ST_StateHorizonSensor"
+          targetTransitionsType="SSM_TR_StateHorizonSensor">
+        <State scadeName="Off" targetName="SSM_st_Off_StateHorizonSensor">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_StateHorizonSensor_Off" targetType="kcg_int"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Off_StateHorizonSensor"/>
+          <Local scadeName="_L2" scadeType="String_ES" targetName="_L2_1_StateHorizonSensor_Off" targetType="String_ES"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Off_StateHorizonSensor"/>
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_StateHorizonSensor_Off" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Off_StateHorizonSensor"/>
+          <Local scadeName="_L5" scadeType="bool" targetName="_L5_1_StateHorizonSensor_Off" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Off_StateHorizonSensor"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_1_StateHorizonSensor_Off" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Off_StateHorizonSensor"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Off_1_StateHorizonSensor" kind="strong" scadeDest="TurningOn"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Off_2_StateHorizonSensor" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_Off_3_StateHorizonSensor" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="TurningOn" targetName="SSM_st_TurningOn_StateHorizonSensor">
+          <Local scadeName="_L14" scadeType="int" targetName="_L14_1_StateHorizonSensor_TurningOn" targetType="kcg_int"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_TurningOn_StateHorizonSensor"/>
+          <Local scadeName="_L13" scadeType="String_ES" targetName="_L13_1_StateHorizonSensor_TurningOn"
+              targetType="String_ES" clockVar="StateHorizonSensor_state_act_1"
+              clockVal="SSM_st_TurningOn_StateHorizonSensor"/>
+          <Local scadeName="_L15" scadeType="bool" targetName="_L15_1_StateHorizonSensor_TurningOn"
+              targetType="kcg_bool" clockVar="StateHorizonSensor_state_act_1"
+              clockVal="SSM_st_TurningOn_StateHorizonSensor"/>
+          <Local scadeName="_L16" scadeType="bool" targetName="_L16_1_StateHorizonSensor_TurningOn"
+              targetType="kcg_bool" clockVar="StateHorizonSensor_state_act_1"
+              clockVal="SSM_st_TurningOn_StateHorizonSensor"/>
+          <Local scadeName="_L18" scadeType="bool" targetName="_L18_1_StateHorizonSensor_TurningOn"
+              targetType="kcg_bool" clockVar="StateHorizonSensor_state_act_1"
+              clockVal="SSM_st_TurningOn_StateHorizonSensor"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_TurningOn_1_StateHorizonSensor" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_TurningOn_2_StateHorizonSensor" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_TurningOn_3_StateHorizonSensor" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="On" targetName="SSM_st_On_StateHorizonSensor">
+          <Local scadeName="_L4" scadeType="String_ES" targetName="_L4_1_StateHorizonSensor_On" targetType="String_ES"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_On_StateHorizonSensor"/>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_1_StateHorizonSensor_On" targetType="kcg_int"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_On_StateHorizonSensor"/>
+          <Local scadeName="_L5" scadeType="bool" targetName="_L5_1_StateHorizonSensor_On" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_On_StateHorizonSensor"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_1_StateHorizonSensor_On" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_On_StateHorizonSensor"/>
+          <Local scadeName="_L9" scadeType="bool" targetName="_L9_1_StateHorizonSensor_On" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_On_StateHorizonSensor"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_On_1_StateHorizonSensor" kind="strong" scadeDest="TurningOff"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_On_2_StateHorizonSensor" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_On_3_StateHorizonSensor" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="TurningOff" targetName="SSM_st_TurningOff_StateHorizonSensor">
+          <Local scadeName="_L27" scadeType="int" targetName="_L27_1_StateHorizonSensor_TurningOff" targetType="kcg_int"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_TurningOff_StateHorizonSensor"/>
+          <Local scadeName="_L26" scadeType="String_ES" targetName="_L26_1_StateHorizonSensor_TurningOff"
+              targetType="String_ES" clockVar="StateHorizonSensor_state_act_1"
+              clockVal="SSM_st_TurningOff_StateHorizonSensor"/>
+          <Local scadeName="_L28" scadeType="bool" targetName="_L28_1_StateHorizonSensor_TurningOff"
+              targetType="kcg_bool" clockVar="StateHorizonSensor_state_act_1"
+              clockVal="SSM_st_TurningOff_StateHorizonSensor"/>
+          <Local scadeName="_L29" scadeType="bool" targetName="_L29_1_StateHorizonSensor_TurningOff"
+              targetType="kcg_bool" clockVar="StateHorizonSensor_state_act_1"
+              clockVal="SSM_st_TurningOff_StateHorizonSensor"/>
+          <Local scadeName="_L31" scadeType="bool" targetName="_L31_1_StateHorizonSensor_TurningOff"
+              targetType="kcg_bool" clockVar="StateHorizonSensor_state_act_1"
+              clockVal="SSM_st_TurningOff_StateHorizonSensor"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_TurningOff_1_StateHorizonSensor" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_TurningOff_2_StateHorizonSensor" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_TurningOff_3_StateHorizonSensor" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="Fail" targetName="SSM_st_Fail_StateHorizonSensor">
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_StateHorizonSensor_Fail" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Fail_StateHorizonSensor"/>
+          <Local scadeName="_L1" scadeType="bool" targetName="_L1_1_StateHorizonSensor_Fail" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Fail_StateHorizonSensor"/>
+          <Local scadeName="_L6" scadeType="int" targetName="_L6_1_StateHorizonSensor_Fail" targetType="kcg_int"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Fail_StateHorizonSensor"/>
+          <Local scadeName="_L7" scadeType="String_ES" targetName="_L7_1_StateHorizonSensor_Fail" targetType="String_ES"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Fail_StateHorizonSensor"/>
+          <Local scadeName="_L18" scadeType="bool" targetName="_L18_1_StateHorizonSensor_Fail" targetType="kcg_bool"
+              clockVar="StateHorizonSensor_state_act_1" clockVal="SSM_st_Fail_StateHorizonSensor"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="not" instName="38"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Fail_1_StateHorizonSensor" kind="strong" scadeDest="Off"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="StateHorizonSensor_state_sel_1"/>
+        <ActiveState targetName="StateHorizonSensor_state_act_1"/>
+        <NextState targetName="StateHorizonSensor_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="StateHorizonSensor_reset_sel_1"/>
+        <ResetActiveState targetName="StateHorizonSensor_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="StateHorizonSensor_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="StateHorizonSensor_fired_strong_1"/>
+        <WeakTransition targetName="StateHorizonSensor_fired_1"/>
+      </Automaton>
+      <NodeInstance scadeName="and" instName="9"/>
+      <NodeInstance scadeName="not" instName="25"/>
+      <Automaton scadeName="StatePropellers" targetStatesType="SSM_ST_StatePropellers"
+          targetTransitionsType="SSM_TR_StatePropellers">
+        <State scadeName="Off" targetName="SSM_st_Off_StatePropellers">
+          <Local scadeName="_L3" scadeType="String_ES" targetName="_L3_1_StatePropellers_Off" targetType="String_ES"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_Off_StatePropellers"/>
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_StatePropellers_Off" targetType="kcg_int"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_Off_StatePropellers"/>
+          <Local scadeName="_L5" scadeType="bool" targetName="_L5_1_StatePropellers_Off" targetType="kcg_bool"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_Off_StatePropellers"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_1_StatePropellers_Off" targetType="kcg_bool"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_Off_StatePropellers"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Off_1_StatePropellers" kind="strong" scadeDest="TurningOn"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Off_2_StatePropellers" kind="strong" scadeDest="On"/>
+          </Fork>
+        </State>
+        <State scadeName="TurningOn" targetName="SSM_st_TurningOn_StatePropellers">
+          <Local scadeName="_L15" scadeType="int" targetName="_L15_1_StatePropellers_TurningOn" targetType="kcg_int"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_TurningOn_StatePropellers"/>
+          <Local scadeName="_L14" scadeType="String_ES" targetName="_L14_1_StatePropellers_TurningOn"
+              targetType="String_ES" clockVar="StatePropellers_state_act_1"
+              clockVal="SSM_st_TurningOn_StatePropellers"/>
+          <Local scadeName="_L16" scadeType="bool" targetName="_L16_1_StatePropellers_TurningOn" targetType="kcg_bool"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_TurningOn_StatePropellers"/>
+          <Local scadeName="_L17" scadeType="bool" targetName="_L17_1_StatePropellers_TurningOn" targetType="kcg_bool"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_TurningOn_StatePropellers"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_TurningOn_1_StatePropellers" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_TurningOn_2_StatePropellers" kind="strong" scadeDest="Off"/>
+          </Fork>
+        </State>
+        <State scadeName="On" targetName="SSM_st_On_StatePropellers">
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_1_StatePropellers_On" targetType="kcg_int"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_On_StatePropellers"/>
+          <Local scadeName="_L4" scadeType="String_ES" targetName="_L4_1_StatePropellers_On" targetType="String_ES"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_On_StatePropellers"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_1_StatePropellers_On" targetType="kcg_bool"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_On_StatePropellers"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_1_StatePropellers_On" targetType="kcg_bool"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_On_StatePropellers"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_On_1_StatePropellers" kind="strong" scadeDest="TurningOff"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_On_2_StatePropellers" kind="strong" scadeDest="Off"/>
+          </Fork>
+        </State>
+        <State scadeName="TurningOff" targetName="SSM_st_TurningOff_StatePropellers">
+          <Local scadeName="_L31" scadeType="int" targetName="_L31_1_StatePropellers_TurningOff" targetType="kcg_int"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_TurningOff_StatePropellers"/>
+          <Local scadeName="_L30" scadeType="String_ES" targetName="_L30_1_StatePropellers_TurningOff"
+              targetType="String_ES" clockVar="StatePropellers_state_act_1"
+              clockVal="SSM_st_TurningOff_StatePropellers"/>
+          <Local scadeName="_L32" scadeType="bool" targetName="_L32_1_StatePropellers_TurningOff" targetType="kcg_bool"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_TurningOff_StatePropellers"/>
+          <Local scadeName="_L33" scadeType="bool" targetName="_L33_1_StatePropellers_TurningOff" targetType="kcg_bool"
+              clockVar="StatePropellers_state_act_1" clockVal="SSM_st_TurningOff_StatePropellers"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_TurningOff_1_StatePropellers" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_TurningOff_2_StatePropellers" kind="strong" scadeDest="On"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="StatePropellers_state_sel_1"/>
+        <ActiveState targetName="StatePropellers_state_act_1"/>
+        <NextState targetName="StatePropellers_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="StatePropellers_reset_sel_1"/>
+        <ResetActiveState targetName="StatePropellers_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="StatePropellers_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="StatePropellers_fired_strong_1"/>
+        <WeakTransition targetName="StatePropellers_fired_1"/>
+      </Automaton>
+      <NodeInstance scadeName="and" instName="10"/>
+      <NodeInstance scadeName="not" instName="26"/>
+      <Automaton scadeName="StateCamera" targetStatesType="SSM_ST_StateCamera"
+          targetTransitionsType="SSM_TR_StateCamera">
+        <State scadeName="Off" targetName="SSM_st_Off_StateCamera">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_StateCamera_Off" targetType="kcg_int"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Off_StateCamera"/>
+          <Local scadeName="_L2" scadeType="String_ES" targetName="_L2_1_StateCamera_Off" targetType="String_ES"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Off_StateCamera"/>
+          <Local scadeName="_L4" scadeType="bool" targetName="_L4_1_StateCamera_Off" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Off_StateCamera"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_1_StateCamera_Off" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Off_StateCamera"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_1_StateCamera_Off" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Off_StateCamera"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_Off_1_StateCamera" kind="strong" scadeDest="TurningOn"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Off_2_StateCamera" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_Off_3_StateCamera" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="TurningOn" targetName="SSM_st_TurningOn_StateCamera">
+          <Local scadeName="_L15" scadeType="int" targetName="_L15_1_StateCamera_TurningOn" targetType="kcg_int"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOn_StateCamera"/>
+          <Local scadeName="_L14" scadeType="String_ES" targetName="_L14_1_StateCamera_TurningOn" targetType="String_ES"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOn_StateCamera"/>
+          <Local scadeName="_L16" scadeType="bool" targetName="_L16_1_StateCamera_TurningOn" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOn_StateCamera"/>
+          <Local scadeName="_L17" scadeType="bool" targetName="_L17_1_StateCamera_TurningOn" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOn_StateCamera"/>
+          <Local scadeName="_L19" scadeType="bool" targetName="_L19_1_StateCamera_TurningOn" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOn_StateCamera"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_TurningOn_1_StateCamera" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_TurningOn_2_StateCamera" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_TurningOn_3_StateCamera" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="On" targetName="SSM_st_On_StateCamera">
+          <Local scadeName="_L5" scadeType="String_ES" targetName="_L5_1_StateCamera_On" targetType="String_ES"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_On_StateCamera"/>
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_1_StateCamera_On" targetType="kcg_int"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_On_StateCamera"/>
+          <Local scadeName="_L6" scadeType="bool" targetName="_L6_1_StateCamera_On" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_On_StateCamera"/>
+          <Local scadeName="_L7" scadeType="bool" targetName="_L7_1_StateCamera_On" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_On_StateCamera"/>
+          <Local scadeName="_L9" scadeType="bool" targetName="_L9_1_StateCamera_On" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_On_StateCamera"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_On_1_StateCamera" kind="strong" scadeDest="TurningOff"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_On_2_StateCamera" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_On_3_StateCamera" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="TurningOff" targetName="SSM_st_TurningOff_StateCamera">
+          <Local scadeName="_L27" scadeType="String_ES" targetName="_L27_1_StateCamera_TurningOff"
+              targetType="String_ES" clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOff_StateCamera"/>
+          <Local scadeName="_L26" scadeType="int" targetName="_L26_1_StateCamera_TurningOff" targetType="kcg_int"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOff_StateCamera"/>
+          <Local scadeName="_L28" scadeType="bool" targetName="_L28_1_StateCamera_TurningOff" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOff_StateCamera"/>
+          <Local scadeName="_L29" scadeType="bool" targetName="_L29_1_StateCamera_TurningOff" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOff_StateCamera"/>
+          <Local scadeName="_L31" scadeType="bool" targetName="_L31_1_StateCamera_TurningOff" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_TurningOff_StateCamera"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_TurningOff_1_StateCamera" kind="strong" scadeDest="Off"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_TurningOff_2_StateCamera" kind="strong" scadeDest="On"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_TurningOff_3_StateCamera" kind="strong" scadeDest="Fail"/>
+          </Fork>
+        </State>
+        <State scadeName="Fail" targetName="SSM_st_Fail_StateCamera">
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_StateCamera_Fail" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Fail_StateCamera"/>
+          <Local scadeName="_L1" scadeType="bool" targetName="_L1_1_StateCamera_Fail" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Fail_StateCamera"/>
+          <Local scadeName="_L6" scadeType="int" targetName="_L6_1_StateCamera_Fail" targetType="kcg_int"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Fail_StateCamera"/>
+          <Local scadeName="_L7" scadeType="String_ES" targetName="_L7_1_StateCamera_Fail" targetType="String_ES"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Fail_StateCamera"/>
+          <Local scadeName="_L11" scadeType="bool" targetName="_L11_1_StateCamera_Fail" targetType="kcg_bool"
+              clockVar="StateCamera_state_act_1" clockVal="SSM_st_Fail_StateCamera"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="not" instName="35"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Fail_1_StateCamera" kind="strong" scadeDest="Off"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="StateCamera_state_sel_1"/>
+        <ActiveState targetName="StateCamera_state_act_1"/>
+        <NextState targetName="StateCamera_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="StateCamera_reset_sel_1"/>
+        <ResetActiveState targetName="StateCamera_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="StateCamera_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="StateCamera_fired_strong_1"/>
+        <WeakTransition targetName="StateCamera_fired_1"/>
+      </Automaton>
+      <NodeInstance scadeName="and" instName="11"/>
+      <NodeInstance scadeName="not" instName="27"/>
+      <NodeInstance scadeName="not" instName="28"/>
+      <NodeInstance scadeName="and" instName="12"/>
+      <NodeInstance scadeName="not" instName="29"/>
+      <NodeInstance scadeName="and" instName="13"/>
+      <NodeInstance scadeName="not" instName="31"/>
+      <NodeInstance scadeName="and" instName="15"/>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="2">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="_411_BM_Input_2_1" targetType="OperationMode"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="_412_Init_2_1" targetType="OperationMode"/>
+        <Input scadeName="Write" scadeType="bool" targetName="_413_Write_2_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="_414_Memorized_2_1" targetType="OperationMode"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_418__L2_2_1" targetType="OperationMode"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_4__L4_2_1" targetType="OperationMode" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_417__L5_2_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_416__L6_2_1" targetType="OperationMode"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_415__L7_2_1" targetType="OperationMode"/>
+      </NodeInlining>
+      <NodeInstance scadeName="not" instName="32"/>
+      <NodeInstance scadeName="and" instName="16"/>
+      <NodeInstance scadeName="and" instName="18"/>
+      <NodeInstance scadeName="and" instName="19"/>
+      <Automaton scadeName="AutoVerifyUS14" targetStatesType="SSM_ST_AutoVerifyUS14"
+          targetTransitionsType="SSM_TR_AutoVerifyUS14">
+        <State scadeName="Ativo" targetName="SSM_st_Ativo_AutoVerifyUS14">
+          <Local scadeName="_L14" scadeType="bool" targetName="_L14_1_AutoVerifyUS14_Ativo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L15" scadeType="bool" targetName="_L15_1_AutoVerifyUS14_Ativo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L16" scadeType="bool" targetName="_L16_1_AutoVerifyUS14_Ativo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L17" scadeType="bool" targetName="_L17_1_AutoVerifyUS14_Ativo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L18" scadeType="bool" targetName="_L18_1_AutoVerifyUS14_Ativo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L20" scadeType="int" targetName="_L20_1_AutoVerifyUS14_Ativo" targetType="kcg_int"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L21" scadeType="int" targetName="_L21_1_AutoVerifyUS14_Ativo" targetType="kcg_int"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L26" scadeType="int" targetName="_L26_1_AutoVerifyUS14_Ativo" targetType="kcg_int"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L33" scadeType="int" targetName="_L33_1_AutoVerifyUS14_Ativo" targetType="kcg_int"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L34" scadeType="String_ES" targetName="_L34_1_AutoVerifyUS14_Ativo" targetType="String_ES"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L36" scadeType="int" targetName="_L36_1_AutoVerifyUS14_Ativo" targetType="kcg_int"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L37" scadeType="String_ES" targetName="_L37_1_AutoVerifyUS14_Ativo" targetType="String_ES"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L38" scadeType="String_ES" targetName="_L38_1_AutoVerifyUS14_Ativo" targetType="String_ES"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L19" scadeType="int" targetName="_L19_1_AutoVerifyUS14_Ativo" targetType="kcg_int"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L40" scadeType="bool" targetName="_L40_1_AutoVerifyUS14_Ativo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <Local scadeName="_L42" scadeType="bool" targetName="_L42_1_AutoVerifyUS14_Ativo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+          <NodeInstance scadeName="or" instName="1"/>
+          <NodeInstance scadeName="or" instName="2"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="and" instName="22"/>
+              <NodeInstance scadeName="not" instName="41"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Ativo_1_AutoVerifyUS14" kind="weak" scadeDest="NaoAtivo"/>
+          </Fork>
+          <Clock targetName="Ativo_weakb_clock_1_AutoVerifyUS14" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_Ativo_AutoVerifyUS14"/>
+        </State>
+        <State scadeName="NaoAtivo" targetName="SSM_st_NaoAtivo_AutoVerifyUS14">
+          <Local scadeName="_L4" scadeType="int" targetName="_L4_1_AutoVerifyUS14_NaoAtivo" targetType="kcg_int"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_NaoAtivo_AutoVerifyUS14"/>
+          <Local scadeName="_L6" scadeType="int" targetName="_L6_1_AutoVerifyUS14_NaoAtivo" targetType="kcg_int"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_NaoAtivo_AutoVerifyUS14"/>
+          <Local scadeName="_L8" scadeType="String_ES" targetName="_L8_1_AutoVerifyUS14_NaoAtivo" targetType="String_ES"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_NaoAtivo_AutoVerifyUS14"/>
+          <Local scadeName="_L10" scadeType="bool" targetName="_L10_1_AutoVerifyUS14_NaoAtivo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_NaoAtivo_AutoVerifyUS14"/>
+          <Local scadeName="_L11" scadeType="bool" targetName="_L11_1_AutoVerifyUS14_NaoAtivo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_NaoAtivo_AutoVerifyUS14"/>
+          <Local scadeName="_L13" scadeType="bool" targetName="_L13_1_AutoVerifyUS14_NaoAtivo" targetType="kcg_bool"
+              clockVar="AutoVerifyUS14_state_act_1" clockVal="SSM_st_NaoAtivo_AutoVerifyUS14"/>
+          <Fork priority="1">
+            <Transition targetName="SSM_TR_NaoAtivo_1_AutoVerifyUS14" kind="strong" scadeDest="Ativo"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="AutoVerifyUS14_state_sel_1"/>
+        <ActiveState targetName="AutoVerifyUS14_state_act_1"/>
+        <NextState targetName="AutoVerifyUS14_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="AutoVerifyUS14_reset_sel_1"/>
+        <ResetActiveState targetName="AutoVerifyUS14_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="AutoVerifyUS14_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="AutoVerifyUS14_fired_strong_1"/>
+        <WeakTransition targetName="AutoVerifyUS14_fired_1"/>
+      </Automaton>
+      <NodeInstance scadeName="not" instName="33"/>
+      <NodeInstance scadeName="not" instName="34"/>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="3">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="_419_BM_Input_3_1" targetType="kcg_bool"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="_420_Init_3_1" targetType="kcg_bool"/>
+        <Input scadeName="Write" scadeType="bool" targetName="_421_Write_3_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="_422_Memorized_3_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_426__L2_3_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_5__L4_3_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_425__L5_3_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_424__L6_3_1" targetType="kcg_bool"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_423__L7_3_1" targetType="kcg_bool"/>
+      </NodeInlining>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="4">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_4_1" targetType="kcg_bool"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="Init_4_1" targetType="kcg_bool"/>
+        <Input scadeName="Write" scadeType="bool" targetName="Write_4_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_4_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_4_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_4_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5_4_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_4_1" targetType="kcg_bool"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_4_1" targetType="kcg_bool"/>
+      </NodeInlining>
+      <NodeInlining scadeName="linear::MemoryBasic" instName="5">
+        <Input scadeName="BM_Input" scadeType="&apos;T" targetName="_427_BM_Input_5_1" targetType="kcg_bool"/>
+        <Input scadeName="Init" scadeType="&apos;T" targetName="_428_Init_5_1" targetType="kcg_bool"/>
+        <Input scadeName="Write" scadeType="bool" targetName="_429_Write_5_1" targetType="kcg_bool"/>
+        <Output scadeName="Memorized" scadeType="&apos;T" targetName="_430_Memorized_5_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="&apos;T" targetName="_434__L2_5_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L4" scadeType="&apos;T" targetName="_6__L4_5_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_433__L5_5_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="&apos;T" targetName="_432__L6_5_1" targetType="kcg_bool"/>
+        <Local scadeName="_L7" scadeType="&apos;T" targetName="_431__L7_5_1" targetType="kcg_bool"/>
+      </NodeInlining>
+    </NodeInlining>
+    <Init targetName="init3" targetType="kcg_bool" inCtx="true"/>
+    <Init targetName="init2" targetType="kcg_bool" clockVar="SM1_state_act_1" clockVal="SSM_st_Validando_SM1"
+        inCtx="true"/>
+    <Init targetName="init1" targetType="kcg_bool" clockVar="Initialization_state_act_2"
+        clockVal="SSM_st_Initializing_Initialization" inCtx="true"/>
+    <Init targetName="init" targetType="kcg_bool" clockVar="_504_DebugOrDeploy_state_act"
+        clockVal="SSM_st_Debug_DebugOrDeploy" inCtx="true"/>
+    <OutCtxType targetName="outC_ts05"/>
+    <InCtxType targetName="inC_ts05"/>
+  </RootNode>
+  <ExpNode scadeName="guarino_test_operator"/>
+  <ExpNode scadeName="gustavoloureiro_test_operator"/>
+  <ExpNode scadeName="gustavoloureiro"/>
+  <ExpNode scadeName="hoffmann_test_operator"/>
+  <ExpNode scadeName="kalil_test_operator"/>
+  <ExpNode scadeName="kalil"/>
+  <ExpNode scadeName="leonardo_test_operator"/>
+  <ExpNode scadeName="leonardo"/>
+  <ExpNode scadeName="mayara_test_operator"/>
+  <ExpNode scadeName="mayara"/>
+  <ExpNode scadeName="rhuan_test_operator"/>
+  <ExpNode scadeName="TEST_SAT_Signal"/>
+  <ExpNode scadeName="us11"/>
+  <ExpNode scadeName="us01"/>
+  <ExpNode scadeName="rhuan"/>
+  <ExpNode scadeName="TimedSwitcher"/>
+  <ExpNode scadeName="us14"/>
+  <Package scadeName="linear">
+    <ExpNode scadeName="MemoryBasic"/>
+  </Package>
+  <Package scadeName="pwlinear">
+    <ExpNode scadeName="ClockCounter"/>
+  </Package>
+  <Option name="root_node_name" value="ts05"/>
+  <Option name="target" value="C"/>
+  <Option name="target_dir" value="E:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG"/>
+  <Option name="expall" value="#on#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="optimization_level" value="0"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="global_prefix" value="#off#"/>
+  <Option name="name_length" value="200"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="header" value="#off#"/>
+  <Option name="input_threshold" value="2"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="debug" value="#off#"/>
+  <Option name="probes" value="#off#"/>
+  <Option name="input_file"
+      value="E:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG/scade_model_without_unused.scade"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+  <ArrayType targetName="array_char_13" cellType="kcg_char" size="13" targetCopyFct="kcg_copy_array_char_13"
+      targetCompFct="kcg_comp_array_char_13"/>
+  <ArrayType targetName="array_char_16" cellType="kcg_char" size="16" targetCopyFct="kcg_copy_array_char_16"
+      targetCompFct="kcg_comp_array_char_16"/>
+</Model>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** kcg_trace.xml
+** Generation date: 2014-10-20T13:22:58
+*************************************************************$-->
