@@ -12181,45 +12181,6 @@
 				<StateMachine name="AutoVerifyUS14">
 					<states>
 						<State name="Ativo">
-							<unless>
-								<Transition kind="restart">
-									<target>
-										<StateRef name="NaoAtivo"/>
-									</target>
-									<condition>
-										<!-- CDS_Auto_Verify and  not Fails -->
-										<NAryOp name="21" operator="and">
-											<operands>
-												<IdExpression>
-													<path>
-														<ConstVarRef name="CDS_Auto_Verify"/>
-													</path>
-												</IdExpression>
-												<!--  not Fails -->
-												<UnaryOp name="40" operator="not">
-													<operand>
-														<IdExpression>
-															<path>
-																<ConstVarRef name="Fails"/>
-															</path>
-														</IdExpression>
-													</operand>
-												</UnaryOp>
-											</operands>
-										</NAryOp>
-									</condition>
-									<effect>
-										<Action>
-											<pragmas>
-												<ed:Action oid="!ed/4c3f/5188/26D0/5444ac6213b3"/>
-											</pragmas>
-										</Action>
-									</effect>
-									<pragmas>
-										<ed:Transition oid="!ed/508e/4657/39C/54441869380f"/>
-									</pragmas>
-								</Transition>
-							</unless>
 							<locals>
 								<Variable name="_L14">
 									<type>
@@ -12865,6 +12826,45 @@
 									</pragmas>
 								</Equation>
 							</data>
+							<until>
+								<Transition kind="restart">
+									<target>
+										<StateRef name="NaoAtivo"/>
+									</target>
+									<condition>
+										<!-- CDS_Auto_Verify and  not Fails -->
+										<NAryOp name="22" operator="and">
+											<operands>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="CDS_Auto_Verify"/>
+													</path>
+												</IdExpression>
+												<!--  not Fails -->
+												<UnaryOp name="41" operator="not">
+													<operand>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Fails"/>
+															</path>
+														</IdExpression>
+													</operand>
+												</UnaryOp>
+											</operands>
+										</NAryOp>
+									</condition>
+									<effect>
+										<Action>
+											<pragmas>
+												<ed:Action oid="!ed/4c3f/5188/26D0/5444ac6213b3"/>
+											</pragmas>
+										</Action>
+									</effect>
+									<pragmas>
+										<ed:Transition oid="!ed/508e/4657/39C/54441869380f"/>
+									</pragmas>
+								</Transition>
+							</until>
 							<pragmas>
 								<ed:State oid="!ed/4ebe/4657/39C/544415b61aea" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
 									<diagrams>
