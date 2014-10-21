@@ -5,19 +5,19 @@
 #############################################################
 
 CC = gcc
-CFLAGS = -ansi -Wall -Wextra
+CFLAGS = -ansi -std=gnu99 -Wall -Wextra
 INCLUDES = -I. \
 		   -I../UserApplication/KCG \
 		   -I../../../CommunicationFramework \
-		   -I"$(SCADE_PATH)/SCADE" \
-		   -I"$(SCADE_PATH)/SCADE/include"
+		   -I../../../SCADE \
+		   -I../../../SCADE/include
 SRC := ./IntegrationCode.c \
 	   ../../../CommunicationFramework/CommunicationFramework.c \
 	   ../UserApplication/KCG/$(UA_NODE).c \
 	   ../UserApplication/KCG/kcg_consts.c \
 	   ../UserApplication/KCG/kcg_types.c \
 	   ../UserApplication/KCG/ua.c
-LIBS = -lpthread
+LIBS = -lpthread -lrt
 MKDIR = mkdir -p
 RM = rm -rf
 
