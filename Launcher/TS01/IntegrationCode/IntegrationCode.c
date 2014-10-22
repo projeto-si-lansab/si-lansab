@@ -20,8 +20,6 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
         switch (message.from) {
         case TS01ID:
             printf("Received: Message from TS01 to TS01 \n");
-            ua_inputs.AutoDestruct = input.AutoDestruct;
-            ua_inputs.EnableRocketLaunch = input.EnableRocketLaunch;
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS01 \n");
@@ -31,6 +29,13 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             break;
         case TS04ID:
             printf("Received: Message from TS04 to TS01 \n");
+            ua_inputs.AutoDestruct = input.AutoDestruct;
+            ua_inputs.EnableRocketLaunch = input.EnableRocketLaunch;
+            ua_inputs.Manual_Override = input.Manual_Override;
+            ua_inputs.Manual_StartPhase2 = input.Manual_StartPhase2;
+            ua_inputs.Manual_StartPhase3 = input.Manual_StartPhase3;
+            ua_inputs.Manual_StartPhaseFinal = input.Manual_StartPhaseFinal;
+            ua_inputs.Manual_SatLaunch = input.Manual_SatLaunch;
             break;
         case TS05ID:
             printf("Received: Message from TS05 to TS01 \n");
@@ -61,6 +66,8 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         printf("Sent: Message from TS01 to TS04 \n");
         TS04_INPUT_INTERFACE *output4 = &(message->input_interface.ts04_input_interface);
         /*output->SignalFromTeam1 = ua_outputs.SignalToTeam4;*/
+        output4->RocketStatus = ua_outputs.ControlCenterStatus;
+        output4->SatLaunched = ua_outputs.SatLaunched;
         break;
     case TS05ID:
         printf("Sent: Message from TS01 to TS05 \n");
@@ -80,6 +87,11 @@ void clear_ua_inputs() {
     /* clear external inputs, may need additional logic */
     ua_inputs.AutoDestruct = FALSE;
     ua_inputs.EnableRocketLaunch = FALSE;
+    ua_inputs.Manual_Override = 0;
+    ua_inputs.Manual_StartPhase2 = FALSE;
+    ua_inputs.Manual_StartPhase3 = FALSE;
+    ua_inputs.Manual_StartPhaseFinal = FALSE;
+    ua_inputs.Manual_SatLaunch = FALSE;
 }
 
 void clear_ua_outputs() {

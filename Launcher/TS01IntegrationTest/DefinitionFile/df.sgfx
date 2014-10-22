@@ -70,7 +70,7 @@
                                 <intprop name="PosY">2160</intprop>
                                 <intprop name="SizeX">2000</intprop>
                                 <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">115</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
@@ -88,7 +88,7 @@
                                 <intprop name="PosY">3540</intprop>
                                 <intprop name="SizeX">2000</intprop>
                                 <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">111</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
@@ -106,7 +106,7 @@
                                 <intprop name="PosY">800</intprop>
                                 <intprop name="SizeX">2000</intprop>
                                 <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">113</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
@@ -127,7 +127,7 @@
                                 <intprop name="PosY">3700</intprop>
                                 <intprop name="SizeX">3100</intprop>
                                 <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">114</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
@@ -145,7 +145,7 @@
                                 <intprop name="PosY">2660</intprop>
                                 <intprop name="SizeX">3100</intprop>
                                 <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">114</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
@@ -163,7 +163,7 @@
                                 <intprop name="PosY">1620</intprop>
                                 <intprop name="SizeX">3100</intprop>
                                 <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">114</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
@@ -181,7 +181,7 @@
                                 <intprop name="PosY">540</intprop>
                                 <intprop name="SizeX">3100</intprop>
                                 <intprop name="SizeY">800</intprop>
-                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="StyleSet">114</intprop>
                                 <intprop name="NextFocusedWidget">0</intprop>
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
@@ -241,14 +241,14 @@
                                 <stringprop name="LabelString">Receive</stringprop>
                             </model>
                         </widget>
-                        <widget name="GpArcEllipse" oid="c56d0422-cc3c-49c4-b0b2-2f06e12c1379" type="GpArcEllipse">
+                        <widget name="Rocket_GpArcEllipse" oid="c56d0422-cc3c-49c4-b0b2-2f06e12c1379" type="GpArcEllipse">
                             <IDE/>
                             <model>
                                 <intprop name="WidgetIdent">3</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">10080</intprop>
-                                <intprop name="PosY">3000</intprop>
+                                <intprop name="PosX">9960</intprop>
+                                <intprop name="PosY">2480</intprop>
                                 <intprop name="SizeX">1000</intprop>
                                 <intprop name="SizeY">1000</intprop>
                                 <intprop name="StartAngle">0</intprop>
@@ -260,6 +260,65 @@
                                 <enumprop name="Halo">A661_FALSE</enumprop>
                             </model>
                         </widget>
+                        <widget name="Label" oid="ef6953b9-1184-4fa0-8677-d1a6c96d2675" type="Label">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">14</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">8760</intprop>
+                                <intprop name="PosY">3580</intprop>
+                                <intprop name="SizeX">3500</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="RotationAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                <intprop name="Font">1</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Rocket Status</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="SatL_GpArcEllipse" oid="0baaf827-d882-4a83-8ba0-7b15896d798f" type="GpArcEllipse">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">15</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">9920</intprop>
+                                <intprop name="PosY">380</intprop>
+                                <intprop name="SizeX">1000</intprop>
+                                <intprop name="SizeY">1000</intprop>
+                                <intprop name="StartAngle">0</intprop>
+                                <intprop name="EndAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Filled">A661_TRUE</enumprop>
+                                <intprop name="FillIndex">21</intprop>
+                                <enumprop name="Halo">A661_FALSE</enumprop>
+                            </model>
+                        </widget>
+                        <widget name="Label" oid="d86415d3-75f8-4248-8a1a-394df48faaa1" type="Label">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">16</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">8720</intprop>
+                                <intprop name="PosY">1480</intprop>
+                                <intprop name="SizeX">3500</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="RotationAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                <intprop name="Font">1</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Sat Launched</stringprop>
+                            </model>
+                        </widget>
                     </children>
                 </widget>
             </children>
@@ -267,5 +326,5 @@
     </children>
 </specification>
 
-<!-- crc32 : 3793420821 -->
+<!-- crc32 : 1509963733 -->
 

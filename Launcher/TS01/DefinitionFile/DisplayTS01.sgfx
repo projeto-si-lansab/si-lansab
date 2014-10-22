@@ -694,6 +694,36 @@
                         <intprop name="PosY">0</intprop>
                     </model>
                     <children>
+                        <widget name="BlinkingContainer" oid="766012f1-7bc8-4821-9b53-a74b13d9950d" type="BlinkingContainer">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">277</intprop>
+                                <intprop name="BlinkingType">4</intprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                            </model>
+                            <children>
+                                <widget name="MissionSuccessfulLabel" oid="f885c367-5469-4275-8e18-96dce460c66f" type="Label">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">278</intprop>
+                                        <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">5458</intprop>
+                                        <intprop name="PosY">380</intprop>
+                                        <intprop name="SizeX">10000</intprop>
+                                        <intprop name="SizeY">940</intprop>
+                                        <intprop name="RotationAngle">0</intprop>
+                                        <intprop name="StyleSet">72</intprop>
+                                        <intprop name="MaxStringLength">32</intprop>
+                                        <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                        <intprop name="Font">0</intprop>
+                                        <intprop name="ColorIndex">1</intprop>
+                                        <enumprop name="Alignment">A661_CENTER</enumprop>
+                                        <stringprop name="LabelString">MISSION ACCOMPLISHED</stringprop>
+                                    </model>
+                                </widget>
+                            </children>
+                        </widget>
                         <widget name="Line_Dn" oid="5a0c96f5-a7f0-430f-8858-62738b5e1c04" type="GpLine">
                             <IDE/>
                             <model>
@@ -1099,5 +1129,5 @@
     </children>
 </specification>
 
-<!-- crc32 : 2811599733 -->
+<!-- crc32 : 1366050955 -->
 

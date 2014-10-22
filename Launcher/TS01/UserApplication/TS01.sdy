@@ -115,6 +115,11 @@
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="277" ParameterIdent="A661_VISIBLE" WidgetType="BlinkingContainer" WidgetName="BlinkingContainer">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
@@ -327,6 +332,18 @@
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="275" ParameterIdent="A661_VISIBLE" WidgetType="BlinkingContainer" WidgetName="Destroyed_BlinkingContainer">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="SatLaunched" type="bool" oid="!ed/125e/2BB9/66C/5445c5c32aa9" instancepath="Main/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\DisplayTS01.sgfx" layer="ts01_layer" LayerIdent="1" WidgetIdent="277" ParameterIdent="A661_VISIBLE" WidgetType="BlinkingContainer" WidgetName="BlinkingContainer">
 							<A661Data>
 								<DataField value="Visible"/>
 							</A661Data>
