@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
 #include "CommunicationInterfaces.h"
 #include "IntegrationCode.h"
@@ -11,6 +14,15 @@
 
 operator_input_type ua_inputs;
 operator_output_type ua_outputs;
+
+void sendMessagesToPeers(int sockfd, struct sockaddr_in *address, socklen_t addrlen) {
+	FRAMEWORK_MESSAGE message;
+
+    memset(&message, 0, sizeof(message));
+    message.to = TS04ID;
+    buildMessage(&message);
+    sendto(sockfd, (char *) &message, sizeof(message), 0, (struct sockaddr *) address, addrlen);
+}
 
 void receiveMessage(FRAMEWORK_MESSAGE message) {
     TS01_INPUT_INTERFACE input;
@@ -85,13 +97,13 @@ void clear_ua_inputs() {
     ua_receive_clear(&ua_inputs, NULL);
 
     /* clear external inputs, may need additional logic */
-    ua_inputs.AutoDestruct = FALSE;
+    /*ua_inputs.AutoDestruct = FALSE;
     ua_inputs.EnableRocketLaunch = FALSE;
     ua_inputs.Manual_Override = 0;
     ua_inputs.Manual_StartPhase2 = FALSE;
     ua_inputs.Manual_StartPhase3 = FALSE;
     ua_inputs.Manual_StartPhaseFinal = FALSE;
-    ua_inputs.Manual_SatLaunch = FALSE;
+    ua_inputs.Manual_SatLaunch = FALSE;*/
 }
 
 void clear_ua_outputs() {
