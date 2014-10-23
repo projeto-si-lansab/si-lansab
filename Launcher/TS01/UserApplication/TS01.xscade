@@ -78,7 +78,7 @@
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="41"/>
+				<ConstValue value="31"/>
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/55/5D19/9B8/540db3a644ca"/>
@@ -582,7 +582,7 @@
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="230000"/>
+				<ConstValue value="300000"/>
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/bf8/6831/AD0/54386f776616"/>
@@ -597,7 +597,7 @@
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="640000"/>
+				<ConstValue value="610000"/>
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/c16/6831/AD0/54386f953bb8"/>
@@ -612,7 +612,7 @@
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="3.0"/>
+				<ConstValue value="1.2"/>
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/f87/6831/AD0/54387f664d8c"/>
@@ -627,7 +627,7 @@
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="8.0"/>
+				<ConstValue value="2.3"/>
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/fa5/6831/AD0/54387f7918ed"/>
@@ -642,7 +642,7 @@
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="32.0"/>
+				<ConstValue value="5.9"/>
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/fb3/6831/AD0/54387f7a7aec"/>
@@ -736,6 +736,36 @@
 			</value>
 			<pragmas>
 				<ed:Constant oid="!ed/9e4/4AE5/954/54408d182179"/>
+			</pragmas>
+		</Constant>
+		<Constant name="TANK_FULL">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="3100"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/93b/3E62/F74/5448309c9b2"/>
+			</pragmas>
+		</Constant>
+		<Constant name="TANK_SPARE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="5000"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/b19/5A2A/3DC/54483d3a50db"/>
 			</pragmas>
 		</Constant>
 	</declarations>
