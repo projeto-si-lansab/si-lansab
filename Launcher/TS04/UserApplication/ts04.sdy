@@ -1,261 +1,325 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MappingFile>
 	 	<operatorMappings>
-		<OperatorMapping name="ts04" oid="!ed/20de/CF3/1AD4/54190c7e2d4f">
+		<OperatorMapping name="ts04" oid="!ed/af76/5D46/D8/5446bc90751">
 			<mappingItems>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="32" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleStartCount">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="74" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh1Button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="DesacoplarPh1" type="bool" oid="!ed/b0e5/5D46/D8/5446bd514912" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="75" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh2Button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="DesacoplarPh2" type="bool" oid="!ed/b0e6/5D46/D8/5446bd51719b" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="76" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh3Button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="DesacoplarPh3" type="bool" oid="!ed/b0e7/5D46/D8/5446bd514581" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="77" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh4Button">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="DesacoplarPh4" type="bool" oid="!ed/b0e8/5D46/D8/5446bd514482" instancepath="ts04/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="EvtToggleState" type="enum {A661_SELECTED, A661_UNSELECTED}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="32" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="ToggleStartCount">
 							<A661Data>
 								<DataField value="EvtToggleState"/>
 							</A661Data>
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="ToogleIniciar" type="int" oid="!ed/873e/1980/DF0/541a03663177" instancepath="ts04/"/>
+						<Variable name="ToogleIniciar" type="int" oid="!ed/d374/5D46/D8/5446bf915d83" instancepath="ts04/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="28" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Phase">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="45" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Computador">
 							<A661Data>
 								<Notify/>
 							</A661Data>
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="VerificarEstagios" type="bool" oid="!ed/eb2a/1DBD/1530/541b98e87469" instancepath="ts04/"/>
+						<Variable name="VerificarComputador" type="bool" oid="!ed/d596/5D46/D8/5446c1bc5d27" instancepath="ts04/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="26" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Fuel">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="28" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Phase">
 							<A661Data>
 								<Notify/>
 							</A661Data>
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="verify_fuel" type="bool" oid="!ed/ec02/1DBD/1530/541ba3ec43c0" instancepath="ts04/"/>
+						<Variable name="VerificarEstagios" type="bool" oid="!ed/d5b8/5D46/D8/5446c1d53a57" instancepath="ts04/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="47" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Camera">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="26" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Fuel">
 							<A661Data>
 								<Notify/>
 							</A661Data>
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="VerificarCamera" type="bool" oid="!ed/2236/1C10/DC8/541bb31045f9" instancepath="ts04/"/>
+						<Variable name="verify_fuel" type="bool" oid="!ed/d64d/5D46/D8/5446c26e49d5" instancepath="ts04/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="45" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Computador">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="78" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="abrirCapsulaButton">
 							<A661Data>
 								<Notify/>
 							</A661Data>
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="VerificarComputador" type="bool" oid="!ed/224b/221C/6C8/541bb9c119f7" instancepath="ts04/"/>
+						<Variable name="enviarComando" type="bool" oid="!ed/d672/5D46/D8/5446c27b6d20" instancepath="ts04/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="78" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="abrirCapsulaButton">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="47" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="Pb_Verify_Camera">
 							<A661Data>
 								<Notify/>
 							</A661Data>
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="enviarComando" type="bool" oid="!ed/2327/133F/1A3C/5443326d7ea9" instancepath="ts04/"/>
+						<Variable name="VerificarCamera" type="bool" oid="!ed/d688/5D46/D8/5446c2876022" instancepath="ts04/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="74" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh1Button">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="38" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushDestruct">
 							<A661Data>
 								<Notify/>
 							</A661Data>
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="desacoplar_ph1" type="bool" oid="!ed/22d7/3E0/4C4/5443a8f32c88" instancepath="ts04/"/>
+						<Variable name="SelfDestructSignal" type="bool" oid="!ed/23a3/5805/CC4/5446fe5a5868" instancepath="ts04/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="75" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh2Button">
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="82" ParameterIdent="A661_EVT_STATE_CHANGE" WidgetType="ToggleButton" WidgetName="automaticoBtn">
 							<A661Data>
 								<Notify/>
 							</A661Data>
 						</A661_NOTIFY_WIDGET_EVENT>
 					</output>
 					<inputs>
-						<Variable name="desacoplar_ph2" type="bool" oid="!ed/23e9/3E0/4C4/5443ad194020" instancepath="ts04/"/>
+						<Variable name="LancAutomatico" type="bool" oid="!ed/2387/5E13/1FC/5448119844ec" instancepath="ts04/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="76" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh3Button">
+						<Variable name="CorPh1" type="int" oid="!ed/b0e9/5D46/D8/5446bd516dd6" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="66" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh1Rectangle">
 							<A661Data>
-								<Notify/>
+								<DataField value="FillIndex"/>
 							</A661Data>
-						</A661_NOTIFY_WIDGET_EVENT>
-					</output>
-					<inputs>
-						<Variable name="desacoplar_ph3" type="bool" oid="!ed/23ef/3E0/4C4/5443ad1a5fd8" instancepath="ts04/"/>
+						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="77" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="desacoplarPh4Button">
+						<Variable name="CorPh2" type="int" oid="!ed/b0ea/5D46/D8/5446bd517b82" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh2Rectangle">
 							<A661Data>
-								<Notify/>
+								<DataField value="FillIndex"/>
 							</A661Data>
-						</A661_NOTIFY_WIDGET_EVENT>
-					</output>
-					<inputs>
-						<Variable name="desacoplar_ph4" type="bool" oid="!ed/23f5/3E0/4C4/5443ad1baa6" instancepath="ts04/"/>
+						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="Emit2CDS" type="bool" oid="!ed/20ee/CF3/1AD4/54190cc63364" instancepath="ts04/"/>
+						<Variable name="CorPh3" type="int" oid="!ed/b0eb/5D46/D8/5446bd517f71" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="36" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="BoxCountVal">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh3Rectangle">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CorPh4" type="int" oid="!ed/b0ec/5D46/D8/5446bd514efd" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="70" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh4Rectangle">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Emit2CDS" type="bool" oid="!ed/b10d/5D46/D8/5446bd5c398d" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="66" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh1Rectangle">
 							<A661Data>
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_REQ_LAYER_ACTIVE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_ACTIVE">
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="36" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="BoxCountVal">
 							<A661Data>
 								<Emit/>
 							</A661Data>
-						</A661_REQ_LAYER_ACTIVE>
-						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="18" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="20" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="19" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="17" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh2Rectangle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh3Rectangle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="70" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh4Rectangle">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="6" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="9" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="8" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="5" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="42" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Computador">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Camera">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="54" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="AlertaGeralRec">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="74" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="desacoplarPh1Button">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="75" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="desacoplarPh2Button">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="76" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="desacoplarPh3Button">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="77" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="desacoplarPh4Button">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="LayerVisible" type="bool" oid="!ed/b111/5D46/D8/5446bd68636a" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_REQ_LAYER_VISIBLE name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="-1" ParameterIdent="A661_REQ_LAYER_VISIBLE">
 							<A661Data>
 								<Emit/>
 							</A661Data>
 						</A661_REQ_LAYER_VISIBLE>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="17" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="18" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="19" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="20" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="5" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="6" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="8" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="9" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Camera">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="42" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Computador">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="49" ParameterIdent="A661_VISIBLE" WidgetType="BlinkingContainer" WidgetName="BlinkingLaunch">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="58" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaComb">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="59" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaIncl">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="60" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaGeral">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="61" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeComb">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="62" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeIncl">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="63" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeGeral">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="66" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh1Rectangle">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh2Rectangle">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh3Rectangle">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="70" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh4Rectangle">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="ValContagem" type="real" oid="!ed/874a/1980/DF0/541a0366161f" instancepath="ts04/"/>
+						<Variable name="ValContagem" type="real" oid="!ed/d375/5D46/D8/5446bf913eaa" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="36" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="BoxCountVal">
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="36" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="BoxCountVal">
 							<A661Data>
 								<DataField value="Value"/>
 							</A661Data>
@@ -264,10 +328,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="Estagio4CorFundo" type="int" oid="!ed/eb48/1DBD/1530/541b98e84697" instancepath="ts04/"/>
+						<Variable name="CorComputadorFundo" type="int" oid="!ed/d598/5D46/D8/5446c1bc4c45" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="17" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="42" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Computador">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -276,10 +340,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="Estagio3CorFundo" type="int" oid="!ed/eb4e/1DBD/1530/541b98e820db" instancepath="ts04/"/>
+						<Variable name="Estagio1CorFundo" type="int" oid="!ed/d5c0/5D46/D8/5446c1d541d8" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="19" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="18" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -288,10 +352,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="Estagio2CorFundo" type="int" oid="!ed/eb54/1DBD/1530/541b98e863f8" instancepath="ts04/"/>
+						<Variable name="Estagio2CorFundo" type="int" oid="!ed/d5bf/5D46/D8/5446c1d5f66" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="20" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="20" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -300,10 +364,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="Estagio1CorFundo" type="int" oid="!ed/eb5a/1DBD/1530/541b98e854bd" instancepath="ts04/"/>
+						<Variable name="Estagio3CorFundo" type="int" oid="!ed/d5be/5D46/D8/5446c1d5351c" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="18" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="19" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -312,10 +376,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="color_fuel1" type="int" oid="!ed/ec20/1DBD/1530/541ba3ece7c" instancepath="ts04/"/>
+						<Variable name="Estagio4CorFundo" type="int" oid="!ed/d5bd/5D46/D8/5446c1d5638d" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="6" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="17" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -324,10 +388,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="color_fuel2" type="int" oid="!ed/ec26/1DBD/1530/541ba3ec44fb" instancepath="ts04/"/>
+						<Variable name="color_fuel4" type="int" oid="!ed/d654/5D46/D8/5446c26e490f" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="9" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="5" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -336,10 +400,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="color_fuel3" type="int" oid="!ed/ec2c/1DBD/1530/541ba3ec50f6" instancepath="ts04/"/>
+						<Variable name="color_fuel3" type="int" oid="!ed/d653/5D46/D8/5446c26e3c17" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="8" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="8" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph3">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -348,10 +412,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="color_fuel4" type="int" oid="!ed/ec32/1DBD/1530/541ba3ec4d33" instancepath="ts04/"/>
+						<Variable name="color_fuel2" type="int" oid="!ed/d652/5D46/D8/5446c26e4d6e" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="5" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_PhF">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="9" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph2">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -360,10 +424,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="CorCameraFundo" type="int" oid="!ed/224a/1C10/DC8/541bb31a7062" instancepath="ts04/"/>
+						<Variable name="color_fuel1" type="int" oid="!ed/d651/5D46/D8/5446c26e66bc" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Camera">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="6" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Ph1">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -372,10 +436,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="CorComputadorFundo" type="int" oid="!ed/2257/221C/6C8/541bb9c14033" instancepath="ts04/"/>
+						<Variable name="CorCameraFundo" type="int" oid="!ed/d68a/5D46/D8/5446c28767c8" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="42" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Computador">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="Rec_Camera">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -384,94 +448,10 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="FimContagem" type="bool" oid="!ed/2264/2233/168C/541bc424cb7" instancepath="ts04/"/>
+						<Variable name="CorAlertaGeral" type="int" oid="!ed/240d/7EFC/224/5447a9b3516b" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="49" ParameterIdent="A661_VISIBLE" WidgetType="BlinkingContainer" WidgetName="BlinkingLaunch">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="NadaComb" type="bool" oid="!ed/235e/14E6/1AB0/54408fa75cb0" instancepath="ts04/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="58" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaComb">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="NadaIncl" type="bool" oid="!ed/235f/14E6/1AB0/54408fb04fa3" instancepath="ts04/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="59" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaIncl">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="NadaGeral" type="bool" oid="!ed/2360/14E6/1AB0/54408fb75e29" instancepath="ts04/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="60" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NadaGeral">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="AlarmeComb" type="bool" oid="!ed/2362/14E6/1AB0/54408fc7166a" instancepath="ts04/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="61" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeComb">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="AlarmeIncl" type="bool" oid="!ed/2363/14E6/1AB0/54408fd07c1a" instancepath="ts04/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="62" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeIncl">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="AlarmeGeral" type="bool" oid="!ed/2364/14E6/1AB0/54408fd93a11" instancepath="ts04/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="63" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AlarmeGeral">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
-						<Variable name="cor_ph1" type="int" oid="!ed/244e/3E0/4C4/5443aed8c2f" instancepath="ts04/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="66" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh1Rectangle">
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="54" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="AlertaGeralRec">
 							<A661Data>
 								<DataField value="FillIndex"/>
 							</A661Data>
@@ -480,36 +460,48 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="cor_ph2" type="int" oid="!ed/245c/3E0/4C4/5443aee7903" instancepath="ts04/"/>
+						<Variable name="Ph1Enabled" type="int" oid="!ed/238e/5E13/1FC/544811b35762" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="68" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh2Rectangle">
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="74" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="desacoplarPh1Button">
 							<A661Data>
-								<DataField value="FillIndex"/>
+								<DataField value="Enable"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="cor_ph3" type="int" oid="!ed/2462/3E0/4C4/5443aee9c58" instancepath="ts04/"/>
+						<Variable name="Ph2Enabled" type="int" oid="!ed/2423/5E13/1FC/544816437241" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="69" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh3Rectangle">
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="75" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="desacoplarPh2Button">
 							<A661Data>
-								<DataField value="FillIndex"/>
+								<DataField value="Enable"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="cor_ph4" type="int" oid="!ed/2468/3E0/4C4/5443aeeb68b2" instancepath="ts04/"/>
+						<Variable name="Ph3Enabled" type="int" oid="!ed/24f3/5E13/1FC/5448191c3248" instancepath="ts04/"/>
 					</output>
 					<inputs>
-						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\TS04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="70" ParameterIdent="A661_FILL_INDEX" WidgetType="GpRectangle" WidgetName="desacoplarPh4Rectangle">
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="76" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="desacoplarPh3Button">
 							<A661Data>
-								<DataField value="FillIndex"/>
+								<DataField value="Enable"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Ph4Enabled" type="int" oid="!ed/24f9/5E13/1FC/5448191e5c6e" instancepath="ts04/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts04.sgfx" layer="ts04_layer" LayerIdent="1" WidgetIdent="77" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="desacoplarPh4Button">
+							<A661Data>
+								<DataField value="Enable"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
