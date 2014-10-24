@@ -16,7 +16,7 @@
         <intprop name="ApplicationId">1</intprop>
     </A661>
     <children>
-        <A661Layer name="ts03" oid="0b06f59d-50e3-43c5-849f-7fab441f69c1">
+        <A661Layer name="ts03" oid="a4e773ee-6b3a-48f6-9121-f1a6bd11aaa3">
             <IDE>
                 <ratio horizontal="20" vertical="20"/>
             </IDE>
@@ -27,35 +27,17 @@
                 <intprop name="Height">10240</intprop>
             </model>
             <children>
-                <widget name="ts03L" oid="77347a34-c786-4d9c-80f6-d1caafa599da" type="BasicContainer">
+                <widget name="ts03L" oid="e310c92e-76e4-4d6a-a24a-757698c48636" type="BasicContainer">
                     <IDE/>
                     <model>
                         <intprop name="WidgetIdent">1000</intprop>
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">0</intprop>
-                        <intprop name="PosY">0</intprop>
+                        <intprop name="PosX">120</intprop>
+                        <intprop name="PosY">420</intprop>
                     </model>
                     <children>
-                        <widget name="PushButton_Picture" oid="c5a87e02-aee0-4ed5-b81f-31c25745fcaf" type="PushButton">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">3055</intprop>
-                                <enumprop name="Enable">A661_TRUE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">700</intprop>
-                                <intprop name="PosY">9300</intprop>
-                                <intprop name="SizeX">3220</intprop>
-                                <intprop name="SizeY">700</intprop>
-                                <intprop name="StyleSet">110</intprop>
-                                <intprop name="NextFocusedWidget">0</intprop>
-                                <intprop name="MaxStringLength">32</intprop>
-                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
-                                <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Take Picture</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="BasicContainer" oid="893db225-79b0-4732-9430-81edf2430057" type="BasicContainer">
+                        <widget name="BasicContainer" oid="cf0e0208-04c2-4ce7-8d3a-75f0981224ca" type="BasicContainer">
                             <IDE/>
                             <model>
                                 <intprop name="WidgetIdent">2000</intprop>
@@ -65,7 +47,7 @@
                                 <intprop name="PosY">4500</intprop>
                             </model>
                             <children>
-                                <widget name="Label_Battery" oid="a5f9e0c8-9fa0-4fef-90ff-56b37cfdf1fe" type="Label">
+                                <widget name="Label_Battery" oid="d53dc4bd-aa00-4426-b133-43706c9dde61" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2025</intprop>
@@ -85,7 +67,7 @@
                                         <stringprop name="LabelString">BATTERY</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="GpArcCircle_Battery" oid="d651a667-bd5a-49a8-924c-c635878eb7d5" type="GpArcCircle">
+                                <widget name="GpArcCircle_Battery" oid="644d6d7b-aba3-4579-a812-f809f43b98ea" type="GpArcCircle">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2050</intprop>
@@ -103,7 +85,7 @@
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="GpLinePolar_Battery" oid="9a536192-358c-473c-89a7-555c8ede6c2a" type="GpLinePolar">
+                                <widget name="GpLinePolar_Battery" oid="b34123b1-f384-4220-b91b-51cb22c0e51c" type="GpLinePolar">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2055</intprop>
@@ -118,7 +100,7 @@
                                         <enumprop name="Halo">A661_TRUE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="Label_zero" oid="be6b0194-4960-4df8-998f-e3bf8f87e1d0" type="Label">
+                                <widget name="Label_zero" oid="5b553457-94ed-47ce-8f59-b7a805dfbe43" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2150</intprop>
@@ -138,7 +120,7 @@
                                         <stringprop name="LabelString">0</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="Label_50" oid="7f0c6f22-229f-48c9-b865-6de9cc581598" type="Label">
+                                <widget name="Label_50" oid="9aa7a704-c0c8-4e3f-821d-f7211370e3d6" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2200</intprop>
@@ -158,7 +140,7 @@
                                         <stringprop name="LabelString">50%</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="Label_100" oid="6824631a-da27-4165-bea9-dafb4c52e2ca" type="Label">
+                                <widget name="Label_100" oid="62a2d299-40e7-4ba9-8c2d-6fc911d3a380" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2250</intprop>
@@ -178,7 +160,7 @@
                                         <stringprop name="LabelString">100%</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="ToggleButtonCamera" oid="bc4af71e-cae0-43ed-8994-2b84dd329cfb" type="ToggleButton">
+                                <widget name="ToggleButtonCamera" oid="435fc774-6006-42b4-963b-55df97c98550" type="ToggleButton">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3701</intprop>
@@ -199,7 +181,7 @@
                                         <stringprop name="AlternateLabelString">Camera On</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="GpRectangle_BatteryStandBy" oid="6294a311-d967-4984-987b-dcfec8a718df" type="GpRectangle">
+                                <widget name="GpRectangle_BatteryStandBy" oid="19cd45d9-4b9d-45bc-838b-6b33f796c256" type="GpRectangle">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2400</intprop>
@@ -216,7 +198,7 @@
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="Label_StandBy" oid="fd47ccae-bdd5-4efd-9f5e-87d8404ab043" type="Label">
+                                <widget name="Label_StandBy" oid="eca5f005-6d4d-41d1-aebd-6fc848d2006a" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2450</intprop>
@@ -236,7 +218,7 @@
                                         <stringprop name="LabelString">STAND BY</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="GpRectangle_BatteryWarn" oid="523a83b5-4db9-4e57-81e8-28d5f46e01f6" type="GpRectangle">
+                                <widget name="GpRectangle_BatteryWarn" oid="f38e2129-deb2-4374-bcf8-7b05cf83b64b" type="GpRectangle">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2500</intprop>
@@ -253,7 +235,7 @@
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="Label_Low" oid="577320a6-e9ad-4df8-9b93-3d8b98ac98f6" type="Label">
+                                <widget name="Label_Low" oid="12835e87-d127-400a-9ce4-5d965e5232b2" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2550</intprop>
@@ -273,7 +255,7 @@
                                         <stringprop name="LabelString">BAT LOW</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="GpLineLowLevel" oid="2235f045-b1ef-405d-8806-16a993fbb346" type="GpLine">
+                                <widget name="GpLineLowLevel" oid="b51a60cf-f05a-459e-bc85-a3bddd25305e" type="GpLine">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2600</intprop>
@@ -288,7 +270,7 @@
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="GpArcCircleCameraOn" oid="3c293ff5-054c-4849-b3c1-5c7917192160" type="GpArcCircle">
+                                <widget name="GpArcCircleCameraOn" oid="8dbdcda5-6e1c-4e4c-a3f6-ccd89315e0f2" type="GpArcCircle">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">2700</intprop>
@@ -308,7 +290,7 @@
                                 </widget>
                             </children>
                         </widget>
-                        <widget name="BasicContainer" oid="34db5662-dbc0-4ecb-9ad3-e7df2be8d847" type="BasicContainer">
+                        <widget name="BasicContainer" oid="fcc581ba-9593-4bf6-bfb7-b73ff9acd83a" type="BasicContainer">
                             <IDE/>
                             <model>
                                 <intprop name="WidgetIdent">3000</intprop>
@@ -318,7 +300,7 @@
                                 <intprop name="PosY">0</intprop>
                             </model>
                             <children>
-                                <widget name="Label_Memory" oid="7175f0d6-de34-4cdb-8461-a74def1c65cd" type="Label">
+                                <widget name="Label_Memory" oid="76d68cd5-3b06-464e-8170-560557a53e03" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3050</intprop>
@@ -338,7 +320,7 @@
                                         <stringprop name="LabelString">STORAGE</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="GpRectangle_MemoryWarn" oid="2456d456-ba2c-4466-aa5e-fd7c793d1139" type="GpRectangle">
+                                <widget name="GpRectangle_MemoryWarn" oid="2799a611-1c74-4df4-99cb-6bf0e159d747" type="GpRectangle">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3200</intprop>
@@ -355,7 +337,7 @@
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="Label_MemoryLow" oid="3518bb40-668e-4bc7-b910-a1e9bbe4d724" type="Label">
+                                <widget name="Label_MemoryLow" oid="70cd9360-334f-4aa8-81c1-f051455d2ce6" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3300</intprop>
@@ -375,7 +357,7 @@
                                         <stringprop name="LabelString">MEMORY LOW</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="GpArcCircleDownloadOn" oid="cc8fe38b-0e81-4523-abd4-21b68ff3d69d" type="GpArcCircle">
+                                <widget name="GpArcCircleDownloadOn" oid="4dcb7d05-7228-4452-8adb-361cfa228912" type="GpArcCircle">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3400</intprop>
@@ -393,7 +375,7 @@
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="GpRectangleMemoryBar" oid="3674c3a2-fb7a-4f41-b018-dd954ae0dc73" type="GpRectangle">
+                                <widget name="GpRectangleMemoryBar" oid="ed4024bb-e2ed-4310-a407-a16829c45c09" type="GpRectangle">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3500</intprop>
@@ -410,7 +392,7 @@
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="GpRectangleMemoryGauge" oid="3bb86a3a-6ef0-46c6-9347-7d57a79fac93" type="GpRectangle">
+                                <widget name="GpRectangleMemoryGauge" oid="092ae765-bb8c-48e2-a097-8564f72c792e" type="GpRectangle">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3550</intprop>
@@ -427,7 +409,7 @@
                                         <enumprop name="Halo">A661_FALSE</enumprop>
                                     </model>
                                 </widget>
-                                <widget name="LabelAvailable" oid="c772b74c-9944-4ba5-af31-49f0d72fe28a" type="Label">
+                                <widget name="LabelAvailable" oid="da028e7e-c850-4ec1-8cdb-cfbef77491fa" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3600</intprop>
@@ -447,7 +429,7 @@
                                         <stringprop name="LabelString">Available</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="LabelMemoryLevel" oid="0b861ef0-8fda-4f84-92e2-9d7ee45fb76a" type="Label">
+                                <widget name="LabelMemoryLevel" oid="4d799c92-f545-4b8e-82e6-015bd6b6ece3" type="Label">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3650</intprop>
@@ -467,7 +449,7 @@
                                         <stringprop name="LabelString">550 GB</stringprop>
                                     </model>
                                 </widget>
-                                <widget name="ToggleButtonDownload" oid="08e46484-2a0c-44c7-b998-30e467c593e2" type="ToggleButton">
+                                <widget name="ToggleButtonDownload" oid="c2a39281-d4ec-47ad-92a5-1438d0543d64" type="ToggleButton">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">3700</intprop>
@@ -492,10 +474,230 @@
                         </widget>
                     </children>
                 </widget>
+                <widget name="ts03R" oid="46e27152-ff5c-40ef-b860-cf35502995a1" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">7000</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">5120</intprop>
+                        <intprop name="PosY">0</intprop>
+                    </model>
+                    <children>
+                        <widget name="Label" oid="44bb87ce-3bb3-403d-adc3-33d26f6931b5" type="Label">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7001</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">0</intprop>
+                                <intprop name="PosY">9160</intprop>
+                                <intprop name="SizeX">5100</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="RotationAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                <intprop name="Font">2</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Image Resolution</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="Label" oid="27ee85d5-b718-490d-b2f7-6f399babb047" type="Label">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7002</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">0</intprop>
+                                <intprop name="PosY">4920</intprop>
+                                <intprop name="SizeX">5100</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="RotationAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                <intprop name="Font">2</intprop>
+                                <intprop name="ColorIndex">1</intprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Spectral Bands</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="SB_Panchromatic" oid="f3d50701-6d18-4392-8905-6e690941e39b" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7003</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">360</intprop>
+                                <intprop name="PosY">3860</intprop>
+                                <intprop name="SizeX">4300</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_SELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Panchromatic</stringprop>
+                                <stringprop name="AlternateLabelString">AlternateLabelString</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="SB_Blue" oid="4fac5ac7-c3e1-4076-858d-039959bb7b58" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7004</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">360</intprop>
+                                <intprop name="PosY">2980</intprop>
+                                <intprop name="SizeX">4300</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Blue</stringprop>
+                                <stringprop name="AlternateLabelString">AlternateLabelString</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="SB_Green" oid="efa10c77-a737-44e8-95aa-38dcc68b6f27" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7005</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">360</intprop>
+                                <intprop name="PosY">2100</intprop>
+                                <intprop name="SizeX">4300</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Green</stringprop>
+                                <stringprop name="AlternateLabelString">AlternateLabelString</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="SB_Red" oid="8fd56a58-97ef-4551-a15d-be2b41379588" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7006</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">360</intprop>
+                                <intprop name="PosY">1220</intprop>
+                                <intprop name="SizeX">4300</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Red</stringprop>
+                                <stringprop name="AlternateLabelString">AlternateLabelString</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="SB_Infrared" oid="e8197931-9c41-46a6-a0b0-8e745d9db559" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7007</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">360</intprop>
+                                <intprop name="PosY">340</intprop>
+                                <intprop name="SizeX">4300</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Near-Infrared</stringprop>
+                                <stringprop name="AlternateLabelString">AlternateLabelString</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="IR_Panchromatic" oid="39a22135-b4c9-424f-8ce2-4cfa81452d63" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7008</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">360</intprop>
+                                <intprop name="PosY">8160</intprop>
+                                <intprop name="SizeX">4300</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_SELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Panchromatic</stringprop>
+                                <stringprop name="AlternateLabelString">AlternateLabelString</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="IR_ColourMerge" oid="2078db7e-c08c-4ac9-8d6f-febed47b8e3f" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7009</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">360</intprop>
+                                <intprop name="PosY">7280</intprop>
+                                <intprop name="SizeX">4300</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Colour Merge</stringprop>
+                                <stringprop name="AlternateLabelString">AlternateLabelString</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="IR_Multispectral" oid="7b1d559f-0c50-42c7-9071-0fa8929965e4" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">7010</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">360</intprop>
+                                <intprop name="PosY">6400</intprop>
+                                <intprop name="SizeX">4300</intprop>
+                                <intprop name="SizeY">800</intprop>
+                                <intprop name="StyleSet">110</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_FALSE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Multispectral</stringprop>
+                                <stringprop name="AlternateLabelString">AlternateLabelString</stringprop>
+                            </model>
+                        </widget>
+                    </children>
+                </widget>
             </children>
         </A661Layer>
     </children>
 </specification>
 
-<!-- crc32 : 3056667248 -->
+<!-- crc32 : 2685513832 -->
 
