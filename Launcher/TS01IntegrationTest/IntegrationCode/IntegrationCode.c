@@ -1,5 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
 #include "CommunicationInterfaces.h"
 #include "IntegrationCode.h"
@@ -12,14 +15,25 @@
 operator_input_type ua_inputs;
 operator_output_type ua_outputs;
 
-void receiveMessage(FRAMEWORK_MESSAGE message) {
-    TS01_INPUT_INTERFACE input;
+void sendMessagesToPeers(int sockfd, struct sockaddr_in *address, socklen_t addrlen) {
+    FRAMEWORK_MESSAGE message;
 
-    if (message.to == TS01ID) {
-        input = message.input_interface.ts01_input_interface;
+    memset(&message, 0, sizeof(message));
+    message.to = TS01ID;
+    buildMessage(&message);
+    sendto(sockfd, (char *) &message, sizeof(message), 0, (struct sockaddr *) address, addrlen);
+}
+
+void receiveMessage(FRAMEWORK_MESSAGE message) {
+    TS04_INPUT_INTERFACE input;
+
+    if (message.to == TS04ID) {
+        input = message.input_interface.ts04_input_interface;
         switch (message.from) {
         case TS01ID:
-            printf("Received: Message from TS01 to TS01 \n");
+            printf("Received: Message from TS01 to TS04 \n");
+            ua_inputs.RocketStatus = input.RocketStatus;
+            ua_inputs.SatLaunched = input.SatLaunched;
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS01 \n");
@@ -38,13 +52,18 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
 }
 
 void buildMessage(FRAMEWORK_MESSAGE *message) {
-    message->from = TS01ID;
+    message->from = TS04ID;
     switch (message->to) {
     case TS01ID:
-        printf("Sent: Message from TS01 to TS01 \n");
+        printf("Sent: Message from TS04 to TS01 \n");
         TS01_INPUT_INTERFACE *output1 = &(message->input_interface.ts01_input_interface);
         output1->AutoDestruct = ua_outputs.AutoDestruct;
         output1->EnableRocketLaunch = ua_outputs.EnableRocketLaunch;
+        output1->Manual_Override = ua_outputs.Manual_Override;
+        output1->Manual_StartPhase2 = ua_outputs.Manual_StartPhase2;
+        output1->Manual_StartPhase3 = ua_outputs.Manual_StartPhase3;
+        output1->Manual_StartPhaseFinal = ua_outputs.Manual_StartPhaseFinal;
+        output1->Manual_SatLaunch = ua_outputs.Manual_SatLaunch;
         break;
     case TS02ID:
         printf("Sent: Message from TS01 to TS02 \n");
@@ -79,6 +98,13 @@ void clear_ua_inputs() {
     /* clear external inputs, may need additional logic */
     ua_inputs.SignalAutoDestruct = FALSE;
     ua_inputs.SignalLaunch = FALSE;
+    // ua_inputs.SignalManual = 0;
+    ua_inputs.SignalStartPhase2 = FALSE;
+    ua_inputs.SignalStartPhase3 = FALSE;
+    ua_inputs.SignalStartFinal = FALSE;
+    ua_inputs.SignalSatLaunch = FALSE;
+    // ua_inputs.RocketStatus = FALSE;
+    // ua_inputs.SatLaunched = FALSE;
 }
 
 void clear_ua_outputs() {

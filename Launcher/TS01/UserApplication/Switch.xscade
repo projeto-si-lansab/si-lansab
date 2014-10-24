@@ -79,6 +79,18 @@
 						<ed:Variable oid="!ed/68/76C2/2290/540d0d75794b"/>
 					</pragmas>
 				</Variable>
+				<Variable name="_L5">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/b6c/110A/668/544880464cac"/>
+					</pragmas>
+				</Variable>
 			</locals>
 			<data>
 				<!-- _L1 = Input1; -->
@@ -140,13 +152,13 @@
 						<ed:Equation oid="!ed/60/76C2/2290/540d0d755a41"/>
 					</pragmas>
 				</Equation>
-				<!-- _L3 = fby(_L2; 1; false); -->
+				<!-- _L3 = fby(_L2; 1; _L5); -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L3"/>
 					</lefts>
 					<right>
-						<!-- fby(_L2; 1; false) -->
+						<!-- fby(_L2; 1; _L5) -->
 						<FbyOp name="1">
 							<flows>
 								<IdExpression>
@@ -159,7 +171,11 @@
 								<ConstValue value="1"/>
 							</delay>
 							<values>
-								<ConstValue value="false"/>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L5"/>
+									</path>
+								</IdExpression>
 							</values>
 						</FbyOp>
 					</right>
@@ -202,6 +218,22 @@
 					</right>
 					<pragmas>
 						<ed:Equation oid="!ed/63/76C2/2290/540d0d7534e5"/>
+					</pragmas>
+				</Equation>
+				<!-- _L5 = A661_FALSE; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L5"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="A661_FALSE"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/b6b/110A/668/54488046687c"/>
 					</pragmas>
 				</Equation>
 			</data>
@@ -297,6 +329,21 @@
 										<Point x="3572" y="4789"/>
 										<Point x="3572" y="3387"/>
 										<Point x="4180" y="3387"/>
+									</positions>
+								</Edge>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/b6b/110A/668/54488046687c">
+									<position>
+										<Point x="8493" y="4128"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="!ed/b6b/110A/668/54488046687c" dstEquation="!ed/61/76C2/2290/540d0d752ac7">
+									<positions>
+										<Point x="8705" y="4286"/>
+										<Point x="9631" y="4286"/>
+										<Point x="9631" y="3757"/>
 									</positions>
 								</Edge>
 							</presentationElements>
