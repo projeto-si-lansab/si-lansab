@@ -9,6 +9,8 @@
 #define TS03ID 3
 #define TS04ID 4
 #define TS05ID 5
+#define TS01TESTID 6
+#define TS05TESTID 10
 
 typedef struct {
 	kcg_bool AutoDestruct;
@@ -21,6 +23,11 @@ typedef struct {
 } TS01_INPUT_INTERFACE;
 
 typedef struct {
+    kcg_bool RocketStatus;
+    kcg_bool SatLaunched;
+} TS01TEST_INPUT_INTERFACE;
+
+typedef struct {
     /*TS02 inputs*/
 } TS02_INPUT_INTERFACE;
 
@@ -29,8 +36,7 @@ typedef struct {
 } TS03_INPUT_INTERFACE;
 
 typedef struct {
-    kcg_bool RocketStatus;
-    kcg_bool SatLaunched;
+    /*TS04 inputs*/
 } TS04_INPUT_INTERFACE;
 
 typedef struct {
@@ -43,6 +49,7 @@ typedef union {
 	TS03_INPUT_INTERFACE ts03_input_interface;
 	TS04_INPUT_INTERFACE ts04_input_interface;
 	TS05_INPUT_INTERFACE ts05_input_interface;
+    TS01TEST_INPUT_INTERFACE ts01test_input_interface;
 } INPUT_INTERFACE;
 
 typedef struct {
