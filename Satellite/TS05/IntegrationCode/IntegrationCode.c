@@ -23,9 +23,50 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS05 \n");
+            
+            /* US 01 */
+            ua_inputs.SAT_AirSpeed_Update = input.SAT_AirSpeed_Update;
+            ua_inputs.SAT_AirSpeed_Value = input.SAT_AirSpeed_Value;
+            ua_inputs.SAT_Altitude_Update = input.SAT_Altitude_Update;
+            ua_inputs.SAT_Altitude_Value = input.SAT_Altitude_Value;
+            ua_inputs.SAT_Latitude_Update = input.SAT_Latitude_Update;
+            ua_inputs.SAT_Latitude_Value = input.SAT_Latitude_Value;
+            ua_inputs.SAT_Longitude_Update = input.SAT_Longitude_Update;
+            ua_inputs.SAT_Longitude_Value = input.SAT_Longitude_Value;
+            ua_inputs.SAT_DeclinationAngle_Update = input.SAT_DeclinationAngle_Update;
+            ua_inputs.SAT_DeclinationAngle_Value = input.SAT_DeclinationAngle_Value;
+            ua_inputs.SAT_Period_Update = input.SAT_Period_Update;
+            ua_inputs.SAT_Period_Value = input.SAT_Period_Value;
+            
+            /* US 05 */
+            ua_inputs.SAT_OperationMode_Update = input.SAT_OperationMode_Update;
+            ua_inputs.SAT_OperationMode_Value = input.SAT_OperationMode_Value;
+            ua_inputs.SAT_GyroscopeState_Update = input.SAT_GyroscopeState_Update;
+            ua_inputs.SAT_GyroscopeState_Value = input.SAT_GyroscopeState_Value;
+            ua_inputs.SAT_HorizonSensorState_Update = input.SAT_HorizonSensorState_Update;
+            ua_inputs.SAT_HorizonSensorState_Value = input.SAT_HorizonSensorState_Value;
+            ua_inputs.SAT_PropellersState_Update = input.SAT_PropellersState_Update;
+            ua_inputs.SAT_PropellersState_Value = input.SAT_PropellersState_Value;
+            ua_inputs.SAT_CameraState_Update = input.SAT_CameraState_Update;
+            ua_inputs.SAT_CameraState_Value = input.SAT_CameraState_Value;
+            
+            /* US 11 */
+            ua_inputs.SAT_Ejection_Signal = input.SAT_Ejection_Signal;
+            ua_inputs.SAT_Initialization_Signal = input.SAT_Initialization_Signal;
+            
+            /* US 14 */
+            ua_inputs.SAT_Fix_Response = input.SAT_Fix_Response;
+            ua_inputs.SAT_CameraState_Fail = input.SAT_CameraState_Fail;
+            ua_inputs.SAT_GyroscopeState_Fail = input.SAT_GyroscopeState_Fail;
+            ua_inputs.SAT_HorizonSensorState_Fail = input.SAT_HorizonSensorState_Fail;
+            
             break;
         case TS03ID:
             printf("Received: Message from TS03 to TS05 \n");
+			
+			/* US 12 */
+			ua_inputs.cam_picture_loaded = input.cam_picture_loaded;
+			
             break;
         case TS04ID:
             printf("Received: Message from TS04 to TS05 \n");
@@ -65,6 +106,31 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         TS05_INPUT_INTERFACE *output5 = &(message->input_interface.ts05_input_interface);
         /*output->SignalFromTeam5 = ua_outputs.SignalToTeam5;*/
         break;
+    case TS05TESTID:
+        printf("Sent: message to TS05 test window \n");
+        TS05TEST_INPUT_INTERFACE *output5t = &(message->input_interface.ts05test_input_interface);
+        
+        /* US 05 */
+        output5t->SAT_GyroscopeState_Toggle = ua_outputs.SAT_GyroscopeState_Toggle;
+        output5t->SAT_GyroscopeState_ToggleTo = ua_outputs.SAT_GyroscopeState_ToggleTo;
+        output5t->SAT_HorizonSensorState_Toggle = ua_outputs.SAT_HorizonSensorState_Toggle;
+        output5t->SAT_HorizonSensorState_ToggleTo = ua_outputs.SAT_HorizonSensorState_ToggleTo;
+        output5t->SAT_PropellersState_Toggle = ua_outputs.SAT_PropellersState_Toggle;
+        output5t->SAT_PropellersState_ToggleTo = ua_outputs.SAT_PropellersState_ToggleTo;
+        output5t->SAT_CameraState_Toggle = ua_outputs.SAT_CameraState_Toggle;
+        output5t->SAT_CameraState_ToggleTo = ua_outputs.SAT_CameraState_ToggleTo;
+        
+        /* US 11 */
+        output5t->SAT_Initialize = ua_outputs.SAT_Initialize;
+        
+		/* US12 */
+		output5t->cam_take_picture = ua_outputs.cam_take_picture;
+		
+        /* US14 */
+        output5t->SAT_Auto_Verify = ua_outputs.SAT_Auto_Verify;
+        output5t->SAT_Fix_Equipments = ua_outputs.SAT_Fix_Equipments;
+        
+        break;
     }
 }
 
@@ -74,9 +140,45 @@ void executeOperator() {
 
 void clear_ua_inputs() {
     ua_receive_clear(&ua_inputs, NULL);
-
-    /* clear external inputs, may need additional logic */
-    /*ua_inputs.SignalFromTeamX = FALSE;*/
+    
+    /* US 01 */
+    ua_inputs.SAT_AirSpeed_Update = FALSE;
+    ua_inputs.SAT_AirSpeed_Value = 0.0;
+    ua_inputs.SAT_Altitude_Update = FALSE;
+    ua_inputs.SAT_Altitude_Value = 0.0;
+    ua_inputs.SAT_Latitude_Update = FALSE;
+    ua_inputs.SAT_Latitude_Value = 0.0;
+    ua_inputs.SAT_Longitude_Update = FALSE;
+    ua_inputs.SAT_Longitude_Value = 0.0;
+    ua_inputs.SAT_DeclinationAngle_Update = FALSE;
+    ua_inputs.SAT_DeclinationAngle_Value = 0.0;
+    ua_inputs.SAT_Period_Update = FALSE;
+    ua_inputs.SAT_Period_Value = 0.0;
+    
+    /* US 05 */
+    ua_inputs.SAT_OperationMode_Update = FALSE;
+    ua_inputs.SAT_OperationMode_Value = OPMODE_GROUND_SAFE;
+    ua_inputs.SAT_GyroscopeState_Update = FALSE;
+    ua_inputs.SAT_GyroscopeState_Value = FALSE;
+    ua_inputs.SAT_HorizonSensorState_Update = FALSE;
+    ua_inputs.SAT_HorizonSensorState_Value = FALSE;
+    ua_inputs.SAT_PropellersState_Update = FALSE;
+    ua_inputs.SAT_PropellersState_Value = FALSE;
+    ua_inputs.SAT_CameraState_Update = FALSE;
+    ua_inputs.SAT_CameraState_Value = FALSE;
+    
+    /* US 11 */
+    ua_inputs.SAT_Ejection_Signal = FALSE;
+    ua_inputs.SAT_Initialization_Signal = 0;
+	
+	/* US 12 */
+	ua_inputs.cam_picture_loaded = FALSE;
+	
+    /* US 14 */
+    ua_inputs.SAT_Fix_Response = FALSE;
+    ua_inputs.SAT_CameraState_Fail = FALSE;
+    ua_inputs.SAT_GyroscopeState_Fail = FALSE;
+    ua_inputs.SAT_HorizonSensorState_Fail = FALSE;
 }
 
 void clear_ua_outputs() {

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-23T02:21:18
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -31,9 +31,6 @@ extern const T_String PHASE_IN_PROCESS;
 /* ACCELERATION_PH1 */
 #define ACCELERATION_PH1 183
 
-/* A661_TRUE */
-#define A661_TRUE kcg_true
-
 /* ACCELERATION_PH2 */
 #define ACCELERATION_PH2 143
 
@@ -54,6 +51,9 @@ extern const T_String PHASE_COMPLETE;
 
 /* PHASE_FAILED */
 extern const T_String PHASE_FAILED;
+
+/* A661_TRUE */
+#define A661_TRUE kcg_true
 
 /* ACCELERATION_PH3 */
 #define ACCELERATION_PH3 103
@@ -85,6 +85,9 @@ extern const T_String PHASE_FAILED;
 /* STR_SIZE */
 #define STR_SIZE 20
 
+/* A661_FALSE */
+#define A661_FALSE kcg_false
+
 /* TANK_FULL */
 #define TANK_FULL 3100
 
@@ -100,12 +103,9 @@ extern const T_String PHASE_FAILED;
 /* TARGET_ORBIT_INCLINATION */
 #define TARGET_ORBIT_INCLINATION 98.0
 
-/* A661_FALSE */
-#define A661_FALSE kcg_false
-
 #endif /* _KCG_CONSTS_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.h
-** Generation date: 2014-10-23T02:21:18
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 

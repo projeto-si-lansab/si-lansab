@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-23T02:21:18
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 #ifndef _Main_H_
 #define _Main_H_
@@ -16,6 +16,7 @@ typedef struct {
   kcg_bool /* Main::Manual_StartPhase3 */ Manual_StartPhase3;
   kcg_bool /* Main::Manual_StartPhaseFinal */ Manual_StartPhaseFinal;
   kcg_bool /* Main::Manual_SatLaunch */ Manual_SatLaunch;
+  kcg_bool /* Main::Manual_Notify */ Manual_Notify;
 } inC_Main;
 
 /* ========================  context type  ========================= */
@@ -55,7 +56,8 @@ typedef struct {
   kcg_bool init1;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
-  kcg_bool /* Switch::_L2 */ _L2_8;
+  kcg_bool /* linear::MemoryBasic::_L4 */ _L4_2;
+  kcg_int /* linear::MemoryBasic::_L4 */ _L4_1;
   kcg_real /* Altitude_Status::_L19 */ _L19_6;
   kcg_real /* Inclination_Status::_L7 */ _L7_1;
   kcg_int /* Timer::IfBlock1::then::_L5 */ _L5_1_IfBlock1;
@@ -68,8 +70,6 @@ typedef struct {
   kcg_bool /* Main::SM1 */ SM1_reset_nxt;
   kcg_int /* Main::Acceleration */ Acceleration;
   kcg_real /* Main::InclinationIncrement */ InclinationIncrement;
-  kcg_bool /* Main::MissionSuccessful */ MissionSuccessful;
-  kcg_bool /* Main::MissionOngoing */ MissionOngoing;
   kcg_bool /* Main::_L3 */ _L3;
   /* -------------------- no sub nodes' contexts  -------------------- */
   /* ----------------- no clocks of observable data ------------------ */
@@ -84,6 +84,6 @@ extern void Main_reset(outC_Main *outC);
 #endif /* _Main_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Main.h
-** Generation date: 2014-10-23T02:21:18
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 

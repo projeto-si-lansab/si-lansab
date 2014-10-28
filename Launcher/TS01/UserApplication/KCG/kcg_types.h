@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-23T02:21:18
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -98,6 +98,6 @@ extern kcg_bool kcg_comp_array_char_20(
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2014-10-23T02:21:18
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 

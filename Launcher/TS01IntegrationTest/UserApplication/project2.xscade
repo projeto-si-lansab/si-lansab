@@ -111,6 +111,18 @@
 						<ed:Variable oid="!ed/216a/6908/A28/544720b2547c"/>
 					</pragmas>
 				</Variable>
+				<Variable name="SignalNotifyManual">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/217b/36F6/95C/544ee3433e4"/>
+					</pragmas>
+				</Variable>
 			</inputs>
 			<outputs>
 				<Variable name="EmitToCDS">
@@ -255,6 +267,18 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/2167/3E6E/394/5442d3e749eb"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Manual_Notify">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2175/36F6/95C/544ee331f31"/>
 					</pragmas>
 				</Variable>
 			</outputs>
@@ -473,6 +497,18 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/21ae/6908/A28/5447213e81b"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L29">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/217d/36F6/95C/544ee3531a08"/>
 					</pragmas>
 				</Variable>
 			</locals>
@@ -1014,6 +1050,38 @@
 						<ed:Equation oid="!ed/21b1/6908/A28/5447214d53cc"/>
 					</pragmas>
 				</Equation>
+				<!-- Manual_Notify = _L29; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Manual_Notify"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L29"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2176/36F6/95C/544ee339a98"/>
+					</pragmas>
+				</Equation>
+				<!-- _L29 = SignalNotifyManual; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L29"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="SignalNotifyManual"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/217c/36F6/95C/544ee3534a92"/>
+					</pragmas>
+				</Equation>
 			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/20de/2DD0/12BC/542d5d1079db" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -1150,7 +1218,7 @@
 								</Edge>
 								<EquationGE presentable="!ed/214b/3E6E/394/5442d2e835e2">
 									<position>
-										<Point x="19262" y="1931"/>
+										<Point x="19262" y="1720"/>
 									</position>
 									<size>
 										<Size width="318" height="503"/>
@@ -1158,7 +1226,7 @@
 								</EquationGE>
 								<EquationGE presentable="!ed/2151/3E6E/394/5442d2f22dc6">
 									<position>
-										<Point x="16272" y="1931"/>
+										<Point x="16272" y="1720"/>
 									</position>
 									<size>
 										<Size width="264" height="502"/>
@@ -1166,10 +1234,10 @@
 								</EquationGE>
 								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2151/3E6E/394/5442d2f22dc6" dstEquation="!ed/214b/3E6E/394/5442d2e835e2">
 									<positions>
-										<Point x="16536" y="2196"/>
-										<Point x="17912" y="2196"/>
-										<Point x="17912" y="2196"/>
-										<Point x="19315" y="2196"/>
+										<Point x="16536" y="1984"/>
+										<Point x="17912" y="1984"/>
+										<Point x="17912" y="1984"/>
+										<Point x="19315" y="1984"/>
 									</positions>
 								</Edge>
 								<EquationGE presentable="!ed/215e/3E6E/394/5442d3af383e">
@@ -1408,6 +1476,30 @@
 										<Point x="9472" y="11404"/>
 										<Point x="9472" y="11404"/>
 										<Point x="10636" y="11404"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/2176/36F6/95C/544ee339a98">
+									<position>
+										<Point x="19235" y="767"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/217c/36F6/95C/544ee3534a92">
+									<position>
+										<Point x="16245" y="767"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/217c/36F6/95C/544ee3534a92" dstEquation="!ed/2176/36F6/95C/544ee339a98">
+									<positions>
+										<Point x="16510" y="1032"/>
+										<Point x="17621" y="1032"/>
+										<Point x="17621" y="1032"/>
+										<Point x="19288" y="1032"/>
 									</positions>
 								</Edge>
 							</presentationElements>

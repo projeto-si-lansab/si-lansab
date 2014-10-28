@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-23T02:21:18
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -23,6 +23,6 @@ const T_String PHASE_FAILED = { 'F', 'A', 'I', 'L', 'E', 'D', ' ', ' ', ' ',
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.c
-** Generation date: 2014-10-23T02:21:18
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 
