@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config Z:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-27T20:59:37
+** Command: s2c613 -config C:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -19,12 +19,22 @@ void Main_reset(outC_Main *outC)
 /* Main */
 void Main(inC_Main *inC, outC_Main *outC)
 {
-  /* Switch::_L1 */ kcg_bool _L1_8;
-  /* Switch::_L3 */ kcg_bool _L3_8;
-  /* Switch::_L4 */ kcg_bool _L4_8;
-  /* Switch::_L5 */ kcg_bool _L5_8;
-  /* Switch::Output1 */ kcg_bool Output1_8;
-  /* Switch::Input1 */ kcg_bool Input1_8;
+  /* linear::MemoryBasic::_L2 */ kcg_bool _L2_2;
+  /* linear::MemoryBasic::_L5 */ kcg_bool _L5_2;
+  /* linear::MemoryBasic::_L6 */ kcg_bool _L6_2;
+  /* linear::MemoryBasic::_L7 */ kcg_bool _L7_2;
+  /* linear::MemoryBasic::Memorized */ kcg_bool Memorized_2;
+  /* linear::MemoryBasic::Write */ kcg_bool Write_2;
+  /* linear::MemoryBasic::Init */ kcg_bool Init_2;
+  /* linear::MemoryBasic::BM_Input */ kcg_bool BM_Input_2;
+  /* linear::MemoryBasic::_L2 */ kcg_int _L2_1;
+  /* linear::MemoryBasic::_L5 */ kcg_bool _L5_116;
+  /* linear::MemoryBasic::_L6 */ kcg_int _L6_115;
+  /* linear::MemoryBasic::_L7 */ kcg_int _L7_114;
+  /* linear::MemoryBasic::Memorized */ kcg_int Memorized_1;
+  /* linear::MemoryBasic::Write */ kcg_bool Write_1;
+  /* linear::MemoryBasic::Init */ kcg_int Init_1;
+  /* linear::MemoryBasic::BM_Input */ kcg_int BM_Input_1;
   /* Altitude_Status::_L6 */ kcg_real _L6_6;
   /* Altitude_Status::_L11 */ kcg_int _L11_6;
   /* Altitude_Status::_L15 */ kcg_real _L15_6;
@@ -191,34 +201,30 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Speed_Status::_L8 */ kcg_int _L8_1;
   /* Speed_Status::Speed */ kcg_int Speed_1;
   /* Speed_Status::Acceleration */ kcg_int Acceleration_1;
-  /* Main::SM1 */ SSM_TR_SM1 _145_SM1_fired;
-  /* Main::SM1 */ kcg_bool _144_SM1_reset_nxt;
-  /* Main::SM1 */ SSM_ST_SM1 _143_SM1_state_nxt;
-  /* Main::MissionOngoing */ kcg_bool _142_MissionOngoing;
-  /* Main::ChangeStage */ kcg_bool _141_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _140_StageFailed;
-  /* Main::MissionSuccessful */ kcg_bool _139_MissionSuccessful;
-  /* Main::InclinationIncrement */ kcg_real _138_InclinationIncrement;
-  /* Main::Acceleration */ kcg_int _137_Acceleration;
-  /* Main::Fuel_Out */ kcg_int _136_Fuel_Out;
-  /* Main::Destroyed_Label */ kcg_bool _135_Destroyed_Label;
-  /* Main::PhF_Color */ kcg_int _134_PhF_Color;
-  /* Main::PhF_Label */ T_String _133_PhF_Label;
-  /* Main::Ph3_Color */ kcg_int _132_Ph3_Color;
-  /* Main::Ph3_Label */ T_String _131_Ph3_Label;
-  /* Main::Ph2_Color */ kcg_int _130_Ph2_Color;
-  /* Main::Ph2_Label */ T_String _129_Ph2_Label;
-  /* Main::Ph1_Color */ kcg_int _128_Ph1_Color;
-  /* Main::Ph1_Label */ T_String _127_Ph1_Label;
-  /* Main::Inclination_Out */ kcg_real _126_Inclination_Out;
-  /* Main::Altitude_Out */ kcg_real _125_Altitude_Out;
-  /* Main::Speed_Out */ kcg_real _124_Speed_Out;
-  /* Main::SM1::Phase1::_L78 */ kcg_bool _L78_SM1_Phase1;
+  /* Main::SM1 */ SSM_TR_SM1 _136_SM1_fired;
+  /* Main::SM1 */ kcg_bool _135_SM1_reset_nxt;
+  /* Main::SM1 */ SSM_ST_SM1 _134_SM1_state_nxt;
+  /* Main::ChangeStage */ kcg_bool _133_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _132_StageFailed;
+  /* Main::MissionSuccessful */ kcg_bool _131_MissionSuccessful;
+  /* Main::InclinationIncrement */ kcg_real _130_InclinationIncrement;
+  /* Main::Acceleration */ kcg_int _129_Acceleration;
+  /* Main::Fuel_Out */ kcg_int _128_Fuel_Out;
+  /* Main::PhF_Color */ kcg_int _127_PhF_Color;
+  /* Main::PhF_Label */ T_String _126_PhF_Label;
+  /* Main::Ph3_Color */ kcg_int _125_Ph3_Color;
+  /* Main::Ph3_Label */ T_String _124_Ph3_Label;
+  /* Main::Ph2_Color */ kcg_int _123_Ph2_Color;
+  /* Main::Ph2_Label */ T_String _122_Ph2_Label;
+  /* Main::Ph1_Color */ kcg_int _121_Ph1_Color;
+  /* Main::Ph1_Label */ T_String _120_Ph1_Label;
+  /* Main::Inclination_Out */ kcg_real _119_Inclination_Out;
+  /* Main::Altitude_Out */ kcg_real _118_Altitude_Out;
+  /* Main::Speed_Out */ kcg_real _117_Speed_Out;
   /* Main::SM1::Phase1::_L76 */ kcg_int _L76_SM1_Phase1;
   /* Main::SM1::Phase1::_L75 */ kcg_int _L75_SM1_Phase1;
   /* Main::SM1::Phase1::_L74 */ kcg_int _L74_SM1_Phase1;
   /* Main::SM1::Phase1::_L73 */ kcg_int _L73_SM1_Phase1;
-  /* Main::SM1::Phase1::_L72 */ kcg_bool _L72_SM1_Phase1;
   /* Main::SM1::Phase1::_L70 */ kcg_bool _L70_SM1_Phase1;
   /* Main::SM1::Phase1::_L64 */ kcg_real _L64_SM1_Phase1;
   /* Main::SM1::Phase1::_L63 */ kcg_real _L63_SM1_Phase1;
@@ -244,53 +250,49 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::SM1::Phase1::IfBlock1::else::_L4 */ kcg_bool _L4_SM1_Phase1_IfBlock1;
   /* Main::SM1::Phase1::IfBlock1::else::_L5 */ kcg_int _L5_SM1_Phase1_IfBlock1;
   /* Main::SM1::Phase1::IfBlock1::else::_L6 */ kcg_bool _L6_SM1_Phase1_IfBlock1;
-  /* Main::SM1::Phase1::IfBlock1::else::_L9 */ kcg_bool _L9189_SM1_Phase1_IfBlock1;
-  /* Main::ChangeStage */ kcg_bool _164_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _165_StageFailed;
+  /* Main::SM1::Phase1::IfBlock1::else::_L9 */ kcg_bool _L9180_SM1_Phase1_IfBlock1;
+  /* Main::ChangeStage */ kcg_bool _155_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _156_StageFailed;
   /* Main::SM1::Phase1::IfBlock1::then::_L10 */ kcg_int _L10_SM1_Phase1_IfBlock1;
   /* Main::SM1::Phase1::IfBlock1::then::_L9 */ kcg_bool _L9_SM1_Phase1_IfBlock1;
   /* Main::SM1::Phase1::IfBlock1::then::_L11 */ kcg_int _L11_SM1_Phase1_IfBlock1;
   /* Main::SM1::Phase1::IfBlock1::then::_L15 */ kcg_bool _L15_SM1_Phase1_IfBlock1;
-  /* Main::ChangeStage */ kcg_bool _166_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _167_StageFailed;
+  /* Main::ChangeStage */ kcg_bool _157_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _158_StageFailed;
   /* Main::SM1::Phase1 */ kcg_bool br_2_guard_SM1_Phase1;
   /* Main::SM1::Phase1 */ kcg_bool br_3_guard_SM1_Phase1;
-  /* Main::SM1 */ SSM_ST_SM1 _158_SM1_state_nxt;
-  /* Main::SM1 */ kcg_bool _159_SM1_reset_nxt;
-  /* Main::SM1 */ SSM_TR_SM1 _160_SM1_fired;
-  /* Main::SM1 */ SSM_ST_SM1 _161_SM1_state_nxt;
-  /* Main::SM1 */ kcg_bool _162_SM1_reset_nxt;
-  /* Main::SM1 */ SSM_TR_SM1 _163_SM1_fired;
-  /* Main::SM1 */ SSM_TR_SM1 _123_SM1_fired;
-  /* Main::SM1 */ kcg_bool _122_SM1_reset_nxt;
-  /* Main::SM1 */ SSM_ST_SM1 _121_SM1_state_nxt;
-  /* Main::MissionOngoing */ kcg_bool _120_MissionOngoing;
-  /* Main::ChangeStage */ kcg_bool _119_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _118_StageFailed;
-  /* Main::MissionSuccessful */ kcg_bool _117_MissionSuccessful;
-  /* Main::InclinationIncrement */ kcg_real _116_InclinationIncrement;
-  /* Main::Acceleration */ kcg_int _115_Acceleration;
-  /* Main::Fuel_Out */ kcg_int _114_Fuel_Out;
-  /* Main::Destroyed_Label */ kcg_bool _113_Destroyed_Label;
-  /* Main::PhF_Color */ kcg_int _112_PhF_Color;
-  /* Main::PhF_Label */ T_String _111_PhF_Label;
-  /* Main::Ph3_Color */ kcg_int _110_Ph3_Color;
-  /* Main::Ph3_Label */ T_String _109_Ph3_Label;
-  /* Main::Ph2_Color */ kcg_int _108_Ph2_Color;
-  /* Main::Ph2_Label */ T_String _107_Ph2_Label;
-  /* Main::Ph1_Color */ kcg_int _106_Ph1_Color;
-  /* Main::Ph1_Label */ T_String _105_Ph1_Label;
-  /* Main::Inclination_Out */ kcg_real _104_Inclination_Out;
-  /* Main::Altitude_Out */ kcg_real _103_Altitude_Out;
-  /* Main::Speed_Out */ kcg_real _102_Speed_Out;
+  /* Main::SM1 */ SSM_ST_SM1 _149_SM1_state_nxt;
+  /* Main::SM1 */ kcg_bool _150_SM1_reset_nxt;
+  /* Main::SM1 */ SSM_TR_SM1 _151_SM1_fired;
+  /* Main::SM1 */ SSM_ST_SM1 _152_SM1_state_nxt;
+  /* Main::SM1 */ kcg_bool _153_SM1_reset_nxt;
+  /* Main::SM1 */ SSM_TR_SM1 _154_SM1_fired;
+  /* Main::SM1 */ SSM_TR_SM1 _116_SM1_fired;
+  /* Main::SM1 */ kcg_bool _115_SM1_reset_nxt;
+  /* Main::SM1 */ SSM_ST_SM1 _114_SM1_state_nxt;
+  /* Main::ChangeStage */ kcg_bool _113_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _112_StageFailed;
+  /* Main::MissionSuccessful */ kcg_bool _111_MissionSuccessful;
+  /* Main::InclinationIncrement */ kcg_real _110_InclinationIncrement;
+  /* Main::Acceleration */ kcg_int _109_Acceleration;
+  /* Main::Fuel_Out */ kcg_int _108_Fuel_Out;
+  /* Main::PhF_Color */ kcg_int _107_PhF_Color;
+  /* Main::PhF_Label */ T_String _106_PhF_Label;
+  /* Main::Ph3_Color */ kcg_int _105_Ph3_Color;
+  /* Main::Ph3_Label */ T_String _104_Ph3_Label;
+  /* Main::Ph2_Color */ kcg_int _103_Ph2_Color;
+  /* Main::Ph2_Label */ T_String _102_Ph2_Label;
+  /* Main::Ph1_Color */ kcg_int _101_Ph1_Color;
+  /* Main::Ph1_Label */ T_String _100_Ph1_Label;
+  /* Main::Inclination_Out */ kcg_real _99_Inclination_Out;
+  /* Main::Altitude_Out */ kcg_real _98_Altitude_Out;
+  /* Main::Speed_Out */ kcg_real _97_Speed_Out;
   /* Main::SM1::Phase2 */ kcg_bool br_3_guard_SM1_Phase2;
   /* Main::SM1::Phase2 */ kcg_bool br_2_guard_SM1_Phase2;
-  /* Main::SM1::Phase2::_L58 */ kcg_bool _L58_SM1_Phase2;
   /* Main::SM1::Phase2::_L57 */ kcg_int _L57_SM1_Phase2;
   /* Main::SM1::Phase2::_L54 */ kcg_int _L54_SM1_Phase2;
   /* Main::SM1::Phase2::_L55 */ kcg_int _L55_SM1_Phase2;
   /* Main::SM1::Phase2::_L56 */ kcg_int _L56_SM1_Phase2;
-  /* Main::SM1::Phase2::_L52 */ kcg_bool _L52_SM1_Phase2;
   /* Main::SM1::Phase2::_L50 */ kcg_bool _L50_SM1_Phase2;
   /* Main::SM1::Phase2::_L37 */ kcg_real _L37_SM1_Phase2;
   /* Main::SM1::Phase2::_L40 */ kcg_int _L40_SM1_Phase2;
@@ -318,70 +320,64 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::SM1::Phase2::IfBlock1::else::_L6 */ kcg_bool _L6_SM1_Phase2_IfBlock1;
   /* Main::SM1::Phase2::IfBlock1::else::_L7 */ kcg_int _L7_SM1_Phase2_IfBlock1;
   /* Main::SM1::Phase2::IfBlock1::else::_L10 */ kcg_bool _L10_SM1_Phase2_IfBlock1;
-  /* Main::ChangeStage */ kcg_bool _154_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _155_StageFailed;
+  /* Main::ChangeStage */ kcg_bool _145_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _146_StageFailed;
   /* Main::SM1::Phase2::IfBlock1::then::_L9 */ kcg_bool _L9_SM1_Phase2_IfBlock1;
   /* Main::SM1::Phase2::IfBlock1::then::_L11 */ kcg_int _L11_SM1_Phase2_IfBlock1;
   /* Main::SM1::Phase2::IfBlock1::then::_L13 */ kcg_int _L13_SM1_Phase2_IfBlock1;
   /* Main::SM1::Phase2::IfBlock1::then::_L15 */ kcg_bool _L15_SM1_Phase2_IfBlock1;
-  /* Main::ChangeStage */ kcg_bool _156_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _157_StageFailed;
-  /* Main::SM1 */ SSM_TR_SM1 _101_SM1_fired;
-  /* Main::SM1 */ kcg_bool _100_SM1_reset_nxt;
-  /* Main::SM1 */ SSM_ST_SM1 _99_SM1_state_nxt;
-  /* Main::MissionOngoing */ kcg_bool _98_MissionOngoing;
-  /* Main::ChangeStage */ kcg_bool _97_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _96_StageFailed;
-  /* Main::MissionSuccessful */ kcg_bool _95_MissionSuccessful;
-  /* Main::InclinationIncrement */ kcg_real _94_InclinationIncrement;
-  /* Main::Acceleration */ kcg_int _93_Acceleration;
-  /* Main::Fuel_Out */ kcg_int _92_Fuel_Out;
-  /* Main::Destroyed_Label */ kcg_bool _91_Destroyed_Label;
-  /* Main::PhF_Color */ kcg_int _90_PhF_Color;
-  /* Main::PhF_Label */ T_String _89_PhF_Label;
-  /* Main::Ph3_Color */ kcg_int _88_Ph3_Color;
-  /* Main::Ph3_Label */ T_String _87_Ph3_Label;
-  /* Main::Ph2_Color */ kcg_int _86_Ph2_Color;
-  /* Main::Ph2_Label */ T_String _85_Ph2_Label;
-  /* Main::Ph1_Color */ kcg_int _84_Ph1_Color;
-  /* Main::Ph1_Label */ T_String _83_Ph1_Label;
-  /* Main::Inclination_Out */ kcg_real _82_Inclination_Out;
-  /* Main::Altitude_Out */ kcg_real _81_Altitude_Out;
-  /* Main::Speed_Out */ kcg_real _80_Speed_Out;
-  /* Main::SM1::AutoDestroy::_L51 */ kcg_bool _L51_SM1_AutoDestroy;
+  /* Main::ChangeStage */ kcg_bool _147_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _148_StageFailed;
+  /* Main::SM1 */ SSM_TR_SM1 _96_SM1_fired;
+  /* Main::SM1 */ kcg_bool _95_SM1_reset_nxt;
+  /* Main::SM1 */ SSM_ST_SM1 _94_SM1_state_nxt;
+  /* Main::ChangeStage */ kcg_bool _93_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _92_StageFailed;
+  /* Main::MissionSuccessful */ kcg_bool _91_MissionSuccessful;
+  /* Main::InclinationIncrement */ kcg_real _90_InclinationIncrement;
+  /* Main::Acceleration */ kcg_int _89_Acceleration;
+  /* Main::Fuel_Out */ kcg_int _88_Fuel_Out;
+  /* Main::PhF_Color */ kcg_int _87_PhF_Color;
+  /* Main::PhF_Label */ T_String _86_PhF_Label;
+  /* Main::Ph3_Color */ kcg_int _85_Ph3_Color;
+  /* Main::Ph3_Label */ T_String _84_Ph3_Label;
+  /* Main::Ph2_Color */ kcg_int _83_Ph2_Color;
+  /* Main::Ph2_Label */ T_String _82_Ph2_Label;
+  /* Main::Ph1_Color */ kcg_int _81_Ph1_Color;
+  /* Main::Ph1_Label */ T_String _80_Ph1_Label;
+  /* Main::Inclination_Out */ kcg_real _79_Inclination_Out;
+  /* Main::Altitude_Out */ kcg_real _78_Altitude_Out;
+  /* Main::Speed_Out */ kcg_real _77_Speed_Out;
+  /* Main::SM1::AutoDestroy::_L53 */ kcg_bool _L53_SM1_AutoDestroy;
   /* Main::SM1::AutoDestroy::_L49 */ kcg_bool _L49_SM1_AutoDestroy;
   /* Main::SM1::AutoDestroy::_L35 */ kcg_int _L35_SM1_AutoDestroy;
   /* Main::SM1::AutoDestroy::_L36 */ T_String _L36_SM1_AutoDestroy;
-  /* Main::SM1 */ SSM_TR_SM1 _79_SM1_fired;
-  /* Main::SM1 */ kcg_bool _78_SM1_reset_nxt;
-  /* Main::SM1 */ SSM_ST_SM1 _77_SM1_state_nxt;
-  /* Main::MissionOngoing */ kcg_bool _76_MissionOngoing;
-  /* Main::ChangeStage */ kcg_bool _75_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _74_StageFailed;
-  /* Main::MissionSuccessful */ kcg_bool _73_MissionSuccessful;
-  /* Main::InclinationIncrement */ kcg_real _72_InclinationIncrement;
-  /* Main::Acceleration */ kcg_int _71_Acceleration;
-  /* Main::Fuel_Out */ kcg_int _70_Fuel_Out;
-  /* Main::Destroyed_Label */ kcg_bool _69_Destroyed_Label;
-  /* Main::PhF_Color */ kcg_int _68_PhF_Color;
-  /* Main::PhF_Label */ T_String _67_PhF_Label;
-  /* Main::Ph3_Color */ kcg_int _66_Ph3_Color;
-  /* Main::Ph3_Label */ T_String _65_Ph3_Label;
-  /* Main::Ph2_Color */ kcg_int _64_Ph2_Color;
-  /* Main::Ph2_Label */ T_String _63_Ph2_Label;
-  /* Main::Ph1_Color */ kcg_int _62_Ph1_Color;
-  /* Main::Ph1_Label */ T_String _61_Ph1_Label;
-  /* Main::Inclination_Out */ kcg_real _60_Inclination_Out;
-  /* Main::Altitude_Out */ kcg_real _59_Altitude_Out;
-  /* Main::Speed_Out */ kcg_real _58_Speed_Out;
+  /* Main::SM1 */ SSM_TR_SM1 _76_SM1_fired;
+  /* Main::SM1 */ kcg_bool _75_SM1_reset_nxt;
+  /* Main::SM1 */ SSM_ST_SM1 _74_SM1_state_nxt;
+  /* Main::ChangeStage */ kcg_bool _73_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _72_StageFailed;
+  /* Main::MissionSuccessful */ kcg_bool _71_MissionSuccessful;
+  /* Main::InclinationIncrement */ kcg_real _70_InclinationIncrement;
+  /* Main::Acceleration */ kcg_int _69_Acceleration;
+  /* Main::Fuel_Out */ kcg_int _68_Fuel_Out;
+  /* Main::PhF_Color */ kcg_int _67_PhF_Color;
+  /* Main::PhF_Label */ T_String _66_PhF_Label;
+  /* Main::Ph3_Color */ kcg_int _65_Ph3_Color;
+  /* Main::Ph3_Label */ T_String _64_Ph3_Label;
+  /* Main::Ph2_Color */ kcg_int _63_Ph2_Color;
+  /* Main::Ph2_Label */ T_String _62_Ph2_Label;
+  /* Main::Ph1_Color */ kcg_int _61_Ph1_Color;
+  /* Main::Ph1_Label */ T_String _60_Ph1_Label;
+  /* Main::Inclination_Out */ kcg_real _59_Inclination_Out;
+  /* Main::Altitude_Out */ kcg_real _58_Altitude_Out;
+  /* Main::Speed_Out */ kcg_real _57_Speed_Out;
   /* Main::SM1::Phase3 */ kcg_bool br_3_guard_SM1_Phase3;
   /* Main::SM1::Phase3 */ kcg_bool br_2_guard_SM1_Phase3;
-  /* Main::SM1::Phase3::_L56 */ kcg_bool _L56_SM1_Phase3;
   /* Main::SM1::Phase3::_L52 */ kcg_int _L52_SM1_Phase3;
   /* Main::SM1::Phase3::_L53 */ kcg_int _L53_SM1_Phase3;
   /* Main::SM1::Phase3::_L54 */ kcg_int _L54_SM1_Phase3;
   /* Main::SM1::Phase3::_L55 */ kcg_int _L55_SM1_Phase3;
-  /* Main::SM1::Phase3::_L51 */ kcg_bool _L51_SM1_Phase3;
   /* Main::SM1::Phase3::_L49 */ kcg_bool _L49_SM1_Phase3;
   /* Main::SM1::Phase3::_L36 */ kcg_int _L36_SM1_Phase3;
   /* Main::SM1::Phase3::_L38 */ kcg_real _L38_SM1_Phase3;
@@ -409,39 +405,37 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::SM1::Phase3::IfBlock1::else::_L6 */ kcg_bool _L6_SM1_Phase3_IfBlock1;
   /* Main::SM1::Phase3::IfBlock1::else::_L8 */ kcg_int _L8_SM1_Phase3_IfBlock1;
   /* Main::SM1::Phase3::IfBlock1::else::_L10 */ kcg_bool _L10_SM1_Phase3_IfBlock1;
-  /* Main::ChangeStage */ kcg_bool _150_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _151_StageFailed;
+  /* Main::ChangeStage */ kcg_bool _141_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _142_StageFailed;
   /* Main::SM1::Phase3::IfBlock1::then::_L9 */ kcg_bool _L9_SM1_Phase3_IfBlock1;
   /* Main::SM1::Phase3::IfBlock1::then::_L11 */ kcg_int _L11_SM1_Phase3_IfBlock1;
   /* Main::SM1::Phase3::IfBlock1::then::_L14 */ kcg_int _L14_SM1_Phase3_IfBlock1;
   /* Main::SM1::Phase3::IfBlock1::then::_L17 */ kcg_bool _L17_SM1_Phase3_IfBlock1;
-  /* Main::ChangeStage */ kcg_bool _152_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _153_StageFailed;
-  /* Main::SM1 */ SSM_TR_SM1 _57_SM1_fired;
-  /* Main::SM1 */ kcg_bool _56_SM1_reset_nxt;
-  /* Main::SM1 */ SSM_ST_SM1 _55_SM1_state_nxt;
-  /* Main::MissionOngoing */ kcg_bool _54_MissionOngoing;
+  /* Main::ChangeStage */ kcg_bool _143_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _144_StageFailed;
+  /* Main::SM1 */ SSM_TR_SM1 _56_SM1_fired;
+  /* Main::SM1 */ kcg_bool _55_SM1_reset_nxt;
+  /* Main::SM1 */ SSM_ST_SM1 _54_SM1_state_nxt;
   /* Main::ChangeStage */ kcg_bool _53_ChangeStage;
   /* Main::StageFailed */ kcg_bool _52_StageFailed;
   /* Main::MissionSuccessful */ kcg_bool _51_MissionSuccessful;
   /* Main::InclinationIncrement */ kcg_real _50_InclinationIncrement;
   /* Main::Acceleration */ kcg_int _49_Acceleration;
   /* Main::Fuel_Out */ kcg_int _48_Fuel_Out;
-  /* Main::Destroyed_Label */ kcg_bool _47_Destroyed_Label;
-  /* Main::PhF_Color */ kcg_int _46_PhF_Color;
-  /* Main::PhF_Label */ T_String _45_PhF_Label;
-  /* Main::Ph3_Color */ kcg_int _44_Ph3_Color;
-  /* Main::Ph3_Label */ T_String _43_Ph3_Label;
-  /* Main::Ph2_Color */ kcg_int _42_Ph2_Color;
-  /* Main::Ph2_Label */ T_String _41_Ph2_Label;
-  /* Main::Ph1_Color */ kcg_int _40_Ph1_Color;
-  /* Main::Ph1_Label */ T_String _39_Ph1_Label;
-  /* Main::Inclination_Out */ kcg_real _38_Inclination_Out;
-  /* Main::Altitude_Out */ kcg_real _37_Altitude_Out;
-  /* Main::Speed_Out */ kcg_real _36_Speed_Out;
+  /* Main::PhF_Color */ kcg_int _47_PhF_Color;
+  /* Main::PhF_Label */ T_String _46_PhF_Label;
+  /* Main::Ph3_Color */ kcg_int _45_Ph3_Color;
+  /* Main::Ph3_Label */ T_String _44_Ph3_Label;
+  /* Main::Ph2_Color */ kcg_int _43_Ph2_Color;
+  /* Main::Ph2_Label */ T_String _42_Ph2_Label;
+  /* Main::Ph1_Color */ kcg_int _41_Ph1_Color;
+  /* Main::Ph1_Label */ T_String _40_Ph1_Label;
+  /* Main::Inclination_Out */ kcg_real _39_Inclination_Out;
+  /* Main::Altitude_Out */ kcg_real _38_Altitude_Out;
+  /* Main::Speed_Out */ kcg_real _37_Speed_Out;
   /* Main::SM1::Final */ kcg_bool br_3_guard_SM1_Final;
   /* Main::SM1::Final */ kcg_bool br_2_guard_SM1_Final;
-  /* Main::SM1::Final::_L127 */ kcg_bool _L127_SM1_Final;
+  /* Main::SM1::Final::_L129 */ kcg_bool _L129_SM1_Final;
   /* Main::SM1::Final::_L123 */ kcg_int _L123_SM1_Final;
   /* Main::SM1::Final::_L124 */ kcg_int _L124_SM1_Final;
   /* Main::SM1::Final::_L125 */ kcg_int _L125_SM1_Final;
@@ -472,7 +466,6 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::SM1::Final::_L110 */ kcg_real _L110_SM1_Final;
   /* Main::SM1::Final::_L111 */ kcg_int _L111_SM1_Final;
   /* Main::SM1::Final::_L112 */ kcg_real _L112_SM1_Final;
-  /* Main::SM1::Final::_L82 */ kcg_bool _L82_SM1_Final;
   /* Main::SM1::Final::_L69 */ kcg_real _L69_SM1_Final;
   /* Main::SM1::Final::_L71 */ kcg_real _L71_SM1_Final;
   /* Main::SM1::Final::_L72 */ kcg_int _L72_SM1_Final;
@@ -487,36 +480,33 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::SM1::Final::IfBlock1::else::_L4 */ kcg_bool _L4_SM1_Final_IfBlock1;
   /* Main::SM1::Final::IfBlock1::else::_L5 */ kcg_int _L5_SM1_Final_IfBlock1;
   /* Main::SM1::Final::IfBlock1::else::_L6 */ kcg_bool _L6_SM1_Final_IfBlock1;
-  /* Main::ChangeStage */ kcg_bool _146_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _147_StageFailed;
+  /* Main::ChangeStage */ kcg_bool _137_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _138_StageFailed;
   /* Main::SM1::Final::IfBlock1::then::_L7 */ kcg_bool _L7_SM1_Final_IfBlock1;
   /* Main::SM1::Final::IfBlock1::then::_L8 */ kcg_bool _L8_SM1_Final_IfBlock1;
-  /* Main::ChangeStage */ kcg_bool _148_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _149_StageFailed;
-  /* Main::SM1 */ SSM_TR_SM1 _35_SM1_fired;
-  /* Main::SM1 */ kcg_bool _34_SM1_reset_nxt;
-  /* Main::SM1 */ SSM_ST_SM1 _33_SM1_state_nxt;
-  /* Main::MissionOngoing */ kcg_bool _32_MissionOngoing;
-  /* Main::ChangeStage */ kcg_bool _31_ChangeStage;
-  /* Main::StageFailed */ kcg_bool _30_StageFailed;
-  /* Main::MissionSuccessful */ kcg_bool _29_MissionSuccessful;
-  /* Main::InclinationIncrement */ kcg_real _28_InclinationIncrement;
-  /* Main::Acceleration */ kcg_int _27_Acceleration;
-  /* Main::Fuel_Out */ kcg_int _26_Fuel_Out;
-  /* Main::Destroyed_Label */ kcg_bool _25_Destroyed_Label;
-  /* Main::PhF_Color */ kcg_int _24_PhF_Color;
-  /* Main::PhF_Label */ T_String _23_PhF_Label;
-  /* Main::Ph3_Color */ kcg_int _22_Ph3_Color;
-  /* Main::Ph3_Label */ T_String _21_Ph3_Label;
-  /* Main::Ph2_Color */ kcg_int _20_Ph2_Color;
-  /* Main::Ph2_Label */ T_String _19_Ph2_Label;
-  /* Main::Ph1_Color */ kcg_int _18_Ph1_Color;
-  /* Main::Ph1_Label */ T_String _17_Ph1_Label;
-  /* Main::Inclination_Out */ kcg_real _16_Inclination_Out;
-  /* Main::Altitude_Out */ kcg_real _15_Altitude_Out;
-  /* Main::Speed_Out */ kcg_real _14_Speed_Out;
+  /* Main::ChangeStage */ kcg_bool _139_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _140_StageFailed;
+  /* Main::SM1 */ SSM_TR_SM1 _36_SM1_fired;
+  /* Main::SM1 */ kcg_bool _35_SM1_reset_nxt;
+  /* Main::SM1 */ SSM_ST_SM1 _34_SM1_state_nxt;
+  /* Main::ChangeStage */ kcg_bool _33_ChangeStage;
+  /* Main::StageFailed */ kcg_bool _32_StageFailed;
+  /* Main::MissionSuccessful */ kcg_bool _31_MissionSuccessful;
+  /* Main::InclinationIncrement */ kcg_real _30_InclinationIncrement;
+  /* Main::Acceleration */ kcg_int _29_Acceleration;
+  /* Main::Fuel_Out */ kcg_int _28_Fuel_Out;
+  /* Main::PhF_Color */ kcg_int _27_PhF_Color;
+  /* Main::PhF_Label */ T_String _26_PhF_Label;
+  /* Main::Ph3_Color */ kcg_int _25_Ph3_Color;
+  /* Main::Ph3_Label */ T_String _24_Ph3_Label;
+  /* Main::Ph2_Color */ kcg_int _23_Ph2_Color;
+  /* Main::Ph2_Label */ T_String _22_Ph2_Label;
+  /* Main::Ph1_Color */ kcg_int _21_Ph1_Color;
+  /* Main::Ph1_Label */ T_String _20_Ph1_Label;
+  /* Main::Inclination_Out */ kcg_real _19_Inclination_Out;
+  /* Main::Altitude_Out */ kcg_real _18_Altitude_Out;
+  /* Main::Speed_Out */ kcg_real _17_Speed_Out;
   /* Main::SM1::Ground::_L39 */ kcg_int _L39_SM1_Ground;
-  /* Main::SM1::Ground::_L38 */ kcg_bool _L38_SM1_Ground;
   /* Main::SM1::Ground::_L31 */ kcg_bool _L31_SM1_Ground;
   /* Main::SM1::Ground::_L21 */ kcg_real _L21_SM1_Ground;
   /* Main::SM1::Ground::_L22 */ kcg_real _L22_SM1_Ground;
@@ -530,14 +520,12 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::SM1 */ SSM_TR_SM1 SM1_fired;
   /* Main::SM1 */ kcg_bool SM1_reset_nxt;
   /* Main::SM1 */ SSM_ST_SM1 SM1_state_nxt;
-  /* Main::MissionOngoing */ kcg_bool MissionOngoing;
   /* Main::ChangeStage */ kcg_bool ChangeStage;
   /* Main::StageFailed */ kcg_bool StageFailed;
   /* Main::MissionSuccessful */ kcg_bool MissionSuccessful;
   /* Main::InclinationIncrement */ kcg_real InclinationIncrement;
   /* Main::Acceleration */ kcg_int Acceleration;
   /* Main::Fuel_Out */ kcg_int Fuel_Out;
-  /* Main::Destroyed_Label */ kcg_bool Destroyed_Label;
   /* Main::PhF_Color */ kcg_int PhF_Color;
   /* Main::PhF_Label */ T_String PhF_Label;
   /* Main::Ph3_Color */ kcg_int Ph3_Color;
@@ -553,29 +541,28 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::SM1::Launched::_L6 */ kcg_bool _L6_SM1_Launched;
   /* Main::SM1::Launched::_L5 */ kcg_int _L5_SM1_Launched;
   /* Main::SM1::Launched::_L4 */ T_String _L4_SM1_Launched;
-  /* Main::SM1::Launched::_L1 */ kcg_bool _L1_SM1_Launched;
-  /* Main::SM1 */ SSM_TR_SM1 _185_SM1_fired_strong;
-  /* Main::SM1 */ kcg_bool _184_SM1_reset_act;
-  /* Main::SM1 */ SSM_ST_SM1 _183_SM1_state_act;
-  /* Main::SM1::Phase1 */ kcg_bool br_1_guard_SM1_Phase1;
-  /* Main::SM1 */ SSM_TR_SM1 _182_SM1_fired_strong;
-  /* Main::SM1 */ kcg_bool _181_SM1_reset_act;
-  /* Main::SM1 */ SSM_ST_SM1 _180_SM1_state_act;
-  /* Main::SM1::Phase2 */ kcg_bool br_1_guard_SM1_Phase2;
-  /* Main::SM1 */ SSM_TR_SM1 _179_SM1_fired_strong;
-  /* Main::SM1 */ kcg_bool _178_SM1_reset_act;
-  /* Main::SM1 */ SSM_ST_SM1 _177_SM1_state_act;
   /* Main::SM1 */ SSM_TR_SM1 _176_SM1_fired_strong;
   /* Main::SM1 */ kcg_bool _175_SM1_reset_act;
   /* Main::SM1 */ SSM_ST_SM1 _174_SM1_state_act;
-  /* Main::SM1::Phase3 */ kcg_bool br_1_guard_SM1_Phase3;
+  /* Main::SM1::Phase1 */ kcg_bool br_1_guard_SM1_Phase1;
   /* Main::SM1 */ SSM_TR_SM1 _173_SM1_fired_strong;
   /* Main::SM1 */ kcg_bool _172_SM1_reset_act;
   /* Main::SM1 */ SSM_ST_SM1 _171_SM1_state_act;
-  /* Main::SM1::Final */ kcg_bool br_1_guard_SM1_Final;
+  /* Main::SM1::Phase2 */ kcg_bool br_1_guard_SM1_Phase2;
   /* Main::SM1 */ SSM_TR_SM1 _170_SM1_fired_strong;
   /* Main::SM1 */ kcg_bool _169_SM1_reset_act;
   /* Main::SM1 */ SSM_ST_SM1 _168_SM1_state_act;
+  /* Main::SM1 */ SSM_TR_SM1 _167_SM1_fired_strong;
+  /* Main::SM1 */ kcg_bool _166_SM1_reset_act;
+  /* Main::SM1 */ SSM_ST_SM1 _165_SM1_state_act;
+  /* Main::SM1::Phase3 */ kcg_bool br_1_guard_SM1_Phase3;
+  /* Main::SM1 */ SSM_TR_SM1 _164_SM1_fired_strong;
+  /* Main::SM1 */ kcg_bool _163_SM1_reset_act;
+  /* Main::SM1 */ SSM_ST_SM1 _162_SM1_state_act;
+  /* Main::SM1::Final */ kcg_bool br_1_guard_SM1_Final;
+  /* Main::SM1 */ SSM_TR_SM1 _161_SM1_fired_strong;
+  /* Main::SM1 */ kcg_bool _160_SM1_reset_act;
+  /* Main::SM1 */ SSM_ST_SM1 _159_SM1_state_act;
   /* Main::SM1::Ground */ kcg_bool br_1_guard_SM1_Ground;
   /* Main::SM1 */ SSM_TR_SM1 SM1_fired_strong;
   /* Main::SM1 */ kcg_bool SM1_reset_act;
@@ -584,26 +571,25 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::Inclination_Out */ kcg_real last_Inclination_Out;
   /* Main::Altitude_Out */ kcg_real last_Altitude_Out;
   /* Main::Speed_Out */ kcg_real last_Speed_Out;
-  /* Main::MissionOngoing */ kcg_bool last_MissionOngoing;
-  /* Main::MissionSuccessful */ kcg_bool last_MissionSuccessful;
   /* Main::InclinationIncrement */ kcg_real last_InclinationIncrement;
   /* Main::Acceleration */ kcg_int last_Acceleration;
   /* Main::SM1 */ SSM_ST_SM1 SM1_state_sel;
-  /* Main::SM1 */ SSM_ST_SM1 _188_SM1_state_act;
+  /* Main::SM1 */ SSM_ST_SM1 _179_SM1_state_act;
   /* Main::SM1 */ kcg_bool SM1_reset_sel;
   /* Main::SM1 */ kcg_bool SM1_reset_prv;
-  /* Main::SM1 */ SSM_TR_SM1 _187_SM1_fired_strong;
-  /* Main::SM1 */ SSM_TR_SM1 _186_SM1_fired;
+  /* Main::SM1 */ SSM_TR_SM1 _178_SM1_fired_strong;
+  /* Main::SM1 */ SSM_TR_SM1 _177_SM1_fired;
   /* Main::Speed */ kcg_int Speed;
   /* Main::Altitude */ kcg_int Altitude;
   /* Main::Inclination */ kcg_real Inclination;
-  /* Main::Destroyed */ kcg_bool Destroyed;
+  /* Main::Manual_Destroy */ kcg_bool Manual_Destroy;
   /* Main::MissionStart */ kcg_bool MissionStart;
   /* Main::Latitude */ kcg_real Latitude;
   /* Main::Longitude */ kcg_real Longitude;
   /* Main::AutomaticMode */ kcg_bool AutomaticMode;
-  /* Main::StageFailed */ kcg_bool _191_StageFailed;
-  /* Main::ChangeStage */ kcg_bool _190_ChangeStage;
+  /* Main::MissionSuccessful */ kcg_bool _183_MissionSuccessful;
+  /* Main::StageFailed */ kcg_bool _182_StageFailed;
+  /* Main::ChangeStage */ kcg_bool _181_ChangeStage;
   /* Main::_L2 */ kcg_bool _L2;
   /* Main::_L4 */ kcg_bool _L4;
   /* Main::_L1 */ kcg_int _L1;
@@ -628,24 +614,23 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::_L105 */ kcg_real _L105;
   /* Main::_L109 */ kcg_bool _L109;
   /* Main::_L107 */ kcg_bool _L107;
-  /* Main::_L110 */ kcg_int _L110;
   /* Main::_L111 */ kcg_bool _L111;
   /* Main::_L113 */ kcg_bool _L113;
   /* Main::_L114 */ kcg_int _L114;
-  /* Main::_L115 */ kcg_bool _L115;
-  /* Main::_L116 */ kcg_bool _L116;
   /* Main::_L117 */ kcg_bool _L117;
-  /* Main::_L118 */ kcg_bool _L118;
   /* Main::_L119 */ kcg_bool _L119;
   /* Main::_L121 */ kcg_bool _L121;
   /* Main::_L122 */ kcg_real _L122;
   /* Main::_L123 */ kcg_real _L123;
   /* Main::_L125 */ kcg_bool _L125;
-  /* Main::_L132 */ kcg_bool _L132;
-  /* Main::_L133 */ kcg_bool _L133;
   /* Main::_L134 */ kcg_bool _L134;
   /* Main::_L135 */ kcg_bool _L135;
   /* Main::_L137 */ kcg_bool _L137;
+  /* Main::_L139 */ kcg_bool _L139;
+  /* Main::_L140 */ kcg_int _L140;
+  /* Main::_L142 */ kcg_int _L142;
+  /* Main::_L144 */ kcg_bool _L144;
+  /* Main::_L145 */ kcg_bool _L145;
   
   if (outC->init4) {
     SM1_state_sel = SSM_st_Ground_SM1;
@@ -681,74 +666,95 @@ void Main(inC_Main *inC, outC_Main *outC)
     case SSM_st_Ground_SM1 :
       br_1_guard_SM1_Ground = MissionStart;
       if (br_1_guard_SM1_Ground) {
-        _168_SM1_state_act = SSM_st_Phase1_SM1;
+        _159_SM1_state_act = SSM_st_Phase1_SM1;
       }
       else {
-        _168_SM1_state_act = SSM_st_Ground_SM1;
+        _159_SM1_state_act = SSM_st_Ground_SM1;
       }
       break;
     
   }
   _L96 = inC->AutoDestruct;
-  Destroyed = _L96;
+  Manual_Destroy = _L96;
   switch (SM1_state_sel) {
     case SSM_st_Phase1_SM1 :
-      br_1_guard_SM1_Phase1 = Destroyed;
+      br_1_guard_SM1_Phase1 = Manual_Destroy;
       if (br_1_guard_SM1_Phase1) {
-        _183_SM1_state_act = SSM_st_AutoDestroy_SM1;
-      }
-      else {
-        _183_SM1_state_act = SSM_st_Phase1_SM1;
-      }
-      _188_SM1_state_act = _183_SM1_state_act;
-      break;
-    case SSM_st_Phase2_SM1 :
-      br_1_guard_SM1_Phase2 = Destroyed;
-      if (br_1_guard_SM1_Phase2) {
-        _180_SM1_state_act = SSM_st_AutoDestroy_SM1;
-      }
-      else {
-        _180_SM1_state_act = SSM_st_Phase2_SM1;
-      }
-      _188_SM1_state_act = _180_SM1_state_act;
-      break;
-    case SSM_st_AutoDestroy_SM1 :
-      _177_SM1_state_act = SSM_st_AutoDestroy_SM1;
-      _188_SM1_state_act = _177_SM1_state_act;
-      break;
-    case SSM_st_Phase3_SM1 :
-      br_1_guard_SM1_Phase3 = Destroyed;
-      if (br_1_guard_SM1_Phase3) {
         _174_SM1_state_act = SSM_st_AutoDestroy_SM1;
       }
       else {
-        _174_SM1_state_act = SSM_st_Phase3_SM1;
+        _174_SM1_state_act = SSM_st_Phase1_SM1;
       }
-      _188_SM1_state_act = _174_SM1_state_act;
+      _179_SM1_state_act = _174_SM1_state_act;
       break;
-    case SSM_st_Final_SM1 :
-      br_1_guard_SM1_Final = Destroyed;
-      if (br_1_guard_SM1_Final) {
+    case SSM_st_Phase2_SM1 :
+      br_1_guard_SM1_Phase2 = Manual_Destroy;
+      if (br_1_guard_SM1_Phase2) {
         _171_SM1_state_act = SSM_st_AutoDestroy_SM1;
       }
       else {
-        _171_SM1_state_act = SSM_st_Final_SM1;
+        _171_SM1_state_act = SSM_st_Phase2_SM1;
       }
-      _188_SM1_state_act = _171_SM1_state_act;
+      _179_SM1_state_act = _171_SM1_state_act;
+      break;
+    case SSM_st_AutoDestroy_SM1 :
+      _168_SM1_state_act = SSM_st_AutoDestroy_SM1;
+      _179_SM1_state_act = _168_SM1_state_act;
+      break;
+    case SSM_st_Phase3_SM1 :
+      br_1_guard_SM1_Phase3 = Manual_Destroy;
+      if (br_1_guard_SM1_Phase3) {
+        _165_SM1_state_act = SSM_st_AutoDestroy_SM1;
+      }
+      else {
+        _165_SM1_state_act = SSM_st_Phase3_SM1;
+      }
+      _179_SM1_state_act = _165_SM1_state_act;
+      break;
+    case SSM_st_Final_SM1 :
+      br_1_guard_SM1_Final = Manual_Destroy;
+      if (br_1_guard_SM1_Final) {
+        _162_SM1_state_act = SSM_st_AutoDestroy_SM1;
+      }
+      else {
+        _162_SM1_state_act = SSM_st_Final_SM1;
+      }
+      _179_SM1_state_act = _162_SM1_state_act;
       break;
     case SSM_st_Ground_SM1 :
-      _188_SM1_state_act = _168_SM1_state_act;
+      _179_SM1_state_act = _159_SM1_state_act;
       break;
     case SSM_st_Launched_SM1 :
-      _188_SM1_state_act = SM1_state_act;
+      _179_SM1_state_act = SM1_state_act;
       break;
     
   }
-  _L110 = inC->Manual_Override;
+  Init_1 = A661_UNSELECTED;
+  _L7_114 = Init_1;
+  if (outC->init4) {
+    _L6_115 = _L7_114;
+  }
+  else {
+    _L6_115 = outC->_L4_1;
+  }
+  _L139 = inC->Manual_Notify;
+  Write_1 = _L139;
+  _L5_116 = Write_1;
+  _L142 = inC->Manual_Override;
+  BM_Input_1 = _L142;
+  _L2_1 = BM_Input_1;
+  if (_L5_116) {
+    outC->_L4_1 = _L2_1;
+  }
+  else {
+    outC->_L4_1 = _L6_115;
+  }
+  Memorized_1 = outC->_L4_1;
+  _L140 = Memorized_1;
   _L114 = A661_UNSELECTED;
-  _L109 = _L110 == _L114;
+  _L109 = _L140 == _L114;
   AutomaticMode = _L109;
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       IfBlock1_clock_SM1_Phase1 = AutomaticMode;
       break;
@@ -764,7 +770,7 @@ void Main(inC_Main *inC, outC_Main *outC)
   Altitude_6 = _L18_6;
   _L69 = Altitude_6;
   Altitude = _L69;
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       if (IfBlock1_clock_SM1_Phase1) {
       }
@@ -787,28 +793,28 @@ void Main(inC_Main *inC, outC_Main *outC)
   }
   switch (SM1_state_sel) {
     case SSM_st_Phase1_SM1 :
-      _184_SM1_reset_act = br_1_guard_SM1_Phase1;
-      outC->SM1_reset_act = _184_SM1_reset_act;
-      break;
-    case SSM_st_Phase2_SM1 :
-      _181_SM1_reset_act = br_1_guard_SM1_Phase2;
-      outC->SM1_reset_act = _181_SM1_reset_act;
-      break;
-    case SSM_st_AutoDestroy_SM1 :
-      _178_SM1_reset_act = kcg_false;
-      outC->SM1_reset_act = _178_SM1_reset_act;
-      break;
-    case SSM_st_Phase3_SM1 :
-      _175_SM1_reset_act = br_1_guard_SM1_Phase3;
+      _175_SM1_reset_act = br_1_guard_SM1_Phase1;
       outC->SM1_reset_act = _175_SM1_reset_act;
       break;
-    case SSM_st_Final_SM1 :
-      _172_SM1_reset_act = br_1_guard_SM1_Final;
+    case SSM_st_Phase2_SM1 :
+      _172_SM1_reset_act = br_1_guard_SM1_Phase2;
       outC->SM1_reset_act = _172_SM1_reset_act;
       break;
-    case SSM_st_Ground_SM1 :
-      _169_SM1_reset_act = br_1_guard_SM1_Ground;
+    case SSM_st_AutoDestroy_SM1 :
+      _169_SM1_reset_act = kcg_false;
       outC->SM1_reset_act = _169_SM1_reset_act;
+      break;
+    case SSM_st_Phase3_SM1 :
+      _166_SM1_reset_act = br_1_guard_SM1_Phase3;
+      outC->SM1_reset_act = _166_SM1_reset_act;
+      break;
+    case SSM_st_Final_SM1 :
+      _163_SM1_reset_act = br_1_guard_SM1_Final;
+      outC->SM1_reset_act = _163_SM1_reset_act;
+      break;
+    case SSM_st_Ground_SM1 :
+      _160_SM1_reset_act = br_1_guard_SM1_Ground;
+      outC->SM1_reset_act = _160_SM1_reset_act;
       break;
     case SSM_st_Launched_SM1 :
       SM1_reset_act = kcg_false;
@@ -816,7 +822,7 @@ void Main(inC_Main *inC, outC_Main *outC)
       break;
     
   }
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       if (outC->SM1_reset_act) {
         outC->init3 = kcg_true;
@@ -851,7 +857,7 @@ void Main(inC_Main *inC, outC_Main *outC)
       break;
     
   }
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase3_SM1 :
       IfBlock1_clock_SM1_Phase3 = AutomaticMode;
       if (IfBlock1_clock_SM1_Phase3) {
@@ -875,7 +881,7 @@ void Main(inC_Main *inC, outC_Main *outC)
       break;
     
   }
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Final_SM1 :
       IfBlock1_clock_SM1_Final = AutomaticMode;
       break;
@@ -898,7 +904,7 @@ void Main(inC_Main *inC, outC_Main *outC)
   Inclination_1 = _L9_1;
   _L53 = Inclination_1;
   Inclination = _L53;
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Final_SM1 :
       _L100_SM1_Final = Inclination;
       _L93_SM1_Final = TARGET_ORBIT_INCLINATION;
@@ -918,7 +924,7 @@ void Main(inC_Main *inC, outC_Main *outC)
   Speed_1 = _L4_1;
   _L45 = Speed_1;
   Speed = _L45;
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Final_SM1 :
       _L111_SM1_Final = Speed;
       _L108_SM1_Final = TARGET_ORBIT_SPEED;
@@ -944,9 +950,12 @@ void Main(inC_Main *inC, outC_Main *outC)
       break;
     
   }
+  _L121 = MissionStart;
+  Write_2 = _L121;
+  Init_2 = kcg_false;
   _L79 = Inclination;
   Inclination_6 = _L79;
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       _L76_SM1_Phase1 = 0;
       Min_Altitude_2 = _L76_SM1_Phase1;
@@ -1001,93 +1010,54 @@ void Main(inC_Main *inC, outC_Main *outC)
   last_Inclination_Out = outC->Inclination_Out;
   last_Altitude_Out = outC->Altitude_Out;
   last_Speed_Out = outC->Speed_Out;
-  last_MissionOngoing = outC->MissionOngoing;
-  last_MissionSuccessful = outC->MissionSuccessful;
   last_InclinationIncrement = outC->InclinationIncrement;
   last_Acceleration = outC->Acceleration;
-  _L137 = A661_FALSE;
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       _L70_SM1_Phase1 = A661_FALSE;
-      _139_MissionSuccessful = _L70_SM1_Phase1;
-      outC->MissionSuccessful = _139_MissionSuccessful;
+      _131_MissionSuccessful = _L70_SM1_Phase1;
+      _183_MissionSuccessful = _131_MissionSuccessful;
       break;
     case SSM_st_Phase2_SM1 :
       _L50_SM1_Phase2 = A661_FALSE;
-      _117_MissionSuccessful = _L50_SM1_Phase2;
-      outC->MissionSuccessful = _117_MissionSuccessful;
+      _111_MissionSuccessful = _L50_SM1_Phase2;
+      _183_MissionSuccessful = _111_MissionSuccessful;
       break;
     case SSM_st_AutoDestroy_SM1 :
       _L49_SM1_AutoDestroy = A661_FALSE;
-      _95_MissionSuccessful = _L49_SM1_AutoDestroy;
-      outC->MissionSuccessful = _95_MissionSuccessful;
+      _91_MissionSuccessful = _L49_SM1_AutoDestroy;
+      _183_MissionSuccessful = _91_MissionSuccessful;
       break;
     case SSM_st_Phase3_SM1 :
       _L49_SM1_Phase3 = A661_FALSE;
-      _73_MissionSuccessful = _L49_SM1_Phase3;
-      outC->MissionSuccessful = _73_MissionSuccessful;
+      _71_MissionSuccessful = _L49_SM1_Phase3;
+      _183_MissionSuccessful = _71_MissionSuccessful;
       break;
     case SSM_st_Final_SM1 :
-      _51_MissionSuccessful = last_MissionSuccessful;
-      outC->MissionSuccessful = _51_MissionSuccessful;
+      _L129_SM1_Final = A661_FALSE;
+      _51_MissionSuccessful = _L129_SM1_Final;
+      _183_MissionSuccessful = _51_MissionSuccessful;
       break;
     case SSM_st_Ground_SM1 :
       _L31_SM1_Ground = A661_FALSE;
-      _29_MissionSuccessful = _L31_SM1_Ground;
-      outC->MissionSuccessful = _29_MissionSuccessful;
+      _31_MissionSuccessful = _L31_SM1_Ground;
+      _183_MissionSuccessful = _31_MissionSuccessful;
       break;
     case SSM_st_Launched_SM1 :
       _L8_SM1_Launched = A661_TRUE;
       MissionSuccessful = _L8_SM1_Launched;
-      outC->MissionSuccessful = MissionSuccessful;
+      _183_MissionSuccessful = MissionSuccessful;
       break;
     
   }
-  _L135 = outC->MissionSuccessful;
-  switch (_188_SM1_state_act) {
-    case SSM_st_Phase1_SM1 :
-      _L78_SM1_Phase1 = A661_TRUE;
-      _142_MissionOngoing = _L78_SM1_Phase1;
-      outC->MissionOngoing = _142_MissionOngoing;
-      break;
-    case SSM_st_Phase2_SM1 :
-      _L58_SM1_Phase2 = A661_TRUE;
-      _120_MissionOngoing = _L58_SM1_Phase2;
-      outC->MissionOngoing = _120_MissionOngoing;
-      break;
-    case SSM_st_AutoDestroy_SM1 :
-      _98_MissionOngoing = last_MissionOngoing;
-      outC->MissionOngoing = _98_MissionOngoing;
-      break;
-    case SSM_st_Phase3_SM1 :
-      _L56_SM1_Phase3 = A661_TRUE;
-      _76_MissionOngoing = _L56_SM1_Phase3;
-      outC->MissionOngoing = _76_MissionOngoing;
-      break;
-    case SSM_st_Final_SM1 :
-      _L127_SM1_Final = A661_TRUE;
-      _54_MissionOngoing = _L127_SM1_Final;
-      outC->MissionOngoing = _54_MissionOngoing;
-      break;
-    case SSM_st_Ground_SM1 :
-      _32_MissionOngoing = _L31_SM1_Ground;
-      outC->MissionOngoing = _32_MissionOngoing;
-      break;
-    case SSM_st_Launched_SM1 :
-      _L6_SM1_Launched = A661_FALSE;
-      MissionOngoing = _L6_SM1_Launched;
-      outC->MissionOngoing = MissionOngoing;
-      break;
-    
-  }
-  _L133 = outC->MissionOngoing;
-  _L115 = Destroyed;
-  switch (_188_SM1_state_act) {
+  _L135 = _183_MissionSuccessful;
+  _L137 = A661_FALSE;
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       if (IfBlock1_clock_SM1_Phase1) {
         _L15_SM1_Phase1_IfBlock1 = A661_FALSE;
-        _167_StageFailed = _L15_SM1_Phase1_IfBlock1;
-        _140_StageFailed = _167_StageFailed;
+        _158_StageFailed = _L15_SM1_Phase1_IfBlock1;
+        _132_StageFailed = _158_StageFailed;
       }
       else {
         if (IfBlock1_clock_1) {
@@ -1112,16 +1082,16 @@ void Main(inC_Main *inC, outC_Main *outC)
         _L4_SM1_Phase1_IfBlock1 = _12_CountFinished_1;
         _L6_SM1_Phase1_IfBlock1 = _L2_SM1_Phase1_IfBlock1 &
           _L4_SM1_Phase1_IfBlock1;
-        _165_StageFailed = _L6_SM1_Phase1_IfBlock1;
-        _140_StageFailed = _165_StageFailed;
+        _156_StageFailed = _L6_SM1_Phase1_IfBlock1;
+        _132_StageFailed = _156_StageFailed;
       }
-      _191_StageFailed = _140_StageFailed;
+      _182_StageFailed = _132_StageFailed;
       break;
     case SSM_st_Phase2_SM1 :
       if (IfBlock1_clock_SM1_Phase2) {
         _L15_SM1_Phase2_IfBlock1 = A661_FALSE;
-        _157_StageFailed = _L15_SM1_Phase2_IfBlock1;
-        _118_StageFailed = _157_StageFailed;
+        _148_StageFailed = _L15_SM1_Phase2_IfBlock1;
+        _112_StageFailed = _148_StageFailed;
       }
       else {
         if (IfBlock1_clock_2) {
@@ -1146,20 +1116,21 @@ void Main(inC_Main *inC, outC_Main *outC)
         _L4_SM1_Phase2_IfBlock1 = _9_CountFinished_2;
         _L6_SM1_Phase2_IfBlock1 = _L2_SM1_Phase2_IfBlock1 &
           _L4_SM1_Phase2_IfBlock1;
-        _155_StageFailed = _L6_SM1_Phase2_IfBlock1;
-        _118_StageFailed = _155_StageFailed;
+        _146_StageFailed = _L6_SM1_Phase2_IfBlock1;
+        _112_StageFailed = _146_StageFailed;
       }
-      _191_StageFailed = _118_StageFailed;
+      _182_StageFailed = _112_StageFailed;
       break;
     case SSM_st_AutoDestroy_SM1 :
-      _96_StageFailed = _L49_SM1_AutoDestroy;
-      _191_StageFailed = _96_StageFailed;
+      _L53_SM1_AutoDestroy = A661_TRUE;
+      _92_StageFailed = _L53_SM1_AutoDestroy;
+      _182_StageFailed = _92_StageFailed;
       break;
     case SSM_st_Phase3_SM1 :
       if (IfBlock1_clock_SM1_Phase3) {
         _L17_SM1_Phase3_IfBlock1 = A661_FALSE;
-        _153_StageFailed = _L17_SM1_Phase3_IfBlock1;
-        _74_StageFailed = _153_StageFailed;
+        _144_StageFailed = _L17_SM1_Phase3_IfBlock1;
+        _72_StageFailed = _144_StageFailed;
       }
       else {
         if (IfBlock1_clock_3) {
@@ -1184,16 +1155,16 @@ void Main(inC_Main *inC, outC_Main *outC)
         _L4_SM1_Phase3_IfBlock1 = _6_CountFinished_3;
         _L6_SM1_Phase3_IfBlock1 = _L2_SM1_Phase3_IfBlock1 &
           _L4_SM1_Phase3_IfBlock1;
-        _151_StageFailed = _L6_SM1_Phase3_IfBlock1;
-        _74_StageFailed = _151_StageFailed;
+        _142_StageFailed = _L6_SM1_Phase3_IfBlock1;
+        _72_StageFailed = _142_StageFailed;
       }
-      _191_StageFailed = _74_StageFailed;
+      _182_StageFailed = _72_StageFailed;
       break;
     case SSM_st_Final_SM1 :
       if (IfBlock1_clock_SM1_Final) {
         _L8_SM1_Final_IfBlock1 = A661_FALSE;
-        _149_StageFailed = _L8_SM1_Final_IfBlock1;
-        _52_StageFailed = _149_StageFailed;
+        _140_StageFailed = _L8_SM1_Final_IfBlock1;
+        _52_StageFailed = _140_StageFailed;
       }
       else {
         if (IfBlock1_clock_4) {
@@ -1218,53 +1189,62 @@ void Main(inC_Main *inC, outC_Main *outC)
         _L3_SM1_Final_IfBlock1 = _3_CountFinished_4;
         _L6_SM1_Final_IfBlock1 = _L4_SM1_Final_IfBlock1 &
           _L3_SM1_Final_IfBlock1;
-        _147_StageFailed = _L6_SM1_Final_IfBlock1;
-        _52_StageFailed = _147_StageFailed;
+        _138_StageFailed = _L6_SM1_Final_IfBlock1;
+        _52_StageFailed = _138_StageFailed;
       }
-      _191_StageFailed = _52_StageFailed;
+      _182_StageFailed = _52_StageFailed;
       break;
     case SSM_st_Ground_SM1 :
-      _30_StageFailed = _L31_SM1_Ground;
-      _191_StageFailed = _30_StageFailed;
+      _32_StageFailed = _L31_SM1_Ground;
+      _182_StageFailed = _32_StageFailed;
       break;
     case SSM_st_Launched_SM1 :
+      _L6_SM1_Launched = A661_FALSE;
       StageFailed = _L6_SM1_Launched;
-      _191_StageFailed = StageFailed;
+      _182_StageFailed = StageFailed;
       break;
     
   }
-  _L117 = _191_StageFailed;
-  _L116 = _L115 | _L117;
-  _L132 = _L133 & _L116;
+  _L117 = _182_StageFailed;
   if (_L135) {
     _L134 = _L137;
   }
   else {
-    _L134 = _L132;
+    _L134 = _L117;
   }
-  _L123 = Longitude;
-  _L122 = Latitude;
-  _L121 = MissionStart;
-  outC->RocketLaunch = _L121;
-  _L5_8 = A661_FALSE;
+  outC->Destroyed_Label = _L134;
+  _L145 = A661_TRUE;
+  _L7_2 = Init_2;
   if (outC->init4) {
-    _L3_8 = _L5_8;
+    _L6_2 = _L7_2;
   }
   else {
-    _L3_8 = outC->_L2_8;
+    _L6_2 = outC->_L4_2;
   }
-  Output1_8 = _L3_8;
-  _L118 = Output1_8;
-  _L119 = !_L118;
+  _L5_2 = Write_2;
+  BM_Input_2 = _L145;
+  _L2_2 = BM_Input_2;
+  if (_L5_2) {
+    outC->_L4_2 = _L2_2;
+  }
+  else {
+    outC->_L4_2 = _L6_2;
+  }
+  Memorized_2 = outC->_L4_2;
+  _L144 = Memorized_2;
+  _L123 = Longitude;
+  _L122 = Latitude;
+  outC->RocketLaunch = _L144;
+  _L119 = !_L134;
   outC->ControlCenterStatus = _L119;
   outC->RocketDestroy = _L134;
-  _L113 = outC->MissionSuccessful;
+  _L113 = _183_MissionSuccessful;
   outC->SatLaunched = _L113;
   _L111 = AutomaticMode;
   _L107 = !_L111;
   outC->Manual_Txt_En = _L107;
   outC->Auto_Txt_En = _L111;
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       _L56_SM1_Phase1 = Inclination;
       _L50_SM1_Phase1 = INCLINATION_PH1;
@@ -1277,8 +1257,8 @@ void Main(inC_Main *inC, outC_Main *outC)
       else {
         _L54_SM1_Phase1 = _L51_SM1_Phase1;
       }
-      _138_InclinationIncrement = _L54_SM1_Phase1;
-      outC->InclinationIncrement = _138_InclinationIncrement;
+      _130_InclinationIncrement = _L54_SM1_Phase1;
+      outC->InclinationIncrement = _130_InclinationIncrement;
       break;
     case SSM_st_Phase2_SM1 :
       _L25_SM1_Phase2 = Inclination;
@@ -1292,12 +1272,12 @@ void Main(inC_Main *inC, outC_Main *outC)
       else {
         _L26_SM1_Phase2 = _L22_SM1_Phase2;
       }
-      _116_InclinationIncrement = _L26_SM1_Phase2;
-      outC->InclinationIncrement = _116_InclinationIncrement;
+      _110_InclinationIncrement = _L26_SM1_Phase2;
+      outC->InclinationIncrement = _110_InclinationIncrement;
       break;
     case SSM_st_AutoDestroy_SM1 :
-      _94_InclinationIncrement = last_InclinationIncrement;
-      outC->InclinationIncrement = _94_InclinationIncrement;
+      _90_InclinationIncrement = last_InclinationIncrement;
+      outC->InclinationIncrement = _90_InclinationIncrement;
       break;
     case SSM_st_Phase3_SM1 :
       _L26_SM1_Phase3 = Inclination;
@@ -1311,8 +1291,8 @@ void Main(inC_Main *inC, outC_Main *outC)
       else {
         _L21_SM1_Phase3 = _L23_SM1_Phase3;
       }
-      _72_InclinationIncrement = _L21_SM1_Phase3;
-      outC->InclinationIncrement = _72_InclinationIncrement;
+      _70_InclinationIncrement = _L21_SM1_Phase3;
+      outC->InclinationIncrement = _70_InclinationIncrement;
       break;
     case SSM_st_Final_SM1 :
       _L101_SM1_Final = Inclination;
@@ -1340,8 +1320,8 @@ void Main(inC_Main *inC, outC_Main *outC)
       break;
     case SSM_st_Ground_SM1 :
       _L4_SM1_Ground = INCLINATION_NONE;
-      _28_InclinationIncrement = _L4_SM1_Ground;
-      outC->InclinationIncrement = _28_InclinationIncrement;
+      _30_InclinationIncrement = _L4_SM1_Ground;
+      outC->InclinationIncrement = _30_InclinationIncrement;
       break;
     case SSM_st_Launched_SM1 :
       InclinationIncrement = last_InclinationIncrement;
@@ -1351,25 +1331,25 @@ void Main(inC_Main *inC, outC_Main *outC)
   }
   _L77 = outC->InclinationIncrement;
   _L70 = Speed;
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       _L55_SM1_Phase1 = ACCELERATION_PH1;
-      _137_Acceleration = _L55_SM1_Phase1;
-      outC->Acceleration = _137_Acceleration;
+      _129_Acceleration = _L55_SM1_Phase1;
+      outC->Acceleration = _129_Acceleration;
       break;
     case SSM_st_Phase2_SM1 :
       _L20_SM1_Phase2 = ACCELERATION_PH2;
-      _115_Acceleration = _L20_SM1_Phase2;
-      outC->Acceleration = _115_Acceleration;
+      _109_Acceleration = _L20_SM1_Phase2;
+      outC->Acceleration = _109_Acceleration;
       break;
     case SSM_st_AutoDestroy_SM1 :
-      _93_Acceleration = last_Acceleration;
-      outC->Acceleration = _93_Acceleration;
+      _89_Acceleration = last_Acceleration;
+      outC->Acceleration = _89_Acceleration;
       break;
     case SSM_st_Phase3_SM1 :
       _L20_SM1_Phase3 = ACCELERATION_PH3;
-      _71_Acceleration = _L20_SM1_Phase3;
-      outC->Acceleration = _71_Acceleration;
+      _69_Acceleration = _L20_SM1_Phase3;
+      outC->Acceleration = _69_Acceleration;
       break;
     case SSM_st_Final_SM1 :
       _L97_SM1_Final = ACCELERATION_NONE;
@@ -1385,8 +1365,8 @@ void Main(inC_Main *inC, outC_Main *outC)
       break;
     case SSM_st_Ground_SM1 :
       _L3_SM1_Ground = ACCELERATION_NONE;
-      _27_Acceleration = _L3_SM1_Ground;
-      outC->Acceleration = _27_Acceleration;
+      _29_Acceleration = _L3_SM1_Ground;
+      outC->Acceleration = _29_Acceleration;
       break;
     case SSM_st_Launched_SM1 :
       Acceleration = last_Acceleration;
@@ -1400,115 +1380,115 @@ void Main(inC_Main *inC, outC_Main *outC)
   switch (SM1_state_sel) {
     case SSM_st_Phase1_SM1 :
       if (br_1_guard_SM1_Phase1) {
-        _185_SM1_fired_strong = SSM_TR_Phase1_1_SM1;
-      }
-      else {
-        _185_SM1_fired_strong = SSM_TR_no_trans_SM1;
-      }
-      _187_SM1_fired_strong = _185_SM1_fired_strong;
-      break;
-    case SSM_st_Phase2_SM1 :
-      if (br_1_guard_SM1_Phase2) {
-        _182_SM1_fired_strong = SSM_TR_Phase2_1_SM1;
-      }
-      else {
-        _182_SM1_fired_strong = SSM_TR_no_trans_SM1;
-      }
-      _187_SM1_fired_strong = _182_SM1_fired_strong;
-      break;
-    case SSM_st_AutoDestroy_SM1 :
-      _179_SM1_fired_strong = SSM_TR_no_trans_SM1;
-      _187_SM1_fired_strong = _179_SM1_fired_strong;
-      break;
-    case SSM_st_Phase3_SM1 :
-      if (br_1_guard_SM1_Phase3) {
-        _176_SM1_fired_strong = SSM_TR_Phase3_1_SM1;
+        _176_SM1_fired_strong = SSM_TR_Phase1_1_SM1;
       }
       else {
         _176_SM1_fired_strong = SSM_TR_no_trans_SM1;
       }
-      _187_SM1_fired_strong = _176_SM1_fired_strong;
+      _178_SM1_fired_strong = _176_SM1_fired_strong;
       break;
-    case SSM_st_Final_SM1 :
-      if (br_1_guard_SM1_Final) {
-        _173_SM1_fired_strong = SSM_TR_Final_1_SM1;
+    case SSM_st_Phase2_SM1 :
+      if (br_1_guard_SM1_Phase2) {
+        _173_SM1_fired_strong = SSM_TR_Phase2_1_SM1;
       }
       else {
         _173_SM1_fired_strong = SSM_TR_no_trans_SM1;
       }
-      _187_SM1_fired_strong = _173_SM1_fired_strong;
+      _178_SM1_fired_strong = _173_SM1_fired_strong;
+      break;
+    case SSM_st_AutoDestroy_SM1 :
+      _170_SM1_fired_strong = SSM_TR_no_trans_SM1;
+      _178_SM1_fired_strong = _170_SM1_fired_strong;
+      break;
+    case SSM_st_Phase3_SM1 :
+      if (br_1_guard_SM1_Phase3) {
+        _167_SM1_fired_strong = SSM_TR_Phase3_1_SM1;
+      }
+      else {
+        _167_SM1_fired_strong = SSM_TR_no_trans_SM1;
+      }
+      _178_SM1_fired_strong = _167_SM1_fired_strong;
+      break;
+    case SSM_st_Final_SM1 :
+      if (br_1_guard_SM1_Final) {
+        _164_SM1_fired_strong = SSM_TR_Final_1_SM1;
+      }
+      else {
+        _164_SM1_fired_strong = SSM_TR_no_trans_SM1;
+      }
+      _178_SM1_fired_strong = _164_SM1_fired_strong;
       break;
     case SSM_st_Ground_SM1 :
       if (br_1_guard_SM1_Ground) {
-        _170_SM1_fired_strong = SSM_TR_Ground_1_SM1;
+        _161_SM1_fired_strong = SSM_TR_Ground_1_SM1;
       }
       else {
-        _170_SM1_fired_strong = SSM_TR_no_trans_SM1;
+        _161_SM1_fired_strong = SSM_TR_no_trans_SM1;
       }
-      _187_SM1_fired_strong = _170_SM1_fired_strong;
+      _178_SM1_fired_strong = _161_SM1_fired_strong;
       break;
     case SSM_st_Launched_SM1 :
       SM1_fired_strong = SSM_TR_no_trans_SM1;
-      _187_SM1_fired_strong = SM1_fired_strong;
+      _178_SM1_fired_strong = SM1_fired_strong;
       break;
     
   }
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
-      Phase1_weakb_clock_SM1 = _187_SM1_fired_strong != SSM_TR_no_trans_SM1;
+      Phase1_weakb_clock_SM1 = _178_SM1_fired_strong != SSM_TR_no_trans_SM1;
       if (Phase1_weakb_clock_SM1) {
-        _163_SM1_fired = _187_SM1_fired_strong;
-        _162_SM1_reset_nxt = kcg_false;
-        _161_SM1_state_nxt = SSM_st_Phase1_SM1;
+        _154_SM1_fired = _178_SM1_fired_strong;
+        _153_SM1_reset_nxt = kcg_false;
+        _152_SM1_state_nxt = SSM_st_Phase1_SM1;
       }
       if (IfBlock1_clock_SM1_Phase1) {
         _L11_SM1_Phase1_IfBlock1 = Altitude;
         _L10_SM1_Phase1_IfBlock1 = PHASE1_MAX_ALTITUDE;
         _L9_SM1_Phase1_IfBlock1 = _L11_SM1_Phase1_IfBlock1 >
           _L10_SM1_Phase1_IfBlock1;
-        _166_ChangeStage = _L9_SM1_Phase1_IfBlock1;
-        _141_ChangeStage = _166_ChangeStage;
+        _157_ChangeStage = _L9_SM1_Phase1_IfBlock1;
+        _133_ChangeStage = _157_ChangeStage;
       }
       else {
-        _L9189_SM1_Phase1_IfBlock1 = inC->Manual_StartPhase2;
-        _164_ChangeStage = _L9189_SM1_Phase1_IfBlock1;
-        _141_ChangeStage = _164_ChangeStage;
+        _L9180_SM1_Phase1_IfBlock1 = inC->Manual_StartPhase2;
+        _155_ChangeStage = _L9180_SM1_Phase1_IfBlock1;
+        _133_ChangeStage = _155_ChangeStage;
       }
       if (Phase1_weakb_clock_SM1) {
-        _145_SM1_fired = _163_SM1_fired;
-        _144_SM1_reset_nxt = _162_SM1_reset_nxt;
-        _143_SM1_state_nxt = _161_SM1_state_nxt;
+        _136_SM1_fired = _154_SM1_fired;
+        _135_SM1_reset_nxt = _153_SM1_reset_nxt;
+        _134_SM1_state_nxt = _152_SM1_state_nxt;
       }
       else {
-        br_3_guard_SM1_Phase1 = _141_ChangeStage;
-        br_2_guard_SM1_Phase1 = _140_StageFailed;
+        br_3_guard_SM1_Phase1 = _133_ChangeStage;
+        br_2_guard_SM1_Phase1 = _132_StageFailed;
         if (br_2_guard_SM1_Phase1) {
-          _160_SM1_fired = SSM_TR_Phase1_2_SM1;
+          _151_SM1_fired = SSM_TR_Phase1_2_SM1;
         }
         else if (br_3_guard_SM1_Phase1) {
-          _160_SM1_fired = SSM_TR_Phase1_3_SM1;
+          _151_SM1_fired = SSM_TR_Phase1_3_SM1;
         }
         else {
-          _160_SM1_fired = SSM_TR_no_trans_SM1;
+          _151_SM1_fired = SSM_TR_no_trans_SM1;
         }
         if (br_2_guard_SM1_Phase1) {
-          _159_SM1_reset_nxt = kcg_true;
+          _150_SM1_reset_nxt = kcg_true;
         }
         else {
-          _159_SM1_reset_nxt = br_3_guard_SM1_Phase1;
+          _150_SM1_reset_nxt = br_3_guard_SM1_Phase1;
         }
         if (br_2_guard_SM1_Phase1) {
-          _158_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
+          _149_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
         }
         else if (br_3_guard_SM1_Phase1) {
-          _158_SM1_state_nxt = SSM_st_Phase2_SM1;
+          _149_SM1_state_nxt = SSM_st_Phase2_SM1;
         }
         else {
-          _158_SM1_state_nxt = SSM_st_Phase1_SM1;
+          _149_SM1_state_nxt = SSM_st_Phase1_SM1;
         }
-        _145_SM1_fired = _160_SM1_fired;
-        _144_SM1_reset_nxt = _159_SM1_reset_nxt;
-        _143_SM1_state_nxt = _158_SM1_state_nxt;
+        _136_SM1_fired = _151_SM1_fired;
+        _135_SM1_reset_nxt = _150_SM1_reset_nxt;
+        _134_SM1_state_nxt = _149_SM1_state_nxt;
       }
       _L74_SM1_Phase1 = Altitude;
       _L12_2 = Max_Altitude_2;
@@ -1537,46 +1517,43 @@ void Main(inC_Main *inC, outC_Main *outC)
       }
       Fuel_2 = _L26_2;
       _L73_SM1_Phase1 = Fuel_2;
-      _136_Fuel_Out = _L73_SM1_Phase1;
-      _L72_SM1_Phase1 = A661_FALSE;
-      _135_Destroyed_Label = _L72_SM1_Phase1;
+      _128_Fuel_Out = _L73_SM1_Phase1;
       _L64_SM1_Phase1 = Inclination;
-      _126_Inclination_Out = _L64_SM1_Phase1;
+      _119_Inclination_Out = _L64_SM1_Phase1;
       _L60_SM1_Phase1 = Altitude;
       _L61_SM1_Phase1 = (kcg_real) _L60_SM1_Phase1;
-      _125_Altitude_Out = _L61_SM1_Phase1;
+      _118_Altitude_Out = _L61_SM1_Phase1;
       _L62_SM1_Phase1 = Speed;
       _L63_SM1_Phase1 = (kcg_real) _L62_SM1_Phase1;
-      _124_Speed_Out = _L63_SM1_Phase1;
+      _117_Speed_Out = _L63_SM1_Phase1;
       _L34_SM1_Phase1 = YELLOW;
       kcg_copy_T_String(&_L33_SM1_Phase1, (T_String *) &PHASE_IN_PROCESS);
       kcg_copy_T_String(&_L31_SM1_Phase1, (T_String *) &PHASE_NOT_STARTED);
-      kcg_copy_T_String(&_129_Ph2_Label, &_L31_SM1_Phase1);
+      kcg_copy_T_String(&_122_Ph2_Label, &_L31_SM1_Phase1);
       _L32_SM1_Phase1 = BLUE;
-      kcg_copy_T_String(&_131_Ph3_Label, &_L31_SM1_Phase1);
-      _134_PhF_Color = _L32_SM1_Phase1;
-      kcg_copy_T_String(&_133_PhF_Label, &_L31_SM1_Phase1);
-      _132_Ph3_Color = _L32_SM1_Phase1;
-      _128_Ph1_Color = _L34_SM1_Phase1;
-      kcg_copy_T_String(&_127_Ph1_Label, &_L33_SM1_Phase1);
-      _130_Ph2_Color = _L32_SM1_Phase1;
-      _186_SM1_fired = _145_SM1_fired;
-      outC->SM1_reset_nxt = _144_SM1_reset_nxt;
-      outC->SM1_state_nxt = _143_SM1_state_nxt;
-      _190_ChangeStage = _141_ChangeStage;
-      outC->Fuel_Out = _136_Fuel_Out;
-      outC->Destroyed_Label = _135_Destroyed_Label;
-      outC->PhF_Color = _134_PhF_Color;
-      kcg_copy_T_String(&outC->PhF_Label, &_133_PhF_Label);
-      outC->Ph3_Color = _132_Ph3_Color;
-      kcg_copy_T_String(&outC->Ph3_Label, &_131_Ph3_Label);
-      outC->Ph2_Color = _130_Ph2_Color;
-      kcg_copy_T_String(&outC->Ph2_Label, &_129_Ph2_Label);
-      outC->Ph1_Color = _128_Ph1_Color;
-      kcg_copy_T_String(&outC->Ph1_Label, &_127_Ph1_Label);
-      outC->Inclination_Out = _126_Inclination_Out;
-      outC->Altitude_Out = _125_Altitude_Out;
-      outC->Speed_Out = _124_Speed_Out;
+      kcg_copy_T_String(&_124_Ph3_Label, &_L31_SM1_Phase1);
+      _127_PhF_Color = _L32_SM1_Phase1;
+      kcg_copy_T_String(&_126_PhF_Label, &_L31_SM1_Phase1);
+      _125_Ph3_Color = _L32_SM1_Phase1;
+      _121_Ph1_Color = _L34_SM1_Phase1;
+      kcg_copy_T_String(&_120_Ph1_Label, &_L33_SM1_Phase1);
+      _123_Ph2_Color = _L32_SM1_Phase1;
+      _177_SM1_fired = _136_SM1_fired;
+      outC->SM1_reset_nxt = _135_SM1_reset_nxt;
+      outC->SM1_state_nxt = _134_SM1_state_nxt;
+      _181_ChangeStage = _133_ChangeStage;
+      outC->Fuel_Out = _128_Fuel_Out;
+      outC->PhF_Color = _127_PhF_Color;
+      kcg_copy_T_String(&outC->PhF_Label, &_126_PhF_Label);
+      outC->Ph3_Color = _125_Ph3_Color;
+      kcg_copy_T_String(&outC->Ph3_Label, &_124_Ph3_Label);
+      outC->Ph2_Color = _123_Ph2_Color;
+      kcg_copy_T_String(&outC->Ph2_Label, &_122_Ph2_Label);
+      outC->Ph1_Color = _121_Ph1_Color;
+      kcg_copy_T_String(&outC->Ph1_Label, &_120_Ph1_Label);
+      outC->Inclination_Out = _119_Inclination_Out;
+      outC->Altitude_Out = _118_Altitude_Out;
+      outC->Speed_Out = _117_Speed_Out;
       break;
     case SSM_st_Phase2_SM1 :
       if (IfBlock1_clock_SM1_Phase2) {
@@ -1584,39 +1561,39 @@ void Main(inC_Main *inC, outC_Main *outC)
         _L13_SM1_Phase2_IfBlock1 = PHASE2_MAX_ALTITUDE;
         _L9_SM1_Phase2_IfBlock1 = _L11_SM1_Phase2_IfBlock1 >
           _L13_SM1_Phase2_IfBlock1;
-        _156_ChangeStage = _L9_SM1_Phase2_IfBlock1;
-        _119_ChangeStage = _156_ChangeStage;
+        _147_ChangeStage = _L9_SM1_Phase2_IfBlock1;
+        _113_ChangeStage = _147_ChangeStage;
       }
       else {
         _L10_SM1_Phase2_IfBlock1 = inC->Manual_StartPhase3;
-        _154_ChangeStage = _L10_SM1_Phase2_IfBlock1;
-        _119_ChangeStage = _154_ChangeStage;
+        _145_ChangeStage = _L10_SM1_Phase2_IfBlock1;
+        _113_ChangeStage = _145_ChangeStage;
       }
-      br_3_guard_SM1_Phase2 = _119_ChangeStage;
-      br_2_guard_SM1_Phase2 = _118_StageFailed;
+      br_3_guard_SM1_Phase2 = _113_ChangeStage;
+      br_2_guard_SM1_Phase2 = _112_StageFailed;
       if (br_2_guard_SM1_Phase2) {
-        _123_SM1_fired = SSM_TR_Phase2_2_SM1;
+        _116_SM1_fired = SSM_TR_Phase2_2_SM1;
       }
       else if (br_3_guard_SM1_Phase2) {
-        _123_SM1_fired = SSM_TR_Phase2_3_SM1;
+        _116_SM1_fired = SSM_TR_Phase2_3_SM1;
       }
       else {
-        _123_SM1_fired = SSM_TR_no_trans_SM1;
+        _116_SM1_fired = SSM_TR_no_trans_SM1;
       }
       if (br_2_guard_SM1_Phase2) {
-        _122_SM1_reset_nxt = kcg_true;
+        _115_SM1_reset_nxt = kcg_true;
       }
       else {
-        _122_SM1_reset_nxt = br_3_guard_SM1_Phase2;
+        _115_SM1_reset_nxt = br_3_guard_SM1_Phase2;
       }
       if (br_2_guard_SM1_Phase2) {
-        _121_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
+        _114_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
       }
       else if (br_3_guard_SM1_Phase2) {
-        _121_SM1_state_nxt = SSM_st_Phase3_SM1;
+        _114_SM1_state_nxt = SSM_st_Phase3_SM1;
       }
       else {
-        _121_SM1_state_nxt = SSM_st_Phase2_SM1;
+        _114_SM1_state_nxt = SSM_st_Phase2_SM1;
       }
       _L56_SM1_Phase2 = Altitude;
       _L12_3 = Max_Altitude_3;
@@ -1645,87 +1622,81 @@ void Main(inC_Main *inC, outC_Main *outC)
       }
       Fuel_3 = _L26_3;
       _L54_SM1_Phase2 = Fuel_3;
-      _114_Fuel_Out = _L54_SM1_Phase2;
-      _L52_SM1_Phase2 = A661_FALSE;
-      _113_Destroyed_Label = _L52_SM1_Phase2;
+      _108_Fuel_Out = _L54_SM1_Phase2;
       _L43_SM1_Phase2 = Altitude;
       _L42_SM1_Phase2 = (kcg_real) _L43_SM1_Phase2;
       _L40_SM1_Phase2 = Speed;
       _L41_SM1_Phase2 = (kcg_real) _L40_SM1_Phase2;
-      _102_Speed_Out = _L41_SM1_Phase2;
+      _97_Speed_Out = _L41_SM1_Phase2;
       _L37_SM1_Phase2 = Inclination;
-      _103_Altitude_Out = _L42_SM1_Phase2;
-      _104_Inclination_Out = _L37_SM1_Phase2;
+      _98_Altitude_Out = _L42_SM1_Phase2;
+      _99_Inclination_Out = _L37_SM1_Phase2;
       _L35_SM1_Phase2 = YELLOW;
       kcg_copy_T_String(&_L34_SM1_Phase2, (T_String *) &PHASE_IN_PROCESS);
       kcg_copy_T_String(&_L33_SM1_Phase2, (T_String *) &PHASE_COMPLETE);
       _L31_SM1_Phase2 = GREEN;
-      _106_Ph1_Color = _L31_SM1_Phase2;
+      _101_Ph1_Color = _L31_SM1_Phase2;
       kcg_copy_T_String(&_L32_SM1_Phase2, (T_String *) &PHASE_NOT_STARTED);
       _L29_SM1_Phase2 = BLUE;
-      _110_Ph3_Color = _L29_SM1_Phase2;
-      _108_Ph2_Color = _L35_SM1_Phase2;
-      kcg_copy_T_String(&_111_PhF_Label, &_L32_SM1_Phase2);
-      kcg_copy_T_String(&_107_Ph2_Label, &_L34_SM1_Phase2);
-      _112_PhF_Color = _L29_SM1_Phase2;
-      kcg_copy_T_String(&_105_Ph1_Label, &_L33_SM1_Phase2);
-      kcg_copy_T_String(&_109_Ph3_Label, &_L32_SM1_Phase2);
-      _186_SM1_fired = _123_SM1_fired;
-      outC->SM1_reset_nxt = _122_SM1_reset_nxt;
-      outC->SM1_state_nxt = _121_SM1_state_nxt;
-      _190_ChangeStage = _119_ChangeStage;
-      outC->Fuel_Out = _114_Fuel_Out;
-      outC->Destroyed_Label = _113_Destroyed_Label;
-      outC->PhF_Color = _112_PhF_Color;
-      kcg_copy_T_String(&outC->PhF_Label, &_111_PhF_Label);
-      outC->Ph3_Color = _110_Ph3_Color;
-      kcg_copy_T_String(&outC->Ph3_Label, &_109_Ph3_Label);
-      outC->Ph2_Color = _108_Ph2_Color;
-      kcg_copy_T_String(&outC->Ph2_Label, &_107_Ph2_Label);
-      outC->Ph1_Color = _106_Ph1_Color;
-      kcg_copy_T_String(&outC->Ph1_Label, &_105_Ph1_Label);
-      outC->Inclination_Out = _104_Inclination_Out;
-      outC->Altitude_Out = _103_Altitude_Out;
-      outC->Speed_Out = _102_Speed_Out;
+      _105_Ph3_Color = _L29_SM1_Phase2;
+      _103_Ph2_Color = _L35_SM1_Phase2;
+      kcg_copy_T_String(&_106_PhF_Label, &_L32_SM1_Phase2);
+      kcg_copy_T_String(&_102_Ph2_Label, &_L34_SM1_Phase2);
+      _107_PhF_Color = _L29_SM1_Phase2;
+      kcg_copy_T_String(&_100_Ph1_Label, &_L33_SM1_Phase2);
+      kcg_copy_T_String(&_104_Ph3_Label, &_L32_SM1_Phase2);
+      _177_SM1_fired = _116_SM1_fired;
+      outC->SM1_reset_nxt = _115_SM1_reset_nxt;
+      outC->SM1_state_nxt = _114_SM1_state_nxt;
+      _181_ChangeStage = _113_ChangeStage;
+      outC->Fuel_Out = _108_Fuel_Out;
+      outC->PhF_Color = _107_PhF_Color;
+      kcg_copy_T_String(&outC->PhF_Label, &_106_PhF_Label);
+      outC->Ph3_Color = _105_Ph3_Color;
+      kcg_copy_T_String(&outC->Ph3_Label, &_104_Ph3_Label);
+      outC->Ph2_Color = _103_Ph2_Color;
+      kcg_copy_T_String(&outC->Ph2_Label, &_102_Ph2_Label);
+      outC->Ph1_Color = _101_Ph1_Color;
+      kcg_copy_T_String(&outC->Ph1_Label, &_100_Ph1_Label);
+      outC->Inclination_Out = _99_Inclination_Out;
+      outC->Altitude_Out = _98_Altitude_Out;
+      outC->Speed_Out = _97_Speed_Out;
       break;
     case SSM_st_AutoDestroy_SM1 :
-      _92_Fuel_Out = last_Fuel_Out;
-      _82_Inclination_Out = last_Inclination_Out;
-      _81_Altitude_Out = last_Altitude_Out;
-      _80_Speed_Out = last_Speed_Out;
-      _101_SM1_fired = _187_SM1_fired_strong;
-      _100_SM1_reset_nxt = kcg_false;
-      _99_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
-      _97_ChangeStage = _L49_SM1_AutoDestroy;
-      _L51_SM1_AutoDestroy = !_L49_SM1_AutoDestroy;
-      _91_Destroyed_Label = _L51_SM1_AutoDestroy;
+      _88_Fuel_Out = last_Fuel_Out;
+      _79_Inclination_Out = last_Inclination_Out;
+      _78_Altitude_Out = last_Altitude_Out;
+      _77_Speed_Out = last_Speed_Out;
+      _96_SM1_fired = _178_SM1_fired_strong;
+      _95_SM1_reset_nxt = kcg_false;
+      _94_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
+      _93_ChangeStage = _L49_SM1_AutoDestroy;
       _L35_SM1_AutoDestroy = RED;
-      _84_Ph1_Color = _L35_SM1_AutoDestroy;
+      _81_Ph1_Color = _L35_SM1_AutoDestroy;
       kcg_copy_T_String(&_L36_SM1_AutoDestroy, (T_String *) &PHASE_FAILED);
-      kcg_copy_T_String(&_85_Ph2_Label, &_L36_SM1_AutoDestroy);
-      _86_Ph2_Color = _L35_SM1_AutoDestroy;
-      _90_PhF_Color = _L35_SM1_AutoDestroy;
-      kcg_copy_T_String(&_83_Ph1_Label, &_L36_SM1_AutoDestroy);
-      kcg_copy_T_String(&_87_Ph3_Label, &_L36_SM1_AutoDestroy);
-      kcg_copy_T_String(&_89_PhF_Label, &_L36_SM1_AutoDestroy);
-      _88_Ph3_Color = _L35_SM1_AutoDestroy;
-      _186_SM1_fired = _101_SM1_fired;
-      outC->SM1_reset_nxt = _100_SM1_reset_nxt;
-      outC->SM1_state_nxt = _99_SM1_state_nxt;
-      _190_ChangeStage = _97_ChangeStage;
-      outC->Fuel_Out = _92_Fuel_Out;
-      outC->Destroyed_Label = _91_Destroyed_Label;
-      outC->PhF_Color = _90_PhF_Color;
-      kcg_copy_T_String(&outC->PhF_Label, &_89_PhF_Label);
-      outC->Ph3_Color = _88_Ph3_Color;
-      kcg_copy_T_String(&outC->Ph3_Label, &_87_Ph3_Label);
-      outC->Ph2_Color = _86_Ph2_Color;
-      kcg_copy_T_String(&outC->Ph2_Label, &_85_Ph2_Label);
-      outC->Ph1_Color = _84_Ph1_Color;
-      kcg_copy_T_String(&outC->Ph1_Label, &_83_Ph1_Label);
-      outC->Inclination_Out = _82_Inclination_Out;
-      outC->Altitude_Out = _81_Altitude_Out;
-      outC->Speed_Out = _80_Speed_Out;
+      kcg_copy_T_String(&_82_Ph2_Label, &_L36_SM1_AutoDestroy);
+      _83_Ph2_Color = _L35_SM1_AutoDestroy;
+      _87_PhF_Color = _L35_SM1_AutoDestroy;
+      kcg_copy_T_String(&_80_Ph1_Label, &_L36_SM1_AutoDestroy);
+      kcg_copy_T_String(&_84_Ph3_Label, &_L36_SM1_AutoDestroy);
+      kcg_copy_T_String(&_86_PhF_Label, &_L36_SM1_AutoDestroy);
+      _85_Ph3_Color = _L35_SM1_AutoDestroy;
+      _177_SM1_fired = _96_SM1_fired;
+      outC->SM1_reset_nxt = _95_SM1_reset_nxt;
+      outC->SM1_state_nxt = _94_SM1_state_nxt;
+      _181_ChangeStage = _93_ChangeStage;
+      outC->Fuel_Out = _88_Fuel_Out;
+      outC->PhF_Color = _87_PhF_Color;
+      kcg_copy_T_String(&outC->PhF_Label, &_86_PhF_Label);
+      outC->Ph3_Color = _85_Ph3_Color;
+      kcg_copy_T_String(&outC->Ph3_Label, &_84_Ph3_Label);
+      outC->Ph2_Color = _83_Ph2_Color;
+      kcg_copy_T_String(&outC->Ph2_Label, &_82_Ph2_Label);
+      outC->Ph1_Color = _81_Ph1_Color;
+      kcg_copy_T_String(&outC->Ph1_Label, &_80_Ph1_Label);
+      outC->Inclination_Out = _79_Inclination_Out;
+      outC->Altitude_Out = _78_Altitude_Out;
+      outC->Speed_Out = _77_Speed_Out;
       break;
     case SSM_st_Phase3_SM1 :
       if (IfBlock1_clock_SM1_Phase3) {
@@ -1733,39 +1704,39 @@ void Main(inC_Main *inC, outC_Main *outC)
         _L14_SM1_Phase3_IfBlock1 = PHASE3_MAX_ALTITUDE;
         _L9_SM1_Phase3_IfBlock1 = _L11_SM1_Phase3_IfBlock1 >
           _L14_SM1_Phase3_IfBlock1;
-        _152_ChangeStage = _L9_SM1_Phase3_IfBlock1;
-        _75_ChangeStage = _152_ChangeStage;
+        _143_ChangeStage = _L9_SM1_Phase3_IfBlock1;
+        _73_ChangeStage = _143_ChangeStage;
       }
       else {
         _L10_SM1_Phase3_IfBlock1 = inC->Manual_StartPhaseFinal;
-        _150_ChangeStage = _L10_SM1_Phase3_IfBlock1;
-        _75_ChangeStage = _150_ChangeStage;
+        _141_ChangeStage = _L10_SM1_Phase3_IfBlock1;
+        _73_ChangeStage = _141_ChangeStage;
       }
-      br_3_guard_SM1_Phase3 = _75_ChangeStage;
-      br_2_guard_SM1_Phase3 = _74_StageFailed;
+      br_3_guard_SM1_Phase3 = _73_ChangeStage;
+      br_2_guard_SM1_Phase3 = _72_StageFailed;
       if (br_2_guard_SM1_Phase3) {
-        _79_SM1_fired = SSM_TR_Phase3_2_SM1;
+        _76_SM1_fired = SSM_TR_Phase3_2_SM1;
       }
       else if (br_3_guard_SM1_Phase3) {
-        _79_SM1_fired = SSM_TR_Phase3_3_SM1;
+        _76_SM1_fired = SSM_TR_Phase3_3_SM1;
       }
       else {
-        _79_SM1_fired = SSM_TR_no_trans_SM1;
+        _76_SM1_fired = SSM_TR_no_trans_SM1;
       }
       if (br_2_guard_SM1_Phase3) {
-        _78_SM1_reset_nxt = kcg_true;
+        _75_SM1_reset_nxt = kcg_true;
       }
       else {
-        _78_SM1_reset_nxt = br_3_guard_SM1_Phase3;
+        _75_SM1_reset_nxt = br_3_guard_SM1_Phase3;
       }
       if (br_2_guard_SM1_Phase3) {
-        _77_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
+        _74_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
       }
       else if (br_3_guard_SM1_Phase3) {
-        _77_SM1_state_nxt = SSM_st_Final_SM1;
+        _74_SM1_state_nxt = SSM_st_Final_SM1;
       }
       else {
-        _77_SM1_state_nxt = SSM_st_Phase3_SM1;
+        _74_SM1_state_nxt = SSM_st_Phase3_SM1;
       }
       _L55_SM1_Phase3 = Altitude;
       _L12_4 = Max_Altitude_4;
@@ -1794,85 +1765,82 @@ void Main(inC_Main *inC, outC_Main *outC)
       }
       Fuel_4 = _L26_4;
       _L53_SM1_Phase3 = Fuel_4;
-      _70_Fuel_Out = _L53_SM1_Phase3;
-      _L51_SM1_Phase3 = A661_FALSE;
-      _69_Destroyed_Label = _L51_SM1_Phase3;
+      _68_Fuel_Out = _L53_SM1_Phase3;
       _L36_SM1_Phase3 = Speed;
       _L42_SM1_Phase3 = (kcg_real) _L36_SM1_Phase3;
       _L41_SM1_Phase3 = Altitude;
       _L39_SM1_Phase3 = (kcg_real) _L41_SM1_Phase3;
-      _59_Altitude_Out = _L39_SM1_Phase3;
+      _58_Altitude_Out = _L39_SM1_Phase3;
       _L38_SM1_Phase3 = Inclination;
-      _60_Inclination_Out = _L38_SM1_Phase3;
-      _58_Speed_Out = _L42_SM1_Phase3;
+      _59_Inclination_Out = _L38_SM1_Phase3;
+      _57_Speed_Out = _L42_SM1_Phase3;
       kcg_copy_T_String(&_L35_SM1_Phase3, (T_String *) &PHASE_IN_PROCESS);
       _L34_SM1_Phase3 = GREEN;
-      _64_Ph2_Color = _L34_SM1_Phase3;
+      _63_Ph2_Color = _L34_SM1_Phase3;
       kcg_copy_T_String(&_L31_SM1_Phase3, (T_String *) &PHASE_COMPLETE);
-      kcg_copy_T_String(&_61_Ph1_Label, &_L31_SM1_Phase3);
-      _62_Ph1_Color = _L34_SM1_Phase3;
+      kcg_copy_T_String(&_60_Ph1_Label, &_L31_SM1_Phase3);
+      _61_Ph1_Color = _L34_SM1_Phase3;
       _L33_SM1_Phase3 = YELLOW;
-      _66_Ph3_Color = _L33_SM1_Phase3;
+      _65_Ph3_Color = _L33_SM1_Phase3;
       _L32_SM1_Phase3 = BLUE;
-      kcg_copy_T_String(&_63_Ph2_Label, &_L31_SM1_Phase3);
+      kcg_copy_T_String(&_62_Ph2_Label, &_L31_SM1_Phase3);
       kcg_copy_T_String(&_L30_SM1_Phase3, (T_String *) &PHASE_NOT_STARTED);
-      kcg_copy_T_String(&_65_Ph3_Label, &_L35_SM1_Phase3);
-      _68_PhF_Color = _L32_SM1_Phase3;
-      kcg_copy_T_String(&_67_PhF_Label, &_L30_SM1_Phase3);
-      _186_SM1_fired = _79_SM1_fired;
-      outC->SM1_reset_nxt = _78_SM1_reset_nxt;
-      outC->SM1_state_nxt = _77_SM1_state_nxt;
-      _190_ChangeStage = _75_ChangeStage;
-      outC->Fuel_Out = _70_Fuel_Out;
-      outC->Destroyed_Label = _69_Destroyed_Label;
-      outC->PhF_Color = _68_PhF_Color;
-      kcg_copy_T_String(&outC->PhF_Label, &_67_PhF_Label);
-      outC->Ph3_Color = _66_Ph3_Color;
-      kcg_copy_T_String(&outC->Ph3_Label, &_65_Ph3_Label);
-      outC->Ph2_Color = _64_Ph2_Color;
-      kcg_copy_T_String(&outC->Ph2_Label, &_63_Ph2_Label);
-      outC->Ph1_Color = _62_Ph1_Color;
-      kcg_copy_T_String(&outC->Ph1_Label, &_61_Ph1_Label);
-      outC->Inclination_Out = _60_Inclination_Out;
-      outC->Altitude_Out = _59_Altitude_Out;
-      outC->Speed_Out = _58_Speed_Out;
+      kcg_copy_T_String(&_64_Ph3_Label, &_L35_SM1_Phase3);
+      _67_PhF_Color = _L32_SM1_Phase3;
+      kcg_copy_T_String(&_66_PhF_Label, &_L30_SM1_Phase3);
+      _177_SM1_fired = _76_SM1_fired;
+      outC->SM1_reset_nxt = _75_SM1_reset_nxt;
+      outC->SM1_state_nxt = _74_SM1_state_nxt;
+      _181_ChangeStage = _73_ChangeStage;
+      outC->Fuel_Out = _68_Fuel_Out;
+      outC->PhF_Color = _67_PhF_Color;
+      kcg_copy_T_String(&outC->PhF_Label, &_66_PhF_Label);
+      outC->Ph3_Color = _65_Ph3_Color;
+      kcg_copy_T_String(&outC->Ph3_Label, &_64_Ph3_Label);
+      outC->Ph2_Color = _63_Ph2_Color;
+      kcg_copy_T_String(&outC->Ph2_Label, &_62_Ph2_Label);
+      outC->Ph1_Color = _61_Ph1_Color;
+      kcg_copy_T_String(&outC->Ph1_Label, &_60_Ph1_Label);
+      outC->Inclination_Out = _59_Inclination_Out;
+      outC->Altitude_Out = _58_Altitude_Out;
+      outC->Speed_Out = _57_Speed_Out;
       break;
     case SSM_st_Final_SM1 :
       br_3_guard_SM1_Final = _52_StageFailed;
       if (IfBlock1_clock_SM1_Final) {
         _L7_SM1_Final_IfBlock1 = PhaseCompleted_SM1_Final;
-        _148_ChangeStage = _L7_SM1_Final_IfBlock1;
-        _53_ChangeStage = _148_ChangeStage;
+        _139_ChangeStage = _L7_SM1_Final_IfBlock1;
+        _53_ChangeStage = _139_ChangeStage;
       }
       else {
         _L2_SM1_Final_IfBlock1 = inC->Manual_SatLaunch;
-        _146_ChangeStage = _L2_SM1_Final_IfBlock1;
-        _53_ChangeStage = _146_ChangeStage;
+        _137_ChangeStage = _L2_SM1_Final_IfBlock1;
+        _53_ChangeStage = _137_ChangeStage;
       }
       br_2_guard_SM1_Final = _53_ChangeStage;
       if (br_2_guard_SM1_Final) {
-        _57_SM1_fired = SSM_TR_Final_2_SM1;
+        _56_SM1_fired = SSM_TR_Final_2_SM1;
       }
       else if (br_3_guard_SM1_Final) {
-        _57_SM1_fired = SSM_TR_Final_3_SM1;
+        _56_SM1_fired = SSM_TR_Final_3_SM1;
       }
       else {
-        _57_SM1_fired = SSM_TR_no_trans_SM1;
+        _56_SM1_fired = SSM_TR_no_trans_SM1;
       }
       if (br_2_guard_SM1_Final) {
-        _56_SM1_reset_nxt = kcg_true;
+        _55_SM1_reset_nxt = kcg_true;
       }
       else {
-        _56_SM1_reset_nxt = br_3_guard_SM1_Final;
+        _55_SM1_reset_nxt = br_3_guard_SM1_Final;
       }
       if (br_2_guard_SM1_Final) {
-        _55_SM1_state_nxt = SSM_st_Launched_SM1;
+        _54_SM1_state_nxt = SSM_st_Launched_SM1;
       }
       else if (br_3_guard_SM1_Final) {
-        _55_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
+        _54_SM1_state_nxt = SSM_st_AutoDestroy_SM1;
       }
       else {
-        _55_SM1_state_nxt = SSM_st_Final_SM1;
+        _54_SM1_state_nxt = SSM_st_Final_SM1;
       }
       _L126_SM1_Final = Altitude;
       _L12_5 = Max_Altitude_5;
@@ -1903,96 +1871,90 @@ void Main(inC_Main *inC, outC_Main *outC)
       _L124_SM1_Final = Fuel_5;
       _48_Fuel_Out = _L124_SM1_Final;
       _L122_SM1_Final = YELLOW;
-      _46_PhF_Color = _L122_SM1_Final;
+      _47_PhF_Color = _L122_SM1_Final;
       kcg_copy_T_String(&_L121_SM1_Final, (T_String *) &PHASE_IN_PROCESS);
-      kcg_copy_T_String(&_45_PhF_Label, &_L121_SM1_Final);
-      _L82_SM1_Final = A661_FALSE;
-      _47_Destroyed_Label = _L82_SM1_Final;
+      kcg_copy_T_String(&_46_PhF_Label, &_L121_SM1_Final);
       _L72_SM1_Final = Altitude;
       _L74_SM1_Final = (kcg_real) _L72_SM1_Final;
-      _37_Altitude_Out = _L74_SM1_Final;
+      _38_Altitude_Out = _L74_SM1_Final;
       _L73_SM1_Final = Speed;
       _L69_SM1_Final = Inclination;
-      _38_Inclination_Out = _L69_SM1_Final;
+      _39_Inclination_Out = _L69_SM1_Final;
       _L71_SM1_Final = (kcg_real) _L73_SM1_Final;
-      _36_Speed_Out = _L71_SM1_Final;
+      _37_Speed_Out = _L71_SM1_Final;
       kcg_copy_T_String(&_L68_SM1_Final, (T_String *) &PHASE_COMPLETE);
-      kcg_copy_T_String(&_41_Ph2_Label, &_L68_SM1_Final);
-      kcg_copy_T_String(&_39_Ph1_Label, &_L68_SM1_Final);
+      kcg_copy_T_String(&_42_Ph2_Label, &_L68_SM1_Final);
+      kcg_copy_T_String(&_40_Ph1_Label, &_L68_SM1_Final);
       _L67_SM1_Final = GREEN;
-      _44_Ph3_Color = _L67_SM1_Final;
-      _40_Ph1_Color = _L67_SM1_Final;
-      _42_Ph2_Color = _L67_SM1_Final;
-      kcg_copy_T_String(&_43_Ph3_Label, &_L68_SM1_Final);
-      _186_SM1_fired = _57_SM1_fired;
-      outC->SM1_reset_nxt = _56_SM1_reset_nxt;
-      outC->SM1_state_nxt = _55_SM1_state_nxt;
-      _190_ChangeStage = _53_ChangeStage;
+      _45_Ph3_Color = _L67_SM1_Final;
+      _41_Ph1_Color = _L67_SM1_Final;
+      _43_Ph2_Color = _L67_SM1_Final;
+      kcg_copy_T_String(&_44_Ph3_Label, &_L68_SM1_Final);
+      _177_SM1_fired = _56_SM1_fired;
+      outC->SM1_reset_nxt = _55_SM1_reset_nxt;
+      outC->SM1_state_nxt = _54_SM1_state_nxt;
+      _181_ChangeStage = _53_ChangeStage;
       outC->Fuel_Out = _48_Fuel_Out;
-      outC->Destroyed_Label = _47_Destroyed_Label;
-      outC->PhF_Color = _46_PhF_Color;
-      kcg_copy_T_String(&outC->PhF_Label, &_45_PhF_Label);
-      outC->Ph3_Color = _44_Ph3_Color;
-      kcg_copy_T_String(&outC->Ph3_Label, &_43_Ph3_Label);
-      outC->Ph2_Color = _42_Ph2_Color;
-      kcg_copy_T_String(&outC->Ph2_Label, &_41_Ph2_Label);
-      outC->Ph1_Color = _40_Ph1_Color;
-      kcg_copy_T_String(&outC->Ph1_Label, &_39_Ph1_Label);
-      outC->Inclination_Out = _38_Inclination_Out;
-      outC->Altitude_Out = _37_Altitude_Out;
-      outC->Speed_Out = _36_Speed_Out;
+      outC->PhF_Color = _47_PhF_Color;
+      kcg_copy_T_String(&outC->PhF_Label, &_46_PhF_Label);
+      outC->Ph3_Color = _45_Ph3_Color;
+      kcg_copy_T_String(&outC->Ph3_Label, &_44_Ph3_Label);
+      outC->Ph2_Color = _43_Ph2_Color;
+      kcg_copy_T_String(&outC->Ph2_Label, &_42_Ph2_Label);
+      outC->Ph1_Color = _41_Ph1_Color;
+      kcg_copy_T_String(&outC->Ph1_Label, &_40_Ph1_Label);
+      outC->Inclination_Out = _39_Inclination_Out;
+      outC->Altitude_Out = _38_Altitude_Out;
+      outC->Speed_Out = _37_Speed_Out;
       break;
     case SSM_st_Ground_SM1 :
-      _35_SM1_fired = _187_SM1_fired_strong;
-      _34_SM1_reset_nxt = kcg_false;
-      _33_SM1_state_nxt = SSM_st_Ground_SM1;
+      _36_SM1_fired = _178_SM1_fired_strong;
+      _35_SM1_reset_nxt = kcg_false;
+      _34_SM1_state_nxt = SSM_st_Ground_SM1;
       _L39_SM1_Ground = TANK_FULL;
-      _26_Fuel_Out = _L39_SM1_Ground;
-      _L38_SM1_Ground = A661_FALSE;
-      _25_Destroyed_Label = _L38_SM1_Ground;
-      _31_ChangeStage = _L31_SM1_Ground;
+      _28_Fuel_Out = _L39_SM1_Ground;
+      _33_ChangeStage = _L31_SM1_Ground;
       _L23_SM1_Ground = Speed;
       _L24_SM1_Ground = (kcg_real) _L23_SM1_Ground;
-      _14_Speed_Out = _L24_SM1_Ground;
+      _17_Speed_Out = _L24_SM1_Ground;
       _L25_SM1_Ground = Altitude;
       _L21_SM1_Ground = Inclination;
-      _16_Inclination_Out = _L21_SM1_Ground;
+      _19_Inclination_Out = _L21_SM1_Ground;
       _L22_SM1_Ground = (kcg_real) _L25_SM1_Ground;
-      _15_Altitude_Out = _L22_SM1_Ground;
+      _18_Altitude_Out = _L22_SM1_Ground;
       _L16_SM1_Ground = BLUE;
       kcg_copy_T_String(&_L15_SM1_Ground, (T_String *) &PHASE_NOT_STARTED);
-      _20_Ph2_Color = _L16_SM1_Ground;
-      _18_Ph1_Color = _L16_SM1_Ground;
-      kcg_copy_T_String(&_23_PhF_Label, &_L15_SM1_Ground);
-      kcg_copy_T_String(&_21_Ph3_Label, &_L15_SM1_Ground);
-      kcg_copy_T_String(&_19_Ph2_Label, &_L15_SM1_Ground);
-      kcg_copy_T_String(&_17_Ph1_Label, &_L15_SM1_Ground);
-      _22_Ph3_Color = _L16_SM1_Ground;
-      _24_PhF_Color = _L16_SM1_Ground;
-      _186_SM1_fired = _35_SM1_fired;
-      outC->SM1_reset_nxt = _34_SM1_reset_nxt;
-      outC->SM1_state_nxt = _33_SM1_state_nxt;
-      _190_ChangeStage = _31_ChangeStage;
-      outC->Fuel_Out = _26_Fuel_Out;
-      outC->Destroyed_Label = _25_Destroyed_Label;
-      outC->PhF_Color = _24_PhF_Color;
-      kcg_copy_T_String(&outC->PhF_Label, &_23_PhF_Label);
-      outC->Ph3_Color = _22_Ph3_Color;
-      kcg_copy_T_String(&outC->Ph3_Label, &_21_Ph3_Label);
-      outC->Ph2_Color = _20_Ph2_Color;
-      kcg_copy_T_String(&outC->Ph2_Label, &_19_Ph2_Label);
-      outC->Ph1_Color = _18_Ph1_Color;
-      kcg_copy_T_String(&outC->Ph1_Label, &_17_Ph1_Label);
-      outC->Inclination_Out = _16_Inclination_Out;
-      outC->Altitude_Out = _15_Altitude_Out;
-      outC->Speed_Out = _14_Speed_Out;
+      _23_Ph2_Color = _L16_SM1_Ground;
+      _21_Ph1_Color = _L16_SM1_Ground;
+      kcg_copy_T_String(&_26_PhF_Label, &_L15_SM1_Ground);
+      kcg_copy_T_String(&_24_Ph3_Label, &_L15_SM1_Ground);
+      kcg_copy_T_String(&_22_Ph2_Label, &_L15_SM1_Ground);
+      kcg_copy_T_String(&_20_Ph1_Label, &_L15_SM1_Ground);
+      _25_Ph3_Color = _L16_SM1_Ground;
+      _27_PhF_Color = _L16_SM1_Ground;
+      _177_SM1_fired = _36_SM1_fired;
+      outC->SM1_reset_nxt = _35_SM1_reset_nxt;
+      outC->SM1_state_nxt = _34_SM1_state_nxt;
+      _181_ChangeStage = _33_ChangeStage;
+      outC->Fuel_Out = _28_Fuel_Out;
+      outC->PhF_Color = _27_PhF_Color;
+      kcg_copy_T_String(&outC->PhF_Label, &_26_PhF_Label);
+      outC->Ph3_Color = _25_Ph3_Color;
+      kcg_copy_T_String(&outC->Ph3_Label, &_24_Ph3_Label);
+      outC->Ph2_Color = _23_Ph2_Color;
+      kcg_copy_T_String(&outC->Ph2_Label, &_22_Ph2_Label);
+      outC->Ph1_Color = _21_Ph1_Color;
+      kcg_copy_T_String(&outC->Ph1_Label, &_20_Ph1_Label);
+      outC->Inclination_Out = _19_Inclination_Out;
+      outC->Altitude_Out = _18_Altitude_Out;
+      outC->Speed_Out = _17_Speed_Out;
       break;
     case SSM_st_Launched_SM1 :
       Fuel_Out = last_Fuel_Out;
       Inclination_Out = last_Inclination_Out;
       Altitude_Out = last_Altitude_Out;
       Speed_Out = last_Speed_Out;
-      SM1_fired = _187_SM1_fired_strong;
+      SM1_fired = _178_SM1_fired_strong;
       SM1_reset_nxt = kcg_false;
       SM1_state_nxt = SSM_st_Launched_SM1;
       ChangeStage = _L6_SM1_Launched;
@@ -2002,18 +1964,15 @@ void Main(inC_Main *inC, outC_Main *outC)
       Ph2_Color = _L5_SM1_Launched;
       Ph1_Color = _L5_SM1_Launched;
       Ph3_Color = _L5_SM1_Launched;
-      _L1_SM1_Launched = A661_FALSE;
-      Destroyed_Label = _L1_SM1_Launched;
       kcg_copy_T_String(&PhF_Label, &_L4_SM1_Launched);
       kcg_copy_T_String(&Ph1_Label, &_L4_SM1_Launched);
       kcg_copy_T_String(&Ph3_Label, &_L4_SM1_Launched);
       PhF_Color = _L5_SM1_Launched;
-      _186_SM1_fired = SM1_fired;
+      _177_SM1_fired = SM1_fired;
       outC->SM1_reset_nxt = SM1_reset_nxt;
       outC->SM1_state_nxt = SM1_state_nxt;
-      _190_ChangeStage = ChangeStage;
+      _181_ChangeStage = ChangeStage;
       outC->Fuel_Out = Fuel_Out;
-      outC->Destroyed_Label = Destroyed_Label;
       outC->PhF_Color = PhF_Color;
       kcg_copy_T_String(&outC->PhF_Label, &PhF_Label);
       outC->Ph3_Color = Ph3_Color;
@@ -2070,16 +2029,7 @@ void Main(inC_Main *inC, outC_Main *outC)
   _L15_6 = _L17_6 / _L16_6;
   _L25_6 = _L15_6 * _L28_6;
   outC->_L19_6 = _L6_6 + _L25_6;
-  Input1_8 = _L134;
-  _L4_8 = !_L3_8;
-  _L1_8 = Input1_8;
-  if (_L1_8) {
-    outC->_L2_8 = _L4_8;
-  }
-  else {
-    outC->_L2_8 = _L3_8;
-  }
-  switch (_188_SM1_state_act) {
+  switch (_179_SM1_state_act) {
     case SSM_st_Phase1_SM1 :
       if (IfBlock1_clock_SM1_Phase1) {
       }
@@ -2115,6 +2065,6 @@ void Main(inC_Main *inC, outC_Main *outC)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Main.c
-** Generation date: 2014-10-27T20:59:37
+** Generation date: 2014-10-28T00:42:05
 *************************************************************$ */
 

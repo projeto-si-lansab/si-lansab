@@ -40,6 +40,7 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
 
         output->AutoDestruct = ua_outputs.AutoDestruct;
         output->EnableRocketLaunch = ua_outputs.EnableRocketLaunch;
+        output->Manual_Notify = ua_outputs.Manual_Notify;
         output->Manual_Override = ua_outputs.Manual_Override;
         output->Manual_StartPhase2 = ua_outputs.Manual_StartPhase2;
         output->Manual_StartPhase3 = ua_outputs.Manual_StartPhase3;
@@ -60,6 +61,7 @@ void clear_ua_inputs() {
     /* clear external inputs, may need additional logic */
     ua_inputs.SignalAutoDestruct = FALSE;
     ua_inputs.SignalLaunch = FALSE;
+    ua_inputs.SignalNotifyManual = FALSE;
     ua_inputs.SignalManual = 0;
     ua_inputs.SignalStartPhase2 = FALSE;
     ua_inputs.SignalStartPhase3 = FALSE;

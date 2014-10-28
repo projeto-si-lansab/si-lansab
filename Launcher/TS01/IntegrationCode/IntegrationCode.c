@@ -32,6 +32,7 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             printf("Received: Message from TS04 to TS01 \n");
             ua_inputs.AutoDestruct = input.AutoDestruct;
             ua_inputs.EnableRocketLaunch = input.EnableRocketLaunch;
+            ua_inputs.Manual_Notify = input.Manual_Notify;
             ua_inputs.Manual_Override = input.Manual_Override;
             ua_inputs.Manual_StartPhase2 = input.Manual_StartPhase2;
             ua_inputs.Manual_StartPhase3 = input.Manual_StartPhase3;
@@ -92,6 +93,7 @@ void clear_ua_inputs() {
     /* clear external inputs, may need additional logic */
     ua_inputs.AutoDestruct = FALSE;
     ua_inputs.EnableRocketLaunch = FALSE;
+    ua_inputs.Manual_Notify = FALSE;
     ua_inputs.Manual_Override = 0;
     ua_inputs.Manual_StartPhase2 = FALSE;
     ua_inputs.Manual_StartPhase3 = FALSE;

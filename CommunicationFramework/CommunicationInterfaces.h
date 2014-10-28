@@ -15,6 +15,7 @@
 typedef struct {
 	kcg_bool AutoDestruct;
     kcg_bool EnableRocketLaunch;
+    kcg_bool Manual_Notify;
     kcg_int Manual_Override;
     kcg_bool Manual_StartPhase2;
     kcg_bool Manual_StartPhase3;
