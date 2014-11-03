@@ -16,9 +16,10 @@ int num_receivers;
 int* receivers;
 
 void setReceivers() {
-	num_receivers = 1;
+	num_receivers = 2;
 	receivers = (int *) malloc(num_receivers * sizeof(int));
-	receivers[0] = TS05ID;
+	receivers[0] = TS02ID;
+	receivers[1] = TS03ID;
 }
 
 void receiveMessage(FRAMEWORK_MESSAGE message) {
