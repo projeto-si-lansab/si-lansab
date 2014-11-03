@@ -12,6 +12,13 @@
 #define TS05TESTID 10
 
 typedef struct {
+	kcg_bool AutoDestruct;
+    kcg_bool EnableRocketLaunch;
+    kcg_int Manual_Override;
+    kcg_bool Manual_StartPhase2;
+    kcg_bool Manual_StartPhase3;
+    kcg_bool Manual_StartPhaseFinal;
+    kcg_bool Manual_SatLaunch;
 } TS01_INPUT_INTERFACE;
 
 typedef struct {
@@ -23,7 +30,8 @@ typedef struct {
 } TS03_INPUT_INTERFACE;
 
 typedef struct {
-    /*TS04 inputs*/
+    kcg_bool RocketStatus;
+    kcg_bool SatLaunched;
 } TS04_INPUT_INTERFACE;
 
 typedef struct {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="132" defaultConfiguration="21">
+<Project id="1" oid_count="126" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -43,10 +43,6 @@
 			<value>C QUAL613</value>
 			<configuration>21</configuration>
 		</Prop>
-		<Prop id="25" name="@GENERATOR:OPTLEVEL">
-			<value>0</value>
-			<configuration>21</configuration>
-		</Prop>
 		<Prop id="26" name="@GENERATOR:DEBUG">
 			<value>true</value>
 			<configuration>21</configuration>
@@ -57,10 +53,6 @@
 		</Prop>
 		<Prop id="28" name="@GENERATOR:SKIP_UNUSED">
 			<value>true</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="29" name="@GENERATOR:TARGET_ADAPTOR">
-			<value>Simulator</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="30" name="@GENERATOR:USER_CONFIG">
@@ -274,104 +266,116 @@
 			<value>60</value>
 			<value>63</value>
 		</Prop>
-		<Prop id="94" name="@GENERATOR:OBSERVE_MODE">
+		<Prop id="92" name="@GENERATOR:OBSERVE_MODE">
 			<value>4</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="95" name="@GENERATOR:SKIP_UNUSED">
+		<Prop id="93" name="@GENERATOR:SKIP_UNUSED">
 			<value>true</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="96" name="@GENERATOR:ROOTNODE">
+		<Prop id="94" name="@GENERATOR:ROOTNODE">
 			<value>ts04</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="97" name="@GENERATOR:INPUT_THRESHOLD">
+		<Prop id="95" name="@GENERATOR:INPUT_THRESHOLD">
 			<value>2</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="99" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
-			<value>..\DefinitionFile\ts04.sgfx</value>
+		<Prop id="96" name="@GENERATOR:EXPAND_MODE">
+			<value>1</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="97" name="@GENERATOR:TARGET_ADAPTOR">
+			<value></value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="98" name="@GENERATOR:ROOTNODE">
+			<value>ts04</value>
+			<configuration>21</configuration>
+		</Prop>
+		<Prop id="99" name="@GENERATOR:INPUT_THRESHOLD">
+			<value>2</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="100" name="@GENERATOR:EXPAND_MODE">
 			<value>1</value>
-			<configuration>13</configuration>
+			<configuration>21</configuration>
 		</Prop>
-		<Prop id="101" name="@GENERATOR:TARGET_ADAPTOR">
-			<value></value>
-			<configuration>13</configuration>
+		<Prop id="101" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
+			<value>..\DefinitionFile\ts04.sgfx</value>
+			<configuration>21</configuration>
 		</Prop>
 		<Prop id="103" name="@SCADE:CHECKED">
 			<value>false</value>
 		</Prop>
-		<Prop id="116" name="@REPORTER:FORMAT">
+		<Prop id="110" name="@REPORTER:FORMAT">
 			<value>rtf</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="117" name="@REPORTER:DOCUMENT">
+		<Prop id="111" name="@REPORTER:DOCUMENT">
 			<value>ts04.rtf</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="118" name="@REPORTER:IssueNr">
+		<Prop id="112" name="@REPORTER:IssueNr">
 			<value></value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="119" name="@REPORTER:ReferenceNr">
+		<Prop id="113" name="@REPORTER:ReferenceNr">
 			<value></value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="120" name="@REPORTER:Classification">
+		<Prop id="114" name="@REPORTER:Classification">
 			<value>Projeto SI-LANSAB 2014</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="121" name="@REPORTER:Summary">
+		<Prop id="115" name="@REPORTER:Summary">
 			<value></value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="122" name="@REPORTER:Distribution">
+		<Prop id="116" name="@REPORTER:Distribution">
 			<value></value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="123" name="@REPORTER:Title">
-			<value>Launch Control Center</value>
+		<Prop id="117" name="@REPORTER:Title">
+			<value>Integration Test</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="124" name="@REPORTER:Subtitle">
+		<Prop id="118" name="@REPORTER:Subtitle">
 			<value>Lista de Exercícios 3 - User Application</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="125" name="@REPORTER:Description">
-			<value>Este documento refere-se ao desenvolvimento de um aplicativo para controle de lançamento de satélite.</value>
+		<Prop id="119" name="@REPORTER:Description">
+			<value>Este documento refere-se ao desenvolvimento de um aplicativo para simular o comportamento do TS01.</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="126" name="@REPORTER:CompanyInfo">
+		<Prop id="120" name="@REPORTER:CompanyInfo">
 			<value>Instituto Tecnológico de Aeronáutica - ITA</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="127" name="@REPORTER:Authors">
+		<Prop id="121" name="@REPORTER:Authors">
 			<value>Time Scrum 04</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="128" name="@REPORTER:Reference">
+		<Prop id="122" name="@REPORTER:Reference">
 			<value></value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="129" name="@REPORTER:Index">
+		<Prop id="123" name="@REPORTER:Index">
 			<value></value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="130" name="@REPORTER:Date">
+		<Prop id="124" name="@REPORTER:Date">
 			<value>24 de outubro de 2014</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="131" name="@REPORTER:Header">
+		<Prop id="125" name="@REPORTER:Header">
 			<value>$(CreatedDate)</value>
 			<value></value>
 			<value>$(PageNumbering)</value>
 			<configuration>31</configuration>
 		</Prop>
-		<Prop id="132" name="@REPORTER:Footer">
+		<Prop id="126" name="@REPORTER:Footer">
 			<value></value>
 			<value></value>
 			<value></value>
@@ -379,33 +383,14 @@
 		</Prop>
 	</props>
 	<roots>
-		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries">
-			<elements>
-				<FileRef id="4" persistAs="$(SCADE)\libraries\libdigital\libdigital.etp"/>
-				<FileRef id="5" persistAs="$(SCADE)\libraries\liblinear\liblinear.etp"/>
-				<FileRef id="6" persistAs="$(SCADE)\libraries\libmath\libmath.etp"/>
-				<FileRef id="7" persistAs="$(SCADE)\libraries\libmathext\libmathext.etp"/>
-				<FileRef id="8" persistAs="$(SCADE)\libraries\libpwlinear\libpwlinear.etp"/>
-				<FileRef id="9" persistAs="$(SCADE)\libraries\libverif\libverif.etp"/>
-			</elements>
-		</Folder>
+		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries"/>
 		<Folder id="11" extensions="xscade;scade" name="Model Files">
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files"/>
 				<FileRef id="90" persistAs="ts041.xscade"/>
-				<FileRef id="91" persistAs="ts04.xscade"/>
-				<FileRef id="93" persistAs="us18.xscade"/>
-				<FileRef id="102" persistAs="lucasamaral.xscade"/>
-				<FileRef id="104" persistAs="juan.xscade"/>
-				<FileRef id="105" persistAs="joaonones.xscade"/>
-				<FileRef id="107" persistAs="ff.xscade"/>
-				<FileRef id="108" persistAs="cor_status2.xscade"/>
-				<FileRef id="109" persistAs="ComandSatelite.xscade"/>
-				<FileRef id="110" persistAs="alertas.xscade"/>
-				<FileRef id="111" persistAs="thiagoribeiro.xscade"/>
-				<FileRef id="112" persistAs="switch.xscade"/>
-				<FileRef id="113" persistAs="lucianoyukio.xscade"/>
-				<FileRef id="115" persistAs="enable.xscade"/>
+				<FileRef id="102" persistAs="ts04.xscade"/>
+				<FileRef id="107" persistAs="setcolor.xscade"/>
+				<FileRef id="109" persistAs="switch.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="84" name="Design Verifier File">
@@ -413,7 +398,7 @@
 				<FileRef id="85" persistAs="ts04.l4"/>
 			</elements>
 		</Folder>
-		<FileRef id="98" persistAs="..\DefinitionFile\ts04.sgfx"/>
+		<FileRef id="91" persistAs="..\DefinitionFile\ts04.sgfx"/>
 	</roots>
 	<configurations>
 		<Configuration id="13" name="KCG"/>
