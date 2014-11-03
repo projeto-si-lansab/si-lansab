@@ -214,6 +214,11 @@ void sendMessagesToPeers() {
     sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
 
     memset(&message, 0, sizeof(message));
+    message.to = TS01TESTID;
+    buildMessage(&message);
+    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
+
+    memset(&message, 0, sizeof(message));
     message.to = TS05TESTID;
     buildMessage(&message);
     sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));

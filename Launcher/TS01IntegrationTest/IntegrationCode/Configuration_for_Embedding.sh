@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
-export UA_NODE=Main
+export UA_NODE=project2
 
-export APP_ID=1
+export APP_ID=2
 
 export OBJDIR=./bin
 export EXEC=UserApplication

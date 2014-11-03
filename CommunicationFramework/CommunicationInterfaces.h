@@ -9,17 +9,24 @@
 #define TS03ID 3
 #define TS04ID 4
 #define TS05ID 5
+#define TS01TESTID 6
 #define TS05TESTID 10
 
 typedef struct {
 	kcg_bool AutoDestruct;
     kcg_bool EnableRocketLaunch;
+    kcg_bool Manual_Notify;
     kcg_int Manual_Override;
     kcg_bool Manual_StartPhase2;
     kcg_bool Manual_StartPhase3;
     kcg_bool Manual_StartPhaseFinal;
     kcg_bool Manual_SatLaunch;
 } TS01_INPUT_INTERFACE;
+
+typedef struct {
+    kcg_bool RocketStatus;
+    kcg_bool SatLaunched;
+} TS01TEST_INPUT_INTERFACE;
 
 typedef struct {
     /*TS02 inputs*/
@@ -35,6 +42,7 @@ typedef struct {
 } TS04_INPUT_INTERFACE;
 
 typedef struct {
+    /*TS05 inputs*/
 
     /* US 01 */
     kcg_bool SAT_AirSpeed_Update;
@@ -107,6 +115,7 @@ typedef union {
 	TS03_INPUT_INTERFACE ts03_input_interface;
 	TS04_INPUT_INTERFACE ts04_input_interface;
 	TS05_INPUT_INTERFACE ts05_input_interface;
+    TS01TEST_INPUT_INTERFACE ts01test_input_interface;
 	TS05TEST_INPUT_INTERFACE ts05test_input_interface;
 } INPUT_INTERFACE;
 

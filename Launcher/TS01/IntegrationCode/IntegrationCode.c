@@ -28,7 +28,16 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             printf("Received: Message from TS03 to TS01 \n");
             break;
         case TS04ID:
+        case TS01TESTID:
             printf("Received: Message from TS04 to TS01 \n");
+            ua_inputs.AutoDestruct = input.AutoDestruct;
+            ua_inputs.EnableRocketLaunch = input.EnableRocketLaunch;
+            ua_inputs.Manual_Notify = input.Manual_Notify;
+            ua_inputs.Manual_Override = input.Manual_Override;
+            ua_inputs.Manual_StartPhase2 = input.Manual_StartPhase2;
+            ua_inputs.Manual_StartPhase3 = input.Manual_StartPhase3;
+            ua_inputs.Manual_StartPhaseFinal = input.Manual_StartPhaseFinal;
+            ua_inputs.Manual_SatLaunch = input.Manual_SatLaunch;
             break;
         case TS05ID:
             printf("Received: Message from TS05 to TS01 \n");
@@ -65,6 +74,12 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         TS05_INPUT_INTERFACE *output5 = &(message->input_interface.ts05_input_interface);
         /*output->SignalFromTeam1 = ua_outputs.SignalToTeam5;*/
         break;
+    case TS01TESTID:
+        printf("Sent: Message to TS01 test window \n");
+        TS01TEST_INPUT_INTERFACE *output1t = &(message->input_interface.ts01test_input_interface);
+        output1t->RocketStatus = ua_outputs.ControlCenterStatus;
+        output1t->SatLaunched = ua_outputs.SatLaunched;        
+        break;
     }
 }
 
@@ -76,7 +91,14 @@ void clear_ua_inputs() {
     ua_receive_clear(&ua_inputs, NULL);
 
     /* clear external inputs, may need additional logic */
-    /*ua_inputs.SignalFromTeamX = FALSE;*/
+    ua_inputs.AutoDestruct = FALSE;
+    ua_inputs.EnableRocketLaunch = FALSE;
+    ua_inputs.Manual_Notify = FALSE;
+    ua_inputs.Manual_Override = 0;
+    ua_inputs.Manual_StartPhase2 = FALSE;
+    ua_inputs.Manual_StartPhase3 = FALSE;
+    ua_inputs.Manual_StartPhaseFinal = FALSE;
+    ua_inputs.Manual_SatLaunch = FALSE;
 }
 
 void clear_ua_outputs() {
