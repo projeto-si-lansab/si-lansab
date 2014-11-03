@@ -1,16 +1,50 @@
-ROOT=./
-CC_FLAGS=-ansi -I . -I ../UserApplication/KCG/ -I ../../CommunicationFramework/ -I "C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/" -I "C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/include" -Wall -Wno-unused-variable -Wno-unused-function -Wno-unused-value
-SRC=team1UA.c ../../CommunicationFramework/CommunicationFramework.c ../UserApplication/KCG/kcg_consts.c ../UserApplication/KCG/kcg_types.c ../UserApplication/KCG/project1.c ../UserApplication/KCG/ua.c
+#############################################################
+#
+# makefile
+#
+#############################################################
 
-OBJ=$(SRC:.c=.o)
+CC = gcc
+CFLAGS = -ansi -std=gnu99 -Wall -Wextra
+INCLUDES = -I. \
+		   -I../UserApplication/KCG \
+		   -I../../../CommunicationFramework \
+		   -I../../../SCADE \
+		   -I../../../SCADE/include
+SRC := ./IntegrationCode.c \
+	   ../../../CommunicationFramework/CommunicationFramework.c \
+	   ../UserApplication/KCG/$(UA_NODE).c \
+	   ../UserApplication/KCG/kcg_consts.c \
+	   ../UserApplication/KCG/kcg_types.c \
+	   ../UserApplication/KCG/ua.c
+LIBS = -lpthread -lrt
+MKDIR = mkdir -p
+RM = rm -rf
 
-team1UA.exe: $(OBJ)
-	gcc -o $@ $(OBJ)
+VPATH := $(dir $(SRC))
+OBJS := $(patsubst %.c, $(OBJDIR)/%.o, $(notdir $(SRC)))
+EXEC := $(addprefix $(OBJDIR)/, $(EXEC))
 
-.c.o:
-	gcc $(CC_FLAGS) -c $< -o $@
+all: $(EXEC)
+
+$(OBJS): | $(OBJDIR)
+
+$(OBJDIR):
+	$(MKDIR) $(OBJDIR)
+
+$(EXEC): $(OBJS)
+	@echo 'Building target: $@'
+	$(CC) $(LDFLAGS) -o $(EXEC) $(OBJS) $(LIBS)
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+$(OBJDIR)/%.o: %.c
+	@echo 'Building file: $<'
+	$(CC) -c $(CFLAGS) $(INCLUDES) $< -o $@
+	@echo 'Finished building: $<'
+	@echo ' '
 
 clean:
-	rm -f $(OBJ) team1UA.exe
+	-$(RM) $(OBJDIR)
 
-.PHONY: clean
+.PHONY: all clean

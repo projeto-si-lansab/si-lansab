@@ -37,7 +37,7 @@ int listening_socket;
 pthread_t thread_receiver;
 pthread_mutex_t lock;
 
-
+extern void setReceivers();
 extern void receiveMessage(FRAMEWORK_MESSAGE);
 extern void buildMessage(FRAMEWORK_MESSAGE*);
 extern void executeOperator();
@@ -48,6 +48,9 @@ extern void executeCustomLogic();
 
 extern operator_input_type ua_inputs;
 extern operator_output_type ua_outputs;
+
+extern int num_receivers;
+extern int *receivers;
 
 
 void connectToDFServer() {
@@ -186,42 +189,15 @@ void connectToPeers() {
 }
 
 void sendMessagesToPeers() {
+	int i;
     FRAMEWORK_MESSAGE message;
 
-    memset(&message, 0, sizeof(message));
-    message.to = TS01ID;
-    buildMessage(&message);
-    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
-
-    memset(&message, 0, sizeof(message));
-    message.to = TS02ID;
-    buildMessage(&message);
-    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
-
-    memset(&message, 0, sizeof(message));
-    message.to = TS03ID;
-    buildMessage(&message);
-    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
-
-    memset(&message, 0, sizeof(message));
-    message.to = TS04ID;
-    buildMessage(&message);
-    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
-
-    memset(&message, 0, sizeof(message));
-    message.to = TS05ID;
-    buildMessage(&message);
-    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
-
-    memset(&message, 0, sizeof(message));
-    message.to = TS01TESTID;
-    buildMessage(&message);
-    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
-
-    memset(&message, 0, sizeof(message));
-    message.to = TS05TESTID;
-    buildMessage(&message);
-    sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
+	for (i = 0; i < num_receivers; i++) {
+		memset(&message, 0, sizeof(message));
+		message.to = receivers[i];
+		buildMessage(&message);
+		sendto(broadcast_socket, (char *) &message, sizeof(message), 0, (struct sockaddr *) &broadcast_address, sizeof(broadcast_address));
+	}
 }
 
 void usage() {
@@ -250,6 +226,8 @@ int main(int argc, char **argv) {
     connectToDFServer();
 
     connectToPeers();
+
+	setReceivers();
 
     unsigned long t1, t2;
     struct timespec clock;

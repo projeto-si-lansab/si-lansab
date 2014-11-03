@@ -12,6 +12,20 @@
 operator_input_type ua_inputs;
 operator_output_type ua_outputs;
 
+int num_receivers;
+int* receivers;
+
+void setReceivers() {
+	num_receivers = 6;
+	receivers = (int *) malloc(num_receivers * sizeof(int));
+	receivers[0] = TS01ID;
+	receivers[1] = TS02ID;
+	receivers[2] = TS03ID;
+	receivers[3] = TS04ID;
+	receivers[4] = TS05ID;
+	receivers[5] = TS05TESTID;
+}
+
 void receiveMessage(FRAMEWORK_MESSAGE message) {
     TS05_INPUT_INTERFACE input;
 
@@ -185,8 +199,7 @@ void clear_ua_outputs() {
     ts05_reset(&ua_outputs);
 }
 
-void initializeCustomLogic() {
-    /* Insert your additional logic */
+void initializeCustomLogic() {/* Insert your additional logic */
     /* For instance, you can initialize your RaspberryPi controller here */
 }
 

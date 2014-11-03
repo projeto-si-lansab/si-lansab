@@ -12,6 +12,15 @@
 operator_input_type ua_inputs;
 operator_output_type ua_outputs;
 
+int num_receivers;
+int* receivers;
+
+void setReceivers() {
+	num_receivers = 1;
+	receivers = (int *) malloc(num_receivers * sizeof(int));
+	receivers[0] = TS01ID;
+}
+
 void receiveMessage(FRAMEWORK_MESSAGE message) {
     TS01TEST_INPUT_INTERFACE input;
 
