@@ -5,6 +5,18 @@
 			<mappingItems>
 				<MappingItem>
 					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="26" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PowerPushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="Power" type="bool" oid="!ed/20e0/4995/1C44/54064c8e7f5c" instancepath="OperationalScenario/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
 						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="1" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="PushButton">
 							<A661Data>
 								<Notify/>
@@ -13,6 +25,18 @@
 					</output>
 					<inputs>
 						<Variable name="PassarFaseBtn" type="bool" oid="!ed/2490/4A71/258C/541b7ba26b73" instancepath="OperationalScenario/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<A661_NOTIFY_WIDGET_EVENT name="Notify" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="35" ParameterIdent="A661_EVT_SELECTION" WidgetType="PushButton" WidgetName="SModePushButton">
+							<A661Data>
+								<Notify/>
+							</A661Data>
+						</A661_NOTIFY_WIDGET_EVENT>
+					</output>
+					<inputs>
+						<Variable name="upDateSw" type="bool" oid="!ed/27aa/44CC/194C/5429ade571f1" instancepath="OperationalScenario/"/>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
@@ -69,17 +93,37 @@
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
-						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="23" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="Launch_Label">
-							<A661Data>
-								<Emit/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
 						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="24" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="AttitudeAcquisition_Label">
 							<A661Data>
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="25" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NormalPhase_Label">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="AcRd_EditBoxNumeric">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="27" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircle_AtAcquired">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="23" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="Launch_Label">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="57" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="FuelMeter_EditBoxNumeric">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="59" ParameterIdent="A661_SIZE_X" WidgetType="GpRectangle" WidgetName="Fuel">
 							<A661Data>
 								<Emit/>
 							</A661Data>
@@ -148,18 +192,6 @@
 				</MappingItem>
 				<MappingItem>
 					<output>
-						<Variable name="LaunchVisible" type="bool" oid="!ed/2465/4F3F/2E4/541c1dd47cd2" instancepath="OperationalScenario/"/>
-					</output>
-					<inputs>
-						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="23" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="Launch_Label">
-							<A661Data>
-								<DataField value="Visible"/>
-							</A661Data>
-						</A661_CMD_SET_PARAMETER>
-					</inputs>
-				</MappingItem>
-				<MappingItem>
-					<output>
 						<Variable name="AttitudeVisible" type="bool" oid="!ed/246b/4F3F/2E4/541c1dd8ba7" instancepath="OperationalScenario/"/>
 					</output>
 					<inputs>
@@ -178,6 +210,66 @@
 						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="25" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="NormalPhase_Label">
 							<A661Data>
 								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="AcRdValue" type="real" oid="!ed/49cf/27C5/17B4/543f0dd967ec" instancepath="OperationalScenario/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="43" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="AcRd_EditBoxNumeric">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="ColorIndex5" type="int" oid="!ed/2493/4AE7/90C/5441b1fb4562" instancepath="OperationalScenario/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="FillIndex" type="uchar" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="27" ParameterIdent="A661_FILL_INDEX" WidgetType="GpArcCircle" WidgetName="GpArcCircle_AtAcquired">
+							<A661Data>
+								<DataField value="FillIndex"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="LaunchVisible" type="bool" oid="!ed/2447/141B/978/5441d3ee14ff" instancepath="OperationalScenario/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Visible" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="23" ParameterIdent="A661_VISIBLE" WidgetType="Label" WidgetName="Launch_Label">
+							<A661Data>
+								<DataField value="Visible"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="FuelMeter" type="real" oid="!ed/2554/141B/978/5441eb262281" instancepath="OperationalScenario/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="57" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="FuelMeter_EditBoxNumeric">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="FuelMeterGraphic" type="int" oid="!ed/24d2/7A9A/8DC/5441f37d5c51" instancepath="OperationalScenario/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="SizeX" type="ulong" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="59" ParameterIdent="A661_SIZE_X" WidgetType="GpRectangle" WidgetName="Fuel">
+							<A661Data>
+								<DataField value="SizeX"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
