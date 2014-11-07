@@ -20,8 +20,8 @@ try:
     import psyco
 
 except ImportError:
-
-    print "Please install psyco for better video decoding performance."
+    pass
+    # print "Please install psyco for better video decoding performance."
 
 import bitReader as bitReader
 
@@ -725,8 +725,8 @@ try:
     psyco.bind ( read_picture )
 
 except NameError:
-
-    print "Unable to bind video decoding methods with psyco. Proceeding anyways, but video decoding will be slow!"
+    pass
+    # print "Unable to bind video decoding methods with psyco. Proceeding anyways, but video decoding will be slow!"
 
 # -------------------------------------------------------------------------------------------------
 # main

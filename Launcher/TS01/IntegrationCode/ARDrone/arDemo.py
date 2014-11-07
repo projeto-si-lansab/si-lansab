@@ -16,6 +16,14 @@ import json
 
 SRV_ADDR = "/tmp/socket"
 
+PRE_LAUNCH = 'PRE LAUNCH'
+PHASE_CHANGE = 'PHASE CHANGE'
+PHASE_1 = 'PHASE 1'
+PHASE_2 = 'PHASE 2'
+PHASE_3 = 'PHASE 3'
+PHASE_4 = 'PHASE 4'
+PHASES = [PHASE_1, PHASE_2, PHASE_3, PHASE_4]
+
 # -------------------------------------------------------------------------------------------------
 # main
 # -------------------------------------------------------------------------------------------------
@@ -38,6 +46,8 @@ def main ():
 
     # drone = libARDrone.ARDrone ()
     # drone.reset ()
+    drone_status = PRE_LAUNCH
+    drone_phase = 0
 
     running = True
 
@@ -48,9 +58,34 @@ def main ():
             data = connection.recv(256)
             print >>sys.stderr, 'received "%s"' % data
             if data:
-		data = json.loads(data.split('\x00')[0])
-                print "RocketLaunch", data['RocketLaunch']
-                print "RocketDestroy", data['RocketDestroy']
+                data = json.loads(data.split('\x00')[0])
+                rocket_launch = data['RocketLaunch']
+                rocket_destroy = data['RocketDestroy']
+                change_state = data['ChangeState']
+
+                if rocket_destroy:
+                    print '--- Rocket Destroyed ---'
+                    # drone.halt()
+                elif rocket_launch and drone_status == PRE_LAUNCH:
+                    print '--- Lauching ARDrone ---'
+                    drone_status = PHASE_1
+                    drone_phase = 1
+                    # drone.takeoff()
+                elif drone_status in PHASES and change_state and drone_status != PHASE_CHANGE:
+                    print '--- Changing Phase ---'
+                    drone_status = PHASE_CHANGE
+                    # drone.event_turnaround()
+                elif drone_status == PHASE_CHANGE and not change_state:
+                    print '--- Entering Phase ---'
+                    drone_status = PHASES[drone_phase]
+                    try:
+                        drone_phase += 1
+                    except IndexError:
+                        print "--- Invalid Phase Change. Shutting Down.---",
+                        # drone.halt()
+                elif drone_phase in PHASES:
+                    # drone.move_up()
+
             else:
                 print >>sys.stderr, 'no more data from', client_address
         finally:
