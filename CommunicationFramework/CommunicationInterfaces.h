@@ -60,7 +60,7 @@ typedef struct {
     
     /* US 05 */
     kcg_bool SAT_OperationMode_Update;
-    OperationMode SAT_OperationMode_Value;
+    // OperationMode SAT_OperationMode_Value;
     kcg_bool SAT_GyroscopeState_Update;
     kcg_bool SAT_GyroscopeState_Value;
     kcg_bool SAT_HorizonSensorState_Update;
