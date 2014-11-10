@@ -4,12 +4,6 @@ import json
 import arDemo
 
 
-data = {'RocketLaunch': 0,
-        'RocketDestroy': 0,
-        'ChangeState': 0,
-        'comm_count':0}
-
-
 class ConnectionMock():
     def __init__(self, data):
         self.data = data
@@ -17,7 +11,7 @@ class ConnectionMock():
     def recv(self, *args):
         if self.data['comm_count'] == 1:
             self.data['RocketLaunch'] = 1
-        
+
         if self.data['comm_count'] % 5 == 0:
             self.data['ChangeState'] = 1
         else:
@@ -43,12 +37,15 @@ class SocketMock():
         pass
 
     def accept(self, *args):
-        pass
+        data = {'RocketLaunch': 0,
+                'RocketDestroy': 0,
+                'ChangeState': 0,
+                'comm_count': 0}
         return ConnectionMock(data), 'Endereço mockado'
 
 
 def mock_communications():
-    arDemo.socket.socket = SocketMock
+    arDemo.scade_socket = SocketMock()
 
 
 if __name__ == '__main__':

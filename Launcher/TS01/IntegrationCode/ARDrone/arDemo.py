@@ -8,7 +8,7 @@ this application allows to control the drone and see the drone's video stream.
 """
 
 import socket
-import libARDrone as libARDrone
+import libARDrone
 import os, os.path
 import time
 import sys
@@ -24,6 +24,8 @@ PHASE_3 = 'PHASE 3'
 PHASE_4 = 'PHASE 4'
 PHASES = [PHASE_1, PHASE_2, PHASE_3, PHASE_4]
 
+scade_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+
 # -------------------------------------------------------------------------------------------------
 # main
 # -------------------------------------------------------------------------------------------------
@@ -37,24 +39,22 @@ def main ():
             raise
 
     # Create a UDS socket
-    sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-
-    sock.bind(SRV_ADDR)
+    scade_socket.bind(SRV_ADDR)
 
     # Listen for incoming connections
-    sock.listen(1)
+    scade_socket.listen(1)
 
     # drone = libARDrone.ARDrone ()
     # drone.reset ()
     drone_status = PRE_LAUNCH
     drone_phase = 0
 
+    connection, client_address = scade_socket.accept()
+    print >>sys.stderr, 'connection from', client_address
     running = True
 
     while running:
-        connection, client_address = sock.accept()
         try:
-            print >>sys.stderr, 'connection from', client_address
             data = connection.recv(256)
             print >>sys.stderr, 'received "%s"' % data
             if data:
@@ -77,14 +77,15 @@ def main ():
                     # drone.event_turnaround()
                 elif drone_status == PHASE_CHANGE and not change_state:
                     print '--- Entering Phase ---'
-                    drone_status = PHASES[drone_phase]
+                    drone_phase += 1
                     try:
-                        drone_phase += 1
+                        drone_status = PHASES[drone_phase]
                     except IndexError:
                         print "--- Invalid Phase Change. Shutting Down.---",
-                        # drone.halt()
+                        running = False
                 elif drone_phase in PHASES:
                     # drone.move_up()
+                    pass
 
             else:
                 print >>sys.stderr, 'no more data from', client_address
