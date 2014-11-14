@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <sys/un.h>
+#include <unistd.h>
+
 #include "CommunicationInterfaces.h"
 #include "IntegrationCode.h"
 
@@ -8,6 +13,8 @@
 #define TRUE kcg_true
 #define FALSE kcg_false
 #endif
+
+#define SRV_PATH "/tmp/socket"
 
 operator_input_type ua_inputs;
 operator_output_type ua_outputs;
@@ -19,14 +26,14 @@ int num_receivers;
 int* receivers;
 
 void setReceivers() {
-	num_receivers = 6;
+	num_receivers = 1;
 	receivers = (int *) malloc(num_receivers * sizeof(int));
-	receivers[0] = TS01ID;
+	/*receivers[0] = TS01ID;
 	receivers[1] = TS02ID;
 	receivers[2] = TS03ID;
 	receivers[3] = TS04ID;
-	receivers[4] = TS05ID;
-	receivers[5] = TS01TESTID;
+	receivers[4] = TS05ID;*/
+	receivers[0] = TS01TESTID;
 }
 
 void receiveMessage(FRAMEWORK_MESSAGE message) {
@@ -131,4 +138,30 @@ void executeCustomLogic() {
     /* Insert your additional logic */
     /* For instance, you can execute your RaspberryPi controller here */
     /* You can use ua_outputs (which is updated before this function is called) to feed you controller */
+
+    int sock;
+    struct sockaddr_un server;
+    char buf[256];
+
+    memset(&buf, 0, sizeof(buf));
+    sprintf(buf, "{\"RocketLaunch\": %d, \"RocketDestroy\": %d }", ua_outputs.RocketLaunch, ua_outputs.RocketDestroy);
+
+    sock = socket(AF_UNIX, SOCK_STREAM, 0);
+    if (sock < 0) {
+        perror("opening stream socket");
+        return;
+    }
+    server.sun_family = AF_UNIX;
+    strcpy(server.sun_path, SRV_PATH);
+
+    if (connect(sock, (struct sockaddr *) &server, sizeof(struct sockaddr_un)) < 0) {
+        close(sock);
+        perror("connecting stream socket");
+        return;
+    }
+
+    if (write(sock, buf, sizeof(buf)) < 0)
+        perror("writing on stream socket");
+
+    close(sock);
 }
