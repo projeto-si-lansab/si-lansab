@@ -650,6 +650,16 @@
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5115" ParameterIdent="A661_STRING" WidgetType="EditBoxNumeric" WidgetName="Longitude">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5114" ParameterIdent="A661_STRING" WidgetType="EditBoxNumeric" WidgetName="Latitude">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
@@ -658,6 +668,16 @@
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="7022" ParameterIdent="A661_STRING" WidgetType="PushButton" WidgetName="PushButton">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5115" ParameterIdent="A661_STRING" WidgetType="EditBoxNumeric" WidgetName="Longitude">
+							<A661Data>
+								<DataField value="String_size"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="String_size" type="ushort" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5114" ParameterIdent="A661_STRING" WidgetType="EditBoxNumeric" WidgetName="Latitude">
 							<A661Data>
 								<DataField value="String_size"/>
 							</A661Data>
@@ -1189,6 +1209,30 @@
 						<A661_CMD_SET_PARAMETER name="Enable" type="enum {A661_FALSE, A661_TRUE, A661_TRUE_WITH_VALIDATION}" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="8006" ParameterIdent="A661_ENABLE" WidgetType="PushButton" WidgetName="PushButton">
 							<A661Data>
 								<DataField value="Enable"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="display_latitude" type="char^16" oid="!ed/4d1f/7660/3EC/54692db5480c" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LegendString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5114" ParameterIdent="A661_STRING" Size="16" WidgetType="EditBoxNumeric" WidgetName="Latitude">
+							<A661Data>
+								<DataField value="LegendString"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="display_longitude" type="char^16" oid="!ed/4d26/7660/3EC/54692db5741b" instancepath="ts05/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="LegendString" type="str" pathname="..\DefinitionFile\ts05.sgfx" layer="ts05_layer" LayerIdent="1" WidgetIdent="5115" ParameterIdent="A661_STRING" Size="16" WidgetType="EditBoxNumeric" WidgetName="Longitude">
+							<A661Data>
+								<DataField value="LegendString"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>
