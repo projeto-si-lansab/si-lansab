@@ -2851,6 +2851,54 @@
 						<ed:Variable oid="!ed/4cb0/7E76/1D94/5444bb2075a8"/>
 					</pragmas>
 				</Variable>
+				<Variable name="_L144">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c51/4C23/EF4/5469231e1e98"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L145">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c54/4C23/EF4/546923494b39"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L146">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c56/4C23/EF4/546923543455"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L147">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4c58/4C23/EF4/5469236f7bc9"/>
+					</pragmas>
+				</Variable>
 			</locals>
 			<data>
 				<!-- _L2 = false; -->
@@ -13220,15 +13268,19 @@
 						<ed:Equation oid="!ed/4b41/2504/1448/5418d234c4b"/>
 					</pragmas>
 				</Equation>
-				<!-- _L100, _L101, _L105 = rhuan(_L103, _L104); -->
+				<!-- _L100, _L101, _L105, _L144, _L145, _L146, _L147 = rhuan(_L103, _L104, _null, _nul... -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L100"/>
 						<VariableRef name="_L101"/>
 						<VariableRef name="_L105"/>
+						<VariableRef name="_L144"/>
+						<VariableRef name="_L145"/>
+						<VariableRef name="_L146"/>
+						<VariableRef name="_L147"/>
 					</lefts>
 					<right>
-						<!-- rhuan(_L103, _L104) -->
+						<!-- rhuan(_L103, _L104, _null, _null) -->
 						<CallExpression>
 							<operator>
 								<OpCall name="1">
@@ -13246,6 +13298,16 @@
 								<IdExpression>
 									<path>
 										<ConstVarRef name="_L104"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<NullRef/>
 									</path>
 								</IdExpression>
 							</callParameters>
