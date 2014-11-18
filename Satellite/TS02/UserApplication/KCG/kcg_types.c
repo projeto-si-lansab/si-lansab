@@ -1,11 +1,11 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/Paulo/ITA/237/TS02_2Sprint_v6/TS02_2Sprint_v6/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T19:44:32
+** Command: s2c613 -config C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-18T21:38:59
 *************************************************************$ */
 
 #include "kcg_types.h"
 
-kcg_bool kcg_comp_struct__5302(struct__5302 *kcg_c1, struct__5302 *kcg_c2)
+kcg_bool kcg_comp_struct__5258(struct__5258 *kcg_c1, struct__5258 *kcg_c2)
 {
   kcg_bool kcg_equ;
   
@@ -17,6 +17,6 @@ kcg_bool kcg_comp_struct__5302(struct__5302 *kcg_c1, struct__5302 *kcg_c2)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.c
-** Generation date: 2014-11-18T19:44:32
+** Generation date: 2014-11-18T21:38:59
 *************************************************************$ */
 

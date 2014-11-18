@@ -6,8 +6,7 @@ setlocal enableextensions
 md %CUSTOM_DF_PATH%
 endlocal
 
-copy %USER_DF% %CUSTOM_DF% >NUL
-call "%CYGWIN_PATH%\sed" -i -e "s|<intprop name=\"ApplicationId\">[^<]*</intprop>|<intprop name=\"ApplicationId\">%APP_ID%</intprop>|g" '%CUSTOM_DF%'
+java -jar DisplayReconfigurator.jar %USER_DF% %CUSTOM_DF% %APP_ID% 0 0 0 0 0 0
 
 call "%SCADE_PATH%\SCADE A661\bin\dfgen.exe" -n "%A661_XML%" -outdir "%CUSTOM_DF_PATH%" -o %DF_NAME% "%CUSTOM_DF%"
 

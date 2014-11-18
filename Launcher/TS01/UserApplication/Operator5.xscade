@@ -175,18 +175,6 @@
 						<ed:Variable oid="!ed/11a2/6831/AD0/5438819718cd"/>
 					</pragmas>
 				</Variable>
-				<Variable name="_L24">
-					<type>
-						<NamedType>
-							<type>
-								<TypeRef name="real"/>
-							</type>
-						</NamedType>
-					</type>
-					<pragmas>
-						<ed:Variable oid="!ed/11bc/6831/AD0/543881a26f29"/>
-					</pragmas>
-				</Variable>
 				<Variable name="_L25">
 					<type>
 						<NamedType>
@@ -245,6 +233,18 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/12be/6831/AD0/5438843532d3"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L31">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/415f/5DF2/E94/545ac26d1ff8"/>
 					</pragmas>
 				</Variable>
 			</locals>
@@ -472,13 +472,13 @@
 						<ed:Equation oid="!ed/118f/6831/AD0/5438816b30cd"/>
 					</pragmas>
 				</Equation>
-				<!-- _L23 = _L21 / _L24; -->
+				<!-- _L23 = _L21 / _L31; -->
 				<Equation>
 					<lefts>
 						<VariableRef name="_L23"/>
 					</lefts>
 					<right>
-						<!-- _L21 / _L24 -->
+						<!-- _L21 / _L31 -->
 						<BinaryOp name="2" operator="/">
 							<operands>
 								<IdExpression>
@@ -488,7 +488,7 @@
 								</IdExpression>
 								<IdExpression>
 									<path>
-										<ConstVarRef name="_L24"/>
+										<ConstVarRef name="_L31"/>
 									</path>
 								</IdExpression>
 							</operands>
@@ -496,18 +496,6 @@
 					</right>
 					<pragmas>
 						<ed:Equation oid="!ed/11a1/6831/AD0/5438819766e3"/>
-					</pragmas>
-				</Equation>
-				<!-- _L24 = 98.0; -->
-				<Equation>
-					<lefts>
-						<VariableRef name="_L24"/>
-					</lefts>
-					<right>
-						<ConstValue value="98.0"/>
-					</right>
-					<pragmas>
-						<ed:Equation oid="!ed/11bb/6831/AD0/543881a27ddf"/>
 					</pragmas>
 				</Equation>
 				<!-- _L25 = _L15 * _L28; -->
@@ -627,6 +615,22 @@
 					</right>
 					<pragmas>
 						<ed:Equation oid="!ed/12bd/6831/AD0/543884354727"/>
+					</pragmas>
+				</Equation>
+				<!-- _L31 = TARGET_ORBIT_INCLINATION; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L31"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="TARGET_ORBIT_INCLINATION"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/415e/5DF2/E94/545ac26d6db"/>
 					</pragmas>
 				</Equation>
 			</data>
@@ -811,22 +815,6 @@
 										<Size width="1005" height="662"/>
 									</size>
 								</EquationGE>
-								<EquationGE kind="OBJ_LIT" presentable="!ed/11bb/6831/AD0/543881a27ddf">
-									<position>
-										<Point x="8176" y="12435"/>
-									</position>
-									<size>
-										<Size width="211" height="318"/>
-									</size>
-								</EquationGE>
-								<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/11bb/6831/AD0/543881a27ddf" dstEquation="!ed/11a1/6831/AD0/5438819766e3">
-									<positions>
-										<Point x="8387" y="12594"/>
-										<Point x="8811" y="12594"/>
-										<Point x="8811" y="11668"/>
-										<Point x="9260" y="11668"/>
-									</positions>
-								</Edge>
 								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/1181/6831/AD0/5438816415d5" dstEquation="!ed/11a1/6831/AD0/5438819766e3">
 									<positions>
 										<Point x="7858" y="11430"/>
@@ -936,6 +924,22 @@
 										<Point x="22331" y="9446"/>
 										<Point x="22331" y="9313"/>
 										<Point x="25956" y="9313"/>
+									</positions>
+								</Edge>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/415e/5DF2/E94/545ac26d6db">
+									<position>
+										<Point x="5027" y="13044"/>
+									</position>
+									<size>
+										<Size width="212" height="318"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/415e/5DF2/E94/545ac26d6db" dstEquation="!ed/11a1/6831/AD0/5438819766e3">
+									<positions>
+										<Point x="5239" y="13203"/>
+										<Point x="8202" y="13203"/>
+										<Point x="8202" y="11668"/>
+										<Point x="9260" y="11668"/>
 									</positions>
 								</Edge>
 							</presentationElements>

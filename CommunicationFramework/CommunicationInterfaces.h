@@ -45,28 +45,22 @@ typedef struct {
     /*TS05 inputs*/
 
     /* US 01 */
-    kcg_bool SAT_AirSpeed_Update;
-    kcg_real SAT_AirSpeed_Value;
     kcg_bool SAT_Altitude_Update;
     kcg_real SAT_Altitude_Value;
     kcg_bool SAT_Latitude_Update;
     kcg_real SAT_Latitude_Value;
     kcg_bool SAT_Longitude_Update;
     kcg_real SAT_Longitude_Value;
-    kcg_bool SAT_DeclinationAngle_Update;
-    kcg_real SAT_DeclinationAngle_Value;
     kcg_bool SAT_Period_Update;
     kcg_real SAT_Period_Value;
     
     /* US 05 */
     kcg_bool SAT_OperationMode_Update;
-    OperationMode SAT_OperationMode_Value;
+    kcg_int SAT_OperationMode_Value;
     kcg_bool SAT_GyroscopeState_Update;
     kcg_bool SAT_GyroscopeState_Value;
     kcg_bool SAT_HorizonSensorState_Update;
     kcg_bool SAT_HorizonSensorState_Value;
-    kcg_bool SAT_PropellersState_Update;
-    kcg_bool SAT_PropellersState_Value;
     kcg_bool SAT_CameraState_Update;
     kcg_bool SAT_CameraState_Value;
     
@@ -92,8 +86,6 @@ typedef struct {
     kcg_bool SAT_GyroscopeState_ToggleTo;
     kcg_bool SAT_HorizonSensorState_Toggle;
     kcg_bool SAT_HorizonSensorState_ToggleTo;
-    kcg_bool SAT_PropellersState_Toggle;
-    kcg_bool SAT_PropellersState_ToggleTo;
     kcg_bool SAT_CameraState_Toggle;
     kcg_bool SAT_CameraState_ToggleTo;
     
