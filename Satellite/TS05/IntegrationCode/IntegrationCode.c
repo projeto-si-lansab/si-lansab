@@ -84,10 +84,13 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
 			if (ua_inputs.cam_picture_loaded) {
 				pid_t pid = fork();
 				if (pid == 0) {
-					char* args[2];
-					args[0] = "C:\\images\\FSViewer.exe";
-					args[1] = "C:\\images\\image.jpg";
-					execv("C:\\FSViewer53\\FSViewer.exe", args);
+					char* args[5];
+					args[0] = "/usr/bin/gimp";
+					args[1] = "-d";
+					args[2] = "-f";
+					args[3] = "-s";
+					args[4] = "http://c.diggita.it/modules/auto_thumb/thumbs/1101682_raspbian_logo_thumb25255B325255D_thumb_big.jpg";
+					execv("/usr/bin/gimp", args);
 					exit(0);
 				}
 			}
