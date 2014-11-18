@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-28T00:42:05
+** Generation date: 2014-11-06T23:20:03
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -45,12 +45,12 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Altitude_Status::_L21 */ kcg_real _L21_6;
   /* Altitude_Status::_L22 */ kcg_real _L22_6;
   /* Altitude_Status::_L23 */ kcg_real _L23_6;
-  /* Altitude_Status::_L24 */ kcg_real _L24_6;
   /* Altitude_Status::_L25 */ kcg_real _L25_6;
   /* Altitude_Status::_L26 */ kcg_bool _L26_6;
   /* Altitude_Status::_L27 */ kcg_real _L27_6;
   /* Altitude_Status::_L28 */ kcg_real _L28_6;
   /* Altitude_Status::_L29 */ kcg_real _L29_6;
+  /* Altitude_Status::_L31 */ kcg_real _L31_6;
   /* Altitude_Status::Altitude */ kcg_int Altitude_6;
   /* Altitude_Status::Inclination */ kcg_real Inclination_6;
   /* Altitude_Status::Speed */ kcg_int Speed_6;
@@ -435,6 +435,9 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::Speed_Out */ kcg_real _37_Speed_Out;
   /* Main::SM1::Final */ kcg_bool br_3_guard_SM1_Final;
   /* Main::SM1::Final */ kcg_bool br_2_guard_SM1_Final;
+  /* Main::SM1::Final::_L132 */ kcg_real _L132_SM1_Final;
+  /* Main::SM1::Final::_L131 */ kcg_real _L131_SM1_Final;
+  /* Main::SM1::Final::_L130 */ kcg_real _L130_SM1_Final;
   /* Main::SM1::Final::_L129 */ kcg_bool _L129_SM1_Final;
   /* Main::SM1::Final::_L123 */ kcg_int _L123_SM1_Final;
   /* Main::SM1::Final::_L124 */ kcg_int _L124_SM1_Final;
@@ -445,7 +448,6 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::SM1::Final::_L84 */ kcg_bool _L84_SM1_Final;
   /* Main::SM1::Final::_L86 */ kcg_real _L86_SM1_Final;
   /* Main::SM1::Final::_L87 */ kcg_bool _L87_SM1_Final;
-  /* Main::SM1::Final::_L88 */ kcg_real _L88_SM1_Final;
   /* Main::SM1::Final::_L89 */ kcg_bool _L89_SM1_Final;
   /* Main::SM1::Final::_L91 */ kcg_real _L91_SM1_Final;
   /* Main::SM1::Final::_L93 */ kcg_real _L93_SM1_Final;
@@ -619,7 +621,6 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::_L114 */ kcg_int _L114;
   /* Main::_L117 */ kcg_bool _L117;
   /* Main::_L119 */ kcg_bool _L119;
-  /* Main::_L121 */ kcg_bool _L121;
   /* Main::_L122 */ kcg_real _L122;
   /* Main::_L123 */ kcg_real _L123;
   /* Main::_L125 */ kcg_bool _L125;
@@ -631,6 +632,7 @@ void Main(inC_Main *inC, outC_Main *outC)
   /* Main::_L142 */ kcg_int _L142;
   /* Main::_L144 */ kcg_bool _L144;
   /* Main::_L145 */ kcg_bool _L145;
+  /* Main::_L146 */ kcg_bool _L146;
   
   if (outC->init4) {
     SM1_state_sel = SSM_st_Ground_SM1;
@@ -950,8 +952,8 @@ void Main(inC_Main *inC, outC_Main *outC)
       break;
     
   }
-  _L121 = MissionStart;
-  Write_2 = _L121;
+  _L146 = MissionStart;
+  Write_2 = _L146;
   Init_2 = kcg_false;
   _L79 = Inclination;
   Inclination_6 = _L79;
@@ -1307,10 +1309,17 @@ void Main(inC_Main *inC, outC_Main *outC)
       }
       _L107_SM1_Final = _L86_SM1_Final - _L106_SM1_Final;
       _L94_SM1_Final = _L101_SM1_Final < _L107_SM1_Final;
-      _L88_SM1_Final = 3.0;
+      _L131_SM1_Final = 2.0;
+      _L132_SM1_Final = 0.1;
+      if (_L102_SM1_Final) {
+        _L130_SM1_Final = _L131_SM1_Final;
+      }
+      else {
+        _L130_SM1_Final = _L132_SM1_Final;
+      }
       _L109_SM1_Final = 0.0;
       if (_L94_SM1_Final) {
-        _L91_SM1_Final = _L88_SM1_Final;
+        _L91_SM1_Final = _L130_SM1_Final;
       }
       else {
         _L91_SM1_Final = _L109_SM1_Final;
@@ -2009,12 +2018,12 @@ void Main(inC_Main *inC, outC_Main *outC)
   _L8_113 = inclination_increment_1;
   outC->_L7_1 = _L5_1 + _L8_113;
   Speed_6 = _L70;
+  _L31_6 = TARGET_ORBIT_INCLINATION;
   _L29_6 = 0.0;
   _L22_6 = TARGET_ORBIT_INCLINATION;
   _L20_6 = Inclination_6;
   _L21_6 = _L22_6 - _L20_6;
-  _L24_6 = 98.0;
-  _L23_6 = _L21_6 / _L24_6;
+  _L23_6 = _L21_6 / _L31_6;
   _L27_6 = 0.0;
   _L26_6 = _L23_6 < _L27_6;
   if (_L26_6) {
@@ -2065,6 +2074,6 @@ void Main(inC_Main *inC, outC_Main *outC)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Main.c
-** Generation date: 2014-10-28T00:42:05
+** Generation date: 2014-11-06T23:20:03
 *************************************************************$ */
 

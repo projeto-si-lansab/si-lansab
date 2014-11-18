@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-28T00:42:05
+** Generation date: 2014-11-06T23:20:03
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -23,19 +23,19 @@ extern const T_String PHASE_IN_PROCESS;
 #define YELLOW 31
 
 /* PHASE1_MAX_ALTITUDE */
-#define PHASE1_MAX_ALTITUDE 90000
+#define PHASE1_MAX_ALTITUDE 38000
 
 /* INCLINATION_PH1 */
-#define INCLINATION_PH1 1.2
+#define INCLINATION_PH1 32.0
 
 /* ACCELERATION_PH1 */
-#define ACCELERATION_PH1 183
+#define ACCELERATION_PH1 88
 
 /* ACCELERATION_PH2 */
-#define ACCELERATION_PH2 143
+#define ACCELERATION_PH2 76
 
 /* INCLINATION_PH2 */
-#define INCLINATION_PH2 2.3
+#define INCLINATION_PH2 32.0
 
 /* GREEN */
 #define GREEN 51
@@ -44,7 +44,7 @@ extern const T_String PHASE_IN_PROCESS;
 extern const T_String PHASE_COMPLETE;
 
 /* PHASE2_MAX_ALTITUDE */
-#define PHASE2_MAX_ALTITUDE 300000
+#define PHASE2_MAX_ALTITUDE 107000
 
 /* RED */
 #define RED 21
@@ -56,22 +56,22 @@ extern const T_String PHASE_FAILED;
 #define A661_TRUE kcg_true
 
 /* ACCELERATION_PH3 */
-#define ACCELERATION_PH3 103
+#define ACCELERATION_PH3 139
 
 /* INCLINATION_PH3 */
-#define INCLINATION_PH3 5.9
+#define INCLINATION_PH3 44.0
 
 /* PHASE3_MAX_ALTITUDE */
-#define PHASE3_MAX_ALTITUDE 610000
+#define PHASE3_MAX_ALTITUDE 230000
 
 /* TARGET_ORBIT_ALTITUDE */
-#define TARGET_ORBIT_ALTITUDE 720000
+#define TARGET_ORBIT_ALTITUDE 750000
 
 /* ACCELERATION_NONE */
 #define ACCELERATION_NONE 0
 
 /* ACCELERATION_PH4 */
-#define ACCELERATION_PH4 83
+#define ACCELERATION_PH4 164
 
 /* TARGET_ORBIT_SPEED */
 #define TARGET_ORBIT_SPEED 28000
@@ -101,11 +101,11 @@ extern const T_String PHASE_FAILED;
 #define STARTING_LONGITUDE (- 45.876359)
 
 /* TARGET_ORBIT_INCLINATION */
-#define TARGET_ORBIT_INCLINATION 98.0
+#define TARGET_ORBIT_INCLINATION 83.0
 
 #endif /* _KCG_CONSTS_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.h
-** Generation date: 2014-10-28T00:42:05
+** Generation date: 2014-11-06T23:20:03
 *************************************************************$ */
 
