@@ -41,6 +41,7 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
         switch (message.from) {
         case TS01ID:
             printf("Received: Message from TS01 to TS05 \n");
+            ua_inputs.SAT_Ejection_Signal = input.SAT_Ejection_Signal;
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS05 \n");
@@ -66,7 +67,6 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             ua_inputs.SAT_CameraState_Value = input.SAT_CameraState_Value;
             
             /* US 11 */
-            ua_inputs.SAT_Ejection_Signal = input.SAT_Ejection_Signal;
             ua_inputs.SAT_Initialization_Signal = input.SAT_Initialization_Signal;
             
             /* US 14 */
