@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--$*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/hoffsi/dev/ita/scade/ce235/Launcher/TS04/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-24T11:03:18
+** Generation date: 2014-11-19T17:00:31
 *************************************************************$-->
-<Model date="2014-10-24T11:03:18" commandLine="s2c613 -config C:/hoffsi/dev/ita/scade/ce235/Launcher/TS04/UserApplication/KCG\kcg_s2c_config.txt">
+<Model date="2014-11-19T17:00:31" commandLine="s2c613 -config C:/hoffsi/dev/ita/scade/ce235/Launcher/TS04/UserApplication/KCG\kcg_s2c_config.txt">
   <Constant scadeName="A661_FALSE" scadeType="int" targetName="A661_FALSE" targetType="kcg_int" macroDef="true"/>
   <Constant scadeName="A661_TRUE" scadeType="int" targetName="A661_TRUE" targetType="kcg_int" macroDef="true"/>
   <Constant scadeName="RED" scadeType="int" targetName="RED" targetType="kcg_int" macroDef="true"/>
@@ -17,32 +17,19 @@
     <Input scadeName="DesacoplarPh3" scadeType="bool" targetName="DesacoplarPh3" targetType="kcg_bool" inCtx="true"/>
     <Input scadeName="DesacoplarPh4" scadeType="bool" targetName="DesacoplarPh4" targetType="kcg_bool" inCtx="true"/>
     <Input scadeName="ToogleIniciar" scadeType="int" targetName="ToogleIniciar" targetType="kcg_int" inCtx="true"/>
-    <Input scadeName="StatusComputador" scadeType="bool" targetName="StatusComputador" targetType="kcg_bool"
-        inCtx="true"/>
     <Input scadeName="VerificarComputador" scadeType="bool" targetName="VerificarComputador" targetType="kcg_bool"
-        inCtx="true"/>
-    <Input scadeName="Estagio1_Ligado" scadeType="bool" targetName="Estagio1_Ligado" targetType="kcg_bool"
-        inCtx="true"/>
-    <Input scadeName="Estagio2_Ligado" scadeType="bool" targetName="Estagio2_Ligado" targetType="kcg_bool"
-        inCtx="true"/>
-    <Input scadeName="Estagio3_Ligado" scadeType="bool" targetName="Estagio3_Ligado" targetType="kcg_bool"
-        inCtx="true"/>
-    <Input scadeName="Estagio4_Ligado" scadeType="bool" targetName="Estagio4_Ligado" targetType="kcg_bool"
         inCtx="true"/>
     <Input scadeName="VerificarEstagios" scadeType="bool" targetName="VerificarEstagios" targetType="kcg_bool"
         inCtx="true"/>
     <Input scadeName="AlertaGeral" scadeType="bool" targetName="AlertaGeral" targetType="kcg_bool" inCtx="true"/>
-    <Input scadeName="fuel_stage2" scadeType="bool" targetName="fuel_stage2" targetType="kcg_bool" inCtx="true"/>
-    <Input scadeName="fuel_stage3" scadeType="bool" targetName="fuel_stage3" targetType="kcg_bool" inCtx="true"/>
-    <Input scadeName="fuel_stage4" scadeType="bool" targetName="fuel_stage4" targetType="kcg_bool" inCtx="true"/>
     <Input scadeName="verify_fuel" scadeType="bool" targetName="verify_fuel" targetType="kcg_bool" inCtx="true"/>
     <Input scadeName="confirmacaoDesacopl" scadeType="bool" targetName="confirmacaoDesacopl" targetType="kcg_bool"
         inCtx="true"/>
     <Input scadeName="enviarComando" scadeType="bool" targetName="enviarComando" targetType="kcg_bool" inCtx="true"/>
-    <Input scadeName="StatusCamera" scadeType="bool" targetName="StatusCamera" targetType="kcg_bool" inCtx="true"/>
     <Input scadeName="VerificarCamera" scadeType="bool" targetName="VerificarCamera" targetType="kcg_bool"
         inCtx="true"/>
-    <Input scadeName="fuel_stage1" scadeType="bool" targetName="fuel_stage1" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="EnableDestructSignal" scadeType="bool" targetName="EnableDestructSignal" targetType="kcg_bool"
+        inCtx="true"/>
     <Input scadeName="SelfDestructSignal" scadeType="bool" targetName="SelfDestructSignal" targetType="kcg_bool"
         inCtx="true"/>
     <Input scadeName="LancAutomatico" scadeType="bool" targetName="LancAutomatico" targetType="kcg_bool" inCtx="true"/>
@@ -71,6 +58,8 @@
     <Output scadeName="desacoplarSatelite" scadeType="bool" targetName="desacoplarSatelite" targetType="kcg_bool"
         inCtx="true"/>
     <Output scadeName="CorCameraFundo" scadeType="int" targetName="CorCameraFundo" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="SelfDestructEnabled" scadeType="int" targetName="SelfDestructEnabled" targetType="kcg_int"
+        inCtx="true"/>
     <Output scadeName="SelfDestruct" scadeType="bool" targetName="SelfDestruct" targetType="kcg_bool" inCtx="true"/>
     <Output scadeName="CorAlertaGeral" scadeType="int" targetName="CorAlertaGeral" targetType="kcg_int" inCtx="true"/>
     <Output scadeName="Ph1Enabled" scadeType="int" targetName="Ph1Enabled" targetType="kcg_int" inCtx="true"/>
@@ -93,33 +82,23 @@
     <Local scadeName="_L12" scadeType="real" targetName="_L12" targetType="kcg_real"/>
     <Local scadeName="_L13" scadeType="bool" targetName="_L13" targetType="kcg_bool"/>
     <Local scadeName="_L17" scadeType="int" targetName="_L17" targetType="kcg_int"/>
-    <Local scadeName="_L16" scadeType="bool" targetName="_L16" targetType="kcg_bool"/>
     <Local scadeName="_L15" scadeType="bool" targetName="_L15" targetType="kcg_bool"/>
     <Local scadeName="_L26" scadeType="bool" targetName="_L26" targetType="kcg_bool"/>
-    <Local scadeName="_L25" scadeType="bool" targetName="_L25" targetType="kcg_bool"/>
     <Local scadeName="_L21" scadeType="int" targetName="_L21" targetType="kcg_int"/>
     <Local scadeName="_L22" scadeType="int" targetName="_L22" targetType="kcg_int"/>
     <Local scadeName="_L23" scadeType="int" targetName="_L23" targetType="kcg_int"/>
     <Local scadeName="_L24" scadeType="int" targetName="_L24" targetType="kcg_int"/>
-    <Local scadeName="_L20" scadeType="bool" targetName="_L20" targetType="kcg_bool"/>
-    <Local scadeName="_L19" scadeType="bool" targetName="_L19" targetType="kcg_bool"/>
-    <Local scadeName="_L18" scadeType="bool" targetName="_L18" targetType="kcg_bool"/>
     <Local scadeName="_L27" scadeType="bool" targetName="_L27" targetType="kcg_bool"/>
     <Local scadeName="_L54" scadeType="bool" targetName="_L54" targetType="kcg_bool"/>
     <Local scadeName="_L53" scadeType="bool" targetName="_L53" targetType="kcg_bool"/>
     <Local scadeName="_L52" scadeType="bool" targetName="_L52" targetType="kcg_bool"/>
-    <Local scadeName="_L57" scadeType="bool" targetName="_L57" targetType="kcg_bool"/>
     <Local scadeName="_L56" scadeType="bool" targetName="_L56" targetType="kcg_bool"/>
     <Local scadeName="_L55" scadeType="int" targetName="_L55" targetType="kcg_int"/>
-    <Local scadeName="_L66" scadeType="bool" targetName="_L66" targetType="kcg_bool"/>
-    <Local scadeName="_L65" scadeType="bool" targetName="_L65" targetType="kcg_bool"/>
-    <Local scadeName="_L64" scadeType="bool" targetName="_L64" targetType="kcg_bool"/>
     <Local scadeName="_L63" scadeType="bool" targetName="_L63" targetType="kcg_bool"/>
     <Local scadeName="_L59" scadeType="int" targetName="_L59" targetType="kcg_int"/>
     <Local scadeName="_L60" scadeType="int" targetName="_L60" targetType="kcg_int"/>
     <Local scadeName="_L61" scadeType="int" targetName="_L61" targetType="kcg_int"/>
     <Local scadeName="_L62" scadeType="int" targetName="_L62" targetType="kcg_int"/>
-    <Local scadeName="_L58" scadeType="bool" targetName="_L58" targetType="kcg_bool"/>
     <Local scadeName="_L67" scadeType="bool" targetName="_L67" targetType="kcg_bool"/>
     <Local scadeName="_L69" scadeType="int" targetName="_L69" targetType="kcg_int"/>
     <Local scadeName="_L70" scadeType="int" targetName="_L70" targetType="kcg_int"/>
@@ -127,6 +106,10 @@
     <Local scadeName="_L72" scadeType="int" targetName="_L72" targetType="kcg_int"/>
     <Local scadeName="_L73" scadeType="int" targetName="_L73" targetType="kcg_int"/>
     <Local scadeName="_L74" scadeType="int" targetName="_L74" targetType="kcg_int"/>
+    <Local scadeName="_L75" scadeType="bool" targetName="_L75" targetType="kcg_bool"/>
+    <Local scadeName="_L76" scadeType="bool" targetName="_L76" targetType="kcg_bool"/>
+    <Local scadeName="_L81" scadeType="int" targetName="_L81" targetType="kcg_int"/>
+    <Local scadeName="_L82" scadeType="bool" targetName="_L82" targetType="kcg_bool"/>
     <NodeInlining scadeName="us18" instName="1">
       <Input scadeName="Automatico" scadeType="bool" targetName="Automatico_1" targetType="kcg_bool"/>
       <Input scadeName="DesacoplarPh1" scadeType="bool" targetName="DesacoplarPh1_1" targetType="kcg_bool"/>
@@ -370,14 +353,11 @@
     </NodeInlining>
     <NodeInlining scadeName="thiagoribeiro" instName="1">
       <Input scadeName="VerificarEstagios" scadeType="bool" targetName="VerificarEstagios_1" targetType="kcg_bool"/>
-      <Input scadeName="Estagio4_Ligado" scadeType="bool" targetName="Estagio4_Ligado_1" targetType="kcg_bool"/>
-      <Input scadeName="Estagio3_Ligado" scadeType="bool" targetName="Estagio3_Ligado_1" targetType="kcg_bool"/>
-      <Input scadeName="Estagio2_Ligado" scadeType="bool" targetName="Estagio2_Ligado_1" targetType="kcg_bool"/>
-      <Input scadeName="Estagio1_Ligado" scadeType="bool" targetName="Estagio1_Ligado_1" targetType="kcg_bool"/>
       <Output scadeName="Estagio4CorFundo" scadeType="int" targetName="Estagio4CorFundo_1" targetType="kcg_int"/>
       <Output scadeName="Estagio3CorFundo" scadeType="int" targetName="Estagio3CorFundo_1" targetType="kcg_int"/>
       <Output scadeName="Estagio2CorFundo" scadeType="int" targetName="Estagio2CorFundo_1" targetType="kcg_int"/>
       <Output scadeName="Estagio1CorFundo" scadeType="int" targetName="Estagio1CorFundo_1" targetType="kcg_int"/>
+      <Local scadeName="n" scadeType="int" targetName="n_1" targetType="kcg_int"/>
       <Local scadeName="_L10" scadeType="bool" targetName="_58__L10_1" targetType="kcg_bool"/>
       <Local scadeName="_L11" scadeType="bool" targetName="_57__L11_1" targetType="kcg_bool"/>
       <Local scadeName="_L12" scadeType="bool" targetName="_56__L12_1" targetType="kcg_bool"/>
@@ -386,11 +366,21 @@
       <Local scadeName="_L16" scadeType="int" targetName="_54__L16_1" targetType="kcg_int"/>
       <Local scadeName="_L18" scadeType="int" targetName="_53__L18_1" targetType="kcg_int"/>
       <Local scadeName="_L20" scadeType="int" targetName="_L20_1" targetType="kcg_int"/>
-      <Local scadeName="_L21" scadeType="bool" targetName="_L21_1" targetType="kcg_bool"/>
-      <Local scadeName="_L22" scadeType="bool" targetName="_52__L22_1" targetType="kcg_bool"/>
-      <Local scadeName="_L23" scadeType="bool" targetName="_51__L23_1" targetType="kcg_bool"/>
-      <Local scadeName="_L24" scadeType="bool" targetName="_50__L24_1" targetType="kcg_bool"/>
-      <Local scadeName="_L25" scadeType="bool" targetName="_49__L25_1" targetType="kcg_bool"/>
+      <Local scadeName="_L40" scadeType="bool" targetName="_L40_1" targetType="kcg_bool"/>
+      <Local scadeName="_L43" scadeType="int" targetName="_L43_1" targetType="kcg_int"/>
+      <Local scadeName="_L45" scadeType="int" targetName="_L45_1" targetType="kcg_int"/>
+      <Local scadeName="_L48" scadeType="int" targetName="_52__L48_1" targetType="kcg_int"/>
+      <Local scadeName="_L46" scadeType="int" targetName="_L46_1" targetType="kcg_int"/>
+      <Local scadeName="_L51" scadeType="int" targetName="_51__L51_1" targetType="kcg_int"/>
+      <Local scadeName="_L50" scadeType="int" targetName="_50__L50_1" targetType="kcg_int"/>
+      <Local scadeName="_L54" scadeType="int" targetName="_49__L54_1" targetType="kcg_int"/>
+      <Local scadeName="_L52" scadeType="int" targetName="_L52_1" targetType="kcg_int"/>
+      <Local scadeName="_L63" scadeType="int" targetName="_L63_1" targetType="kcg_int"/>
+      <Local scadeName="_L65" scadeType="bool" targetName="_L65_1" targetType="kcg_bool"/>
+      <Local scadeName="_L66" scadeType="bool" targetName="_L66_1" targetType="kcg_bool"/>
+      <Local scadeName="_L67" scadeType="bool" targetName="_L67_1" targetType="kcg_bool"/>
+      <Local scadeName="_L68" scadeType="bool" targetName="_L68_1" targetType="kcg_bool"/>
+      <Local scadeName="_L69" scadeType="bool" targetName="_L69_1" targetType="kcg_bool"/>
       <NodeInlining scadeName="ff" instName="1">
         <Input scadeName="In" scadeType="bool" targetName="_59_In_1_1" targetType="kcg_bool"/>
         <Input scadeName="Clcck" scadeType="bool" targetName="_60_Clcck_1_1" targetType="kcg_bool"/>
@@ -459,29 +449,66 @@
         <Local scadeName="_L2" scadeType="bool" targetName="_95__L2_4_1" targetType="kcg_bool"/>
         <Local scadeName="_L1" scadeType="int" targetName="_94__L1_4_1" targetType="kcg_int"/>
       </NodeInlining>
+      <NodeInlining scadeName="count_ticks" instName="1">
+        <Input scadeName="Verify" scadeType="bool" targetName="Verify_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Ticks" scadeType="int" targetName="Ticks_1_1" targetType="kcg_int"/>
+        <Local scadeName="verify" scadeType="bool" targetName="verify_1_1" targetType="kcg_bool"/>
+        <Local scadeName="n" scadeType="int" targetName="n_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L9" scadeType="bool" targetName="_L9_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L8" scadeType="int" targetName="_104__L8_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L7" scadeType="int" targetName="_103__L7_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L6" scadeType="int" targetName="_102__L6_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_101__L5_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L4" scadeType="int" targetName="_100__L4_1_1" targetType="kcg_int"/>
+        <Memory scadeName="_L3" scadeType="int" targetName="_3__L3_1_1" targetType="kcg_int" inCtx="true"/>
+        <Local scadeName="_L2" scadeType="int" targetName="_99__L2_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_98__L1_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L11" scadeType="bool" targetName="_L11_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L12" scadeType="bool" targetName="_L12_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L14" scadeType="int" targetName="_L14_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L15" scadeType="bool" targetName="_L15_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L18" scadeType="int" targetName="_L18_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L19" scadeType="bool" targetName="_L19_1_1" targetType="kcg_bool"/>
+        <NodeInstance scadeName="+" instName="1"/>
+        <NodeInstance scadeName="&lt;" instName="1"/>
+        <NodeInlining scadeName="switch" instName="1">
+          <Input scadeName="Input1" scadeType="bool" targetName="Input1_1_1_1" targetType="kcg_bool"/>
+          <Output scadeName="Output1" scadeType="bool" targetName="Output1_1_1_1" targetType="kcg_bool"/>
+          <Local scadeName="_L1" scadeType="bool" targetName="_L1_1_1_1" targetType="kcg_bool"/>
+          <Local scadeName="_L2" scadeType="bool" targetName="_L2_1_1_1" targetType="kcg_bool"/>
+          <Memory scadeName="_L3" scadeType="bool" targetName="_L3_1_1_1" targetType="kcg_bool" inCtx="true"/>
+          <Local scadeName="_L4" scadeType="bool" targetName="_L4_1_1_1" targetType="kcg_bool"/>
+          <NodeInstance scadeName="not" instName="1"/>
+        </NodeInlining>
+        <NodeInstance scadeName="and" instName="1"/>
+      </NodeInlining>
+      <NodeInstance scadeName="&gt;=" instName="2"/>
+      <NodeInstance scadeName="&gt;=" instName="3"/>
+      <NodeInstance scadeName="&gt;=" instName="4"/>
+      <NodeInstance scadeName="&gt;=" instName="5"/>
     </NodeInlining>
     <NodeInlining scadeName="alertas" instName="1">
       <Input scadeName="AlertaGeral" scadeType="bool" targetName="AlertaGeral_1" targetType="kcg_bool"/>
       <Output scadeName="CorAlertaGeral" scadeType="int" targetName="CorAlertaGeral_1" targetType="kcg_int"/>
-      <Local scadeName="_L19" scadeType="bool" targetName="_99__L19_1" targetType="kcg_bool"/>
+      <Local scadeName="_L19" scadeType="bool" targetName="_106__L19_1" targetType="kcg_bool"/>
       <Local scadeName="_L26" scadeType="int" targetName="_L26_1" targetType="kcg_int"/>
-      <Local scadeName="_L27" scadeType="bool" targetName="_98__L27_1" targetType="kcg_bool"/>
+      <Local scadeName="_L27" scadeType="bool" targetName="_105__L27_1" targetType="kcg_bool"/>
       <Local scadeName="_L28" scadeType="bool" targetName="_L28_1" targetType="kcg_bool"/>
       <NodeInlining scadeName="cor_status2" instName="1">
-        <Input scadeName="Input1" scadeType="bool" targetName="_100_Input1_1_1" targetType="kcg_bool"/>
-        <Output scadeName="Output1" scadeType="int" targetName="_101_Output1_1_1" targetType="kcg_int"/>
-        <Local scadeName="_L4" scadeType="int" targetName="_105__L4_1_1" targetType="kcg_int"/>
-        <Local scadeName="_L3" scadeType="int" targetName="_104__L3_1_1" targetType="kcg_int"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_103__L2_1_1" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="int" targetName="_102__L1_1_1" targetType="kcg_int"/>
+        <Input scadeName="Input1" scadeType="bool" targetName="_107_Input1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output1" scadeType="int" targetName="_108_Output1_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L4" scadeType="int" targetName="_112__L4_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L3" scadeType="int" targetName="_111__L3_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_110__L2_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_109__L1_1_1" targetType="kcg_int"/>
       </NodeInlining>
       <NodeInlining scadeName="switch" instName="1">
-        <Input scadeName="Input1" scadeType="bool" targetName="_106_Input1_1_1" targetType="kcg_bool"/>
-        <Output scadeName="Output1" scadeType="bool" targetName="_107_Output1_1_1" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="bool" targetName="_110__L1_1_1" targetType="kcg_bool"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_109__L2_1_1" targetType="kcg_bool"/>
-        <Memory scadeName="_L3" scadeType="bool" targetName="_3__L3_1_1" targetType="kcg_bool" inCtx="true"/>
-        <Local scadeName="_L4" scadeType="bool" targetName="_108__L4_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Input1" scadeType="bool" targetName="_113_Input1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="_114_Output1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_117__L1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_116__L2_1_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L3" scadeType="bool" targetName="_4__L3_1_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L4" scadeType="bool" targetName="_115__L4_1_1" targetType="kcg_bool"/>
         <NodeInstance scadeName="not" instName="1"/>
       </NodeInlining>
       <NodeInstance scadeName="not" instName="1"/>
@@ -490,17 +517,17 @@
       <Input scadeName="enviarComando" scadeType="bool" targetName="enviarComando_1" targetType="kcg_bool"/>
       <Input scadeName="confirmacao" scadeType="bool" targetName="confirmacao_1" targetType="kcg_bool"/>
       <Output scadeName="sinal" scadeType="bool" targetName="sinal_1" targetType="kcg_bool"/>
-      <Local scadeName="_L1" scadeType="bool" targetName="_L1_1114" targetType="kcg_bool"/>
-      <Local scadeName="_L4" scadeType="bool" targetName="_L4_1113" targetType="kcg_bool"/>
-      <Local scadeName="_L5" scadeType="bool" targetName="_L5_1112" targetType="kcg_bool"/>
-      <Local scadeName="_L6" scadeType="bool" targetName="_L6_1111" targetType="kcg_bool"/>
+      <Local scadeName="_L1" scadeType="bool" targetName="_L1_1121" targetType="kcg_bool"/>
+      <Local scadeName="_L4" scadeType="bool" targetName="_L4_1120" targetType="kcg_bool"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="_L5_1119" targetType="kcg_bool"/>
+      <Local scadeName="_L6" scadeType="bool" targetName="_L6_1118" targetType="kcg_bool"/>
       <NodeInlining scadeName="switch" instName="1">
-        <Input scadeName="Input1" scadeType="bool" targetName="_115_Input1_1_1" targetType="kcg_bool"/>
-        <Output scadeName="Output1" scadeType="bool" targetName="_116_Output1_1_1" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="bool" targetName="_119__L1_1_1" targetType="kcg_bool"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_118__L2_1_1" targetType="kcg_bool"/>
-        <Memory scadeName="_L3" scadeType="bool" targetName="_4__L3_1_1" targetType="kcg_bool" inCtx="true"/>
-        <Local scadeName="_L4" scadeType="bool" targetName="_117__L4_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Input1" scadeType="bool" targetName="_122_Input1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="_123_Output1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_126__L1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_125__L2_1_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L3" scadeType="bool" targetName="_5__L3_1_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L4" scadeType="bool" targetName="_124__L4_1_1" targetType="kcg_bool"/>
         <NodeInstance scadeName="not" instName="1"/>
       </NodeInlining>
       <NodeInstance scadeName="or" instName="1"/>
@@ -509,43 +536,35 @@
       <Input scadeName="VerificarCamera" scadeType="bool" targetName="VerificarCamera_1" targetType="kcg_bool"/>
       <Input scadeName="StatusCamera" scadeType="bool" targetName="StatusCamera_1" targetType="kcg_bool"/>
       <Output scadeName="CorCameraFundo" scadeType="int" targetName="CorCameraFundo_1" targetType="kcg_int"/>
-      <Local scadeName="_L1" scadeType="bool" targetName="_L1_1123" targetType="kcg_bool"/>
-      <Local scadeName="_L2" scadeType="int" targetName="_L2_1122" targetType="kcg_int"/>
-      <Local scadeName="_L3" scadeType="bool" targetName="_L3_1121" targetType="kcg_bool"/>
-      <Local scadeName="_L4" scadeType="bool" targetName="_L4_1120" targetType="kcg_bool"/>
+      <Local scadeName="_L1" scadeType="bool" targetName="_L1_1130" targetType="kcg_bool"/>
+      <Local scadeName="_L2" scadeType="int" targetName="_L2_1129" targetType="kcg_int"/>
+      <Local scadeName="_L3" scadeType="bool" targetName="_L3_1128" targetType="kcg_bool"/>
+      <Local scadeName="_L4" scadeType="bool" targetName="_L4_1127" targetType="kcg_bool"/>
       <NodeInlining scadeName="ff" instName="1">
-        <Input scadeName="In" scadeType="bool" targetName="_124_In_1_1" targetType="kcg_bool"/>
-        <Input scadeName="Clcck" scadeType="bool" targetName="_125_Clcck_1_1" targetType="kcg_bool"/>
-        <Output scadeName="Out" scadeType="bool" targetName="_126_Out_1_1" targetType="kcg_bool"/>
-        <Memory scadeName="_L4" scadeType="bool" targetName="_5__L4_1_1" targetType="kcg_bool" inCtx="true"/>
-        <Local scadeName="_L3" scadeType="bool" targetName="_129__L3_1_1" targetType="kcg_bool"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_128__L2_1_1" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="bool" targetName="_127__L1_1_1" targetType="kcg_bool"/>
+        <Input scadeName="In" scadeType="bool" targetName="_131_In_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Clcck" scadeType="bool" targetName="_132_Clcck_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Out" scadeType="bool" targetName="_133_Out_1_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L4" scadeType="bool" targetName="_6__L4_1_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L3" scadeType="bool" targetName="_136__L3_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_135__L2_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_134__L1_1_1" targetType="kcg_bool"/>
       </NodeInlining>
       <NodeInlining scadeName="cor_status2" instName="1">
-        <Input scadeName="Input1" scadeType="bool" targetName="_130_Input1_1_1" targetType="kcg_bool"/>
-        <Output scadeName="Output1" scadeType="int" targetName="_131_Output1_1_1" targetType="kcg_int"/>
-        <Local scadeName="_L4" scadeType="int" targetName="_135__L4_1_1" targetType="kcg_int"/>
-        <Local scadeName="_L3" scadeType="int" targetName="_134__L3_1_1" targetType="kcg_int"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_133__L2_1_1" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="int" targetName="_132__L1_1_1" targetType="kcg_int"/>
+        <Input scadeName="Input1" scadeType="bool" targetName="_137_Input1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output1" scadeType="int" targetName="_138_Output1_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L4" scadeType="int" targetName="_142__L4_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L3" scadeType="int" targetName="_141__L3_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_140__L2_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_139__L1_1_1" targetType="kcg_int"/>
       </NodeInlining>
     </NodeInlining>
     <NodeInlining scadeName="juan" instName="3">
       <Input scadeName="verify_fuel" scadeType="bool" targetName="verify_fuel_3" targetType="kcg_bool"/>
-      <Input scadeName="fuel_stage4" scadeType="bool" targetName="fuel_stage4_3" targetType="kcg_bool"/>
-      <Input scadeName="fuel_stage3" scadeType="bool" targetName="fuel_stage3_3" targetType="kcg_bool"/>
-      <Input scadeName="fuel_stage2" scadeType="bool" targetName="fuel_stage2_3" targetType="kcg_bool"/>
-      <Input scadeName="fuel_stage1" scadeType="bool" targetName="fuel_stage1_3" targetType="kcg_bool"/>
       <Output scadeName="color_fuel1" scadeType="int" targetName="color_fuel1_3" targetType="kcg_int"/>
       <Output scadeName="color_fuel2" scadeType="int" targetName="color_fuel2_3" targetType="kcg_int"/>
       <Output scadeName="color_fuel3" scadeType="int" targetName="color_fuel3_3" targetType="kcg_int"/>
       <Output scadeName="color_fuel4" scadeType="int" targetName="color_fuel4_3" targetType="kcg_int"/>
-      <Local scadeName="_L7" scadeType="bool" targetName="_L7_3" targetType="kcg_bool"/>
-      <Local scadeName="_L6" scadeType="bool" targetName="_L6_3" targetType="kcg_bool"/>
-      <Local scadeName="_L5" scadeType="bool" targetName="_L5_3" targetType="kcg_bool"/>
-      <Local scadeName="_L4" scadeType="bool" targetName="_L4_3" targetType="kcg_bool"/>
-      <Local scadeName="_L1" scadeType="bool" targetName="_L1_3" targetType="kcg_bool"/>
+      <Local scadeName="n" scadeType="int" targetName="n_3" targetType="kcg_int"/>
       <Local scadeName="_L10" scadeType="bool" targetName="_L10_3" targetType="kcg_bool"/>
       <Local scadeName="_L11" scadeType="bool" targetName="_L11_3" targetType="kcg_bool"/>
       <Local scadeName="_L12" scadeType="bool" targetName="_L12_3" targetType="kcg_bool"/>
@@ -554,6 +573,21 @@
       <Local scadeName="_L16" scadeType="int" targetName="_L16_3" targetType="kcg_int"/>
       <Local scadeName="_L18" scadeType="int" targetName="_L18_3" targetType="kcg_int"/>
       <Local scadeName="_L20" scadeType="int" targetName="_L20_3" targetType="kcg_int"/>
+      <Local scadeName="_L21" scadeType="int" targetName="_L21_3" targetType="kcg_int"/>
+      <Local scadeName="_L22" scadeType="bool" targetName="_L22_3" targetType="kcg_bool"/>
+      <Local scadeName="_L23" scadeType="bool" targetName="_L23_3" targetType="kcg_bool"/>
+      <Local scadeName="_L35" scadeType="bool" targetName="_L35_3" targetType="kcg_bool"/>
+      <Local scadeName="_L34" scadeType="bool" targetName="_L34_3" targetType="kcg_bool"/>
+      <Local scadeName="_L33" scadeType="int" targetName="_L33_3" targetType="kcg_int"/>
+      <Local scadeName="_L32" scadeType="int" targetName="_L32_3" targetType="kcg_int"/>
+      <Local scadeName="_L31" scadeType="int" targetName="_L31_3" targetType="kcg_int"/>
+      <Local scadeName="_L30" scadeType="int" targetName="_L30_3" targetType="kcg_int"/>
+      <Local scadeName="_L29" scadeType="int" targetName="_L29_3" targetType="kcg_int"/>
+      <Local scadeName="_L28" scadeType="int" targetName="_L28_3" targetType="kcg_int"/>
+      <Local scadeName="_L27" scadeType="int" targetName="_L27_3" targetType="kcg_int"/>
+      <Local scadeName="_L26" scadeType="bool" targetName="_L26_3" targetType="kcg_bool"/>
+      <Local scadeName="_L25" scadeType="int" targetName="_L25_3" targetType="kcg_int"/>
+      <Local scadeName="_L24" scadeType="bool" targetName="_L24_3" targetType="kcg_bool"/>
       <NodeInlining scadeName="ff" instName="1">
         <Input scadeName="In" scadeType="bool" targetName="In_1_3" targetType="kcg_bool"/>
         <Input scadeName="Clcck" scadeType="bool" targetName="Clcck_1_3" targetType="kcg_bool"/>
@@ -594,33 +628,100 @@
         <Input scadeName="Input1" scadeType="bool" targetName="Input1_1_3" targetType="kcg_bool"/>
         <Output scadeName="Output1" scadeType="int" targetName="Output1_1_3" targetType="kcg_int"/>
         <Local scadeName="_L4" scadeType="int" targetName="_L4_1_3" targetType="kcg_int"/>
-        <Local scadeName="_L3" scadeType="int" targetName="_138__L3_1_3" targetType="kcg_int"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_137__L2_1_3" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="int" targetName="_136__L1_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L3" scadeType="int" targetName="_145__L3_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_144__L2_1_3" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_143__L1_1_3" targetType="kcg_int"/>
       </NodeInlining>
       <NodeInlining scadeName="cor_status2" instName="2">
         <Input scadeName="Input1" scadeType="bool" targetName="Input1_2_3" targetType="kcg_bool"/>
         <Output scadeName="Output1" scadeType="int" targetName="Output1_2_3" targetType="kcg_int"/>
         <Local scadeName="_L4" scadeType="int" targetName="_L4_2_3" targetType="kcg_int"/>
-        <Local scadeName="_L3" scadeType="int" targetName="_141__L3_2_3" targetType="kcg_int"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_140__L2_2_3" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="int" targetName="_139__L1_2_3" targetType="kcg_int"/>
+        <Local scadeName="_L3" scadeType="int" targetName="_148__L3_2_3" targetType="kcg_int"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_147__L2_2_3" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_146__L1_2_3" targetType="kcg_int"/>
       </NodeInlining>
       <NodeInlining scadeName="cor_status2" instName="3">
         <Input scadeName="Input1" scadeType="bool" targetName="Input1_3_3" targetType="kcg_bool"/>
         <Output scadeName="Output1" scadeType="int" targetName="Output1_3_3" targetType="kcg_int"/>
         <Local scadeName="_L4" scadeType="int" targetName="_L4_3_3" targetType="kcg_int"/>
-        <Local scadeName="_L3" scadeType="int" targetName="_144__L3_3_3" targetType="kcg_int"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_143__L2_3_3" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="int" targetName="_142__L1_3_3" targetType="kcg_int"/>
+        <Local scadeName="_L3" scadeType="int" targetName="_151__L3_3_3" targetType="kcg_int"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_150__L2_3_3" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_149__L1_3_3" targetType="kcg_int"/>
       </NodeInlining>
       <NodeInlining scadeName="cor_status2" instName="4">
         <Input scadeName="Input1" scadeType="bool" targetName="Input1_4_3" targetType="kcg_bool"/>
         <Output scadeName="Output1" scadeType="int" targetName="Output1_4_3" targetType="kcg_int"/>
         <Local scadeName="_L4" scadeType="int" targetName="_L4_4_3" targetType="kcg_int"/>
-        <Local scadeName="_L3" scadeType="int" targetName="_147__L3_4_3" targetType="kcg_int"/>
-        <Local scadeName="_L2" scadeType="bool" targetName="_146__L2_4_3" targetType="kcg_bool"/>
-        <Local scadeName="_L1" scadeType="int" targetName="_145__L1_4_3" targetType="kcg_int"/>
+        <Local scadeName="_L3" scadeType="int" targetName="_154__L3_4_3" targetType="kcg_int"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_153__L2_4_3" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_152__L1_4_3" targetType="kcg_int"/>
+      </NodeInlining>
+      <NodeInlining scadeName="count_ticks" instName="1">
+        <Input scadeName="Verify" scadeType="bool" targetName="Verify_1_3" targetType="kcg_bool"/>
+        <Output scadeName="Ticks" scadeType="int" targetName="Ticks_1_3" targetType="kcg_int"/>
+        <Local scadeName="verify" scadeType="bool" targetName="verify_1_3" targetType="kcg_bool"/>
+        <Local scadeName="n" scadeType="int" targetName="n_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L9" scadeType="bool" targetName="_L9_1_3" targetType="kcg_bool"/>
+        <Local scadeName="_L8" scadeType="int" targetName="_L8_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L7" scadeType="int" targetName="_L7_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L6" scadeType="int" targetName="_L6_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_L5_1_3" targetType="kcg_bool"/>
+        <Local scadeName="_L4" scadeType="int" targetName="_157__L4_1_3" targetType="kcg_int"/>
+        <Memory scadeName="_L3" scadeType="int" targetName="_L3_1_3" targetType="kcg_int" inCtx="true"/>
+        <Local scadeName="_L2" scadeType="int" targetName="_156__L2_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L1" scadeType="int" targetName="_155__L1_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L11" scadeType="bool" targetName="_L11_1_3" targetType="kcg_bool"/>
+        <Local scadeName="_L12" scadeType="bool" targetName="_L12_1_3" targetType="kcg_bool"/>
+        <Local scadeName="_L14" scadeType="int" targetName="_L14_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L15" scadeType="bool" targetName="_L15_1_3" targetType="kcg_bool"/>
+        <Local scadeName="_L18" scadeType="int" targetName="_L18_1_3" targetType="kcg_int"/>
+        <Local scadeName="_L19" scadeType="bool" targetName="_L19_1_3" targetType="kcg_bool"/>
+        <NodeInstance scadeName="+" instName="1"/>
+        <NodeInstance scadeName="&lt;" instName="1"/>
+        <NodeInlining scadeName="switch" instName="1">
+          <Input scadeName="Input1" scadeType="bool" targetName="Input1_1_1_3" targetType="kcg_bool"/>
+          <Output scadeName="Output1" scadeType="bool" targetName="Output1_1_1_3" targetType="kcg_bool"/>
+          <Local scadeName="_L1" scadeType="bool" targetName="_L1_1_1_3" targetType="kcg_bool"/>
+          <Local scadeName="_L2" scadeType="bool" targetName="_L2_1_1_3" targetType="kcg_bool"/>
+          <Memory scadeName="_L3" scadeType="bool" targetName="_L3_1_1_3" targetType="kcg_bool" inCtx="true"/>
+          <Local scadeName="_L4" scadeType="bool" targetName="_L4_1_1_3" targetType="kcg_bool"/>
+          <NodeInstance scadeName="not" instName="1"/>
+        </NodeInlining>
+        <NodeInstance scadeName="and" instName="1"/>
+      </NodeInlining>
+      <NodeInstance scadeName="&gt;=" instName="4"/>
+      <NodeInstance scadeName="&gt;=" instName="3"/>
+      <NodeInstance scadeName="&gt;=" instName="2"/>
+      <NodeInstance scadeName="&gt;=" instName="1"/>
+    </NodeInlining>
+    <NodeInlining scadeName="enable_destruct" instName="1">
+      <Input scadeName="EnableDestructSignal" scadeType="bool" targetName="EnableDestructSignal_1"
+          targetType="kcg_bool"/>
+      <Output scadeName="Enabled" scadeType="int" targetName="Enabled_1" targetType="kcg_int"/>
+      <Local scadeName="_L1" scadeType="bool" targetName="_L1_1161" targetType="kcg_bool"/>
+      <Local scadeName="_L2" scadeType="bool" targetName="_L2_1160" targetType="kcg_bool"/>
+      <Local scadeName="_L3" scadeType="int" targetName="_L3_1159" targetType="kcg_int"/>
+      <Local scadeName="_L4" scadeType="bool" targetName="_L4_1158" targetType="kcg_bool"/>
+      <NodeInlining scadeName="switch" instName="1">
+        <Input scadeName="Input1" scadeType="bool" targetName="_162_Input1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="_163_Output1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_166__L1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_165__L2_1_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L3" scadeType="bool" targetName="_7__L3_1_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L4" scadeType="bool" targetName="_164__L4_1_1" targetType="kcg_bool"/>
+        <NodeInstance scadeName="not" instName="1"/>
+      </NodeInlining>
+      <NodeInlining scadeName="enable" instName="1">
+        <Input scadeName="Status1" scadeType="bool" targetName="_167_Status1_1_1" targetType="kcg_bool"/>
+        <Input scadeName="Status2" scadeType="bool" targetName="_168_Status2_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Enabled" scadeType="int" targetName="_169_Enabled_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_175__L1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="int" targetName="_174__L2_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L3" scadeType="int" targetName="_173__L3_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L4" scadeType="int" targetName="_172__L4_1_1" targetType="kcg_int"/>
+        <Local scadeName="_L5" scadeType="bool" targetName="_171__L5_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L6" scadeType="bool" targetName="_170__L6_1_1" targetType="kcg_bool"/>
+        <NodeInstance scadeName="and" instName="1"/>
       </NodeInlining>
     </NodeInlining>
     <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
@@ -635,10 +736,12 @@
   <ExpNode scadeName="lucianoyukio"/>
   <ExpNode scadeName="ff"/>
   <ExpNode scadeName="thiagoribeiro"/>
+  <ExpNode scadeName="count_ticks"/>
   <ExpNode scadeName="alertas"/>
   <ExpNode scadeName="ComandSatelite"/>
   <ExpNode scadeName="joaonones"/>
   <ExpNode scadeName="juan"/>
+  <ExpNode scadeName="enable_destruct"/>
   <Package scadeName="digital">
     <ExpNode scadeName="count_down"/>
   </Package>
@@ -675,5 +778,5 @@
 </Model>
 <!--$*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_trace.xml
-** Generation date: 2014-10-24T11:03:18
+** Generation date: 2014-11-19T17:00:31
 *************************************************************$-->
