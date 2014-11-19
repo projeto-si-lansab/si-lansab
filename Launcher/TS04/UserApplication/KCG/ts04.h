@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/hoffsi/dev/ita/scade/ce235/Launcher/TS04/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-10-24T11:03:18
+** Generation date: 2014-11-19T17:00:31
 *************************************************************$ */
 #ifndef _ts04_H_
 #define _ts04_H_
@@ -14,23 +14,14 @@ typedef struct {
   kcg_bool /* ts04::DesacoplarPh3 */ DesacoplarPh3;
   kcg_bool /* ts04::DesacoplarPh4 */ DesacoplarPh4;
   kcg_int /* ts04::ToogleIniciar */ ToogleIniciar;
-  kcg_bool /* ts04::StatusComputador */ StatusComputador;
   kcg_bool /* ts04::VerificarComputador */ VerificarComputador;
-  kcg_bool /* ts04::Estagio1_Ligado */ Estagio1_Ligado;
-  kcg_bool /* ts04::Estagio2_Ligado */ Estagio2_Ligado;
-  kcg_bool /* ts04::Estagio3_Ligado */ Estagio3_Ligado;
-  kcg_bool /* ts04::Estagio4_Ligado */ Estagio4_Ligado;
   kcg_bool /* ts04::VerificarEstagios */ VerificarEstagios;
   kcg_bool /* ts04::AlertaGeral */ AlertaGeral;
-  kcg_bool /* ts04::fuel_stage2 */ fuel_stage2;
-  kcg_bool /* ts04::fuel_stage3 */ fuel_stage3;
-  kcg_bool /* ts04::fuel_stage4 */ fuel_stage4;
   kcg_bool /* ts04::verify_fuel */ verify_fuel;
   kcg_bool /* ts04::confirmacaoDesacopl */ confirmacaoDesacopl;
   kcg_bool /* ts04::enviarComando */ enviarComando;
-  kcg_bool /* ts04::StatusCamera */ StatusCamera;
   kcg_bool /* ts04::VerificarCamera */ VerificarCamera;
-  kcg_bool /* ts04::fuel_stage1 */ fuel_stage1;
+  kcg_bool /* ts04::EnableDestructSignal */ EnableDestructSignal;
   kcg_bool /* ts04::SelfDestructSignal */ SelfDestructSignal;
   kcg_bool /* ts04::LancAutomatico */ LancAutomatico;
 } inC_ts04;
@@ -57,6 +48,7 @@ typedef struct {
   kcg_int /* ts04::color_fuel1 */ color_fuel1;
   kcg_bool /* ts04::desacoplarSatelite */ desacoplarSatelite;
   kcg_int /* ts04::CorCameraFundo */ CorCameraFundo;
+  kcg_int /* ts04::SelfDestructEnabled */ SelfDestructEnabled;
   kcg_bool /* ts04::SelfDestruct */ SelfDestruct;
   kcg_int /* ts04::CorAlertaGeral */ CorAlertaGeral;
   kcg_int /* ts04::Ph1Enabled */ Ph1Enabled;
@@ -68,13 +60,18 @@ typedef struct {
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
+  kcg_bool /* switch::_L3 */ _7__L3_1_1;
+  kcg_bool /* switch::_L3 */ _L3_1_1_3;
+  kcg_int /* count_ticks::_L3 */ _L3_1_3;
   kcg_bool /* ff::_L4 */ _L4_4_3;
   kcg_bool /* ff::_L4 */ _L4_3_3;
   kcg_bool /* ff::_L4 */ _L4_2_3;
   kcg_bool /* ff::_L4 */ _L4_1_3;
-  kcg_bool /* ff::_L4 */ _5__L4_1_1;
+  kcg_bool /* ff::_L4 */ _6__L4_1_1;
+  kcg_bool /* switch::_L3 */ _5__L3_1_1;
   kcg_bool /* switch::_L3 */ _4__L3_1_1;
-  kcg_bool /* switch::_L3 */ _3__L3_1_1;
+  kcg_bool /* switch::_L3 */ _L3_1_1_1;
+  kcg_int /* count_ticks::_L3 */ _3__L3_1_1;
   kcg_bool /* ff::_L4 */ _L4_4_1;
   kcg_bool /* ff::_L4 */ _L4_3_1;
   kcg_bool /* ff::_L4 */ _L4_2_1;
@@ -103,6 +100,6 @@ extern void ts04_reset(outC_ts04 *outC);
 #endif /* _ts04_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ts04.h
-** Generation date: 2014-10-24T11:03:18
+** Generation date: 2014-11-19T17:00:31
 *************************************************************$ */
 
