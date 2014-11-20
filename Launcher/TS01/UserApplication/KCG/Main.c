@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T21:12:34
+** Command: s2c613 -config Z:/github/si-lansab/Launcher/TS01/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-19T23:22:23
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -2074,6 +2074,6 @@ void Main(inC_Main *inC, outC_Main *outC)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Main.c
-** Generation date: 2014-11-18T21:12:34
+** Generation date: 2014-11-19T23:22:23
 *************************************************************$ */
 
