@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="124" defaultConfiguration="21">
+<Project id="1" oid_count="132" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -14,10 +14,6 @@
 		</Prop>
 		<Prop id="16" name="@GENERATOR:GENERATOR">
 			<value>C QUAL613</value>
-			<configuration>13</configuration>
-		</Prop>
-		<Prop id="17" name="@GENERATOR:OPTLEVEL">
-			<value>1</value>
 			<configuration>13</configuration>
 		</Prop>
 		<Prop id="18" name="@GENERATOR:USER_CONFIG">
@@ -47,6 +43,10 @@
 			<value>C QUAL613</value>
 			<configuration>21</configuration>
 		</Prop>
+		<Prop id="25" name="@GENERATOR:OPTLEVEL">
+			<value>0</value>
+			<configuration>21</configuration>
+		</Prop>
 		<Prop id="26" name="@GENERATOR:DEBUG">
 			<value>true</value>
 			<configuration>21</configuration>
@@ -59,13 +59,13 @@
 			<value>true</value>
 			<configuration>21</configuration>
 		</Prop>
+		<Prop id="29" name="@GENERATOR:TARGET_ADAPTOR">
+			<value>Simulator</value>
+			<configuration>21</configuration>
+		</Prop>
 		<Prop id="30" name="@GENERATOR:USER_CONFIG">
 			<value>$(TargetDir)\user_macros.h</value>
 			<configuration>21</configuration>
-		</Prop>
-		<Prop id="32" name="@REPORTER:SCRIPT">
-			<value>Reporter/ScadeReport.tcl</value>
-			<configuration>31</configuration>
 		</Prop>
 		<Prop id="33" name="@REPORTER:RotateLandscape">
 			<value>true</value>
@@ -274,51 +274,108 @@
 			<value>60</value>
 			<value>63</value>
 		</Prop>
-		<Prop id="94" name="@SCADE:CHECKED">
-			<value>false</value>
-		</Prop>
-		<Prop id="96" name="@GENERATOR:OBSERVE_MODE">
+		<Prop id="94" name="@GENERATOR:OBSERVE_MODE">
 			<value>4</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="97" name="@GENERATOR:ROOTNODE">
-			<value>ts04</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="98" name="@GENERATOR:INPUT_THRESHOLD">
-			<value>2</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="99" name="@GENERATOR:EXPAND_MODE">
-			<value>1</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="100" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
-			<value>..\DefinitionFile\TS04.sgfx</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="101" name="@GENERATOR:SKIP_UNUSED">
+		<Prop id="95" name="@GENERATOR:SKIP_UNUSED">
 			<value>true</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="102" name="@GENERATOR:ROOTNODE">
+		<Prop id="96" name="@GENERATOR:ROOTNODE">
 			<value>ts04</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="103" name="@GENERATOR:INPUT_THRESHOLD">
+		<Prop id="97" name="@GENERATOR:INPUT_THRESHOLD">
 			<value>2</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="104" name="@GENERATOR:EXPAND_MODE">
+		<Prop id="99" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
+			<value>..\DefinitionFile\ts04.sgfx</value>
+			<configuration>21</configuration>
+		</Prop>
+		<Prop id="100" name="@GENERATOR:EXPAND_MODE">
 			<value>1</value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="105" name="@GENERATOR:TARGET_ADAPTOR">
+		<Prop id="101" name="@GENERATOR:TARGET_ADAPTOR">
 			<value></value>
 			<configuration>13</configuration>
 		</Prop>
-		<Prop id="106" name="@SCADE:CHECKED">
+		<Prop id="103" name="@SCADE:CHECKED">
 			<value>false</value>
+		</Prop>
+		<Prop id="116" name="@REPORTER:FORMAT">
+			<value>rtf</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="117" name="@REPORTER:DOCUMENT">
+			<value>ts04.rtf</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="118" name="@REPORTER:IssueNr">
+			<value></value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="119" name="@REPORTER:ReferenceNr">
+			<value></value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="120" name="@REPORTER:Classification">
+			<value>Projeto SI-LANSAB 2014</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="121" name="@REPORTER:Summary">
+			<value></value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="122" name="@REPORTER:Distribution">
+			<value></value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="123" name="@REPORTER:Title">
+			<value>Launch Control Center</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="124" name="@REPORTER:Subtitle">
+			<value>Lista de Exercícios 3 - User Application</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="125" name="@REPORTER:Description">
+			<value>Este documento refere-se ao desenvolvimento de um aplicativo para controle de lançamento de satélite.</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="126" name="@REPORTER:CompanyInfo">
+			<value>Instituto Tecnológico de Aeronáutica - ITA</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="127" name="@REPORTER:Authors">
+			<value>Time Scrum 04</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="128" name="@REPORTER:Reference">
+			<value></value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="129" name="@REPORTER:Index">
+			<value></value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="130" name="@REPORTER:Date">
+			<value>24 de outubro de 2014</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="131" name="@REPORTER:Header">
+			<value>$(CreatedDate)</value>
+			<value></value>
+			<value>$(PageNumbering)</value>
+			<configuration>31</configuration>
+		</Prop>
+		<Prop id="132" name="@REPORTER:Footer">
+			<value></value>
+			<value></value>
+			<value></value>
+			<configuration>31</configuration>
 		</Prop>
 	</props>
 	<roots>
@@ -336,14 +393,19 @@
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files"/>
 				<FileRef id="90" persistAs="ts041.xscade"/>
-				<FileRef id="92" persistAs="lucasamaral.xscade"/>
-				<FileRef id="103" persistAs="ts04.xscade"/>
-				<FileRef id="107" persistAs="cor_status2.xscade"/>
-				<FileRef id="109" persistAs="thiagoribeiro.xscade"/>
-				<FileRef id="111" persistAs="ff.xscade"/>
-				<FileRef id="115" persistAs="juan.xscade"/>
-				<FileRef id="119" persistAs="joaonones.xscade"/>
-				<FileRef id="123" persistAs="lucianoyukio.xscade"/>
+				<FileRef id="91" persistAs="ts04.xscade"/>
+				<FileRef id="93" persistAs="us18.xscade"/>
+				<FileRef id="102" persistAs="lucasamaral.xscade"/>
+				<FileRef id="104" persistAs="juan.xscade"/>
+				<FileRef id="105" persistAs="joaonones.xscade"/>
+				<FileRef id="107" persistAs="ff.xscade"/>
+				<FileRef id="108" persistAs="cor_status2.xscade"/>
+				<FileRef id="109" persistAs="ComandSatelite.xscade"/>
+				<FileRef id="110" persistAs="alertas.xscade"/>
+				<FileRef id="111" persistAs="thiagoribeiro.xscade"/>
+				<FileRef id="112" persistAs="switch.xscade"/>
+				<FileRef id="113" persistAs="lucianoyukio.xscade"/>
+				<FileRef id="115" persistAs="enable.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="84" name="Design Verifier File">
@@ -351,7 +413,7 @@
 				<FileRef id="85" persistAs="ts04.l4"/>
 			</elements>
 		</Folder>
-		<FileRef id="93" persistAs="..\DefinitionFile\TS04.sgfx"/>
+		<FileRef id="98" persistAs="..\DefinitionFile\ts04.sgfx"/>
 	</roots>
 	<configurations>
 		<Configuration id="13" name="KCG"/>

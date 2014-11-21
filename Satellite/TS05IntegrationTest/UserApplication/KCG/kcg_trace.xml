@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS05IntegrationTest/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-04T20:40:08
+*************************************************************$-->
+<Model date="2014-11-04T20:40:08" commandLine="s2c613 -config C:/GitHub/si-lansab/Satellite/TS05IntegrationTest/UserApplication/KCG\kcg_s2c_config.txt">
+  <Constant scadeName="CDS_COLOR_GRAY" scadeType="int" targetName="CDS_COLOR_GRAY" targetType="kcg_int"
+      macroDef="true"/>
+  <Constant scadeName="CDS_COLOR_GREEN" scadeType="int" targetName="CDS_COLOR_GREEN" targetType="kcg_int"
+      macroDef="true"/>
+  <Constant scadeName="CDS_COLOR_YELLOW" scadeType="int" targetName="CDS_COLOR_YELLOW" targetType="kcg_int"
+      macroDef="true"/>
+  <EnumType scadeName="OperationMode" targetName="OperationMode">
+    <EnumVal scadeName="OPMODE_GROUND_SAFE" targetName="OPMODE_GROUND_SAFE"/>
+    <EnumVal scadeName="OPMODE_GROUND_SUPPORT" targetName="OPMODE_GROUND_SUPPORT"/>
+    <EnumVal scadeName="OPMODE_LAUNCH" targetName="OPMODE_LAUNCH"/>
+    <EnumVal scadeName="OPMODE_ATTITUDE_CONTROL" targetName="OPMODE_ATTITUDE_CONTROL"/>
+    <EnumVal scadeName="OPMODE_ATTITUDE_SAFE" targetName="OPMODE_ATTITUDE_SAFE"/>
+    <EnumVal scadeName="OPMODE_NORMAL_SAFE" targetName="OPMODE_NORMAL_SAFE"/>
+    <EnumVal scadeName="OPMODE_NORMAL_ATTITUDE" targetName="OPMODE_NORMAL_ATTITUDE"/>
+    <EnumVal scadeName="OPMODE_NORMAL_PAYLOAD" targetName="OPMODE_NORMAL_PAYLOAD"/>
+  </EnumType>
+  <RootNode scadeName="ts05" headerFile="ts05.h" targetCycleFct="ts05" targetInitFct="ts05_reset">
+    <Input scadeName="SAT_Initialize" scadeType="bool" targetName="SAT_Initialize" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_GyroscopeState_Toggle" scadeType="bool" targetName="SAT_GyroscopeState_Toggle"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_GyroscopeState_ToggleTo" scadeType="bool" targetName="SAT_GyroscopeState_ToggleTo"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_HorizonSensorState_Toggle" scadeType="bool" targetName="SAT_HorizonSensorState_Toggle"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_HorizonSensorState_ToggleTo" scadeType="bool" targetName="SAT_HorizonSensorState_ToggleTo"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_PropellersState_Toggle" scadeType="bool" targetName="SAT_PropellersState_Toggle"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_PropellersState_ToggleTo" scadeType="bool" targetName="SAT_PropellersState_ToggleTo"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="SAT_CameraState_Toggle" scadeType="bool" targetName="SAT_CameraState_Toggle" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_CameraState_ToggleTo" scadeType="bool" targetName="SAT_CameraState_ToggleTo"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Ejection_Signal" scadeType="bool" targetName="TEST_SAT_Ejection_Signal"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Initialization_Success" scadeType="bool" targetName="TEST_SAT_Initialization_Success"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Initialization_Fail" scadeType="bool" targetName="TEST_SAT_Initialization_Fail"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_OperationMode_Update" scadeType="bool" targetName="TEST_SAT_OperationMode_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_OperationMode_Value" scadeType="int" targetName="TEST_SAT_OperationMode_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_GyroscopeState_Update" scadeType="bool" targetName="TEST_SAT_GyroscopeState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_GyroscopeState_Value" scadeType="int" targetName="TEST_SAT_GyroscopeState_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_HorizonSensorState_Update" scadeType="bool"
+        targetName="TEST_SAT_HorizonSensorState_Update" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_HorizonSensorState_Value" scadeType="int" targetName="TEST_SAT_HorizonSensorState_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_PropellersState_Update" scadeType="bool" targetName="TEST_SAT_PropellersState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_PropellersState_Value" scadeType="int" targetName="TEST_SAT_PropellersState_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_CameraState_Update" scadeType="bool" targetName="TEST_SAT_CameraState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_CameraState_Value" scadeType="int" targetName="TEST_SAT_CameraState_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="TEST_SAT_AirSpeed_Update" scadeType="bool" targetName="TEST_SAT_AirSpeed_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_AirSpeed_Value" scadeType="real" targetName="TEST_SAT_AirSpeed_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Altitude_Update" scadeType="bool" targetName="TEST_SAT_Altitude_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Altitude_Value" scadeType="real" targetName="TEST_SAT_Altitude_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Latitude_Update" scadeType="bool" targetName="TEST_SAT_Latitude_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Latitude_Value" scadeType="real" targetName="TEST_SAT_Latitude_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Longitude_Update" scadeType="bool" targetName="TEST_SAT_Longitude_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Longitude_Value" scadeType="real" targetName="TEST_SAT_Longitude_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_DeclinationAngle_Update" scadeType="bool" targetName="TEST_SAT_DeclinationAngle_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_SAT_DeclinationAngle_Value" scadeType="real" targetName="TEST_SAT_DeclinationAngle_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Input scadeName="TEST_SAT_Period_Update" scadeType="bool" targetName="TEST_SAT_Period_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="TEST_SAT_Period_Value" scadeType="real" targetName="TEST_SAT_Period_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Input scadeName="envia_foto_btn" scadeType="bool" targetName="envia_foto_btn" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="cam_take_picture" scadeType="bool" targetName="cam_take_picture" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="SAT_Auto_Verify" scadeType="bool" targetName="SAT_Auto_Verify" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="TEST_Camera_Fail_Status_Changed" scadeType="bool" targetName="TEST_Camera_Fail_Status_Changed"
+        targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="Test_Gyroscope_Fail_Status_Changed" scadeType="bool"
+        targetName="Test_Gyroscope_Fail_Status_Changed" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="Test_HorizonSensor_Fail_Status_Changed" scadeType="bool"
+        targetName="_1_Test_HorizonSensor_Fail_Status_Changed" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TEST_Camera_Fail_Status_Value" scadeType="int" targetName="TEST_Camera_Fail_Status_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="Test_Gyroscope_Fail_Status_Value" scadeType="int" targetName="Test_Gyroscope_Fail_Status_Value"
+        targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="Test_HorizonSensor_Fail_Status_Value" scadeType="int"
+        targetName="Test_HorizonSensor_Fail_Status_Value" targetType="kcg_int" inCtx="true"/>
+    <Input scadeName="SAT_Fix_Equipments" scadeType="bool" targetName="SAT_Fix_Equipments" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="CDS_Layer_Req_Active" scadeType="bool" targetName="CDS_Layer_Req_Active" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="CDS_Layer_Req_Visible" scadeType="bool" targetName="CDS_Layer_Req_Visible" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="CDS_Emit" scadeType="bool" targetName="CDS_Emit" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="TEST_SAT_Initialize_Signal" scadeType="int" targetName="TEST_SAT_Initialize_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_GyroscopeState_Signal" scadeType="int" targetName="TEST_SAT_GyroscopeState_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_HorizonSensorState_Signal" scadeType="int"
+        targetName="TEST_SAT_HorizonSensorState_Signal" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_PropellersState_Signal" scadeType="int" targetName="TEST_SAT_PropellersState_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="TEST_SAT_CameraState_Signal" scadeType="int" targetName="TEST_SAT_CameraState_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="SAT_AirSpeed_Update" scadeType="bool" targetName="SAT_AirSpeed_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="SAT_AirSpeed_Value" scadeType="real" targetName="SAT_AirSpeed_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="SAT_Altitude_Update" scadeType="bool" targetName="SAT_Altitude_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="SAT_Altitude_Value" scadeType="real" targetName="SAT_Altitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="SAT_Latitude_Update" scadeType="bool" targetName="SAT_Latitude_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="SAT_Latitude_Value" scadeType="real" targetName="SAT_Latitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="SAT_Longitude_Update" scadeType="bool" targetName="SAT_Longitude_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="SAT_Longitude_Value" scadeType="real" targetName="SAT_Longitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="SAT_DeclinationAngle_Update" scadeType="bool" targetName="SAT_DeclinationAngle_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_DeclinationAngle_Value" scadeType="real" targetName="SAT_DeclinationAngle_Value"
+        targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="SAT_Period_Update" scadeType="bool" targetName="SAT_Period_Update" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="SAT_Period_Value" scadeType="real" targetName="SAT_Period_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="SAT_OperationMode_Update" scadeType="bool" targetName="SAT_OperationMode_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_OperationMode_Value" scadeType="OperationMode" targetName="SAT_OperationMode_Value"
+        targetType="OperationMode" inCtx="true"/>
+    <Output scadeName="SAT_GyroscopeState_Update" scadeType="bool" targetName="SAT_GyroscopeState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_GyroscopeState_Value" scadeType="bool" targetName="SAT_GyroscopeState_Value"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_HorizonSensorState_Update" scadeType="bool" targetName="SAT_HorizonSensorState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_HorizonSensorState_Value" scadeType="bool" targetName="SAT_HorizonSensorState_Value"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_PropellersState_Update" scadeType="bool" targetName="SAT_PropellersState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_PropellersState_Value" scadeType="bool" targetName="SAT_PropellersState_Value"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_CameraState_Update" scadeType="bool" targetName="SAT_CameraState_Update"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_CameraState_Value" scadeType="bool" targetName="SAT_CameraState_Value" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="SAT_Ejection_Signal" scadeType="bool" targetName="SAT_Ejection_Signal" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="SAT_Initialization_Signal" scadeType="int" targetName="SAT_Initialization_Signal"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="cam_picture_loaded" scadeType="bool" targetName="cam_picture_loaded" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="display_picture_resquest_state" scadeType="int" targetName="display_picture_resquest_state"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="SAT_CameraState_Fail" scadeType="bool" targetName="SAT_CameraState_Fail" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="SAT_GyroscopeState_Fail" scadeType="bool" targetName="SAT_GyroscopeState_Fail"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="SAT_HorizonSensorState_Fail" scadeType="bool" targetName="SAT_HorizonSensorState_Fail"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="Test_Auto_Verify" scadeType="int" targetName="Test_Auto_Verify" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="SAT_Fix_Response" scadeType="bool" targetName="SAT_Fix_Response" targetType="kcg_bool"
+        inCtx="true"/>
+    <Local scadeName="AutoVerify" scadeType="bool" targetName="AutoVerify" targetType="kcg_bool"/>
+    <Memory scadeName="_L2" scadeType="bool" targetName="_L2" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="_L3" targetType="kcg_bool"/>
+    <Local scadeName="_L14" scadeType="bool" targetName="_L14" targetType="kcg_bool"/>
+    <Local scadeName="_L111" scadeType="real" targetName="_L111" targetType="kcg_real"/>
+    <Local scadeName="_L110" scadeType="real" targetName="_L110" targetType="kcg_real"/>
+    <Local scadeName="_L109" scadeType="bool" targetName="_L109" targetType="kcg_bool"/>
+    <Local scadeName="_L108" scadeType="real" targetName="_L108" targetType="kcg_real"/>
+    <Local scadeName="_L107" scadeType="real" targetName="_L107" targetType="kcg_real"/>
+    <Local scadeName="_L106" scadeType="bool" targetName="_L106" targetType="kcg_bool"/>
+    <Local scadeName="_L105" scadeType="bool" targetName="_L105" targetType="kcg_bool"/>
+    <Local scadeName="_L104" scadeType="bool" targetName="_L104" targetType="kcg_bool"/>
+    <Local scadeName="_L103" scadeType="real" targetName="_L103" targetType="kcg_real"/>
+    <Local scadeName="_L102" scadeType="real" targetName="_L102" targetType="kcg_real"/>
+    <Local scadeName="_L101" scadeType="bool" targetName="_L101" targetType="kcg_bool"/>
+    <Local scadeName="_L100" scadeType="bool" targetName="_L100" targetType="kcg_bool"/>
+    <Local scadeName="_L189" scadeType="bool" targetName="_L189" targetType="kcg_bool"/>
+    <Local scadeName="_L188" scadeType="OperationMode" targetName="_L188" targetType="OperationMode"/>
+    <Local scadeName="_L187" scadeType="bool" targetName="_L187" targetType="kcg_bool"/>
+    <Local scadeName="_L186" scadeType="OperationMode" targetName="_L186" targetType="OperationMode"/>
+    <Local scadeName="_L185" scadeType="bool" targetName="_L185" targetType="kcg_bool"/>
+    <Local scadeName="_L184" scadeType="bool" targetName="_L184" targetType="kcg_bool"/>
+    <Local scadeName="_L183" scadeType="bool" targetName="_L183" targetType="kcg_bool"/>
+    <Local scadeName="_L182" scadeType="bool" targetName="_L182" targetType="kcg_bool"/>
+    <Local scadeName="_L181" scadeType="bool" targetName="_L181" targetType="kcg_bool"/>
+    <Local scadeName="_L180" scadeType="int" targetName="_L180" targetType="kcg_int"/>
+    <Local scadeName="_L179" scadeType="bool" targetName="_L179" targetType="kcg_bool"/>
+    <Local scadeName="_L178" scadeType="bool" targetName="_L178" targetType="kcg_bool"/>
+    <Local scadeName="_L177" scadeType="bool" targetName="_L177" targetType="kcg_bool"/>
+    <Local scadeName="_L176" scadeType="bool" targetName="_L176" targetType="kcg_bool"/>
+    <Local scadeName="_L175" scadeType="OperationMode" targetName="_L175" targetType="OperationMode"/>
+    <Local scadeName="_L174" scadeType="int" targetName="_L174" targetType="kcg_int"/>
+    <Local scadeName="_L173" scadeType="bool" targetName="_L173" targetType="kcg_bool"/>
+    <Local scadeName="_L172" scadeType="OperationMode" targetName="_L172" targetType="OperationMode"/>
+    <Local scadeName="_L171" scadeType="int" targetName="_L171" targetType="kcg_int"/>
+    <Local scadeName="_L170" scadeType="int" targetName="_L170" targetType="kcg_int"/>
+    <Local scadeName="_L169" scadeType="bool" targetName="_L169" targetType="kcg_bool"/>
+    <Local scadeName="_L168" scadeType="OperationMode" targetName="_L168" targetType="OperationMode"/>
+    <Local scadeName="_L167" scadeType="OperationMode" targetName="_L167" targetType="OperationMode"/>
+    <Local scadeName="_L166" scadeType="OperationMode" targetName="_L166" targetType="OperationMode"/>
+    <Local scadeName="_L165" scadeType="bool" targetName="_L165" targetType="kcg_bool"/>
+    <Local scadeName="_L164" scadeType="OperationMode" targetName="_L164" targetType="OperationMode"/>
+    <Local scadeName="_L163" scadeType="bool" targetName="_L163" targetType="kcg_bool"/>
+    <Local scadeName="_L162" scadeType="bool" targetName="_L162" targetType="kcg_bool"/>
+    <Local scadeName="_L161" scadeType="bool" targetName="_L161" targetType="kcg_bool"/>
+    <Local scadeName="_L160" scadeType="bool" targetName="_L160" targetType="kcg_bool"/>
+    <Local scadeName="_L159" scadeType="OperationMode" targetName="_L159" targetType="OperationMode"/>
+    <Local scadeName="_L158" scadeType="OperationMode" targetName="_L158" targetType="OperationMode"/>
+    <Local scadeName="_L157" scadeType="int" targetName="_L157" targetType="kcg_int"/>
+    <Local scadeName="_L201" scadeType="bool" targetName="_L201" targetType="kcg_bool"/>
+    <Local scadeName="_L200" scadeType="int" targetName="_L200" targetType="kcg_int"/>
+    <Local scadeName="_L199" scadeType="bool" targetName="_L199" targetType="kcg_bool"/>
+    <Local scadeName="_L198" scadeType="int" targetName="_L198" targetType="kcg_int"/>
+    <Local scadeName="_L197" scadeType="bool" targetName="_L197" targetType="kcg_bool"/>
+    <Local scadeName="_L196" scadeType="bool" targetName="_L196" targetType="kcg_bool"/>
+    <Local scadeName="_L195" scadeType="int" targetName="_L195" targetType="kcg_int"/>
+    <Local scadeName="_L194" scadeType="bool" targetName="_L194" targetType="kcg_bool"/>
+    <Local scadeName="_L193" scadeType="bool" targetName="_L193" targetType="kcg_bool"/>
+    <Local scadeName="_L192" scadeType="bool" targetName="_L192" targetType="kcg_bool"/>
+    <Local scadeName="_L191" scadeType="int" targetName="_L191" targetType="kcg_int"/>
+    <Local scadeName="_L190" scadeType="bool" targetName="_L190" targetType="kcg_bool"/>
+    <Local scadeName="_L210" scadeType="int" targetName="_L210" targetType="kcg_int"/>
+    <Local scadeName="_L206" scadeType="bool" targetName="_L206" targetType="kcg_bool"/>
+    <Local scadeName="_L204" scadeType="int" targetName="_L204" targetType="kcg_int"/>
+    <Local scadeName="_L202" scadeType="int" targetName="_L202" targetType="kcg_int"/>
+    <Local scadeName="_L225" scadeType="int" targetName="_L225" targetType="kcg_int"/>
+    <Local scadeName="_L224" scadeType="int" targetName="_L224" targetType="kcg_int"/>
+    <Local scadeName="_L223" scadeType="bool" targetName="_L223" targetType="kcg_bool"/>
+    <Local scadeName="_L221" scadeType="int" targetName="_L221" targetType="kcg_int"/>
+    <Local scadeName="_L220" scadeType="int" targetName="_L220" targetType="kcg_int"/>
+    <Local scadeName="_L219" scadeType="int" targetName="_L219" targetType="kcg_int"/>
+    <Local scadeName="_L217" scadeType="bool" targetName="_L217" targetType="kcg_bool"/>
+    <Local scadeName="_L215" scadeType="bool" targetName="_L215" targetType="kcg_bool"/>
+    <Local scadeName="_L227" scadeType="bool" targetName="_L227" targetType="kcg_bool"/>
+    <Local scadeName="_L228" scadeType="bool" targetName="_L228" targetType="kcg_bool"/>
+    <Local scadeName="_L229" scadeType="int" targetName="_L229" targetType="kcg_int"/>
+    <Local scadeName="_L230" scadeType="int" targetName="_L230" targetType="kcg_int"/>
+    <Local scadeName="_L231" scadeType="int" targetName="_L231" targetType="kcg_int"/>
+    <Local scadeName="_L232" scadeType="bool" targetName="_L232" targetType="kcg_bool"/>
+    <Local scadeName="_L234" scadeType="bool" targetName="_L234" targetType="kcg_bool"/>
+    <Local scadeName="_L235" scadeType="bool" targetName="_L235" targetType="kcg_bool"/>
+    <Local scadeName="_L236" scadeType="bool" targetName="_L236" targetType="kcg_bool"/>
+    <Local scadeName="_L237" scadeType="bool" targetName="_L237" targetType="kcg_bool"/>
+    <Local scadeName="_L238" scadeType="int" targetName="_L238" targetType="kcg_int"/>
+    <Local scadeName="_L239" scadeType="int" targetName="_L239" targetType="kcg_int"/>
+    <Local scadeName="_L240" scadeType="int" targetName="_L240" targetType="kcg_int"/>
+    <Local scadeName="_L244" scadeType="bool" targetName="_L244" targetType="kcg_bool"/>
+    <Local scadeName="_L247" scadeType="bool" targetName="_L247" targetType="kcg_bool"/>
+    <Local scadeName="_L249" scadeType="bool" targetName="_L249" targetType="kcg_bool"/>
+    <Local scadeName="_L250" scadeType="bool" targetName="_L250" targetType="kcg_bool"/>
+    <Local scadeName="_L252" scadeType="bool" targetName="_L252" targetType="kcg_bool"/>
+    <Local scadeName="_L259" scadeType="bool" targetName="_L259" targetType="kcg_bool"/>
+    <Local scadeName="_L258" scadeType="bool" targetName="_L258" targetType="kcg_bool"/>
+    <Local scadeName="_L257" scadeType="bool" targetName="_L257" targetType="kcg_bool"/>
+    <Local scadeName="_L256" scadeType="bool" targetName="_L256" targetType="kcg_bool"/>
+    <Local scadeName="_L254" scadeType="bool" targetName="_L254" targetType="kcg_bool"/>
+    <Local scadeName="_L272" scadeType="bool" targetName="_L272" targetType="kcg_bool"/>
+    <Local scadeName="_L271" scadeType="bool" targetName="_L271" targetType="kcg_bool"/>
+    <Local scadeName="_L268" scadeType="bool" targetName="_L268" targetType="kcg_bool"/>
+    <Local scadeName="_L267" scadeType="bool" targetName="_L267" targetType="kcg_bool"/>
+    <Local scadeName="_L266" scadeType="bool" targetName="_L266" targetType="kcg_bool"/>
+    <Local scadeName="_L273" scadeType="bool" targetName="_L273" targetType="kcg_bool"/>
+    <Local scadeName="_L274" scadeType="bool" targetName="_L274" targetType="kcg_bool"/>
+    <Local scadeName="_L275" scadeType="bool" targetName="_L275" targetType="kcg_bool"/>
+    <Local scadeName="_L276" scadeType="bool" targetName="_L276" targetType="kcg_bool"/>
+    <Local scadeName="_L277" scadeType="int" targetName="_L277" targetType="kcg_int"/>
+    <Local scadeName="_L278" scadeType="int" targetName="_L278" targetType="kcg_int"/>
+    <Local scadeName="_L279" scadeType="int" targetName="_L279" targetType="kcg_int"/>
+    <Local scadeName="_L281" scadeType="int" targetName="_L281" targetType="kcg_int"/>
+    <Local scadeName="_L283" scadeType="int" targetName="_L283" targetType="kcg_int"/>
+    <Local scadeName="_L284" scadeType="int" targetName="_L284" targetType="kcg_int"/>
+    <NodeInlining scadeName="TEST_SAT_Signal" instName="13">
+      <Input scadeName="Notify" scadeType="bool" targetName="Notify_13" targetType="kcg_bool"/>
+      <Input scadeName="NewState" scadeType="bool" targetName="NewState_13" targetType="kcg_bool"/>
+      <Output scadeName="CDS_Color" scadeType="int" targetName="CDS_Color_13" targetType="kcg_int"/>
+      <Local scadeName="_L4" scadeType="int" targetName="_L4_13" targetType="kcg_int"/>
+      <Local scadeName="_L1" scadeType="int" targetName="_L1_13" targetType="kcg_int"/>
+      <Local scadeName="_L6" scadeType="bool" targetName="_L6_13" targetType="kcg_bool"/>
+      <Local scadeName="_L7" scadeType="bool" targetName="_L7_13" targetType="kcg_bool"/>
+      <Local scadeName="_L8" scadeType="int" targetName="_L8_13" targetType="kcg_int"/>
+      <Local scadeName="_L9" scadeType="int" targetName="_L9_13" targetType="kcg_int"/>
+      <Local scadeName="_L11" scadeType="int" targetName="_L11_13" targetType="kcg_int"/>
+    </NodeInlining>
+    <NodeInlining scadeName="TEST_SAT_Signal" instName="14">
+      <Input scadeName="Notify" scadeType="bool" targetName="Notify_14" targetType="kcg_bool"/>
+      <Input scadeName="NewState" scadeType="bool" targetName="NewState_14" targetType="kcg_bool"/>
+      <Output scadeName="CDS_Color" scadeType="int" targetName="CDS_Color_14" targetType="kcg_int"/>
+      <Local scadeName="_L4" scadeType="int" targetName="_L4_14" targetType="kcg_int"/>
+      <Local scadeName="_L1" scadeType="int" targetName="_L1_14" targetType="kcg_int"/>
+      <Local scadeName="_L6" scadeType="bool" targetName="_L6_14" targetType="kcg_bool"/>
+      <Local scadeName="_L7" scadeType="bool" targetName="_L7_14" targetType="kcg_bool"/>
+      <Local scadeName="_L8" scadeType="int" targetName="_L8_14" targetType="kcg_int"/>
+      <Local scadeName="_L9" scadeType="int" targetName="_L9_14" targetType="kcg_int"/>
+      <Local scadeName="_L11" scadeType="int" targetName="_L11_14" targetType="kcg_int"/>
+    </NodeInlining>
+    <NodeInlining scadeName="TEST_SAT_Signal" instName="15">
+      <Input scadeName="Notify" scadeType="bool" targetName="Notify_15" targetType="kcg_bool"/>
+      <Input scadeName="NewState" scadeType="bool" targetName="NewState_15" targetType="kcg_bool"/>
+      <Output scadeName="CDS_Color" scadeType="int" targetName="CDS_Color_15" targetType="kcg_int"/>
+      <Local scadeName="_L4" scadeType="int" targetName="_L4_15" targetType="kcg_int"/>
+      <Local scadeName="_L1" scadeType="int" targetName="_L1_15" targetType="kcg_int"/>
+      <Local scadeName="_L6" scadeType="bool" targetName="_L6_15" targetType="kcg_bool"/>
+      <Local scadeName="_L7" scadeType="bool" targetName="_L7_15" targetType="kcg_bool"/>
+      <Local scadeName="_L8" scadeType="int" targetName="_L8_15" targetType="kcg_int"/>
+      <Local scadeName="_L9" scadeType="int" targetName="_L9_15" targetType="kcg_int"/>
+      <Local scadeName="_L11" scadeType="int" targetName="_L11_15" targetType="kcg_int"/>
+    </NodeInlining>
+    <NodeInlining scadeName="TEST_SAT_Signal" instName="16">
+      <Input scadeName="Notify" scadeType="bool" targetName="Notify_16" targetType="kcg_bool"/>
+      <Input scadeName="NewState" scadeType="bool" targetName="NewState_16" targetType="kcg_bool"/>
+      <Output scadeName="CDS_Color" scadeType="int" targetName="CDS_Color_16" targetType="kcg_int"/>
+      <Local scadeName="_L4" scadeType="int" targetName="_L4_16" targetType="kcg_int"/>
+      <Local scadeName="_L1" scadeType="int" targetName="_L1_16" targetType="kcg_int"/>
+      <Local scadeName="_L6" scadeType="bool" targetName="_L6_16" targetType="kcg_bool"/>
+      <Local scadeName="_L7" scadeType="bool" targetName="_L7_16" targetType="kcg_bool"/>
+      <Local scadeName="_L8" scadeType="int" targetName="_L8_16" targetType="kcg_int"/>
+      <Local scadeName="_L9" scadeType="int" targetName="_L9_16" targetType="kcg_int"/>
+      <Local scadeName="_L11" scadeType="int" targetName="_L11_16" targetType="kcg_int"/>
+    </NodeInlining>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInlining scadeName="linear::MemoryBasic" instName="1">
+      <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_1" targetType="kcg_int"/>
+      <Input scadeName="Init" scadeType="&apos;T" targetName="Init_1" targetType="kcg_int"/>
+      <Input scadeName="Write" scadeType="bool" targetName="Write_1" targetType="kcg_bool"/>
+      <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_1" targetType="kcg_int"/>
+      <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_1" targetType="kcg_int"/>
+      <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_1" targetType="kcg_int" inCtx="true"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="_L5_1" targetType="kcg_bool"/>
+      <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_1" targetType="kcg_int"/>
+      <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_1" targetType="kcg_int"/>
+    </NodeInlining>
+    <NodeInlining scadeName="linear::MemoryBasic" instName="2">
+      <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_2" targetType="kcg_int"/>
+      <Input scadeName="Init" scadeType="&apos;T" targetName="Init_2" targetType="kcg_int"/>
+      <Input scadeName="Write" scadeType="bool" targetName="Write_2" targetType="kcg_bool"/>
+      <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_2" targetType="kcg_int"/>
+      <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_2" targetType="kcg_int"/>
+      <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_2" targetType="kcg_int" inCtx="true"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="_L5_2" targetType="kcg_bool"/>
+      <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_2" targetType="kcg_int"/>
+      <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_2" targetType="kcg_int"/>
+    </NodeInlining>
+    <NodeInlining scadeName="linear::MemoryBasic" instName="3">
+      <Input scadeName="BM_Input" scadeType="&apos;T" targetName="BM_Input_3" targetType="kcg_int"/>
+      <Input scadeName="Init" scadeType="&apos;T" targetName="Init_3" targetType="kcg_int"/>
+      <Input scadeName="Write" scadeType="bool" targetName="Write_3" targetType="kcg_bool"/>
+      <Output scadeName="Memorized" scadeType="&apos;T" targetName="Memorized_3" targetType="kcg_int"/>
+      <Local scadeName="_L2" scadeType="&apos;T" targetName="_L2_3" targetType="kcg_int"/>
+      <Memory scadeName="_L4" scadeType="&apos;T" targetName="_L4_3" targetType="kcg_int" inCtx="true"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="_L5_3" targetType="kcg_bool"/>
+      <Local scadeName="_L6" scadeType="&apos;T" targetName="_L6_3" targetType="kcg_int"/>
+      <Local scadeName="_L7" scadeType="&apos;T" targetName="_L7_3" targetType="kcg_int"/>
+    </NodeInlining>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_ts05"/>
+    <InCtxType targetName="inC_ts05"/>
+  </RootNode>
+  <ExpNode scadeName="TEST_SAT_Signal"/>
+  <Package scadeName="linear">
+    <ExpNode scadeName="MemoryBasic"/>
+  </Package>
+  <Option name="root_node_name" value="ts05"/>
+  <Option name="target" value="C"/>
+  <Option name="target_dir" value="C:/GitHub/si-lansab/Satellite/TS05IntegrationTest/UserApplication/KCG"/>
+  <Option name="expall" value="#on#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="optimization_level" value="0"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="global_prefix" value="#off#"/>
+  <Option name="name_length" value="200"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="header" value="#off#"/>
+  <Option name="input_threshold" value="2"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="debug" value="#off#"/>
+  <Option name="probes" value="#off#"/>
+  <Option name="input_file"
+      value="C:/GitHub/si-lansab/Satellite/TS05IntegrationTest/UserApplication/KCG/scade_model_without_unused.scade"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+</Model>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** kcg_trace.xml
+** Generation date: 2014-11-04T20:40:08
+*************************************************************$-->

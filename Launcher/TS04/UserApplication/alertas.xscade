@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
+	<declarations>
+		<Operator kind="node" name="alertas">
+			<inputs>
+				<Variable name="AlertaGeral">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/d3be/5D46/D8/5446c13129ab"/>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="CorAlertaGeral">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23fe/7EFC/224/5447a9921b8a"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L19">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/d3b3/5D46/D8/5446c1313aa8"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L26">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23f9/7EFC/224/5447a9837ea5"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L27">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23c8/5248/16D4/5447ad221e4c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L28">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/23d2/5248/16D4/5447ad3c32aa"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L19 = AlertaGeral; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L19"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="AlertaGeral"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/d3a8/5D46/D8/5446c131d9f"/>
+					</pragmas>
+				</Equation>
+				<!-- _L26 = cor_status2(_L28); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L26"/>
+					</lefts>
+					<right>
+						<!-- cor_status2(_L28) -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="cor_status2"/>
+									</operator>
+								</OpCall>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L28"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/23f8/7EFC/224/5447a9834451"/>
+					</pragmas>
+				</Equation>
+				<!-- CorAlertaGeral = _L26; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="CorAlertaGeral"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L26"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2400/7EFC/224/5447a99917ff"/>
+					</pragmas>
+				</Equation>
+				<!-- _L27 = switch(_L19); -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L27"/>
+					</lefts>
+					<right>
+						<!-- switch(_L19) -->
+						<CallExpression>
+							<operator>
+								<OpCall name="1">
+									<operator>
+										<OperatorRef name="switch"/>
+									</operator>
+								</OpCall>
+							</operator>
+							<callParameters>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L19"/>
+									</path>
+								</IdExpression>
+							</callParameters>
+						</CallExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/23c7/5248/16D4/5447ad224496"/>
+					</pragmas>
+				</Equation>
+				<!-- _L28 =  not _L27; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L28"/>
+					</lefts>
+					<right>
+						<!--  not _L27 -->
+						<UnaryOp name="1" operator="not">
+							<operand>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L27"/>
+									</path>
+								</IdExpression>
+							</operand>
+						</UnaryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/23d1/5248/16D4/5447ad3c2742"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/d3a2/5D46/D8/5446c131308c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
+					<diagrams>
+						<NetDiagram name="diagram_alertas_1" landscape="true" format="A4 (210 297)" oid="!ed/d3af/5D46/D8/5446c13110c1">
+							<presentationElements>
+								<EquationGE presentable="!ed/d3a8/5D46/D8/5446c131d9f">
+									<position>
+										<Point x="2778" y="10081"/>
+									</position>
+									<size>
+										<Size width="264" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/23f8/7EFC/224/5447a9834451">
+									<position>
+										<Point x="11377" y="9631"/>
+									</position>
+									<size>
+										<Size width="1772" height="1402"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2400/7EFC/224/5447a99917ff">
+									<position>
+										<Point x="14843" y="10081"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/23f8/7EFC/224/5447a9834451" dstEquation="!ed/2400/7EFC/224/5447a99917ff">
+									<positions>
+										<Point x="13150" y="10345"/>
+										<Point x="13996" y="10345"/>
+										<Point x="13996" y="10345"/>
+										<Point x="14896" y="10345"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/23c7/5248/16D4/5447ad224496">
+									<position>
+										<Point x="4445" y="9631"/>
+									</position>
+									<size>
+										<Size width="1773" height="1402"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/23d1/5248/16D4/5447ad3c2742">
+									<position>
+										<Point x="8387" y="10001"/>
+									</position>
+									<size>
+										<Size width="1006" height="661"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/23d1/5248/16D4/5447ad3c2742" dstEquation="!ed/23f8/7EFC/224/5447a9834451">
+									<positions>
+										<Point x="9393" y="10345"/>
+										<Point x="10742" y="10345"/>
+										<Point x="10742" y="10345"/>
+										<Point x="11377" y="10345"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/d3a8/5D46/D8/5446c131d9f" dstEquation="!ed/23c7/5248/16D4/5447ad224496">
+									<positions>
+										<Point x="3043" y="10345"/>
+										<Point x="3916" y="10345"/>
+										<Point x="3916" y="10345"/>
+										<Point x="4445" y="10345"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/23c7/5248/16D4/5447ad224496" dstEquation="!ed/23d1/5248/16D4/5447ad3c2742">
+									<positions>
+										<Point x="6218" y="10345"/>
+										<Point x="7355" y="10345"/>
+										<Point x="7355" y="10345"/>
+										<Point x="7355" y="10345"/>
+										<Point x="7355" y="10345"/>
+										<Point x="8387" y="10345"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>

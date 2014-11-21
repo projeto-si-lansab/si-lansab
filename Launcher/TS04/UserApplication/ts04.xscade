@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <File xmlns="http://www.esterel-technologies.com/ns/scade/4" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/2">
 	<declarations>
+		<Constant name="RED">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="21"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/afb0/5D46/D8/5446bcb75024"/>
+			</pragmas>
+		</Constant>
 		<Constant name="NUM_CYCLES">
 			<type>
 				<NamedType>
@@ -13,22 +28,7 @@
 				<ConstValue value="300"/>
 			</value>
 			<pragmas>
-				<ed:Constant oid="!ed/8762/1980/DF0/541a05277050"/>
-			</pragmas>
-		</Constant>
-		<Constant name="FREQ_PROCESSADOR">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="int"/>
-					</type>
-				</NamedType>
-			</type>
-			<value>
-				<ConstValue value="5"/>
-			</value>
-			<pragmas>
-				<ed:Constant oid="!ed/8781/1980/DF0/541a08e841b6"/>
+				<ed:Constant oid="!ed/afa2/5D46/D8/5446bcb77b7"/>
 			</pragmas>
 		</Constant>
 		<Constant name="GREEN">
@@ -43,10 +43,10 @@
 				<ConstValue value="51"/>
 			</value>
 			<pragmas>
-				<ed:Constant oid="!ed/ca2d/544E/CF4/541a195a198d"/>
+				<ed:Constant oid="!ed/af94/5D46/D8/5446bcb714fa"/>
 			</pragmas>
 		</Constant>
-		<Constant name="RED">
+		<Constant name="FREQ_PROCESSADOR">
 			<type>
 				<NamedType>
 					<type>
@@ -55,10 +55,40 @@
 				</NamedType>
 			</type>
 			<value>
-				<ConstValue value="21"/>
+				<ConstValue value="5"/>
 			</value>
 			<pragmas>
-				<ed:Constant oid="!ed/ca2e/544E/CF4/541a195f109b"/>
+				<ed:Constant oid="!ed/af86/5D46/D8/5446bcb7401e"/>
+			</pragmas>
+		</Constant>
+		<Constant name="A661_FALSE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/239e/5E13/1FC/54481271529d"/>
+			</pragmas>
+		</Constant>
+		<Constant name="A661_TRUE">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="int"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="1"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/23a7/5E13/1FC/5448127f7a80"/>
 			</pragmas>
 		</Constant>
 	</declarations>
