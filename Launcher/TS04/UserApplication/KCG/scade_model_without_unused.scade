@@ -749,14 +749,6 @@ node #pragma ed <Operator oid="!ed/af76/5D46/D8/5446bc90751">
 						<Size width="318" height="503"/>
 					</size>
 				</EquationGE>
-				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/b0ed/5D46/D8/5446bd5167c1" dstEquation="!ed/2505/5E13/1FC/5448207b882">
-					<positions>
-						<Point x="17568" y="16775"/>
-						<Point x="19050" y="16775"/>
-						<Point x="19050" y="18733"/>
-						<Point x="20558" y="18733"/>
-					</positions>
-				</Edge>
 				<EquationGE kind="OBJ_LIT" presentable="!ed/23dd/3768/220/546c9c34e43">
 					<position>
 						<Point x="16219" y="2805"/>
@@ -827,6 +819,14 @@ node #pragma ed <Operator oid="!ed/af76/5D46/D8/5446bc90751">
 						<Point x="10530" y="18494"/>
 						<Point x="10530" y="18494"/>
 						<Point x="11377" y="18494"/>
+					</positions>
+				</Edge>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/b0ef/5D46/D8/5446bd51dff" dstEquation="!ed/2505/5E13/1FC/5448207b882">
+					<positions>
+						<Point x="17568" y="13467"/>
+						<Point x="19050" y="13467"/>
+						<Point x="19050" y="18733"/>
+						<Point x="20558" y="18733"/>
 					</positions>
 				</Edge>
 			</presentationElements>
@@ -1004,7 +1004,7 @@ Ph4Enabled : int;
       #pragma ed    <Variable oid="!ed/2504/5E13/1FC/544820757bab"/>
 #end
 
-Desacoplado : bool)
+Stage1Detached : bool)
 var
       #pragma ed    <Variable oid="!ed/b0fd/5D46/D8/5446bd511579"/>
 #end
@@ -1382,7 +1382,7 @@ let
    #pragma ed    <Equation oid="!ed/2505/5E13/1FC/5448207b882"/>
 #end
 
-   Desacoplado = _L1;
+   Stage1Detached = _L2;
    #pragma ed    <Equation oid="!ed/23dd/3768/220/546c9c34e43"/>
 #end
 

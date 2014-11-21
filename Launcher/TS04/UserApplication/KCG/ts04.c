@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/hoffsi/dev/ita/scade/ce235/Launcher/TS04/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-19T17:00:31
+** Generation date: 2014-11-21T10:35:35
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -977,7 +977,7 @@ void ts04(inC_ts04 *inC, outC_ts04 *outC)
   _L81 = Enabled_1;
   outC->SelfDestructEnabled = _L81;
   _L82 = inC->EnableDestructSignal;
-  outC->Desacoplado = _L1;
+  outC->Stage1Detached = _L2;
   outC->Ph4Enabled = _L74;
   outC->Ph3Enabled = _L73;
   outC->Ph2Enabled = _L72;
@@ -1409,6 +1409,6 @@ void ts04(inC_ts04 *inC, outC_ts04 *outC)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ts04.c
-** Generation date: 2014-11-19T17:00:31
+** Generation date: 2014-11-21T10:35:35
 *************************************************************$ */
 

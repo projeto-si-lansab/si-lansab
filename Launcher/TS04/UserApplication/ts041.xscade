@@ -497,7 +497,7 @@
 						<ed:Variable oid="!ed/24f9/5E13/1FC/5448191e5c6e"/>
 					</pragmas>
 				</Variable>
-				<Variable name="Desacoplado">
+				<Variable name="Stage1Detached">
 					<type>
 						<NamedType>
 							<type>
@@ -1977,15 +1977,15 @@
 						<ed:Equation oid="!ed/24ff/5E13/1FC/5448194f6a73"/>
 					</pragmas>
 				</Equation>
-				<!-- Desacoplado = _L1; -->
+				<!-- Stage1Detached = _L2; -->
 				<Equation>
 					<lefts>
-						<VariableRef name="Desacoplado"/>
+						<VariableRef name="Stage1Detached"/>
 					</lefts>
 					<right>
 						<IdExpression>
 							<path>
-								<ConstVarRef name="_L1"/>
+								<ConstVarRef name="_L2"/>
 							</path>
 						</IdExpression>
 					</right>
@@ -2803,14 +2803,6 @@
 										<Size width="318" height="503"/>
 									</size>
 								</EquationGE>
-								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/b0ed/5D46/D8/5446bd5167c1" dstEquation="!ed/2505/5E13/1FC/5448207b882">
-									<positions>
-										<Point x="17568" y="16775"/>
-										<Point x="19050" y="16775"/>
-										<Point x="19050" y="18733"/>
-										<Point x="20558" y="18733"/>
-									</positions>
-								</Edge>
 								<EquationGE kind="OBJ_LIT" presentable="!ed/23dd/3768/220/546c9c34e43">
 									<position>
 										<Point x="16219" y="2805"/>
@@ -2881,6 +2873,14 @@
 										<Point x="10530" y="18494"/>
 										<Point x="10530" y="18494"/>
 										<Point x="11377" y="18494"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/b0ef/5D46/D8/5446bd51dff" dstEquation="!ed/2505/5E13/1FC/5448207b882">
+									<positions>
+										<Point x="17568" y="13467"/>
+										<Point x="19050" y="13467"/>
+										<Point x="19050" y="18733"/>
+										<Point x="20558" y="18733"/>
 									</positions>
 								</Edge>
 							</presentationElements>

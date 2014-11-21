@@ -17,12 +17,15 @@ class Lego:
         self.stop_medium_motors()
         
     def detach(self):
+        if self.idle:
+            return
         for i in range(2, 0, -1):
             self.medium_motor.position = 0
-            self.medium_motor.run_position_limited(position_sp=((-1) ** i) * 115,
+            self.medium_motor.run_position_limited(position_sp=((-1) ** i) * config.MEDIUM_MOTOR_ROTATION_ANGLE,
                                                    speed_sp=config.MEDIUM_MOTOR_SPEED,
                                                    stop_mode=Motor.STOP_MODE.BRAKE)
-            time.sleep(0.5)
+            self.wait(self.medium_motor)
+            time.sleep(0.1)
         
     def reset(self):
         self.stop()
@@ -65,11 +68,14 @@ class Lego:
             time.sleep(1)
     
     def start(self):
-        self.idle = False
-        self.run()
+        if self.idle:
+            print 'starting...' 
+            self.idle = False
+            self.run()
     
     def stop(self):
-        self.idle = True
+        if not self.idle:
+            self.idle = True
     
     def stop_large_motors(self):
         self.left_large_motor.stop()
@@ -77,3 +83,7 @@ class Lego:
     
     def stop_medium_motors(self):
         self.medium_motor.stop()
+    
+    def wait(self, motor):
+        while motor.read_value('run') == '1':
+            pass
