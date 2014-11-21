@@ -69,7 +69,6 @@ class Lego:
     
     def start(self):
         if self.idle:
-            print 'starting...' 
             self.idle = False
             self.run()
     
