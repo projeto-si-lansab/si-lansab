@@ -128,6 +128,16 @@
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="70" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="Longitude_EditBoxNumeric">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="71" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="Latitude_EditBoxNumeric">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
@@ -270,6 +280,30 @@
 						<A661_CMD_SET_PARAMETER name="SizeX" type="ulong" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="59" ParameterIdent="A661_SIZE_X" WidgetType="GpRectangle" WidgetName="Fuel">
 							<A661Data>
 								<DataField value="SizeX"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="SAT_Longitude_Value" type="real" oid="!ed/24e2/3D4B/568/5449b01c1133" instancepath="OperationalScenario/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="70" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="Longitude_EditBoxNumeric">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="SAT_Latitude_Value" type="real" oid="!ed/24e3/3D4B/568/5449b049763f" instancepath="OperationalScenario/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="71" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="Latitude_EditBoxNumeric">
+							<A661Data>
+								<DataField value="Value"/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
 					</inputs>

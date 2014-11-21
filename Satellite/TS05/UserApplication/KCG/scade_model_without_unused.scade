@@ -23,7 +23,7 @@ CDS_COLOR_YELLOW : int = 41;
    #pragma ed <Constant oid="!ed/434c/19ED/1BEC/540cc3a54a52"/>
 #end
 
-CDS_TEXT_SS_INITIALIZE : String_SS = ['I', 'n', 'i', 'c', 'i', 'a', 'l', 'i', 'z', 'a', 'r', ' ', ' ', ' ', ' ', ' '];
+CDS_TEXT_SS_INITIALIZE : String_SS = ['I', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'e', ' ', ' ', ' ', ' ', ' ', ' '];
    #pragma ed <Constant oid="!ed/6bcb/19ED/1BEC/540d00ed351d"/>
 #end
 
@@ -31,7 +31,7 @@ CDS_TEXT_SS_STR_SIZE : int = 16;
    #pragma ed <Constant oid="!ed/4617/19ED/1BEC/540cc5032017"/>
 #end
 
-CDS_TEXT_SS_INITIALIZING : String_SS = ['I', 'n', 'i', 'c', 'i', 'a', 'l', 'i', 'z', 'a', 'n', 'd', 'o', '.', '.', '.'];
+CDS_TEXT_SS_INITIALIZING : String_SS = ['I', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'i', 'n', 'g', '.', '.', '.', ' '];
    #pragma ed <Constant oid="!ed/4a69/19ED/1BEC/540cc70b14d8"/>
 #end
 
@@ -39,7 +39,7 @@ CDS_INT_SS_INITIALIZATION_TIMEOUT : int = 30;
    #pragma ed <Constant oid="!ed/49eb/19ED/1BEC/540cc58912fa"/>
 #end
 
-CDS_TEXT_SS_INITIALIZED : String_SS = ['I', 'n', 'i', 'c', 'i', 'a', 'l', 'i', 'z', 'a', 'd', 'o', ' ', ' ', ' ', ' '];
+CDS_TEXT_SS_INITIALIZED : String_SS = ['I', 'n', 'i', 't', 'i', 'a', 'l', 'i', 'z', 'e', 'd', ' ', ' ', ' ', ' ', ' '];
    #pragma ed <Constant oid="!ed/3cac/6B22/444/540c6e4816e3"/>
 #end
 
@@ -47,35 +47,35 @@ CDS_COLOR_RED : int = 21;
    #pragma ed <Constant oid="!ed/6ca1/19ED/1BEC/540d034671e8"/>
 #end
 
-CDS_TEXT_ES_STR_SIZE : int = 13;
+CDS_TEXT_ES_STR_SIZE : int = 14;
    #pragma ed <Constant oid="!ed/6d6c/19ED/1BEC/540d03ad266f"/>
 #end
 
-CDS_TEXT_ES_TURNON : String_ES = ['L', 'i', 'g', 'a', 'r', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+CDS_TEXT_ES_TURNON : String_ES = ['T', 'u', 'r', 'n', ' ', 'o', 'n', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
    #pragma ed <Constant oid="!ed/6c9e/19ED/1BEC/540d03057210"/>
 #end
 
-CDS_TEXT_ES_TURNOFF : String_ES = ['D', 'e', 's', 'l', 'i', 'g', 'a', 'r', ' ', ' ', ' ', ' ', ' '];
+CDS_TEXT_ES_TURNOFF : String_ES = ['T', 'u', 'r', 'n', ' ', 'o', 'f', 'f', ' ', ' ', ' ', ' ', ' ', ' '];
    #pragma ed <Constant oid="!ed/6df3/19ED/1BEC/540d03ae59ec"/>
 #end
 
-CDS_TEXT_ES_TURNINGOFF : String_ES = ['D', 'e', 's', 'l', 'i', 'g', 'a', 'n', 'd', 'o', '.', '.', '.'];
+CDS_TEXT_ES_TURNINGOFF : String_ES = ['T', 'u', 'r', 'n', 'i', 'n', 'g', ' ', 'o', 'f', 'f', '.', '.', '.'];
    #pragma ed <Constant oid="!ed/4d3a/1C7F/860/54447861734a"/>
 #end
 
-CDS_TEXT_ES_FAIL : String_ES = ['F', 'A', 'L', 'H', 'O', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+CDS_TEXT_ES_FAIL : String_ES = ['F', 'A', 'I', 'L', 'E', 'D', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
    #pragma ed <Constant oid="!ed/6e7a/19ED/1BEC/540d03af1cfc"/>
 #end
 
-CDS_TEXT_ES_TURNINGON : String_ES = ['L', 'i', 'g', 'a', 'n', 'd', 'o', '.', '.', '.', ' ', ' ', ' '];
+CDS_TEXT_ES_TURNINGON : String_ES = ['T', 'u', 'r', 'n', 'i', 'n', 'g', ' ', 'o', 'n', '.', '.', '.', ' '];
    #pragma ed <Constant oid="!ed/4cc5/320E/A3C/544476f657ec"/>
 #end
 
-CDS_TEXT_AUTOVERIFY_FAIL : String_ES = ['C', 'O', 'R', 'R', 'I', 'G', 'I', 'R', ' ', ' ', ' ', ' ', ' '];
+CDS_TEXT_AUTOVERIFY_FAIL : String_ES = ['F', 'I', 'X', ' ', 'E', 'R', 'R', 'O', 'R', 'S', ' ', ' ', ' ', ' '];
    #pragma ed <Constant oid="!ed/4cef/320E/A3C/544477585aea"/>
 #end
 
-CDS_TEXT_AUTOVERIFY_CORRECT : String_ES = ['A', 'U', 'T', 'O', ' ', 'V', 'E', 'R', 'I', 'F', 'Y', ' ', ' '];
+CDS_TEXT_AUTOVERIFY_CORRECT : String_ES = ['A', 'U', 'T', 'O', '-', 'V', 'E', 'R', 'I', 'F', 'Y', ' ', ' ', ' '];
 
 type
    #pragma ed <Type oid="!ed/7bd0/19ED/1BEC/540d13d66dbd"/>
