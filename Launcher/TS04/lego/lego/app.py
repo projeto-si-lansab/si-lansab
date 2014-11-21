@@ -23,11 +23,10 @@ class App:
                     del self.lego
                     break
                 elif data == 'start':
-                    if self.lego:
-                        self.lego.stop()
-                    else:
+                    if not self.lego:
                         self.lego = Lego()
-                    thread.start_new_thread(self.start_lego, ())
+                    if self.lego.idle:
+                        thread.start_new_thread(self.start_lego, ())
                 elif self.lego and data == 'stop':
                     self.lego.stop()
                 elif self.lego and data == 'reset':

@@ -1,5 +1,9 @@
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
 
 #include "CommunicationInterfaces.h"
 #include "IntegrationCode.h"
@@ -45,7 +49,7 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         printf("Sent: Message from TS04 to TS01 \n");
         TS01_INPUT_INTERFACE *output1 = &(message->input_interface.ts01_input_interface);
 		output1->AutoDestruct = ua_outputs.SelfDestruct;
-		output1->EnableRocketLaunch = ua_outputs.FimContagem || ua_outputs.Desacoplado;
+		output1->EnableRocketLaunch = ua_outputs.FimContagem || ua_outputs.Stage1Detached;
 		break;
     case TS02ID:
         printf("Sent: Message from TS04 to TS02 \n");
@@ -94,4 +98,35 @@ void executeCustomLogic() {
     /* Insert your additional logic */
     /* For instance, you can execute your RaspberryPi controller here */
     /* You can use ua_outputs (which is updated before this function is called) to feed you controller */
+	
+	FILE *fp;
+	char *slego_addr = NULL;
+	char *slego_port = NULL;
+	size_t len = 0;
+	
+	int sfd;
+	struct sockaddr_in lego_addr;
+	char s[6];
+	
+	if (ua_outputs.FimContagem || ua_outputs.SelfDestruct) {
+	    if ((fp = fopen("lego.txt", "r")) != NULL) {
+		    if (getline(&slego_addr, &len, fp) != -1 && getline(&slego_port, &len, fp) != -1) {
+			    if ((sfd = socket(AF_INET, SOCK_DGRAM, 0)) != -1) {
+				    bzero(&lego_addr, sizeof(lego_addr));
+					lego_addr.sin_family = AF_INET;
+					lego_addr.sin_addr.s_addr = inet_addr(slego_addr);
+					lego_addr.sin_port=htons(atoi(slego_port));
+					if (ua_outputs.FimContagem) {
+					    strcpy(s, "start");
+					} else {
+					    strcpy(s, "stop");
+					}
+					sendto(sfd, s, strlen(s), 0, (struct sockaddr *)&lego_addr, sizeof(lego_addr));
+				}
+			}
+			free(slego_addr);
+			free(slego_port);
+			fclose(fp);
+		}
+	}
 }

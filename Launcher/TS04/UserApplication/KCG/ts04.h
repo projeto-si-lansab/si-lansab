@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/hoffsi/dev/ita/scade/ce235/Launcher/TS04/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-19T17:00:31
+** Generation date: 2014-11-21T10:35:35
 *************************************************************$ */
 #ifndef _ts04_H_
 #define _ts04_H_
@@ -55,7 +55,7 @@ typedef struct {
   kcg_int /* ts04::Ph2Enabled */ Ph2Enabled;
   kcg_int /* ts04::Ph3Enabled */ Ph3Enabled;
   kcg_int /* ts04::Ph4Enabled */ Ph4Enabled;
-  kcg_bool /* ts04::Desacoplado */ Desacoplado;
+  kcg_bool /* ts04::Stage1Detached */ Stage1Detached;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
@@ -100,6 +100,6 @@ extern void ts04_reset(outC_ts04 *outC);
 #endif /* _ts04_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ts04.h
-** Generation date: 2014-11-19T17:00:31
+** Generation date: 2014-11-21T10:35:35
 *************************************************************$ */
 
