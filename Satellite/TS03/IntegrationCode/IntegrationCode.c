@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -52,6 +53,7 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             break;
         case TS05ID:
             printf("Received: Message from TS05 to TS03 \n");
+            ua_inputs.TakePicture = input.TakePicture;
             break;
         }
     }
@@ -115,10 +117,10 @@ void executeCustomLogic() {
 
     int sock;
     struct sockaddr_un server;
-    char buf[256];
+    char buf[128];
 
     memset(&buf, 0, sizeof(buf));
-    sprintf(buf, "{\"TakePicture\": %d, \"DownLoadPic\": %d }", ua_outputs.TakePicture, ua_outputs.DownLoadPic);
+    sprintf(buf, "{\"TakePicture\": %d, \"DownloadPic\": %d }", ua_outputs.DroneTakePicture, ua_outputs.DownLoadPic);
 
     sock = socket(AF_UNIX, SOCK_STREAM, 0);
     if (sock < 0) {
@@ -134,7 +136,7 @@ void executeCustomLogic() {
         return;
     }
 
-    if (write(sock, buf, sizeof(buf)) < 0)
+    if (write(sock, buf, strlen(buf)) < 0)
         perror("writing on stream socket");
 
     close(sock);
