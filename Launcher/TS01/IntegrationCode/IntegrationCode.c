@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -26,14 +27,11 @@ int num_receivers;
 int* receivers;
 
 void setReceivers() {
-	num_receivers = 1;
+	num_receivers = 3;
 	receivers = (int *) malloc(num_receivers * sizeof(int));
-	/*receivers[0] = TS01ID;
-	receivers[1] = TS02ID;
-	receivers[2] = TS03ID;
-	receivers[3] = TS04ID;
-	receivers[4] = TS05ID;*/
 	receivers[0] = TS01TESTID;
+	receivers[1] = TS04ID;
+	receivers[2] = TS05ID;
 }
 
 void receiveMessage(FRAMEWORK_MESSAGE message) {
@@ -91,18 +89,19 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
     case TS04ID:
         printf("Sent: Message from TS01 to TS04 \n");
         TS04_INPUT_INTERFACE *output4 = &(message->input_interface.ts04_input_interface);
-        /*output->SignalFromTeam1 = ua_outputs.SignalToTeam4;*/
+        output4->RocketStatus = ua_outputs.ControlCenterStatus;
+        output4->SatLaunched = ua_outputs.SatLaunched;
         break;
     case TS05ID:
         printf("Sent: Message from TS01 to TS05 \n");
         TS05_INPUT_INTERFACE *output5 = &(message->input_interface.ts05_input_interface);
-        /*output->SignalFromTeam1 = ua_outputs.SignalToTeam5;*/
+        output5->SAT_Ejection_Signal = ua_outputs.SatLaunched;
         break;
     case TS01TESTID:
         printf("Sent: Message to TS01 test window \n");
         TS01TEST_INPUT_INTERFACE *output1t = &(message->input_interface.ts01test_input_interface);
         output1t->RocketStatus = ua_outputs.ControlCenterStatus;
-        output1t->SatLaunched = ua_outputs.SatLaunched;        
+        output1t->SatLaunched = ua_outputs.SatLaunched;
         break;
     }
 }
@@ -141,7 +140,7 @@ void executeCustomLogic() {
 
     int sock;
     struct sockaddr_un server;
-    char buf[256];
+    char buf[128];
 
     memset(&buf, 0, sizeof(buf));
     sprintf(buf, "{\"RocketLaunch\": %d, \"RocketDestroy\": %d }", ua_outputs.RocketLaunch, ua_outputs.RocketDestroy);
@@ -160,7 +159,7 @@ void executeCustomLogic() {
         return;
     }
 
-    if (write(sock, buf, sizeof(buf)) < 0)
+    if (write(sock, buf, strlen(buf)) < 0)
         perror("writing on stream socket");
 
     close(sock);
