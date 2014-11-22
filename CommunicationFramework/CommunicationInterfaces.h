@@ -34,6 +34,7 @@ typedef struct {
 
 typedef struct {
     /*TS03 inputs*/
+    kcg_bool TakePicture;
 } TS03_INPUT_INTERFACE;
 
 typedef struct {

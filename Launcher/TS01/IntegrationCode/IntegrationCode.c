@@ -96,6 +96,9 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         printf("Sent: Message from TS01 to TS05 \n");
         TS05_INPUT_INTERFACE *output5 = &(message->input_interface.ts05_input_interface);
         output5->SAT_Ejection_Signal = ua_outputs.SatLaunched;
+        output5->SAT_Altitude_Value = ua_outputs.Altitude_Out;
+        output5->SAT_Latitude_Value = ua_outputs.Latitude_Out;
+        output5->SAT_Longitude_Value = ua_outputs.Longitude_Out;
         break;
     case TS01TESTID:
         printf("Sent: Message to TS01 test window \n");
