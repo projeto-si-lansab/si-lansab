@@ -126,12 +126,6 @@ typedef struct {
 #define VARC_OperationalScenario_FuelMeterGraphic(context) context.SAO_CTX_outC_OperationalScenario.FuelMeterGraphic  /* OperationalScenario/FuelMeterGraphic */
 #define VAR_OperationalScenario_FuelMeterGraphic VARC_OperationalScenario_FuelMeterGraphic(CTX_OperationalScenario)
 
-#define VARC_OperationalScenario_SAT_Longitude_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Longitude_Value  /* OperationalScenario/SAT_Longitude_Value */
-#define VAR_OperationalScenario_SAT_Longitude_Value VARC_OperationalScenario_SAT_Longitude_Value(CTX_OperationalScenario)
-
-#define VARC_OperationalScenario_SAT_Latitude_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Latitude_Value  /* OperationalScenario/SAT_Latitude_Value */
-#define VAR_OperationalScenario_SAT_Latitude_Value VARC_OperationalScenario_SAT_Latitude_Value(CTX_OperationalScenario)
-
 
 /*$**********************************************************
 *                           ELEMENT ACCESS
@@ -200,10 +194,6 @@ typedef struct {
 #define CPY_FuelMeter(DST, SRC) DST = SRC
 #define T_FuelMeterGraphic kcg_int
 #define CPY_FuelMeterGraphic(DST, SRC) DST = SRC
-#define T_SAT_Longitude_Value kcg_real
-#define CPY_SAT_Longitude_Value(DST, SRC) DST = SRC
-#define T_SAT_Latitude_Value kcg_real
-#define CPY_SAT_Latitude_Value(DST, SRC) DST = SRC
 
 
 /*$**********************************************************

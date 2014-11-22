@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--$*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/Paulo/ITA/237/TS02_2Sprint_v6/TS02_2Sprint_v6/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T19:44:32
+** Command: s2c613 -config C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-18T21:38:59
 *************************************************************$-->
-<Model date="2014-11-18T19:44:32" commandLine="s2c613 -config C:/Paulo/ITA/237/TS02_2Sprint_v6/TS02_2Sprint_v6/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt">
+<Model date="2014-11-18T21:38:59" commandLine="s2c613 -config C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt">
   <RootNode scadeName="OperationalScenario" headerFile="OperationalScenario.h" targetCycleFct="OperationalScenario"
       targetInitFct="OperationalScenario_reset">
     <Input scadeName="Power" scadeType="bool" targetName="Power" targetType="kcg_bool" inCtx="true"/>
@@ -53,10 +53,6 @@
     <Output scadeName="FuelMeter" scadeType="real" targetName="FuelMeter" targetType="kcg_real" inCtx="true"/>
     <Output scadeName="FuelMeterGraphic" scadeType="int" targetName="FuelMeterGraphic" targetType="kcg_int"
         inCtx="true"/>
-    <Output scadeName="SAT_Longitude_Value" scadeType="real" targetName="SAT_Longitude_Value" targetType="kcg_real"
-        inCtx="true"/>
-    <Output scadeName="SAT_Latitude_Value" scadeType="real" targetName="SAT_Latitude_Value" targetType="kcg_real"
-        inCtx="true"/>
     <Memory scadeName="LaunchPhase" scadeType="bool" targetName="LaunchPhase" targetType="kcg_bool" inCtx="true"/>
     <Memory scadeName="ApertarBotao" scadeType="bool" targetName="ApertarBotao" targetType="kcg_bool" inCtx="true"/>
     <Local scadeName="color" scadeType="int" targetName="color" targetType="kcg_int" inCtx="true"/>
@@ -86,8 +82,6 @@
     <Local scadeName="LaunchVisibleLocal" scadeType="bool" targetName="LaunchVisibleLocal" targetType="kcg_bool"
         inCtx="true"/>
     <Local scadeName="FuelMeterLocal" scadeType="real" targetName="FuelMeterLocal" targetType="kcg_real" inCtx="true"/>
-    <Local scadeName="LongitudeLocal" scadeType="real" targetName="LongitudeLocal" targetType="kcg_real" inCtx="true"/>
-    <Local scadeName="LatitudeLocal" scadeType="real" targetName="LatitudeLocal" targetType="kcg_real" inCtx="true"/>
     <Local scadeName="_L7" scadeType="bool" targetName="_L7" targetType="kcg_bool" inCtx="true"/>
     <Local scadeName="_L8" scadeType="bool" targetName="_L8" targetType="kcg_bool" inCtx="true"/>
     <Local scadeName="_L9" scadeType="bool" targetName="_L9" targetType="kcg_bool" inCtx="true"/>
@@ -111,8 +105,6 @@
     <Local scadeName="_L44" scadeType="real" targetName="_L44" targetType="kcg_real" inCtx="true"/>
     <Local scadeName="_L45" scadeType="real" targetName="_L45" targetType="kcg_real" inCtx="true"/>
     <Local scadeName="_L46" scadeType="int" targetName="_L46" targetType="kcg_int" inCtx="true"/>
-    <Local scadeName="_L49" scadeType="real" targetName="_L49" targetType="kcg_real" inCtx="true"/>
-    <Local scadeName="_L50" scadeType="real" targetName="_L50" targetType="kcg_real" inCtx="true"/>
     <Automaton scadeName="OpPhases" targetStatesType="SSM_ST_OpPhases" targetTransitionsType="SSM_TR_OpPhases">
       <State scadeName="Ground" targetName="SSM_st_Ground_OpPhases">
         <Local scadeName="_L2" scadeType="int" targetName="_L2_OpPhases_Ground" targetType="kcg_int"
@@ -156,10 +148,6 @@
         <Local scadeName="_L41" scadeType="bool" targetName="_L41_OpPhases_Ground" targetType="kcg_bool"
             clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
         <Local scadeName="_L42" scadeType="real" targetName="_L42_OpPhases_Ground" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
-        <Local scadeName="_L45" scadeType="real" targetName="_L45_OpPhases_Ground" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
-        <Local scadeName="_L46" scadeType="real" targetName="_L46_OpPhases_Ground" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
         <NodeInlining scadeName="ReadSensors" instName="6">
           <Input scadeName="Gyroscopes" scadeType="bool" targetName="Gyroscopes_6" targetType="kcg_bool"
@@ -232,10 +220,6 @@
             clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
         <Local scadeName="_L34" scadeType="real" targetName="_L34_OpPhases_Launch" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
-        <Local scadeName="_L36" scadeType="real" targetName="_L36_OpPhases_Launch" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
-        <Local scadeName="_L35" scadeType="real" targetName="_L35_OpPhases_Launch" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
         <Fork priority="1">
           <Transition targetName="SSM_TR_Launch_1_OpPhases" kind="weak" scadeDest="AttitudeAcquisition"/>
         </Fork>
@@ -290,10 +274,6 @@
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
         <Local scadeName="_L40" scadeType="real" targetName="_L40_OpPhases_AttitudeAcquisition" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L44" scadeType="real" targetName="_L44_OpPhases_AttitudeAcquisition" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L43" scadeType="real" targetName="_L43_OpPhases_AttitudeAcquisition" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
         <Fork priority="1">
           <Transition targetName="SSM_TR_AttitudeAcquisition_1_OpPhases" kind="weak" scadeDest="NormalPhase"/>
         </Fork>
@@ -320,10 +300,6 @@
         <Local scadeName="_L19" scadeType="bool" targetName="_L19_OpPhases_NormalPhase" targetType="kcg_bool"
             clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
         <Local scadeName="_L21" scadeType="real" targetName="_L21_OpPhases_NormalPhase" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
-        <Local scadeName="_L25" scadeType="real" targetName="_L25_OpPhases_NormalPhase" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
-        <Local scadeName="_L24" scadeType="real" targetName="_L24_OpPhases_NormalPhase" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
       </State>
       <ActiveState targetName="OpPhases_state_act" inCtx="true"/>
@@ -362,12 +338,12 @@
   <Package scadeName="mathext"/>
   <Package scadeName="pwlinear"/>
   <Package scadeName="lut">
-    <NamedType scadeName="LutIndex" targetName="LutIndex_lut" refType="struct__5302"/>
+    <NamedType scadeName="LutIndex" targetName="LutIndex_lut" refType="struct__5258"/>
   </Package>
   <Package scadeName="verif"/>
   <Option name="root_node_name" value="OperationalScenario"/>
   <Option name="target" value="C"/>
-  <Option name="target_dir" value="C:/Paulo/ITA/237/TS02_2Sprint_v6/TS02_2Sprint_v6/TS02_2Sprint/UserApplication/KCG"/>
+  <Option name="target_dir" value="C:/github/si-lansab/Satellite/TS02/UserApplication/KCG"/>
   <Option name="expall" value="#on#"/>
   <Option name="exp" value="#off#"/>
   <Option name="noexp" value="#off#"/>
@@ -384,8 +360,7 @@
   <Option name="observe" value="#off#"/>
   <Option name="no_observe" value="#off#"/>
   <Option name="probes" value="#on#"/>
-  <Option name="input_file"
-      value="C:/Paulo/ITA/237/TS02_2Sprint_v6/TS02_2Sprint_v6/TS02_2Sprint/UserApplication/KCG\kcg_xml_filter_out.scade"/>
+  <Option name="input_file" value="C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_xml_filter_out.scade"/>
   <Option name="wrap_c_ops" value="#off#"/>
   <Option name="no_bitwise" value="#off#"/>
   <Option name="warn_error" value="#off#"/>
@@ -395,12 +370,12 @@
   <PredefType scadeName="bool" targetName="kcg_bool"/>
   <PredefType scadeName="char" targetName="kcg_char"/>
   <PredefType scadeName="int" targetName="kcg_int"/>
-  <StructType targetName="struct__5302" targetCopyFct="kcg_copy_struct__5302" targetCompFct="kcg_comp_struct__5302">
+  <StructType targetName="struct__5258" targetCopyFct="kcg_copy_struct__5258" targetCompFct="kcg_comp_struct__5258">
     <Field scadeName="k" scadeType="int" targetName="k" targetType="kcg_int"/>
     <Field scadeName="f" scadeType="real" targetName="f" targetType="kcg_real"/>
   </StructType>
 </Model>
 <!--$*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_trace.xml
-** Generation date: 2014-11-18T19:44:32
+** Generation date: 2014-11-18T21:38:59
 *************************************************************$-->

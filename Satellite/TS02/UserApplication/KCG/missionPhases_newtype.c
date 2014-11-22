@@ -611,87 +611,87 @@ TypeUtils _Type_kcg_int_Utils = {
 };
 
 /****************************************************************
- ** struct__5302 
+ ** struct__5258 
  ****************************************************************/
 
-struct SimTypeVTable* pSimstruct__5302VTable;
+struct SimTypeVTable* pSimstruct__5258VTable;
 
-static FieldUtils struct__5302_fields[] = {
-    {"k", offsetof(struct__5302,k), &_Type_kcg_int_Utils},
-    {"f", offsetof(struct__5302,f), &_Type_kcg_real_Utils},
+static FieldUtils struct__5258_fields[] = {
+    {"k", offsetof(struct__5258,k), &_Type_kcg_int_Utils},
+    {"f", offsetof(struct__5258,f), &_Type_kcg_real_Utils},
 };
 
-int struct__5302_to_string(const void* pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData)
+int struct__5258_to_string(const void* pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData)
 {
-    if (pSimstruct__5302VTable != NULL
-        && pSimstruct__5302VTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
-        return pfnStrAppend(*(char**)pSimstruct__5302VTable->m_pfnToType(SptString, pValue), pData);
+    if (pSimstruct__5258VTable != NULL
+        && pSimstruct__5258VTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
+        return pfnStrAppend(*(char**)pSimstruct__5258VTable->m_pfnToType(SptString, pValue), pData);
     }
-    return pConverter->m_pfnStructureToString(pValue, struct__5302_fields, 2, pfnStrAppend, pData);
+    return pConverter->m_pfnStructureToString(pValue, struct__5258_fields, 2, pfnStrAppend, pData);
 }
 
-int string_to_struct__5302(const char* str, void* pValue, const char** endptr)
+int string_to_struct__5258(const char* str, void* pValue, const char** endptr)
 {
     skip_whitespace(str);
-    if (pSimstruct__5302VTable != NULL
-        && pSimstruct__5302VTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
-        return string_to_VTable(str, pSimstruct__5302VTable, pValue, endptr);
+    if (pSimstruct__5258VTable != NULL
+        && pSimstruct__5258VTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
+        return string_to_VTable(str, pSimstruct__5258VTable, pValue, endptr);
     }
-    return pConverter->m_pfnStringToStructure(str, pValue, struct__5302_fields, 2, endptr);
+    return pConverter->m_pfnStringToStructure(str, pValue, struct__5258_fields, 2, endptr);
 }
 
-int is_struct__5302_double_convertion_allowed()
+int is_struct__5258_double_convertion_allowed()
 {
-    if (pSimstruct__5302VTable != NULL) {
-        return is_VTable_double_convertion_allowed(pSimstruct__5302VTable);
-    }
-    return 0;
-}
-
-int compare_struct__5302(int *pStatus, const void* pValue1, const void* pValue2, void *pData)
-{
-    if (pSimstruct__5302VTable != NULL
-        && pSimstruct__5302VTable->m_version >= Scv612
-        && pSimstruct__5302VTable->m_pfnCompare != NULL)
-        return pSimstruct__5302VTable->m_pfnCompare(pStatus, pValue1, pValue2);
-    return pConverter->m_pfnStructureComparison(pStatus, pValue1, pValue2, struct__5302_fields, 2, pData);
-}
-
-int struct__5302_to_double(const void *pValue, double *nRetValue)
-{
-    if (pSimstruct__5302VTable != NULL) {
-        return  VTable_to_double(pValue, pSimstruct__5302VTable, nRetValue);
+    if (pSimstruct__5258VTable != NULL) {
+        return is_VTable_double_convertion_allowed(pSimstruct__5258VTable);
     }
     return 0;
 }
 
-int get_struct__5302_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
+int compare_struct__5258(int *pStatus, const void* pValue1, const void* pValue2, void *pData)
 {
-    return get_structure_signature(struct__5302_fields, 2, pfnStrAppend, pData);
+    if (pSimstruct__5258VTable != NULL
+        && pSimstruct__5258VTable->m_version >= Scv612
+        && pSimstruct__5258VTable->m_pfnCompare != NULL)
+        return pSimstruct__5258VTable->m_pfnCompare(pStatus, pValue1, pValue2);
+    return pConverter->m_pfnStructureComparison(pStatus, pValue1, pValue2, struct__5258_fields, 2, pData);
 }
 
-int set_struct__5302_default_value(void *pValue)
+int struct__5258_to_double(const void *pValue, double *nRetValue)
 {
-    set_kcg_int_default_value(&(((struct__5302*)pValue)->k));
-    set_kcg_real_default_value(&(((struct__5302*)pValue)->f));
+    if (pSimstruct__5258VTable != NULL) {
+        return  VTable_to_double(pValue, pSimstruct__5258VTable, nRetValue);
+    }
+    return 0;
+}
+
+int get_struct__5258_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
+{
+    return get_structure_signature(struct__5258_fields, 2, pfnStrAppend, pData);
+}
+
+int set_struct__5258_default_value(void *pValue)
+{
+    set_kcg_int_default_value(&(((struct__5258*)pValue)->k));
+    set_kcg_real_default_value(&(((struct__5258*)pValue)->f));
     return 1;
 }
 
-int check_struct__5302_string(const char* str, const char** endptr)
+int check_struct__5258_string(const char* str, const char** endptr)
 {
-    return string_to_struct__5302(str, NULL, endptr);
+    return string_to_struct__5258(str, NULL, endptr);
 }
 
-TypeUtils _Type_struct__5302_Utils = {
-    struct__5302_to_string,
-    check_struct__5302_string,
-    string_to_struct__5302,
-    is_struct__5302_double_convertion_allowed,
-    struct__5302_to_double,
-    compare_struct__5302,
-    get_struct__5302_signature,
-    set_struct__5302_default_value,
-    sizeof(struct__5302)
+TypeUtils _Type_struct__5258_Utils = {
+    struct__5258_to_string,
+    check_struct__5258_string,
+    string_to_struct__5258,
+    is_struct__5258_double_convertion_allowed,
+    struct__5258_to_double,
+    compare_struct__5258,
+    get_struct__5258_signature,
+    set_struct__5258_default_value,
+    sizeof(struct__5258)
 };
 
 /****************************************************************
@@ -800,7 +800,7 @@ int LutIndex_lut_to_string(const void* pValue, int (*pfnStrAppend)(const char *s
         && pSimLutIndex_lutVTable->m_pfnGetConvInfo(SptString, SptNone) == 1) {
         return pfnStrAppend(*(char**)pSimLutIndex_lutVTable->m_pfnToType(SptString, pValue), pData);
     }
-    return struct__5302_to_string(pValue, pfnStrAppend, pData);
+    return struct__5258_to_string(pValue, pfnStrAppend, pData);
 }
 
 int string_to_LutIndex_lut(const char* str, void* pValue, const char** endptr)
@@ -810,7 +810,7 @@ int string_to_LutIndex_lut(const char* str, void* pValue, const char** endptr)
         && pSimLutIndex_lutVTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
         return string_to_VTable(str, pSimLutIndex_lutVTable, pValue, endptr);
     }
-    return string_to_struct__5302(str, pValue, endptr);
+    return string_to_struct__5258(str, pValue, endptr);
 }
 
 int is_LutIndex_lut_double_convertion_allowed()
@@ -818,7 +818,7 @@ int is_LutIndex_lut_double_convertion_allowed()
     if (pSimLutIndex_lutVTable != NULL) {
         return is_VTable_double_convertion_allowed(pSimLutIndex_lutVTable);
     }
-    return is_struct__5302_double_convertion_allowed();
+    return is_struct__5258_double_convertion_allowed();
 }
 
 int compare_LutIndex_lut(int *pStatus, const void* pValue1, const void* pValue2, void *pData)
@@ -827,7 +827,7 @@ int compare_LutIndex_lut(int *pStatus, const void* pValue1, const void* pValue2,
         && pSimLutIndex_lutVTable->m_version >= Scv612
         && pSimLutIndex_lutVTable->m_pfnCompare != NULL)
         return pSimLutIndex_lutVTable->m_pfnCompare(pStatus, pValue1, pValue2);
-    return compare_struct__5302(pStatus, pValue1, pValue2, pData);
+    return compare_struct__5258(pStatus, pValue1, pValue2, pData);
 }
 
 int LutIndex_lut_to_double(const void *pValue, double *nRetValue)
@@ -835,17 +835,17 @@ int LutIndex_lut_to_double(const void *pValue, double *nRetValue)
     if (pSimLutIndex_lutVTable != NULL) {
         return  VTable_to_double(pValue, pSimLutIndex_lutVTable, nRetValue);
     }
-    return struct__5302_to_double(pValue, nRetValue);
+    return struct__5258_to_double(pValue, nRetValue);
 }
 
 int get_LutIndex_lut_signature(int (*pfnStrAppend)(const char* str, void *pData), void *pData)
 {
-    return get_struct__5302_signature(pfnStrAppend, pData);
+    return get_struct__5258_signature(pfnStrAppend, pData);
 }
 
 int set_LutIndex_lut_default_value(void *pValue)
 {
-    return set_struct__5302_default_value(pValue);
+    return set_struct__5258_default_value(pValue);
 }
 
 int check_LutIndex_lut_string(const char* str, const char** endptr)
