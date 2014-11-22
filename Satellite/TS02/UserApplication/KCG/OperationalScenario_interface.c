@@ -1,7 +1,7 @@
 #include "OperationalScenario_interface.h"
 const int  rt_version = Srtv62;
 
-const char* _SCSIM_CheckSum = "f7ea7011e5e3dafc0c9e4ae495c7eaf6";
+const char* _SCSIM_CheckSum = "88029ae56b8c0ed1572fe47fe6c95eec";
 const char* _SCSIM_SmuTypesCheckSum = "28e18c1b393c1cd143584174bcc1ba87";
 
 /*******************************
@@ -40,8 +40,6 @@ static void _SCSIM_RestoreInterface(void) {
 	inputs_ctx.MagneticTorquers = inputs_ctx_restore.MagneticTorquers;
 	inputs_ctx.upDateSw = inputs_ctx_restore.upDateSw;
 	inputs_ctx.Gyroscopes = inputs_ctx_restore.Gyroscopes;
-	inputs_ctx.Input13 = inputs_ctx_restore.Input13;
-	inputs_ctx.EjectionSignal = inputs_ctx_restore.EjectionSignal;
 	outputs_ctx = outputs_ctx_restore;
 
 	/* separate_io: outputs restore */
@@ -61,8 +59,6 @@ static void _SCSIM_ExecuteInterface(void) {
 	inputs_ctx_execute.MagneticTorquers = inputs_ctx.MagneticTorquers;
 	inputs_ctx_execute.upDateSw = inputs_ctx.upDateSw;
 	inputs_ctx_execute.Gyroscopes = inputs_ctx.Gyroscopes;
-	inputs_ctx_execute.Input13 = inputs_ctx.Input13;
-	inputs_ctx_execute.EjectionSignal = inputs_ctx.EjectionSignal;
 	pSimulator->m_pfnReleaseValueMutex(pSimulator);
 }
 

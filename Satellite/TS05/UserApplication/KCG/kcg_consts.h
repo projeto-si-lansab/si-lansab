@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$ */
 #ifndef _KCG_CONSTS_H_
 #define _KCG_CONSTS_H_
@@ -67,6 +67,6 @@ extern const String_ES CDS_TEXT_AUTOVERIFY_CORRECT;
 #endif /* _KCG_CONSTS_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_consts.h
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$ */
 

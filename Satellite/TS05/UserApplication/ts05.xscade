@@ -759,6 +759,78 @@
 						<ed:Variable oid="!ed/4cae/7E76/1D94/5444bb077763"/>
 					</pragmas>
 				</Variable>
+				<Variable name="latitude_entered">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e24/63DC/D84/547081a01c4c"/>
+					</pragmas>
+				</Variable>
+				<Variable name="latitude_str_len">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e23/63DC/D84/547081a07840"/>
+					</pragmas>
+				</Variable>
+				<Variable name="latitude_str">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="StringToReal"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e21/63DC/D84/547081a068a4"/>
+					</pragmas>
+				</Variable>
+				<Variable name="longitude_entered">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e66/63DC/D84/54708a2e78e2"/>
+					</pragmas>
+				</Variable>
+				<Variable name="longitude_str">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="StringToReal"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e73/63DC/D84/54708a3538b7"/>
+					</pragmas>
+				</Variable>
+				<Variable name="longitude_str_len">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e80/63DC/D84/54708a3b5b63"/>
+					</pragmas>
+				</Variable>
 			</inputs>
 			<outputs>
 				<Variable name="CDS_Layer_Req_Active">
@@ -1455,6 +1527,78 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/4beb/5212/25AC/5444b04b57bd"/>
+					</pragmas>
+				</Variable>
+				<Variable name="conv_latitude_str_len">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e27/63DC/D84/547081a0360a"/>
+					</pragmas>
+				</Variable>
+				<Variable name="conv_latitude_str">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="StringToReal"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e26/63DC/D84/547081a07599"/>
+					</pragmas>
+				</Variable>
+				<Variable name="conv_latitude_entered">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e25/63DC/D84/547081a07271"/>
+					</pragmas>
+				</Variable>
+				<Variable name="conv_longitude_entered">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e8c/63DC/D84/54708a4325d9"/>
+					</pragmas>
+				</Variable>
+				<Variable name="conv_longitude_str">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="StringToReal"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e9f/63DC/D84/54708a4f24dd"/>
+					</pragmas>
+				</Variable>
+				<Variable name="conv_longitude_str_len">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4ea9/63DC/D84/54708a5d11fd"/>
 					</pragmas>
 				</Variable>
 			</outputs>
@@ -2849,6 +2993,78 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/4cb0/7E76/1D94/5444bb2075a8"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L151">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e33/63DC/D84/547081a01cf8"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L150">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e2f/63DC/D84/547081a05f87"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L148">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="StringToReal"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e2a/63DC/D84/547081a03b3b"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L152">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="bool"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e68/63DC/D84/54708a2e76f5"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L153">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="StringToReal"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e75/63DC/D84/54708a352d4"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L154">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="int"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/4e82/63DC/D84/54708a3b2d3c"/>
 					</pragmas>
 				</Variable>
 			</locals>
@@ -13670,6 +13886,198 @@
 						<ed:Equation oid="!ed/4caf/7E76/1D94/5444bb203c8e"/>
 					</pragmas>
 				</Equation>
+				<!-- _L148 = latitude_str; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L148"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="latitude_str"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e29/63DC/D84/547081a04dfa"/>
+					</pragmas>
+				</Equation>
+				<!-- conv_latitude_str_len = _L151; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="conv_latitude_str_len"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L151"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e2b/63DC/D84/547081a01da8"/>
+					</pragmas>
+				</Equation>
+				<!-- _L150 = latitude_entered; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L150"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="latitude_entered"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e2e/63DC/D84/547081a021fe"/>
+					</pragmas>
+				</Equation>
+				<!-- conv_latitude_entered = _L150; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="conv_latitude_entered"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L150"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e31/63DC/D84/547081a05abc"/>
+					</pragmas>
+				</Equation>
+				<!-- _L151 = latitude_str_len; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L151"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="latitude_str_len"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e32/63DC/D84/547081a03aa1"/>
+					</pragmas>
+				</Equation>
+				<!-- conv_latitude_str = _L148; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="conv_latitude_str"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L148"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e34/63DC/D84/547081a060cd"/>
+					</pragmas>
+				</Equation>
+				<!-- _L152 = longitude_entered; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L152"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="longitude_entered"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e67/63DC/D84/54708a2eb10"/>
+					</pragmas>
+				</Equation>
+				<!-- _L153 = longitude_str; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L153"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="longitude_str"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e74/63DC/D84/54708a35326e"/>
+					</pragmas>
+				</Equation>
+				<!-- _L154 = longitude_str_len; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L154"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="longitude_str_len"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e81/63DC/D84/54708a3b2a8"/>
+					</pragmas>
+				</Equation>
+				<!-- conv_longitude_entered = _L152; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="conv_longitude_entered"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L152"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4e8d/63DC/D84/54708a437b22"/>
+					</pragmas>
+				</Equation>
+				<!-- conv_longitude_str = _L153; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="conv_longitude_str"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L153"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4ea0/63DC/D84/54708a4f2ad9"/>
+					</pragmas>
+				</Equation>
+				<!-- conv_longitude_str_len = _L154; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="conv_longitude_str_len"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L154"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/4eaa/63DC/D84/54708a5d2269"/>
+					</pragmas>
+				</Equation>
 			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/20e2/7EAD/D64/5404b2a84a8f" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -15157,8 +15565,8 @@
 									<positions>
 										<Point x="17939" y="5689"/>
 										<Point x="19738" y="5689"/>
-										<Point x="19738" y="5715"/>
-										<Point x="22093" y="5715"/>
+										<Point x="19738" y="5689"/>
+										<Point x="22093" y="5689"/>
 									</positions>
 								</Edge>
 								<EquationGE presentable="!ed/4b20/2E9E/6B8/5444554911e0">
@@ -15191,6 +15599,150 @@
 										<Point x="20188" y="8467"/>
 										<Point x="20188" y="8943"/>
 										<Point x="22463" y="8943"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/4e29/63DC/D84/547081a04dfa">
+									<position>
+										<Point x="11642" y="12144"/>
+									</position>
+									<size>
+										<Size width="264" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4e2b/63DC/D84/547081a01da8">
+									<position>
+										<Point x="14499" y="13097"/>
+									</position>
+									<size>
+										<Size width="317" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4e2e/63DC/D84/547081a021fe">
+									<position>
+										<Point x="11642" y="11192"/>
+									</position>
+									<size>
+										<Size width="264" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4e31/63DC/D84/547081a05abc">
+									<position>
+										<Point x="14499" y="11192"/>
+									</position>
+									<size>
+										<Size width="317" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4e32/63DC/D84/547081a03aa1">
+									<position>
+										<Point x="11642" y="13097"/>
+									</position>
+									<size>
+										<Size width="264" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4e34/63DC/D84/547081a060cd">
+									<position>
+										<Point x="14499" y="12144"/>
+									</position>
+									<size>
+										<Size width="317" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e32/63DC/D84/547081a03aa1" dstEquation="!ed/4e2b/63DC/D84/547081a01da8">
+									<positions>
+										<Point x="11906" y="13361"/>
+										<Point x="13494" y="13361"/>
+										<Point x="13494" y="13361"/>
+										<Point x="14552" y="13361"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e2e/63DC/D84/547081a021fe" dstEquation="!ed/4e31/63DC/D84/547081a05abc">
+									<positions>
+										<Point x="11906" y="11456"/>
+										<Point x="13547" y="11456"/>
+										<Point x="13547" y="11456"/>
+										<Point x="14552" y="11456"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e29/63DC/D84/547081a04dfa" dstEquation="!ed/4e34/63DC/D84/547081a060cd">
+									<positions>
+										<Point x="11906" y="12409"/>
+										<Point x="13520" y="12409"/>
+										<Point x="13520" y="12409"/>
+										<Point x="14552" y="12409"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/4e67/63DC/D84/54708a2eb10">
+									<position>
+										<Point x="11642" y="14049"/>
+									</position>
+									<size>
+										<Size width="265" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4e74/63DC/D84/54708a35326e">
+									<position>
+										<Point x="11642" y="15002"/>
+									</position>
+									<size>
+										<Size width="264" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4e81/63DC/D84/54708a3b2a8">
+									<position>
+										<Point x="11642" y="15954"/>
+									</position>
+									<size>
+										<Size width="264" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4e8d/63DC/D84/54708a437b22">
+									<position>
+										<Point x="14499" y="14049"/>
+									</position>
+									<size>
+										<Size width="317" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4ea0/63DC/D84/54708a4f2ad9">
+									<position>
+										<Point x="14499" y="15002"/>
+									</position>
+									<size>
+										<Size width="317" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/4eaa/63DC/D84/54708a5d2269">
+									<position>
+										<Point x="14499" y="15954"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e67/63DC/D84/54708a2eb10" dstEquation="!ed/4e8d/63DC/D84/54708a437b22">
+									<positions>
+										<Point x="11906" y="14314"/>
+										<Point x="13229" y="14314"/>
+										<Point x="13229" y="14314"/>
+										<Point x="14552" y="14314"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e74/63DC/D84/54708a35326e" dstEquation="!ed/4ea0/63DC/D84/54708a4f2ad9">
+									<positions>
+										<Point x="11906" y="15266"/>
+										<Point x="13229" y="15266"/>
+										<Point x="13229" y="15266"/>
+										<Point x="14552" y="15266"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e81/63DC/D84/54708a3b2a8" dstEquation="!ed/4eaa/63DC/D84/54708a5d2269">
+									<positions>
+										<Point x="11906" y="16219"/>
+										<Point x="13229" y="16219"/>
+										<Point x="13229" y="16219"/>
+										<Point x="14552" y="16219"/>
 									</positions>
 								</Edge>
 							</presentationElements>
@@ -15812,5 +16364,24 @@
 				<ed:Constant oid="!ed/4d3a/1C7F/860/54447861734a"/>
 			</pragmas>
 		</Constant>
+		<Type name="StringToReal">
+			<definition>
+				<Table>
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="char"/>
+							</type>
+						</NamedType>
+					</type>
+					<size>
+						<ConstValue value="10"/>
+					</size>
+				</Table>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/4d87/63DC/D84/5470804850ef"/>
+			</pragmas>
+		</Type>
 	</declarations>
 </File>

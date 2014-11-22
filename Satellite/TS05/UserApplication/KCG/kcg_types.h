@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -65,10 +65,13 @@ typedef enum {
   SSM_TR_no_trans_Initialization,
   SSM_TR_Off_1_Initialization,
   SSM_TR_Ejected_1_Initialization,
+  SSM_TR_Ejected_2_Initialization,
+  SSM_TR_Ejected_3_Initialization,
   SSM_TR_Initializing_1_Initialization,
   SSM_TR_Initializing_2_Initialization,
   SSM_TR_Initializing_3_Initialization,
-  SSM_TR_Fail_1_Initialization
+  SSM_TR_Fail_1_Initialization,
+  SSM_TR_Fail_2_Initialization
 } SSM_TR_Initialization;
 /* us11::Initialization */
 typedef enum {
@@ -230,6 +233,11 @@ typedef kcg_char array_char_16[16];
 /* String_SS */
 typedef array_char_16 String_SS;
 
+typedef kcg_char array_char_10[10];
+
+/* StringToReal */
+typedef array_char_10 StringToReal;
+
 #ifndef kcg_copy_array_char_14
 #define kcg_copy_array_char_14(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_char_14)))
 #endif /* kcg_copy_array_char_14 */
@@ -237,6 +245,10 @@ typedef array_char_16 String_SS;
 #ifndef kcg_copy_array_char_16
 #define kcg_copy_array_char_16(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_char_16)))
 #endif /* kcg_copy_array_char_16 */
+
+#ifndef kcg_copy_array_char_10
+#define kcg_copy_array_char_10(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_char_10)))
+#endif /* kcg_copy_array_char_10 */
 
 #ifndef kcg_comp_array_char_14
 extern kcg_bool kcg_comp_array_char_14(
@@ -250,6 +262,16 @@ extern kcg_bool kcg_comp_array_char_16(
   array_char_16 *kcg_c2);
 #endif /* kcg_comp_array_char_16 */
 
+#ifndef kcg_comp_array_char_10
+extern kcg_bool kcg_comp_array_char_10(
+  array_char_10 *kcg_c1,
+  array_char_10 *kcg_c2);
+#endif /* kcg_comp_array_char_10 */
+
+#define kcg_comp_StringToReal kcg_comp_array_char_10
+
+#define kcg_copy_StringToReal kcg_copy_array_char_10
+
 #define kcg_comp_String_ES kcg_comp_array_char_14
 
 #define kcg_copy_String_ES kcg_copy_array_char_14
@@ -261,6 +283,6 @@ extern kcg_bool kcg_comp_array_char_16(
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$ */
 

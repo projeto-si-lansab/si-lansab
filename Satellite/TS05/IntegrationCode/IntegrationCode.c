@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #include "CommunicationInterfaces.h"
 #include "IntegrationCode.h"
@@ -11,6 +12,16 @@
 
 operator_input_type ua_inputs;
 operator_output_type ua_outputs;
+
+kcg_bool ejected = FALSE;
+
+/*
+kcg_char latitude_str[11];
+kcg_real cam_latitude = 0.0f;
+
+kcg_char longitude_str[11];
+kcg_real cam_longitude = 0.0f;
+*/
 
 int num_receivers;
 int* receivers;
@@ -34,17 +45,30 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
         switch (message.from) {
         case TS01ID:
             printf("Received: Message from TS01 to TS05 \n");
+            ua_inputs.SAT_Ejection_Signal = input.SAT_Ejection_Signal;
+            if (ua_inputs.SAT_Ejection_Signal)
+                ejected = TRUE;
+            if (!ejected) {
+                ua_inputs.SAT_Altitude_Update = TRUE;
+                ua_inputs.SAT_Altitude_Value = input.SAT_Altitude_Value / 1000.0;
+                ua_inputs.SAT_Latitude_Update = TRUE;
+                ua_inputs.SAT_Latitude_Value = input.SAT_Latitude_Value;
+                ua_inputs.SAT_Longitude_Update = TRUE;
+                ua_inputs.SAT_Longitude_Value = input.SAT_Longitude_Value;
+            }
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS05 \n");
             
             /* US 01 */
-            ua_inputs.SAT_Altitude_Update = input.SAT_Altitude_Update;
-            ua_inputs.SAT_Altitude_Value = input.SAT_Altitude_Value;
-            ua_inputs.SAT_Latitude_Update = input.SAT_Latitude_Update;
-            ua_inputs.SAT_Latitude_Value = input.SAT_Latitude_Value;
-            ua_inputs.SAT_Longitude_Update = input.SAT_Longitude_Update;
-            ua_inputs.SAT_Longitude_Value = input.SAT_Longitude_Value;
+            if (ejected) {
+                ua_inputs.SAT_Altitude_Update = input.SAT_Altitude_Update;
+                ua_inputs.SAT_Altitude_Value = input.SAT_Altitude_Value;
+                ua_inputs.SAT_Latitude_Update = input.SAT_Latitude_Update;
+                ua_inputs.SAT_Latitude_Value = input.SAT_Latitude_Value;
+                ua_inputs.SAT_Longitude_Update = input.SAT_Longitude_Update;
+                ua_inputs.SAT_Longitude_Value = input.SAT_Longitude_Value;
+            }
             ua_inputs.SAT_Period_Update = input.SAT_Period_Update;
             ua_inputs.SAT_Period_Value = input.SAT_Period_Value;
             
@@ -59,7 +83,6 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             ua_inputs.SAT_CameraState_Value = input.SAT_CameraState_Value;
             
             /* US 11 */
-            ua_inputs.SAT_Ejection_Signal = input.SAT_Ejection_Signal;
             ua_inputs.SAT_Initialization_Signal = input.SAT_Initialization_Signal;
             
             /* US 14 */
@@ -74,6 +97,19 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
 			
 			/* US 12 */
 			ua_inputs.cam_picture_loaded = input.cam_picture_loaded;
+			if (ua_inputs.cam_picture_loaded) {
+				pid_t pid = fork();
+				if (pid == 0) {
+					char* args[5];
+					args[0] = "/usr/bin/gimp";
+					args[1] = "-d";
+					args[2] = "-f";
+					args[3] = "-s";
+					args[4] = "http://c.diggita.it/modules/auto_thumb/thumbs/1101682_raspbian_logo_thumb25255B325255D_thumb_big.jpg";
+					execv("/usr/bin/gimp", args);
+					exit(0);
+				}
+			}
 			
             break;
         case TS04ID:
@@ -102,6 +138,7 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
     case TS03ID:
         printf("Sent: Message from TS05 to TS03 \n");
         TS03_INPUT_INTERFACE *output3 = &(message->input_interface.ts03_input_interface);
+		output3->TakePicture = ua_outputs.cam_take_picture;
         /*output->SignalFromTeam5 = ua_outputs.SignalToTeam3;*/
         break;
     case TS04ID:
@@ -127,8 +164,33 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         output5t->SAT_CameraState_ToggleTo = ua_outputs.SAT_CameraState_ToggleTo;
         
         /* US 11 */
-        output5t->SAT_Initialize = ua_outputs.SAT_Initialize;
-        
+		/* This code is unused due to TS03 bitching around... */
+		/*
+        if (ua_outputs.conv_latitude_entered) {
+			int i = 1;
+			while (i < ua_outputs.conv_latitude_str_len - 1) {
+				latitude_str[i-1] = ua_outputs.conv_latitude_str[i];
+				i++;
+			}
+			latitude_str[i] = '\0';
+			cam_latitude = atof(latitude_str);
+			if (ua_outputs.conv_latitude_str[0] == '-')
+				cam_latitude = -cam_latitude;
+		}
+        if (ua_outputs.conv_longitude_entered) {
+			int i = 1;
+			while (i < ua_outputs.conv_longitude_str_len - 1) {
+				longitude_str[i-1] = ua_outputs.conv_longitude_str[i];
+				i++;
+			}
+			longitude_str[i] = '\0';
+			cam_longitude = atof(longitude_str);
+			if (ua_outputs.conv_longitude_str[0] == '-')
+				cam_longitude = -cam_longitude;
+			printf("%g", cam_longitude);
+		}
+		*/
+		
 		/* US12 */
 		output5t->cam_take_picture = ua_outputs.cam_take_picture;
 		

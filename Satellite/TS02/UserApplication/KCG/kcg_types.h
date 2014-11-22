@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Embraer ITA/Doutorado/Projetos/TS02_2Sprint_v9/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-22T21:13:07
+** Command: s2c613 -config C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-18T21:38:59
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -70,31 +70,28 @@ typedef enum {
   SSM_st_AttitudeAcquisition_OpPhases,
   SSM_st_NormalPhase_OpPhases
 } SSM_ST_OpPhases;
-/* fr */
-typedef kcg_real fr;
-
-typedef struct { kcg_int k; kcg_real f; } struct__5854;
+typedef struct { kcg_int k; kcg_real f; } struct__5258;
 
 /* lut::LutIndex */
-typedef struct__5854 LutIndex_lut;
+typedef struct__5258 LutIndex_lut;
 
-#ifndef kcg_copy_struct__5854
-#define kcg_copy_struct__5854(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5854)))
-#endif /* kcg_copy_struct__5854 */
+#ifndef kcg_copy_struct__5258
+#define kcg_copy_struct__5258(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5258)))
+#endif /* kcg_copy_struct__5258 */
 
-#ifndef kcg_comp_struct__5854
-extern kcg_bool kcg_comp_struct__5854(
-  struct__5854 *kcg_c1,
-  struct__5854 *kcg_c2);
-#endif /* kcg_comp_struct__5854 */
+#ifndef kcg_comp_struct__5258
+extern kcg_bool kcg_comp_struct__5258(
+  struct__5258 *kcg_c1,
+  struct__5258 *kcg_c2);
+#endif /* kcg_comp_struct__5258 */
 
-#define kcg_comp_LutIndex_lut kcg_comp_struct__5854
+#define kcg_comp_LutIndex_lut kcg_comp_struct__5258
 
-#define kcg_copy_LutIndex_lut kcg_copy_struct__5854
+#define kcg_copy_LutIndex_lut kcg_copy_struct__5258
 
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2014-11-22T21:13:07
+** Generation date: 2014-11-18T21:38:59
 *************************************************************$ */
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -950,6 +950,8 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
   /* us11::Initialization */ SSM_TR_Initialization _72_Initialization_fired_strong_2;
   /* us11::Initialization */ kcg_bool _71_Initialization_reset_act_2;
   /* us11::Initialization */ SSM_ST_Initialization _70_Initialization_state_act_2;
+  /* us11::Initialization::Ejected */ kcg_bool br_3_guard_2_Initialization_Ejected;
+  /* us11::Initialization::Ejected */ kcg_bool br_2_guard_2_Initialization_Ejected;
   /* us11::Initialization::Ejected */ kcg_bool br_1_guard_2_Initialization_Ejected;
   /* us11::Initialization */ SSM_TR_Initialization _69_Initialization_fired_strong_2;
   /* us11::Initialization */ kcg_bool _68_Initialization_reset_act_2;
@@ -962,6 +964,7 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
   /* us11::Initialization */ SSM_TR_Initialization _63_Initialization_fired_strong_2;
   /* us11::Initialization */ kcg_bool Initialization_reset_act_2;
   /* us11::Initialization */ SSM_ST_Initialization _62_Initialization_state_act_2;
+  /* us11::Initialization::Fail */ kcg_bool br_2_guard_2_Initialization_Fail;
   /* us11::Initialization::Fail */ kcg_bool br_1_guard_2_Initialization_Fail;
   /* us11::Initialization */ SSM_ST_Initialization Initialization_state_sel_2;
   /* us11::Initialization */ SSM_ST_Initialization Initialization_state_act_2;
@@ -1498,6 +1501,12 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
   /* ts05::_L141 */ kcg_bool _L141;
   /* ts05::_L142 */ kcg_int _L142;
   /* ts05::_L143 */ kcg_bool _L143;
+  /* ts05::_L151 */ kcg_int _L151;
+  /* ts05::_L150 */ kcg_bool _L150;
+  /* ts05::_L148 */ StringToReal _L148;
+  /* ts05::_L152 */ kcg_bool _L152;
+  /* ts05::_L153 */ StringToReal _L153;
+  /* ts05::_L154 */ kcg_int _L154;
   
   if (outC->init3) {
     SM1_state_sel_1 = SSM_st_Funcionando_SM1;
@@ -1586,25 +1595,6 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
   else {
     Initialization_state_sel_2 = outC->Initialization_state_nxt_2;
   }
-  _L36 = inC->CDS_SS_InitializationButton_Pressed;
-  CDS_SS_InitializationButton_Pressed_2 = _L36;
-  _L88_2 = CDS_SS_InitializationButton_Pressed_2;
-  Initialize_2 = _L88_2;
-  switch (Initialization_state_sel_2) {
-    case SSM_st_Initialized_Initialization :
-      _64_Initialization_state_act_2 = SSM_st_Initialized_Initialization;
-      break;
-    case SSM_st_Fail_Initialization :
-      br_1_guard_2_Initialization_Fail = Initialize_2;
-      if (br_1_guard_2_Initialization_Fail) {
-        _62_Initialization_state_act_2 = SSM_st_Initializing_Initialization;
-      }
-      else {
-        _62_Initialization_state_act_2 = SSM_st_Fail_Initialization;
-      }
-      break;
-    
-  }
   if (outC->init3) {
     DebugOrDeploy_state_sel = SSM_st_Debug_DebugOrDeploy;
   }
@@ -1681,8 +1671,30 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
   }
   Success_2 = _L95_2;
   switch (Initialization_state_sel_2) {
-    case SSM_st_Initializing_Initialization :
-      br_1_guard_2_Initialization_Initializing = Success_2;
+    case SSM_st_Fail_Initialization :
+      br_1_guard_2_Initialization_Fail = Success_2;
+      break;
+    
+  }
+  _L36 = inC->CDS_SS_InitializationButton_Pressed;
+  CDS_SS_InitializationButton_Pressed_2 = _L36;
+  _L88_2 = CDS_SS_InitializationButton_Pressed_2;
+  Initialize_2 = _L88_2;
+  switch (Initialization_state_sel_2) {
+    case SSM_st_Initialized_Initialization :
+      _64_Initialization_state_act_2 = SSM_st_Initialized_Initialization;
+      break;
+    case SSM_st_Fail_Initialization :
+      br_2_guard_2_Initialization_Fail = Initialize_2;
+      if (br_1_guard_2_Initialization_Fail) {
+        _62_Initialization_state_act_2 = SSM_st_Initialized_Initialization;
+      }
+      else if (br_2_guard_2_Initialization_Fail) {
+        _62_Initialization_state_act_2 = SSM_st_Initializing_Initialization;
+      }
+      else {
+        _62_Initialization_state_act_2 = SSM_st_Fail_Initialization;
+      }
       break;
     
   }
@@ -1697,8 +1709,16 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
   Fail_2 = _L97_2;
   switch (Initialization_state_sel_2) {
     case SSM_st_Ejected_Initialization :
-      br_1_guard_2_Initialization_Ejected = Initialize_2;
+      br_1_guard_2_Initialization_Ejected = Fail_2;
+      br_2_guard_2_Initialization_Ejected = Success_2;
+      br_3_guard_2_Initialization_Ejected = Initialize_2;
       if (br_1_guard_2_Initialization_Ejected) {
+        _70_Initialization_state_act_2 = SSM_st_Fail_Initialization;
+      }
+      else if (br_2_guard_2_Initialization_Ejected) {
+        _70_Initialization_state_act_2 = SSM_st_Initialized_Initialization;
+      }
+      else if (br_3_guard_2_Initialization_Ejected) {
         _70_Initialization_state_act_2 = SSM_st_Initializing_Initialization;
       }
       else {
@@ -1706,12 +1726,13 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
       }
       break;
     case SSM_st_Initializing_Initialization :
-      br_2_guard_2_Initialization_Initializing = Fail_2;
+      br_1_guard_2_Initialization_Initializing = Fail_2;
+      br_2_guard_2_Initialization_Initializing = Success_2;
       if (br_1_guard_2_Initialization_Initializing) {
-        _67_Initialization_state_act_2 = SSM_st_Initialized_Initialization;
+        _67_Initialization_state_act_2 = SSM_st_Fail_Initialization;
       }
       else if (br_2_guard_2_Initialization_Initializing) {
-        _67_Initialization_state_act_2 = SSM_st_Fail_Initialization;
+        _67_Initialization_state_act_2 = SSM_st_Initialized_Initialization;
       }
       else {
         _67_Initialization_state_act_2 = SSM_st_Initializing_Initialization;
@@ -1773,7 +1794,15 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
       outC->Initialization_reset_act_2 = _74_Initialization_reset_act_2;
       break;
     case SSM_st_Ejected_Initialization :
-      _71_Initialization_reset_act_2 = br_1_guard_2_Initialization_Ejected;
+      if (br_1_guard_2_Initialization_Ejected) {
+        _71_Initialization_reset_act_2 = kcg_true;
+      }
+      else if (br_2_guard_2_Initialization_Ejected) {
+        _71_Initialization_reset_act_2 = kcg_true;
+      }
+      else {
+        _71_Initialization_reset_act_2 = br_3_guard_2_Initialization_Ejected;
+      }
       outC->Initialization_reset_act_2 = _71_Initialization_reset_act_2;
       break;
     case SSM_st_Initializing_Initialization :
@@ -1791,7 +1820,12 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
       outC->Initialization_reset_act_2 = _65_Initialization_reset_act_2;
       break;
     case SSM_st_Fail_Initialization :
-      Initialization_reset_act_2 = br_1_guard_2_Initialization_Fail;
+      if (br_1_guard_2_Initialization_Fail) {
+        Initialization_reset_act_2 = kcg_true;
+      }
+      else {
+        Initialization_reset_act_2 = br_2_guard_2_Initialization_Fail;
+      }
       outC->Initialization_reset_act_2 = Initialization_reset_act_2;
       break;
     
@@ -4079,6 +4113,18 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
     
   }
   _L107 = _447_CDS_ES_GyroscopeButton_Contour_1;
+  _L154 = inC->longitude_str_len;
+  outC->conv_longitude_str_len = _L154;
+  kcg_copy_StringToReal(&_L153, &inC->longitude_str);
+  kcg_copy_StringToReal(&outC->conv_longitude_str, &_L153);
+  _L152 = inC->longitude_entered;
+  outC->conv_longitude_entered = _L152;
+  kcg_copy_StringToReal(&_L148, &inC->latitude_str);
+  kcg_copy_StringToReal(&outC->conv_latitude_str, &_L148);
+  _L151 = inC->latitude_str_len;
+  _L150 = inC->latitude_entered;
+  outC->conv_latitude_entered = _L150;
+  outC->conv_latitude_str_len = _L151;
   outC->SAT_Fix_Equipments = _L141;
   outC->CDS_AutoVerifyButton_Enabled = _L142;
   outC->SAT_Auto_Verify = _L140;
@@ -4164,7 +4210,7 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
   outC->display_load_picture_enabled = _L101;
   switch (SM1_state_act_1) {
     case SSM_st_Validando_SM1 :
-      _L17_1_SM1_Validando = CDS_COLOR_GREEN;
+      _L17_1_SM1_Validando = CDS_COLOR_YELLOW;
       _151_display_load_picture_btn_border_1 = _L17_1_SM1_Validando;
       _163_display_load_picture_btn_border_1 =
         _151_display_load_picture_btn_border_1;
@@ -4761,6 +4807,12 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
       if (br_1_guard_2_Initialization_Ejected) {
         _72_Initialization_fired_strong_2 = SSM_TR_Ejected_1_Initialization;
       }
+      else if (br_2_guard_2_Initialization_Ejected) {
+        _72_Initialization_fired_strong_2 = SSM_TR_Ejected_2_Initialization;
+      }
+      else if (br_3_guard_2_Initialization_Ejected) {
+        _72_Initialization_fired_strong_2 = SSM_TR_Ejected_3_Initialization;
+      }
       else {
         _72_Initialization_fired_strong_2 = SSM_TR_no_trans_Initialization;
       }
@@ -4787,6 +4839,9 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
     case SSM_st_Fail_Initialization :
       if (br_1_guard_2_Initialization_Fail) {
         _63_Initialization_fired_strong_2 = SSM_TR_Fail_1_Initialization;
+      }
+      else if (br_2_guard_2_Initialization_Fail) {
+        _63_Initialization_fired_strong_2 = SSM_TR_Fail_2_Initialization;
       }
       else {
         _63_Initialization_fired_strong_2 = SSM_TR_no_trans_Initialization;
@@ -4916,7 +4971,7 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
   }
   switch (SM1_state_act_1) {
     case SSM_st_Validando_SM1 :
-      IncAt_1_1 = 1;
+      IncAt_1_1 = 600;
       break;
     
   }
@@ -4991,7 +5046,7 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
       }
       Count_2_1_1 = outC->_L1_2_1_1;
       _159__L6_1_1 = Count_2_1_1;
-      ResetAt_1_1 = 600;
+      ResetAt_1_1 = 6000;
       _158__L11_1_1 = ResetAt_1_1;
       _L3_1_1 = _159__L6_1_1 % _158__L11_1_1;
       _L4_1_1 = (kcg_real) _L3_1_1;
@@ -5001,7 +5056,7 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
       _160__L5_1_1 = (kcg_int) _L1_1_1;
       outC->Count_1_1 = _160__L5_1_1;
       _L2_1_SM1_Validando = outC->Count_1_1;
-      _L5_1_SM1_Validando = 60;
+      _L5_1_SM1_Validando = 8;
       _L10_1_SM1_Validando = _L2_1_SM1_Validando >= _L5_1_SM1_Validando;
       _L13_1_SM1_Validando = kcg_true;
       _L14_1_SM1_Validando = kcg_false;
@@ -6131,6 +6186,6 @@ void ts05(inC_ts05 *inC, outC_ts05 *outC)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ts05.c
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$ */
 

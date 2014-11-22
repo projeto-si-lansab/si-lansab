@@ -106,6 +106,10 @@ String_SS = char ^CDS_TEXT_SS_STR_SIZE;
 #end
 
 String_ES = char ^CDS_TEXT_ES_STR_SIZE;
+   #pragma ed <Type oid="!ed/4d87/63DC/D84/5470804850ef"/>
+#end
+
+StringToReal = char ^10;
 
 node #pragma ed <Operator oid="!ed/20e2/7EAD/D64/5404b2a84a8f">
 	<diagrams>
@@ -1592,8 +1596,8 @@ node #pragma ed <Operator oid="!ed/20e2/7EAD/D64/5404b2a84a8f">
 					<positions>
 						<Point x="17939" y="5689"/>
 						<Point x="19738" y="5689"/>
-						<Point x="19738" y="5715"/>
-						<Point x="22093" y="5715"/>
+						<Point x="19738" y="5689"/>
+						<Point x="22093" y="5689"/>
 					</positions>
 				</Edge>
 				<EquationGE presentable="!ed/4b20/2E9E/6B8/5444554911e0">
@@ -1626,6 +1630,150 @@ node #pragma ed <Operator oid="!ed/20e2/7EAD/D64/5404b2a84a8f">
 						<Point x="20188" y="8467"/>
 						<Point x="20188" y="8943"/>
 						<Point x="22463" y="8943"/>
+					</positions>
+				</Edge>
+				<EquationGE presentable="!ed/4e29/63DC/D84/547081a04dfa">
+					<position>
+						<Point x="11642" y="12144"/>
+					</position>
+					<size>
+						<Size width="264" height="503"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4e2b/63DC/D84/547081a01da8">
+					<position>
+						<Point x="14499" y="13097"/>
+					</position>
+					<size>
+						<Size width="317" height="503"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4e2e/63DC/D84/547081a021fe">
+					<position>
+						<Point x="11642" y="11192"/>
+					</position>
+					<size>
+						<Size width="264" height="502"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4e31/63DC/D84/547081a05abc">
+					<position>
+						<Point x="14499" y="11192"/>
+					</position>
+					<size>
+						<Size width="317" height="502"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4e32/63DC/D84/547081a03aa1">
+					<position>
+						<Point x="11642" y="13097"/>
+					</position>
+					<size>
+						<Size width="264" height="503"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4e34/63DC/D84/547081a060cd">
+					<position>
+						<Point x="14499" y="12144"/>
+					</position>
+					<size>
+						<Size width="317" height="503"/>
+					</size>
+				</EquationGE>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e32/63DC/D84/547081a03aa1" dstEquation="!ed/4e2b/63DC/D84/547081a01da8">
+					<positions>
+						<Point x="11906" y="13361"/>
+						<Point x="13494" y="13361"/>
+						<Point x="13494" y="13361"/>
+						<Point x="14552" y="13361"/>
+					</positions>
+				</Edge>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e2e/63DC/D84/547081a021fe" dstEquation="!ed/4e31/63DC/D84/547081a05abc">
+					<positions>
+						<Point x="11906" y="11456"/>
+						<Point x="13547" y="11456"/>
+						<Point x="13547" y="11456"/>
+						<Point x="14552" y="11456"/>
+					</positions>
+				</Edge>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e29/63DC/D84/547081a04dfa" dstEquation="!ed/4e34/63DC/D84/547081a060cd">
+					<positions>
+						<Point x="11906" y="12409"/>
+						<Point x="13520" y="12409"/>
+						<Point x="13520" y="12409"/>
+						<Point x="14552" y="12409"/>
+					</positions>
+				</Edge>
+				<EquationGE presentable="!ed/4e67/63DC/D84/54708a2eb10">
+					<position>
+						<Point x="11642" y="14049"/>
+					</position>
+					<size>
+						<Size width="265" height="502"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4e74/63DC/D84/54708a35326e">
+					<position>
+						<Point x="11642" y="15002"/>
+					</position>
+					<size>
+						<Size width="264" height="503"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4e81/63DC/D84/54708a3b2a8">
+					<position>
+						<Point x="11642" y="15954"/>
+					</position>
+					<size>
+						<Size width="264" height="502"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4e8d/63DC/D84/54708a437b22">
+					<position>
+						<Point x="14499" y="14049"/>
+					</position>
+					<size>
+						<Size width="317" height="503"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4ea0/63DC/D84/54708a4f2ad9">
+					<position>
+						<Point x="14499" y="15002"/>
+					</position>
+					<size>
+						<Size width="317" height="503"/>
+					</size>
+				</EquationGE>
+				<EquationGE presentable="!ed/4eaa/63DC/D84/54708a5d2269">
+					<position>
+						<Point x="14499" y="15954"/>
+					</position>
+					<size>
+						<Size width="318" height="503"/>
+					</size>
+				</EquationGE>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e67/63DC/D84/54708a2eb10" dstEquation="!ed/4e8d/63DC/D84/54708a437b22">
+					<positions>
+						<Point x="11906" y="14314"/>
+						<Point x="13229" y="14314"/>
+						<Point x="13229" y="14314"/>
+						<Point x="14552" y="14314"/>
+					</positions>
+				</Edge>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e74/63DC/D84/54708a35326e" dstEquation="!ed/4ea0/63DC/D84/54708a4f2ad9">
+					<positions>
+						<Point x="11906" y="15266"/>
+						<Point x="13229" y="15266"/>
+						<Point x="13229" y="15266"/>
+						<Point x="14552" y="15266"/>
+					</positions>
+				</Edge>
+				<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/4e81/63DC/D84/54708a3b2a8" dstEquation="!ed/4eaa/63DC/D84/54708a5d2269">
+					<positions>
+						<Point x="11906" y="16219"/>
+						<Point x="13229" y="16219"/>
+						<Point x="13229" y="16219"/>
+						<Point x="14552" y="16219"/>
 					</positions>
 				</Edge>
 			</presentationElements>
@@ -1886,7 +2034,31 @@ SAT_Initialization_Signal : int;
       #pragma ed    <Variable oid="!ed/4cae/7E76/1D94/5444bb077763"/>
 #end
 
-SAT_Fix_Response : bool)
+SAT_Fix_Response : bool; 
+      #pragma ed    <Variable oid="!ed/4e24/63DC/D84/547081a01c4c"/>
+#end
+
+latitude_entered : bool; 
+      #pragma ed    <Variable oid="!ed/4e23/63DC/D84/547081a07840"/>
+#end
+
+latitude_str_len : int; 
+      #pragma ed    <Variable oid="!ed/4e21/63DC/D84/547081a068a4"/>
+#end
+
+latitude_str : StringToReal; 
+      #pragma ed    <Variable oid="!ed/4e66/63DC/D84/54708a2e78e2"/>
+#end
+
+longitude_entered : bool; 
+      #pragma ed    <Variable oid="!ed/4e73/63DC/D84/54708a3538b7"/>
+#end
+
+longitude_str : StringToReal; 
+      #pragma ed    <Variable oid="!ed/4e80/63DC/D84/54708a3b5b63"/>
+#end
+
+longitude_str_len : int)
 returns (
       #pragma ed    <Variable oid="!ed/2117/7EAD/D64/5404b3963a3e"/>
 #end
@@ -2119,7 +2291,31 @@ CDS_AutoVerifyButton_Enabled : int;
       #pragma ed    <Variable oid="!ed/4beb/5212/25AC/5444b04b57bd"/>
 #end
 
-SAT_Fix_Equipments : bool)
+SAT_Fix_Equipments : bool; 
+      #pragma ed    <Variable oid="!ed/4e27/63DC/D84/547081a0360a"/>
+#end
+
+conv_latitude_str_len : int; 
+      #pragma ed    <Variable oid="!ed/4e26/63DC/D84/547081a07599"/>
+#end
+
+conv_latitude_str : StringToReal; 
+      #pragma ed    <Variable oid="!ed/4e25/63DC/D84/547081a07271"/>
+#end
+
+conv_latitude_entered : bool; 
+      #pragma ed    <Variable oid="!ed/4e8c/63DC/D84/54708a4325d9"/>
+#end
+
+conv_longitude_entered : bool; 
+      #pragma ed    <Variable oid="!ed/4e9f/63DC/D84/54708a4f24dd"/>
+#end
+
+conv_longitude_str : StringToReal; 
+      #pragma ed    <Variable oid="!ed/4ea9/63DC/D84/54708a5d11fd"/>
+#end
+
+conv_longitude_str_len : int)
 var
       #pragma ed    <Variable oid="!ed/4c18/19ED/1BEC/540cd119498c"/>
 #end
@@ -2585,6 +2781,30 @@ _L142 : int;
 #end
 
 _L143 : bool;
+      #pragma ed    <Variable oid="!ed/4e33/63DC/D84/547081a01cf8"/>
+#end
+
+_L151 : int;
+      #pragma ed    <Variable oid="!ed/4e2f/63DC/D84/547081a05f87"/>
+#end
+
+_L150 : bool;
+      #pragma ed    <Variable oid="!ed/4e2a/63DC/D84/547081a03b3b"/>
+#end
+
+_L148 : StringToReal;
+      #pragma ed    <Variable oid="!ed/4e68/63DC/D84/54708a2e76f5"/>
+#end
+
+_L152 : bool;
+      #pragma ed    <Variable oid="!ed/4e75/63DC/D84/54708a352d4"/>
+#end
+
+_L153 : StringToReal;
+      #pragma ed    <Variable oid="!ed/4e82/63DC/D84/54708a3b2d3c"/>
+#end
+
+_L154 : int;
 let
    #pragma ed    <Equation oid="!ed/20eb/7EAD/D64/5404b34731dd"/>
 #end
@@ -7626,6 +7846,54 @@ _L111 : int;
 #end
 
    _L143 = SAT_Fix_Response;
+   #pragma ed    <Equation oid="!ed/4e29/63DC/D84/547081a04dfa"/>
+#end
+
+   _L148 = latitude_str;
+   #pragma ed    <Equation oid="!ed/4e2b/63DC/D84/547081a01da8"/>
+#end
+
+   conv_latitude_str_len = _L151;
+   #pragma ed    <Equation oid="!ed/4e2e/63DC/D84/547081a021fe"/>
+#end
+
+   _L150 = latitude_entered;
+   #pragma ed    <Equation oid="!ed/4e31/63DC/D84/547081a05abc"/>
+#end
+
+   conv_latitude_entered = _L150;
+   #pragma ed    <Equation oid="!ed/4e32/63DC/D84/547081a03aa1"/>
+#end
+
+   _L151 = latitude_str_len;
+   #pragma ed    <Equation oid="!ed/4e34/63DC/D84/547081a060cd"/>
+#end
+
+   conv_latitude_str = _L148;
+   #pragma ed    <Equation oid="!ed/4e67/63DC/D84/54708a2eb10"/>
+#end
+
+   _L152 = longitude_entered;
+   #pragma ed    <Equation oid="!ed/4e74/63DC/D84/54708a35326e"/>
+#end
+
+   _L153 = longitude_str;
+   #pragma ed    <Equation oid="!ed/4e81/63DC/D84/54708a3b2a8"/>
+#end
+
+   _L154 = longitude_str_len;
+   #pragma ed    <Equation oid="!ed/4e8d/63DC/D84/54708a437b22"/>
+#end
+
+   conv_longitude_entered = _L152;
+   #pragma ed    <Equation oid="!ed/4ea0/63DC/D84/54708a4f2ad9"/>
+#end
+
+   conv_longitude_str = _L153;
+   #pragma ed    <Equation oid="!ed/4eaa/63DC/D84/54708a5d2269"/>
+#end
+
+   conv_longitude_str_len = _L154;
 tel
 
 node #pragma ed <Operator oid="!ed/21e1/7EAD/D64/5404b6c77408">
@@ -9696,10 +9964,10 @@ node #pragma ed <Operator oid="!ed/3c98/3FE3/1B00/5405162c7e87">
 						<Size width="1640" height="318"/>
 					</labelSize>
 					<labelPos>
-						<Point x="14605" y="15715"/>
+						<Point x="14155" y="15292"/>
 					</labelPos>
 					<slashPos>
-						<Point x="15452" y="15716"/>
+						<Point x="15002" y="15293"/>
 					</slashPos>
 				</TransitionGE>
 				<EquationGE presentable="!ed/4085/19ED/1BEC/540cbc0b54c4">
@@ -9918,6 +10186,57 @@ node #pragma ed <Operator oid="!ed/3c98/3FE3/1B00/5405162c7e87">
 						<Point x="14102" y="3810"/>
 					</positions>
 				</Edge>
+				<TransitionGE presentable="!ed/4c52/63DC/D84/5470799f774b">
+					<positions>
+						<Point x="11721" y="12330"/>
+						<Point x="12726" y="10821"/>
+						<Point x="14764" y="10292"/>
+						<Point x="17859" y="10689"/>
+					</positions>
+					<labelSize>
+						<Size width="1931" height="318"/>
+					</labelSize>
+					<labelPos>
+						<Point x="12409" y="10213"/>
+					</labelPos>
+					<slashPos>
+						<Point x="13547" y="10213"/>
+					</slashPos>
+				</TransitionGE>
+				<TransitionGE presentable="!ed/4c69/63DC/D84/54707b4b1c83">
+					<positions>
+						<Point x="12065" y="14102"/>
+						<Point x="13176" y="15849"/>
+						<Point x="15134" y="16457"/>
+						<Point x="17939" y="15981"/>
+					</positions>
+					<labelSize>
+						<Size width="1535" height="370"/>
+					</labelSize>
+					<labelPos>
+						<Point x="11456" y="15558"/>
+					</labelPos>
+					<slashPos>
+						<Point x="12197" y="15558"/>
+					</slashPos>
+				</TransitionGE>
+				<TransitionGE presentable="!ed/4c96/63DC/D84/54707c023035">
+					<positions>
+						<Point x="19209" y="14288"/>
+						<Point x="19209" y="13547"/>
+						<Point x="19209" y="12806"/>
+						<Point x="19209" y="12012"/>
+					</positions>
+					<labelSize>
+						<Size width="1984" height="635"/>
+					</labelSize>
+					<labelPos>
+						<Point x="17992" y="12965"/>
+					</labelPos>
+					<slashPos>
+						<Point x="19182" y="12965"/>
+					</slashPos>
+				</TransitionGE>
 			</presentationElements>
 		</NetDiagram>
 	</diagrams>
@@ -10345,6 +10664,16 @@ _L14 : bool;
 
 Ejected
       unless
+         #pragma ed          <Transition oid="!ed/4c69/63DC/D84/54707b4b1c83"/>
+#end
+
+         if Fail
+            restart Fail;
+         #pragma ed          <Transition oid="!ed/4c52/63DC/D84/5470799f774b"/>
+#end
+
+         if Success
+            restart Initialized;
          #pragma ed          <Transition oid="!ed/3e6e/19ED/1BEC/540cb3d46345"/>
 #end
 
@@ -10620,16 +10949,16 @@ _L10 : bool;
 
 Initializing
       unless
-         #pragma ed          <Transition oid="!ed/3e8d/19ED/1BEC/540cb3d47372"/>
-#end
-
-         if Success do 
-            restart Initialized;
          #pragma ed          <Transition oid="!ed/4191/19ED/1BEC/540cbe7847cf"/>
 #end
 
          if Fail
             restart Fail;
+         #pragma ed          <Transition oid="!ed/3e8d/19ED/1BEC/540cb3d47372"/>
+#end
+
+         if Success do 
+            restart Initialized;
 
       var
                   #pragma ed          <Variable oid="!ed/460e/19ED/1BEC/540cc4d94107"/>
@@ -11059,6 +11388,11 @@ _L6 : bool;
 
 Fail
       unless
+         #pragma ed          <Transition oid="!ed/4c96/63DC/D84/54707c023035"/>
+#end
+
+         if Success
+            restart Initialized;
          #pragma ed          <Transition oid="!ed/41b8/19ED/1BEC/540cbec43dfe"/>
 #end
 
@@ -12177,11 +12511,11 @@ _L19 : int;
          #pragma ed          <Equation oid="!ed/4af6/2B06/650/54442d604aa7"/>
 #end
 
-         _L2 =  #1 TimedSwitcher(600, 1);
+         _L2 =  #1 TimedSwitcher(6000, 600);
          #pragma ed          <Equation oid="!ed/4b98/2B06/650/54442dd95946"/>
 #end
 
-         _L5 = 60;
+         _L5 = 8;
          #pragma ed          <Equation oid="!ed/4ca2/2B06/650/54442f264e23"/>
 #end
 
@@ -12205,7 +12539,7 @@ _L19 : int;
          #pragma ed          <Equation oid="!ed/4bd1/6453/A74/54444db671ca"/>
 #end
 
-         _L17 = CDS_COLOR_GREEN;
+         _L17 = CDS_COLOR_YELLOW;
          #pragma ed          <Equation oid="!ed/4bd3/6453/A74/54444db651d5"/>
 #end
 

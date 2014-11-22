@@ -7,11 +7,11 @@
 
 
 void AfterSimInit(void){
-	A661SetServerPath("D:/Programas/SCADE/SCADE/bin/../../SCADE A661/bin/A661Server.exe");
+	A661SetServerPath("C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/bin/../../SCADE A661/bin/A661Server.exe");
 	#ifdef A661_LOGFILE
 	A661SetLogFile(A661_LOGFILE);
 	#endif
-	A661ConnectServer("127.0.0.1", 1231, "D:/Embraer ITA/Doutorado/Projetos/TS02_2Sprint_v9/TS02_2Sprint/UserApplication/KCG/OperationalScenario_UA_1.bin", "D:/Embraer ITA/Doutorado/Projetos/TS02_2Sprint_v9/TS02_2Sprint/UserApplication/KCG/OperationalScenario_UA_1_conf.xml" );
+	A661ConnectServer("127.0.0.1", 1231, "C:/github/si-lansab/Satellite/TS02/UserApplication/KCG/OperationalScenario_UA_1.bin", "C:/github/si-lansab/Satellite/TS02/UserApplication/KCG/OperationalScenario_UA_1_conf.xml" );
 }
 
 

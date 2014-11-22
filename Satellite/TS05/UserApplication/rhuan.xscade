@@ -243,13 +243,13 @@
 								</Variable>
 							</locals>
 							<data>
-								<!-- _L2 = TimedSwitcher(600, 1); -->
+								<!-- _L2 = TimedSwitcher(6000, 600); -->
 								<Equation>
 									<lefts>
 										<VariableRef name="_L2"/>
 									</lefts>
 									<right>
-										<!-- TimedSwitcher(600, 1) -->
+										<!-- TimedSwitcher(6000, 600) -->
 										<CallExpression>
 											<operator>
 												<OpCall name="1">
@@ -259,8 +259,8 @@
 												</OpCall>
 											</operator>
 											<callParameters>
+												<ConstValue value="6000"/>
 												<ConstValue value="600"/>
-												<ConstValue value="1"/>
 											</callParameters>
 										</CallExpression>
 									</right>
@@ -268,13 +268,13 @@
 										<ed:Equation oid="!ed/4af6/2B06/650/54442d604aa7"/>
 									</pragmas>
 								</Equation>
-								<!-- _L5 = 60; -->
+								<!-- _L5 = 8; -->
 								<Equation>
 									<lefts>
 										<VariableRef name="_L5"/>
 									</lefts>
 									<right>
-										<ConstValue value="60"/>
+										<ConstValue value="8"/>
 									</right>
 									<pragmas>
 										<ed:Equation oid="!ed/4b98/2B06/650/54442dd95946"/>
@@ -389,7 +389,7 @@
 										<ed:Equation oid="!ed/4bd0/6453/A74/54444db6570f"/>
 									</pragmas>
 								</Equation>
-								<!-- _L17 = CDS_COLOR_GREEN; -->
+								<!-- _L17 = CDS_COLOR_YELLOW; -->
 								<Equation>
 									<lefts>
 										<VariableRef name="_L17"/>
@@ -397,7 +397,7 @@
 									<right>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="CDS_COLOR_GREEN"/>
+												<ConstVarRef name="CDS_COLOR_YELLOW"/>
 											</path>
 										</IdExpression>
 									</right>
