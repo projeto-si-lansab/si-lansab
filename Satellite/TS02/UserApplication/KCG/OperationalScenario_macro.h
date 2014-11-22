@@ -73,6 +73,12 @@ typedef struct {
 #define VARC_OperationalScenario_Gyroscopes(context) context.SAO_CTX_inC_OperationalScenario.Gyroscopes  /* OperationalScenario/Gyroscopes */
 #define VAR_OperationalScenario_Gyroscopes VARC_OperationalScenario_Gyroscopes(CTX_OperationalScenario)
 
+#define VARC_OperationalScenario_Input13(context) context.SAO_CTX_inC_OperationalScenario.Input13  /* OperationalScenario/Input13 */
+#define VAR_OperationalScenario_Input13 VARC_OperationalScenario_Input13(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_EjectionSignal(context) context.SAO_CTX_inC_OperationalScenario.EjectionSignal  /* OperationalScenario/EjectionSignal */
+#define VAR_OperationalScenario_EjectionSignal VARC_OperationalScenario_EjectionSignal(CTX_OperationalScenario)
+
 
 /*$**********************************************************
 *                           OUTPUTS
@@ -126,6 +132,43 @@ typedef struct {
 #define VARC_OperationalScenario_FuelMeterGraphic(context) context.SAO_CTX_outC_OperationalScenario.FuelMeterGraphic  /* OperationalScenario/FuelMeterGraphic */
 #define VAR_OperationalScenario_FuelMeterGraphic VARC_OperationalScenario_FuelMeterGraphic(CTX_OperationalScenario)
 
+#define VARC_OperationalScenario_SAT_Longitude_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Longitude_Value  /* OperationalScenario/SAT_Longitude_Value */
+#define VAR_OperationalScenario_SAT_Longitude_Value VARC_OperationalScenario_SAT_Longitude_Value(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SAT_Latitude_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Latitude_Value  /* OperationalScenario/SAT_Latitude_Value */
+#define VAR_OperationalScenario_SAT_Latitude_Value VARC_OperationalScenario_SAT_Latitude_Value(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SpinRd(context) context.SAO_CTX_outC_OperationalScenario.SpinRd  /* OperationalScenario/SpinRd */
+#define VAR_OperationalScenario_SpinRd VARC_OperationalScenario_SpinRd(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SpinTg(context) context.SAO_CTX_outC_OperationalScenario.SpinTg  /* OperationalScenario/SpinTg */
+#define VAR_OperationalScenario_SpinTg VARC_OperationalScenario_SpinTg(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_angleright(context) context.SAO_CTX_outC_OperationalScenario.angleright  /* OperationalScenario/angleright */
+#define VAR_OperationalScenario_angleright VARC_OperationalScenario_angleright(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_angleleft(context) context.SAO_CTX_outC_OperationalScenario.angleleft  /* OperationalScenario/angleleft */
+#define VAR_OperationalScenario_angleleft VARC_OperationalScenario_angleleft(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SAT_Longitude_Min_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Longitude_Min_Value  /* OperationalScenario/SAT_Longitude_Min_Value */
+#define VAR_OperationalScenario_SAT_Longitude_Min_Value VARC_OperationalScenario_SAT_Longitude_Min_Value(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SAT_Longitude_Sec_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Longitude_Sec_Value  /* OperationalScenario/SAT_Longitude_Sec_Value */
+#define VAR_OperationalScenario_SAT_Longitude_Sec_Value VARC_OperationalScenario_SAT_Longitude_Sec_Value(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SAT_Latitude_Min_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Latitude_Min_Value  /* OperationalScenario/SAT_Latitude_Min_Value */
+#define VAR_OperationalScenario_SAT_Latitude_Min_Value VARC_OperationalScenario_SAT_Latitude_Min_Value(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SAT_Latitude_Sec_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Latitude_Sec_Value  /* OperationalScenario/SAT_Latitude_Sec_Value */
+#define VAR_OperationalScenario_SAT_Latitude_Sec_Value VARC_OperationalScenario_SAT_Latitude_Sec_Value(CTX_OperationalScenario)
+
+
+/*$**********************************************************
+*                           PROBES
+***********************************************************$*/
+
+#define VARC_OperationalScenario_OpPhases:NormalPhase:Probe1(context) context.Probe1_OpPhases_NormalPhase /* OperationalScenario/OpPhases:NormalPhase:Probe1 */
+#define VAR_OperationalScenario_OpPhases:NormalPhase:Probe1 VARC_OperationalScenario_OpPhases:NormalPhase:Probe1(CTX_OperationalScenario)
 
 /*$**********************************************************
 *                           ELEMENT ACCESS
@@ -162,6 +205,10 @@ typedef struct {
 #define CPY_upDateSw(DST, SRC) DST = SRC
 #define T_Gyroscopes kcg_bool
 #define CPY_Gyroscopes(DST, SRC) DST = SRC
+#define T_Input13 kcg_bool
+#define CPY_Input13(DST, SRC) DST = SRC
+#define T_EjectionSignal kcg_bool
+#define CPY_EjectionSignal(DST, SRC) DST = SRC
 #define T_StartLaunchPhase kcg_bool
 #define CPY_StartLaunchPhase(DST, SRC) DST = SRC
 #define T_Layer1Active kcg_bool
@@ -194,6 +241,26 @@ typedef struct {
 #define CPY_FuelMeter(DST, SRC) DST = SRC
 #define T_FuelMeterGraphic kcg_int
 #define CPY_FuelMeterGraphic(DST, SRC) DST = SRC
+#define T_SAT_Longitude_Value kcg_real
+#define CPY_SAT_Longitude_Value(DST, SRC) DST = SRC
+#define T_SAT_Latitude_Value kcg_real
+#define CPY_SAT_Latitude_Value(DST, SRC) DST = SRC
+#define T_SpinRd kcg_real
+#define CPY_SpinRd(DST, SRC) DST = SRC
+#define T_SpinTg kcg_real
+#define CPY_SpinTg(DST, SRC) DST = SRC
+#define T_angleright fr
+#define CPY_angleright(DST, SRC) DST = SRC
+#define T_angleleft fr
+#define CPY_angleleft(DST, SRC) DST = SRC
+#define T_SAT_Longitude_Min_Value kcg_real
+#define CPY_SAT_Longitude_Min_Value(DST, SRC) DST = SRC
+#define T_SAT_Longitude_Sec_Value kcg_real
+#define CPY_SAT_Longitude_Sec_Value(DST, SRC) DST = SRC
+#define T_SAT_Latitude_Min_Value kcg_real
+#define CPY_SAT_Latitude_Min_Value(DST, SRC) DST = SRC
+#define T_SAT_Latitude_Sec_Value kcg_real
+#define CPY_SAT_Latitude_Sec_Value(DST, SRC) DST = SRC
 
 
 /*$**********************************************************

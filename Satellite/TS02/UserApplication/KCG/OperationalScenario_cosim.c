@@ -11,7 +11,7 @@ void AfterSimInit(void){
 	#ifdef A661_LOGFILE
 	A661SetLogFile(A661_LOGFILE);
 	#endif
-	A661ConnectServer("127.0.0.1", 1231, "C:/github/si-lansab/Satellite/TS02/UserApplication/KCG/OperationalScenario_UA_1.bin", "C:/github/si-lansab/Satellite/TS02/UserApplication/KCG/OperationalScenario_UA_1_conf.xml" );
+	A661ConnectServer("127.0.0.1", 1231, "C:/GitHub/si-lansab/Satellite/TS02/UserApplication/KCG/OperationalScenario_UA_1.bin", "C:/GitHub/si-lansab/Satellite/TS02/UserApplication/KCG/OperationalScenario_UA_1_conf.xml" );
 }
 
 
