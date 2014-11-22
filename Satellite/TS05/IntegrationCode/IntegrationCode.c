@@ -12,6 +12,12 @@
 operator_input_type ua_inputs;
 operator_output_type ua_outputs;
 
+kcg_char latitude_str[11];
+kcg_real cam_latitude = 0.0f;
+
+kcg_char longitude_str[11];
+kcg_real cam_longitude = 0.0f;
+
 int num_receivers;
 int* receivers;
 
@@ -127,8 +133,32 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         output5t->SAT_CameraState_ToggleTo = ua_outputs.SAT_CameraState_ToggleTo;
         
         /* US 11 */
-        output5t->SAT_Initialize = ua_outputs.SAT_Initialize;
+        if (ua_outputs.conv_latitude_entered) {
+			int i = 1;
+			while (i < ua_outputs.conv_latitude_str_len - 1) {
+				latitude_str[i-1] = ua_outputs.conv_latitude_str[i];
+				i++;
+			}
+			latitude_str[i] = '\0';
+			cam_latitude = atof(latitude_str);
+			if (ua_outputs.conv_latitude_str[0] == '-')
+				cam_latitude = -cam_latitude;
+		}
+        if (ua_outputs.conv_longitude_entered) {
+			int i = 1;
+			while (i < ua_outputs.conv_longitude_str_len - 1) {
+				longitude_str[i-1] = ua_outputs.conv_longitude_str[i];
+				i++;
+			}
+			longitude_str[i] = '\0';
+			cam_longitude = atof(longitude_str);
+			if (ua_outputs.conv_longitude_str[0] == '-')
+				cam_longitude = -cam_longitude;
+			printf("%g", cam_longitude);
+		}
         
+		
+		
 		/* US12 */
 		output5t->cam_take_picture = ua_outputs.cam_take_picture;
 		

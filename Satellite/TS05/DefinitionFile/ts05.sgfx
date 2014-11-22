@@ -2033,7 +2033,57 @@ Project for academic purpose only.</summary>
                                         </widget>
                                     </children>
                                 </widget>
-                                <widget name="Inicialization" oid="7907aff5-4b2c-4c16-80f8-8197c1e62ec4" type="BasicContainer">
+                                <widget name="Initialization" oid="470da05b-b85b-4ac9-8675-8e6a0c4e35cf" type="BasicContainer">
+                                    <IDE/>
+                                    <model>
+                                        <intprop name="WidgetIdent">8035</intprop>
+                                        <enumprop name="Enable">A661_TRUE</enumprop>
+                                        <enumprop name="Visible">A661_TRUE</enumprop>
+                                        <intprop name="PosX">2150</intprop>
+                                        <intprop name="PosY">7200</intprop>
+                                    </model>
+                                    <children>
+                                        <widget name="LED" oid="b1816a01-1b55-430b-a6bc-a40778c73955" type="GpArcCircle">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">8036</intprop>
+                                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">300</intprop>
+                                                <intprop name="PosY">300</intprop>
+                                                <intprop name="StartAngle">0</intprop>
+                                                <intprop name="EndAngle">0</intprop>
+                                                <intprop name="Radius">300</intprop>
+                                                <intprop name="StyleSet">1</intprop>
+                                                <intprop name="ColorIndex">41</intprop>
+                                                <enumprop name="Filled">A661_TRUE</enumprop>
+                                                <intprop name="FillIndex">41</intprop>
+                                                <enumprop name="Halo">A661_FALSE</enumprop>
+                                            </model>
+                                        </widget>
+                                        <widget name="Label" oid="a4948dab-7c38-4601-87ea-d2265120693f" type="Label">
+                                            <IDE/>
+                                            <model>
+                                                <intprop name="WidgetIdent">8037</intprop>
+                                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <intprop name="PosX">800</intprop>
+                                                <intprop name="PosY">100</intprop>
+                                                <intprop name="SizeX">4000</intprop>
+                                                <intprop name="SizeY">450</intprop>
+                                                <intprop name="RotationAngle">0</intprop>
+                                                <intprop name="StyleSet">1</intprop>
+                                                <intprop name="MaxStringLength">32</intprop>
+                                                <enumprop name="MotionAllowed">A661_FALSE</enumprop>
+                                                <intprop name="Font">1</intprop>
+                                                <intprop name="ColorIndex">21</intprop>
+                                                <enumprop name="Alignment">A661_LEFT</enumprop>
+                                                <stringprop name="LabelString">Initialization</stringprop>
+                                            </model>
+                                        </widget>
+                                    </children>
+                                </widget>
+                                <widget name="Inicialization_DEPRECATED" oid="7907aff5-4b2c-4c16-80f8-8197c1e62ec4" type="BasicContainer">
                                     <IDE/>
                                     <model>
                                         <intprop name="WidgetIdent">7020</intprop>
@@ -2047,8 +2097,8 @@ Project for academic purpose only.</summary>
                                             <IDE/>
                                             <model>
                                                 <intprop name="WidgetIdent">7021</intprop>
-                                                <enumprop name="Enable">A661_TRUE</enumprop>
-                                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                                <enumprop name="Enable">A661_FALSE</enumprop>
+                                                <enumprop name="Visible">A661_FALSE</enumprop>
                                                 <intprop name="PosX">0</intprop>
                                                 <intprop name="PosY">0</intprop>
                                             </model>
@@ -2203,5 +2253,5 @@ Project for academic purpose only.</summary>
     </children>
 </specification>
 
-<!-- crc32 : 2740307577 -->
+<!-- crc32 : 2030304625 -->
 
