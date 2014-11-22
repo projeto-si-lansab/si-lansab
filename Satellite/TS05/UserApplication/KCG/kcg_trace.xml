@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--$*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$-->
-<Model date="2014-11-18T20:03:02" commandLine="s2c613 -config C:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt">
+<Model date="2014-11-22T12:48:20" commandLine="s2c613 -config C:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt">
   <Constant scadeName="A661_TRUE" scadeType="int" targetName="A661_TRUE" targetType="kcg_int" macroDef="true"/>
   <Constant scadeName="A661_FALSE" scadeType="int" targetName="A661_FALSE" targetType="kcg_int" macroDef="true"/>
   <Constant scadeName="CDS_COLOR_GRAY" scadeType="int" targetName="CDS_COLOR_GRAY" targetType="kcg_int"
@@ -50,6 +50,7 @@
   </EnumType>
   <NamedType scadeName="String_SS" targetName="String_SS" refType="array_char_16"/>
   <NamedType scadeName="String_ES" targetName="String_ES" refType="array_char_14"/>
+  <NamedType scadeName="StringToReal" targetName="StringToReal" refType="array_char_10"/>
   <RootNode scadeName="ts05" headerFile="ts05.h" targetCycleFct="ts05" targetInitFct="ts05_reset">
     <Input scadeName="CDS_SS_InitializationButton_Pressed" scadeType="bool"
         targetName="CDS_SS_InitializationButton_Pressed" targetType="kcg_bool" inCtx="true"/>
@@ -177,6 +178,18 @@
         targetType="kcg_int" inCtx="true"/>
     <Input scadeName="SAT_Fix_Response" scadeType="bool" targetName="SAT_Fix_Response" targetType="kcg_bool"
         inCtx="true"/>
+    <Input scadeName="latitude_entered" scadeType="bool" targetName="latitude_entered" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="latitude_str_len" scadeType="int" targetName="latitude_str_len" targetType="kcg_int"
+        inCtx="true"/>
+    <Input scadeName="latitude_str" scadeType="StringToReal" targetName="latitude_str" targetType="StringToReal"
+        inCtx="true"/>
+    <Input scadeName="longitude_entered" scadeType="bool" targetName="longitude_entered" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="longitude_str" scadeType="StringToReal" targetName="longitude_str" targetType="StringToReal"
+        inCtx="true"/>
+    <Input scadeName="longitude_str_len" scadeType="int" targetName="longitude_str_len" targetType="kcg_int"
+        inCtx="true"/>
     <Output scadeName="CDS_Layer_Req_Active" scadeType="bool" targetName="CDS_Layer_Req_Active" targetType="kcg_bool"
         inCtx="true"/>
     <Output scadeName="CDS_Layer_Req_Visible" scadeType="bool" targetName="CDS_Layer_Req_Visible" targetType="kcg_bool"
@@ -287,6 +300,18 @@
     <Output scadeName="CDS_AutoVerifyButton_Enabled" scadeType="int" targetName="CDS_AutoVerifyButton_Enabled"
         targetType="kcg_int" inCtx="true"/>
     <Output scadeName="SAT_Fix_Equipments" scadeType="bool" targetName="SAT_Fix_Equipments" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="conv_latitude_str_len" scadeType="int" targetName="conv_latitude_str_len" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="conv_latitude_str" scadeType="StringToReal" targetName="conv_latitude_str"
+        targetType="StringToReal" inCtx="true"/>
+    <Output scadeName="conv_latitude_entered" scadeType="bool" targetName="conv_latitude_entered" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="conv_longitude_entered" scadeType="bool" targetName="conv_longitude_entered"
+        targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="conv_longitude_str" scadeType="StringToReal" targetName="conv_longitude_str"
+        targetType="StringToReal" inCtx="true"/>
+    <Output scadeName="conv_longitude_str_len" scadeType="int" targetName="conv_longitude_str_len" targetType="kcg_int"
         inCtx="true"/>
     <Local scadeName="deploy" scadeType="bool" targetName="deploy" targetType="kcg_bool"/>
     <Local scadeName="Testable_SAT_Initialization_Signal" scadeType="int"
@@ -437,6 +462,12 @@
     <Local scadeName="_L141" scadeType="bool" targetName="_L141" targetType="kcg_bool"/>
     <Local scadeName="_L142" scadeType="int" targetName="_L142" targetType="kcg_int"/>
     <Local scadeName="_L143" scadeType="bool" targetName="_L143" targetType="kcg_bool"/>
+    <Local scadeName="_L151" scadeType="int" targetName="_L151" targetType="kcg_int"/>
+    <Local scadeName="_L150" scadeType="bool" targetName="_L150" targetType="kcg_bool"/>
+    <Local scadeName="_L148" scadeType="StringToReal" targetName="_L148" targetType="StringToReal"/>
+    <Local scadeName="_L152" scadeType="bool" targetName="_L152" targetType="kcg_bool"/>
+    <Local scadeName="_L153" scadeType="StringToReal" targetName="_L153" targetType="StringToReal"/>
+    <Local scadeName="_L154" scadeType="int" targetName="_L154" targetType="kcg_int"/>
     <NodeInlining scadeName="guarino_test_operator" instName="1">
     </NodeInlining>
     <NodeInlining scadeName="gustavoloureiro_test_operator" instName="1">
@@ -1016,7 +1047,13 @@
           <Local scadeName="_L10" scadeType="bool" targetName="_L10_2_Initialization_Ejected" targetType="kcg_bool"
               clockVar="Initialization_state_act_2" clockVal="SSM_st_Ejected_Initialization"/>
           <Fork priority="1">
-            <Transition targetName="SSM_TR_Ejected_1_Initialization" kind="strong" scadeDest="Initializing"/>
+            <Transition targetName="SSM_TR_Ejected_1_Initialization" kind="strong" scadeDest="Fail"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Ejected_2_Initialization" kind="strong" scadeDest="Initialized"/>
+          </Fork>
+          <Fork priority="3">
+            <Transition targetName="SSM_TR_Ejected_3_Initialization" kind="strong" scadeDest="Initializing"/>
           </Fork>
         </State>
         <State scadeName="Initializing" targetName="SSM_st_Initializing_Initialization">
@@ -1045,10 +1082,10 @@
             <Transition targetName="SSM_TR_Initializing_3_Initialization" kind="weak" scadeDest="Fail"/>
           </Fork>
           <Fork priority="1">
-            <Transition targetName="SSM_TR_Initializing_1_Initialization" kind="strong" scadeDest="Initialized"/>
+            <Transition targetName="SSM_TR_Initializing_1_Initialization" kind="strong" scadeDest="Fail"/>
           </Fork>
           <Fork priority="2">
-            <Transition targetName="SSM_TR_Initializing_2_Initialization" kind="strong" scadeDest="Fail"/>
+            <Transition targetName="SSM_TR_Initializing_2_Initialization" kind="strong" scadeDest="Initialized"/>
           </Fork>
           <Clock targetName="Initializing_weakb_clock_2_Initialization" targetType="kcg_bool"
               clockVar="Initialization_state_act_2" clockVal="SSM_st_Initializing_Initialization"/>
@@ -1078,7 +1115,10 @@
           <Local scadeName="_L6" scadeType="bool" targetName="_L6_2_Initialization_Fail" targetType="kcg_bool"
               clockVar="Initialization_state_act_2" clockVal="SSM_st_Fail_Initialization"/>
           <Fork priority="1">
-            <Transition targetName="SSM_TR_Fail_1_Initialization" kind="strong" scadeDest="Initializing"/>
+            <Transition targetName="SSM_TR_Fail_1_Initialization" kind="strong" scadeDest="Initialized"/>
+          </Fork>
+          <Fork priority="2">
+            <Transition targetName="SSM_TR_Fail_2_Initialization" kind="strong" scadeDest="Initializing"/>
           </Fork>
         </State>
         <SelectedState targetName="Initialization_state_sel_2"/>
@@ -2239,8 +2279,10 @@
       targetCompFct="kcg_comp_array_char_14"/>
   <ArrayType targetName="array_char_16" cellType="kcg_char" size="16" targetCopyFct="kcg_copy_array_char_16"
       targetCompFct="kcg_comp_array_char_16"/>
+  <ArrayType targetName="array_char_10" cellType="kcg_char" size="10" targetCopyFct="kcg_copy_array_char_10"
+      targetCompFct="kcg_comp_array_char_10"/>
 </Model>
 <!--$*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_trace.xml
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$-->

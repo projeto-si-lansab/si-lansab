@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 #include "CommunicationInterfaces.h"
 #include "IntegrationCode.h"
@@ -80,6 +81,16 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
 			
 			/* US 12 */
 			ua_inputs.cam_picture_loaded = input.cam_picture_loaded;
+			if (ua_inputs.cam_picture_loaded) {
+				pid_t pid = fork();
+				if (pid == 0) {
+					char* args[2];
+					args[0] = "C:\\images\\FSViewer.exe";
+					args[1] = "C:\\images\\image.jpg";
+					execv("C:\\FSViewer53\\FSViewer.exe", args);
+					exit(0);
+				}
+			}
 			
             break;
         case TS04ID:
@@ -133,6 +144,8 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         output5t->SAT_CameraState_ToggleTo = ua_outputs.SAT_CameraState_ToggleTo;
         
         /* US 11 */
+		/* This code is unused due to TS03 bitching around... */
+		/*
         if (ua_outputs.conv_latitude_entered) {
 			int i = 1;
 			while (i < ua_outputs.conv_latitude_str_len - 1) {
@@ -156,8 +169,7 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
 				cam_longitude = -cam_longitude;
 			printf("%g", cam_longitude);
 		}
-        
-		
+		*/
 		
 		/* US12 */
 		output5t->cam_take_picture = ua_outputs.cam_take_picture;

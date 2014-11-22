@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS05/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$ */
 #ifndef _ts05_H_
 #define _ts05_H_
@@ -72,6 +72,12 @@ typedef struct {
   kcg_bool /* ts05::SAT_Ejection_Signal */ SAT_Ejection_Signal;
   kcg_int /* ts05::SAT_Initialization_Signal */ SAT_Initialization_Signal;
   kcg_bool /* ts05::SAT_Fix_Response */ SAT_Fix_Response;
+  kcg_bool /* ts05::latitude_entered */ latitude_entered;
+  kcg_int /* ts05::latitude_str_len */ latitude_str_len;
+  StringToReal /* ts05::latitude_str */ latitude_str;
+  kcg_bool /* ts05::longitude_entered */ longitude_entered;
+  StringToReal /* ts05::longitude_str */ longitude_str;
+  kcg_int /* ts05::longitude_str_len */ longitude_str_len;
 } inC_ts05;
 
 /* ========================  context type  ========================= */
@@ -135,6 +141,12 @@ typedef struct {
   kcg_bool /* ts05::SAT_Auto_Verify */ SAT_Auto_Verify;
   kcg_int /* ts05::CDS_AutoVerifyButton_Enabled */ CDS_AutoVerifyButton_Enabled;
   kcg_bool /* ts05::SAT_Fix_Equipments */ SAT_Fix_Equipments;
+  kcg_int /* ts05::conv_latitude_str_len */ conv_latitude_str_len;
+  StringToReal /* ts05::conv_latitude_str */ conv_latitude_str;
+  kcg_bool /* ts05::conv_latitude_entered */ conv_latitude_entered;
+  kcg_bool /* ts05::conv_longitude_entered */ conv_longitude_entered;
+  StringToReal /* ts05::conv_longitude_str */ conv_longitude_str;
+  kcg_int /* ts05::conv_longitude_str_len */ conv_longitude_str_len;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init3;
@@ -198,6 +210,6 @@ extern void ts05_reset(outC_ts05 *outC);
 #endif /* _ts05_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ts05.h
-** Generation date: 2014-11-18T20:03:02
+** Generation date: 2014-11-22T12:48:20
 *************************************************************$ */
 
