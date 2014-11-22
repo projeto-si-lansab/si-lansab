@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** Command: s2c613 -config C:/scade/si-lansab/Satellite/TS03/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-22T13:30:06
+*************************************************************$-->
+<Model date="2014-11-22T13:30:06" commandLine="s2c613 -config C:/scade/si-lansab/Satellite/TS03/UserApplication/KCG\kcg_s2c_config.txt">
+  <Constant scadeName="STR_SIZE" scadeType="int" targetName="STR_SIZE" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="RED" scadeType="int" targetName="RED" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="BATTERY_EMPTY" scadeType="real" targetName="BATTERY_EMPTY" targetType="kcg_real"
+      macroDef="true"/>
+  <Constant scadeName="GRAY50" scadeType="int" targetName="GRAY50" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="BATTERY_FULL" scadeType="real" targetName="BATTERY_FULL" targetType="kcg_real" macroDef="true"/>
+  <Constant scadeName="BATTERY_LOW_LEVEL" scadeType="real" targetName="BATTERY_LOW_LEVEL" targetType="kcg_real"
+      macroDef="true"/>
+  <Constant scadeName="YELLOW" scadeType="int" targetName="YELLOW" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="BATTERY_INCR" scadeType="real" targetName="BATTERY_INCR" targetType="kcg_real" macroDef="true"/>
+  <Constant scadeName="GREEN" scadeType="int" targetName="GREEN" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="MEMORY_FULL" scadeType="int" targetName="MEMORY_FULL" targetType="kcg_int" macroDef="true"/>
+  <Constant scadeName="MEMORY_LOW_LEVEL" scadeType="int" targetName="MEMORY_LOW_LEVEL" targetType="kcg_int"
+      macroDef="true"/>
+  <Constant scadeName="MEMORY_INCR" scadeType="int" targetName="MEMORY_INCR" targetType="kcg_int" macroDef="true"/>
+  <RootNode scadeName="TS03" headerFile="TS03.h" targetCycleFct="TS03" targetInitFct="TS03_reset">
+    <Input scadeName="ST_CameraBtnOn" scadeType="bool" targetName="ST_CameraBtnOn" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="ST_DownloadBtn" scadeType="bool" targetName="ST_DownloadBtn" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="TST_TakePicutreBtn" scadeType="bool" targetName="TST_TakePicutreBtn" targetType="kcg_bool"
+        inCtx="true"/>
+    <Input scadeName="TakePicture" scadeType="bool" targetName="TakePicture" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="Layer1Active" scadeType="bool" targetName="Layer1Active" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="Layer1Vixible" scadeType="bool" targetName="Layer1Vixible" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="StringSize" scadeType="int" targetName="StringSize" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="Emit2CDS" scadeType="bool" targetName="Emit2CDS" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="ST_BatteryLevel" scadeType="real" targetName="ST_BatteryLevel" targetType="kcg_real" mem="true"
+        inCtx="true"/>
+    <Output scadeName="BatteryWarn" scadeType="int" targetName="BatteryWarn" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="ST_MemoryGauge" scadeType="int" targetName="ST_MemoryGauge" targetType="kcg_int" mem="true"
+        inCtx="true"/>
+    <Output scadeName="MemoryWarn" scadeType="int" targetName="MemoryWarn" targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="ST_CameraOnIndicator" scadeType="int" targetName="ST_CameraOnIndicator" targetType="kcg_int"
+        inCtx="true"/>
+    <Output scadeName="ST_MemoryDownloadIndicator" scadeType="int" targetName="ST_MemoryDownloadIndicator"
+        targetType="kcg_int" inCtx="true"/>
+    <Output scadeName="DroneTakePicture" scadeType="bool" targetName="DroneTakePicture" targetType="kcg_bool"
+        inCtx="true"/>
+    <Output scadeName="DownLoadPic" scadeType="bool" targetName="DownLoadPic" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L13" scadeType="bool" targetName="_L13" targetType="kcg_bool"/>
+    <Memory scadeName="_L12" scadeType="bool" targetName="_L12" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L11" scadeType="bool" targetName="_L11" targetType="kcg_bool"/>
+    <Local scadeName="_L10" scadeType="int" targetName="_L10" targetType="kcg_int"/>
+    <Local scadeName="_L26" scadeType="bool" targetName="_L26" targetType="kcg_bool"/>
+    <Local scadeName="_L52" scadeType="real" targetName="_L52" targetType="kcg_real"/>
+    <Local scadeName="_L53" scadeType="real" targetName="_L53" targetType="kcg_real"/>
+    <Local scadeName="_L54" scadeType="int" targetName="_L54" targetType="kcg_int"/>
+    <Local scadeName="_L55" scadeType="int" targetName="_L55" targetType="kcg_int"/>
+    <Local scadeName="_L56" scadeType="bool" targetName="_L56" targetType="kcg_bool"/>
+    <Local scadeName="_L57" scadeType="int" targetName="_L57" targetType="kcg_int"/>
+    <Local scadeName="_L58" scadeType="bool" targetName="_L58" targetType="kcg_bool"/>
+    <Local scadeName="_L61" scadeType="int" targetName="_L61" targetType="kcg_int"/>
+    <Local scadeName="_L62" scadeType="int" targetName="_L62" targetType="kcg_int"/>
+    <Local scadeName="_L63" scadeType="int" targetName="_L63" targetType="kcg_int"/>
+    <Local scadeName="_L64" scadeType="bool" targetName="_L64" targetType="kcg_bool"/>
+    <Local scadeName="_L65" scadeType="bool" targetName="_L65" targetType="kcg_bool"/>
+    <NodeInlining scadeName="TS03Battery" instName="1">
+      <Input scadeName="BT_btn" scadeType="bool" targetName="BT_btn_1" targetType="kcg_bool"/>
+      <Input scadeName="BatteryLevelIn" scadeType="real" targetName="BatteryLevelIn_1" targetType="kcg_real"/>
+      <Output scadeName="BatteryLevelOut" scadeType="real" targetName="BatteryLevelOut_1" targetType="kcg_real"/>
+      <Output scadeName="LowLevelIndicatorOut" scadeType="int" targetName="_40_LowLevelIndicatorOut_1"
+          targetType="kcg_int"/>
+      <Output scadeName="CameraOnIndicator" scadeType="int" targetName="CameraOnIndicator_1" targetType="kcg_int"/>
+      <Local scadeName="EmptyBattery" scadeType="bool" targetName="EmptyBattery_1" targetType="kcg_bool"/>
+      <Local scadeName="MaxSizeReached" scadeType="bool" targetName="MaxSizeReached_1" targetType="kcg_bool"/>
+      <Local scadeName="LoadBattery" scadeType="bool" targetName="LoadBattery_1" targetType="kcg_bool"/>
+      <Local scadeName="localLevel" scadeType="real" targetName="localLevel_1" targetType="kcg_real"/>
+      <Local scadeName="CameraOn" scadeType="bool" targetName="CameraOn_1" targetType="kcg_bool"/>
+      <Local scadeName="_L20" scadeType="bool" targetName="_L20_1" targetType="kcg_bool"/>
+      <Local scadeName="_L22" scadeType="bool" targetName="_L22_1" targetType="kcg_bool"/>
+      <Local scadeName="_L29" scadeType="real" targetName="_L29_1" targetType="kcg_real"/>
+      <Local scadeName="_L30" scadeType="real" targetName="_L30_1" targetType="kcg_real"/>
+      <Local scadeName="_L31" scadeType="real" targetName="_L31_1" targetType="kcg_real"/>
+      <Local scadeName="_L32" scadeType="bool" targetName="_L32_1" targetType="kcg_bool"/>
+      <Local scadeName="_L34" scadeType="int" targetName="_L34_1" targetType="kcg_int"/>
+      <Local scadeName="_L35" scadeType="int" targetName="_L35_1" targetType="kcg_int"/>
+      <Local scadeName="_L36" scadeType="int" targetName="_L36_1" targetType="kcg_int"/>
+      <Automaton scadeName="SM1" targetStatesType="_4_SSM_ST_SM1" targetTransitionsType="_10_SSM_TR_SM1">
+        <State scadeName="Empty" targetName="_3_SSM_st_Empty_SM1">
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_SM1_Empty" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="_3_SSM_st_Empty_SM1"/>
+          <Local scadeName="_L5" scadeType="bool" targetName="_L5_1_SM1_Empty" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="_3_SSM_st_Empty_SM1"/>
+          <Local scadeName="_L7" scadeType="int" targetName="_L7_1_SM1_Empty" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="_3_SSM_st_Empty_SM1"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="&lt;" instName="6"/>
+            </Condition>
+            <Transition targetName="_8_SSM_TR_Empty_1_SM1" kind="strong" scadeDest="Low"/>
+          </Fork>
+        </State>
+        <State scadeName="Full" targetName="_2_SSM_st_Full_SM1">
+          <Local scadeName="_L13" scadeType="bool" targetName="_L13_1_SM1_Full" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="_2_SSM_st_Full_SM1"/>
+          <Local scadeName="_L12" scadeType="bool" targetName="_L12_1_SM1_Full" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="_2_SSM_st_Full_SM1"/>
+          <Local scadeName="_L14" scadeType="int" targetName="_L14_1_SM1_Full" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="_2_SSM_st_Full_SM1"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="&gt;" instName="6"/>
+            </Condition>
+            <Transition targetName="_7_SSM_TR_Full_1_SM1" kind="strong" scadeDest="Half"/>
+          </Fork>
+        </State>
+        <State scadeName="Half" targetName="_1_SSM_st_Half_SM1">
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_SM1_Half" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="_1_SSM_st_Half_SM1"/>
+          <Local scadeName="_L4" scadeType="bool" targetName="_L4_1_SM1_Half" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="_1_SSM_st_Half_SM1"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_1_SM1_Half" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="_1_SSM_st_Half_SM1"/>
+          <NodeInstance scadeName="not" instName="2"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="&lt;=" instName="3"/>
+            </Condition>
+            <Transition targetName="_6_SSM_TR_Half_1_SM1" kind="strong" scadeDest="Full"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition>
+              <NodeInstance scadeName="&gt;=" instName="3"/>
+            </Condition>
+            <Transition targetName="_5_SSM_TR_Half_2_SM1" kind="strong" scadeDest="Low"/>
+          </Fork>
+        </State>
+        <State scadeName="Low" targetName="SSM_st_Low_SM1">
+          <Local scadeName="_L4" scadeType="bool" targetName="_L4_1_SM1_Low" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Low_SM1"/>
+          <Local scadeName="_L3" scadeType="bool" targetName="_L3_1_SM1_Low" targetType="kcg_bool"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Low_SM1"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_1_SM1_Low" targetType="kcg_int"
+              clockVar="SM1_state_act_1" clockVal="SSM_st_Low_SM1"/>
+          <NodeInstance scadeName="not" instName="3"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="&lt;" instName="5"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Low_1_SM1" kind="strong" scadeDest="Half"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition>
+              <NodeInstance scadeName="&gt;=" instName="4"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Low_2_SM1" kind="strong" scadeDest="Empty"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="SM1_state_sel_1"/>
+        <ActiveState targetName="SM1_state_act_1"/>
+        <NextState targetName="SM1_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="SM1_reset_sel_1"/>
+        <ResetActiveState targetName="SM1_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="SM1_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="SM1_fired_strong_1"/>
+        <WeakTransition targetName="SM1_fired_1"/>
+      </Automaton>
+      <ActivateIf scadeName="IfBlock1">
+        <Condition targetName="IfBlock1_clock_1">
+          <NodeInstance scadeName="not" instName="1"/>
+          <NodeInstance scadeName="and" instName="1"/>
+        </Condition>
+        <Then>
+          <Local scadeName="_L2" scadeType="real" targetName="_L2_137_IfBlock1" targetType="kcg_real"
+              clockVar="IfBlock1_clock_1" clockVal="kcg_true"/>
+          <Local scadeName="_L3" scadeType="real" targetName="_L3_1_IfBlock1" targetType="kcg_real"
+              clockVar="IfBlock1_clock_1" clockVal="kcg_true"/>
+          <Local scadeName="_L4" scadeType="real" targetName="_L4_138_IfBlock1" targetType="kcg_real"
+              clockVar="IfBlock1_clock_1" clockVal="kcg_true"/>
+          <NodeInstance scadeName="+" instName="1"/>
+        </Then>
+        <Else>
+          <Condition targetName="else_clock_1_IfBlock1">
+            <NodeInstance scadeName="&lt;" instName="7"/>
+            <NodeInstance scadeName="and" instName="2"/>
+          </Condition>
+          <Then>
+            <Local scadeName="_L2" scadeType="real" targetName="_L2_1_IfBlock1" targetType="kcg_real"
+                clockVar="else_clock_1_IfBlock1" clockVal="kcg_true"/>
+            <Local scadeName="_L4" scadeType="real" targetName="_L4_1_IfBlock1" targetType="kcg_real"
+                clockVar="else_clock_1_IfBlock1" clockVal="kcg_true"/>
+            <Local scadeName="_L5" scadeType="real" targetName="_L5_1_IfBlock1" targetType="kcg_real"
+                clockVar="else_clock_1_IfBlock1" clockVal="kcg_true"/>
+            <NodeInstance scadeName="-" instName="1"/>
+          </Then>
+          <Else>
+            <Local scadeName="_L2" scadeType="real" targetName="_L2_135_IfBlock1" targetType="kcg_real"
+                clockVar="else_clock_1_IfBlock1" clockVal="kcg_false"/>
+          </Else>
+        </Else>
+      </ActivateIf>
+      <NodeInlining scadeName="Switch" instName="1">
+        <Input scadeName="Input1" scadeType="bool" targetName="Input1_1_1" targetType="kcg_bool"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="Output1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_L1_1_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_L2_1_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L3" scadeType="bool" targetName="_L3_1_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L4" scadeType="bool" targetName="_L4_1_1" targetType="kcg_bool"/>
+        <NodeInstance scadeName="not" instName="1"/>
+      </NodeInlining>
+      <NodeInstance scadeName="&lt;=" instName="4"/>
+    </NodeInlining>
+    <NodeInlining scadeName="TS03Memory" instName="1">
+      <Input scadeName="DownloadBtn" scadeType="bool" targetName="DownloadBtn_1" targetType="kcg_bool"/>
+      <Input scadeName="TST_TakePicture" scadeType="bool" targetName="TST_TakePicture_1" targetType="kcg_bool"/>
+      <Input scadeName="MemoryGaugeIn" scadeType="int" targetName="MemoryGaugeIn_1" targetType="kcg_int"/>
+      <Output scadeName="MemoryGaugeOut" scadeType="int" targetName="_88_MemoryGaugeOut_1" targetType="kcg_int"/>
+      <Output scadeName="MemoryLowLevelWarn" scadeType="int" targetName="_87_MemoryLowLevelWarn_1"
+          targetType="kcg_int"/>
+      <Output scadeName="MemoryDownloadIndicator" scadeType="int" targetName="MemoryDownloadIndicator_1"
+          targetType="kcg_int"/>
+      <Local scadeName="Empty" scadeType="bool" targetName="Empty_1" targetType="kcg_bool"/>
+      <Local scadeName="MaxSizeReached" scadeType="bool" targetName="_41_MaxSizeReached_1" targetType="kcg_bool"/>
+      <Local scadeName="_L3" scadeType="bool" targetName="_L3_1" targetType="kcg_bool"/>
+      <Local scadeName="_L74" scadeType="bool" targetName="_L74_1" targetType="kcg_bool"/>
+      <Local scadeName="_L77" scadeType="int" targetName="_L77_1" targetType="kcg_int"/>
+      <Local scadeName="_L78" scadeType="int" targetName="_L78_1" targetType="kcg_int"/>
+      <Local scadeName="_L79" scadeType="bool" targetName="_L79_1" targetType="kcg_bool"/>
+      <Local scadeName="_L80" scadeType="int" targetName="_L80_1" targetType="kcg_int"/>
+      <Local scadeName="_L81" scadeType="int" targetName="_L81_1" targetType="kcg_int"/>
+      <Local scadeName="_L82" scadeType="int" targetName="_L82_1" targetType="kcg_int"/>
+      <Automaton scadeName="SM1" targetStatesType="SSM_ST_SM1" targetTransitionsType="SSM_TR_SM1">
+        <State scadeName="Empty" targetName="SSM_st_Empty_SM1">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_SM1_Empty" targetType="kcg_int"
+              clockVar="_46_SM1_state_act_1" clockVal="SSM_st_Empty_SM1"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="&gt;" instName="6"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Empty_1_SM1" kind="strong" scadeDest="Half"/>
+          </Fork>
+        </State>
+        <State scadeName="Full" targetName="SSM_st_Full_SM1">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_SM1_Full" targetType="kcg_int"
+              clockVar="_46_SM1_state_act_1" clockVal="SSM_st_Full_SM1"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="&lt;" instName="1"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Full_1_SM1" kind="strong" scadeDest="LowLevel"/>
+          </Fork>
+        </State>
+        <State scadeName="LowLevel" targetName="SSM_st_LowLevel_SM1">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_SM1_LowLevel" targetType="kcg_int"
+              clockVar="_46_SM1_state_act_1" clockVal="SSM_st_LowLevel_SM1"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="&gt;=" instName="6"/>
+            </Condition>
+            <Transition targetName="SSM_TR_LowLevel_1_SM1" kind="strong" scadeDest="Full"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition>
+              <NodeInstance scadeName="&lt;=" instName="2"/>
+            </Condition>
+            <Transition targetName="SSM_TR_LowLevel_2_SM1" kind="strong" scadeDest="Half"/>
+          </Fork>
+        </State>
+        <State scadeName="Half" targetName="SSM_st_Half_SM1">
+          <Local scadeName="_L1" scadeType="int" targetName="_L1_1_SM1_Half" targetType="kcg_int"
+              clockVar="_46_SM1_state_act_1" clockVal="SSM_st_Half_SM1"/>
+          <Fork priority="1">
+            <Condition>
+              <NodeInstance scadeName="=" instName="2"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Half_1_SM1" kind="strong" scadeDest="Empty"/>
+          </Fork>
+          <Fork priority="2">
+            <Condition>
+              <NodeInstance scadeName="&gt;" instName="7"/>
+            </Condition>
+            <Transition targetName="SSM_TR_Half_2_SM1" kind="strong" scadeDest="LowLevel"/>
+          </Fork>
+        </State>
+        <SelectedState targetName="_47_SM1_state_sel_1"/>
+        <ActiveState targetName="_46_SM1_state_act_1"/>
+        <NextState targetName="_3_SM1_state_nxt_1" inCtx="true"/>
+        <ResetSelectedState targetName="_45_SM1_reset_sel_1"/>
+        <ResetActiveState targetName="_2_SM1_reset_act_1" inCtx="true"/>
+        <ResetNextState targetName="_1_SM1_reset_nxt_1" inCtx="true"/>
+        <StrongTransition targetName="_43_SM1_fired_strong_1"/>
+        <WeakTransition targetName="_42_SM1_fired_1"/>
+      </Automaton>
+      <ActivateIf scadeName="IfBlock1">
+        <Condition targetName="_48_IfBlock1_clock_1">
+          <NodeInstance scadeName="not" instName="2"/>
+          <NodeInstance scadeName="and" instName="2"/>
+        </Condition>
+        <Then>
+          <Local scadeName="_L3" scadeType="int" targetName="_L3_184_IfBlock1" targetType="kcg_int"
+              clockVar="_48_IfBlock1_clock_1" clockVal="kcg_true"/>
+          <Local scadeName="_L5" scadeType="int" targetName="_L5_185_IfBlock1" targetType="kcg_int"
+              clockVar="_48_IfBlock1_clock_1" clockVal="kcg_true"/>
+          <Local scadeName="_L6" scadeType="int" targetName="_L6_1_IfBlock1" targetType="kcg_int"
+              clockVar="_48_IfBlock1_clock_1" clockVal="kcg_true"/>
+          <NodeInstance scadeName="+" instName="11"/>
+        </Then>
+        <Else>
+          <Condition targetName="_82_else_clock_1_IfBlock1">
+            <NodeInstance scadeName="&gt;" instName="5"/>
+            <NodeInstance scadeName="and" instName="3"/>
+          </Condition>
+          <Then>
+            <Local scadeName="_L8" scadeType="int" targetName="_L8_1_IfBlock1" targetType="kcg_int"
+                clockVar="_82_else_clock_1_IfBlock1" clockVal="kcg_true"/>
+            <Local scadeName="_L9" scadeType="int" targetName="_L9_1_IfBlock1" targetType="kcg_int"
+                clockVar="_82_else_clock_1_IfBlock1" clockVal="kcg_true"/>
+            <Local scadeName="_L10" scadeType="int" targetName="_L10_1_IfBlock1" targetType="kcg_int"
+                clockVar="_82_else_clock_1_IfBlock1" clockVal="kcg_true"/>
+            <NodeInstance scadeName="-" instName="4"/>
+          </Then>
+          <Else>
+            <Local scadeName="_L3" scadeType="int" targetName="_L3_181_IfBlock1" targetType="kcg_int"
+                clockVar="_82_else_clock_1_IfBlock1" clockVal="kcg_false"/>
+          </Else>
+        </Else>
+      </ActivateIf>
+      <NodeInstance scadeName="&gt;=" instName="1"/>
+      <NodeInlining scadeName="Switch" instName="2">
+        <Input scadeName="Input1" scadeType="bool" targetName="Input1_2_1" targetType="kcg_bool"/>
+        <Output scadeName="Output1" scadeType="bool" targetName="Output1_2_1" targetType="kcg_bool"/>
+        <Local scadeName="_L1" scadeType="bool" targetName="_L1_2_1" targetType="kcg_bool"/>
+        <Local scadeName="_L2" scadeType="bool" targetName="_L2_2_1" targetType="kcg_bool"/>
+        <Memory scadeName="_L3" scadeType="bool" targetName="_L3_2_1" targetType="kcg_bool" inCtx="true"/>
+        <Local scadeName="_L4" scadeType="bool" targetName="_L4_2_1" targetType="kcg_bool"/>
+        <NodeInstance scadeName="not" instName="1"/>
+      </NodeInlining>
+    </NodeInlining>
+    <NodeInstance scadeName="or" instName="1"/>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_TS03"/>
+    <InCtxType targetName="inC_TS03"/>
+  </RootNode>
+  <ExpNode scadeName="TS03Battery"/>
+  <ExpNode scadeName="Switch"/>
+  <ExpNode scadeName="TS03Memory"/>
+  <Option name="root_node_name" value="TS03"/>
+  <Option name="target" value="C"/>
+  <Option name="target_dir" value="C:/scade/si-lansab/Satellite/TS03/UserApplication/KCG"/>
+  <Option name="expall" value="#on#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="optimization_level" value="0"/>
+  <Option name="macro_on_assert" value="#off#"/>
+  <Option name="global_prefix" value="#off#"/>
+  <Option name="name_length" value="200"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="header" value="#off#"/>
+  <Option name="input_threshold" value="2"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="debug" value="#off#"/>
+  <Option name="probes" value="#off#"/>
+  <Option name="input_file"
+      value="C:/scade/si-lansab/Satellite/TS03/UserApplication/KCG/scade_model_without_unused.scade"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="no_bitwise" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="state_vector" value="#off#"/>
+  <PredefType scadeName="real" targetName="kcg_real"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <PredefType scadeName="int" targetName="kcg_int"/>
+</Model>
+<!--$*************** KCG Version 6.1.3 (build i6) ****************
+** kcg_trace.xml
+** Generation date: 2014-11-22T13:30:06
+*************************************************************$-->
