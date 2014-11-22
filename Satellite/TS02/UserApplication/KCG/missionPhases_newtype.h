@@ -82,17 +82,30 @@ extern int set_kcg_int_default_value(void *pValue);
 extern TypeUtils _Type_kcg_int_Utils;
 
 /****************************************************************
- ** struct__5302 
+ ** struct__5854 
  ****************************************************************/
-extern int struct__5302_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int check_struct__5302_string(const char *str, const char** endptr);
-extern int string_to_struct__5302(const char *str, void* pValue, const char** endptr);
-extern int is_struct__5302_allow_double_convertion();
-extern int struct__5302_to_double(const void* pValue, double *nValue);
-extern int get_struct__5302_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int compare_struct__5302(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
-extern int set_struct__5302_default_value(void *pValue);
-extern TypeUtils _Type_struct__5302_Utils;
+extern int struct__5854_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_struct__5854_string(const char *str, const char** endptr);
+extern int string_to_struct__5854(const char *str, void* pValue, const char** endptr);
+extern int is_struct__5854_allow_double_convertion();
+extern int struct__5854_to_double(const void* pValue, double *nValue);
+extern int get_struct__5854_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_struct__5854(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_struct__5854_default_value(void *pValue);
+extern TypeUtils _Type_struct__5854_Utils;
+
+/****************************************************************
+ ** fr 
+ ****************************************************************/
+extern int fr_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_fr_string(const char *str, const char** endptr);
+extern int string_to_fr(const char *str, void* pValue, const char** endptr);
+extern int is_fr_allow_double_convertion();
+extern int fr_to_double(const void* pValue, double *nValue);
+extern int get_fr_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_fr(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_fr_default_value(void *pValue);
+extern TypeUtils _Type_fr_Utils;
 
 /****************************************************************
  ** TruthTableValues_truthtables 

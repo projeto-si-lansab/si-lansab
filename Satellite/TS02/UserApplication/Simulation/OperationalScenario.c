@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/Users/Pierre Mattei/Documents/Aeropace Engineering/Doutorado/disciplinas/2014/Cunha/projeto/2sdSprint/TS02/UserApplication/Simulation\kcg_s2c_config.txt
-** Generation date: 2014-09-29T18:26:24
+** Command: s2c613 -config D:/Embraer ITA/Doutorado/Projetos/TS02_2Sprint_v9/TS02_2Sprint/UserApplication/Simulation\kcg_s2c_config.txt
+** Generation date: 2014-11-22T21:11:29
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,21 +10,17 @@
 void OperationalScenario_reset(outC_OperationalScenario *outC)
 {
   outC->init = kcg_true;
+  outC->init2 = kcg_true;
   outC->init3 = kcg_true;
   outC->init4 = kcg_true;
-  outC->init5 = kcg_true;
-  /* 7 */ TestActuators_reset(&outC->Context_7);
-  /* 11 */ ReadSensors_reset(&outC->Context_11);
-  /* 2 */ controlAlgorithm_reset(&outC->Context_2);
-  /* 6 */ TestActuators_reset(&outC->_2_Context_6);
-  /* 10 */ ReadSensors_reset(&outC->Context_10);
-  /* 1 */ controlAlgorithm_reset(&outC->_1_Context_1);
-  /* 5 */ TestActuators_reset(&outC->Context_5);
-  /* 9 */ ReadSensors_reset(&outC->Context_9);
-  /* 4 */ TestActuators_reset(&outC->Context_4);
-  /* 8 */ ReadSensors_reset(&outC->Context_8);
   /* 1 */ TestActuators_reset(&outC->Context_1);
-  /* 6 */ ReadSensors_reset(&outC->Context_6);
+  /* 6 */ ReadSensors_reset(&outC->_1_Context_6);
+  /* 6 */ ModCount_reset(&outC->Context_6);
+  /* 4 */ ModCount_reset(&outC->Context_4);
+  /* 5 */ ModCount_reset(&outC->Context_5);
+  /* 8 */ ModCount_reset(&outC->Context_8);
+  /* 7 */ ModCount_reset(&outC->Context_7);
+  /* 9 */ ModCount_reset(&outC->Context_9);
 }
 
 /* OperationalScenario */
@@ -32,108 +28,116 @@ void OperationalScenario(
   inC_OperationalScenario *inC,
   outC_OperationalScenario *outC)
 {
+  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _81_OpPhases_fired;
+  /* OperationalScenario::OpPhases */ kcg_bool _80_OpPhases_reset_nxt;
+  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _79_OpPhases_state_nxt;
+  /* OperationalScenario::LatSec */ kcg_int _78_LatSec;
+  /* OperationalScenario::LatMin */ kcg_int _77_LatMin;
+  /* OperationalScenario::LatDeg */ kcg_int _76_LatDeg;
+  /* OperationalScenario::LongitudeSec */ kcg_int _75_LongitudeSec;
+  /* OperationalScenario::LongitudeMin */ kcg_int _74_LongitudeMin;
+  /* OperationalScenario::LongitudeDeg */ kcg_int _73_LongitudeDeg;
+  /* OperationalScenario::anglerightlocal */ fr _72_anglerightlocal;
+  /* OperationalScenario::angleleftlocal */ fr _71_angleleftlocal;
+  /* OperationalScenario::SpinTgLocal */ kcg_real _70_SpinTgLocal;
+  /* OperationalScenario::SpinRdLocal */ kcg_real _69_SpinRdLocal;
+  /* OperationalScenario::LatitudeLocal */ kcg_real _68_LatitudeLocal;
+  /* OperationalScenario::LongitudeLocal */ kcg_real _67_LongitudeLocal;
+  /* OperationalScenario::FuelMeterLocal */ kcg_real _66_FuelMeterLocal;
+  /* OperationalScenario::LaunchVisibleLocal */ kcg_bool _65_LaunchVisibleLocal;
+  /* OperationalScenario::color_5 */ kcg_int _64_color_5;
+  /* OperationalScenario::AcRdValueLocal */ kcg_real _63_AcRdValueLocal;
+  /* OperationalScenario::NormalPhaseVisibleLocal */ kcg_bool _62_NormalPhaseVisibleLocal;
+  /* OperationalScenario::AttitudeVisibleLocal */ kcg_bool _61_AttitudeVisibleLocal;
+  /* OperationalScenario::GroundVisibleLocal */ kcg_bool _60_GroundVisibleLocal;
+  /* OperationalScenario::color4 */ kcg_int _59_color4;
+  /* OperationalScenario::color3 */ kcg_int _58_color3;
+  /* OperationalScenario::color_2 */ kcg_int _57_color_2;
+  /* OperationalScenario::color */ kcg_int color56;
+  /* OperationalScenario::LaunchPhase */ kcg_bool _55_LaunchPhase;
+  /* OperationalScenario::OpPhases::Ground */ kcg_bool br_2_guard_OpPhases_Ground;
+  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _82_OpPhases_state_nxt;
+  /* OperationalScenario::OpPhases */ kcg_bool _83_OpPhases_reset_nxt;
+  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _84_OpPhases_fired;
+  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _85_OpPhases_state_nxt;
+  /* OperationalScenario::OpPhases */ kcg_bool _86_OpPhases_reset_nxt;
+  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _87_OpPhases_fired;
   /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _54_OpPhases_fired;
   /* OperationalScenario::OpPhases */ kcg_bool _53_OpPhases_reset_nxt;
   /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _52_OpPhases_state_nxt;
-  /* OperationalScenario::NPhase */ kcg_bool _51_NPhase;
-  /* OperationalScenario::AtAcquisition */ kcg_bool _50_AtAcquisition;
-  /* OperationalScenario::NormalPhaseVisibleLocal */ kcg_bool _49_NormalPhaseVisibleLocal;
-  /* OperationalScenario::AttitudeVisibleLocal */ kcg_bool _48_AttitudeVisibleLocal;
-  /* OperationalScenario::GroundVisibleLocal */ kcg_bool _47_GroundVisibleLocal;
-  /* OperationalScenario::color4 */ kcg_int _46_color4;
-  /* OperationalScenario::color3 */ kcg_int _45_color3;
-  /* OperationalScenario::color_2 */ kcg_int _44_color_2;
-  /* OperationalScenario::color */ kcg_int color43;
-  /* OperationalScenario::LaunchPhase */ kcg_bool _42_LaunchPhase;
-  /* OperationalScenario::SafeM */ kcg_bool SafeM41;
-  /* OperationalScenario::picture */ kcg_real _40_picture;
-  /* OperationalScenario::payMode */ kcg_bool _39_payMode;
-  /* OperationalScenario::RefAttitude */ kcg_bool _38_RefAttitude;
-  /* OperationalScenario::safeMode */ kcg_bool _37_safeMode;
-  /* OperationalScenario::OpPhases::Ground */ kcg_bool br_2_guard_OpPhases_Ground;
-  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _105_OpPhases_state_nxt;
-  /* OperationalScenario::OpPhases */ kcg_bool _106_OpPhases_reset_nxt;
-  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _107_OpPhases_fired;
-  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _108_OpPhases_state_nxt;
-  /* OperationalScenario::OpPhases */ kcg_bool _109_OpPhases_reset_nxt;
-  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _110_OpPhases_fired;
-  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _36_OpPhases_fired;
-  /* OperationalScenario::OpPhases */ kcg_bool _35_OpPhases_reset_nxt;
-  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _34_OpPhases_state_nxt;
-  /* OperationalScenario::NPhase */ kcg_bool _33_NPhase;
-  /* OperationalScenario::AtAcquisition */ kcg_bool _32_AtAcquisition;
-  /* OperationalScenario::NormalPhaseVisibleLocal */ kcg_bool _31_NormalPhaseVisibleLocal;
-  /* OperationalScenario::AttitudeVisibleLocal */ kcg_bool _30_AttitudeVisibleLocal;
-  /* OperationalScenario::GroundVisibleLocal */ kcg_bool _29_GroundVisibleLocal;
-  /* OperationalScenario::color4 */ kcg_int _28_color4;
-  /* OperationalScenario::color3 */ kcg_int _27_color3;
-  /* OperationalScenario::color_2 */ kcg_int _26_color_2;
-  /* OperationalScenario::color */ kcg_int color25;
-  /* OperationalScenario::LaunchPhase */ kcg_bool _24_LaunchPhase;
-  /* OperationalScenario::SafeM */ kcg_bool SafeM23;
-  /* OperationalScenario::picture */ kcg_real _22_picture;
-  /* OperationalScenario::payMode */ kcg_bool _21_payMode;
-  /* OperationalScenario::RefAttitude */ kcg_bool _20_RefAttitude;
-  /* OperationalScenario::safeMode */ kcg_bool _19_safeMode;
+  /* OperationalScenario::LatSec */ kcg_int _51_LatSec;
+  /* OperationalScenario::LatMin */ kcg_int _50_LatMin;
+  /* OperationalScenario::LatDeg */ kcg_int _49_LatDeg;
+  /* OperationalScenario::LongitudeSec */ kcg_int _48_LongitudeSec;
+  /* OperationalScenario::LongitudeMin */ kcg_int _47_LongitudeMin;
+  /* OperationalScenario::LongitudeDeg */ kcg_int _46_LongitudeDeg;
+  /* OperationalScenario::anglerightlocal */ fr _45_anglerightlocal;
+  /* OperationalScenario::angleleftlocal */ fr _44_angleleftlocal;
+  /* OperationalScenario::SpinTgLocal */ kcg_real _43_SpinTgLocal;
+  /* OperationalScenario::SpinRdLocal */ kcg_real _42_SpinRdLocal;
+  /* OperationalScenario::LatitudeLocal */ kcg_real _41_LatitudeLocal;
+  /* OperationalScenario::LongitudeLocal */ kcg_real _40_LongitudeLocal;
+  /* OperationalScenario::FuelMeterLocal */ kcg_real _39_FuelMeterLocal;
+  /* OperationalScenario::LaunchVisibleLocal */ kcg_bool _38_LaunchVisibleLocal;
+  /* OperationalScenario::color_5 */ kcg_int _37_color_5;
+  /* OperationalScenario::AcRdValueLocal */ kcg_real _36_AcRdValueLocal;
+  /* OperationalScenario::NormalPhaseVisibleLocal */ kcg_bool _35_NormalPhaseVisibleLocal;
+  /* OperationalScenario::AttitudeVisibleLocal */ kcg_bool _34_AttitudeVisibleLocal;
+  /* OperationalScenario::GroundVisibleLocal */ kcg_bool _33_GroundVisibleLocal;
+  /* OperationalScenario::color4 */ kcg_int _32_color4;
+  /* OperationalScenario::color3 */ kcg_int _31_color3;
+  /* OperationalScenario::color_2 */ kcg_int _30_color_2;
+  /* OperationalScenario::color */ kcg_int color29;
+  /* OperationalScenario::LaunchPhase */ kcg_bool _28_LaunchPhase;
+  /* OperationalScenario::OpPhases::Launch */ kcg_bool br_1_guard_OpPhases_Launch;
   /* OperationalScenario::OpPhases::Launch::AtAcquisition */ kcg_bool last_AtAcquisition_OpPhases_Launch;
-  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _18_OpPhases_fired;
-  /* OperationalScenario::OpPhases */ kcg_bool _17_OpPhases_reset_nxt;
-  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _16_OpPhases_state_nxt;
-  /* OperationalScenario::NPhase */ kcg_bool _15_NPhase;
-  /* OperationalScenario::AtAcquisition */ kcg_bool _14_AtAcquisition;
-  /* OperationalScenario::NormalPhaseVisibleLocal */ kcg_bool _13_NormalPhaseVisibleLocal;
-  /* OperationalScenario::AttitudeVisibleLocal */ kcg_bool _12_AttitudeVisibleLocal;
-  /* OperationalScenario::GroundVisibleLocal */ kcg_bool _11_GroundVisibleLocal;
-  /* OperationalScenario::color4 */ kcg_int _10_color4;
-  /* OperationalScenario::color3 */ kcg_int _9_color3;
-  /* OperationalScenario::color_2 */ kcg_int _8_color_2;
-  /* OperationalScenario::color */ kcg_int color7;
-  /* OperationalScenario::LaunchPhase */ kcg_bool _6_LaunchPhase;
-  /* OperationalScenario::SafeM */ kcg_bool SafeM5;
-  /* OperationalScenario::picture */ kcg_real _4_picture;
-  /* OperationalScenario::payMode */ kcg_bool _3_payMode;
-  /* OperationalScenario::RefAttitude */ kcg_bool _2_RefAttitude;
-  /* OperationalScenario::safeMode */ kcg_bool _1_safeMode;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ kcg_bool atacquisition_reset_prv_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ kcg_bool atacquisition_reset_sel_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::sMode */ kcg_bool last_sMode_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition::SafeMode */ kcg_bool br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_SafeMode;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_ST_atacquisition_OpPhases_AttitudeAcquisition atacquisition_state_act_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ kcg_bool atacquisition_reset_act_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_TR_atacquisition_OpPhases_AttitudeAcquisition atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition::refAttitude */ kcg_bool _123_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition::refAttitude */ kcg_bool br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_ST_atacquisition_OpPhases_AttitudeAcquisition _99_atacquisition_state_act_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ kcg_bool _100_atacquisition_reset_act_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_TR_atacquisition_OpPhases_AttitudeAcquisition _101_atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition::readsensors */ kcg_bool _124_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition::readsensors */ kcg_bool _125_br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_ST_atacquisition_OpPhases_AttitudeAcquisition _102_atacquisition_state_act_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ kcg_bool _103_atacquisition_reset_act_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_TR_atacquisition_OpPhases_AttitudeAcquisition _104_atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::AtAcquisition */ kcg_bool _85_AtAcquisition;
-  /* OperationalScenario::NPhase */ kcg_bool _86_NPhase;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::sMode */ kcg_bool sMode_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_ST_atacquisition_OpPhases_AttitudeAcquisition atacquisition_state_nxt_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ kcg_bool atacquisition_reset_nxt_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_TR_atacquisition_OpPhases_AttitudeAcquisition atacquisition_fired_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::AtAcquisition */ kcg_bool _87_AtAcquisition;
-  /* OperationalScenario::NPhase */ kcg_bool _88_NPhase;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::sMode */ kcg_bool sMode89_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_ST_atacquisition_OpPhases_AttitudeAcquisition _90_atacquisition_state_nxt_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ kcg_bool _91_atacquisition_reset_nxt_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_TR_atacquisition_OpPhases_AttitudeAcquisition _92_atacquisition_fired_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::AtAcquisition */ kcg_bool _93_AtAcquisition;
-  /* OperationalScenario::NPhase */ kcg_bool _94_NPhase;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::sMode */ kcg_bool sMode95_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_ST_atacquisition_OpPhases_AttitudeAcquisition _96_atacquisition_state_nxt_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ kcg_bool _97_atacquisition_reset_nxt_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */ SSM_TR_atacquisition_OpPhases_AttitudeAcquisition _98_atacquisition_fired_OpPhases_AttitudeAcquisition;
+  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _27_OpPhases_fired;
+  /* OperationalScenario::OpPhases */ kcg_bool _26_OpPhases_reset_nxt;
+  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _25_OpPhases_state_nxt;
+  /* OperationalScenario::LatSec */ kcg_int _24_LatSec;
+  /* OperationalScenario::LatMin */ kcg_int _23_LatMin;
+  /* OperationalScenario::LatDeg */ kcg_int _22_LatDeg;
+  /* OperationalScenario::LongitudeSec */ kcg_int _21_LongitudeSec;
+  /* OperationalScenario::LongitudeMin */ kcg_int _20_LongitudeMin;
+  /* OperationalScenario::LongitudeDeg */ kcg_int _19_LongitudeDeg;
+  /* OperationalScenario::anglerightlocal */ fr _18_anglerightlocal;
+  /* OperationalScenario::angleleftlocal */ fr _17_angleleftlocal;
+  /* OperationalScenario::SpinTgLocal */ kcg_real _16_SpinTgLocal;
+  /* OperationalScenario::SpinRdLocal */ kcg_real _15_SpinRdLocal;
+  /* OperationalScenario::LatitudeLocal */ kcg_real _14_LatitudeLocal;
+  /* OperationalScenario::LongitudeLocal */ kcg_real _13_LongitudeLocal;
+  /* OperationalScenario::FuelMeterLocal */ kcg_real _12_FuelMeterLocal;
+  /* OperationalScenario::LaunchVisibleLocal */ kcg_bool _11_LaunchVisibleLocal;
+  /* OperationalScenario::color_5 */ kcg_int _10_color_5;
+  /* OperationalScenario::AcRdValueLocal */ kcg_real _9_AcRdValueLocal;
+  /* OperationalScenario::NormalPhaseVisibleLocal */ kcg_bool _8_NormalPhaseVisibleLocal;
+  /* OperationalScenario::AttitudeVisibleLocal */ kcg_bool _7_AttitudeVisibleLocal;
+  /* OperationalScenario::GroundVisibleLocal */ kcg_bool _6_GroundVisibleLocal;
+  /* OperationalScenario::color4 */ kcg_int _5_color4;
+  /* OperationalScenario::color3 */ kcg_int _4_color3;
+  /* OperationalScenario::color_2 */ kcg_int _3_color_2;
+  /* OperationalScenario::color */ kcg_int color2;
+  /* OperationalScenario::LaunchPhase */ kcg_bool _1_LaunchPhase;
+  /* OperationalScenario::OpPhases::AttitudeAcquisition */ kcg_bool br_1_guard_OpPhases_AttitudeAcquisition;
   /* OperationalScenario::OpPhases */ SSM_TR_OpPhases OpPhases_fired;
   /* OperationalScenario::OpPhases */ kcg_bool OpPhases_reset_nxt;
   /* OperationalScenario::OpPhases */ SSM_ST_OpPhases OpPhases_state_nxt;
-  /* OperationalScenario::NPhase */ kcg_bool NPhase;
-  /* OperationalScenario::AtAcquisition */ kcg_bool AtAcquisition;
+  /* OperationalScenario::LatSec */ kcg_int LatSec;
+  /* OperationalScenario::LatMin */ kcg_int LatMin;
+  /* OperationalScenario::LatDeg */ kcg_int LatDeg;
+  /* OperationalScenario::LongitudeSec */ kcg_int LongitudeSec;
+  /* OperationalScenario::LongitudeMin */ kcg_int LongitudeMin;
+  /* OperationalScenario::LongitudeDeg */ kcg_int LongitudeDeg;
+  /* OperationalScenario::anglerightlocal */ fr anglerightlocal;
+  /* OperationalScenario::angleleftlocal */ fr angleleftlocal;
+  /* OperationalScenario::SpinTgLocal */ kcg_real SpinTgLocal;
+  /* OperationalScenario::SpinRdLocal */ kcg_real SpinRdLocal;
+  /* OperationalScenario::LatitudeLocal */ kcg_real LatitudeLocal;
+  /* OperationalScenario::LongitudeLocal */ kcg_real LongitudeLocal;
+  /* OperationalScenario::FuelMeterLocal */ kcg_real FuelMeterLocal;
+  /* OperationalScenario::LaunchVisibleLocal */ kcg_bool LaunchVisibleLocal;
+  /* OperationalScenario::color_5 */ kcg_int color_5;
+  /* OperationalScenario::AcRdValueLocal */ kcg_real AcRdValueLocal;
   /* OperationalScenario::NormalPhaseVisibleLocal */ kcg_bool NormalPhaseVisibleLocal;
   /* OperationalScenario::AttitudeVisibleLocal */ kcg_bool AttitudeVisibleLocal;
   /* OperationalScenario::GroundVisibleLocal */ kcg_bool GroundVisibleLocal;
@@ -142,254 +146,68 @@ void OperationalScenario(
   /* OperationalScenario::color_2 */ kcg_int color_2;
   /* OperationalScenario::color */ kcg_int color;
   /* OperationalScenario::LaunchPhase */ kcg_bool LaunchPhase;
-  /* OperationalScenario::SafeM */ kcg_bool SafeM;
-  /* OperationalScenario::picture */ kcg_real picture;
-  /* OperationalScenario::payMode */ kcg_bool payMode;
-  /* OperationalScenario::RefAttitude */ kcg_bool RefAttitude;
-  /* OperationalScenario::safeMode */ kcg_bool safeMode;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool NPhase_reset_prv_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool NPhase_reset_sel_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::sMode */ kcg_bool last_sMode_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase::SafeMode */ kcg_bool br_1_guard_OpPhases_NormalPhase_NPhase_SafeMode;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_ST_NPhase_OpPhases_NormalPhase NPhase_state_act_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool NPhase_reset_act_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_TR_NPhase_OpPhases_NormalPhase NPhase_fired_strong_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase::Payload */ kcg_bool _120_br_1_guard_OpPhases_NormalPhase_NPhase_Payload;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_ST_NPhase_OpPhases_NormalPhase _79_NPhase_state_act_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool _80_NPhase_reset_act_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_TR_NPhase_OpPhases_NormalPhase _81_NPhase_fired_strong_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase::AttControl */ kcg_bool _121_br_1_guard_OpPhases_NormalPhase_NPhase_AttControl;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase::AttControl */ kcg_bool _122_br_2_guard_OpPhases_NormalPhase_NPhase_AttControl;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_ST_NPhase_OpPhases_NormalPhase _82_NPhase_state_act_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool _83_NPhase_reset_act_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_TR_NPhase_OpPhases_NormalPhase _84_NPhase_fired_strong_OpPhases_NormalPhase;
-  /* OperationalScenario::safeMode */ kcg_bool _55_safeMode;
-  /* OperationalScenario::RefAttitude */ kcg_bool _56_RefAttitude;
-  /* OperationalScenario::payMode */ kcg_bool _57_payMode;
-  /* OperationalScenario::picture */ kcg_real _58_picture;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_ST_NPhase_OpPhases_NormalPhase NPhase_state_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool NPhase_reset_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_TR_NPhase_OpPhases_NormalPhase NPhase_fired_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_TR_NPhase_OpPhases_NormalPhase _78_NPhase_fired_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool _77_NPhase_reset_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_ST_NPhase_OpPhases_NormalPhase _76_NPhase_state_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_TR_NPhase_OpPhases_NormalPhase _75_NPhase_fired_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool _74_NPhase_reset_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_ST_NPhase_OpPhases_NormalPhase _73_NPhase_state_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase::Payload */ kcg_bool br_2_guard_OpPhases_NormalPhase_NPhase_Payload;
-  /* OperationalScenario::safeMode */ kcg_bool _59_safeMode;
-  /* OperationalScenario::RefAttitude */ kcg_bool _60_RefAttitude;
-  /* OperationalScenario::payMode */ kcg_bool _61_payMode;
-  /* OperationalScenario::picture */ kcg_real _62_picture;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_ST_NPhase_OpPhases_NormalPhase _63_NPhase_state_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool _64_NPhase_reset_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_TR_NPhase_OpPhases_NormalPhase _65_NPhase_fired_OpPhases_NormalPhase;
-  /* OperationalScenario::safeMode */ kcg_bool _66_safeMode;
-  /* OperationalScenario::RefAttitude */ kcg_bool _67_RefAttitude;
-  /* OperationalScenario::payMode */ kcg_bool _68_payMode;
-  /* OperationalScenario::picture */ kcg_real _69_picture;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_ST_NPhase_OpPhases_NormalPhase _70_NPhase_state_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ kcg_bool _71_NPhase_reset_nxt_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases::NormalPhase::NPhase */ SSM_TR_NPhase_OpPhases_NormalPhase _72_NPhase_fired_OpPhases_NormalPhase;
-  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _119_OpPhases_fired_strong;
-  /* OperationalScenario::OpPhases */ kcg_bool _118_OpPhases_reset_act;
-  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _117_OpPhases_state_act;
+  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _96_OpPhases_fired_strong;
+  /* OperationalScenario::OpPhases */ kcg_bool _95_OpPhases_reset_act;
+  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _94_OpPhases_state_act;
   /* OperationalScenario::OpPhases::Ground */ kcg_bool br_1_guard_OpPhases_Ground;
-  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _116_OpPhases_fired_strong;
-  /* OperationalScenario::OpPhases */ kcg_bool _115_OpPhases_reset_act;
-  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _114_OpPhases_state_act;
-  /* OperationalScenario::OpPhases::Launch */ kcg_bool br_2_guard_OpPhases_Launch;
-  /* OperationalScenario::OpPhases::Launch */ kcg_bool br_1_guard_OpPhases_Launch;
-  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _113_OpPhases_fired_strong;
-  /* OperationalScenario::OpPhases */ kcg_bool _112_OpPhases_reset_act;
-  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _111_OpPhases_state_act;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition */ kcg_bool _127_br_2_guard_OpPhases_AttitudeAcquisition;
-  /* OperationalScenario::OpPhases::AttitudeAcquisition */ kcg_bool _126_br_1_guard_OpPhases_AttitudeAcquisition;
+  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _93_OpPhases_fired_strong;
+  /* OperationalScenario::OpPhases */ kcg_bool _92_OpPhases_reset_act;
+  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _91_OpPhases_state_act;
+  /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _90_OpPhases_fired_strong;
+  /* OperationalScenario::OpPhases */ kcg_bool _89_OpPhases_reset_act;
+  /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _88_OpPhases_state_act;
   /* OperationalScenario::OpPhases */ SSM_TR_OpPhases OpPhases_fired_strong;
   /* OperationalScenario::OpPhases */ kcg_bool OpPhases_reset_act;
   /* OperationalScenario::OpPhases */ SSM_ST_OpPhases OpPhases_state_act;
-  /* OperationalScenario::NPhase */ kcg_bool last_NPhase;
-  /* OperationalScenario::AtAcquisition */ kcg_bool last_AtAcquisition;
+  /* OperationalScenario::LongitudeLocal */ kcg_real last_LongitudeLocal;
+  /* OperationalScenario::LatSec */ kcg_int last_LatSec;
+  /* OperationalScenario::LatMin */ kcg_int last_LatMin;
+  /* OperationalScenario::LatDeg */ kcg_int last_LatDeg;
+  /* OperationalScenario::LongitudeSec */ kcg_int last_LongitudeSec;
+  /* OperationalScenario::LongitudeMin */ kcg_int last_LongitudeMin;
+  /* OperationalScenario::LongitudeDeg */ kcg_int last_LongitudeDeg;
   /* OperationalScenario::GroundVisibleLocal */ kcg_bool last_GroundVisibleLocal;
   /* OperationalScenario::ApertarBotao */ kcg_bool last_ApertarBotao;
   /* OperationalScenario::LaunchPhase */ kcg_bool last_LaunchPhase;
-  /* OperationalScenario::SafeM */ kcg_bool last_SafeM;
-  /* OperationalScenario::picture */ kcg_real last_picture;
-  /* OperationalScenario::payMode */ kcg_bool last_payMode;
-  /* OperationalScenario::StartNormalPhase */ kcg_bool last_StartNormalPhase;
-  /* OperationalScenario::RefAttitude */ kcg_bool last_RefAttitude;
-  /* OperationalScenario::safeMode */ kcg_bool last_safeMode;
-  /* OperationalScenario::StartAtAcquisition */ kcg_bool last_StartAtAcquisition;
   /* OperationalScenario::StartLaunchPhase */ kcg_bool last_StartLaunchPhase;
   /* OperationalScenario::upDateSw */ kcg_bool last_upDateSw;
   /* OperationalScenario::MagneticTorquers */ kcg_bool last_MagneticTorquers;
   /* OperationalScenario::Reactionwheels */ kcg_bool last_Reactionwheels;
   /* OperationalScenario::SunSensor */ kcg_bool last_SunSensor;
   /* OperationalScenario::Accelerometers */ kcg_bool last_Accelerometers;
-  /* OperationalScenario::Gyroscopes */ kcg_bool last_Gyroscopes;
   /* OperationalScenario::picLocation */ kcg_real last_picLocation;
   /* OperationalScenario::takePict */ kcg_bool last_takePict;
   /* OperationalScenario::AttitudeReference */ kcg_int last_AttitudeReference;
   /* OperationalScenario::Telemetry */ kcg_int last_Telemetry;
-  /* OperationalScenario::Power */ kcg_bool last_Power;
   /* OperationalScenario::OpPhases */ kcg_bool OpPhases_reset_sel;
   /* OperationalScenario::OpPhases */ kcg_bool OpPhases_reset_prv;
   
-  if (outC->init5) {
+  if (outC->init4) {
     outC->OpPhases_state_sel = SSM_st_Ground_OpPhases;
   }
   else {
     outC->OpPhases_state_sel = outC->OpPhases_state_nxt;
   }
   switch (outC->OpPhases_state_sel) {
-    case SSM_st_NormalPhase_OpPhases :
-      OpPhases_state_act = SSM_st_NormalPhase_OpPhases;
-      break;
-    
-  }
-  if (outC->init5) {
-    last_StartNormalPhase = kcg_false;
-  }
-  else {
-    last_StartNormalPhase = outC->StartNormalPhase;
-  }
-  if (outC->init5) {
-    last_NPhase = kcg_false;
-  }
-  else {
-    last_NPhase = outC->NPhase;
-  }
-  outC->_L27 = last_NPhase;
-  outC->StartNormalPhase = outC->_L27;
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_AttitudeAcquisition_OpPhases :
-      _126_br_1_guard_OpPhases_AttitudeAcquisition = outC->StartNormalPhase;
-      if (_126_br_1_guard_OpPhases_AttitudeAcquisition) {
-        _111_OpPhases_state_act = SSM_st_NormalPhase_OpPhases;
-      }
-      else {
-        _111_OpPhases_state_act = SSM_st_AttitudeAcquisition_OpPhases;
-      }
-      break;
-    
-  }
-  if (outC->init5) {
-    last_StartAtAcquisition = kcg_false;
-  }
-  else {
-    last_StartAtAcquisition = outC->StartAtAcquisition;
-  }
-  if (outC->init5) {
-    last_AtAcquisition = kcg_false;
-  }
-  else {
-    last_AtAcquisition = outC->AtAcquisition;
-  }
-  outC->_L26 = last_AtAcquisition;
-  outC->StartAtAcquisition = outC->_L26;
-  switch (outC->OpPhases_state_sel) {
     case SSM_st_Ground_OpPhases :
-      _117_OpPhases_state_act = SSM_st_Ground_OpPhases;
-      outC->OpPhases_state_act = _117_OpPhases_state_act;
+      _94_OpPhases_state_act = SSM_st_Ground_OpPhases;
+      outC->OpPhases_state_act = _94_OpPhases_state_act;
       break;
     case SSM_st_Launch_OpPhases :
-      br_1_guard_OpPhases_Launch = outC->StartAtAcquisition;
-      if (br_1_guard_OpPhases_Launch) {
-        _114_OpPhases_state_act = SSM_st_AttitudeAcquisition_OpPhases;
-      }
-      else {
-        _114_OpPhases_state_act = SSM_st_Launch_OpPhases;
-      }
-      outC->OpPhases_state_act = _114_OpPhases_state_act;
+      _91_OpPhases_state_act = SSM_st_Launch_OpPhases;
+      outC->OpPhases_state_act = _91_OpPhases_state_act;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->OpPhases_state_act = _111_OpPhases_state_act;
+      _88_OpPhases_state_act = SSM_st_AttitudeAcquisition_OpPhases;
+      outC->OpPhases_state_act = _88_OpPhases_state_act;
       break;
     case SSM_st_NormalPhase_OpPhases :
+      OpPhases_state_act = SSM_st_NormalPhase_OpPhases;
       outC->OpPhases_state_act = OpPhases_state_act;
       break;
     
   }
-  if (outC->init5) {
-    OpPhases_reset_prv = kcg_false;
-  }
-  else {
-    OpPhases_reset_prv = outC->OpPhases_reset_act;
-  }
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_Launch_OpPhases :
-      br_2_guard_OpPhases_Launch = !outC->StartAtAcquisition;
-      if (br_1_guard_OpPhases_Launch) {
-        _115_OpPhases_reset_act = kcg_true;
-      }
-      else {
-        _115_OpPhases_reset_act = br_2_guard_OpPhases_Launch;
-      }
-      break;
-    case SSM_st_AttitudeAcquisition_OpPhases :
-      _127_br_2_guard_OpPhases_AttitudeAcquisition = !outC->StartNormalPhase;
-      if (_126_br_1_guard_OpPhases_AttitudeAcquisition) {
-        _112_OpPhases_reset_act = kcg_true;
-      }
-      else {
-        _112_OpPhases_reset_act = _127_br_2_guard_OpPhases_AttitudeAcquisition;
-      }
-      break;
-    case SSM_st_NormalPhase_OpPhases :
-      OpPhases_reset_act = kcg_false;
-      break;
-    
-  }
-  if (outC->init5) {
-    last_StartLaunchPhase = kcg_false;
-  }
-  else {
-    last_StartLaunchPhase = outC->StartLaunchPhase;
-  }
-  if (outC->init5) {
-    last_LaunchPhase = kcg_false;
-  }
-  else {
-    last_LaunchPhase = outC->LaunchPhase;
-  }
-  outC->_L22 = last_LaunchPhase;
-  outC->StartLaunchPhase = outC->_L22;
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_Ground_OpPhases :
-      br_1_guard_OpPhases_Ground = !outC->StartLaunchPhase;
-      _118_OpPhases_reset_act = br_1_guard_OpPhases_Ground;
-      outC->OpPhases_reset_act = _118_OpPhases_reset_act;
-      break;
-    case SSM_st_Launch_OpPhases :
-      outC->OpPhases_reset_act = _115_OpPhases_reset_act;
-      break;
-    case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->OpPhases_reset_act = _112_OpPhases_reset_act;
-      break;
-    case SSM_st_NormalPhase_OpPhases :
-      outC->OpPhases_reset_act = OpPhases_reset_act;
-      break;
-    
-  }
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_Launch_OpPhases :
-      if (outC->OpPhases_reset_act) {
-        outC->init = kcg_true;
-      }
-      break;
-    case SSM_st_AttitudeAcquisition_OpPhases :
-      if (outC->OpPhases_reset_act) {
-        outC->init3 = kcg_true;
-      }
-      break;
-    case SSM_st_NormalPhase_OpPhases :
-      if (outC->OpPhases_reset_act) {
-        outC->init4 = kcg_true;
-      }
-      break;
-    
-  }
-  if (outC->init5) {
+  if (outC->init4) {
     OpPhases_reset_sel = kcg_false;
   }
   else {
@@ -401,131 +219,737 @@ void OperationalScenario(
         outC->init = kcg_true;
       }
       break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      if (OpPhases_reset_sel) {
+        outC->init2 = kcg_true;
+      }
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      if (OpPhases_reset_sel) {
+        outC->init3 = kcg_true;
+      }
+      break;
     
   }
-  if (outC->init5) {
+  last_LongitudeLocal = outC->LongitudeLocal;
+  if (outC->init4) {
+    last_LatSec = 0;
+  }
+  else {
+    last_LatSec = outC->LatSec;
+  }
+  if (outC->init4) {
+    last_LatMin = 0;
+  }
+  else {
+    last_LatMin = outC->LatMin;
+  }
+  if (outC->init4) {
+    last_LatDeg = 0;
+  }
+  else {
+    last_LatDeg = outC->LatDeg;
+  }
+  if (outC->init4) {
+    last_LongitudeSec = 0;
+  }
+  else {
+    last_LongitudeSec = outC->LongitudeSec;
+  }
+  if (outC->init4) {
+    last_LongitudeMin = 0;
+  }
+  else {
+    last_LongitudeMin = outC->LongitudeMin;
+  }
+  if (outC->init4) {
+    last_LongitudeDeg = 0;
+  }
+  else {
+    last_LongitudeDeg = outC->LongitudeDeg;
+  }
+  if (outC->init4) {
     last_GroundVisibleLocal = kcg_true;
   }
   else {
     last_GroundVisibleLocal = outC->GroundVisibleLocal;
   }
-  if (outC->init5) {
+  if (outC->init4) {
     last_ApertarBotao = kcg_false;
   }
   else {
     last_ApertarBotao = outC->ApertarBotao;
   }
-  if (outC->init5) {
-    last_SafeM = kcg_false;
+  if (outC->init4) {
+    last_LaunchPhase = kcg_false;
   }
   else {
-    last_SafeM = outC->SafeM;
+    last_LaunchPhase = outC->LaunchPhase;
   }
-  if (outC->init5) {
-    last_picture = 0.0;
-  }
-  else {
-    last_picture = outC->picture;
-  }
-  if (outC->init5) {
-    last_payMode = kcg_false;
+  if (outC->init4) {
+    last_StartLaunchPhase = kcg_false;
   }
   else {
-    last_payMode = outC->payMode;
+    last_StartLaunchPhase = outC->StartLaunchPhase;
   }
-  if (outC->init5) {
-    last_RefAttitude = kcg_false;
-  }
-  else {
-    last_RefAttitude = outC->RefAttitude;
-  }
-  if (outC->init5) {
-    last_safeMode = kcg_false;
-  }
-  else {
-    last_safeMode = outC->safeMode;
-  }
-  if (outC->init5) {
+  if (outC->init4) {
     last_upDateSw = kcg_false;
   }
   else {
     last_upDateSw = outC->rem_upDateSw;
   }
-  if (outC->init5) {
+  if (outC->init4) {
     last_MagneticTorquers = kcg_true;
   }
   else {
     last_MagneticTorquers = outC->rem_MagneticTorquers;
   }
-  if (outC->init5) {
+  if (outC->init4) {
     last_Reactionwheels = kcg_true;
   }
   else {
     last_Reactionwheels = outC->rem_Reactionwheels;
   }
-  if (outC->init5) {
+  if (outC->init4) {
     last_SunSensor = kcg_true;
   }
   else {
     last_SunSensor = outC->rem_SunSensor;
   }
-  if (outC->init5) {
+  if (outC->init4) {
     last_Accelerometers = kcg_true;
   }
   else {
     last_Accelerometers = outC->rem_Accelerometers;
   }
-  if (outC->init5) {
-    last_Gyroscopes = kcg_true;
-  }
-  else {
-    last_Gyroscopes = outC->rem_Gyroscopes;
-  }
-  if (outC->init5) {
+  if (outC->init4) {
     last_picLocation = 0.0;
   }
   else {
     last_picLocation = outC->rem_picLocation;
   }
-  if (outC->init5) {
+  if (outC->init4) {
     last_takePict = kcg_false;
   }
   else {
     last_takePict = outC->rem_takePict;
   }
-  if (outC->init5) {
+  if (outC->init4) {
     last_AttitudeReference = 0;
   }
   else {
     last_AttitudeReference = outC->rem_AttitudeReference;
   }
-  if (outC->init5) {
+  if (outC->init4) {
     last_Telemetry = 0;
   }
   else {
     last_Telemetry = outC->rem_Telemetry;
   }
-  if (outC->init5) {
-    last_Power = kcg_true;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L107_OpPhases_NormalPhase = 80;
+      outC->_L113_OpPhases_NormalPhase = kcg_true;
+      outC->_L114_OpPhases_NormalPhase = 60;
+      outC->_L104_OpPhases_NormalPhase = 9;
+      break;
+    
   }
-  else {
-    last_Power = outC->rem_Power;
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_NormalPhase_OpPhases :
+      if (OpPhases_reset_sel) {
+        /* 9 */ ModCount_reset(&outC->Context_9);
+      }
+      break;
+    
+  }
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_NormalPhase_OpPhases :
+      /* 9 */
+      ModCount(
+        outC->_L113_OpPhases_NormalPhase,
+        outC->_L114_OpPhases_NormalPhase,
+        outC->_L104_OpPhases_NormalPhase,
+        &outC->Context_9);
+      outC->_L102_OpPhases_NormalPhase = outC->Context_9.Count;
+      outC->_L103_OpPhases_NormalPhase = outC->Context_9.rippleClock;
+      outC->_L112_OpPhases_NormalPhase = 180;
+      outC->_L100_OpPhases_NormalPhase = 1;
+      break;
+    
+  }
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_NormalPhase_OpPhases :
+      if (OpPhases_reset_sel) {
+        /* 7 */ ModCount_reset(&outC->Context_7);
+      }
+      break;
+    
   }
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
+      _76_LatDeg = last_LatDeg;
+      outC->LatDeg = _76_LatDeg;
+      break;
+    case SSM_st_Launch_OpPhases :
+      _49_LatDeg = last_LatDeg;
+      outC->LatDeg = _49_LatDeg;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      _22_LatDeg = last_LatDeg;
+      outC->LatDeg = _22_LatDeg;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      /* 7 */
+      ModCount(
+        outC->_L103_OpPhases_NormalPhase,
+        outC->_L112_OpPhases_NormalPhase,
+        outC->_L100_OpPhases_NormalPhase,
+        &outC->Context_7);
+      outC->_L109_OpPhases_NormalPhase = outC->Context_7.Count;
+      outC->_L110_OpPhases_NormalPhase = outC->Context_7.rippleClock;
+      outC->_L99_OpPhases_NormalPhase = outC->_L107_OpPhases_NormalPhase -
+        outC->_L109_OpPhases_NormalPhase;
+      LatDeg = outC->_L99_OpPhases_NormalPhase;
+      outC->LatDeg = LatDeg;
+      break;
+    
+  }
+  outC->_L77 = outC->LatDeg;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L108_OpPhases_NormalPhase = kcg_true;
+      outC->_L101_OpPhases_NormalPhase = 60;
+      outC->_L111_OpPhases_NormalPhase = 1;
+      break;
+    
+  }
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_NormalPhase_OpPhases :
+      if (OpPhases_reset_sel) {
+        /* 8 */ ModCount_reset(&outC->Context_8);
+      }
+      break;
+    
+  }
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      _78_LatSec = last_LatSec;
+      outC->LatSec = _78_LatSec;
+      break;
+    case SSM_st_Launch_OpPhases :
+      _51_LatSec = last_LatSec;
+      outC->LatSec = _51_LatSec;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      _24_LatSec = last_LatSec;
+      outC->LatSec = _24_LatSec;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      /* 8 */
+      ModCount(
+        outC->_L108_OpPhases_NormalPhase,
+        outC->_L101_OpPhases_NormalPhase,
+        outC->_L111_OpPhases_NormalPhase,
+        &outC->Context_8);
+      outC->_L105_OpPhases_NormalPhase = outC->Context_8.Count;
+      outC->_L106_OpPhases_NormalPhase = outC->Context_8.rippleClock;
+      LatSec = outC->_L105_OpPhases_NormalPhase;
+      outC->LatSec = LatSec;
+      break;
+    
+  }
+  outC->_L73 = outC->LatSec;
+  outC->_L76 = (kcg_real) outC->_L73;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      _77_LatMin = last_LatMin;
+      outC->LatMin = _77_LatMin;
+      break;
+    case SSM_st_Launch_OpPhases :
+      _50_LatMin = last_LatMin;
+      outC->LatMin = _50_LatMin;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      _23_LatMin = last_LatMin;
+      outC->LatMin = _23_LatMin;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      LatMin = outC->_L102_OpPhases_NormalPhase;
+      outC->LatMin = LatMin;
+      break;
+    
+  }
+  outC->_L72 = outC->LatMin;
+  outC->_L75 = (kcg_real) outC->_L72;
+  outC->_L74 = (kcg_real) outC->_L77;
+  outC->SAT_Latitude_Sec_Value = outC->_L76;
+  outC->SAT_Latitude_Min_Value = outC->_L75;
+  outC->_L71 = inC->EjectionSignal;
+  outC->_L7 = inC->PassarFaseBtn;
+  outC->_L70 = outC->_L7 | outC->_L71;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L79_OpPhases_NormalPhase = kcg_true;
+      outC->_L80_OpPhases_NormalPhase = 60;
+      outC->_L97_OpPhases_NormalPhase = 1;
+      break;
+    
+  }
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_NormalPhase_OpPhases :
+      if (OpPhases_reset_sel) {
+        /* 5 */ ModCount_reset(&outC->Context_5);
+      }
+      break;
+    
+  }
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      _75_LongitudeSec = last_LongitudeSec;
+      outC->LongitudeSec = _75_LongitudeSec;
+      break;
+    case SSM_st_Launch_OpPhases :
+      _48_LongitudeSec = last_LongitudeSec;
+      outC->LongitudeSec = _48_LongitudeSec;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      _21_LongitudeSec = last_LongitudeSec;
+      outC->LongitudeSec = _21_LongitudeSec;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      /* 5 */
+      ModCount(
+        outC->_L79_OpPhases_NormalPhase,
+        outC->_L80_OpPhases_NormalPhase,
+        outC->_L97_OpPhases_NormalPhase,
+        &outC->Context_5);
+      outC->_L87_OpPhases_NormalPhase = outC->Context_5.Count;
+      outC->_L88_OpPhases_NormalPhase = outC->Context_5.rippleClock;
+      LongitudeSec = outC->_L87_OpPhases_NormalPhase;
+      outC->LongitudeSec = LongitudeSec;
+      break;
+    
+  }
+  outC->_L68 = outC->LongitudeSec;
+  outC->_L69 = (kcg_real) outC->_L68;
+  outC->SAT_Longitude_Sec_Value = outC->_L69;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L94_OpPhases_NormalPhase = kcg_true;
+      outC->_L86_OpPhases_NormalPhase = 60;
+      outC->_L96_OpPhases_NormalPhase = 3;
+      break;
+    
+  }
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_NormalPhase_OpPhases :
+      if (OpPhases_reset_sel) {
+        /* 4 */ ModCount_reset(&outC->Context_4);
+      }
+      break;
+    
+  }
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      _74_LongitudeMin = last_LongitudeMin;
+      outC->LongitudeMin = _74_LongitudeMin;
+      break;
+    case SSM_st_Launch_OpPhases :
+      _47_LongitudeMin = last_LongitudeMin;
+      outC->LongitudeMin = _47_LongitudeMin;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      _20_LongitudeMin = last_LongitudeMin;
+      outC->LongitudeMin = _20_LongitudeMin;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      /* 4 */
+      ModCount(
+        outC->_L94_OpPhases_NormalPhase,
+        outC->_L86_OpPhases_NormalPhase,
+        outC->_L96_OpPhases_NormalPhase,
+        &outC->Context_4);
+      outC->_L89_OpPhases_NormalPhase = outC->Context_4.Count;
+      outC->_L90_OpPhases_NormalPhase = outC->Context_4.rippleClock;
+      LongitudeMin = outC->_L89_OpPhases_NormalPhase;
+      outC->LongitudeMin = LongitudeMin;
+      break;
+    
+  }
+  outC->_L66 = outC->LongitudeMin;
+  outC->_L67 = (kcg_real) outC->_L66;
+  outC->SAT_Longitude_Min_Value = outC->_L67;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L81_OpPhases_NormalPhase = - 3;
+      outC->_L82_OpPhases_NormalPhase = 180;
+      outC->_L95_OpPhases_NormalPhase = 1;
+      break;
+    
+  }
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_NormalPhase_OpPhases :
+      if (OpPhases_reset_sel) {
+        /* 6 */ ModCount_reset(&outC->Context_6);
+      }
+      break;
+    
+  }
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      _73_LongitudeDeg = last_LongitudeDeg;
+      outC->LongitudeDeg = _73_LongitudeDeg;
+      break;
+    case SSM_st_Launch_OpPhases :
+      _46_LongitudeDeg = last_LongitudeDeg;
+      outC->LongitudeDeg = _46_LongitudeDeg;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      _19_LongitudeDeg = last_LongitudeDeg;
+      outC->LongitudeDeg = _19_LongitudeDeg;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      /* 6 */
+      ModCount(
+        outC->_L90_OpPhases_NormalPhase,
+        outC->_L82_OpPhases_NormalPhase,
+        outC->_L95_OpPhases_NormalPhase,
+        &outC->Context_6);
+      outC->_L83_OpPhases_NormalPhase = outC->Context_6.Count;
+      outC->_L84_OpPhases_NormalPhase = outC->Context_6.rippleClock;
+      outC->_L98_OpPhases_NormalPhase = outC->_L81_OpPhases_NormalPhase -
+        outC->_L83_OpPhases_NormalPhase;
+      LongitudeDeg = outC->_L98_OpPhases_NormalPhase;
+      outC->LongitudeDeg = LongitudeDeg;
+      break;
+    
+  }
+  outC->_L65 = outC->LongitudeDeg;
+  outC->_L63 = (kcg_real) outC->_L65;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L54_OpPhases_Ground = 0.0;
+      _72_anglerightlocal = outC->_L54_OpPhases_Ground;
+      outC->anglerightlocal = _72_anglerightlocal;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L39_OpPhases_Launch = 0.0;
+      _45_anglerightlocal = outC->_L39_OpPhases_Launch;
+      outC->anglerightlocal = _45_anglerightlocal;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      outC->_L143_OpPhases_AttitudeAcquisition = 0.0;
+      _18_anglerightlocal = outC->_L143_OpPhases_AttitudeAcquisition;
+      outC->anglerightlocal = _18_anglerightlocal;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      if (outC->init3) {
+        outC->_L56_OpPhases_NormalPhase = 0.0;
+      }
+      else {
+        outC->_L56_OpPhases_NormalPhase = outC->_L62_OpPhases_NormalPhase;
+      }
+      outC->_L59_OpPhases_NormalPhase = 1.0;
+      outC->_L60_OpPhases_NormalPhase = outC->_L56_OpPhases_NormalPhase +
+        outC->_L59_OpPhases_NormalPhase;
+      outC->_L66_OpPhases_NormalPhase = - outC->_L60_OpPhases_NormalPhase;
+      anglerightlocal = outC->_L66_OpPhases_NormalPhase;
+      outC->anglerightlocal = anglerightlocal;
+      break;
+    
+  }
+  outC->_L56 = outC->anglerightlocal;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L53_OpPhases_Ground = 0.0;
+      _71_angleleftlocal = outC->_L53_OpPhases_Ground;
+      outC->angleleftlocal = _71_angleleftlocal;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L40_OpPhases_Launch = 0.0;
+      _44_angleleftlocal = outC->_L40_OpPhases_Launch;
+      outC->angleleftlocal = _44_angleleftlocal;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      outC->_L144_OpPhases_AttitudeAcquisition = 0.0;
+      _17_angleleftlocal = outC->_L144_OpPhases_AttitudeAcquisition;
+      outC->angleleftlocal = _17_angleleftlocal;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      angleleftlocal = outC->_L60_OpPhases_NormalPhase;
+      outC->angleleftlocal = angleleftlocal;
+      break;
+    
+  }
+  outC->_L55 = outC->angleleftlocal;
+  outC->angleleft = outC->_L55;
+  outC->angleright = outC->_L56;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L50_OpPhases_Ground = 0.0;
+      _70_SpinTgLocal = outC->_L50_OpPhases_Ground;
+      outC->SpinTgLocal = _70_SpinTgLocal;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L38_OpPhases_Launch = 0.0;
+      _43_SpinTgLocal = outC->_L38_OpPhases_Launch;
+      outC->SpinTgLocal = _43_SpinTgLocal;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      if (outC->init2) {
+        outC->_L124_OpPhases_AttitudeAcquisition = 0.0;
+      }
+      else {
+        outC->_L124_OpPhases_AttitudeAcquisition =
+          outC->_L142_OpPhases_AttitudeAcquisition;
+      }
+      outC->_L125_OpPhases_AttitudeAcquisition = 1.0;
+      outC->_L142_OpPhases_AttitudeAcquisition =
+        outC->_L124_OpPhases_AttitudeAcquisition +
+        outC->_L125_OpPhases_AttitudeAcquisition;
+      outC->ClockTime_OpPhases_AttitudeAcquisition =
+        outC->_L142_OpPhases_AttitudeAcquisition;
+      outC->_L135_OpPhases_AttitudeAcquisition =
+        outC->ClockTime_OpPhases_AttitudeAcquisition;
+      outC->_L133_OpPhases_AttitudeAcquisition = 15.0;
+      outC->LaunchTime_OpPhases_AttitudeAcquisition =
+        outC->_L133_OpPhases_AttitudeAcquisition;
+      outC->_L136_OpPhases_AttitudeAcquisition =
+        outC->LaunchTime_OpPhases_AttitudeAcquisition;
+      outC->_L138_OpPhases_AttitudeAcquisition = 0.5;
+      outC->_L137_OpPhases_AttitudeAcquisition =
+        outC->_L136_OpPhases_AttitudeAcquisition *
+        outC->_L138_OpPhases_AttitudeAcquisition;
+      outC->_L139_OpPhases_AttitudeAcquisition =
+        outC->_L135_OpPhases_AttitudeAcquisition <
+        outC->_L137_OpPhases_AttitudeAcquisition;
+      outC->_L140_OpPhases_AttitudeAcquisition = 0.0;
+      if (outC->init2) {
+        outC->_L114_OpPhases_AttitudeAcquisition = 1.0;
+      }
+      else {
+        outC->_L114_OpPhases_AttitudeAcquisition =
+          outC->_L110_OpPhases_AttitudeAcquisition;
+      }
+      outC->_L108_OpPhases_AttitudeAcquisition = 1.0;
+      outC->_L110_OpPhases_AttitudeAcquisition =
+        outC->_L114_OpPhases_AttitudeAcquisition +
+        outC->_L108_OpPhases_AttitudeAcquisition;
+      if (outC->_L139_OpPhases_AttitudeAcquisition) {
+        outC->_L130_OpPhases_AttitudeAcquisition =
+          outC->_L140_OpPhases_AttitudeAcquisition;
+      }
+      else {
+        outC->_L130_OpPhases_AttitudeAcquisition =
+          outC->_L110_OpPhases_AttitudeAcquisition;
+      }
+      _16_SpinTgLocal = outC->_L130_OpPhases_AttitudeAcquisition;
+      outC->SpinTgLocal = _16_SpinTgLocal;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L41_OpPhases_NormalPhase = 0.0;
+      SpinTgLocal = outC->_L41_OpPhases_NormalPhase;
+      outC->SpinTgLocal = SpinTgLocal;
+      break;
+    
+  }
+  outC->_L52 = outC->SpinTgLocal;
+  outC->SpinTg = outC->_L52;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L49_OpPhases_Ground = 0.0;
+      _69_SpinRdLocal = outC->_L49_OpPhases_Ground;
+      outC->SpinRdLocal = _69_SpinRdLocal;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L37_OpPhases_Launch = 0.0;
+      _42_SpinRdLocal = outC->_L37_OpPhases_Launch;
+      outC->SpinRdLocal = _42_SpinRdLocal;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      outC->_L119_OpPhases_AttitudeAcquisition = 10.0;
+      if (outC->init2) {
+        outC->_L120_OpPhases_AttitudeAcquisition = 1.0;
+      }
+      else {
+        outC->_L120_OpPhases_AttitudeAcquisition =
+          outC->_L121_OpPhases_AttitudeAcquisition;
+      }
+      outC->_L118_OpPhases_AttitudeAcquisition = 1.0;
+      outC->_L121_OpPhases_AttitudeAcquisition =
+        outC->_L120_OpPhases_AttitudeAcquisition +
+        outC->_L118_OpPhases_AttitudeAcquisition;
+      outC->_L117_OpPhases_AttitudeAcquisition =
+        outC->_L119_OpPhases_AttitudeAcquisition /
+        outC->_L121_OpPhases_AttitudeAcquisition;
+      _15_SpinRdLocal = outC->_L117_OpPhases_AttitudeAcquisition;
+      outC->SpinRdLocal = _15_SpinRdLocal;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L42_OpPhases_NormalPhase = 0.0;
+      SpinRdLocal = outC->_L42_OpPhases_NormalPhase;
+      outC->SpinRdLocal = SpinRdLocal;
+      break;
+    
+  }
+  outC->_L51 = outC->SpinRdLocal;
+  outC->SpinRd = outC->_L51;
+  outC->SAT_Longitude_Value = outC->_L63;
+  outC->SAT_Latitude_Value = outC->_L74;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L42_OpPhases_Ground = 100.0;
+      _66_FuelMeterLocal = outC->_L42_OpPhases_Ground;
+      outC->FuelMeterLocal = _66_FuelMeterLocal;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L34_OpPhases_Launch = 100.0;
+      _39_FuelMeterLocal = outC->_L34_OpPhases_Launch;
+      outC->FuelMeterLocal = _39_FuelMeterLocal;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      if (outC->init2) {
+        outC->_L36_OpPhases_AttitudeAcquisition = 100.0;
+      }
+      else {
+        outC->_L36_OpPhases_AttitudeAcquisition =
+          outC->_L40_OpPhases_AttitudeAcquisition;
+      }
+      outC->_L31_OpPhases_AttitudeAcquisition = 10.0;
+      outC->_L40_OpPhases_AttitudeAcquisition =
+        outC->_L36_OpPhases_AttitudeAcquisition -
+        outC->_L31_OpPhases_AttitudeAcquisition;
+      _12_FuelMeterLocal = outC->_L40_OpPhases_AttitudeAcquisition;
+      outC->FuelMeterLocal = _12_FuelMeterLocal;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L21_OpPhases_NormalPhase = 0.0;
+      FuelMeterLocal = outC->_L21_OpPhases_NormalPhase;
+      outC->FuelMeterLocal = FuelMeterLocal;
+      break;
+    
+  }
+  outC->_L43 = outC->FuelMeterLocal;
+  outC->_L45 = 50.0;
+  outC->_L44 = outC->_L43 * outC->_L45;
+  outC->_L46 = (kcg_int) outC->_L44;
+  outC->FuelMeterGraphic = outC->_L46;
+  outC->FuelMeter = outC->_L43;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L41_OpPhases_Ground = kcg_false;
+      _65_LaunchVisibleLocal = outC->_L41_OpPhases_Ground;
+      outC->LaunchVisibleLocal = _65_LaunchVisibleLocal;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L33_OpPhases_Launch = kcg_true;
+      _38_LaunchVisibleLocal = outC->_L33_OpPhases_Launch;
+      outC->LaunchVisibleLocal = _38_LaunchVisibleLocal;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      outC->_L30_OpPhases_AttitudeAcquisition = kcg_false;
+      _11_LaunchVisibleLocal = outC->_L30_OpPhases_AttitudeAcquisition;
+      outC->LaunchVisibleLocal = _11_LaunchVisibleLocal;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L19_OpPhases_NormalPhase = kcg_false;
+      LaunchVisibleLocal = outC->_L19_OpPhases_NormalPhase;
+      outC->LaunchVisibleLocal = LaunchVisibleLocal;
+      break;
+    
+  }
+  outC->_L42 = outC->LaunchVisibleLocal;
+  outC->LaunchVisible = outC->_L42;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L39_OpPhases_Ground = 21;
+      _64_color_5 = outC->_L39_OpPhases_Ground;
+      outC->color_5 = _64_color_5;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L31_OpPhases_Launch = 21;
+      _37_color_5 = outC->_L31_OpPhases_Launch;
+      outC->color_5 = _37_color_5;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      outC->_L28_OpPhases_AttitudeAcquisition = 21;
+      _10_color_5 = outC->_L28_OpPhases_AttitudeAcquisition;
+      outC->color_5 = _10_color_5;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L18_OpPhases_NormalPhase = 55;
+      color_5 = outC->_L18_OpPhases_NormalPhase;
+      outC->color_5 = color_5;
+      break;
+    
+  }
+  outC->_L41 = outC->color_5;
+  outC->ColorIndex5 = outC->_L41;
+  outC->_L36 = kcg_false;
+  outC->AtNormalPhase = outC->_L36;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L37_OpPhases_Ground = 0.0;
+      _63_AcRdValueLocal = outC->_L37_OpPhases_Ground;
+      outC->AcRdValueLocal = _63_AcRdValueLocal;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L29_OpPhases_Launch = 0.0;
+      _36_AcRdValueLocal = outC->_L29_OpPhases_Launch;
+      outC->AcRdValueLocal = _36_AcRdValueLocal;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      if (outC->init2) {
+        outC->_L26_OpPhases_AttitudeAcquisition = 1.0;
+      }
+      else {
+        outC->_L26_OpPhases_AttitudeAcquisition =
+          outC->_L25_OpPhases_AttitudeAcquisition;
+      }
+      outC->_L22_OpPhases_AttitudeAcquisition = 1.0;
+      outC->_L23_OpPhases_AttitudeAcquisition =
+        outC->_L26_OpPhases_AttitudeAcquisition +
+        outC->_L22_OpPhases_AttitudeAcquisition;
+      _9_AcRdValueLocal = outC->_L23_OpPhases_AttitudeAcquisition;
+      outC->AcRdValueLocal = _9_AcRdValueLocal;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L13_OpPhases_NormalPhase = 10.0;
+      AcRdValueLocal = outC->_L13_OpPhases_NormalPhase;
+      outC->AcRdValueLocal = AcRdValueLocal;
+      break;
+    
+  }
+  outC->_L38 = outC->AcRdValueLocal;
+  outC->AcRdValue = outC->_L38;
+  outC->AtAcquisition = outC->_L36;
+  outC->_L34 = inC->Power;
+  outC->_L32 = kcg_true;
+  outC->_L31 = kcg_true;
+  outC->MagneticTorquersLocal = outC->_L32;
+  outC->ReactionwheelsLocal = outC->_L32;
+  outC->SunSensorLocal = outC->_L32;
+  outC->PowerLocal = outC->_L34;
+  outC->AccelerometersLocal = outC->_L31;
+  outC->GyroscopesLocal = outC->_L31;
+  outC->_L22 = last_LaunchPhase;
+  outC->StartLaunchPhase = outC->_L22;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
       outC->_L16_OpPhases_Ground = kcg_false;
-      _49_NormalPhaseVisibleLocal = outC->_L16_OpPhases_Ground;
-      outC->NormalPhaseVisibleLocal = _49_NormalPhaseVisibleLocal;
+      _62_NormalPhaseVisibleLocal = outC->_L16_OpPhases_Ground;
+      outC->NormalPhaseVisibleLocal = _62_NormalPhaseVisibleLocal;
       break;
     case SSM_st_Launch_OpPhases :
       outC->_L13_OpPhases_Launch = kcg_false;
-      _31_NormalPhaseVisibleLocal = outC->_L13_OpPhases_Launch;
-      outC->NormalPhaseVisibleLocal = _31_NormalPhaseVisibleLocal;
+      _35_NormalPhaseVisibleLocal = outC->_L13_OpPhases_Launch;
+      outC->NormalPhaseVisibleLocal = _35_NormalPhaseVisibleLocal;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->_L1625_OpPhases_AttitudeAcquisition = kcg_false;
-      _13_NormalPhaseVisibleLocal = outC->_L1625_OpPhases_AttitudeAcquisition;
-      outC->NormalPhaseVisibleLocal = _13_NormalPhaseVisibleLocal;
+      outC->_L16_OpPhases_AttitudeAcquisition = kcg_false;
+      _8_NormalPhaseVisibleLocal = outC->_L16_OpPhases_AttitudeAcquisition;
+      outC->NormalPhaseVisibleLocal = _8_NormalPhaseVisibleLocal;
       break;
     case SSM_st_NormalPhase_OpPhases :
       outC->_L12_OpPhases_NormalPhase = kcg_true;
@@ -538,18 +962,18 @@ void OperationalScenario(
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       outC->_L15_OpPhases_Ground = kcg_false;
-      _48_AttitudeVisibleLocal = outC->_L15_OpPhases_Ground;
-      outC->AttitudeVisibleLocal = _48_AttitudeVisibleLocal;
+      _61_AttitudeVisibleLocal = outC->_L15_OpPhases_Ground;
+      outC->AttitudeVisibleLocal = _61_AttitudeVisibleLocal;
       break;
     case SSM_st_Launch_OpPhases :
       outC->_L12_OpPhases_Launch = kcg_false;
-      _30_AttitudeVisibleLocal = outC->_L12_OpPhases_Launch;
-      outC->AttitudeVisibleLocal = _30_AttitudeVisibleLocal;
+      _34_AttitudeVisibleLocal = outC->_L12_OpPhases_Launch;
+      outC->AttitudeVisibleLocal = _34_AttitudeVisibleLocal;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->_L1927_OpPhases_AttitudeAcquisition = kcg_true;
-      _12_AttitudeVisibleLocal = outC->_L1927_OpPhases_AttitudeAcquisition;
-      outC->AttitudeVisibleLocal = _12_AttitudeVisibleLocal;
+      outC->_L19_OpPhases_AttitudeAcquisition = kcg_true;
+      _7_AttitudeVisibleLocal = outC->_L19_OpPhases_AttitudeAcquisition;
+      outC->AttitudeVisibleLocal = _7_AttitudeVisibleLocal;
       break;
     case SSM_st_NormalPhase_OpPhases :
       outC->_L10_OpPhases_NormalPhase = kcg_false;
@@ -562,18 +986,18 @@ void OperationalScenario(
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       outC->_L13_OpPhases_Ground = kcg_true;
-      _47_GroundVisibleLocal = outC->_L13_OpPhases_Ground;
-      outC->GroundVisibleLocal = _47_GroundVisibleLocal;
+      _60_GroundVisibleLocal = outC->_L13_OpPhases_Ground;
+      outC->GroundVisibleLocal = _60_GroundVisibleLocal;
       break;
     case SSM_st_Launch_OpPhases :
       outC->_L14_OpPhases_Launch = kcg_false;
-      _29_GroundVisibleLocal = outC->_L14_OpPhases_Launch;
-      outC->GroundVisibleLocal = _29_GroundVisibleLocal;
+      _33_GroundVisibleLocal = outC->_L14_OpPhases_Launch;
+      outC->GroundVisibleLocal = _33_GroundVisibleLocal;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->_L1726_OpPhases_AttitudeAcquisition = kcg_false;
-      _11_GroundVisibleLocal = outC->_L1726_OpPhases_AttitudeAcquisition;
-      outC->GroundVisibleLocal = _11_GroundVisibleLocal;
+      outC->_L17_OpPhases_AttitudeAcquisition = kcg_false;
+      _6_GroundVisibleLocal = outC->_L17_OpPhases_AttitudeAcquisition;
+      outC->GroundVisibleLocal = _6_GroundVisibleLocal;
       break;
     case SSM_st_NormalPhase_OpPhases :
       outC->_L11_OpPhases_NormalPhase = kcg_false;
@@ -589,18 +1013,18 @@ void OperationalScenario(
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       outC->_L8_OpPhases_Ground = 21;
-      _46_color4 = outC->_L8_OpPhases_Ground;
-      outC->color4 = _46_color4;
+      _59_color4 = outC->_L8_OpPhases_Ground;
+      outC->color4 = _59_color4;
       break;
     case SSM_st_Launch_OpPhases :
       outC->_L10_OpPhases_Launch = 21;
-      _28_color4 = outC->_L10_OpPhases_Launch;
-      outC->color4 = _28_color4;
+      _32_color4 = outC->_L10_OpPhases_Launch;
+      outC->color4 = _32_color4;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->_L1228_OpPhases_AttitudeAcquisition = 21;
-      _10_color4 = outC->_L1228_OpPhases_AttitudeAcquisition;
-      outC->color4 = _10_color4;
+      outC->_L12_OpPhases_AttitudeAcquisition = 21;
+      _5_color4 = outC->_L12_OpPhases_AttitudeAcquisition;
+      outC->color4 = _5_color4;
       break;
     case SSM_st_NormalPhase_OpPhases :
       outC->_L7_OpPhases_NormalPhase = 55;
@@ -614,18 +1038,18 @@ void OperationalScenario(
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       outC->_L7_OpPhases_Ground = 21;
-      _45_color3 = outC->_L7_OpPhases_Ground;
-      outC->color3 = _45_color3;
+      _58_color3 = outC->_L7_OpPhases_Ground;
+      outC->color3 = _58_color3;
       break;
     case SSM_st_Launch_OpPhases :
       outC->_L7_OpPhases_Launch = 21;
-      _27_color3 = outC->_L7_OpPhases_Launch;
-      outC->color3 = _27_color3;
+      _31_color3 = outC->_L7_OpPhases_Launch;
+      outC->color3 = _31_color3;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->_L1329_OpPhases_AttitudeAcquisition = 55;
-      _9_color3 = outC->_L1329_OpPhases_AttitudeAcquisition;
-      outC->color3 = _9_color3;
+      outC->_L13_OpPhases_AttitudeAcquisition = 55;
+      _4_color3 = outC->_L13_OpPhases_AttitudeAcquisition;
+      outC->color3 = _4_color3;
       break;
     case SSM_st_NormalPhase_OpPhases :
       outC->_L8_OpPhases_NormalPhase = 21;
@@ -639,18 +1063,18 @@ void OperationalScenario(
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       outC->_L4_OpPhases_Ground = 55;
-      _44_color_2 = outC->_L4_OpPhases_Ground;
-      outC->color_2 = _44_color_2;
+      _57_color_2 = outC->_L4_OpPhases_Ground;
+      outC->color_2 = _57_color_2;
       break;
     case SSM_st_Launch_OpPhases :
       outC->_L6_OpPhases_Launch = 21;
-      _26_color_2 = outC->_L6_OpPhases_Launch;
-      outC->color_2 = _26_color_2;
+      _30_color_2 = outC->_L6_OpPhases_Launch;
+      outC->color_2 = _30_color_2;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->_L1430_OpPhases_AttitudeAcquisition = 21;
-      _8_color_2 = outC->_L1430_OpPhases_AttitudeAcquisition;
-      outC->color_2 = _8_color_2;
+      outC->_L14_OpPhases_AttitudeAcquisition = 21;
+      _3_color_2 = outC->_L14_OpPhases_AttitudeAcquisition;
+      outC->color_2 = _3_color_2;
       break;
     case SSM_st_NormalPhase_OpPhases :
       outC->_L6_OpPhases_NormalPhase = 21;
@@ -664,18 +1088,18 @@ void OperationalScenario(
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       outC->_L2_OpPhases_Ground = 21;
-      color43 = outC->_L2_OpPhases_Ground;
-      outC->color = color43;
+      color56 = outC->_L2_OpPhases_Ground;
+      outC->color = color56;
       break;
     case SSM_st_Launch_OpPhases :
       outC->_L5_OpPhases_Launch = 55;
-      color25 = outC->_L5_OpPhases_Launch;
-      outC->color = color25;
+      color29 = outC->_L5_OpPhases_Launch;
+      outC->color = color29;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->_L1531_OpPhases_AttitudeAcquisition = 21;
-      color7 = outC->_L1531_OpPhases_AttitudeAcquisition;
-      outC->color = color7;
+      outC->_L15_OpPhases_AttitudeAcquisition = 21;
+      color2 = outC->_L15_OpPhases_AttitudeAcquisition;
+      outC->color = color2;
       break;
     case SSM_st_NormalPhase_OpPhases :
       outC->_L5_OpPhases_NormalPhase = 21;
@@ -688,57 +1112,29 @@ void OperationalScenario(
   outC->ColorIndex = outC->_L12;
   outC->_L11 = kcg_true;
   outC->Emit2CDS = outC->_L11;
-  outC->_L7 = inC->PassarFaseBtn;
-  outC->ApertarBotao = outC->_L7;
+  outC->ApertarBotao = outC->_L70;
   outC->_L9 = kcg_true;
   outC->_L8 = kcg_true;
   outC->Layer1Visible = outC->_L9;
   outC->Layer1Active = outC->_L8;
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_Ground_OpPhases :
-      _51_NPhase = last_NPhase;
-      _50_AtAcquisition = last_AtAcquisition;
-      SafeM41 = last_SafeM;
-      _40_picture = last_picture;
-      _39_payMode = last_payMode;
-      _38_RefAttitude = last_RefAttitude;
-      _37_safeMode = last_safeMode;
-      break;
-    
-  }
   switch (outC->OpPhases_state_sel) {
     case SSM_st_Ground_OpPhases :
+      br_1_guard_OpPhases_Ground = !outC->StartLaunchPhase;
       if (br_1_guard_OpPhases_Ground) {
-        _119_OpPhases_fired_strong = SSM_TR_Ground_1_OpPhases;
+        _96_OpPhases_fired_strong = SSM_TR_Ground_1_OpPhases;
       }
       else {
-        _119_OpPhases_fired_strong = SSM_TR_no_trans_OpPhases;
+        _96_OpPhases_fired_strong = SSM_TR_no_trans_OpPhases;
       }
-      outC->OpPhases_fired_strong = _119_OpPhases_fired_strong;
+      outC->OpPhases_fired_strong = _96_OpPhases_fired_strong;
       break;
     case SSM_st_Launch_OpPhases :
-      if (br_1_guard_OpPhases_Launch) {
-        _116_OpPhases_fired_strong = SSM_TR_Launch_1_OpPhases;
-      }
-      else if (br_2_guard_OpPhases_Launch) {
-        _116_OpPhases_fired_strong = SSM_TR_Launch_2_OpPhases;
-      }
-      else {
-        _116_OpPhases_fired_strong = SSM_TR_no_trans_OpPhases;
-      }
-      outC->OpPhases_fired_strong = _116_OpPhases_fired_strong;
+      _93_OpPhases_fired_strong = SSM_TR_no_trans_OpPhases;
+      outC->OpPhases_fired_strong = _93_OpPhases_fired_strong;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      if (_126_br_1_guard_OpPhases_AttitudeAcquisition) {
-        _113_OpPhases_fired_strong = SSM_TR_AttitudeAcquisition_1_OpPhases;
-      }
-      else if (_127_br_2_guard_OpPhases_AttitudeAcquisition) {
-        _113_OpPhases_fired_strong = SSM_TR_AttitudeAcquisition_2_OpPhases;
-      }
-      else {
-        _113_OpPhases_fired_strong = SSM_TR_no_trans_OpPhases;
-      }
-      outC->OpPhases_fired_strong = _113_OpPhases_fired_strong;
+      _90_OpPhases_fired_strong = SSM_TR_no_trans_OpPhases;
+      outC->OpPhases_fired_strong = _90_OpPhases_fired_strong;
       break;
     case SSM_st_NormalPhase_OpPhases :
       OpPhases_fired_strong = SSM_TR_no_trans_OpPhases;
@@ -751,84 +1147,105 @@ void OperationalScenario(
       outC->Ground_weakb_clock_OpPhases = outC->OpPhases_fired_strong !=
         SSM_TR_no_trans_OpPhases;
       if (outC->Ground_weakb_clock_OpPhases) {
-        _110_OpPhases_fired = outC->OpPhases_fired_strong;
-        _109_OpPhases_reset_nxt = kcg_false;
-        _108_OpPhases_state_nxt = SSM_st_Ground_OpPhases;
-        _54_OpPhases_fired = _110_OpPhases_fired;
-        _53_OpPhases_reset_nxt = _109_OpPhases_reset_nxt;
-        _52_OpPhases_state_nxt = _108_OpPhases_state_nxt;
+        _87_OpPhases_fired = outC->OpPhases_fired_strong;
+        _86_OpPhases_reset_nxt = kcg_false;
+        _85_OpPhases_state_nxt = SSM_st_Ground_OpPhases;
+        _81_OpPhases_fired = _87_OpPhases_fired;
+        _80_OpPhases_reset_nxt = _86_OpPhases_reset_nxt;
+        _79_OpPhases_state_nxt = _85_OpPhases_state_nxt;
       }
       else {
         br_2_guard_OpPhases_Ground = outC->StartLaunchPhase;
         if (br_2_guard_OpPhases_Ground) {
-          _107_OpPhases_fired = SSM_TR_Ground_2_OpPhases;
+          _84_OpPhases_fired = SSM_TR_Ground_2_OpPhases;
         }
         else {
-          _107_OpPhases_fired = SSM_TR_no_trans_OpPhases;
+          _84_OpPhases_fired = SSM_TR_no_trans_OpPhases;
         }
-        _106_OpPhases_reset_nxt = br_2_guard_OpPhases_Ground;
+        _83_OpPhases_reset_nxt = br_2_guard_OpPhases_Ground;
         if (br_2_guard_OpPhases_Ground) {
-          _105_OpPhases_state_nxt = SSM_st_Launch_OpPhases;
+          _82_OpPhases_state_nxt = SSM_st_Launch_OpPhases;
         }
         else {
-          _105_OpPhases_state_nxt = SSM_st_Ground_OpPhases;
+          _82_OpPhases_state_nxt = SSM_st_Ground_OpPhases;
         }
-        _54_OpPhases_fired = _107_OpPhases_fired;
-        _53_OpPhases_reset_nxt = _106_OpPhases_reset_nxt;
-        _52_OpPhases_state_nxt = _105_OpPhases_state_nxt;
+        _81_OpPhases_fired = _84_OpPhases_fired;
+        _80_OpPhases_reset_nxt = _83_OpPhases_reset_nxt;
+        _79_OpPhases_state_nxt = _82_OpPhases_state_nxt;
       }
-      outC->_L1_OpPhases_Ground = inC->Power;
-      outC->_L18_OpPhases_Ground = !outC->_L1_OpPhases_Ground;
-      outC->_L19_OpPhases_Ground = inC->Gyroscopes;
-      outC->_L20_OpPhases_Ground = inC->Accelerometers;
-      outC->_L21_OpPhases_Ground = inC->SunSensor;
+      outC->_L46_OpPhases_Ground = 0.0;
+      outC->_L45_OpPhases_Ground = 0.0;
+      _67_LongitudeLocal = outC->_L46_OpPhases_Ground;
+      _68_LatitudeLocal = outC->_L45_OpPhases_Ground;
+      outC->_L35_OpPhases_Ground = outC->MagneticTorquersLocal;
+      outC->_L34_OpPhases_Ground = outC->ReactionwheelsLocal;
+      outC->_L33_OpPhases_Ground = outC->SunSensorLocal;
+      outC->_L32_OpPhases_Ground = outC->AccelerometersLocal;
+      outC->_L31_OpPhases_Ground = outC->GyroscopesLocal;
+      outC->_L30_OpPhases_Ground = outC->PowerLocal;
+      break;
+    
+  }
+  if (outC->init4) {
+    OpPhases_reset_prv = kcg_false;
+  }
+  else {
+    OpPhases_reset_prv = outC->OpPhases_reset_act;
+  }
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_Ground_OpPhases :
+      _95_OpPhases_reset_act = br_1_guard_OpPhases_Ground;
+      outC->OpPhases_reset_act = _95_OpPhases_reset_act;
+      break;
+    case SSM_st_Launch_OpPhases :
+      _92_OpPhases_reset_act = kcg_false;
+      outC->OpPhases_reset_act = _92_OpPhases_reset_act;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      _89_OpPhases_reset_act = kcg_false;
+      outC->OpPhases_reset_act = _89_OpPhases_reset_act;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      OpPhases_reset_act = kcg_false;
+      outC->OpPhases_reset_act = OpPhases_reset_act;
+      break;
+    
+  }
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
       if (outC->OpPhases_reset_act) {
-        /* 6 */ ReadSensors_reset(&outC->Context_6);
+        /* 6 */ ReadSensors_reset(&outC->_1_Context_6);
       }
       /* 6 */
       ReadSensors(
-        outC->_L19_OpPhases_Ground,
-        outC->_L20_OpPhases_Ground,
-        outC->_L21_OpPhases_Ground,
-        &outC->Context_6);
-      outC->_L22_OpPhases_Ground = outC->Context_6.SensorsStatus;
-      outC->_L23_OpPhases_Ground = outC->_L18_OpPhases_Ground &
+        outC->_L31_OpPhases_Ground,
+        outC->_L32_OpPhases_Ground,
+        outC->_L33_OpPhases_Ground,
+        &outC->_1_Context_6);
+      outC->_L22_OpPhases_Ground = outC->_1_Context_6.SensorsStatus;
+      outC->_L23_OpPhases_Ground = outC->_L30_OpPhases_Ground &
         outC->_L22_OpPhases_Ground;
-      outC->_L26_OpPhases_Ground = inC->Reactionwheels;
-      outC->_L25_OpPhases_Ground = inC->MagneticTorquers;
       if (outC->OpPhases_reset_act) {
         /* 1 */ TestActuators_reset(&outC->Context_1);
       }
       /* 1 */
       TestActuators(
-        outC->_L26_OpPhases_Ground,
-        outC->_L25_OpPhases_Ground,
+        outC->_L34_OpPhases_Ground,
+        outC->_L35_OpPhases_Ground,
         &outC->Context_1);
       outC->_L24_OpPhases_Ground = outC->Context_1.ActuatorsStatus;
       outC->_L27_OpPhases_Ground = outC->_L23_OpPhases_Ground &
         outC->_L24_OpPhases_Ground;
-      _42_LaunchPhase = outC->_L27_OpPhases_Ground;
-      outC->OpPhases_fired = _54_OpPhases_fired;
-      outC->OpPhases_reset_nxt = _53_OpPhases_reset_nxt;
-      outC->OpPhases_state_nxt = _52_OpPhases_state_nxt;
-      outC->NPhase = _51_NPhase;
-      outC->AtAcquisition = _50_AtAcquisition;
-      outC->LaunchPhase = _42_LaunchPhase;
-      outC->SafeM = SafeM41;
-      outC->picture = _40_picture;
-      outC->payMode = _39_payMode;
-      outC->RefAttitude = _38_RefAttitude;
-      outC->safeMode = _37_safeMode;
+      _55_LaunchPhase = outC->_L27_OpPhases_Ground;
+      outC->OpPhases_fired = _81_OpPhases_fired;
+      outC->OpPhases_reset_nxt = _80_OpPhases_reset_nxt;
+      outC->OpPhases_state_nxt = _79_OpPhases_state_nxt;
+      outC->LatitudeLocal = _68_LatitudeLocal;
+      outC->LongitudeLocal = _67_LongitudeLocal;
+      outC->LaunchPhase = _55_LaunchPhase;
       break;
     case SSM_st_Launch_OpPhases :
-      _33_NPhase = last_NPhase;
-      _32_AtAcquisition = last_AtAcquisition;
-      _24_LaunchPhase = last_LaunchPhase;
-      SafeM23 = last_SafeM;
-      _22_picture = last_picture;
-      _21_payMode = last_payMode;
-      _20_RefAttitude = last_RefAttitude;
-      _19_safeMode = last_safeMode;
+      _28_LaunchPhase = last_LaunchPhase;
       if (outC->init) {
         last_AtAcquisition_OpPhases_Launch = kcg_false;
       }
@@ -836,893 +1253,110 @@ void OperationalScenario(
         last_AtAcquisition_OpPhases_Launch =
           outC->AtAcquisition_OpPhases_Launch;
       }
-      _36_OpPhases_fired = outC->OpPhases_fired_strong;
-      _35_OpPhases_reset_nxt = kcg_false;
-      _34_OpPhases_state_nxt = SSM_st_Launch_OpPhases;
       outC->_L28_OpPhases_Launch = outC->ApertarBotao;
       outC->AtAcquisition_OpPhases_Launch = outC->_L28_OpPhases_Launch;
-      outC->OpPhases_fired = _36_OpPhases_fired;
-      outC->OpPhases_reset_nxt = _35_OpPhases_reset_nxt;
-      outC->OpPhases_state_nxt = _34_OpPhases_state_nxt;
-      outC->NPhase = _33_NPhase;
-      outC->AtAcquisition = _32_AtAcquisition;
-      outC->LaunchPhase = _24_LaunchPhase;
-      outC->SafeM = SafeM23;
-      outC->picture = _22_picture;
-      outC->payMode = _21_payMode;
-      outC->RefAttitude = _20_RefAttitude;
-      outC->safeMode = _19_safeMode;
+      br_1_guard_OpPhases_Launch = outC->AtAcquisition_OpPhases_Launch;
+      if (br_1_guard_OpPhases_Launch) {
+        _54_OpPhases_fired = SSM_TR_Launch_1_OpPhases;
+      }
+      else {
+        _54_OpPhases_fired = SSM_TR_no_trans_OpPhases;
+      }
+      _53_OpPhases_reset_nxt = br_1_guard_OpPhases_Launch;
+      if (br_1_guard_OpPhases_Launch) {
+        _52_OpPhases_state_nxt = SSM_st_AttitudeAcquisition_OpPhases;
+      }
+      else {
+        _52_OpPhases_state_nxt = SSM_st_Launch_OpPhases;
+      }
+      outC->_L36_OpPhases_Launch = 0.0;
+      _41_LatitudeLocal = outC->_L36_OpPhases_Launch;
+      outC->_L35_OpPhases_Launch = 0.0;
+      _40_LongitudeLocal = outC->_L35_OpPhases_Launch;
+      outC->OpPhases_fired = _54_OpPhases_fired;
+      outC->OpPhases_reset_nxt = _53_OpPhases_reset_nxt;
+      outC->OpPhases_state_nxt = _52_OpPhases_state_nxt;
+      outC->LatitudeLocal = _41_LatitudeLocal;
+      outC->LongitudeLocal = _40_LongitudeLocal;
+      outC->LaunchPhase = _28_LaunchPhase;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      _6_LaunchPhase = last_LaunchPhase;
-      _4_picture = last_picture;
-      _3_payMode = last_payMode;
-      _2_RefAttitude = last_RefAttitude;
-      _1_safeMode = last_safeMode;
-      if (outC->init3) {
-        last_sMode_OpPhases_AttitudeAcquisition = kcg_false;
+      _1_LaunchPhase = last_LaunchPhase;
+      outC->_L141_OpPhases_AttitudeAcquisition =
+        outC->LaunchTime_OpPhases_AttitudeAcquisition;
+      outC->_L24_OpPhases_AttitudeAcquisition =
+        outC->_L23_OpPhases_AttitudeAcquisition >=
+        outC->_L141_OpPhases_AttitudeAcquisition;
+      outC->AtNormalPhaseLocal_OpPhases_AttitudeAcquisition =
+        outC->_L24_OpPhases_AttitudeAcquisition;
+      br_1_guard_OpPhases_AttitudeAcquisition =
+        outC->AtNormalPhaseLocal_OpPhases_AttitudeAcquisition;
+      if (br_1_guard_OpPhases_AttitudeAcquisition) {
+        _27_OpPhases_fired = SSM_TR_AttitudeAcquisition_1_OpPhases;
       }
       else {
-        last_sMode_OpPhases_AttitudeAcquisition =
-          outC->sMode_OpPhases_AttitudeAcquisition;
+        _27_OpPhases_fired = SSM_TR_no_trans_OpPhases;
       }
-      _18_OpPhases_fired = outC->OpPhases_fired_strong;
-      _17_OpPhases_reset_nxt = kcg_false;
-      _16_OpPhases_state_nxt = SSM_st_AttitudeAcquisition_OpPhases;
-      outC->_L2024_OpPhases_AttitudeAcquisition =
-        last_sMode_OpPhases_AttitudeAcquisition;
-      SafeM5 = outC->_L2024_OpPhases_AttitudeAcquisition;
-      if (outC->init3) {
-        outC->atacquisition_state_sel_OpPhases_AttitudeAcquisition =
-          SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition;
+      _26_OpPhases_reset_nxt = br_1_guard_OpPhases_AttitudeAcquisition;
+      if (br_1_guard_OpPhases_AttitudeAcquisition) {
+        _25_OpPhases_state_nxt = SSM_st_NormalPhase_OpPhases;
       }
       else {
-        outC->atacquisition_state_sel_OpPhases_AttitudeAcquisition =
-          outC->atacquisition_state_nxt_OpPhases_AttitudeAcquisition;
+        _25_OpPhases_state_nxt = SSM_st_AttitudeAcquisition_OpPhases;
       }
-      outC->_7_atacquisition_clock_OpPhases_AttitudeAcquisition =
-        outC->atacquisition_state_sel_OpPhases_AttitudeAcquisition;
-      switch (outC->_7_atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          _124_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            !SafeM5;
-          _125_br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            SafeM5;
-          if (_124_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors) {
-            _102_atacquisition_state_act_OpPhases_AttitudeAcquisition =
-              SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition;
-          }
-          else if (_125_br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors) {
-            _102_atacquisition_state_act_OpPhases_AttitudeAcquisition =
-              SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition;
-          }
-          else {
-            _102_atacquisition_state_act_OpPhases_AttitudeAcquisition =
-              SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition;
-          }
-          outC->atacquisition_state_act_OpPhases_AttitudeAcquisition =
-            _102_atacquisition_state_act_OpPhases_AttitudeAcquisition;
-          break;
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          _123_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            SafeM5;
-          if (_123_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude) {
-            _99_atacquisition_state_act_OpPhases_AttitudeAcquisition =
-              SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition;
-          }
-          else {
-            _99_atacquisition_state_act_OpPhases_AttitudeAcquisition =
-              SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition;
-          }
-          outC->atacquisition_state_act_OpPhases_AttitudeAcquisition =
-            _99_atacquisition_state_act_OpPhases_AttitudeAcquisition;
-          break;
-        case SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition :
-          br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_SafeMode =
-            !SafeM5;
-          if (br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_SafeMode) {
-            atacquisition_state_act_OpPhases_AttitudeAcquisition =
-              SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition;
-          }
-          else {
-            atacquisition_state_act_OpPhases_AttitudeAcquisition =
-              SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition;
-          }
-          outC->atacquisition_state_act_OpPhases_AttitudeAcquisition =
-            atacquisition_state_act_OpPhases_AttitudeAcquisition;
-          break;
-        
-      }
-      outC->atacquisition_clock_OpPhases_AttitudeAcquisition =
-        outC->atacquisition_state_act_OpPhases_AttitudeAcquisition;
-      switch (outC->_7_atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          if (_124_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors) {
-            _104_atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-              SSM_TR_readsensors_1_atacquisition_OpPhases_AttitudeAcquisition;
-          }
-          else if (_125_br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors) {
-            _104_atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-              SSM_TR_readsensors_2_atacquisition_OpPhases_AttitudeAcquisition;
-          }
-          else {
-            _104_atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-              SSM_TR_no_trans_atacquisition_OpPhases_AttitudeAcquisition;
-          }
-          outC->atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-            _104_atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-          break;
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            !SafeM5;
-          if (_123_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude) {
-            _101_atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-              SSM_TR_refAttitude_1_atacquisition_OpPhases_AttitudeAcquisition;
-          }
-          else if (br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude) {
-            _101_atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-              SSM_TR_refAttitude_2_atacquisition_OpPhases_AttitudeAcquisition;
-          }
-          else {
-            _101_atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-              SSM_TR_no_trans_atacquisition_OpPhases_AttitudeAcquisition;
-          }
-          outC->atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-            _101_atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-          break;
-        case SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition :
-          if (br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_SafeMode) {
-            atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-              SSM_TR_SafeMode_1_atacquisition_OpPhases_AttitudeAcquisition;
-          }
-          else {
-            atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-              SSM_TR_no_trans_atacquisition_OpPhases_AttitudeAcquisition;
-          }
-          outC->atacquisition_fired_strong_OpPhases_AttitudeAcquisition =
-            atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-          break;
-        
-      }
-      switch (outC->atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          _98_atacquisition_fired_OpPhases_AttitudeAcquisition =
-            outC->atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-          _97_atacquisition_reset_nxt_OpPhases_AttitudeAcquisition = kcg_false;
-          _96_atacquisition_state_nxt_OpPhases_AttitudeAcquisition =
-            SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition;
-          outC->_L1818_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            kcg_false;
-          _94_NPhase =
-            outC->_L1818_OpPhases_AttitudeAcquisition_atacquisition_readsensors;
-          _93_AtAcquisition =
-            outC->_L1818_OpPhases_AttitudeAcquisition_atacquisition_readsensors;
-          outC->_L1021_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            inC->Gyroscopes;
-          outC->_L1222_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            inC->Accelerometers;
-          outC->_L8_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            inC->SunSensor;
-          break;
-        
-      }
-      if (outC->init3) {
-        atacquisition_reset_prv_OpPhases_AttitudeAcquisition = kcg_false;
+      outC->_L53_OpPhases_AttitudeAcquisition = 15.0;
+      _13_LongitudeLocal = outC->_L53_OpPhases_AttitudeAcquisition;
+      outC->_L43_OpPhases_AttitudeAcquisition = 0.0;
+      _14_LatitudeLocal = outC->_L43_OpPhases_AttitudeAcquisition;
+      outC->_L21_OpPhases_AttitudeAcquisition = 1.0;
+      if (outC->_L24_OpPhases_AttitudeAcquisition) {
+        outC->_L25_OpPhases_AttitudeAcquisition =
+          outC->_L21_OpPhases_AttitudeAcquisition;
       }
       else {
-        atacquisition_reset_prv_OpPhases_AttitudeAcquisition =
-          outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition;
+        outC->_L25_OpPhases_AttitudeAcquisition =
+          outC->_L23_OpPhases_AttitudeAcquisition;
       }
-      switch (outC->_7_atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          if (_124_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors) {
-            _103_atacquisition_reset_act_OpPhases_AttitudeAcquisition =
-              kcg_true;
-          }
-          else {
-            _103_atacquisition_reset_act_OpPhases_AttitudeAcquisition =
-              _125_br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_readsensors;
-          }
-          outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition =
-            _103_atacquisition_reset_act_OpPhases_AttitudeAcquisition;
-          break;
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          if (_123_br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude) {
-            _100_atacquisition_reset_act_OpPhases_AttitudeAcquisition =
-              kcg_true;
-          }
-          else {
-            _100_atacquisition_reset_act_OpPhases_AttitudeAcquisition =
-              br_2_guard_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-          }
-          outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition =
-            _100_atacquisition_reset_act_OpPhases_AttitudeAcquisition;
-          break;
-        case SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition :
-          atacquisition_reset_act_OpPhases_AttitudeAcquisition =
-            br_1_guard_OpPhases_AttitudeAcquisition_atacquisition_SafeMode;
-          outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition =
-            atacquisition_reset_act_OpPhases_AttitudeAcquisition;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 8 */ ReadSensors_reset(&outC->Context_8);
-      }
-      switch (outC->atacquisition_state_act_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          if (outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition) {
-            /* 8 */ ReadSensors_reset(&outC->Context_8);
-          }
-          break;
-        
-      }
-      switch (outC->atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          /* 8 */
-          ReadSensors(
-            outC->_L1021_OpPhases_AttitudeAcquisition_atacquisition_readsensors,
-            outC->_L1222_OpPhases_AttitudeAcquisition_atacquisition_readsensors,
-            outC->_L8_OpPhases_AttitudeAcquisition_atacquisition_readsensors,
-            &outC->Context_8);
-          outC->_L5_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            outC->Context_8.SensorsStatus;
-          outC->_L11_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            inC->Reactionwheels;
-          outC->_L7_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            inC->MagneticTorquers;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 4 */ TestActuators_reset(&outC->Context_4);
-      }
-      switch (outC->atacquisition_state_act_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          if (outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition) {
-            /* 4 */ TestActuators_reset(&outC->Context_4);
-          }
-          break;
-        
-      }
-      switch (outC->atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          /* 4 */
-          TestActuators(
-            outC->_L11_OpPhases_AttitudeAcquisition_atacquisition_readsensors,
-            outC->_L7_OpPhases_AttitudeAcquisition_atacquisition_readsensors,
-            &outC->Context_4);
-          outC->_L1323_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            outC->Context_4.ActuatorsStatus;
-          outC->_L620_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            outC->_L5_OpPhases_AttitudeAcquisition_atacquisition_readsensors &
-            outC->_L1323_OpPhases_AttitudeAcquisition_atacquisition_readsensors;
-          outC->_L1519_OpPhases_AttitudeAcquisition_atacquisition_readsensors =
-            !outC->_L620_OpPhases_AttitudeAcquisition_atacquisition_readsensors;
-          sMode95_OpPhases_AttitudeAcquisition =
-            outC->_L1519_OpPhases_AttitudeAcquisition_atacquisition_readsensors;
-          break;
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          _87_AtAcquisition = last_AtAcquisition;
-          _92_atacquisition_fired_OpPhases_AttitudeAcquisition =
-            outC->atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-          _91_atacquisition_reset_nxt_OpPhases_AttitudeAcquisition = kcg_false;
-          _90_atacquisition_state_nxt_OpPhases_AttitudeAcquisition =
-            SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition;
-          outC->_L18_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            inC->Gyroscopes;
-          outC->_L21_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            inC->Accelerometers;
-          outC->_L17_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            inC->SunSensor;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 9 */ ReadSensors_reset(&outC->Context_9);
-      }
-      switch (outC->atacquisition_state_act_OpPhases_AttitudeAcquisition) {
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          if (outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition) {
-            /* 9 */ ReadSensors_reset(&outC->Context_9);
-          }
-          break;
-        
-      }
-      switch (outC->atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          /* 9 */
-          ReadSensors(
-            outC->_L18_OpPhases_AttitudeAcquisition_atacquisition_refAttitude,
-            outC->_L21_OpPhases_AttitudeAcquisition_atacquisition_refAttitude,
-            outC->_L17_OpPhases_AttitudeAcquisition_atacquisition_refAttitude,
-            &outC->Context_9);
-          outC->_L13_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            outC->Context_9.SensorsStatus;
-          outC->_L20_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            inC->Reactionwheels;
-          outC->_L19_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            inC->MagneticTorquers;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 5 */ TestActuators_reset(&outC->Context_5);
-      }
-      switch (outC->atacquisition_state_act_OpPhases_AttitudeAcquisition) {
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          if (outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition) {
-            /* 5 */ TestActuators_reset(&outC->Context_5);
-          }
-          break;
-        
-      }
-      switch (outC->atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          /* 5 */
-          TestActuators(
-            outC->_L20_OpPhases_AttitudeAcquisition_atacquisition_refAttitude,
-            outC->_L19_OpPhases_AttitudeAcquisition_atacquisition_refAttitude,
-            &outC->Context_5);
-          outC->_L15_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            outC->Context_5.ActuatorsStatus;
-          outC->_L16_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            outC->_L13_OpPhases_AttitudeAcquisition_atacquisition_refAttitude &
-            outC->_L15_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-          outC->_L14_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            !outC->_L16_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 1 */ controlAlgorithm_reset(&outC->_1_Context_1);
-      }
-      switch (outC->atacquisition_state_act_OpPhases_AttitudeAcquisition) {
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          if (outC->atacquisition_reset_act_OpPhases_AttitudeAcquisition) {
-            /* 1 */ controlAlgorithm_reset(&outC->_1_Context_1);
-          }
-          break;
-        
-      }
-      switch (outC->atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          outC->atacquisition_fired_OpPhases_AttitudeAcquisition =
-            _98_atacquisition_fired_OpPhases_AttitudeAcquisition;
-          break;
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          /* 1 */ controlAlgorithm(&outC->_1_Context_1);
-          outC->_L10_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            outC->_1_Context_1.ControlAlgorithmActive;
-          outC->_L12_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            !outC->_L10_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-          outC->_L22_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            outC->_L14_OpPhases_AttitudeAcquisition_atacquisition_refAttitude |
-            outC->_L12_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-          outC->_L23_OpPhases_AttitudeAcquisition_atacquisition_refAttitude =
-            !outC->_L22_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-          _88_NPhase =
-            outC->_L23_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-          sMode89_OpPhases_AttitudeAcquisition =
-            outC->_L22_OpPhases_AttitudeAcquisition_atacquisition_refAttitude;
-          outC->atacquisition_fired_OpPhases_AttitudeAcquisition =
-            _92_atacquisition_fired_OpPhases_AttitudeAcquisition;
-          break;
-        case SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition :
-          _86_NPhase = last_NPhase;
-          _85_AtAcquisition = last_AtAcquisition;
-          atacquisition_fired_OpPhases_AttitudeAcquisition =
-            outC->atacquisition_fired_strong_OpPhases_AttitudeAcquisition;
-          atacquisition_reset_nxt_OpPhases_AttitudeAcquisition = kcg_false;
-          atacquisition_state_nxt_OpPhases_AttitudeAcquisition =
-            SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition;
-          outC->_L6_OpPhases_AttitudeAcquisition_atacquisition_SafeMode =
-            inC->upDateSw;
-          sMode_OpPhases_AttitudeAcquisition =
-            outC->_L6_OpPhases_AttitudeAcquisition_atacquisition_SafeMode;
-          outC->atacquisition_fired_OpPhases_AttitudeAcquisition =
-            atacquisition_fired_OpPhases_AttitudeAcquisition;
-          break;
-        
-      }
-      if (outC->init3) {
-        atacquisition_reset_sel_OpPhases_AttitudeAcquisition = kcg_false;
-      }
-      else {
-        atacquisition_reset_sel_OpPhases_AttitudeAcquisition =
-          outC->atacquisition_reset_nxt_OpPhases_AttitudeAcquisition;
-      }
-      switch (outC->atacquisition_clock_OpPhases_AttitudeAcquisition) {
-        case SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition :
-          outC->atacquisition_reset_nxt_OpPhases_AttitudeAcquisition =
-            _97_atacquisition_reset_nxt_OpPhases_AttitudeAcquisition;
-          outC->atacquisition_state_nxt_OpPhases_AttitudeAcquisition =
-            _96_atacquisition_state_nxt_OpPhases_AttitudeAcquisition;
-          outC->sMode_OpPhases_AttitudeAcquisition =
-            sMode95_OpPhases_AttitudeAcquisition;
-          _15_NPhase = _94_NPhase;
-          _14_AtAcquisition = _93_AtAcquisition;
-          break;
-        case SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition :
-          outC->atacquisition_reset_nxt_OpPhases_AttitudeAcquisition =
-            _91_atacquisition_reset_nxt_OpPhases_AttitudeAcquisition;
-          outC->atacquisition_state_nxt_OpPhases_AttitudeAcquisition =
-            _90_atacquisition_state_nxt_OpPhases_AttitudeAcquisition;
-          outC->sMode_OpPhases_AttitudeAcquisition =
-            sMode89_OpPhases_AttitudeAcquisition;
-          _15_NPhase = _88_NPhase;
-          _14_AtAcquisition = _87_AtAcquisition;
-          break;
-        case SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition :
-          outC->atacquisition_reset_nxt_OpPhases_AttitudeAcquisition =
-            atacquisition_reset_nxt_OpPhases_AttitudeAcquisition;
-          outC->atacquisition_state_nxt_OpPhases_AttitudeAcquisition =
-            atacquisition_state_nxt_OpPhases_AttitudeAcquisition;
-          outC->sMode_OpPhases_AttitudeAcquisition =
-            sMode_OpPhases_AttitudeAcquisition;
-          _15_NPhase = _86_NPhase;
-          _14_AtAcquisition = _85_AtAcquisition;
-          break;
-        
-      }
-      outC->OpPhases_fired = _18_OpPhases_fired;
-      outC->OpPhases_reset_nxt = _17_OpPhases_reset_nxt;
-      outC->OpPhases_state_nxt = _16_OpPhases_state_nxt;
-      outC->NPhase = _15_NPhase;
-      outC->AtAcquisition = _14_AtAcquisition;
-      outC->LaunchPhase = _6_LaunchPhase;
-      outC->SafeM = SafeM5;
-      outC->picture = _4_picture;
-      outC->payMode = _3_payMode;
-      outC->RefAttitude = _2_RefAttitude;
-      outC->safeMode = _1_safeMode;
+      outC->OpPhases_fired = _27_OpPhases_fired;
+      outC->OpPhases_reset_nxt = _26_OpPhases_reset_nxt;
+      outC->OpPhases_state_nxt = _25_OpPhases_state_nxt;
+      outC->LatitudeLocal = _14_LatitudeLocal;
+      outC->LongitudeLocal = _13_LongitudeLocal;
+      outC->LaunchPhase = _1_LaunchPhase;
       break;
     case SSM_st_NormalPhase_OpPhases :
-      NPhase = last_NPhase;
-      AtAcquisition = last_AtAcquisition;
+      LongitudeLocal = last_LongitudeLocal;
       LaunchPhase = last_LaunchPhase;
-      SafeM = last_SafeM;
-      if (outC->init4) {
-        last_sMode_OpPhases_NormalPhase = kcg_false;
-      }
-      else {
-        last_sMode_OpPhases_NormalPhase = outC->sMode_OpPhases_NormalPhase;
-      }
       OpPhases_fired = outC->OpPhases_fired_strong;
       OpPhases_reset_nxt = kcg_false;
       OpPhases_state_nxt = SSM_st_NormalPhase_OpPhases;
-      outC->_L2_OpPhases_NormalPhase = last_safeMode;
-      outC->sMode_OpPhases_NormalPhase = outC->_L2_OpPhases_NormalPhase;
-      outC->_L1_OpPhases_NormalPhase = last_payMode;
-      outC->pMode_OpPhases_NormalPhase = outC->_L1_OpPhases_NormalPhase;
-      if (outC->init4) {
-        outC->NPhase_state_sel_OpPhases_NormalPhase =
-          SSM_st_AttControl_OpPhases_NormalPhase_NPhase;
+      outC->Probe1_OpPhases_NormalPhase = outC->_L106_OpPhases_NormalPhase;
+      outC->_L57_OpPhases_NormalPhase = 90.0;
+      outC->_L61_OpPhases_NormalPhase = outC->_L60_OpPhases_NormalPhase >=
+        outC->_L57_OpPhases_NormalPhase;
+      outC->_L58_OpPhases_NormalPhase = 89.0;
+      if (outC->_L61_OpPhases_NormalPhase) {
+        outC->_L62_OpPhases_NormalPhase = outC->_L58_OpPhases_NormalPhase;
       }
       else {
-        outC->NPhase_state_sel_OpPhases_NormalPhase =
-          outC->NPhase_state_nxt_OpPhases_NormalPhase;
+        outC->_L62_OpPhases_NormalPhase = outC->_L60_OpPhases_NormalPhase;
       }
-      outC->_6_NPhase_clock_OpPhases_NormalPhase =
-        outC->NPhase_state_sel_OpPhases_NormalPhase;
-      switch (outC->_6_NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          _121_br_1_guard_OpPhases_NormalPhase_NPhase_AttControl =
-            outC->pMode_OpPhases_NormalPhase;
-          _122_br_2_guard_OpPhases_NormalPhase_NPhase_AttControl =
-            outC->sMode_OpPhases_NormalPhase;
-          if (_121_br_1_guard_OpPhases_NormalPhase_NPhase_AttControl) {
-            _82_NPhase_state_act_OpPhases_NormalPhase =
-              SSM_st_Payload_OpPhases_NormalPhase_NPhase;
-          }
-          else if (_122_br_2_guard_OpPhases_NormalPhase_NPhase_AttControl) {
-            _82_NPhase_state_act_OpPhases_NormalPhase =
-              SSM_st_SafeMode_OpPhases_NormalPhase_NPhase;
-          }
-          else {
-            _82_NPhase_state_act_OpPhases_NormalPhase =
-              SSM_st_AttControl_OpPhases_NormalPhase_NPhase;
-          }
-          outC->NPhase_state_act_OpPhases_NormalPhase =
-            _82_NPhase_state_act_OpPhases_NormalPhase;
-          break;
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          _120_br_1_guard_OpPhases_NormalPhase_NPhase_Payload =
-            !outC->pMode_OpPhases_NormalPhase;
-          if (_120_br_1_guard_OpPhases_NormalPhase_NPhase_Payload) {
-            _79_NPhase_state_act_OpPhases_NormalPhase =
-              SSM_st_AttControl_OpPhases_NormalPhase_NPhase;
-          }
-          else {
-            _79_NPhase_state_act_OpPhases_NormalPhase =
-              SSM_st_Payload_OpPhases_NormalPhase_NPhase;
-          }
-          outC->NPhase_state_act_OpPhases_NormalPhase =
-            _79_NPhase_state_act_OpPhases_NormalPhase;
-          break;
-        case SSM_st_SafeMode_OpPhases_NormalPhase_NPhase :
-          br_1_guard_OpPhases_NormalPhase_NPhase_SafeMode =
-            !outC->sMode_OpPhases_NormalPhase;
-          if (br_1_guard_OpPhases_NormalPhase_NPhase_SafeMode) {
-            NPhase_state_act_OpPhases_NormalPhase =
-              SSM_st_AttControl_OpPhases_NormalPhase_NPhase;
-          }
-          else {
-            NPhase_state_act_OpPhases_NormalPhase =
-              SSM_st_SafeMode_OpPhases_NormalPhase_NPhase;
-          }
-          outC->NPhase_state_act_OpPhases_NormalPhase =
-            NPhase_state_act_OpPhases_NormalPhase;
-          break;
-        
-      }
-      outC->NPhase_clock_OpPhases_NormalPhase =
-        outC->NPhase_state_act_OpPhases_NormalPhase;
-      switch (outC->NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          _69_picture = last_picture;
-          break;
-        
-      }
-      switch (outC->_6_NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          if (_121_br_1_guard_OpPhases_NormalPhase_NPhase_AttControl) {
-            _84_NPhase_fired_strong_OpPhases_NormalPhase =
-              SSM_TR_AttControl_1_NPhase_OpPhases_NormalPhase;
-          }
-          else if (_122_br_2_guard_OpPhases_NormalPhase_NPhase_AttControl) {
-            _84_NPhase_fired_strong_OpPhases_NormalPhase =
-              SSM_TR_AttControl_2_NPhase_OpPhases_NormalPhase;
-          }
-          else {
-            _84_NPhase_fired_strong_OpPhases_NormalPhase =
-              SSM_TR_no_trans_NPhase_OpPhases_NormalPhase;
-          }
-          outC->NPhase_fired_strong_OpPhases_NormalPhase =
-            _84_NPhase_fired_strong_OpPhases_NormalPhase;
-          break;
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          if (_120_br_1_guard_OpPhases_NormalPhase_NPhase_Payload) {
-            _81_NPhase_fired_strong_OpPhases_NormalPhase =
-              SSM_TR_Payload_1_NPhase_OpPhases_NormalPhase;
-          }
-          else {
-            _81_NPhase_fired_strong_OpPhases_NormalPhase =
-              SSM_TR_no_trans_NPhase_OpPhases_NormalPhase;
-          }
-          outC->NPhase_fired_strong_OpPhases_NormalPhase =
-            _81_NPhase_fired_strong_OpPhases_NormalPhase;
-          break;
-        case SSM_st_SafeMode_OpPhases_NormalPhase_NPhase :
-          if (br_1_guard_OpPhases_NormalPhase_NPhase_SafeMode) {
-            NPhase_fired_strong_OpPhases_NormalPhase =
-              SSM_TR_SafeMode_1_NPhase_OpPhases_NormalPhase;
-          }
-          else {
-            NPhase_fired_strong_OpPhases_NormalPhase =
-              SSM_TR_no_trans_NPhase_OpPhases_NormalPhase;
-          }
-          outC->NPhase_fired_strong_OpPhases_NormalPhase =
-            NPhase_fired_strong_OpPhases_NormalPhase;
-          break;
-        
-      }
-      switch (outC->NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          _72_NPhase_fired_OpPhases_NormalPhase =
-            outC->NPhase_fired_strong_OpPhases_NormalPhase;
-          _71_NPhase_reset_nxt_OpPhases_NormalPhase = kcg_false;
-          _70_NPhase_state_nxt_OpPhases_NormalPhase =
-            SSM_st_AttControl_OpPhases_NormalPhase_NPhase;
-          outC->_L109_OpPhases_NormalPhase_NPhase_AttControl = inC->Gyroscopes;
-          outC->_L1413_OpPhases_NormalPhase_NPhase_AttControl =
-            inC->Accelerometers;
-          outC->_L1312_OpPhases_NormalPhase_NPhase_AttControl = inC->SunSensor;
-          break;
-        
-      }
-      if (outC->init4) {
-        NPhase_reset_prv_OpPhases_NormalPhase = kcg_false;
-      }
-      else {
-        NPhase_reset_prv_OpPhases_NormalPhase =
-          outC->NPhase_reset_act_OpPhases_NormalPhase;
-      }
-      switch (outC->_6_NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          if (_121_br_1_guard_OpPhases_NormalPhase_NPhase_AttControl) {
-            _83_NPhase_reset_act_OpPhases_NormalPhase = kcg_true;
-          }
-          else {
-            _83_NPhase_reset_act_OpPhases_NormalPhase =
-              _122_br_2_guard_OpPhases_NormalPhase_NPhase_AttControl;
-          }
-          outC->NPhase_reset_act_OpPhases_NormalPhase =
-            _83_NPhase_reset_act_OpPhases_NormalPhase;
-          break;
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          _80_NPhase_reset_act_OpPhases_NormalPhase =
-            _120_br_1_guard_OpPhases_NormalPhase_NPhase_Payload;
-          outC->NPhase_reset_act_OpPhases_NormalPhase =
-            _80_NPhase_reset_act_OpPhases_NormalPhase;
-          break;
-        case SSM_st_SafeMode_OpPhases_NormalPhase_NPhase :
-          NPhase_reset_act_OpPhases_NormalPhase =
-            br_1_guard_OpPhases_NormalPhase_NPhase_SafeMode;
-          outC->NPhase_reset_act_OpPhases_NormalPhase =
-            NPhase_reset_act_OpPhases_NormalPhase;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 10 */ ReadSensors_reset(&outC->Context_10);
-      }
-      switch (outC->NPhase_state_act_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          if (outC->NPhase_reset_act_OpPhases_NormalPhase) {
-            /* 10 */ ReadSensors_reset(&outC->Context_10);
-          }
-          break;
-        
-      }
-      switch (outC->NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          /* 10 */
-          ReadSensors(
-            outC->_L109_OpPhases_NormalPhase_NPhase_AttControl,
-            outC->_L1413_OpPhases_NormalPhase_NPhase_AttControl,
-            outC->_L1312_OpPhases_NormalPhase_NPhase_AttControl,
-            &outC->Context_10);
-          outC->_L1615_OpPhases_NormalPhase_NPhase_AttControl =
-            outC->Context_10.SensorsStatus;
-          outC->_L1211_OpPhases_NormalPhase_NPhase_AttControl =
-            inC->Reactionwheels;
-          outC->_L1110_OpPhases_NormalPhase_NPhase_AttControl =
-            inC->MagneticTorquers;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 6 */ TestActuators_reset(&outC->_2_Context_6);
-      }
-      switch (outC->NPhase_state_act_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          if (outC->NPhase_reset_act_OpPhases_NormalPhase) {
-            /* 6 */ TestActuators_reset(&outC->_2_Context_6);
-          }
-          break;
-        
-      }
-      switch (outC->NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          /* 6 */
-          TestActuators(
-            outC->_L1211_OpPhases_NormalPhase_NPhase_AttControl,
-            outC->_L1110_OpPhases_NormalPhase_NPhase_AttControl,
-            &outC->_2_Context_6);
-          outC->_L1514_OpPhases_NormalPhase_NPhase_AttControl =
-            outC->_2_Context_6.ActuatorsStatus;
-          outC->_L1716_OpPhases_NormalPhase_NPhase_AttControl =
-            outC->_L1615_OpPhases_NormalPhase_NPhase_AttControl &
-            outC->_L1514_OpPhases_NormalPhase_NPhase_AttControl;
-          outC->_L188_OpPhases_NormalPhase_NPhase_AttControl =
-            !outC->_L1716_OpPhases_NormalPhase_NPhase_AttControl;
-          _66_safeMode = outC->_L188_OpPhases_NormalPhase_NPhase_AttControl;
-          outC->_L2_OpPhases_NormalPhase_NPhase_AttControl = inC->takePict;
-          _68_payMode = outC->_L2_OpPhases_NormalPhase_NPhase_AttControl;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 2 */ controlAlgorithm_reset(&outC->Context_2);
-      }
-      switch (outC->NPhase_state_act_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          if (outC->NPhase_reset_act_OpPhases_NormalPhase) {
-            /* 2 */ controlAlgorithm_reset(&outC->Context_2);
-          }
-          break;
-        
-      }
-      switch (outC->NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          /* 2 */ controlAlgorithm(&outC->Context_2);
-          outC->_L917_OpPhases_NormalPhase_NPhase_AttControl =
-            outC->Context_2.ControlAlgorithmActive;
-          _67_RefAttitude = outC->_L917_OpPhases_NormalPhase_NPhase_AttControl;
-          break;
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          _60_RefAttitude = last_RefAttitude;
-          outC->Payload_weakb_clock_OpPhases_NormalPhase_NPhase =
-            outC->NPhase_fired_strong_OpPhases_NormalPhase !=
-            SSM_TR_no_trans_NPhase_OpPhases_NormalPhase;
-          if (outC->Payload_weakb_clock_OpPhases_NormalPhase_NPhase) {
-            _78_NPhase_fired_OpPhases_NormalPhase =
-              outC->NPhase_fired_strong_OpPhases_NormalPhase;
-            _77_NPhase_reset_nxt_OpPhases_NormalPhase = kcg_false;
-            _76_NPhase_state_nxt_OpPhases_NormalPhase =
-              SSM_st_Payload_OpPhases_NormalPhase_NPhase;
-            _65_NPhase_fired_OpPhases_NormalPhase =
-              _78_NPhase_fired_OpPhases_NormalPhase;
-            _64_NPhase_reset_nxt_OpPhases_NormalPhase =
-              _77_NPhase_reset_nxt_OpPhases_NormalPhase;
-            _63_NPhase_state_nxt_OpPhases_NormalPhase =
-              _76_NPhase_state_nxt_OpPhases_NormalPhase;
-          }
-          else {
-            br_2_guard_OpPhases_NormalPhase_NPhase_Payload =
-              outC->sMode_OpPhases_NormalPhase;
-            if (br_2_guard_OpPhases_NormalPhase_NPhase_Payload) {
-              _75_NPhase_fired_OpPhases_NormalPhase =
-                SSM_TR_Payload_2_NPhase_OpPhases_NormalPhase;
-            }
-            else {
-              _75_NPhase_fired_OpPhases_NormalPhase =
-                SSM_TR_no_trans_NPhase_OpPhases_NormalPhase;
-            }
-            _74_NPhase_reset_nxt_OpPhases_NormalPhase =
-              br_2_guard_OpPhases_NormalPhase_NPhase_Payload;
-            if (br_2_guard_OpPhases_NormalPhase_NPhase_Payload) {
-              _73_NPhase_state_nxt_OpPhases_NormalPhase =
-                SSM_st_SafeMode_OpPhases_NormalPhase_NPhase;
-            }
-            else {
-              _73_NPhase_state_nxt_OpPhases_NormalPhase =
-                SSM_st_Payload_OpPhases_NormalPhase_NPhase;
-            }
-            _65_NPhase_fired_OpPhases_NormalPhase =
-              _75_NPhase_fired_OpPhases_NormalPhase;
-            _64_NPhase_reset_nxt_OpPhases_NormalPhase =
-              _74_NPhase_reset_nxt_OpPhases_NormalPhase;
-            _63_NPhase_state_nxt_OpPhases_NormalPhase =
-              _73_NPhase_state_nxt_OpPhases_NormalPhase;
-          }
-          outC->_L19_OpPhases_NormalPhase_NPhase_Payload = inC->SunSensor;
-          outC->_L18_OpPhases_NormalPhase_NPhase_Payload = inC->Gyroscopes;
-          outC->_L17_OpPhases_NormalPhase_NPhase_Payload =
-            inC->MagneticTorquers;
-          outC->_L12_OpPhases_NormalPhase_NPhase_Payload = inC->Accelerometers;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 11 */ ReadSensors_reset(&outC->Context_11);
-      }
-      switch (outC->NPhase_state_act_OpPhases_NormalPhase) {
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          if (outC->NPhase_reset_act_OpPhases_NormalPhase) {
-            /* 11 */ ReadSensors_reset(&outC->Context_11);
-          }
-          break;
-        
-      }
-      switch (outC->NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          /* 11 */
-          ReadSensors(
-            outC->_L18_OpPhases_NormalPhase_NPhase_Payload,
-            outC->_L12_OpPhases_NormalPhase_NPhase_Payload,
-            outC->_L19_OpPhases_NormalPhase_NPhase_Payload,
-            &outC->Context_11);
-          outC->_L15_OpPhases_NormalPhase_NPhase_Payload =
-            outC->Context_11.SensorsStatus;
-          outC->_L14_OpPhases_NormalPhase_NPhase_Payload = inC->Reactionwheels;
-          break;
-        
-      }
-      if (outC->OpPhases_reset_act) {
-        /* 7 */ TestActuators_reset(&outC->Context_7);
-      }
-      switch (outC->NPhase_state_act_OpPhases_NormalPhase) {
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          if (outC->NPhase_reset_act_OpPhases_NormalPhase) {
-            /* 7 */ TestActuators_reset(&outC->Context_7);
-          }
-          break;
-        
-      }
-      switch (outC->NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          outC->NPhase_fired_OpPhases_NormalPhase =
-            _72_NPhase_fired_OpPhases_NormalPhase;
-          break;
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          /* 7 */
-          TestActuators(
-            outC->_L14_OpPhases_NormalPhase_NPhase_Payload,
-            outC->_L17_OpPhases_NormalPhase_NPhase_Payload,
-            &outC->Context_7);
-          outC->_L11_OpPhases_NormalPhase_NPhase_Payload =
-            outC->Context_7.ActuatorsStatus;
-          outC->_L16_OpPhases_NormalPhase_NPhase_Payload =
-            outC->_L15_OpPhases_NormalPhase_NPhase_Payload &
-            outC->_L11_OpPhases_NormalPhase_NPhase_Payload;
-          outC->_L13_OpPhases_NormalPhase_NPhase_Payload =
-            !outC->_L16_OpPhases_NormalPhase_NPhase_Payload;
-          _59_safeMode = outC->_L13_OpPhases_NormalPhase_NPhase_Payload;
-          outC->_L10_OpPhases_NormalPhase_NPhase_Payload = 0.0;
-          outC->_L9_OpPhases_NormalPhase_NPhase_Payload = kcg_false;
-          _62_picture = outC->_L10_OpPhases_NormalPhase_NPhase_Payload;
-          _61_payMode = outC->_L9_OpPhases_NormalPhase_NPhase_Payload;
-          outC->NPhase_fired_OpPhases_NormalPhase =
-            _65_NPhase_fired_OpPhases_NormalPhase;
-          break;
-        case SSM_st_SafeMode_OpPhases_NormalPhase_NPhase :
-          _58_picture = last_picture;
-          _57_payMode = last_payMode;
-          _56_RefAttitude = last_RefAttitude;
-          NPhase_fired_OpPhases_NormalPhase =
-            outC->NPhase_fired_strong_OpPhases_NormalPhase;
-          NPhase_reset_nxt_OpPhases_NormalPhase = kcg_false;
-          NPhase_state_nxt_OpPhases_NormalPhase =
-            SSM_st_SafeMode_OpPhases_NormalPhase_NPhase;
-          outC->_L4_OpPhases_NormalPhase_NPhase_SafeMode = kcg_false;
-          _55_safeMode = outC->_L4_OpPhases_NormalPhase_NPhase_SafeMode;
-          outC->NPhase_fired_OpPhases_NormalPhase =
-            NPhase_fired_OpPhases_NormalPhase;
-          break;
-        
-      }
-      if (outC->init4) {
-        NPhase_reset_sel_OpPhases_NormalPhase = kcg_false;
-      }
-      else {
-        NPhase_reset_sel_OpPhases_NormalPhase =
-          outC->NPhase_reset_nxt_OpPhases_NormalPhase;
-      }
-      switch (outC->NPhase_clock_OpPhases_NormalPhase) {
-        case SSM_st_AttControl_OpPhases_NormalPhase_NPhase :
-          outC->NPhase_reset_nxt_OpPhases_NormalPhase =
-            _71_NPhase_reset_nxt_OpPhases_NormalPhase;
-          outC->NPhase_state_nxt_OpPhases_NormalPhase =
-            _70_NPhase_state_nxt_OpPhases_NormalPhase;
-          picture = _69_picture;
-          payMode = _68_payMode;
-          RefAttitude = _67_RefAttitude;
-          safeMode = _66_safeMode;
-          break;
-        case SSM_st_Payload_OpPhases_NormalPhase_NPhase :
-          outC->NPhase_reset_nxt_OpPhases_NormalPhase =
-            _64_NPhase_reset_nxt_OpPhases_NormalPhase;
-          outC->NPhase_state_nxt_OpPhases_NormalPhase =
-            _63_NPhase_state_nxt_OpPhases_NormalPhase;
-          picture = _62_picture;
-          payMode = _61_payMode;
-          RefAttitude = _60_RefAttitude;
-          safeMode = _59_safeMode;
-          break;
-        case SSM_st_SafeMode_OpPhases_NormalPhase_NPhase :
-          outC->NPhase_reset_nxt_OpPhases_NormalPhase =
-            NPhase_reset_nxt_OpPhases_NormalPhase;
-          outC->NPhase_state_nxt_OpPhases_NormalPhase =
-            NPhase_state_nxt_OpPhases_NormalPhase;
-          picture = _58_picture;
-          payMode = _57_payMode;
-          RefAttitude = _56_RefAttitude;
-          safeMode = _55_safeMode;
-          break;
-        
-      }
+      outC->_L40_OpPhases_NormalPhase = inC->Input13;
+      outC->_L24_OpPhases_NormalPhase = 0.0;
+      LatitudeLocal = outC->_L24_OpPhases_NormalPhase;
       outC->OpPhases_fired = OpPhases_fired;
       outC->OpPhases_reset_nxt = OpPhases_reset_nxt;
       outC->OpPhases_state_nxt = OpPhases_state_nxt;
-      outC->NPhase = NPhase;
-      outC->AtAcquisition = AtAcquisition;
+      outC->LatitudeLocal = LatitudeLocal;
+      outC->LongitudeLocal = LongitudeLocal;
       outC->LaunchPhase = LaunchPhase;
-      outC->SafeM = SafeM;
-      outC->picture = picture;
-      outC->payMode = payMode;
-      outC->RefAttitude = RefAttitude;
-      outC->safeMode = safeMode;
       break;
     
   }
-  outC->rem_Power = inC->Power;
   outC->rem_Telemetry = inC->Telemetry;
   outC->rem_AttitudeReference = inC->AttitudeReference;
   outC->rem_takePict = inC->takePict;
   outC->rem_picLocation = inC->picLocation;
-  outC->rem_Gyroscopes = inC->Gyroscopes;
   outC->rem_Accelerometers = inC->Accelerometers;
   outC->rem_SunSensor = inC->SunSensor;
   outC->rem_Reactionwheels = inC->Reactionwheels;
@@ -1733,18 +1367,18 @@ void OperationalScenario(
       outC->init = kcg_false;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->init3 = kcg_false;
+      outC->init2 = kcg_false;
       break;
     case SSM_st_NormalPhase_OpPhases :
-      outC->init4 = kcg_false;
+      outC->init3 = kcg_false;
       break;
     
   }
-  outC->init5 = kcg_false;
+  outC->init4 = kcg_false;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** OperationalScenario.c
-** Generation date: 2014-09-29T18:26:24
+** Generation date: 2014-11-22T21:11:29
 *************************************************************$ */
 

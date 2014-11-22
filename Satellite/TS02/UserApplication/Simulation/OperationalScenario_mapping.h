@@ -15,27 +15,9 @@ extern ControlUtils _SCSIM_SSM_TR_Ground_2_OpPhases_Utils;
 extern ControlUtils _SCSIM_SSM_TR_Ground_1_OpPhases_Utils;
 extern ControlUtils _SCSIM_SSM_st_Ground_OpPhases_Utils;
 extern ControlUtils _SCSIM_SSM_TR_Launch_1_OpPhases_Utils;
-extern ControlUtils _SCSIM_SSM_TR_Launch_2_OpPhases_Utils;
 extern ControlUtils _SCSIM_SSM_st_Launch_OpPhases_Utils;
-extern ControlUtils _SCSIM_SSM_TR_readsensors_1_atacquisition_OpPhases_AttitudeAcquisition_Utils;
-extern ControlUtils _SCSIM_SSM_TR_readsensors_2_atacquisition_OpPhases_AttitudeAcquisition_Utils;
-extern ControlUtils _SCSIM_SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition_Utils;
-extern ControlUtils _SCSIM_SSM_TR_refAttitude_1_atacquisition_OpPhases_AttitudeAcquisition_Utils;
-extern ControlUtils _SCSIM_SSM_TR_refAttitude_2_atacquisition_OpPhases_AttitudeAcquisition_Utils;
-extern ControlUtils _SCSIM_SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition_Utils;
-extern ControlUtils _SCSIM_SSM_TR_SafeMode_1_atacquisition_OpPhases_AttitudeAcquisition_Utils;
-extern ControlUtils _SCSIM_SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition_Utils;
 extern ControlUtils _SCSIM_SSM_TR_AttitudeAcquisition_1_OpPhases_Utils;
-extern ControlUtils _SCSIM_SSM_TR_AttitudeAcquisition_2_OpPhases_Utils;
 extern ControlUtils _SCSIM_SSM_st_AttitudeAcquisition_OpPhases_Utils;
-extern ControlUtils _SCSIM_SSM_TR_AttControl_1_NPhase_OpPhases_NormalPhase_Utils;
-extern ControlUtils _SCSIM_SSM_TR_AttControl_2_NPhase_OpPhases_NormalPhase_Utils;
-extern ControlUtils _SCSIM_SSM_st_AttControl_OpPhases_NormalPhase_NPhase_Utils;
-extern ControlUtils _SCSIM_SSM_TR_Payload_2_NPhase_OpPhases_NormalPhase_Utils;
-extern ControlUtils _SCSIM_SSM_TR_Payload_1_NPhase_OpPhases_NormalPhase_Utils;
-extern ControlUtils _SCSIM_SSM_st_Payload_OpPhases_NormalPhase_NPhase_Utils;
-extern ControlUtils _SCSIM_SSM_TR_SafeMode_1_NPhase_OpPhases_NormalPhase_Utils;
-extern ControlUtils _SCSIM_SSM_st_SafeMode_OpPhases_NormalPhase_NPhase_Utils;
 extern ControlUtils _SCSIM_SSM_st_NormalPhase_OpPhases_Utils;
 #include "ReadSensors.h"
 void _SCSIM_Mapping_ReadSensors(const char* pszPath, const char* pszInstanceName, int nHandleIdent, int nClockHandleIdent, int (*pfnClockActive)(void*));
@@ -45,17 +27,11 @@ void* _SCSIM_Get_ReadSensors_Handle(void* pInstance, int nHandleIdent, int* pIte
 void _SCSIM_Mapping_TestActuators(const char* pszPath, const char* pszInstanceName, int nHandleIdent, int nClockHandleIdent, int (*pfnClockActive)(void*));
 void* _SCSIM_Get_TestActuators_Handle(void* pInstance, int nHandleIdent, int* pIteratorFilter, int nSize);
 
-#include "controlAlgorithm.h"
-void _SCSIM_Mapping_controlAlgorithm(const char* pszPath, const char* pszInstanceName, int nHandleIdent, int nClockHandleIdent, int (*pfnClockActive)(void*));
-void* _SCSIM_Get_controlAlgorithm_Handle(void* pInstance, int nHandleIdent, int* pIteratorFilter, int nSize);
+#include "ModCount.h"
+void _SCSIM_Mapping_ModCount(const char* pszPath, const char* pszInstanceName, int nHandleIdent, int nClockHandleIdent, int (*pfnClockActive)(void*));
+void* _SCSIM_Get_ModCount_Handle(void* pInstance, int nHandleIdent, int* pIteratorFilter, int nSize);
 
-static int _SCSIM_ClockActive_SSM_st_SafeMode_OpPhases_NormalPhase_NPhase(void*);
-static int _SCSIM_ClockActive_SSM_st_Payload_OpPhases_NormalPhase_NPhase(void*);
-static int _SCSIM_ClockActive_SSM_st_AttControl_OpPhases_NormalPhase_NPhase(void*);
 static int _SCSIM_ClockActive_SSM_st_NormalPhase_OpPhases(void*);
-static int _SCSIM_ClockActive_SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition(void*);
-static int _SCSIM_ClockActive_SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition(void*);
-static int _SCSIM_ClockActive_SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition(void*);
 static int _SCSIM_ClockActive_SSM_st_AttitudeAcquisition_OpPhases(void*);
 static int _SCSIM_ClockActive_SSM_st_Launch_OpPhases(void*);
 static int _SCSIM_ClockActive_SSM_st_Ground_OpPhases(void*);

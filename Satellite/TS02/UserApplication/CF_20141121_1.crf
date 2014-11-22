@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CoverageFile coverageObjective="DC" integrationMode="DATA_ACTIVATION">
+	<model>
+		<Model>
+			<operators>
+				<Operator index="1" name="OperationalScenario">
+					<controls>
+						<StateMachine index="2" name="OpPhases">
+							<children>
+								<State index="3" name="Ground">
+									<children>
+										<Transition index="4" name="&lt;1&gt;"/>
+										<Transition index="5" name="&lt;2&gt;"/>
+									</children>
+								</State>
+								<State index="6" name="Launch">
+									<children>
+										<Transition index="7" name="&lt;1&gt;"/>
+									</children>
+								</State>
+								<State index="8" name="AttitudeAcquisition">
+									<children>
+										<Transition index="9" name="&lt;1&gt;"/>
+									</children>
+								</State>
+								<State index="10" name="NormalPhase"/>
+							</children>
+						</StateMachine>
+					</controls>
+				</Operator>
+				<Operator index="11" name="ReadSensors"/>
+				<Operator index="12" name="TestActuators"/>
+				<Operator index="13" name="TakePicture"/>
+				<Operator index="14" name="controlAlgorithm"/>
+				<Operator index="15" name="digital::FallingEdge"/>
+				<Operator index="16" name="digital::FallingEdgeNoRetrigger"/>
+				<Operator index="17" name="digital::FallingEdgeRetrigger"/>
+				<Operator index="18" name="digital::FlipFlopJK"/>
+				<Operator index="19" name="digital::FlipFlopReset"/>
+				<Operator index="20" name="digital::FlipFlopSet"/>
+				<Operator index="21" name="digital::RisingEdge"/>
+				<Operator index="22" name="digital::RisingEdgeRetrigger"/>
+				<Operator index="23" name="digital::Toggle"/>
+				<Operator index="24" name="digital::RisingEdgeNoRetrigger"/>
+				<Operator index="25" name="digital::count_down"/>
+				<Operator index="26" name="digital::EitherEdge"/>
+				<Operator index="27" name="digital::BoolVect2IntElt"/>
+				<Operator index="28" name="digital::Int2BoolVectElt"/>
+				<Operator index="29" name="digital::BoolVect2Int"/>
+				<Operator index="30" name="digital::Int2BoolVect"/>
+				<Operator index="31" name="truthtables::TruthTableElt"/>
+				<Operator index="32" name="truthtables::TruthTableLineIdx"/>
+				<Operator index="33" name="truthtables::TruthTableIdx"/>
+				<Operator index="34" name="truthtables::TruthTableExh"/>
+				<Operator index="35" name="truthtables::TruthTableLine"/>
+				<Operator index="36" name="truthtables::TruthTable"/>
+				<Operator index="37" name="linear::Gain"/>
+				<Operator index="38" name="linear::MeanCycle2"/>
+				<Operator index="39" name="linear::MeanCycle3"/>
+				<Operator index="40" name="linear::Derivative"/>
+				<Operator index="41" name="linear::Filter1stOrderLoop"/>
+				<Operator index="42" name="linear::IntegrTrapez"/>
+				<Operator index="43" name="linear::IntegrFwd"/>
+				<Operator index="44" name="linear::Memory"/>
+				<Operator index="45" name="linear::HitCrossingEither"/>
+				<Operator index="46" name="linear::HitCrossingFalling"/>
+				<Operator index="47" name="linear::HitCrossingRising"/>
+				<Operator index="48" name="linear::MemoryBasic"/>
+				<Operator index="49" name="filters::TransferFcn01"/>
+				<Operator index="50" name="filters::SumDelay"/>
+				<Operator index="51" name="filters::Filter01"/>
+				<Operator index="52" name="filters::Filter11"/>
+				<Operator index="53" name="filters::Filter0D"/>
+				<Operator index="54" name="filters::FilterNN"/>
+				<Operator index="55" name="filters::FilterND"/>
+				<Operator index="56" name="filters::TransferFcn02"/>
+				<Operator index="57" name="filters::Filter02"/>
+				<Operator index="58" name="filters::TransferFcn0D"/>
+				<Operator index="59" name="filters::Filter01Norm"/>
+				<Operator index="60" name="filters::Filter12"/>
+				<Operator index="61" name="filters::TransferFcn12"/>
+				<Operator index="62" name="filters::TransferFcnND"/>
+				<Operator index="63" name="filters::Filter02Norm"/>
+				<Operator index="64" name="filters::Filter11Norm"/>
+				<Operator index="65" name="filters::Filter12Norm"/>
+				<Operator index="66" name="filters::Filter0DNorm"/>
+				<Operator index="67" name="filters::FilterNDNorm"/>
+				<Operator index="68" name="filters::FilterNNNorm"/>
+				<Operator index="69" name="vect::ScalProd"/>
+				<Operator index="70" name="vect::MatVectProd"/>
+				<Operator index="71" name="vect::MatProd"/>
+				<Operator index="72" name="vect::VectMatProd"/>
+				<Operator index="73" name="math::Abs"/>
+				<Operator index="74" name="math::BoolToInt"/>
+				<Operator index="75" name="math::BoolToReal"/>
+				<Operator index="76" name="math::InRangeInIn"/>
+				<Operator index="77" name="math::InRangeInOut"/>
+				<Operator index="78" name="math::InRangeOutIn"/>
+				<Operator index="79" name="math::InRangeOutOut"/>
+				<Operator index="80" name="math::Max"/>
+				<Operator index="81" name="math::Max3"/>
+				<Operator index="82" name="math::Mean3"/>
+				<Operator index="83" name="math::Min"/>
+				<Operator index="84" name="math::Min3"/>
+				<Operator index="85" name="math::Sign"/>
+				<Operator index="86" name="math::Mean"/>
+				<Operator index="87" name="math::Round"/>
+				<Operator index="88" name="math::OctetToInt"/>
+				<Operator index="89" name="math::RoundCeil"/>
+				<Operator index="90" name="math::RoundFloor"/>
+				<Operator index="91" name="math::IntToBool"/>
+				<Operator index="92" name="math::RealToBool"/>
+				<Operator index="93" name="mathext::AcosR"/>
+				<Operator index="94" name="mathext::AcoshR"/>
+				<Operator index="95" name="mathext::AsinR"/>
+				<Operator index="96" name="mathext::AsinhR"/>
+				<Operator index="97" name="mathext::Atan2R"/>
+				<Operator index="98" name="mathext::AtanR"/>
+				<Operator index="99" name="mathext::AtanhR"/>
+				<Operator index="100" name="mathext::CosR"/>
+				<Operator index="101" name="mathext::CoshR"/>
+				<Operator index="102" name="mathext::ExpR"/>
+				<Operator index="103" name="mathext::LnR"/>
+				<Operator index="104" name="mathext::LogR"/>
+				<Operator index="105" name="mathext::PowerRR"/>
+				<Operator index="106" name="mathext::SinR"/>
+				<Operator index="107" name="mathext::SinhR"/>
+				<Operator index="108" name="mathext::SqrtR"/>
+				<Operator index="109" name="mathext::TanR"/>
+				<Operator index="110" name="mathext::TanhR"/>
+				<Operator index="111" name="mathext::TenPowR"/>
+				<Operator index="112" name="mathext::Square"/>
+				<Operator index="113" name="mathext::Inv"/>
+				<Operator index="114" name="mathext::HypotR"/>
+				<Operator index="115" name="mathext::PowerI"/>
+				<Operator index="116" name="mathext::PowerR"/>
+				<Operator index="117" name="mathext::SinCosR"/>
+				<Operator index="118" name="pwlinear::DeadBandSymmetrical"/>
+				<Operator index="119" name="pwlinear::DeadBandUnSymmetrical"/>
+				<Operator index="120" name="pwlinear::LimiterUnSymmetrical"/>
+				<Operator index="121" name="pwlinear::PreLoadSymmetrical"/>
+				<Operator index="122" name="pwlinear::PreLoadUnSymmetrical"/>
+				<Operator index="123" name="pwlinear::ClockCounter"/>
+				<Operator index="124" name="pwlinear::Quantizer"/>
+				<Operator index="125" name="pwlinear::RateLimiter"/>
+				<Operator index="126" name="pwlinear::Counter"/>
+				<Operator index="127" name="pwlinear::FallingHysteresis"/>
+				<Operator index="128" name="pwlinear::RisingHysteresis"/>
+				<Operator index="129" name="pwlinear::LimiterSymmetrical"/>
+				<Operator index="130" name="lut::Interp1D"/>
+				<Operator index="131" name="lut::Interp2DFloor"/>
+				<Operator index="132" name="lut::PreLutDirect"/>
+				<Operator index="133" name="lut::CalculateFloor"/>
+				<Operator index="134" name="lut::Lut1DCeil"/>
+				<Operator index="135" name="lut::CalculateNearest"/>
+				<Operator index="136" name="lut::Lut1DNearest"/>
+				<Operator index="137" name="lut::CalculateCeil"/>
+				<Operator index="138" name="lut::Lut2DFloor"/>
+				<Operator index="139" name="lut::SearchIdxFloor"/>
+				<Operator index="140" name="lut::Lut2DCeil"/>
+				<Operator index="141" name="lut::SearchIdxCeil"/>
+				<Operator index="142" name="lut::SearchNearest"/>
+				<Operator index="143" name="lut::Lut2DNearest"/>
+				<Operator index="144" name="lut::Interp1DFloor"/>
+				<Operator index="145" name="lut::Interp2D"/>
+				<Operator index="146" name="lut::SearchIdx"/>
+				<Operator index="147" name="lut::Proj"/>
+				<Operator index="148" name="lut::PreLutNoSat">
+					<controls>
+						<IfBlock index="149" name="IfBlock2">
+							<children>
+								<IfBranch index="150" name="then"/>
+								<IfBranch index="151" name="else"/>
+							</children>
+						</IfBlock>
+					</controls>
+				</Operator>
+				<Operator index="152" name="lut::Lut2DNoSat"/>
+				<Operator index="153" name="lut::Lut2D">
+					<controls>
+						<IfBlock index="154" name="IfBlock1">
+							<children>
+								<IfBranch index="155" name="then"/>
+								<IfBranch index="156" name="else"/>
+							</children>
+						</IfBlock>
+					</controls>
+				</Operator>
+				<Operator index="157" name="lut::Lut1DNoSat"/>
+				<Operator index="158" name="lut::Lut1D">
+					<controls>
+						<IfBlock index="159" name="IfBlock1">
+							<children>
+								<IfBranch index="160" name="then"/>
+								<IfBranch index="161" name="else"/>
+							</children>
+						</IfBlock>
+					</controls>
+				</Operator>
+				<Operator index="162" name="lut::Limiter"/>
+				<Operator index="163" name="lut::InterpolateLinear"/>
+				<Operator index="164" name="lut::Lut3DNoSat"/>
+				<Operator index="165" name="lut::Lut3D">
+					<controls>
+						<IfBlock index="166" name="IfBlock1">
+							<children>
+								<IfBranch index="167" name="then"/>
+								<IfBranch index="168" name="else"/>
+							</children>
+						</IfBlock>
+					</controls>
+				</Operator>
+				<Operator index="169" name="lut::PreLut">
+					<controls>
+						<IfBlock index="170" name="IfBlock1">
+							<children>
+								<IfBranch index="171" name="then"/>
+								<IfBranch index="172" name="else"/>
+							</children>
+						</IfBlock>
+					</controls>
+				</Operator>
+				<Operator index="173" name="lut::Lut1DFloor"/>
+				<Operator index="174" name="lut::Lut3DNearest"/>
+				<Operator index="175" name="verif::AlwaysAfterFirstCond"/>
+				<Operator index="176" name="verif::HasNeverBeenTrue"/>
+				<Operator index="177" name="verif::Implies"/>
+				<Operator index="178" name="verif::AtLeastNTicks"/>
+				<Operator index="179" name="verif::ImpliesWithinNTick"/>
+				<Operator index="180" name="verif::AfterNthTick"/>
+			</operators>
+		</Model>
+	</model>
+</CoverageFile>

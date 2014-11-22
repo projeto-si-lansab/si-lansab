@@ -13,7 +13,8 @@ extern TypeUtils _SCSIM_kcg_real_Utils;
 extern TypeUtils _SCSIM_kcg_bool_Utils;
 extern TypeUtils _SCSIM_kcg_char_Utils;
 extern TypeUtils _SCSIM_kcg_int_Utils;
-extern TypeUtils _SCSIM_struct__5302_Utils;
+extern TypeUtils _SCSIM_struct__5854_Utils;
+extern TypeUtils _SCSIM_fr_Utils;
 extern TypeUtils _SCSIM_TruthTableValues_truthtables_Utils;
 extern TypeUtils _SCSIM_LutIndex_lut_Utils;
 
@@ -70,17 +71,30 @@ extern int compare_kcg_int_type(int*, const char*, const void*);
 #define get_kcg_int_filter_utils 0
 #define kcg_int_filter_values 0
 /****************************************************************
- ** struct__5302
+ ** struct__5854
  ****************************************************************/
-extern const char * struct__5302_to_string(const void* pValue);
-extern int check_struct__5302_string(const char* strValue);
-extern int string_to_struct__5302(const char* strValue, void* pValue);
-int is_struct__5302_allow_double_convertion();
-extern const char * get_struct__5302_signature();
-extern int compare_struct__5302_type(int*, const char*, const void*);
-#define struct__5302_filter_size 2
-extern FilterUtils get_struct__5302_filter_utils(const char* strFilter, void* pValue);
-extern const char * struct__5302_filter_values[2];
+extern const char * struct__5854_to_string(const void* pValue);
+extern int check_struct__5854_string(const char* strValue);
+extern int string_to_struct__5854(const char* strValue, void* pValue);
+int is_struct__5854_allow_double_convertion();
+extern const char * get_struct__5854_signature();
+extern int compare_struct__5854_type(int*, const char*, const void*);
+#define struct__5854_filter_size 2
+extern FilterUtils get_struct__5854_filter_utils(const char* strFilter, void* pValue);
+extern const char * struct__5854_filter_values[2];
+/****************************************************************
+ ** fr
+ ****************************************************************/
+extern const char * fr_to_string(const void* pValue);
+extern int check_fr_string(const char* strValue);
+extern int string_to_fr(const char* strValue, void* pValue);
+int is_fr_allow_double_convertion();
+extern int fr_to_double(double * nValue, const void*);
+#define get_fr_signature get_kcg_real_signature
+#define compare_fr_type compare_kcg_real_type
+#define fr_filter_size kcg_real_filter_size
+#define get_fr_filter_utils get_kcg_real_filter_utils
+#define fr_filter_values kcg_real_filter_values
 /****************************************************************
  ** TruthTableValues_truthtables
  ****************************************************************/
@@ -102,10 +116,10 @@ extern int check_LutIndex_lut_string(const char* strValue);
 extern int string_to_LutIndex_lut(const char* strValue, void* pValue);
 int is_LutIndex_lut_allow_double_convertion();
 extern int LutIndex_lut_to_double(double * nValue, const void*);
-#define get_LutIndex_lut_signature get_struct__5302_signature
-#define compare_LutIndex_lut_type compare_struct__5302_type
-#define LutIndex_lut_filter_size struct__5302_filter_size
-#define get_LutIndex_lut_filter_utils get_struct__5302_filter_utils
-#define LutIndex_lut_filter_values struct__5302_filter_values
+#define get_LutIndex_lut_signature get_struct__5854_signature
+#define compare_LutIndex_lut_type compare_struct__5854_type
+#define LutIndex_lut_filter_size struct__5854_filter_size
+#define get_LutIndex_lut_filter_utils get_struct__5854_filter_utils
+#define LutIndex_lut_filter_values struct__5854_filter_values
 
 #endif /*OPERATIONALSCENARIO_TYPES_CONVERTION */

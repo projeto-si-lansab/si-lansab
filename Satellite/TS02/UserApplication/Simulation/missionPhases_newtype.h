@@ -30,58 +30,6 @@ extern int set_SSM_TR_OpPhases_default_value(void *pValue);
 extern TypeUtils _Type_SSM_TR_OpPhases_Utils;
 
 /****************************************************************
- ** SSM_ST_atacquisition_OpPhases_AttitudeAcquisition 
- ****************************************************************/
-extern int SSM_ST_atacquisition_OpPhases_AttitudeAcquisition_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int check_SSM_ST_atacquisition_OpPhases_AttitudeAcquisition_string(const char *str, const char** endptr);
-extern int string_to_SSM_ST_atacquisition_OpPhases_AttitudeAcquisition(const char *str, void* pValue, const char** endptr);
-extern int is_SSM_ST_atacquisition_OpPhases_AttitudeAcquisition_allow_double_convertion();
-extern int SSM_ST_atacquisition_OpPhases_AttitudeAcquisition_to_double(const void* pValue, double *nValue);
-extern int get_SSM_ST_atacquisition_OpPhases_AttitudeAcquisition_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int compare_SSM_ST_atacquisition_OpPhases_AttitudeAcquisition(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
-extern int set_SSM_ST_atacquisition_OpPhases_AttitudeAcquisition_default_value(void *pValue);
-extern TypeUtils _Type_SSM_ST_atacquisition_OpPhases_AttitudeAcquisition_Utils;
-
-/****************************************************************
- ** SSM_TR_atacquisition_OpPhases_AttitudeAcquisition 
- ****************************************************************/
-extern int SSM_TR_atacquisition_OpPhases_AttitudeAcquisition_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int check_SSM_TR_atacquisition_OpPhases_AttitudeAcquisition_string(const char *str, const char** endptr);
-extern int string_to_SSM_TR_atacquisition_OpPhases_AttitudeAcquisition(const char *str, void* pValue, const char** endptr);
-extern int is_SSM_TR_atacquisition_OpPhases_AttitudeAcquisition_allow_double_convertion();
-extern int SSM_TR_atacquisition_OpPhases_AttitudeAcquisition_to_double(const void* pValue, double *nValue);
-extern int get_SSM_TR_atacquisition_OpPhases_AttitudeAcquisition_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int compare_SSM_TR_atacquisition_OpPhases_AttitudeAcquisition(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
-extern int set_SSM_TR_atacquisition_OpPhases_AttitudeAcquisition_default_value(void *pValue);
-extern TypeUtils _Type_SSM_TR_atacquisition_OpPhases_AttitudeAcquisition_Utils;
-
-/****************************************************************
- ** SSM_ST_NPhase_OpPhases_NormalPhase 
- ****************************************************************/
-extern int SSM_ST_NPhase_OpPhases_NormalPhase_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int check_SSM_ST_NPhase_OpPhases_NormalPhase_string(const char *str, const char** endptr);
-extern int string_to_SSM_ST_NPhase_OpPhases_NormalPhase(const char *str, void* pValue, const char** endptr);
-extern int is_SSM_ST_NPhase_OpPhases_NormalPhase_allow_double_convertion();
-extern int SSM_ST_NPhase_OpPhases_NormalPhase_to_double(const void* pValue, double *nValue);
-extern int get_SSM_ST_NPhase_OpPhases_NormalPhase_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int compare_SSM_ST_NPhase_OpPhases_NormalPhase(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
-extern int set_SSM_ST_NPhase_OpPhases_NormalPhase_default_value(void *pValue);
-extern TypeUtils _Type_SSM_ST_NPhase_OpPhases_NormalPhase_Utils;
-
-/****************************************************************
- ** SSM_TR_NPhase_OpPhases_NormalPhase 
- ****************************************************************/
-extern int SSM_TR_NPhase_OpPhases_NormalPhase_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int check_SSM_TR_NPhase_OpPhases_NormalPhase_string(const char *str, const char** endptr);
-extern int string_to_SSM_TR_NPhase_OpPhases_NormalPhase(const char *str, void* pValue, const char** endptr);
-extern int is_SSM_TR_NPhase_OpPhases_NormalPhase_allow_double_convertion();
-extern int SSM_TR_NPhase_OpPhases_NormalPhase_to_double(const void* pValue, double *nValue);
-extern int get_SSM_TR_NPhase_OpPhases_NormalPhase_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int compare_SSM_TR_NPhase_OpPhases_NormalPhase(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
-extern int set_SSM_TR_NPhase_OpPhases_NormalPhase_default_value(void *pValue);
-extern TypeUtils _Type_SSM_TR_NPhase_OpPhases_NormalPhase_Utils;
-
-/****************************************************************
  ** kcg_real 
  ****************************************************************/
 extern int kcg_real_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
@@ -132,6 +80,19 @@ extern int get_kcg_int_signature(int (*pfnStrAppend)(const char *str, void *pDat
 extern int compare_kcg_int(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
 extern int set_kcg_int_default_value(void *pValue);
 extern TypeUtils _Type_kcg_int_Utils;
+
+/****************************************************************
+ ** fr 
+ ****************************************************************/
+extern int fr_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_fr_string(const char *str, const char** endptr);
+extern int string_to_fr(const char *str, void* pValue, const char** endptr);
+extern int is_fr_allow_double_convertion();
+extern int fr_to_double(const void* pValue, double *nValue);
+extern int get_fr_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_fr(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_fr_default_value(void *pValue);
+extern TypeUtils _Type_fr_Utils;
 
 
 #endif /*MISSIONPHASES_TYPES_CONVERTION */

@@ -1,7 +1,7 @@
 #include "OperationalScenario_interface.h"
 const int  rt_version = Srtv62;
 
-const char* _SCSIM_CheckSum = "2385100c6459a75533076bd38016c2b3";
+const char* _SCSIM_CheckSum = "278939d1cc422b3b9c6325cb37ada9fd";
 const char* _SCSIM_SmuTypesCheckSum = "28e18c1b393c1cd143584174bcc1ba87";
 
 /*******************************
@@ -34,12 +34,14 @@ static void _SCSIM_RestoreInterface(void) {
 	inputs_ctx.takePict = inputs_ctx_restore.takePict;
 	inputs_ctx.picLocation = inputs_ctx_restore.picLocation;
 	inputs_ctx.PassarFaseBtn = inputs_ctx_restore.PassarFaseBtn;
-	inputs_ctx.Gyroscopes = inputs_ctx_restore.Gyroscopes;
 	inputs_ctx.Accelerometers = inputs_ctx_restore.Accelerometers;
 	inputs_ctx.SunSensor = inputs_ctx_restore.SunSensor;
 	inputs_ctx.Reactionwheels = inputs_ctx_restore.Reactionwheels;
 	inputs_ctx.MagneticTorquers = inputs_ctx_restore.MagneticTorquers;
 	inputs_ctx.upDateSw = inputs_ctx_restore.upDateSw;
+	inputs_ctx.Gyroscopes = inputs_ctx_restore.Gyroscopes;
+	inputs_ctx.Input13 = inputs_ctx_restore.Input13;
+	inputs_ctx.EjectionSignal = inputs_ctx_restore.EjectionSignal;
 	outputs_ctx = outputs_ctx_restore;
 
 	/* separate_io: outputs restore */
@@ -53,12 +55,14 @@ static void _SCSIM_ExecuteInterface(void) {
 	inputs_ctx_execute.takePict = inputs_ctx.takePict;
 	inputs_ctx_execute.picLocation = inputs_ctx.picLocation;
 	inputs_ctx_execute.PassarFaseBtn = inputs_ctx.PassarFaseBtn;
-	inputs_ctx_execute.Gyroscopes = inputs_ctx.Gyroscopes;
 	inputs_ctx_execute.Accelerometers = inputs_ctx.Accelerometers;
 	inputs_ctx_execute.SunSensor = inputs_ctx.SunSensor;
 	inputs_ctx_execute.Reactionwheels = inputs_ctx.Reactionwheels;
 	inputs_ctx_execute.MagneticTorquers = inputs_ctx.MagneticTorquers;
 	inputs_ctx_execute.upDateSw = inputs_ctx.upDateSw;
+	inputs_ctx_execute.Gyroscopes = inputs_ctx.Gyroscopes;
+	inputs_ctx_execute.Input13 = inputs_ctx.Input13;
+	inputs_ctx_execute.EjectionSignal = inputs_ctx.EjectionSignal;
 	pSimulator->m_pfnReleaseValueMutex(pSimulator);
 }
 

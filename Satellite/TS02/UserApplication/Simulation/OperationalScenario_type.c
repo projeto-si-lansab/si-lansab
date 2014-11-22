@@ -57,6 +57,16 @@ TypeUtils _SCSIM_kcg_int_Utils = {kcg_int_to_string,
 	get_kcg_int_filter_utils,
 	kcg_int_filter_size,
 	kcg_int_filter_values};
+TypeUtils _SCSIM_fr_Utils = {fr_to_string,
+	check_fr_string,
+	string_to_fr,
+	is_fr_allow_double_convertion,
+	fr_to_double,
+	compare_fr_type,
+	get_fr_signature,
+	get_fr_filter_utils,
+	fr_filter_size,
+	fr_filter_values};
 
 /****************************************************************
  ** kcg_real
@@ -387,6 +397,64 @@ const char * get_kcg_int_signature() {
 int check_kcg_int_string(const char* strValue) {
 	static kcg_int rTemp;
 	return string_to_kcg_int(strValue, &rTemp);
+}
+
+
+/****************************************************************
+ ** fr
+ ****************************************************************/
+struct SimTypeVTable* pSimfrVTable;
+const char * fr_to_string(const void* pValue) {
+	if (pSimfrVTable != 0 && pSimfrVTable->m_pfnGetConvInfo(SptString, SptNone) == 1)
+		return *(char**)pSimfrVTable->m_pfnToType(SptString, pValue);
+	return kcg_real_to_string(pValue);
+}
+
+int string_to_fr(const char* strValue, void* pValue) {
+	if (pSimfrVTable != 0 && pSimfrVTable->m_pfnGetConvInfo(SptNone, SptString) == 1) {
+		static fr rTemp;
+		int nResult = pSimfrVTable->m_pfnFromType(SptString, (const void*)&strValue, &rTemp);
+		if (nResult == 1)
+			*((fr*)pValue) = rTemp;
+		return nResult;
+	}
+	return string_to_kcg_real(strValue, pValue);
+}
+
+int is_fr_allow_double_convertion() {
+	if (pSimfrVTable != 0) {
+		int nConvertionAllowed = 0;
+		nConvertionAllowed |= pSimfrVTable->m_pfnGetConvInfo(SptNone, SptLong) == 1;
+		nConvertionAllowed |= pSimfrVTable->m_pfnGetConvInfo(SptNone, SptShort) == 1;
+		nConvertionAllowed |= pSimfrVTable->m_pfnGetConvInfo(SptNone, SptDouble) == 1;
+		nConvertionAllowed |= pSimfrVTable->m_pfnGetConvInfo(SptNone, SptFloat) == 1;
+		return nConvertionAllowed;
+	}
+	return is_kcg_real_allow_double_convertion();
+}
+
+int fr_to_double(double * nValue, const void* pValue) {
+	if (pSimfrVTable != 0) {
+		if (pSimfrVTable->m_pfnGetConvInfo(SptNone, SptLong) == 1)
+			*nValue = (double)(*(long*)pSimfrVTable->m_pfnToType(SptLong, pValue));
+		else if (pSimfrVTable->m_pfnGetConvInfo(SptNone, SptShort) == 1)
+			*nValue = (double)(*(int*)pSimfrVTable->m_pfnToType(SptShort, pValue));
+		else if (pSimfrVTable->m_pfnGetConvInfo(SptNone, SptDouble) == 1)
+			*nValue = (*(double*)pSimfrVTable->m_pfnToType(SptDouble, pValue));
+		else if (pSimfrVTable->m_pfnGetConvInfo(SptNone, SptFloat) == 1)
+			*nValue = (double)(*(float*)pSimfrVTable->m_pfnToType(SptFloat, pValue));
+		else
+			return 0;
+		return 1;
+	}
+	if (_SCSIM_kcg_real_Utils.m_pfnTypeToDouble != 0)
+		return _SCSIM_kcg_real_Utils.m_pfnTypeToDouble(nValue, pValue);
+	return 0;
+}
+
+int check_fr_string(const char* strValue) {
+	static fr rTemp;
+	return string_to_fr(strValue, &rTemp);
 }
 
 

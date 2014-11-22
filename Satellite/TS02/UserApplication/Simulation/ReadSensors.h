@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/Users/Pierre Mattei/Documents/Aeropace Engineering/Doutorado/disciplinas/2014/Cunha/projeto/2sdSprint/TS02/UserApplication/Simulation\kcg_s2c_config.txt
-** Generation date: 2014-09-29T18:26:24
+** Command: s2c613 -config D:/Embraer ITA/Doutorado/Projetos/TS02_2Sprint_v9/TS02_2Sprint/UserApplication/Simulation\kcg_s2c_config.txt
+** Generation date: 2014-11-22T21:11:29
 *************************************************************$ */
 #ifndef _ReadSensors_H_
 #define _ReadSensors_H_
@@ -44,6 +44,6 @@ extern void ReadSensors_reset(outC_ReadSensors *outC);
 #endif /* _ReadSensors_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** ReadSensors.h
-** Generation date: 2014-09-29T18:26:24
+** Generation date: 2014-11-22T21:11:29
 *************************************************************$ */
 

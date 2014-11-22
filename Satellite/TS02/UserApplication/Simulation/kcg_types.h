@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/Users/Pierre Mattei/Documents/Aeropace Engineering/Doutorado/disciplinas/2014/Cunha/projeto/2sdSprint/TS02/UserApplication/Simulation\kcg_s2c_config.txt
-** Generation date: 2014-09-29T18:26:24
+** Command: s2c613 -config D:/Embraer ITA/Doutorado/Projetos/TS02_2Sprint_v9/TS02_2Sprint/UserApplication/Simulation\kcg_s2c_config.txt
+** Generation date: 2014-11-22T21:11:29
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -55,9 +55,7 @@ typedef enum {
   SSM_TR_Ground_1_OpPhases,
   SSM_TR_Ground_2_OpPhases,
   SSM_TR_Launch_1_OpPhases,
-  SSM_TR_Launch_2_OpPhases,
-  SSM_TR_AttitudeAcquisition_1_OpPhases,
-  SSM_TR_AttitudeAcquisition_2_OpPhases
+  SSM_TR_AttitudeAcquisition_1_OpPhases
 } SSM_TR_OpPhases;
 /* OperationalScenario::OpPhases */
 typedef enum {
@@ -66,39 +64,12 @@ typedef enum {
   SSM_st_AttitudeAcquisition_OpPhases,
   SSM_st_NormalPhase_OpPhases
 } SSM_ST_OpPhases;
-/* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */
-typedef enum {
-  SSM_TR_no_trans_atacquisition_OpPhases_AttitudeAcquisition,
-  SSM_TR_readsensors_1_atacquisition_OpPhases_AttitudeAcquisition,
-  SSM_TR_readsensors_2_atacquisition_OpPhases_AttitudeAcquisition,
-  SSM_TR_refAttitude_1_atacquisition_OpPhases_AttitudeAcquisition,
-  SSM_TR_refAttitude_2_atacquisition_OpPhases_AttitudeAcquisition,
-  SSM_TR_SafeMode_1_atacquisition_OpPhases_AttitudeAcquisition
-} SSM_TR_atacquisition_OpPhases_AttitudeAcquisition;
-/* OperationalScenario::OpPhases::AttitudeAcquisition::atacquisition */
-typedef enum {
-  SSM_st_readsensors_OpPhases_AttitudeAcquisition_atacquisition,
-  SSM_st_refAttitude_OpPhases_AttitudeAcquisition_atacquisition,
-  SSM_st_SafeMode_OpPhases_AttitudeAcquisition_atacquisition
-} SSM_ST_atacquisition_OpPhases_AttitudeAcquisition;
-/* OperationalScenario::OpPhases::NormalPhase::NPhase */
-typedef enum {
-  SSM_TR_no_trans_NPhase_OpPhases_NormalPhase,
-  SSM_TR_AttControl_1_NPhase_OpPhases_NormalPhase,
-  SSM_TR_AttControl_2_NPhase_OpPhases_NormalPhase,
-  SSM_TR_Payload_1_NPhase_OpPhases_NormalPhase,
-  SSM_TR_Payload_2_NPhase_OpPhases_NormalPhase,
-  SSM_TR_SafeMode_1_NPhase_OpPhases_NormalPhase
-} SSM_TR_NPhase_OpPhases_NormalPhase;
-/* OperationalScenario::OpPhases::NormalPhase::NPhase */
-typedef enum {
-  SSM_st_AttControl_OpPhases_NormalPhase_NPhase,
-  SSM_st_Payload_OpPhases_NormalPhase_NPhase,
-  SSM_st_SafeMode_OpPhases_NormalPhase_NPhase
-} SSM_ST_NPhase_OpPhases_NormalPhase;
+/* fr */
+typedef kcg_real fr;
+
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2014-09-29T18:26:24
+** Generation date: 2014-11-22T21:11:29
 *************************************************************$ */
 

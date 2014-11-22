@@ -13,6 +13,7 @@ extern TypeUtils _SCSIM_kcg_real_Utils;
 extern TypeUtils _SCSIM_kcg_bool_Utils;
 extern TypeUtils _SCSIM_kcg_char_Utils;
 extern TypeUtils _SCSIM_kcg_int_Utils;
+extern TypeUtils _SCSIM_fr_Utils;
 
 /****************************************************************
  ** kcg_real
@@ -66,5 +67,18 @@ extern int compare_kcg_int_type(int*, const char*, const void*);
 #define kcg_int_filter_size 0
 #define get_kcg_int_filter_utils 0
 #define kcg_int_filter_values 0
+/****************************************************************
+ ** fr
+ ****************************************************************/
+extern const char * fr_to_string(const void* pValue);
+extern int check_fr_string(const char* strValue);
+extern int string_to_fr(const char* strValue, void* pValue);
+int is_fr_allow_double_convertion();
+extern int fr_to_double(double * nValue, const void*);
+#define get_fr_signature get_kcg_real_signature
+#define compare_fr_type compare_kcg_real_type
+#define fr_filter_size kcg_real_filter_size
+#define get_fr_filter_utils get_kcg_real_filter_utils
+#define fr_filter_values kcg_real_filter_values
 
 #endif /*OPERATIONALSCENARIO_TYPES_CONVERTION */
