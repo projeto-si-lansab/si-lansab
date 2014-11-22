@@ -13,11 +13,15 @@
 operator_input_type ua_inputs;
 operator_output_type ua_outputs;
 
+kcg_bool ejected = FALSE;
+
+/*
 kcg_char latitude_str[11];
 kcg_real cam_latitude = 0.0f;
 
 kcg_char longitude_str[11];
 kcg_real cam_longitude = 0.0f;
+*/
 
 int num_receivers;
 int* receivers;
@@ -42,17 +46,29 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
         case TS01ID:
             printf("Received: Message from TS01 to TS05 \n");
             ua_inputs.SAT_Ejection_Signal = input.SAT_Ejection_Signal;
+            if (ua_inputs.SAT_Ejection_Signal)
+                ejected = TRUE;
+            if (!ejected) {
+                ua_inputs.SAT_Altitude_Update = TRUE;
+                ua_inputs.SAT_Altitude_Value = input.SAT_Altitude_Value / 1000.0;
+                ua_inputs.SAT_Latitude_Update = TRUE;
+                ua_inputs.SAT_Latitude_Value = input.SAT_Latitude_Value;
+                ua_inputs.SAT_Longitude_Update = TRUE;
+                ua_inputs.SAT_Longitude_Value = input.SAT_Longitude_Value;
+            }
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS05 \n");
             
             /* US 01 */
-            ua_inputs.SAT_Altitude_Update = input.SAT_Altitude_Update;
-            ua_inputs.SAT_Altitude_Value = input.SAT_Altitude_Value;
-            ua_inputs.SAT_Latitude_Update = input.SAT_Latitude_Update;
-            ua_inputs.SAT_Latitude_Value = input.SAT_Latitude_Value;
-            ua_inputs.SAT_Longitude_Update = input.SAT_Longitude_Update;
-            ua_inputs.SAT_Longitude_Value = input.SAT_Longitude_Value;
+            if (ejected) {
+                ua_inputs.SAT_Altitude_Update = input.SAT_Altitude_Update;
+                ua_inputs.SAT_Altitude_Value = input.SAT_Altitude_Value;
+                ua_inputs.SAT_Latitude_Update = input.SAT_Latitude_Update;
+                ua_inputs.SAT_Latitude_Value = input.SAT_Latitude_Value;
+                ua_inputs.SAT_Longitude_Update = input.SAT_Longitude_Update;
+                ua_inputs.SAT_Longitude_Value = input.SAT_Longitude_Value;
+            }
             ua_inputs.SAT_Period_Update = input.SAT_Period_Update;
             ua_inputs.SAT_Period_Value = input.SAT_Period_Value;
             
