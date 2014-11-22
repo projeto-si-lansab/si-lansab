@@ -8,7 +8,7 @@
     <IDE>
         <environment_id value="-2133961615"/>
         <ratio horizontal="1" vertical="1"/>
-        <reporter authors="Time Scrum 04" classification="" company="Instituto Tecnológico de Aeronáutica - ITA" date="24 de outubro de 2014" distribution_list="" index="" issue="" reference="" referenceNr="" subtitle="Lista de Exercícios 3 - Definition File" title="Launch Control Center">
+        <reporter authors="Time Scrum 04" classification="" company="Instituto Tecnológico de Aeronáutica - ITA" date="21 de novembro de 2014" distribution_list="" index="" issue="" reference="" referenceNr="" subtitle="Lista de Exercícios 4 - Definition File" title="Launch Control Center">
             <description>Este documento refere-se ao desenvolvimento de um aplicativo para controle de lançamento de satélite.</description>
             <summary/>
             <header>
@@ -38,23 +38,6 @@
                 <intprop name="Height">20480</intprop>
             </model>
             <children>
-                <widget name="Rec_Status_System" oid="dcfa1cdf-f67d-4fd2-8725-be0d9f3cd8bc" type="GpRectangle">
-                    <IDE/>
-                    <model>
-                        <intprop name="WidgetIdent">2</intprop>
-                        <enumprop name="Anonymous">A661_FALSE</enumprop>
-                        <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">140</intprop>
-                        <intprop name="PosY">80</intprop>
-                        <intprop name="SizeX">9940</intprop>
-                        <intprop name="SizeY">20300</intprop>
-                        <intprop name="StyleSet">1</intprop>
-                        <intprop name="ColorIndex">1</intprop>
-                        <enumprop name="Filled">A661_TRUE</enumprop>
-                        <intprop name="FillIndex">0</intprop>
-                        <enumprop name="Halo">A661_FALSE</enumprop>
-                    </model>
-                </widget>
                 <widget name="Lab_Head_Laucher_Segment" oid="858a1ab3-7102-4220-ab93-f23a4b5b513a" type="Label">
                     <IDE/>
                     <model>
@@ -170,7 +153,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph1</stringprop>
+                                <stringprop name="LabelString">Stage 1</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_Ph2" oid="e7a0f7d5-2a84-4425-af08-b109a9f4e41c" type="Label">
@@ -190,7 +173,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph2</stringprop>
+                                <stringprop name="LabelString">Stage 2</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_Ph3" oid="8e42b0e3-f2a8-4a20-a6c3-5eb4eb33d8ba" type="Label">
@@ -210,7 +193,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph3</stringprop>
+                                <stringprop name="LabelString">Stage 3</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_PhF" oid="3b27fa61-c882-4168-afa9-f410b7e75f81" type="Label">
@@ -230,7 +213,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">PhF</stringprop>
+                                <stringprop name="LabelString">Final</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_Phase_Status" oid="fcc7afd0-31bd-4419-aeb7-608d4518bc58" type="Label">
@@ -250,7 +233,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Sensores de Combustivel</stringprop>
+                                <stringprop name="LabelString">Fuel Sensors</stringprop>
                             </model>
                         </widget>
                         <widget name="Pb_Verify_Fuel" oid="e32c608f-fc49-49b8-9a66-53de67240166" type="PushButton">
@@ -268,7 +251,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Verificar</stringprop>
+                                <stringprop name="LabelString">Verify</stringprop>
                             </model>
                         </widget>
                     </children>
@@ -368,7 +351,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph1</stringprop>
+                                <stringprop name="LabelString">Stage 1</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_Ph2" oid="74e3331d-0ff9-4401-b2d4-2a41692cf44b" type="Label">
@@ -388,7 +371,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph2</stringprop>
+                                <stringprop name="LabelString">Stage 2</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_Ph3" oid="1c9cbd14-bd6c-4575-a43b-4d3ecb53929a" type="Label">
@@ -408,7 +391,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph3</stringprop>
+                                <stringprop name="LabelString">Stage 3</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_PhF" oid="4855cb99-828d-4c09-8c2f-2bb0e9f0259c" type="Label">
@@ -428,7 +411,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">PhF</stringprop>
+                                <stringprop name="LabelString">Final</stringprop>
                             </model>
                         </widget>
                         <widget name="Lab_Phase_Status" oid="bd3faaa5-920f-409d-8df2-85a75671d9b7" type="Label">
@@ -448,7 +431,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Sensor de Estagios</stringprop>
+                                <stringprop name="LabelString">Stage Sensors</stringprop>
                             </model>
                         </widget>
                         <widget name="Pb_Verify_Phase" oid="d1097db6-7772-454a-bfb6-b7f23bc35f50" type="PushButton">
@@ -466,7 +449,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Verificar</stringprop>
+                                <stringprop name="LabelString">Verify</stringprop>
                             </model>
                         </widget>
                     </children>
@@ -478,7 +461,7 @@
                         <enumprop name="Anonymous">A661_FALSE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
                         <intprop name="PosX">400</intprop>
-                        <intprop name="PosY">11380</intprop>
+                        <intprop name="PosY">11320</intprop>
                         <intprop name="SizeX">9420</intprop>
                         <intprop name="SizeY">1260</intprop>
                         <intprop name="StyleSet">2</intprop>
@@ -495,7 +478,7 @@
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
                         <intprop name="PosX">1060</intprop>
-                        <intprop name="PosY">11600</intprop>
+                        <intprop name="PosY">11540</intprop>
                         <intprop name="SizeX">3820</intprop>
                         <intprop name="SizeY">840</intprop>
                         <intprop name="StyleSet">110</intprop>
@@ -505,7 +488,7 @@
                         <enumprop name="AlternateFlag">A661_TRUE</enumprop>
                         <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                         <enumprop name="Alignment">A661_CENTER</enumprop>
-                        <stringprop name="LabelString">Start Counting</stringprop>
+                        <stringprop name="LabelString">Countdown</stringprop>
                         <stringprop name="AlternateLabelString">Cancel Launch</stringprop>
                     </model>
                 </widget>
@@ -516,12 +499,12 @@
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
                         <intprop name="PosX">6300</intprop>
-                        <intprop name="PosY">11640</intprop>
+                        <intprop name="PosY">11580</intprop>
                         <intprop name="SizeX">3000</intprop>
                         <intprop name="SizeY">800</intprop>
                         <intprop name="StyleSet">110</intprop>
                         <intprop name="NextFocusedWidget">0</intprop>
-                        <floatprop name="Value">60.0</floatprop>
+                        <floatprop name="Value">15.0</floatprop>
                         <floatprop name="TicsCoarse">10.0</floatprop>
                         <floatprop name="TicsFine">0.1</floatprop>
                         <floatprop name="MinValue">0.0</floatprop>
@@ -539,24 +522,6 @@
                         <enumprop name="CyclicFlag">A661_TRUE</enumprop>
                         <stringprop name="FormatString">0:##</stringprop>
                         <stringprop name="LegendString">s</stringprop>
-                    </model>
-                </widget>
-                <widget name="PushDestruct" oid="e057643f-82cf-4ecb-aa1d-cbc8c5d93663" type="PushButton">
-                    <IDE/>
-                    <model>
-                        <intprop name="WidgetIdent">38</intprop>
-                        <enumprop name="Enable">A661_TRUE</enumprop>
-                        <enumprop name="Visible">A661_TRUE</enumprop>
-                        <intprop name="PosX">4900</intprop>
-                        <intprop name="PosY">280</intprop>
-                        <intprop name="SizeX">5000</intprop>
-                        <intprop name="SizeY">1140</intprop>
-                        <intprop name="StyleSet">115</intprop>
-                        <intprop name="NextFocusedWidget">0</intprop>
-                        <intprop name="MaxStringLength">32</intprop>
-                        <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
-                        <enumprop name="Alignment">A661_CENTER</enumprop>
-                        <stringprop name="LabelString">Self-Destruct</stringprop>
                     </model>
                 </widget>
                 <widget name="ThiagoRamos" oid="671e4887-a5c0-4a6b-9adb-f3b731fc4f9e" type="BasicContainer">
@@ -640,7 +605,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Computador Bordo</stringprop>
+                                <stringprop name="LabelString">On-board Computer</stringprop>
                             </model>
                         </widget>
                         <widget name="Pb_Verify_Computador" oid="680de7d9-583c-462a-afb7-96c23fe2c63a" type="PushButton">
@@ -658,7 +623,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Verificar</stringprop>
+                                <stringprop name="LabelString">Verify</stringprop>
                             </model>
                         </widget>
                         <widget name="Pb_Verify_Camera" oid="8dea0b34-02ee-45ee-b265-03a14806c920" type="PushButton">
@@ -676,7 +641,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_CENTER</enumprop>
-                                <stringprop name="LabelString">Verificar</stringprop>
+                                <stringprop name="LabelString">Verify</stringprop>
                             </model>
                         </widget>
                     </children>
@@ -718,7 +683,7 @@
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
                         <intprop name="PosX">1820</intprop>
-                        <intprop name="PosY">6360</intprop>
+                        <intprop name="PosY">6000</intprop>
                     </model>
                     <children>
                         <widget name="Label" oid="14e5bf60-b1a8-4d38-bbca-e79abecaf148" type="Label">
@@ -727,7 +692,7 @@
                                 <intprop name="WidgetIdent">51</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">2180</intprop>
+                                <intprop name="PosX">2380</intprop>
                                 <intprop name="PosY">-720</intprop>
                                 <intprop name="SizeX">3000</intprop>
                                 <intprop name="SizeY">800</intprop>
@@ -738,7 +703,7 @@
                                 <intprop name="Font">2</intprop>
                                 <intprop name="ColorIndex">41</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Alertas</stringprop>
+                                <stringprop name="LabelString">Alarm</stringprop>
                             </model>
                         </widget>
                         <widget name="AlertaGeralRec" oid="6d607cd7-ef33-4e76-9db7-a66425d8b23e" type="GpRectangle">
@@ -764,7 +729,7 @@
                                 <intprop name="WidgetIdent">57</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">1940</intprop>
+                                <intprop name="PosX">1780</intprop>
                                 <intprop name="PosY">-1520</intprop>
                                 <intprop name="SizeX">3000</intprop>
                                 <intprop name="SizeY">800</intprop>
@@ -775,7 +740,7 @@
                                 <intprop name="Font">0</intprop>
                                 <intprop name="ColorIndex">1</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Alerta Geral</stringprop>
+                                <stringprop name="LabelString">Overall Status</stringprop>
                             </model>
                         </widget>
                     </children>
@@ -787,7 +752,7 @@
                         <enumprop name="Enable">A661_TRUE</enumprop>
                         <enumprop name="Visible">A661_TRUE</enumprop>
                         <intprop name="PosX">2700</intprop>
-                        <intprop name="PosY">11560</intprop>
+                        <intprop name="PosY">11360</intprop>
                     </model>
                     <children>
                         <widget name="Label" oid="6e9e2fde-09fb-45c8-85ba-60769dfd6583" type="Label">
@@ -796,7 +761,7 @@
                                 <intprop name="WidgetIdent">65</intprop>
                                 <enumprop name="Anonymous">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">-440</intprop>
+                                <intprop name="PosX">500</intprop>
                                 <intprop name="PosY">-960</intprop>
                                 <intprop name="SizeX">5640</intprop>
                                 <intprop name="SizeY">680</intprop>
@@ -807,155 +772,7 @@
                                 <intprop name="Font">2</intprop>
                                 <intprop name="ColorIndex">41</intprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Controle de Estagios</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="desacoplarPh1Rectangle" oid="b743a5b8-b693-44a7-985b-cbe8b2bc89eb" type="GpRectangle">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">66</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">880</intprop>
-                                <intprop name="PosY">-1760</intprop>
-                                <intprop name="SizeX">1660</intprop>
-                                <intprop name="SizeY">580</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="ColorIndex">1</intprop>
-                                <enumprop name="Filled">A661_TRUE</enumprop>
-                                <intprop name="FillIndex">55</intprop>
-                                <enumprop name="Halo">A661_FALSE</enumprop>
-                            </model>
-                        </widget>
-                        <widget name="Label" oid="37fcc787-5faf-4f7b-b9b7-a4d79a10c4c9" type="Label">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">67</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">1000</intprop>
-                                <intprop name="PosY">-1900</intprop>
-                                <intprop name="SizeX">3000</intprop>
-                                <intprop name="SizeY">800</intprop>
-                                <intprop name="RotationAngle">0</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="MaxStringLength">32</intprop>
-                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
-                                <intprop name="Font">0</intprop>
-                                <intprop name="ColorIndex">1</intprop>
-                                <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph 1</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="desacoplarPh2Rectangle" oid="cb11fdf8-ba6e-4fb7-93b9-4bad27c15f0f" type="GpRectangle">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">68</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">900</intprop>
-                                <intprop name="PosY">-2860</intprop>
-                                <intprop name="SizeX">1680</intprop>
-                                <intprop name="SizeY">600</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="ColorIndex">1</intprop>
-                                <enumprop name="Filled">A661_TRUE</enumprop>
-                                <intprop name="FillIndex">55</intprop>
-                                <enumprop name="Halo">A661_FALSE</enumprop>
-                            </model>
-                        </widget>
-                        <widget name="desacoplarPh3Rectangle" oid="920280ab-802b-40c1-b99e-e805279cfdb8" type="GpRectangle">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">69</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">920</intprop>
-                                <intprop name="PosY">-3900</intprop>
-                                <intprop name="SizeX">1660</intprop>
-                                <intprop name="SizeY">600</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="ColorIndex">1</intprop>
-                                <enumprop name="Filled">A661_TRUE</enumprop>
-                                <intprop name="FillIndex">55</intprop>
-                                <enumprop name="Halo">A661_FALSE</enumprop>
-                            </model>
-                        </widget>
-                        <widget name="desacoplarPh4Rectangle" oid="73e2f837-f835-4b83-9f3a-2714d4382861" type="GpRectangle">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">70</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">920</intprop>
-                                <intprop name="PosY">-4940</intprop>
-                                <intprop name="SizeX">1660</intprop>
-                                <intprop name="SizeY">600</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="ColorIndex">1</intprop>
-                                <enumprop name="Filled">A661_TRUE</enumprop>
-                                <intprop name="FillIndex">55</intprop>
-                                <enumprop name="Halo">A661_FALSE</enumprop>
-                            </model>
-                        </widget>
-                        <widget name="Label" oid="ae885235-6533-4502-9bd1-52930d365720" type="Label">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">71</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">1020</intprop>
-                                <intprop name="PosY">-3000</intprop>
-                                <intprop name="SizeX">3000</intprop>
-                                <intprop name="SizeY">800</intprop>
-                                <intprop name="RotationAngle">0</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="MaxStringLength">32</intprop>
-                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
-                                <intprop name="Font">0</intprop>
-                                <intprop name="ColorIndex">1</intprop>
-                                <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph 2</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="Label" oid="48dc4563-c7b7-40ce-b3b0-85c83430933a" type="Label">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">72</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">1060</intprop>
-                                <intprop name="PosY">-3980</intprop>
-                                <intprop name="SizeX">1320</intprop>
-                                <intprop name="SizeY">780</intprop>
-                                <intprop name="RotationAngle">0</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="MaxStringLength">32</intprop>
-                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
-                                <intprop name="Font">0</intprop>
-                                <intprop name="ColorIndex">1</intprop>
-                                <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph 3</stringprop>
-                            </model>
-                        </widget>
-                        <widget name="Label" oid="88fa2ced-48ac-4601-82d0-b299fc7b057a" type="Label">
-                            <IDE/>
-                            <model>
-                                <intprop name="WidgetIdent">73</intprop>
-                                <enumprop name="Anonymous">A661_FALSE</enumprop>
-                                <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">1060</intprop>
-                                <intprop name="PosY">-5040</intprop>
-                                <intprop name="SizeX">1340</intprop>
-                                <intprop name="SizeY">780</intprop>
-                                <intprop name="RotationAngle">0</intprop>
-                                <intprop name="StyleSet">1</intprop>
-                                <intprop name="MaxStringLength">32</intprop>
-                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
-                                <intprop name="Font">0</intprop>
-                                <intprop name="ColorIndex">1</intprop>
-                                <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Ph 4</stringprop>
+                                <stringprop name="LabelString">Phase Control</stringprop>
                             </model>
                         </widget>
                         <widget name="desacoplarPh1Button" oid="711385c8-776f-4ba4-8a38-daed3a3a60c1" type="PushButton">
@@ -964,7 +781,7 @@
                                 <intprop name="WidgetIdent">74</intprop>
                                 <enumprop name="Enable">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">2780</intprop>
+                                <intprop name="PosX">2580</intprop>
                                 <intprop name="PosY">-1780</intprop>
                                 <intprop name="SizeX">4500</intprop>
                                 <intprop name="SizeY">620</intprop>
@@ -973,7 +790,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Desaclopar Manual</stringprop>
+                                <stringprop name="LabelString">Detach Stage 1</stringprop>
                             </model>
                         </widget>
                         <widget name="desacoplarPh2Button" oid="3be2e69b-52df-4717-9bd2-54f49008605d" type="PushButton">
@@ -982,7 +799,7 @@
                                 <intprop name="WidgetIdent">75</intprop>
                                 <enumprop name="Enable">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">2800</intprop>
+                                <intprop name="PosX">2600</intprop>
                                 <intprop name="PosY">-2880</intprop>
                                 <intprop name="SizeX">4500</intprop>
                                 <intprop name="SizeY">620</intprop>
@@ -991,7 +808,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Desaclopar Manual</stringprop>
+                                <stringprop name="LabelString">Detach Stage 2</stringprop>
                             </model>
                         </widget>
                         <widget name="desacoplarPh3Button" oid="b705764c-8cfb-4575-a09f-35182e2e575f" type="PushButton">
@@ -1000,7 +817,7 @@
                                 <intprop name="WidgetIdent">76</intprop>
                                 <enumprop name="Enable">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">2800</intprop>
+                                <intprop name="PosX">2600</intprop>
                                 <intprop name="PosY">-3900</intprop>
                                 <intprop name="SizeX">4500</intprop>
                                 <intprop name="SizeY">620</intprop>
@@ -1009,7 +826,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Desaclopar Manual</stringprop>
+                                <stringprop name="LabelString">Detach Stage 3</stringprop>
                             </model>
                         </widget>
                         <widget name="desacoplarPh4Button" oid="fb25491d-92f1-4f12-b608-677336ee2623" type="PushButton">
@@ -1018,7 +835,7 @@
                                 <intprop name="WidgetIdent">77</intprop>
                                 <enumprop name="Enable">A661_FALSE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">2780</intprop>
+                                <intprop name="PosX">2580</intprop>
                                 <intprop name="PosY">-4960</intprop>
                                 <intprop name="SizeX">4500</intprop>
                                 <intprop name="SizeY">620</intprop>
@@ -1027,7 +844,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Desaclopar Manual</stringprop>
+                                <stringprop name="LabelString">Detach Final</stringprop>
                             </model>
                         </widget>
                         <widget name="abrirCapsulaButton" oid="7543ba79-6779-41dc-901b-6ca02bab2f8a" type="PushButton">
@@ -1036,7 +853,7 @@
                                 <intprop name="WidgetIdent">78</intprop>
                                 <enumprop name="Enable">A661_TRUE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">-2540</intprop>
+                                <intprop name="PosX">-2280</intprop>
                                 <intprop name="PosY">-2860</intprop>
                                 <intprop name="SizeX">3280</intprop>
                                 <intprop name="SizeY">600</intprop>
@@ -1045,7 +862,7 @@
                                 <intprop name="MaxStringLength">32</intprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Abrir Capsula</stringprop>
+                                <stringprop name="LabelString">Open Capsule</stringprop>
                             </model>
                         </widget>
                         <widget name="automaticoBtn" oid="9a41e813-41a2-4b76-a86c-1a9eb2996823" type="ToggleButton">
@@ -1054,7 +871,7 @@
                                 <intprop name="WidgetIdent">82</intprop>
                                 <enumprop name="Enable">A661_TRUE</enumprop>
                                 <enumprop name="Visible">A661_TRUE</enumprop>
-                                <intprop name="PosX">-2540</intprop>
+                                <intprop name="PosX">-2280</intprop>
                                 <intprop name="PosY">-1800</intprop>
                                 <intprop name="SizeX">3280</intprop>
                                 <intprop name="SizeY">600</intprop>
@@ -1065,8 +882,79 @@
                                 <enumprop name="AlternateFlag">A661_TRUE</enumprop>
                                 <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
                                 <enumprop name="Alignment">A661_LEFT</enumprop>
-                                <stringprop name="LabelString">Automatico</stringprop>
+                                <stringprop name="LabelString">Automatic</stringprop>
                                 <stringprop name="AlternateLabelString">Manual</stringprop>
+                            </model>
+                        </widget>
+                    </children>
+                </widget>
+                <widget name="DestructContainer" oid="bef12057-731c-4b2e-ad93-fbc9a11a80c1" type="BasicContainer">
+                    <IDE/>
+                    <model>
+                        <intprop name="WidgetIdent">84</intprop>
+                        <enumprop name="Enable">A661_TRUE</enumprop>
+                        <enumprop name="Visible">A661_TRUE</enumprop>
+                        <intprop name="PosX">60</intprop>
+                        <intprop name="PosY">2480</intprop>
+                    </model>
+                    <children>
+                        <widget name="Label" oid="af79a0ab-fb10-4cab-80fc-757d0b467748" type="Label">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">85</intprop>
+                                <enumprop name="Anonymous">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">1800</intprop>
+                                <intprop name="PosY">1000</intprop>
+                                <intprop name="SizeX">7000</intprop>
+                                <intprop name="SizeY">680</intprop>
+                                <intprop name="RotationAngle">0</intprop>
+                                <intprop name="StyleSet">1</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="MotionAllowed">A661_TRUE</enumprop>
+                                <intprop name="Font">2</intprop>
+                                <intprop name="ColorIndex">41</intprop>
+                                <enumprop name="Alignment">A661_LEFT</enumprop>
+                                <stringprop name="LabelString">Self-Destruction Control</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="PushDestruct" oid="e057643f-82cf-4ecb-aa1d-cbc8c5d93663" type="PushButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">38</intprop>
+                                <enumprop name="Enable">A661_FALSE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">5240</intprop>
+                                <intprop name="PosY">-380</intprop>
+                                <intprop name="SizeX">4500</intprop>
+                                <intprop name="SizeY">1140</intprop>
+                                <intprop name="StyleSet">115</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Self-Destruct</stringprop>
+                            </model>
+                        </widget>
+                        <widget name="enableDestructBtn" oid="456e7ed2-cd66-4333-a301-c58bfc60461a" type="ToggleButton">
+                            <IDE/>
+                            <model>
+                                <intprop name="WidgetIdent">88</intprop>
+                                <enumprop name="Enable">A661_TRUE</enumprop>
+                                <enumprop name="Visible">A661_TRUE</enumprop>
+                                <intprop name="PosX">460</intprop>
+                                <intprop name="PosY">-380</intprop>
+                                <intprop name="SizeX">4500</intprop>
+                                <intprop name="SizeY">1140</intprop>
+                                <intprop name="StyleSet">115</intprop>
+                                <intprop name="NextFocusedWidget">0</intprop>
+                                <intprop name="MaxStringLength">32</intprop>
+                                <enumprop name="ToggleState">A661_UNSELECTED</enumprop>
+                                <enumprop name="AlternateFlag">A661_TRUE</enumprop>
+                                <enumprop name="AutomaticFocusMotion">A661_FALSE</enumprop>
+                                <enumprop name="Alignment">A661_CENTER</enumprop>
+                                <stringprop name="LabelString">Enable</stringprop>
+                                <stringprop name="AlternateLabelString">Disable</stringprop>
                             </model>
                         </widget>
                     </children>
@@ -1076,5 +964,5 @@
     </children>
 </specification>
 
-<!-- crc32 : 1753359278 -->
+<!-- crc32 : 3433305666 -->
 

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS03/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T21:20:02
+** Command: s2c613 -config C:/scade/si-lansab/Satellite/TS03/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-22T13:30:06
 *************************************************************$ */
 #ifndef _TS03_H_
 #define _TS03_H_
@@ -12,6 +12,7 @@ typedef struct {
   kcg_bool /* TS03::ST_CameraBtnOn */ ST_CameraBtnOn;
   kcg_bool /* TS03::ST_DownloadBtn */ ST_DownloadBtn;
   kcg_bool /* TS03::TST_TakePicutreBtn */ TST_TakePicutreBtn;
+  kcg_bool /* TS03::TakePicture */ TakePicture;
 } inC_TS03;
 
 /* ========================  context type  ========================= */
@@ -27,7 +28,7 @@ typedef struct {
   kcg_int /* TS03::MemoryWarn */ MemoryWarn;
   kcg_int /* TS03::ST_CameraOnIndicator */ ST_CameraOnIndicator;
   kcg_int /* TS03::ST_MemoryDownloadIndicator */ ST_MemoryDownloadIndicator;
-  kcg_bool /* TS03::TakePicture */ TakePicture;
+  kcg_bool /* TS03::DroneTakePicture */ DroneTakePicture;
   kcg_bool /* TS03::DownLoadPic */ DownLoadPic;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
@@ -55,6 +56,6 @@ extern void TS03_reset(outC_TS03 *outC);
 #endif /* _TS03_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TS03.h
-** Generation date: 2014-11-18T21:20:02
+** Generation date: 2014-11-22T13:30:06
 *************************************************************$ */
 

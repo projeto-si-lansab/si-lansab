@@ -138,6 +138,7 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
     case TS03ID:
         printf("Sent: Message from TS05 to TS03 \n");
         TS03_INPUT_INTERFACE *output3 = &(message->input_interface.ts03_input_interface);
+		output3->TakePicture = ua_outputs.cam_take_picture;
         /*output->SignalFromTeam5 = ua_outputs.SignalToTeam3;*/
         break;
     case TS04ID:
