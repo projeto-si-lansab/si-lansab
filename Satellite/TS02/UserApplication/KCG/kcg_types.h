@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-22T22:15:01
+** Command: s2c613 -config C:/Users/Projeto SPOT/git/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-22T23:48:34
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -49,12 +49,6 @@ typedef unsigned char kcg_char;
 #define kcg_assign_array kcg_assign
 #endif /* kcg_assign_array */
 
-/* truthtables::TruthTableValues */
-typedef enum {
-  T_truthtables,
-  F_truthtables,
-  X_truthtables
-} TruthTableValues_truthtables;
 /* OperationalScenario::OpPhases */
 typedef enum {
   SSM_TR_no_trans_OpPhases,
@@ -73,28 +67,9 @@ typedef enum {
 /* fr */
 typedef kcg_real fr;
 
-typedef struct { kcg_int k; kcg_real f; } struct__5854;
-
-/* lut::LutIndex */
-typedef struct__5854 LutIndex_lut;
-
-#ifndef kcg_copy_struct__5854
-#define kcg_copy_struct__5854(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5854)))
-#endif /* kcg_copy_struct__5854 */
-
-#ifndef kcg_comp_struct__5854
-extern kcg_bool kcg_comp_struct__5854(
-  struct__5854 *kcg_c1,
-  struct__5854 *kcg_c2);
-#endif /* kcg_comp_struct__5854 */
-
-#define kcg_comp_LutIndex_lut kcg_comp_struct__5854
-
-#define kcg_copy_LutIndex_lut kcg_copy_struct__5854
-
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2014-11-22T22:15:01
+** Generation date: 2014-11-22T23:48:34
 *************************************************************$ */
 

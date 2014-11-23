@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="157" defaultConfiguration="21">
+<Project id="1" oid_count="162" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -39,10 +39,6 @@
 			<value>C QUAL613</value>
 			<configuration>21</configuration>
 		</Prop>
-		<Prop id="25" name="@GENERATOR:OPTLEVEL">
-			<value>0</value>
-			<configuration>21</configuration>
-		</Prop>
 		<Prop id="26" name="@GENERATOR:DEBUG">
 			<value>true</value>
 			<configuration>21</configuration>
@@ -53,10 +49,6 @@
 		</Prop>
 		<Prop id="28" name="@GENERATOR:SKIP_UNUSED">
 			<value>true</value>
-			<configuration>21</configuration>
-		</Prop>
-		<Prop id="29" name="@GENERATOR:TARGET_ADAPTOR">
-			<value>Simulator</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="30" name="@GENERATOR:USER_CONFIG">
@@ -295,7 +287,6 @@
 		</Prop>
 		<Prop id="107" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
 			<value>..\DefinitionFile\SatelliteControlCommunication_DF.sgfx</value>
-			<value>..\..\..\..\..\..\Program Files (x86)\Esterel Technologies\Esterel SCADE 6.4.2\examples\LevelCrossing\SCADE Display\LevelCrossingDisplay.sgfx</value>
 			<configuration>13</configuration>
 		</Prop>
 		<Prop id="108" name="@GENERATOR:PROBES">
@@ -315,7 +306,26 @@
 		</Prop>
 		<Prop id="135" name="@GENERATOR:DISPLAY_ASYNC_PANELS">
 			<value>..\DefinitionFile\SatelliteControlCommunication_DF.sgfx</value>
-			<value>..\..\..\..\..\..\Program Files (x86)\Esterel Technologies\Esterel SCADE 6.4.2\examples\LevelCrossing\SCADE Display\LevelCrossingDisplay.sgfx</value>
+			<configuration>21</configuration>
+		</Prop>
+		<Prop id="158" name="@GENERATOR:SKIP_UNUSED">
+			<value>true</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="159" name="@GENERATOR:ENABLE_EXTENSIONS">
+			<value>false</value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="160" name="@GENERATOR:TARGET_ADAPTOR">
+			<value></value>
+			<configuration>13</configuration>
+		</Prop>
+		<Prop id="161" name="@GENERATOR:INPUT_THRESHOLD">
+			<value>2</value>
+			<configuration>21</configuration>
+		</Prop>
+		<Prop id="162" name="@GENERATOR:EXPAND_MODE">
+			<value>1</value>
 			<configuration>21</configuration>
 		</Prop>
 	</props>

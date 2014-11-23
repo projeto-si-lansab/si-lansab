@@ -1,14 +1,11 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Embraer ITA/Doutorado/Projetos/TS02_2Sprint_v9/TS02_2Sprint/UserApplication/Simulation\kcg_s2c_config.txt
-** Generation date: 2014-11-22T21:11:29
+** Command: s2c613 -config C:/Users/Projeto SPOT/git/si-lansab/Satellite/TS02/UserApplication/Simulation\kcg_s2c_config.txt
+** Generation date: 2014-11-22T23:57:54
 *************************************************************$ */
 #ifndef _OperationalScenario_H_
 #define _OperationalScenario_H_
 
 #include "kcg_types.h"
-#include "ReadSensors.h"
-#include "TestActuators.h"
-#include "ModCount.h"
 
 /* ========================  input structure  ====================== */
 typedef struct {
@@ -63,8 +60,22 @@ typedef struct {
   kcg_bool init4;
   kcg_bool init3;
   kcg_bool init2;
+  kcg_bool init1;
   kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
+  kcg_bool /* TestActuators::ActuatorsStatus */ ActuatorsStatus_1;
+  kcg_bool /* TestActuators::MagneticTorquers */ MagneticTorquers_1;
+  kcg_bool /* TestActuators::Reactionwheels */ Reactionwheels_1;
+  kcg_bool /* ReadSensors::SensorsStatus */ SensorsStatus_6;
+  kcg_bool /* ReadSensors::SunSensor */ SunSensor_6;
+  kcg_bool /* ReadSensors::Accelerometers */ Accelerometers_6;
+  kcg_bool /* ReadSensors::Gyroscopes */ Gyroscopes_6;
+  kcg_int /* ModCount::_L2 */ _L2_7;
+  kcg_int /* ModCount::_L2 */ _L2_8;
+  kcg_int /* ModCount::_L2 */ _L2_9;
+  kcg_int /* ModCount::_L2 */ _L2_4;
+  kcg_int /* ModCount::_L2 */ _L2_5;
+  kcg_int /* ModCount::_L2 */ _L2_6;
   kcg_bool /* OperationalScenario::OpPhases::Launch::AtAcquisition */ AtAcquisition_OpPhases_Launch;
   kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L142 */ _L142_OpPhases_AttitudeAcquisition;
   kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L121 */ _L121_OpPhases_AttitudeAcquisition;
@@ -94,19 +105,91 @@ typedef struct {
   kcg_bool /* OperationalScenario::takePict */ rem_takePict;
   kcg_int /* OperationalScenario::AttitudeReference */ rem_AttitudeReference;
   kcg_int /* OperationalScenario::Telemetry */ rem_Telemetry;
-  /* ---------------------  sub nodes' contexts  --------------------- */
-  outC_TestActuators /* 1 */ Context_1;
-  outC_ReadSensors /* 6 */ _1_Context_6;
-  outC_ModCount /* 6 */ Context_6;
-  outC_ModCount /* 4 */ Context_4;
-  outC_ModCount /* 5 */ Context_5;
-  outC_ModCount /* 8 */ Context_8;
-  outC_ModCount /* 7 */ Context_7;
-  outC_ModCount /* 9 */ Context_9;
+  /* -------------------- no sub nodes' contexts  -------------------- */
   /* ------------------ clocks of observable data -------------------- */
   SSM_ST_OpPhases /* OperationalScenario::OpPhases */ OpPhases_state_act;
   /* -------------------- (-debug) no assertions  -------------------- */
   /* ------------------- (-debug) local variables -------------------- */
+  kcg_bool /* TestActuators::_L2 */ _L2_1;
+  kcg_bool /* TestActuators::_L3 */ _L3_1;
+  kcg_bool /* TestActuators::_L4 */ _L4_1;
+  kcg_bool /* ReadSensors::_L2 */ _L2_68;
+  kcg_bool /* ReadSensors::_L4 */ _L4_67;
+  kcg_bool /* ReadSensors::_L5 */ _L5_66;
+  kcg_bool /* ReadSensors::_L6 */ _L6_6;
+  kcg_bool /* ReadSensors::_L8 */ _L8_65;
+  kcg_int /* ModCount::_L1 */ _L1_7;
+  kcg_int /* ModCount::_L3 */ _L3_7;
+  kcg_bool /* ModCount::_L4 */ _L4_7;
+  kcg_int /* ModCount::_L5 */ _L5_7;
+  kcg_int /* ModCount::_L8 */ _L8_7;
+  kcg_bool /* ModCount::_L9 */ _L9_7;
+  kcg_int /* ModCount::_L12 */ _L12_7;
+  kcg_bool /* ModCount::rippleClock */ rippleClock_7;
+  kcg_int /* ModCount::Count */ Count_7;
+  kcg_int /* ModCount::inc */ inc_7;
+  kcg_int /* ModCount::modulo */ modulo_7;
+  kcg_bool /* ModCount::Input1 */ Input1_7;
+  kcg_int /* ModCount::_L1 */ _L1_8;
+  kcg_int /* ModCount::_L3 */ _L3_8;
+  kcg_bool /* ModCount::_L4 */ _L4_8;
+  kcg_int /* ModCount::_L5 */ _L5_8;
+  kcg_int /* ModCount::_L8 */ _L8_8;
+  kcg_bool /* ModCount::_L9 */ _L9_8;
+  kcg_int /* ModCount::_L12 */ _L12_8;
+  kcg_bool /* ModCount::rippleClock */ rippleClock_8;
+  kcg_int /* ModCount::Count */ Count_8;
+  kcg_int /* ModCount::inc */ inc_8;
+  kcg_int /* ModCount::modulo */ modulo_8;
+  kcg_bool /* ModCount::Input1 */ Input1_8;
+  kcg_int /* ModCount::_L1 */ _L1_9;
+  kcg_int /* ModCount::_L3 */ _L3_9;
+  kcg_bool /* ModCount::_L4 */ _L4_9;
+  kcg_int /* ModCount::_L5 */ _L5_9;
+  kcg_int /* ModCount::_L8 */ _L8_9;
+  kcg_bool /* ModCount::_L9 */ _L9_9;
+  kcg_int /* ModCount::_L12 */ _L12_9;
+  kcg_bool /* ModCount::rippleClock */ rippleClock_9;
+  kcg_int /* ModCount::Count */ Count_9;
+  kcg_int /* ModCount::inc */ inc_9;
+  kcg_int /* ModCount::modulo */ modulo_9;
+  kcg_bool /* ModCount::Input1 */ Input1_9;
+  kcg_int /* ModCount::_L1 */ _L1_4;
+  kcg_int /* ModCount::_L3 */ _L3_4;
+  kcg_bool /* ModCount::_L4 */ _L4_4;
+  kcg_int /* ModCount::_L5 */ _L5_4;
+  kcg_int /* ModCount::_L8 */ _L8_4;
+  kcg_bool /* ModCount::_L9 */ _L9_4;
+  kcg_int /* ModCount::_L12 */ _L12_4;
+  kcg_bool /* ModCount::rippleClock */ rippleClock_4;
+  kcg_int /* ModCount::Count */ Count_4;
+  kcg_int /* ModCount::inc */ inc_4;
+  kcg_int /* ModCount::modulo */ modulo_4;
+  kcg_bool /* ModCount::Input1 */ Input1_4;
+  kcg_int /* ModCount::_L1 */ _L1_5;
+  kcg_int /* ModCount::_L3 */ _L3_5;
+  kcg_bool /* ModCount::_L4 */ _L4_5;
+  kcg_int /* ModCount::_L5 */ _L5_5;
+  kcg_int /* ModCount::_L8 */ _L8_5;
+  kcg_bool /* ModCount::_L9 */ _L9_5;
+  kcg_int /* ModCount::_L12 */ _L12_5;
+  kcg_bool /* ModCount::rippleClock */ rippleClock_5;
+  kcg_int /* ModCount::Count */ Count_5;
+  kcg_int /* ModCount::inc */ inc_5;
+  kcg_int /* ModCount::modulo */ modulo_5;
+  kcg_bool /* ModCount::Input1 */ Input1_5;
+  kcg_int /* ModCount::_L1 */ _L1_6;
+  kcg_int /* ModCount::_L3 */ _L3_6;
+  kcg_bool /* ModCount::_L4 */ _L4_6;
+  kcg_int /* ModCount::_L5 */ _L5_6;
+  kcg_int /* ModCount::_L8 */ _L8_6;
+  kcg_bool /* ModCount::_L9 */ _L9_6;
+  kcg_int /* ModCount::_L12 */ _L12_6;
+  kcg_bool /* ModCount::rippleClock */ rippleClock_6;
+  kcg_int /* ModCount::Count */ Count_6;
+  kcg_int /* ModCount::inc */ inc_6;
+  kcg_int /* ModCount::modulo */ modulo_6;
+  kcg_bool /* ModCount::Input1 */ Input1_6;
   kcg_real /* OperationalScenario::OpPhases::Ground::_L54 */ _L54_OpPhases_Ground;
   kcg_real /* OperationalScenario::OpPhases::Ground::_L53 */ _L53_OpPhases_Ground;
   kcg_real /* OperationalScenario::OpPhases::Ground::_L50 */ _L50_OpPhases_Ground;
@@ -327,6 +410,6 @@ extern void OperationalScenario_reset(outC_OperationalScenario *outC);
 #endif /* _OperationalScenario_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** OperationalScenario.h
-** Generation date: 2014-11-22T21:11:29
+** Generation date: 2014-11-22T23:57:54
 *************************************************************$ */
 

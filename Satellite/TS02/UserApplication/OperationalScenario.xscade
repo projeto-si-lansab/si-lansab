@@ -1442,7 +1442,7 @@
 			<data>
 				<StateMachine name="OpPhases">
 					<states>
-						<State initial="true" name="Ground">
+						<State name="Ground">
 							<unless>
 								<Transition kind="restart">
 									<target>
@@ -2510,11 +2510,7 @@
 										<StateRef name="Launch"/>
 									</target>
 									<condition>
-										<IdExpression>
-											<path>
-												<ConstVarRef name="StartLaunchPhase"/>
-											</path>
-										</IdExpression>
+										<ConstValue value="true"/>
 									</condition>
 									<effect>
 										<Action>
@@ -3115,7 +3111,7 @@
 								</ed:State>
 							</pragmas>
 						</State>
-						<State name="Launch">
+						<State initial="true" name="Launch">
 							<locals>
 								<Variable name="AtAcquisition">
 									<type>

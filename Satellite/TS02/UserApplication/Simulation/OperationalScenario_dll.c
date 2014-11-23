@@ -1,4 +1,4 @@
 const char*  pszDllPathname = "OperationalScenario.dll";
 
-const char*  pszLauncherPathname = "D:/Programas/SCADE/SCADE/bin/SCSSMLNC.exe";
+const char*  pszLauncherPathname = "C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/bin/SCSSMLNC.exe";
 

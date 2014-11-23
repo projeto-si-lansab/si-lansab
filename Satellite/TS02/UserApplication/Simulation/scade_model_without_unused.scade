@@ -1571,7 +1571,7 @@ let
 #end
 
    automaton OpPhases
-      initial state       #pragma ed       <State oid="!ed/20e7/4995/1C44/54064cdc23bd">
+      state       #pragma ed       <State oid="!ed/20e7/4995/1C44/54064cdc23bd">
 	<diagrams>
 		<NetDiagram name="diagram_Ground_1" landscape="true" format="A4 (210 297)" oid="!ed/210d/4995/1C44/54064d5c4501">
 			<presentationElements>
@@ -2460,10 +2460,10 @@ _L54 : real;
          #pragma ed          <Transition oid="!ed/220e/4995/1C44/540651d417f4"/>
 #end
 
-         if StartLaunchPhase do 
+         if true do 
             restart Launch;
 
-      state       #pragma ed       <State oid="!ed/20ec/4995/1C44/54064ce92980">
+      initial state       #pragma ed       <State oid="!ed/20ec/4995/1C44/54064ce92980">
 	<diagrams>
 		<NetDiagram name="diagram_Launch_1" landscape="true" format="A4 (210 297)" oid="!ed/221d/4995/1C44/5406522813aa">
 			<presentationElements>
@@ -6204,7 +6204,7 @@ _L99 : int;
    #pragma ed    <Equation oid="!ed/24f3/7A9A/8DC/5441f3f6734b"/>
 #end
 
-   _L45 = 50.0;
+   _L45 = 25.0;
    #pragma ed    <Equation oid="!ed/252d/7A9A/8DC/5441f4cd5804"/>
 #end
 

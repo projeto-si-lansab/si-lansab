@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config D:/Embraer ITA/Doutorado/Projetos/TS02_2Sprint_v9/TS02_2Sprint/UserApplication/Simulation\kcg_s2c_config.txt
-** Generation date: 2014-11-22T21:11:29
+** Command: s2c613 -config C:/Users/Projeto SPOT/git/si-lansab/Satellite/TS02/UserApplication/Simulation\kcg_s2c_config.txt
+** Generation date: 2014-11-22T23:57:54
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -10,17 +10,10 @@
 void OperationalScenario_reset(outC_OperationalScenario *outC)
 {
   outC->init = kcg_true;
+  outC->init1 = kcg_true;
   outC->init2 = kcg_true;
   outC->init3 = kcg_true;
   outC->init4 = kcg_true;
-  /* 1 */ TestActuators_reset(&outC->Context_1);
-  /* 6 */ ReadSensors_reset(&outC->_1_Context_6);
-  /* 6 */ ModCount_reset(&outC->Context_6);
-  /* 4 */ ModCount_reset(&outC->Context_4);
-  /* 5 */ ModCount_reset(&outC->Context_5);
-  /* 8 */ ModCount_reset(&outC->Context_8);
-  /* 7 */ ModCount_reset(&outC->Context_7);
-  /* 9 */ ModCount_reset(&outC->Context_9);
 }
 
 /* OperationalScenario */
@@ -28,6 +21,13 @@ void OperationalScenario(
   inC_OperationalScenario *inC,
   outC_OperationalScenario *outC)
 {
+  /* TestActuators::ActuatorsStatus */ kcg_bool last_ActuatorsStatus_1;
+  /* TestActuators::MagneticTorquers */ kcg_bool last_MagneticTorquers_1;
+  /* TestActuators::Reactionwheels */ kcg_bool last_Reactionwheels_1;
+  /* ReadSensors::SensorsStatus */ kcg_bool last_SensorsStatus_6;
+  /* ReadSensors::SunSensor */ kcg_bool last_SunSensor_6;
+  /* ReadSensors::Accelerometers */ kcg_bool last_Accelerometers_6;
+  /* ReadSensors::Gyroscopes */ kcg_bool last_Gyroscopes_6;
   /* OperationalScenario::OpPhases */ SSM_TR_OpPhases _81_OpPhases_fired;
   /* OperationalScenario::OpPhases */ kcg_bool _80_OpPhases_reset_nxt;
   /* OperationalScenario::OpPhases */ SSM_ST_OpPhases _79_OpPhases_state_nxt;
@@ -182,8 +182,8 @@ void OperationalScenario(
   /* OperationalScenario::OpPhases */ kcg_bool OpPhases_reset_sel;
   /* OperationalScenario::OpPhases */ kcg_bool OpPhases_reset_prv;
   
-  if (outC->init4) {
-    outC->OpPhases_state_sel = SSM_st_Ground_OpPhases;
+  if (outC->init2) {
+    outC->OpPhases_state_sel = SSM_st_Launch_OpPhases;
   }
   else {
     outC->OpPhases_state_sel = outC->OpPhases_state_nxt;
@@ -207,7 +207,64 @@ void OperationalScenario(
       break;
     
   }
-  if (outC->init4) {
+  if (outC->init2) {
+    OpPhases_reset_prv = kcg_false;
+  }
+  else {
+    OpPhases_reset_prv = outC->OpPhases_reset_act;
+  }
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_Launch_OpPhases :
+      _92_OpPhases_reset_act = kcg_false;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      _89_OpPhases_reset_act = kcg_false;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      OpPhases_reset_act = kcg_false;
+      break;
+    
+  }
+  if (outC->init2) {
+    last_StartLaunchPhase = kcg_false;
+  }
+  else {
+    last_StartLaunchPhase = outC->StartLaunchPhase;
+  }
+  if (outC->init2) {
+    last_LaunchPhase = kcg_false;
+  }
+  else {
+    last_LaunchPhase = outC->LaunchPhase;
+  }
+  outC->_L22 = last_LaunchPhase;
+  outC->StartLaunchPhase = outC->_L22;
+  switch (outC->OpPhases_state_sel) {
+    case SSM_st_Ground_OpPhases :
+      br_1_guard_OpPhases_Ground = !outC->StartLaunchPhase;
+      _95_OpPhases_reset_act = br_1_guard_OpPhases_Ground;
+      outC->OpPhases_reset_act = _95_OpPhases_reset_act;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->OpPhases_reset_act = _92_OpPhases_reset_act;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      outC->OpPhases_reset_act = _89_OpPhases_reset_act;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->OpPhases_reset_act = OpPhases_reset_act;
+      break;
+    
+  }
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      if (outC->OpPhases_reset_act) {
+        outC->init4 = kcg_true;
+      }
+      break;
+    
+  }
+  if (outC->init2) {
     OpPhases_reset_sel = kcg_false;
   }
   else {
@@ -221,7 +278,7 @@ void OperationalScenario(
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
       if (OpPhases_reset_sel) {
-        outC->init2 = kcg_true;
+        outC->init1 = kcg_true;
       }
       break;
     case SSM_st_NormalPhase_OpPhases :
@@ -231,160 +288,313 @@ void OperationalScenario(
       break;
     
   }
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      if (outC->init4) {
+        last_MagneticTorquers_1 = kcg_true;
+      }
+      else {
+        last_MagneticTorquers_1 = outC->MagneticTorquers_1;
+      }
+      break;
+    
+  }
+  outC->_L32 = kcg_true;
+  outC->MagneticTorquersLocal = outC->_L32;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L35_OpPhases_Ground = outC->MagneticTorquersLocal;
+      outC->MagneticTorquers_1 = outC->_L35_OpPhases_Ground;
+      if (outC->init4) {
+        last_SunSensor_6 = kcg_true;
+      }
+      else {
+        last_SunSensor_6 = outC->SunSensor_6;
+      }
+      break;
+    
+  }
+  outC->SunSensorLocal = outC->_L32;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L33_OpPhases_Ground = outC->SunSensorLocal;
+      outC->SunSensor_6 = outC->_L33_OpPhases_Ground;
+      if (outC->init4) {
+        last_Accelerometers_6 = kcg_true;
+      }
+      else {
+        last_Accelerometers_6 = outC->Accelerometers_6;
+      }
+      break;
+    
+  }
+  outC->_L31 = kcg_true;
+  outC->AccelerometersLocal = outC->_L31;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L32_OpPhases_Ground = outC->AccelerometersLocal;
+      outC->Accelerometers_6 = outC->_L32_OpPhases_Ground;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L100_OpPhases_NormalPhase = 1;
+      outC->inc_7 = outC->_L100_OpPhases_NormalPhase;
+      outC->_L112_OpPhases_NormalPhase = 180;
+      outC->modulo_7 = outC->_L112_OpPhases_NormalPhase;
+      outC->_L111_OpPhases_NormalPhase = 1;
+      outC->inc_8 = outC->_L111_OpPhases_NormalPhase;
+      outC->_L101_OpPhases_NormalPhase = 60;
+      outC->modulo_8 = outC->_L101_OpPhases_NormalPhase;
+      outC->_L104_OpPhases_NormalPhase = 9;
+      outC->inc_9 = outC->_L104_OpPhases_NormalPhase;
+      outC->_L114_OpPhases_NormalPhase = 60;
+      outC->modulo_9 = outC->_L114_OpPhases_NormalPhase;
+      outC->_L96_OpPhases_NormalPhase = 3;
+      outC->inc_4 = outC->_L96_OpPhases_NormalPhase;
+      outC->_L86_OpPhases_NormalPhase = 60;
+      outC->modulo_4 = outC->_L86_OpPhases_NormalPhase;
+      outC->_L97_OpPhases_NormalPhase = 1;
+      outC->inc_5 = outC->_L97_OpPhases_NormalPhase;
+      outC->_L80_OpPhases_NormalPhase = 60;
+      outC->modulo_5 = outC->_L80_OpPhases_NormalPhase;
+      outC->_L95_OpPhases_NormalPhase = 1;
+      outC->inc_6 = outC->_L95_OpPhases_NormalPhase;
+      outC->_L82_OpPhases_NormalPhase = 180;
+      outC->modulo_6 = outC->_L82_OpPhases_NormalPhase;
+      outC->_L94_OpPhases_NormalPhase = kcg_true;
+      outC->Input1_4 = outC->_L94_OpPhases_NormalPhase;
+      outC->_L4_4 = outC->Input1_4;
+      outC->_L12_4 = outC->inc_4;
+      if (outC->init3) {
+        outC->_L8_4 = 0;
+      }
+      else {
+        outC->_L8_4 = outC->_L2_4;
+      }
+      outC->_L1_4 = outC->_L12_4 + outC->_L8_4;
+      if (outC->_L4_4) {
+        outC->_L3_4 = outC->_L1_4;
+      }
+      else {
+        outC->_L3_4 = outC->_L8_4;
+      }
+      outC->_L5_4 = outC->modulo_4;
+      outC->_L2_4 = outC->_L3_4 % outC->_L5_4;
+      outC->_L9_4 = outC->_L3_4 != outC->_L2_4;
+      outC->rippleClock_4 = outC->_L9_4;
+      outC->_L90_OpPhases_NormalPhase = outC->rippleClock_4;
+      outC->Input1_6 = outC->_L90_OpPhases_NormalPhase;
+      outC->_L4_6 = outC->Input1_6;
+      outC->_L12_6 = outC->inc_6;
+      if (outC->init3) {
+        outC->_L8_6 = 0;
+      }
+      else {
+        outC->_L8_6 = outC->_L2_6;
+      }
+      outC->_L1_6 = outC->_L12_6 + outC->_L8_6;
+      if (outC->_L4_6) {
+        outC->_L3_6 = outC->_L1_6;
+      }
+      else {
+        outC->_L3_6 = outC->_L8_6;
+      }
+      outC->_L5_6 = outC->modulo_6;
+      outC->_L2_6 = outC->_L3_6 % outC->_L5_6;
+      outC->_L9_6 = outC->_L3_6 != outC->_L2_6;
+      outC->rippleClock_6 = outC->_L9_6;
+      outC->_L84_OpPhases_NormalPhase = outC->rippleClock_6;
+      outC->_L79_OpPhases_NormalPhase = kcg_true;
+      outC->Input1_5 = outC->_L79_OpPhases_NormalPhase;
+      outC->_L4_5 = outC->Input1_5;
+      outC->_L12_5 = outC->inc_5;
+      if (outC->init3) {
+        outC->_L8_5 = 0;
+      }
+      else {
+        outC->_L8_5 = outC->_L2_5;
+      }
+      outC->_L1_5 = outC->_L12_5 + outC->_L8_5;
+      if (outC->_L4_5) {
+        outC->_L3_5 = outC->_L1_5;
+      }
+      else {
+        outC->_L3_5 = outC->_L8_5;
+      }
+      outC->_L5_5 = outC->modulo_5;
+      outC->_L2_5 = outC->_L3_5 % outC->_L5_5;
+      outC->_L9_5 = outC->_L3_5 != outC->_L2_5;
+      outC->rippleClock_5 = outC->_L9_5;
+      outC->_L88_OpPhases_NormalPhase = outC->rippleClock_5;
+      outC->_L113_OpPhases_NormalPhase = kcg_true;
+      outC->Input1_9 = outC->_L113_OpPhases_NormalPhase;
+      outC->_L4_9 = outC->Input1_9;
+      outC->_L12_9 = outC->inc_9;
+      if (outC->init3) {
+        outC->_L8_9 = 0;
+      }
+      else {
+        outC->_L8_9 = outC->_L2_9;
+      }
+      outC->_L1_9 = outC->_L12_9 + outC->_L8_9;
+      if (outC->_L4_9) {
+        outC->_L3_9 = outC->_L1_9;
+      }
+      else {
+        outC->_L3_9 = outC->_L8_9;
+      }
+      outC->_L5_9 = outC->modulo_9;
+      outC->_L2_9 = outC->_L3_9 % outC->_L5_9;
+      outC->_L9_9 = outC->_L3_9 != outC->_L2_9;
+      outC->rippleClock_9 = outC->_L9_9;
+      outC->_L103_OpPhases_NormalPhase = outC->rippleClock_9;
+      outC->_L108_OpPhases_NormalPhase = kcg_true;
+      outC->Input1_8 = outC->_L108_OpPhases_NormalPhase;
+      outC->_L4_8 = outC->Input1_8;
+      outC->_L12_8 = outC->inc_8;
+      if (outC->init3) {
+        outC->_L8_8 = 0;
+      }
+      else {
+        outC->_L8_8 = outC->_L2_8;
+      }
+      outC->_L1_8 = outC->_L12_8 + outC->_L8_8;
+      if (outC->_L4_8) {
+        outC->_L3_8 = outC->_L1_8;
+      }
+      else {
+        outC->_L3_8 = outC->_L8_8;
+      }
+      outC->_L5_8 = outC->modulo_8;
+      outC->_L2_8 = outC->_L3_8 % outC->_L5_8;
+      outC->_L9_8 = outC->_L3_8 != outC->_L2_8;
+      outC->rippleClock_8 = outC->_L9_8;
+      outC->_L106_OpPhases_NormalPhase = outC->rippleClock_8;
+      outC->Input1_7 = outC->_L103_OpPhases_NormalPhase;
+      outC->_L4_7 = outC->Input1_7;
+      outC->_L12_7 = outC->inc_7;
+      if (outC->init3) {
+        outC->_L8_7 = 0;
+      }
+      else {
+        outC->_L8_7 = outC->_L2_7;
+      }
+      outC->_L1_7 = outC->_L12_7 + outC->_L8_7;
+      if (outC->_L4_7) {
+        outC->_L3_7 = outC->_L1_7;
+      }
+      else {
+        outC->_L3_7 = outC->_L8_7;
+      }
+      outC->_L5_7 = outC->modulo_7;
+      outC->_L2_7 = outC->_L3_7 % outC->_L5_7;
+      outC->_L9_7 = outC->_L3_7 != outC->_L2_7;
+      outC->rippleClock_7 = outC->_L9_7;
+      outC->_L110_OpPhases_NormalPhase = outC->rippleClock_7;
+      break;
+    
+  }
   last_LongitudeLocal = outC->LongitudeLocal;
-  if (outC->init4) {
+  if (outC->init2) {
     last_LatSec = 0;
   }
   else {
     last_LatSec = outC->LatSec;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_LatMin = 0;
   }
   else {
     last_LatMin = outC->LatMin;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_LatDeg = 0;
   }
   else {
     last_LatDeg = outC->LatDeg;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_LongitudeSec = 0;
   }
   else {
     last_LongitudeSec = outC->LongitudeSec;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_LongitudeMin = 0;
   }
   else {
     last_LongitudeMin = outC->LongitudeMin;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_LongitudeDeg = 0;
   }
   else {
     last_LongitudeDeg = outC->LongitudeDeg;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_GroundVisibleLocal = kcg_true;
   }
   else {
     last_GroundVisibleLocal = outC->GroundVisibleLocal;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_ApertarBotao = kcg_false;
   }
   else {
     last_ApertarBotao = outC->ApertarBotao;
   }
-  if (outC->init4) {
-    last_LaunchPhase = kcg_false;
-  }
-  else {
-    last_LaunchPhase = outC->LaunchPhase;
-  }
-  if (outC->init4) {
-    last_StartLaunchPhase = kcg_false;
-  }
-  else {
-    last_StartLaunchPhase = outC->StartLaunchPhase;
-  }
-  if (outC->init4) {
+  if (outC->init2) {
     last_upDateSw = kcg_false;
   }
   else {
     last_upDateSw = outC->rem_upDateSw;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_MagneticTorquers = kcg_true;
   }
   else {
     last_MagneticTorquers = outC->rem_MagneticTorquers;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_Reactionwheels = kcg_true;
   }
   else {
     last_Reactionwheels = outC->rem_Reactionwheels;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_SunSensor = kcg_true;
   }
   else {
     last_SunSensor = outC->rem_SunSensor;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_Accelerometers = kcg_true;
   }
   else {
     last_Accelerometers = outC->rem_Accelerometers;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_picLocation = 0.0;
   }
   else {
     last_picLocation = outC->rem_picLocation;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_takePict = kcg_false;
   }
   else {
     last_takePict = outC->rem_takePict;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_AttitudeReference = 0;
   }
   else {
     last_AttitudeReference = outC->rem_AttitudeReference;
   }
-  if (outC->init4) {
+  if (outC->init2) {
     last_Telemetry = 0;
   }
   else {
     last_Telemetry = outC->rem_Telemetry;
-  }
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_NormalPhase_OpPhases :
-      outC->_L107_OpPhases_NormalPhase = 80;
-      outC->_L113_OpPhases_NormalPhase = kcg_true;
-      outC->_L114_OpPhases_NormalPhase = 60;
-      outC->_L104_OpPhases_NormalPhase = 9;
-      break;
-    
-  }
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_NormalPhase_OpPhases :
-      if (OpPhases_reset_sel) {
-        /* 9 */ ModCount_reset(&outC->Context_9);
-      }
-      break;
-    
-  }
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_NormalPhase_OpPhases :
-      /* 9 */
-      ModCount(
-        outC->_L113_OpPhases_NormalPhase,
-        outC->_L114_OpPhases_NormalPhase,
-        outC->_L104_OpPhases_NormalPhase,
-        &outC->Context_9);
-      outC->_L102_OpPhases_NormalPhase = outC->Context_9.Count;
-      outC->_L103_OpPhases_NormalPhase = outC->Context_9.rippleClock;
-      outC->_L112_OpPhases_NormalPhase = 180;
-      outC->_L100_OpPhases_NormalPhase = 1;
-      break;
-    
-  }
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_NormalPhase_OpPhases :
-      if (OpPhases_reset_sel) {
-        /* 7 */ ModCount_reset(&outC->Context_7);
-      }
-      break;
-    
   }
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
@@ -400,14 +610,9 @@ void OperationalScenario(
       outC->LatDeg = _22_LatDeg;
       break;
     case SSM_st_NormalPhase_OpPhases :
-      /* 7 */
-      ModCount(
-        outC->_L103_OpPhases_NormalPhase,
-        outC->_L112_OpPhases_NormalPhase,
-        outC->_L100_OpPhases_NormalPhase,
-        &outC->Context_7);
-      outC->_L109_OpPhases_NormalPhase = outC->Context_7.Count;
-      outC->_L110_OpPhases_NormalPhase = outC->Context_7.rippleClock;
+      outC->_L107_OpPhases_NormalPhase = 80;
+      outC->Count_7 = outC->_L2_7;
+      outC->_L109_OpPhases_NormalPhase = outC->Count_7;
       outC->_L99_OpPhases_NormalPhase = outC->_L107_OpPhases_NormalPhase -
         outC->_L109_OpPhases_NormalPhase;
       LatDeg = outC->_L99_OpPhases_NormalPhase;
@@ -416,22 +621,6 @@ void OperationalScenario(
     
   }
   outC->_L77 = outC->LatDeg;
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_NormalPhase_OpPhases :
-      outC->_L108_OpPhases_NormalPhase = kcg_true;
-      outC->_L101_OpPhases_NormalPhase = 60;
-      outC->_L111_OpPhases_NormalPhase = 1;
-      break;
-    
-  }
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_NormalPhase_OpPhases :
-      if (OpPhases_reset_sel) {
-        /* 8 */ ModCount_reset(&outC->Context_8);
-      }
-      break;
-    
-  }
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       _78_LatSec = last_LatSec;
@@ -446,14 +635,8 @@ void OperationalScenario(
       outC->LatSec = _24_LatSec;
       break;
     case SSM_st_NormalPhase_OpPhases :
-      /* 8 */
-      ModCount(
-        outC->_L108_OpPhases_NormalPhase,
-        outC->_L101_OpPhases_NormalPhase,
-        outC->_L111_OpPhases_NormalPhase,
-        &outC->Context_8);
-      outC->_L105_OpPhases_NormalPhase = outC->Context_8.Count;
-      outC->_L106_OpPhases_NormalPhase = outC->Context_8.rippleClock;
+      outC->Count_8 = outC->_L2_8;
+      outC->_L105_OpPhases_NormalPhase = outC->Count_8;
       LatSec = outC->_L105_OpPhases_NormalPhase;
       outC->LatSec = LatSec;
       break;
@@ -475,6 +658,8 @@ void OperationalScenario(
       outC->LatMin = _23_LatMin;
       break;
     case SSM_st_NormalPhase_OpPhases :
+      outC->Count_9 = outC->_L2_9;
+      outC->_L102_OpPhases_NormalPhase = outC->Count_9;
       LatMin = outC->_L102_OpPhases_NormalPhase;
       outC->LatMin = LatMin;
       break;
@@ -489,22 +674,6 @@ void OperationalScenario(
   outC->_L7 = inC->PassarFaseBtn;
   outC->_L70 = outC->_L7 | outC->_L71;
   switch (outC->OpPhases_state_act) {
-    case SSM_st_NormalPhase_OpPhases :
-      outC->_L79_OpPhases_NormalPhase = kcg_true;
-      outC->_L80_OpPhases_NormalPhase = 60;
-      outC->_L97_OpPhases_NormalPhase = 1;
-      break;
-    
-  }
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_NormalPhase_OpPhases :
-      if (OpPhases_reset_sel) {
-        /* 5 */ ModCount_reset(&outC->Context_5);
-      }
-      break;
-    
-  }
-  switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       _75_LongitudeSec = last_LongitudeSec;
       outC->LongitudeSec = _75_LongitudeSec;
@@ -518,14 +687,8 @@ void OperationalScenario(
       outC->LongitudeSec = _21_LongitudeSec;
       break;
     case SSM_st_NormalPhase_OpPhases :
-      /* 5 */
-      ModCount(
-        outC->_L79_OpPhases_NormalPhase,
-        outC->_L80_OpPhases_NormalPhase,
-        outC->_L97_OpPhases_NormalPhase,
-        &outC->Context_5);
-      outC->_L87_OpPhases_NormalPhase = outC->Context_5.Count;
-      outC->_L88_OpPhases_NormalPhase = outC->Context_5.rippleClock;
+      outC->Count_5 = outC->_L2_5;
+      outC->_L87_OpPhases_NormalPhase = outC->Count_5;
       LongitudeSec = outC->_L87_OpPhases_NormalPhase;
       outC->LongitudeSec = LongitudeSec;
       break;
@@ -534,22 +697,6 @@ void OperationalScenario(
   outC->_L68 = outC->LongitudeSec;
   outC->_L69 = (kcg_real) outC->_L68;
   outC->SAT_Longitude_Sec_Value = outC->_L69;
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_NormalPhase_OpPhases :
-      outC->_L94_OpPhases_NormalPhase = kcg_true;
-      outC->_L86_OpPhases_NormalPhase = 60;
-      outC->_L96_OpPhases_NormalPhase = 3;
-      break;
-    
-  }
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_NormalPhase_OpPhases :
-      if (OpPhases_reset_sel) {
-        /* 4 */ ModCount_reset(&outC->Context_4);
-      }
-      break;
-    
-  }
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       _74_LongitudeMin = last_LongitudeMin;
@@ -564,14 +711,8 @@ void OperationalScenario(
       outC->LongitudeMin = _20_LongitudeMin;
       break;
     case SSM_st_NormalPhase_OpPhases :
-      /* 4 */
-      ModCount(
-        outC->_L94_OpPhases_NormalPhase,
-        outC->_L86_OpPhases_NormalPhase,
-        outC->_L96_OpPhases_NormalPhase,
-        &outC->Context_4);
-      outC->_L89_OpPhases_NormalPhase = outC->Context_4.Count;
-      outC->_L90_OpPhases_NormalPhase = outC->Context_4.rippleClock;
+      outC->Count_4 = outC->_L2_4;
+      outC->_L89_OpPhases_NormalPhase = outC->Count_4;
       LongitudeMin = outC->_L89_OpPhases_NormalPhase;
       outC->LongitudeMin = LongitudeMin;
       break;
@@ -580,22 +721,6 @@ void OperationalScenario(
   outC->_L66 = outC->LongitudeMin;
   outC->_L67 = (kcg_real) outC->_L66;
   outC->SAT_Longitude_Min_Value = outC->_L67;
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_NormalPhase_OpPhases :
-      outC->_L81_OpPhases_NormalPhase = - 3;
-      outC->_L82_OpPhases_NormalPhase = 180;
-      outC->_L95_OpPhases_NormalPhase = 1;
-      break;
-    
-  }
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_NormalPhase_OpPhases :
-      if (OpPhases_reset_sel) {
-        /* 6 */ ModCount_reset(&outC->Context_6);
-      }
-      break;
-    
-  }
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       _73_LongitudeDeg = last_LongitudeDeg;
@@ -610,14 +735,9 @@ void OperationalScenario(
       outC->LongitudeDeg = _19_LongitudeDeg;
       break;
     case SSM_st_NormalPhase_OpPhases :
-      /* 6 */
-      ModCount(
-        outC->_L90_OpPhases_NormalPhase,
-        outC->_L82_OpPhases_NormalPhase,
-        outC->_L95_OpPhases_NormalPhase,
-        &outC->Context_6);
-      outC->_L83_OpPhases_NormalPhase = outC->Context_6.Count;
-      outC->_L84_OpPhases_NormalPhase = outC->Context_6.rippleClock;
+      outC->_L81_OpPhases_NormalPhase = - 3;
+      outC->Count_6 = outC->_L2_6;
+      outC->_L83_OpPhases_NormalPhase = outC->Count_6;
       outC->_L98_OpPhases_NormalPhase = outC->_L81_OpPhases_NormalPhase -
         outC->_L83_OpPhases_NormalPhase;
       LongitudeDeg = outC->_L98_OpPhases_NormalPhase;
@@ -697,7 +817,7 @@ void OperationalScenario(
       outC->SpinTgLocal = _43_SpinTgLocal;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      if (outC->init2) {
+      if (outC->init1) {
         outC->_L124_OpPhases_AttitudeAcquisition = 0.0;
       }
       else {
@@ -725,7 +845,7 @@ void OperationalScenario(
         outC->_L135_OpPhases_AttitudeAcquisition <
         outC->_L137_OpPhases_AttitudeAcquisition;
       outC->_L140_OpPhases_AttitudeAcquisition = 0.0;
-      if (outC->init2) {
+      if (outC->init1) {
         outC->_L114_OpPhases_AttitudeAcquisition = 1.0;
       }
       else {
@@ -769,7 +889,7 @@ void OperationalScenario(
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
       outC->_L119_OpPhases_AttitudeAcquisition = 10.0;
-      if (outC->init2) {
+      if (outC->init1) {
         outC->_L120_OpPhases_AttitudeAcquisition = 1.0;
       }
       else {
@@ -809,7 +929,7 @@ void OperationalScenario(
       outC->FuelMeterLocal = _39_FuelMeterLocal;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      if (outC->init2) {
+      if (outC->init1) {
         outC->_L36_OpPhases_AttitudeAcquisition = 100.0;
       }
       else {
@@ -831,7 +951,7 @@ void OperationalScenario(
     
   }
   outC->_L43 = outC->FuelMeterLocal;
-  outC->_L45 = 50.0;
+  outC->_L45 = 25.0;
   outC->_L44 = outC->_L43 * outC->_L45;
   outC->_L46 = (kcg_int) outC->_L44;
   outC->FuelMeterGraphic = outC->_L46;
@@ -900,7 +1020,7 @@ void OperationalScenario(
       outC->AcRdValueLocal = _36_AcRdValueLocal;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      if (outC->init2) {
+      if (outC->init1) {
         outC->_L26_OpPhases_AttitudeAcquisition = 1.0;
       }
       else {
@@ -925,16 +1045,9 @@ void OperationalScenario(
   outC->AcRdValue = outC->_L38;
   outC->AtAcquisition = outC->_L36;
   outC->_L34 = inC->Power;
-  outC->_L32 = kcg_true;
-  outC->_L31 = kcg_true;
-  outC->MagneticTorquersLocal = outC->_L32;
   outC->ReactionwheelsLocal = outC->_L32;
-  outC->SunSensorLocal = outC->_L32;
   outC->PowerLocal = outC->_L34;
-  outC->AccelerometersLocal = outC->_L31;
   outC->GyroscopesLocal = outC->_L31;
-  outC->_L22 = last_LaunchPhase;
-  outC->StartLaunchPhase = outC->_L22;
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       outC->_L16_OpPhases_Ground = kcg_false;
@@ -1119,7 +1232,6 @@ void OperationalScenario(
   outC->Layer1Active = outC->_L8;
   switch (outC->OpPhases_state_sel) {
     case SSM_st_Ground_OpPhases :
-      br_1_guard_OpPhases_Ground = !outC->StartLaunchPhase;
       if (br_1_guard_OpPhases_Ground) {
         _96_OpPhases_fired_strong = SSM_TR_Ground_1_OpPhases;
       }
@@ -1155,7 +1267,7 @@ void OperationalScenario(
         _79_OpPhases_state_nxt = _85_OpPhases_state_nxt;
       }
       else {
-        br_2_guard_OpPhases_Ground = outC->StartLaunchPhase;
+        br_2_guard_OpPhases_Ground = kcg_true;
         if (br_2_guard_OpPhases_Ground) {
           _84_OpPhases_fired = SSM_TR_Ground_2_OpPhases;
         }
@@ -1177,63 +1289,49 @@ void OperationalScenario(
       outC->_L45_OpPhases_Ground = 0.0;
       _67_LongitudeLocal = outC->_L46_OpPhases_Ground;
       _68_LatitudeLocal = outC->_L45_OpPhases_Ground;
-      outC->_L35_OpPhases_Ground = outC->MagneticTorquersLocal;
       outC->_L34_OpPhases_Ground = outC->ReactionwheelsLocal;
-      outC->_L33_OpPhases_Ground = outC->SunSensorLocal;
-      outC->_L32_OpPhases_Ground = outC->AccelerometersLocal;
       outC->_L31_OpPhases_Ground = outC->GyroscopesLocal;
       outC->_L30_OpPhases_Ground = outC->PowerLocal;
-      break;
-    
-  }
-  if (outC->init4) {
-    OpPhases_reset_prv = kcg_false;
-  }
-  else {
-    OpPhases_reset_prv = outC->OpPhases_reset_act;
-  }
-  switch (outC->OpPhases_state_sel) {
-    case SSM_st_Ground_OpPhases :
-      _95_OpPhases_reset_act = br_1_guard_OpPhases_Ground;
-      outC->OpPhases_reset_act = _95_OpPhases_reset_act;
-      break;
-    case SSM_st_Launch_OpPhases :
-      _92_OpPhases_reset_act = kcg_false;
-      outC->OpPhases_reset_act = _92_OpPhases_reset_act;
-      break;
-    case SSM_st_AttitudeAcquisition_OpPhases :
-      _89_OpPhases_reset_act = kcg_false;
-      outC->OpPhases_reset_act = _89_OpPhases_reset_act;
-      break;
-    case SSM_st_NormalPhase_OpPhases :
-      OpPhases_reset_act = kcg_false;
-      outC->OpPhases_reset_act = OpPhases_reset_act;
-      break;
-    
-  }
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_Ground_OpPhases :
-      if (outC->OpPhases_reset_act) {
-        /* 6 */ ReadSensors_reset(&outC->_1_Context_6);
+      if (outC->init4) {
+        last_SensorsStatus_6 = kcg_true;
       }
-      /* 6 */
-      ReadSensors(
-        outC->_L31_OpPhases_Ground,
-        outC->_L32_OpPhases_Ground,
-        outC->_L33_OpPhases_Ground,
-        &outC->_1_Context_6);
-      outC->_L22_OpPhases_Ground = outC->_1_Context_6.SensorsStatus;
+      else {
+        last_SensorsStatus_6 = outC->SensorsStatus_6;
+      }
+      if (outC->init4) {
+        last_Gyroscopes_6 = kcg_true;
+      }
+      else {
+        last_Gyroscopes_6 = outC->Gyroscopes_6;
+      }
+      outC->Gyroscopes_6 = outC->_L31_OpPhases_Ground;
+      outC->_L2_68 = outC->Gyroscopes_6;
+      outC->_L4_67 = outC->Accelerometers_6;
+      outC->_L6_6 = outC->_L2_68 | outC->_L4_67;
+      outC->_L5_66 = outC->SunSensor_6;
+      outC->_L8_65 = outC->_L6_6 | outC->_L5_66;
+      outC->SensorsStatus_6 = outC->_L8_65;
+      outC->_L22_OpPhases_Ground = outC->SensorsStatus_6;
       outC->_L23_OpPhases_Ground = outC->_L30_OpPhases_Ground &
         outC->_L22_OpPhases_Ground;
-      if (outC->OpPhases_reset_act) {
-        /* 1 */ TestActuators_reset(&outC->Context_1);
+      if (outC->init4) {
+        last_ActuatorsStatus_1 = kcg_true;
       }
-      /* 1 */
-      TestActuators(
-        outC->_L34_OpPhases_Ground,
-        outC->_L35_OpPhases_Ground,
-        &outC->Context_1);
-      outC->_L24_OpPhases_Ground = outC->Context_1.ActuatorsStatus;
+      else {
+        last_ActuatorsStatus_1 = outC->ActuatorsStatus_1;
+      }
+      if (outC->init4) {
+        last_Reactionwheels_1 = kcg_true;
+      }
+      else {
+        last_Reactionwheels_1 = outC->Reactionwheels_1;
+      }
+      outC->Reactionwheels_1 = outC->_L34_OpPhases_Ground;
+      outC->_L2_1 = outC->Reactionwheels_1;
+      outC->_L3_1 = outC->MagneticTorquers_1;
+      outC->_L4_1 = outC->_L2_1 | outC->_L3_1;
+      outC->ActuatorsStatus_1 = outC->_L4_1;
+      outC->_L24_OpPhases_Ground = outC->ActuatorsStatus_1;
       outC->_L27_OpPhases_Ground = outC->_L23_OpPhases_Ground &
         outC->_L24_OpPhases_Ground;
       _55_LaunchPhase = outC->_L27_OpPhases_Ground;
@@ -1367,18 +1465,24 @@ void OperationalScenario(
       outC->init = kcg_false;
       break;
     case SSM_st_AttitudeAcquisition_OpPhases :
-      outC->init2 = kcg_false;
+      outC->init1 = kcg_false;
+      break;
+    
+  }
+  outC->init2 = kcg_false;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->init4 = kcg_false;
       break;
     case SSM_st_NormalPhase_OpPhases :
       outC->init3 = kcg_false;
       break;
     
   }
-  outC->init4 = kcg_false;
 }
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** OperationalScenario.c
-** Generation date: 2014-11-22T21:11:29
+** Generation date: 2014-11-22T23:57:54
 *************************************************************$ */
 
