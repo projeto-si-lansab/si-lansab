@@ -53,7 +53,7 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             break;
         case TS05ID:
             printf("Received: Message from TS05 to TS03 \n");
-            ua_inputs.TakePicture = input.TakePicture;
+            /*ua_inputs.TakePicture = input.TakePicture;*/
             break;
         }
     }
@@ -120,7 +120,7 @@ void executeCustomLogic() {
     char buf[128];
 
     memset(&buf, 0, sizeof(buf));
-    sprintf(buf, "{\"TakePicture\": %d, \"DownloadPic\": %d }", ua_outputs.DroneTakePicture, ua_outputs.DownLoadPic);
+    /*sprintf(buf, "{\"TakePicture\": %d, \"DownloadPic\": %d }", ua_outputs.DroneTakePicture, ua_outputs.DownLoadPic);*/
 
     sock = socket(AF_UNIX, SOCK_STREAM, 0);
     if (sock < 0) {

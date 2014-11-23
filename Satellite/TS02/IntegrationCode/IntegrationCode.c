@@ -78,6 +78,11 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         printf("Sent: Message from TS02 to TS05 \n");
         TS05_INPUT_INTERFACE *output5 = &(message->input_interface.ts05_input_interface);
         /*output->SignalFromTeam2 = ua_outputs.SignalToTeam5;*/
+		output5->SAT_Latitude_Value = ua_outputs.SAT_Latitude_Value + ua_outputs.SAT_Latitude_Min_Value / 60.0;
+		output5->SAT_Latitude_Update = TRUE;
+		output5->SAT_Longitude_Value = ua_outputs.SAT_Longitude_Value + ua_outputs.SAT_Longitude_Min_Value / 60.0;
+		output5->SAT_Longitude_Update = TRUE;
+		output5->SAT_Initialization_Signal = ua_outputs.AtNormalPhaseLocal_OpPhases_AttitudeAcquisition;
         break;
     }
 }

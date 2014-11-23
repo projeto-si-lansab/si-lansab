@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/scade/si-lansab/Satellite/TS03/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-22T13:30:06
+** Command: s2c613 -config C:/GitHub/si-lansab/Satellite/TS03/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-22T22:31:42
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -206,8 +206,6 @@ void TS03(inC_TS03 *inC, outC_TS03 *outC)
   /* TS03::_L61 */ kcg_int _L61;
   /* TS03::_L62 */ kcg_int _L62;
   /* TS03::_L63 */ kcg_int _L63;
-  /* TS03::_L64 */ kcg_bool _L64;
-  /* TS03::_L65 */ kcg_bool _L65;
   
   if (outC->init) {
     last_ST_MemoryGauge = 0;
@@ -425,11 +423,9 @@ void TS03(inC_TS03 *inC, outC_TS03 *outC)
     
   }
   _L61 = _87_MemoryLowLevelWarn_1;
-  _L64 = inC->TakePicture;
-  _L65 = _L58 | _L64;
   _L56 = inC->ST_DownloadBtn;
   outC->DownLoadPic = _L56;
-  outC->DroneTakePicture = _L65;
+  outC->TakePicture = _L58;
   outC->ST_CameraOnIndicator = _L63;
   outC->MemoryWarn = _L61;
   outC->ST_MemoryDownloadIndicator = _L62;
@@ -871,6 +867,6 @@ void TS03(inC_TS03 *inC, outC_TS03 *outC)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** TS03.c
-** Generation date: 2014-11-22T13:30:06
+** Generation date: 2014-11-22T22:31:42
 *************************************************************$ */
 
