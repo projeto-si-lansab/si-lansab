@@ -33,6 +33,7 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
         switch (message.from) {
         case TS01ID:
             printf("Received: Message from TS01 to TS02 \n");
+            ua_inputs.EjectionSignal = input.EjectionSignal;
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS02 \n");
