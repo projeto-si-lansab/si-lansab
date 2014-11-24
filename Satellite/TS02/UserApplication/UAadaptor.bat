@@ -1,0 +1,4 @@
+@echo off
+cd "C:\Paulo\ITA\237\TS02_2Sprint_v6\TS02_2Sprint_v6\TS02_2Sprint\UserApplication"
+start uaadaptor.exe -n "C:\Program Files (x86)\Esterel Technologies\Esterel SCADE 6.4.2\SCADE Display\config\Workspace\environments\UAPageCreator\A661Norm\a661.xml"  -k "C:\Paulo\ITA\237\TS02_2Sprint_v6\TS02_2Sprint_v6\TS02_2Sprint\UserApplication\KCG\kcg_trace.xml" -d "C:\Paulo\ITA\237\TS02_2Sprint_v6\TS02_2Sprint_v6\TS02_2Sprint\DefinitionFile\SatelliteControlCommunication_DF.sgfx" "C:\Paulo\ITA\237\TS02_2Sprint_v6\TS02_2Sprint_v6\TS02_2Sprint\UserApplication\missionPhases.sdy" -outdir "C:\Paulo\ITA\237\TS02_2Sprint_v6\TS02_2Sprint_v6\TS02_2Sprint\UserApplication\KCG"
+exit

@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T21:38:59
+** Command: s2c613 -config C:/ITA/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-23T21:47:49
 *************************************************************$ */
 #ifndef _KCG_TYPES_H_
 #define _KCG_TYPES_H_
@@ -70,28 +70,74 @@ typedef enum {
   SSM_st_AttitudeAcquisition_OpPhases,
   SSM_st_NormalPhase_OpPhases
 } SSM_ST_OpPhases;
-typedef struct { kcg_int k; kcg_real f; } struct__5258;
+typedef struct { kcg_int k; kcg_real f; } struct__5691;
 
 /* lut::LutIndex */
-typedef struct__5258 LutIndex_lut;
+typedef struct__5691 LutIndex_lut;
 
-#ifndef kcg_copy_struct__5258
-#define kcg_copy_struct__5258(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5258)))
-#endif /* kcg_copy_struct__5258 */
+typedef kcg_int array_int_4[4];
 
-#ifndef kcg_comp_struct__5258
-extern kcg_bool kcg_comp_struct__5258(
-  struct__5258 *kcg_c1,
-  struct__5258 *kcg_c2);
-#endif /* kcg_comp_struct__5258 */
+typedef struct { kcg_int idx; array_int_4 items; } struct__5699;
 
-#define kcg_comp_LutIndex_lut kcg_comp_struct__5258
+typedef kcg_real array_real_4[4];
 
-#define kcg_copy_LutIndex_lut kcg_copy_struct__5258
+typedef struct { kcg_int idx; array_real_4 items; } struct__5707;
+
+#ifndef kcg_copy_struct__5691
+#define kcg_copy_struct__5691(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5691)))
+#endif /* kcg_copy_struct__5691 */
+
+#ifndef kcg_copy_struct__5699
+#define kcg_copy_struct__5699(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5699)))
+#endif /* kcg_copy_struct__5699 */
+
+#ifndef kcg_copy_struct__5707
+#define kcg_copy_struct__5707(kcg_C1, kcg_C2) (kcg_assign_struct((kcg_C1), (kcg_C2), sizeof (struct__5707)))
+#endif /* kcg_copy_struct__5707 */
+
+#ifndef kcg_copy_array_int_4
+#define kcg_copy_array_int_4(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_int_4)))
+#endif /* kcg_copy_array_int_4 */
+
+#ifndef kcg_copy_array_real_4
+#define kcg_copy_array_real_4(kcg_C1, kcg_C2) (kcg_assign_array((kcg_C1), (kcg_C2), sizeof (array_real_4)))
+#endif /* kcg_copy_array_real_4 */
+
+#ifndef kcg_comp_struct__5691
+extern kcg_bool kcg_comp_struct__5691(
+  struct__5691 *kcg_c1,
+  struct__5691 *kcg_c2);
+#endif /* kcg_comp_struct__5691 */
+
+#ifndef kcg_comp_struct__5699
+extern kcg_bool kcg_comp_struct__5699(
+  struct__5699 *kcg_c1,
+  struct__5699 *kcg_c2);
+#endif /* kcg_comp_struct__5699 */
+
+#ifndef kcg_comp_struct__5707
+extern kcg_bool kcg_comp_struct__5707(
+  struct__5707 *kcg_c1,
+  struct__5707 *kcg_c2);
+#endif /* kcg_comp_struct__5707 */
+
+#ifndef kcg_comp_array_int_4
+extern kcg_bool kcg_comp_array_int_4(array_int_4 *kcg_c1, array_int_4 *kcg_c2);
+#endif /* kcg_comp_array_int_4 */
+
+#ifndef kcg_comp_array_real_4
+extern kcg_bool kcg_comp_array_real_4(
+  array_real_4 *kcg_c1,
+  array_real_4 *kcg_c2);
+#endif /* kcg_comp_array_real_4 */
+
+#define kcg_comp_LutIndex_lut kcg_comp_struct__5691
+
+#define kcg_copy_LutIndex_lut kcg_copy_struct__5691
 
 #endif /* _KCG_TYPES_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.h
-** Generation date: 2014-11-18T21:38:59
+** Generation date: 2014-11-23T21:47:49
 *************************************************************$ */
 

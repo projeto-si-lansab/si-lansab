@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="126" defaultConfiguration="21">
+<Project id="1" oid_count="130" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -305,6 +305,9 @@
 			<value>true</value>
 			<configuration>13</configuration>
 		</Prop>
+		<Prop id="128" name="@MTC:GLOBAL_NUMBER">
+			<value>1</value>
+		</Prop>
 	</props>
 	<roots>
 		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries">
@@ -332,7 +335,12 @@
 				<FileRef id="85" persistAs="missionPhases.l4"/>
 			</elements>
 		</Folder>
-		<FileRef id="126" persistAs="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx"/>
+		<FileRef id="127" persistAs="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx"/>
+		<Folder id="130" name="Coverage Files">
+			<elements>
+				<FileRef id="129" persistAs="CF_20141121_1.crf"/>
+			</elements>
+		</Folder>
 	</roots>
 	<configurations>
 		<Configuration id="13" name="KCG"/>

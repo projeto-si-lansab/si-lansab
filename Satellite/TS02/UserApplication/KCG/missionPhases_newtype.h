@@ -82,17 +82,69 @@ extern int set_kcg_int_default_value(void *pValue);
 extern TypeUtils _Type_kcg_int_Utils;
 
 /****************************************************************
- ** struct__5258 
+ ** struct__5691 
  ****************************************************************/
-extern int struct__5258_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int check_struct__5258_string(const char *str, const char** endptr);
-extern int string_to_struct__5258(const char *str, void* pValue, const char** endptr);
-extern int is_struct__5258_allow_double_convertion();
-extern int struct__5258_to_double(const void* pValue, double *nValue);
-extern int get_struct__5258_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
-extern int compare_struct__5258(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
-extern int set_struct__5258_default_value(void *pValue);
-extern TypeUtils _Type_struct__5258_Utils;
+extern int struct__5691_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_struct__5691_string(const char *str, const char** endptr);
+extern int string_to_struct__5691(const char *str, void* pValue, const char** endptr);
+extern int is_struct__5691_allow_double_convertion();
+extern int struct__5691_to_double(const void* pValue, double *nValue);
+extern int get_struct__5691_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_struct__5691(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_struct__5691_default_value(void *pValue);
+extern TypeUtils _Type_struct__5691_Utils;
+
+/****************************************************************
+ ** array_int_4 
+ ****************************************************************/
+extern int array_int_4_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_array_int_4_string(const char *str, const char** endptr);
+extern int string_to_array_int_4(const char *str, void* pValue, const char** endptr);
+extern int is_array_int_4_allow_double_convertion();
+extern int array_int_4_to_double(const void* pValue, double *nValue);
+extern int get_array_int_4_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_array_int_4(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_array_int_4_default_value(void *pValue);
+extern TypeUtils _Type_array_int_4_Utils;
+
+/****************************************************************
+ ** struct__5699 
+ ****************************************************************/
+extern int struct__5699_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_struct__5699_string(const char *str, const char** endptr);
+extern int string_to_struct__5699(const char *str, void* pValue, const char** endptr);
+extern int is_struct__5699_allow_double_convertion();
+extern int struct__5699_to_double(const void* pValue, double *nValue);
+extern int get_struct__5699_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_struct__5699(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_struct__5699_default_value(void *pValue);
+extern TypeUtils _Type_struct__5699_Utils;
+
+/****************************************************************
+ ** array_real_4 
+ ****************************************************************/
+extern int array_real_4_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_array_real_4_string(const char *str, const char** endptr);
+extern int string_to_array_real_4(const char *str, void* pValue, const char** endptr);
+extern int is_array_real_4_allow_double_convertion();
+extern int array_real_4_to_double(const void* pValue, double *nValue);
+extern int get_array_real_4_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_array_real_4(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_array_real_4_default_value(void *pValue);
+extern TypeUtils _Type_array_real_4_Utils;
+
+/****************************************************************
+ ** struct__5707 
+ ****************************************************************/
+extern int struct__5707_to_string(const void *pValue, int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int check_struct__5707_string(const char *str, const char** endptr);
+extern int string_to_struct__5707(const char *str, void* pValue, const char** endptr);
+extern int is_struct__5707_allow_double_convertion();
+extern int struct__5707_to_double(const void* pValue, double *nValue);
+extern int get_struct__5707_signature(int (*pfnStrAppend)(const char *str, void *pData), void *pData);
+extern int compare_struct__5707(int *nStatus, const void *pValue1, const void *pValue2, void *pData);
+extern int set_struct__5707_default_value(void *pValue);
+extern TypeUtils _Type_struct__5707_Utils;
 
 /****************************************************************
  ** TruthTableValues_truthtables 

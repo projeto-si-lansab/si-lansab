@@ -30,6 +30,15 @@ typedef struct {
 
 typedef struct {
     /*TS02 inputs*/
+    kcg_real Altitude_Value;
+    kcg_real Latitude_Value;
+    kcg_real Longitude_Value;
+    kcg_real Radial_Accelerometer;
+    kcg_real Solar_Reference;
+    kcg_real Radial_Spin;
+    kcg_real Tangential_Spin;
+    kcg_real Radial_Torque;
+    kcg_real Tangential_Torque;
 } TS02_INPUT_INTERFACE;
 
 typedef struct {

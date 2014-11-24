@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--$*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T21:38:59
+** Command: s2c613 -config C:/ITA/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-23T21:47:49
 *************************************************************$-->
-<Model date="2014-11-18T21:38:59" commandLine="s2c613 -config C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt">
+<Model date="2014-11-23T21:47:49" commandLine="s2c613 -config C:/ITA/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt">
   <RootNode scadeName="OperationalScenario" headerFile="OperationalScenario.h" targetCycleFct="OperationalScenario"
       targetInitFct="OperationalScenario_reset">
     <Input scadeName="Power" scadeType="bool" targetName="Power" targetType="kcg_bool" inCtx="true"/>
@@ -33,6 +33,7 @@
     <Input scadeName="upDateSw" scadeType="bool" targetName="upDateSw" targetType="kcg_bool" inCtx="true"/>
     <Memory scadeName="upDateSw" scadeType="bool" targetName="rem_upDateSw" targetType="kcg_bool" inCtx="true"/>
     <Input scadeName="Gyroscopes" scadeType="bool" targetName="Gyroscopes" targetType="kcg_bool" inCtx="true"/>
+    <Input scadeName="Input13" scadeType="bool" targetName="Input13" targetType="kcg_bool" inCtx="true"/>
     <Output scadeName="StartLaunchPhase" scadeType="bool" targetName="StartLaunchPhase" targetType="kcg_bool" mem="true"
         inCtx="true"/>
     <Output scadeName="Layer1Active" scadeType="bool" targetName="Layer1Active" targetType="kcg_bool" inCtx="true"/>
@@ -47,12 +48,20 @@
         inCtx="true"/>
     <Output scadeName="NormalPhaseVisible" scadeType="bool" targetName="NormalPhaseVisible" targetType="kcg_bool"
         inCtx="true"/>
-    <Output scadeName="AcRdValue" scadeType="real" targetName="AcRdValue" targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="AltitudeValue" scadeType="real" targetName="AltitudeValue" targetType="kcg_real" inCtx="true"/>
     <Output scadeName="ColorIndex5" scadeType="int" targetName="ColorIndex5" targetType="kcg_int" inCtx="true"/>
     <Output scadeName="LaunchVisible" scadeType="bool" targetName="LaunchVisible" targetType="kcg_bool" inCtx="true"/>
     <Output scadeName="FuelMeter" scadeType="real" targetName="FuelMeter" targetType="kcg_real" inCtx="true"/>
     <Output scadeName="FuelMeterGraphic" scadeType="int" targetName="FuelMeterGraphic" targetType="kcg_int"
         inCtx="true"/>
+    <Output scadeName="SAT_Longitude_Value" scadeType="real" targetName="SAT_Longitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="SAT_Latitude_Value" scadeType="real" targetName="SAT_Latitude_Value" targetType="kcg_real"
+        inCtx="true"/>
+    <Output scadeName="SpinRd" scadeType="real" targetName="SpinRd" targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="SpinTg" scadeType="real" targetName="SpinTg" targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="TorqueRd" scadeType="real" targetName="TorqueRd" targetType="kcg_real" inCtx="true"/>
+    <Output scadeName="TorqueTg" scadeType="real" targetName="TorqueTg" targetType="kcg_real" inCtx="true"/>
     <Memory scadeName="LaunchPhase" scadeType="bool" targetName="LaunchPhase" targetType="kcg_bool" inCtx="true"/>
     <Memory scadeName="ApertarBotao" scadeType="bool" targetName="ApertarBotao" targetType="kcg_bool" inCtx="true"/>
     <Local scadeName="color" scadeType="int" targetName="color" targetType="kcg_int" inCtx="true"/>
@@ -76,12 +85,19 @@
         inCtx="true"/>
     <Local scadeName="MagneticTorquersLocal" scadeType="bool" targetName="MagneticTorquersLocal" targetType="kcg_bool"
         inCtx="true"/>
-    <Local scadeName="AcRdValueLocal" scadeType="real" targetName="AcRdValueLocal" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="AltitudeValueLocal" scadeType="real" targetName="AltitudeValueLocal" targetType="kcg_real"
+        inCtx="true"/>
     <Local scadeName="AtNormalPhase" scadeType="bool" targetName="AtNormalPhase" targetType="kcg_bool" inCtx="true"/>
     <Local scadeName="color_5" scadeType="int" targetName="color_5" targetType="kcg_int" inCtx="true"/>
     <Local scadeName="LaunchVisibleLocal" scadeType="bool" targetName="LaunchVisibleLocal" targetType="kcg_bool"
         inCtx="true"/>
     <Local scadeName="FuelMeterLocal" scadeType="real" targetName="FuelMeterLocal" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="LongitudeLocal" scadeType="real" targetName="LongitudeLocal" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="LatitudeLocal" scadeType="real" targetName="LatitudeLocal" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="SpinRdLocal" scadeType="real" targetName="SpinRdLocal" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="SpinTgLocal" scadeType="real" targetName="SpinTgLocal" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="TorqueRdLocal" scadeType="real" targetName="TorqueRdLocal" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="TorqueTgLocal" scadeType="real" targetName="TorqueTgLocal" targetType="kcg_real" inCtx="true"/>
     <Local scadeName="_L7" scadeType="bool" targetName="_L7" targetType="kcg_bool" inCtx="true"/>
     <Local scadeName="_L8" scadeType="bool" targetName="_L8" targetType="kcg_bool" inCtx="true"/>
     <Local scadeName="_L9" scadeType="bool" targetName="_L9" targetType="kcg_bool" inCtx="true"/>
@@ -105,6 +121,12 @@
     <Local scadeName="_L44" scadeType="real" targetName="_L44" targetType="kcg_real" inCtx="true"/>
     <Local scadeName="_L45" scadeType="real" targetName="_L45" targetType="kcg_real" inCtx="true"/>
     <Local scadeName="_L46" scadeType="int" targetName="_L46" targetType="kcg_int" inCtx="true"/>
+    <Local scadeName="_L49" scadeType="real" targetName="_L49" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="_L50" scadeType="real" targetName="_L50" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="_L51" scadeType="real" targetName="_L51" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="_L52" scadeType="real" targetName="_L52" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="_L53" scadeType="real" targetName="_L53" targetType="kcg_real" inCtx="true"/>
+    <Local scadeName="_L54" scadeType="real" targetName="_L54" targetType="kcg_real" inCtx="true"/>
     <Automaton scadeName="OpPhases" targetStatesType="SSM_ST_OpPhases" targetTransitionsType="SSM_TR_OpPhases">
       <State scadeName="Ground" targetName="SSM_st_Ground_OpPhases">
         <Local scadeName="_L2" scadeType="int" targetName="_L2_OpPhases_Ground" targetType="kcg_int"
@@ -148,6 +170,18 @@
         <Local scadeName="_L41" scadeType="bool" targetName="_L41_OpPhases_Ground" targetType="kcg_bool"
             clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
         <Local scadeName="_L42" scadeType="real" targetName="_L42_OpPhases_Ground" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
+        <Local scadeName="_L45" scadeType="real" targetName="_L45_OpPhases_Ground" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
+        <Local scadeName="_L46" scadeType="real" targetName="_L46_OpPhases_Ground" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
+        <Local scadeName="_L49" scadeType="real" targetName="_L49_OpPhases_Ground" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
+        <Local scadeName="_L50" scadeType="real" targetName="_L50_OpPhases_Ground" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
+        <Local scadeName="_L54" scadeType="real" targetName="_L54_OpPhases_Ground" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
+        <Local scadeName="_L53" scadeType="real" targetName="_L53_OpPhases_Ground" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases" inCtx="true"/>
         <NodeInlining scadeName="ReadSensors" instName="6">
           <Input scadeName="Gyroscopes" scadeType="bool" targetName="Gyroscopes_6" targetType="kcg_bool"
@@ -220,6 +254,18 @@
             clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
         <Local scadeName="_L34" scadeType="real" targetName="_L34_OpPhases_Launch" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
+        <Local scadeName="_L36" scadeType="real" targetName="_L36_OpPhases_Launch" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
+        <Local scadeName="_L35" scadeType="real" targetName="_L35_OpPhases_Launch" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
+        <Local scadeName="_L38" scadeType="real" targetName="_L38_OpPhases_Launch" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
+        <Local scadeName="_L37" scadeType="real" targetName="_L37_OpPhases_Launch" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
+        <Local scadeName="_L40" scadeType="real" targetName="_L40_OpPhases_Launch" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
+        <Local scadeName="_L39" scadeType="real" targetName="_L39_OpPhases_Launch" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases" inCtx="true"/>
         <Fork priority="1">
           <Transition targetName="SSM_TR_Launch_1_OpPhases" kind="weak" scadeDest="AttitudeAcquisition"/>
         </Fork>
@@ -228,6 +274,12 @@
         <Local scadeName="AtNormalPhaseLocal" scadeType="bool"
             targetName="AtNormalPhaseLocal_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="LaunchTime" scadeType="real" targetName="LaunchTime_OpPhases_AttitudeAcquisition"
+            targetType="kcg_real" clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases"
+            inCtx="true"/>
+        <Local scadeName="ClockTime" scadeType="real" targetName="ClockTime_OpPhases_AttitudeAcquisition"
+            targetType="kcg_real" clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases"
+            inCtx="true"/>
         <Local scadeName="_L15" scadeType="int" targetName="_L15_OpPhases_AttitudeAcquisition" targetType="kcg_int"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
         <Local scadeName="_L14" scadeType="int" targetName="_L14_OpPhases_AttitudeAcquisition" targetType="kcg_int"
@@ -242,37 +294,225 @@
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
         <Local scadeName="_L16" scadeType="bool" targetName="_L16_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L27" scadeType="real" targetName="_L27_OpPhases_AttitudeAcquisition" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L26" scadeType="real" targetName="_L26_OpPhases_AttitudeAcquisition" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Memory scadeName="_L25" scadeType="real" targetName="_L25_OpPhases_AttitudeAcquisition" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L24" scadeType="bool" targetName="_L24_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L23" scadeType="real" targetName="_L23_OpPhases_AttitudeAcquisition" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L22" scadeType="real" targetName="_L22_OpPhases_AttitudeAcquisition" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L21" scadeType="real" targetName="_L21_OpPhases_AttitudeAcquisition" targetType="kcg_real"
-            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
         <Local scadeName="_L28" scadeType="int" targetName="_L28_OpPhases_AttitudeAcquisition" targetType="kcg_int"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
         <Local scadeName="_L30" scadeType="bool" targetName="_L30_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Memory scadeName="_L37" scadeType="real" targetName="_L37_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+        <Local scadeName="_L43" scadeType="real" targetName="_L43_OpPhases_AttitudeAcquisition" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L36" scadeType="real" targetName="_L36_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+        <Local scadeName="_L53" scadeType="real" targetName="_L53_OpPhases_AttitudeAcquisition" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L35" scadeType="real" targetName="_L35_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+        <Local scadeName="_L125" scadeType="real" targetName="_L125_OpPhases_AttitudeAcquisition" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L32" scadeType="real" targetName="_L32_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+        <Local scadeName="_L124" scadeType="real" targetName="_L124_OpPhases_AttitudeAcquisition" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L31" scadeType="real" targetName="_L31_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+        <Memory scadeName="_L130" scadeType="real" targetName="_L130_OpPhases_AttitudeAcquisition" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L39" scadeType="bool" targetName="_L39_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+        <Local scadeName="_L133" scadeType="real" targetName="_L133_OpPhases_AttitudeAcquisition" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-        <Local scadeName="_L40" scadeType="real" targetName="_L40_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+        <Local scadeName="_L135" scadeType="real" targetName="_L135_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L136" scadeType="real" targetName="_L136_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L137" scadeType="real" targetName="_L137_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L138" scadeType="real" targetName="_L138_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L140" scadeType="real" targetName="_L140_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Memory scadeName="_L142" scadeType="real" targetName="_L142_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L191" scadeType="bool" targetName="_L191_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Memory scadeName="_L190" scadeType="real" targetName="_L190_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L189" scadeType="real" targetName="_L189_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L188" scadeType="real" targetName="_L188_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L187" scadeType="bool" targetName="_L187_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L186" scadeType="real" targetName="_L186_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L185" scadeType="real" targetName="_L185_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L184" scadeType="real" targetName="_L184_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L182" scadeType="real" targetName="_L182_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L181" scadeType="real" targetName="_L181_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L180" scadeType="real" targetName="_L180_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L179" scadeType="real" targetName="_L179_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L178" scadeType="real" targetName="_L178_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L177" scadeType="real" targetName="_L177_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L176" scadeType="bool" targetName="_L176_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L175" scadeType="real" targetName="_L175_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L174" scadeType="bool" targetName="_L174_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L173" scadeType="real" targetName="_L173_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L172" scadeType="real" targetName="_L172_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L192" scadeType="bool" targetName="_L192_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L193" scadeType="real" targetName="_L193_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L194" scadeType="real" targetName="_L194_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L241" scadeType="real" targetName="_L241_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L240" scadeType="bool" targetName="_L240_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L239" scadeType="bool" targetName="_L239_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L238" scadeType="real" targetName="_L238_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L236" scadeType="real" targetName="_L236_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L235" scadeType="real" targetName="_L235_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L234" scadeType="real" targetName="_L234_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L233" scadeType="bool" targetName="_L233_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L231" scadeType="real" targetName="_L231_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L230" scadeType="real" targetName="_L230_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L228" scadeType="bool" targetName="_L228_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L227" scadeType="real" targetName="_L227_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L226" scadeType="real" targetName="_L226_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L223" scadeType="real" targetName="_L223_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L222" scadeType="real" targetName="_L222_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L255" scadeType="real" targetName="_L255_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L254" scadeType="real" targetName="_L254_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L259" scadeType="real" targetName="_L259_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L260" scadeType="real" targetName="_L260_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L261" scadeType="real" targetName="_L261_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L262" scadeType="real" targetName="_L262_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L263" scadeType="real" targetName="_L263_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L264" scadeType="real" targetName="_L264_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L265" scadeType="real" targetName="_L265_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L266" scadeType="real" targetName="_L266_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L271" scadeType="real" targetName="_L271_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L270" scadeType="real" targetName="_L270_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L269" scadeType="real" targetName="_L269_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L268" scadeType="real" targetName="_L268_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L267" scadeType="real" targetName="_L267_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L273" scadeType="real" targetName="_L273_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L283" scadeType="real" targetName="_L283_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L282" scadeType="real" targetName="_L282_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L281" scadeType="real" targetName="_L281_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L280" scadeType="real" targetName="_L280_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L279" scadeType="real" targetName="_L279_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L284" scadeType="real" targetName="_L284_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L290" scadeType="real" targetName="_L290_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L289" scadeType="real" targetName="_L289_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L288" scadeType="real" targetName="_L288_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L287" scadeType="real" targetName="_L287_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L286" scadeType="real" targetName="_L286_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L285" scadeType="real" targetName="_L285_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L295" scadeType="real" targetName="_L295_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L294" scadeType="real" targetName="_L294_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L293" scadeType="real" targetName="_L293_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L292" scadeType="real" targetName="_L292_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L291" scadeType="real" targetName="_L291_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L297" scadeType="real" targetName="_L297_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L298" scadeType="real" targetName="_L298_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L299" scadeType="real" targetName="_L299_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L300" scadeType="real" targetName="_L300_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L301" scadeType="bool" targetName="_L301_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L302" scadeType="bool" targetName="_L302_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L303" scadeType="real" targetName="_L303_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L304" scadeType="real" targetName="_L304_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L305" scadeType="real" targetName="_L305_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L306" scadeType="real" targetName="_L306_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L308" scadeType="real" targetName="_L308_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L309" scadeType="real" targetName="_L309_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L310" scadeType="real" targetName="_L310_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L313" scadeType="real" targetName="_L313_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L312" scadeType="real" targetName="_L312_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L311" scadeType="real" targetName="_L311_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L315" scadeType="bool" targetName="_L315_OpPhases_AttitudeAcquisition" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L314" scadeType="real" targetName="_L314_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L316" scadeType="real" targetName="_L316_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L317" scadeType="real" targetName="_L317_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L323" scadeType="real" targetName="_L323_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L321" scadeType="real" targetName="_L321_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L320" scadeType="real" targetName="_L320_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L319" scadeType="real" targetName="_L319_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L318" scadeType="real" targetName="_L318_OpPhases_AttitudeAcquisition" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
+        <Local scadeName="_L324" scadeType="real" targetName="_L324_OpPhases_AttitudeAcquisition" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
         <Fork priority="1">
           <Transition targetName="SSM_TR_AttitudeAcquisition_1_OpPhases" kind="weak" scadeDest="NormalPhase"/>
@@ -301,6 +541,82 @@
             clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
         <Local scadeName="_L21" scadeType="real" targetName="_L21_OpPhases_NormalPhase" targetType="kcg_real"
             clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L32" scadeType="real" targetName="_L32_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Fby scadeName="_L32" scadeType="real" targetName="fby__L32_OpPhases_NormalPhase" targetType="struct__5707"
+            inCtx="true"/>
+        <Local scadeName="_L30" scadeType="real" targetName="_L30_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L28" scadeType="real" targetName="_L28_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L33" scadeType="bool" targetName="_L33_OpPhases_NormalPhase" targetType="kcg_bool"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L35" scadeType="real" targetName="_L35_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L36" scadeType="real" targetName="_L36_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L38" scadeType="real" targetName="_L38_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L42" scadeType="real" targetName="_L42_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L41" scadeType="real" targetName="_L41_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L44" scadeType="real" targetName="_L44_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L43" scadeType="real" targetName="_L43_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L45" scadeType="int" targetName="_L45_OpPhases_NormalPhase" targetType="kcg_int"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L53" scadeType="real" targetName="_L53_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L54" scadeType="real" targetName="_L54_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L55" scadeType="real" targetName="_L55_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L57" scadeType="real" targetName="_L57_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L56" scadeType="real" targetName="_L56_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L59" scadeType="real" targetName="_L59_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L60" scadeType="real" targetName="_L60_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L61" scadeType="real" targetName="_L61_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L62" scadeType="int" targetName="_L62_OpPhases_NormalPhase" targetType="kcg_int"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Fby scadeName="_L62" scadeType="int" targetName="fby__L62_OpPhases_NormalPhase" targetType="struct__5699"
+            inCtx="true"/>
+        <Local scadeName="_L63" scadeType="int" targetName="_L63_OpPhases_NormalPhase" targetType="kcg_int"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L64" scadeType="int" targetName="_L64_OpPhases_NormalPhase" targetType="kcg_int"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L65" scadeType="int" targetName="_L65_OpPhases_NormalPhase" targetType="kcg_int"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L72" scadeType="real" targetName="_L72_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L69" scadeType="real" targetName="_L69_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L68" scadeType="real" targetName="_L68_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L67" scadeType="real" targetName="_L67_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L66" scadeType="real" targetName="_L66_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L83" scadeType="real" targetName="_L83_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L82" scadeType="real" targetName="_L82_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L81" scadeType="real" targetName="_L81_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L79" scadeType="real" targetName="_L79_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L78" scadeType="real" targetName="_L78_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L77" scadeType="real" targetName="_L77_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
+        <Local scadeName="_L74" scadeType="real" targetName="_L74_OpPhases_NormalPhase" targetType="kcg_real"
+            clockVar="OpPhases_state_act" clockVal="SSM_st_NormalPhase_OpPhases" inCtx="true"/>
       </State>
       <ActiveState targetName="OpPhases_state_act" inCtx="true"/>
       <NextState targetName="OpPhases_state_nxt" inCtx="true"/>
@@ -311,13 +627,18 @@
       <StrongTransition targetName="OpPhases_fired_strong" inCtx="true"/>
       <WeakTransition targetName="OpPhases_fired" inCtx="true"/>
     </Automaton>
-    <Init targetName="init3" targetType="kcg_bool" clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases"
+    <Fby targetName="_2_fby_OperationalScenario" targetType="kcg_real" clockVar="OpPhases_state_act"
+        clockVal="SSM_st_NormalPhase_OpPhases"/>
+    <Fby targetName="fby_OperationalScenario" targetType="kcg_int" clockVar="OpPhases_state_act"
+        clockVal="SSM_st_NormalPhase_OpPhases"/>
+    <Init targetName="init4" targetType="kcg_bool" clockVar="OpPhases_state_act" clockVal="SSM_st_Ground_OpPhases"
         inCtx="true"/>
-    <Init targetName="init2" targetType="kcg_bool" inCtx="true"/>
-    <Init targetName="init1" targetType="kcg_bool" clockVar="OpPhases_state_act"
+    <Init targetName="init3" targetType="kcg_bool" inCtx="true"/>
+    <Init targetName="init2" targetType="kcg_bool" clockVar="OpPhases_state_act"
         clockVal="SSM_st_AttitudeAcquisition_OpPhases" inCtx="true"/>
-    <Init targetName="init" targetType="kcg_bool" clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases"
+    <Init targetName="init1" targetType="kcg_bool" clockVar="OpPhases_state_act" clockVal="SSM_st_Launch_OpPhases"
         inCtx="true"/>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
     <OutCtxType targetName="outC_OperationalScenario"/>
     <InCtxType targetName="inC_OperationalScenario"/>
   </RootNode>
@@ -338,12 +659,12 @@
   <Package scadeName="mathext"/>
   <Package scadeName="pwlinear"/>
   <Package scadeName="lut">
-    <NamedType scadeName="LutIndex" targetName="LutIndex_lut" refType="struct__5258"/>
+    <NamedType scadeName="LutIndex" targetName="LutIndex_lut" refType="struct__5691"/>
   </Package>
   <Package scadeName="verif"/>
   <Option name="root_node_name" value="OperationalScenario"/>
   <Option name="target" value="C"/>
-  <Option name="target_dir" value="C:/github/si-lansab/Satellite/TS02/UserApplication/KCG"/>
+  <Option name="target_dir" value="C:/ITA/TS02_2Sprint/UserApplication/KCG"/>
   <Option name="expall" value="#on#"/>
   <Option name="exp" value="#off#"/>
   <Option name="noexp" value="#off#"/>
@@ -360,7 +681,7 @@
   <Option name="observe" value="#off#"/>
   <Option name="no_observe" value="#off#"/>
   <Option name="probes" value="#on#"/>
-  <Option name="input_file" value="C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_xml_filter_out.scade"/>
+  <Option name="input_file" value="C:/ITA/TS02_2Sprint/UserApplication/KCG\kcg_xml_filter_out.scade"/>
   <Option name="wrap_c_ops" value="#off#"/>
   <Option name="no_bitwise" value="#off#"/>
   <Option name="warn_error" value="#off#"/>
@@ -370,12 +691,24 @@
   <PredefType scadeName="bool" targetName="kcg_bool"/>
   <PredefType scadeName="char" targetName="kcg_char"/>
   <PredefType scadeName="int" targetName="kcg_int"/>
-  <StructType targetName="struct__5258" targetCopyFct="kcg_copy_struct__5258" targetCompFct="kcg_comp_struct__5258">
+  <StructType targetName="struct__5691" targetCopyFct="kcg_copy_struct__5691" targetCompFct="kcg_comp_struct__5691">
     <Field scadeName="k" scadeType="int" targetName="k" targetType="kcg_int"/>
     <Field scadeName="f" scadeType="real" targetName="f" targetType="kcg_real"/>
+  </StructType>
+  <ArrayType targetName="array_int_4" cellType="kcg_int" size="4" targetCopyFct="kcg_copy_array_int_4"
+      targetCompFct="kcg_comp_array_int_4"/>
+  <StructType targetName="struct__5699" targetCopyFct="kcg_copy_struct__5699" targetCompFct="kcg_comp_struct__5699">
+    <Field scadeName="idx" scadeType="int" targetName="idx" targetType="kcg_int"/>
+    <Field scadeName="items" scadeType="int^4" targetName="items" targetType="array_int_4"/>
+  </StructType>
+  <ArrayType targetName="array_real_4" cellType="kcg_real" size="4" targetCopyFct="kcg_copy_array_real_4"
+      targetCompFct="kcg_comp_array_real_4"/>
+  <StructType targetName="struct__5707" targetCopyFct="kcg_copy_struct__5707" targetCompFct="kcg_comp_struct__5707">
+    <Field scadeName="idx" scadeType="int" targetName="idx" targetType="kcg_int"/>
+    <Field scadeName="items" scadeType="real^4" targetName="items" targetType="array_real_4"/>
   </StructType>
 </Model>
 <!--$*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_trace.xml
-** Generation date: 2014-11-18T21:38:59
+** Generation date: 2014-11-23T21:47:49
 *************************************************************$-->

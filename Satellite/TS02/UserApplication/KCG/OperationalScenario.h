@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: s2c613 -config C:/github/si-lansab/Satellite/TS02/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-18T21:38:59
+** Command: s2c613 -config C:/ITA/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
+** Generation date: 2014-11-23T21:47:49
 *************************************************************$ */
 #ifndef _OperationalScenario_H_
 #define _OperationalScenario_H_
@@ -21,6 +21,7 @@ typedef struct {
   kcg_bool /* OperationalScenario::MagneticTorquers */ MagneticTorquers;
   kcg_bool /* OperationalScenario::upDateSw */ upDateSw;
   kcg_bool /* OperationalScenario::Gyroscopes */ Gyroscopes;
+  kcg_bool /* OperationalScenario::Input13 */ Input13;
 } inC_OperationalScenario;
 
 /* ========================  context type  ========================= */
@@ -37,18 +38,27 @@ typedef struct {
   kcg_bool /* OperationalScenario::GroundVisible */ GroundVisible;
   kcg_bool /* OperationalScenario::AttitudeVisible */ AttitudeVisible;
   kcg_bool /* OperationalScenario::NormalPhaseVisible */ NormalPhaseVisible;
-  kcg_real /* OperationalScenario::AcRdValue */ AcRdValue;
+  kcg_real /* OperationalScenario::AltitudeValue */ AltitudeValue;
   kcg_int /* OperationalScenario::ColorIndex5 */ ColorIndex5;
   kcg_bool /* OperationalScenario::LaunchVisible */ LaunchVisible;
   kcg_real /* OperationalScenario::FuelMeter */ FuelMeter;
   kcg_int /* OperationalScenario::FuelMeterGraphic */ FuelMeterGraphic;
+  kcg_real /* OperationalScenario::SAT_Longitude_Value */ SAT_Longitude_Value;
+  kcg_real /* OperationalScenario::SAT_Latitude_Value */ SAT_Latitude_Value;
+  kcg_real /* OperationalScenario::SpinRd */ SpinRd;
+  kcg_real /* OperationalScenario::SpinTg */ SpinTg;
+  kcg_real /* OperationalScenario::TorqueRd */ TorqueRd;
+  kcg_real /* OperationalScenario::TorqueTg */ TorqueTg;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
+  kcg_bool init;
+  kcg_bool init4;
   kcg_bool init3;
   kcg_bool init2;
   kcg_bool init1;
-  kcg_bool init;
   /* ----------------------- local memories  ------------------------- */
+  struct__5699 /* OperationalScenario::OpPhases::NormalPhase::_L62 */ fby__L62_OpPhases_NormalPhase;
+  struct__5707 /* OperationalScenario::OpPhases::NormalPhase::_L32 */ fby__L32_OpPhases_NormalPhase;
   kcg_bool /* TestActuators::ActuatorsStatus */ ActuatorsStatus_1;
   kcg_bool /* TestActuators::MagneticTorquers */ MagneticTorquers_1;
   kcg_bool /* TestActuators::Reactionwheels */ Reactionwheels_1;
@@ -57,8 +67,9 @@ typedef struct {
   kcg_bool /* ReadSensors::Accelerometers */ Accelerometers_6;
   kcg_bool /* ReadSensors::Gyroscopes */ Gyroscopes_6;
   kcg_bool /* OperationalScenario::OpPhases::Launch::AtAcquisition */ AtAcquisition_OpPhases_Launch;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L37 */ _L37_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L25 */ _L25_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L190 */ _L190_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L142 */ _L142_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L130 */ _L130_OpPhases_AttitudeAcquisition;
   SSM_ST_OpPhases /* OperationalScenario::OpPhases */ OpPhases_state_nxt;
   kcg_bool /* OperationalScenario::OpPhases */ OpPhases_reset_act;
   kcg_bool /* OperationalScenario::OpPhases */ OpPhases_reset_nxt;
@@ -87,6 +98,12 @@ typedef struct {
   kcg_bool /* ReadSensors::_L5 */ _L5_6;
   kcg_bool /* ReadSensors::_L6 */ _L6_6;
   kcg_bool /* ReadSensors::_L8 */ _L8_6;
+  kcg_real /* OperationalScenario::OpPhases::Ground::_L53 */ _L53_OpPhases_Ground;
+  kcg_real /* OperationalScenario::OpPhases::Ground::_L54 */ _L54_OpPhases_Ground;
+  kcg_real /* OperationalScenario::OpPhases::Ground::_L50 */ _L50_OpPhases_Ground;
+  kcg_real /* OperationalScenario::OpPhases::Ground::_L49 */ _L49_OpPhases_Ground;
+  kcg_real /* OperationalScenario::OpPhases::Ground::_L46 */ _L46_OpPhases_Ground;
+  kcg_real /* OperationalScenario::OpPhases::Ground::_L45 */ _L45_OpPhases_Ground;
   kcg_real /* OperationalScenario::OpPhases::Ground::_L42 */ _L42_OpPhases_Ground;
   kcg_bool /* OperationalScenario::OpPhases::Ground::_L41 */ _L41_OpPhases_Ground;
   kcg_int /* OperationalScenario::OpPhases::Ground::_L39 */ _L39_OpPhases_Ground;
@@ -109,6 +126,12 @@ typedef struct {
   kcg_int /* OperationalScenario::OpPhases::Ground::_L4 */ _L4_OpPhases_Ground;
   kcg_int /* OperationalScenario::OpPhases::Ground::_L2 */ _L2_OpPhases_Ground;
   kcg_bool /* OperationalScenario::OpPhases::Ground */ Ground_weakb_clock_OpPhases;
+  kcg_real /* OperationalScenario::OpPhases::Launch::_L39 */ _L39_OpPhases_Launch;
+  kcg_real /* OperationalScenario::OpPhases::Launch::_L40 */ _L40_OpPhases_Launch;
+  kcg_real /* OperationalScenario::OpPhases::Launch::_L37 */ _L37_OpPhases_Launch;
+  kcg_real /* OperationalScenario::OpPhases::Launch::_L38 */ _L38_OpPhases_Launch;
+  kcg_real /* OperationalScenario::OpPhases::Launch::_L35 */ _L35_OpPhases_Launch;
+  kcg_real /* OperationalScenario::OpPhases::Launch::_L36 */ _L36_OpPhases_Launch;
   kcg_real /* OperationalScenario::OpPhases::Launch::_L34 */ _L34_OpPhases_Launch;
   kcg_bool /* OperationalScenario::OpPhases::Launch::_L33 */ _L33_OpPhases_Launch;
   kcg_int /* OperationalScenario::OpPhases::Launch::_L31 */ _L31_OpPhases_Launch;
@@ -121,20 +144,113 @@ typedef struct {
   kcg_int /* OperationalScenario::OpPhases::Launch::_L10 */ _L10_OpPhases_Launch;
   kcg_int /* OperationalScenario::OpPhases::Launch::_L6 */ _L6_OpPhases_Launch;
   kcg_int /* OperationalScenario::OpPhases::Launch::_L5 */ _L5_OpPhases_Launch;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L40 */ _L40_OpPhases_AttitudeAcquisition;
-  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L39 */ _L39_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L31 */ _L31_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L32 */ _L32_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L35 */ _L35_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L36 */ _L36_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L324 */ _L324_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L318 */ _L318_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L319 */ _L319_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L320 */ _L320_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L321 */ _L321_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L323 */ _L323_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L317 */ _L317_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L316 */ _L316_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L314 */ _L314_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L315 */ _L315_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L311 */ _L311_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L312 */ _L312_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L313 */ _L313_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L310 */ _L310_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L309 */ _L309_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L308 */ _L308_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L306 */ _L306_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L305 */ _L305_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L304 */ _L304_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L303 */ _L303_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L302 */ _L302_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L301 */ _L301_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L300 */ _L300_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L299 */ _L299_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L298 */ _L298_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L297 */ _L297_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L291 */ _L291_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L292 */ _L292_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L293 */ _L293_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L294 */ _L294_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L295 */ _L295_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L285 */ _L285_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L286 */ _L286_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L287 */ _L287_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L288 */ _L288_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L289 */ _L289_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L290 */ _L290_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L284 */ _L284_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L279 */ _L279_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L280 */ _L280_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L281 */ _L281_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L282 */ _L282_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L283 */ _L283_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L273 */ _L273_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L267 */ _L267_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L268 */ _L268_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L269 */ _L269_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L270 */ _L270_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L271 */ _L271_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L266 */ _L266_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L265 */ _L265_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L264 */ _L264_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L263 */ _L263_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L262 */ _L262_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L261 */ _L261_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L260 */ _L260_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L259 */ _L259_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L254 */ _L254_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L255 */ _L255_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L222 */ _L222_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L223 */ _L223_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L226 */ _L226_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L227 */ _L227_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L228 */ _L228_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L230 */ _L230_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L231 */ _L231_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L233 */ _L233_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L234 */ _L234_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L235 */ _L235_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L236 */ _L236_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L238 */ _L238_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L239 */ _L239_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L240 */ _L240_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L241 */ _L241_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L194 */ _L194_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L193 */ _L193_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L192 */ _L192_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L172 */ _L172_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L173 */ _L173_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L174 */ _L174_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L175 */ _L175_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L176 */ _L176_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L177 */ _L177_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L178 */ _L178_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L179 */ _L179_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L180 */ _L180_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L181 */ _L181_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L182 */ _L182_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L184 */ _L184_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L185 */ _L185_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L186 */ _L186_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L187 */ _L187_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L188 */ _L188_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L189 */ _L189_OpPhases_AttitudeAcquisition;
+  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L191 */ _L191_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L140 */ _L140_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L138 */ _L138_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L137 */ _L137_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L136 */ _L136_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L135 */ _L135_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L133 */ _L133_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L124 */ _L124_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L125 */ _L125_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L53 */ _L53_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L43 */ _L43_OpPhases_AttitudeAcquisition;
   kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L30 */ _L30_OpPhases_AttitudeAcquisition;
   kcg_int /* OperationalScenario::OpPhases::AttitudeAcquisition::_L28 */ _L28_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L21 */ _L21_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L22 */ _L22_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L23 */ _L23_OpPhases_AttitudeAcquisition;
-  kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L24 */ _L24_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L26 */ _L26_OpPhases_AttitudeAcquisition;
-  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::_L27 */ _L27_OpPhases_AttitudeAcquisition;
   kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L16 */ _L16_OpPhases_AttitudeAcquisition;
   kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L17 */ _L17_OpPhases_AttitudeAcquisition;
   kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::_L19 */ _L19_OpPhases_AttitudeAcquisition;
@@ -142,7 +258,45 @@ typedef struct {
   kcg_int /* OperationalScenario::OpPhases::AttitudeAcquisition::_L13 */ _L13_OpPhases_AttitudeAcquisition;
   kcg_int /* OperationalScenario::OpPhases::AttitudeAcquisition::_L14 */ _L14_OpPhases_AttitudeAcquisition;
   kcg_int /* OperationalScenario::OpPhases::AttitudeAcquisition::_L15 */ _L15_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::ClockTime */ ClockTime_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::AttitudeAcquisition::LaunchTime */ LaunchTime_OpPhases_AttitudeAcquisition;
   kcg_bool /* OperationalScenario::OpPhases::AttitudeAcquisition::AtNormalPhaseLocal */ AtNormalPhaseLocal_OpPhases_AttitudeAcquisition;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L74 */ _L74_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L77 */ _L77_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L78 */ _L78_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L79 */ _L79_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L81 */ _L81_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L82 */ _L82_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L83 */ _L83_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L66 */ _L66_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L67 */ _L67_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L68 */ _L68_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L69 */ _L69_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L72 */ _L72_OpPhases_NormalPhase;
+  kcg_int /* OperationalScenario::OpPhases::NormalPhase::_L65 */ _L65_OpPhases_NormalPhase;
+  kcg_int /* OperationalScenario::OpPhases::NormalPhase::_L64 */ _L64_OpPhases_NormalPhase;
+  kcg_int /* OperationalScenario::OpPhases::NormalPhase::_L63 */ _L63_OpPhases_NormalPhase;
+  kcg_int /* OperationalScenario::OpPhases::NormalPhase::_L62 */ _L62_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L61 */ _L61_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L60 */ _L60_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L59 */ _L59_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L56 */ _L56_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L57 */ _L57_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L55 */ _L55_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L54 */ _L54_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L53 */ _L53_OpPhases_NormalPhase;
+  kcg_int /* OperationalScenario::OpPhases::NormalPhase::_L45 */ _L45_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L43 */ _L43_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L44 */ _L44_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L41 */ _L41_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L42 */ _L42_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L38 */ _L38_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L36 */ _L36_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L35 */ _L35_OpPhases_NormalPhase;
+  kcg_bool /* OperationalScenario::OpPhases::NormalPhase::_L33 */ _L33_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L28 */ _L28_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L30 */ _L30_OpPhases_NormalPhase;
+  kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L32 */ _L32_OpPhases_NormalPhase;
   kcg_real /* OperationalScenario::OpPhases::NormalPhase::_L21 */ _L21_OpPhases_NormalPhase;
   kcg_bool /* OperationalScenario::OpPhases::NormalPhase::_L19 */ _L19_OpPhases_NormalPhase;
   kcg_int /* OperationalScenario::OpPhases::NormalPhase::_L18 */ _L18_OpPhases_NormalPhase;
@@ -170,11 +324,17 @@ typedef struct {
   kcg_bool /* OperationalScenario::SunSensorLocal */ SunSensorLocal;
   kcg_bool /* OperationalScenario::ReactionwheelsLocal */ ReactionwheelsLocal;
   kcg_bool /* OperationalScenario::MagneticTorquersLocal */ MagneticTorquersLocal;
-  kcg_real /* OperationalScenario::AcRdValueLocal */ AcRdValueLocal;
+  kcg_real /* OperationalScenario::AltitudeValueLocal */ AltitudeValueLocal;
   kcg_bool /* OperationalScenario::AtNormalPhase */ AtNormalPhase;
   kcg_int /* OperationalScenario::color_5 */ color_5;
   kcg_bool /* OperationalScenario::LaunchVisibleLocal */ LaunchVisibleLocal;
   kcg_real /* OperationalScenario::FuelMeterLocal */ FuelMeterLocal;
+  kcg_real /* OperationalScenario::LongitudeLocal */ LongitudeLocal;
+  kcg_real /* OperationalScenario::LatitudeLocal */ LatitudeLocal;
+  kcg_real /* OperationalScenario::SpinRdLocal */ SpinRdLocal;
+  kcg_real /* OperationalScenario::SpinTgLocal */ SpinTgLocal;
+  kcg_real /* OperationalScenario::TorqueRdLocal */ TorqueRdLocal;
+  kcg_real /* OperationalScenario::TorqueTgLocal */ TorqueTgLocal;
   kcg_bool /* OperationalScenario::_L7 */ _L7;
   kcg_bool /* OperationalScenario::_L8 */ _L8;
   kcg_bool /* OperationalScenario::_L9 */ _L9;
@@ -198,6 +358,12 @@ typedef struct {
   kcg_real /* OperationalScenario::_L44 */ _L44;
   kcg_real /* OperationalScenario::_L45 */ _L45;
   kcg_int /* OperationalScenario::_L46 */ _L46;
+  kcg_real /* OperationalScenario::_L49 */ _L49;
+  kcg_real /* OperationalScenario::_L50 */ _L50;
+  kcg_real /* OperationalScenario::_L51 */ _L51;
+  kcg_real /* OperationalScenario::_L52 */ _L52;
+  kcg_real /* OperationalScenario::_L53 */ _L53;
+  kcg_real /* OperationalScenario::_L54 */ _L54;
 } outC_OperationalScenario;
 
 /* ===========  node initialization and cycle functions  =========== */
@@ -211,6 +377,6 @@ extern void OperationalScenario_reset(outC_OperationalScenario *outC);
 #endif /* _OperationalScenario_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** OperationalScenario.h
-** Generation date: 2014-11-18T21:38:59
+** Generation date: 2014-11-23T21:47:49
 *************************************************************$ */
 

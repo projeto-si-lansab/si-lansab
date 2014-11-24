@@ -1,9 +1,9 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/github/si-lansab/Satellite/TS02/UserApplication/OperationalScenario.xscade
-** Generation date: 2014-11-18T21:38:54
+** Command: x2s613 C:/ITA/TS02_2Sprint/UserApplication/OperationalScenario.xscade
+** Generation date: 2014-11-23T21:47:43
 *************************************************************$ */
 
-/* xscade source: C:/github/si-lansab/Satellite/TS02/UserApplication/OperationalScenario.xscade */
+/* xscade source: C:/ITA/TS02_2Sprint/UserApplication/OperationalScenario.xscade */
 node OperationalScenario(
     Power : bool;
     Telemetry : int last = 0;
@@ -16,7 +16,8 @@ node OperationalScenario(
     Reactionwheels : bool last = true;
     MagneticTorquers : bool last = true;
     upDateSw : bool last = false;
-    Gyroscopes : bool)
+    Gyroscopes : bool;
+    Input13 : bool)
   returns (
     StartLaunchPhase : bool default = false last = false;
     Layer1Active : bool;
@@ -29,11 +30,17 @@ node OperationalScenario(
     GroundVisible : bool;
     AttitudeVisible : bool;
     NormalPhaseVisible : bool;
-    AcRdValue : real;
+    AltitudeValue : real;
     ColorIndex5 : int;
     LaunchVisible : bool;
     FuelMeter : real;
-    FuelMeterGraphic : int)
+    FuelMeterGraphic : int;
+    SAT_Longitude_Value : real;
+    SAT_Latitude_Value : real;
+    SpinRd : real;
+    SpinTg : real;
+    TorqueRd : real;
+    TorqueTg : real)
 var
   LaunchPhase : bool last = false;
   ApertarBotao : bool last = false;
@@ -51,11 +58,17 @@ var
   SunSensorLocal : bool;
   ReactionwheelsLocal : bool;
   MagneticTorquersLocal : bool;
-  AcRdValueLocal : real;
+  AltitudeValueLocal : real;
   AtNormalPhase : bool;
   color_5 : int;
   LaunchVisibleLocal : bool;
   FuelMeterLocal : real;
+  LongitudeLocal : real;
+  LatitudeLocal : real;
+  SpinRdLocal : real;
+  SpinTgLocal : real;
+  TorqueRdLocal : real;
+  TorqueTgLocal : real;
   _L7 : bool;
   _L8 : bool;
   _L9 : bool;
@@ -79,6 +92,12 @@ var
   _L44 : real;
   _L45 : real;
   _L46 : int;
+  _L49 : real;
+  _L50 : real;
+  _L51 : real;
+  _L52 : real;
+  _L53 : real;
+  _L54 : real;
 let
   
   automaton OpPhases
@@ -107,6 +126,12 @@ let
         _L39 : int;
         _L41 : bool;
         _L42 : real;
+        _L45 : real;
+        _L46 : real;
+        _L49 : real;
+        _L50 : real;
+        _L54 : real;
+        _L53 : real;
       let
         color= _L2;
         _L2= 21;
@@ -133,7 +158,7 @@ let
         _L33= SunSensorLocal;
         _L34= ReactionwheelsLocal;
         _L35= MagneticTorquersLocal;
-        AcRdValueLocal= _L37;
+        AltitudeValueLocal= _L37;
         _L37= 0.0;
         color_5= _L39;
         _L39= 21;
@@ -141,6 +166,18 @@ let
         _L41= false;
         FuelMeterLocal= _L42;
         _L42= 100.0;
+        LatitudeLocal= _L45;
+        LongitudeLocal= _L46;
+        _L45= 0.0;
+        _L46= -50.0;
+        SpinRdLocal= _L49;
+        _L49= 0.0;
+        _L50= 0.0;
+        SpinTgLocal= _L50;
+        TorqueRdLocal= _L53;
+        TorqueTgLocal= _L54;
+        _L53= 0.0;
+        _L54= 0.0;
       tel
       until
         if StartLaunchPhase do restart Launch;
@@ -160,6 +197,12 @@ let
         _L31 : int;
         _L33 : bool;
         _L34 : real;
+        _L36 : real;
+        _L35 : real;
+        _L38 : real;
+        _L37 : real;
+        _L40 : real;
+        _L39 : real;
       let
         _L5= 55;
         color= _L5;
@@ -178,13 +221,25 @@ let
         _L28= ApertarBotao;
         AtAcquisition= _L28;
         _L29= 0.0;
-        AcRdValueLocal= _L29;
+        AltitudeValueLocal= _L29;
         color_5= _L31;
         _L31= 21;
         LaunchVisibleLocal= _L33;
         _L33= true;
         FuelMeterLocal= _L34;
         _L34= 100.0;
+        _L35= -50.0;
+        _L36= 0.0;
+        LongitudeLocal= _L35;
+        LatitudeLocal= _L36;
+        SpinRdLocal= _L37;
+        SpinTgLocal= _L38;
+        _L37= 0.0;
+        _L38= 0.0;
+        TorqueTgLocal= _L39;
+        _L39= 0.0;
+        TorqueRdLocal= _L40;
+        _L40= 0.0;
       tel
       until
         if AtAcquisition do restart AttitudeAcquisition;
@@ -192,6 +247,8 @@ let
     state AttitudeAcquisition
       var
         AtNormalPhaseLocal : bool;
+        LaunchTime : real;
+        ClockTime : real;
         _L15 : int;
         _L14 : int;
         _L13 : int;
@@ -199,22 +256,116 @@ let
         _L19 : bool;
         _L17 : bool;
         _L16 : bool;
-        _L27 : real;
-        _L26 : real;
-        _L25 : real;
-        _L24 : bool;
-        _L23 : real;
-        _L22 : real;
-        _L21 : real;
         _L28 : int;
         _L30 : bool;
-        _L37 : real;
-        _L36 : real;
-        _L35 : real;
-        _L32 : real;
-        _L31 : real;
-        _L39 : bool;
-        _L40 : real;
+        _L43 : real;
+        _L53 : real;
+        _L125 : real;
+        _L124 : real;
+        _L130 : real;
+        _L133 : real;
+        _L135 : real;
+        _L136 : real;
+        _L137 : real;
+        _L138 : real;
+        _L140 : real;
+        _L142 : real;
+        _L191 : bool;
+        _L190 : real;
+        _L189 : real;
+        _L188 : real;
+        _L187 : bool;
+        _L186 : real;
+        _L185 : real;
+        _L184 : real;
+        _L182 : real;
+        _L181 : real;
+        _L180 : real;
+        _L179 : real;
+        _L178 : real;
+        _L177 : real;
+        _L176 : bool;
+        _L175 : real;
+        _L174 : bool;
+        _L173 : real;
+        _L172 : real;
+        _L192 : bool;
+        _L193 : real;
+        _L194 : real;
+        _L241 : real;
+        _L240 : bool;
+        _L239 : bool;
+        _L238 : real;
+        _L236 : real;
+        _L235 : real;
+        _L234 : real;
+        _L233 : bool;
+        _L231 : real;
+        _L230 : real;
+        _L228 : bool;
+        _L227 : real;
+        _L226 : real;
+        _L223 : real;
+        _L222 : real;
+        _L255 : real;
+        _L254 : real;
+        _L259 : real;
+        _L260 : real;
+        _L261 : real;
+        _L262 : real;
+        _L263 : real;
+        _L264 : real;
+        _L265 : real;
+        _L266 : real;
+        _L271 : real;
+        _L270 : real;
+        _L269 : real;
+        _L268 : real;
+        _L267 : real;
+        _L273 : real;
+        _L283 : real;
+        _L282 : real;
+        _L281 : real;
+        _L280 : real;
+        _L279 : real;
+        _L284 : real;
+        _L290 : real;
+        _L289 : real;
+        _L288 : real;
+        _L287 : real;
+        _L286 : real;
+        _L285 : real;
+        _L295 : real;
+        _L294 : real;
+        _L293 : real;
+        _L292 : real;
+        _L291 : real;
+        _L297 : real;
+        _L298 : real;
+        _L299 : real;
+        _L300 : real;
+        _L301 : bool;
+        _L302 : bool;
+        _L303 : real;
+        _L304 : real;
+        _L305 : real;
+        _L306 : real;
+        _L308 : real;
+        _L309 : real;
+        _L310 : real;
+        _L313 : real;
+        _L312 : real;
+        _L311 : real;
+        _L315 : bool;
+        _L314 : real;
+        _L316 : real;
+        _L317 : real;
+        _L323 : real;
+        _L321 : real;
+        _L320 : real;
+        _L319 : real;
+        _L318 : real;
+        _L324 : real;
       let
         color_2= _L14;
         color3= _L13;
@@ -230,27 +381,129 @@ let
         _L17= false;
         NormalPhaseVisibleLocal= _L16;
         _L19= true;
-        _L21= 1.0;
-        _L22= 1.0;
-        _L23= _L26 + _L22;
-        _L24= _L23 >= _L27;
-        _L25= if _L24 then _L21 else _L23;
-        _L26= fby(_L25; 1; 1.0);
-        _L27= 10.0;
-        AcRdValueLocal= _L23;
-        AtNormalPhaseLocal= _L24;
+        AltitudeValueLocal= _L231;
         color_5= _L28;
         _L28= 21;
         LaunchVisibleLocal= _L30;
         _L30= false;
-        _L31= 10.0;
-        _L32= 1.0;
-        _L35= 0.0;
-        _L36= fby(_L37; 1; 100.0);
-        _L37= if _L39 then _L32 else _L40;
-        FuelMeterLocal= _L40;
-        _L39= _L40 = _L35;
-        _L40= _L36 - _L31;
+        FuelMeterLocal= _L316;
+        LatitudeLocal= _L43;
+        _L43= 0.0;
+        _L53= -50.0;
+        LongitudeLocal= _L53;
+        SpinTgLocal= _L130;
+        _L124= fby(_L142; 1; 0.0);
+        _L125= 1.0;
+        _L130= if _L301 then _L140 else _L299;
+        LaunchTime= _L133;
+        _L133= 30.0;
+        ClockTime= _L142;
+        _L135= ClockTime;
+        _L136= LaunchTime;
+        _L137= _L136 * _L138;
+        _L138= 0.8;
+        _L140= 0.0;
+        _L142= _L124 + _L125;
+        _L172= 0.2;
+        _L173= 0.4;
+        _L174= _L186 < _L172;
+        _L175= 52.4;
+        _L176= _L186 < _L179;
+        _L177= LaunchTime;
+        _L178= 0.8;
+        _L179= 0.1;
+        _L180= 38.7;
+        _L181= ClockTime;
+        _L182= 2.9;
+        SpinRdLocal= _L190;
+        _L184= 2.4;
+        _L185= if _L191 then _L180 else _L189;
+        _L186= _L181 / _L177;
+        _L187= _L186 < _L178;
+        _L188= if _L174 then _L175 else _L185;
+        _L189= if _L187 then _L182 else _L297;
+        _L190= if _L176 then _L184 else _L188;
+        _L191= _L186 < _L173;
+        AtNormalPhaseLocal= _L192;
+        _L192= _L193 = _L194;
+        _L193= ClockTime;
+        _L194= LaunchTime;
+        _L222= 0.8;
+        _L223= 0.1;
+        _L226= if _L240 then _L265 else _L238;
+        _L227= if _L239 then _L283 else _L286;
+        _L228= _L241 < _L234;
+        _L230= LaunchTime;
+        _L231= if _L233 then _L259 else _L226;
+        _L233= _L241 < _L223;
+        _L234= 0.4;
+        _L235= ClockTime;
+        _L236= 0.2;
+        _L238= if _L228 then _L268 else _L227;
+        _L239= _L241 < _L222;
+        _L240= _L241 < _L236;
+        _L241= _L235 / _L230;
+        _L254= 38.0;
+        _L255= _L241 * _L254;
+        _L259= _L255 / _L260;
+        _L260= 0.1;
+        _L261= _L262 * _L264;
+        _L262= _L241 - _L263;
+        _L263= 0.1;
+        _L264= 690.0;
+        _L265= _L261 + _L266;
+        _L266= 38.0;
+        _L267= _L241 - _L273;
+        _L268= _L271 + _L270;
+        _L269= 615.0;
+        _L270= 107.0;
+        _L271= _L267 * _L269;
+        _L273= 0.2;
+        _L279= _L282 * _L280;
+        _L280= 1225.0;
+        _L281= 230.0;
+        _L282= _L241 - _L284;
+        _L283= _L279 + _L281;
+        _L284= 0.4;
+        _L285= _L289 * _L287;
+        _L286= _L285 + _L290;
+        _L287= 150.0;
+        _L288= 0.8;
+        _L289= _L241 - _L288;
+        _L290= 720.0;
+        _L291= 46.1;
+        _L292= _L186 - _L293;
+        _L293= 0.8;
+        _L294= _L292 * _L295;
+        _L295= 180.5;
+        _L297= _L291 - _L294;
+        _L298= _L135 - _L137;
+        _L299= _L300 / _L304;
+        _L300= 50.0;
+        _L301= _L135 <= _L137;
+        _L302= _L298 = _L303;
+        _L303= 0.0;
+        _L304= if _L302 then _L305 else _L298;
+        _L305= 1.0;
+        _L306= fby(_L130; 1; 0.0);
+        TorqueTgLocal= _L306;
+        _L308= fby(_L190; 1; 0.0);
+        TorqueRdLocal= _L309;
+        _L309= if _L187 then _L310 else _L308;
+        _L310= 0.0;
+        _L311= ClockTime;
+        _L312= _L311 / _L313;
+        _L313= LaunchTime;
+        _L314= 0.8;
+        _L315= _L312 < _L314;
+        _L316= if _L315 then _L317 else _L324;
+        _L317= 100.0;
+        _L318= 0.8;
+        _L319= _L312 - _L318;
+        _L320= _L319 * _L321;
+        _L321= 500.0;
+        _L323= 100.0;
+        _L324= _L323 - _L320;
       tel
       until
         if AtNormalPhaseLocal do restart NormalPhase;
@@ -268,6 +521,42 @@ let
         _L18 : int;
         _L19 : bool;
         _L21 : real;
+        _L32 : real;
+        _L30 : real;
+        _L28 : real;
+        _L33 : bool;
+        _L35 : real;
+        _L36 : real;
+        _L38 : real;
+        _L42 : real;
+        _L41 : real;
+        _L44 : real;
+        _L43 : real;
+        _L45 : int;
+        _L53 : real;
+        _L54 : real;
+        _L55 : real;
+        _L57 : real;
+        _L56 : real;
+        _L59 : real;
+        _L60 : real;
+        _L61 : real;
+        _L62 : int;
+        _L63 : int;
+        _L64 : int;
+        _L65 : int;
+        _L72 : real;
+        _L69 : real;
+        _L68 : real;
+        _L67 : real;
+        _L66 : real;
+        _L83 : real;
+        _L82 : real;
+        _L81 : real;
+        _L79 : real;
+        _L78 : real;
+        _L77 : real;
+        _L74 : real;
       let
         _L5= 21;
         color_2= _L6;
@@ -283,14 +572,76 @@ let
         _L11= false;
         _L12= true;
         NormalPhaseVisibleLocal= _L12;
-        _L13= 10.0;
-        AcRdValueLocal= _L13;
+        _L13= 750.0;
+        AltitudeValueLocal= _L13;
         color_5= _L18;
         _L18= 55;
         _L19= false;
         LaunchVisibleLocal= _L19;
         FuelMeterLocal= _L21;
         _L21= 0.0;
+        LongitudeLocal= _L28;
+        _L28= _L32 + _L30;
+        _L30= 20.0;
+        _L32= fby(_L35; 4; 0.0);
+        _L33= _L28 >= _L36;
+        _L35= if _L33 then _L38 else _L28;
+        _L36= 180.0;
+        _L38= -180.0;
+        _L41= 0.0;
+        SpinTgLocal= _L41;
+        _L42= 10.0;
+        SpinRdLocal= _L42;
+        TorqueTgLocal= _L44;
+        _L43= 0.0;
+        TorqueRdLocal= _L43;
+        _L44= 0.0;
+        _L45= _L64 mod _L63;
+        _L53=
+          (case _L45 of
+          | 0: _L54
+          | 1: _L55
+          | 2: _L56
+          | 3: _L57
+          | 4: _L59
+          | 5: _L60
+          | 6: _L61
+          | 7: _L72
+          | 8: _L66
+          | 9: _L68
+          | 10: _L67
+          | 11: _L69
+          | 12: _L77
+          | 13: _L74
+          | 14: _L79
+          | 15: _L82
+          | 16: _L78
+          | 17: _L83
+          | _: _L81);
+        _L54= 0.0;
+        _L55= 10.2606042998;
+        _L56= 19.2836282906;
+        _L57= 25.9807621135;
+        _L59= 29.5442325904;
+        _L60= 29.5442325904;
+        _L61= 25.9807621135;
+        _L62= fby(_L45; 4; 0);
+        _L63= 18;
+        _L64= _L62 + _L65;
+        _L65= 1;
+        _L66= 10.2606042998;
+        _L67= -10.2606042998;
+        _L68= 0.0;
+        _L69= -19.2836282906;
+        _L72= 19.2836282906;
+        LatitudeLocal= _L53;
+        _L74= -29.5442325904;
+        _L77= -25.9807621135;
+        _L78= -19.2836282906;
+        _L79= -29.5442325904;
+        _L81= 0.0;
+        _L82= -25.9807621135;
+        _L83= -10.2606042998;
       tel
   returns ..;
   _L7= PassarFaseBtn;
@@ -328,8 +679,8 @@ let
   _L34= Power;
   AtAcquisition= _L36;
   _L36= false;
-  AcRdValue= _L38;
-  _L38= AcRdValueLocal;
+  AltitudeValue= _L38;
+  _L38= AltitudeValueLocal;
   AtNormalPhase= _L36;
   _L41= color_5;
   ColorIndex5= _L41;
@@ -341,18 +692,30 @@ let
   _L44= _L43 * _L45;
   _L45= 25.0;
   _L46= int  _L44;
+  SAT_Latitude_Value= _L50;
+  SAT_Longitude_Value= _L49;
+  _L49= LongitudeLocal;
+  _L50= LatitudeLocal;
+  _L51= SpinRdLocal;
+  _L52= SpinTgLocal;
+  SpinRd= _L51;
+  SpinTg= _L52;
+  _L53= TorqueRdLocal;
+  _L54= TorqueTgLocal;
+  TorqueRd= _L53;
+  TorqueTg= _L54;
 tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:54
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/github/si-lansab/Satellite/TS02/UserApplication/ReadSensors.xscade
-** Generation date: 2014-11-18T21:38:54
+** Command: x2s613 C:/ITA/TS02_2Sprint/UserApplication/ReadSensors.xscade
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 
-/* xscade source: C:/github/si-lansab/Satellite/TS02/UserApplication/ReadSensors.xscade */
+/* xscade source: C:/ITA/TS02_2Sprint/UserApplication/ReadSensors.xscade */
 node ReadSensors(
     Gyroscopes : bool last = true;
     Accelerometers : bool last = true;
@@ -375,14 +738,14 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:54
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/github/si-lansab/Satellite/TS02/UserApplication/TestActuators.xscade
-** Generation date: 2014-11-18T21:38:54
+** Command: x2s613 C:/ITA/TS02_2Sprint/UserApplication/TestActuators.xscade
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 
-/* xscade source: C:/github/si-lansab/Satellite/TS02/UserApplication/TestActuators.xscade */
+/* xscade source: C:/ITA/TS02_2Sprint/UserApplication/TestActuators.xscade */
 node TestActuators(
     Reactionwheels : bool last = true;
     MagneticTorquers : bool last = true)
@@ -400,14 +763,14 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:54
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/github/si-lansab/Satellite/TS02/UserApplication/TakePicture.xscade
-** Generation date: 2014-11-18T21:38:54
+** Command: x2s613 C:/ITA/TS02_2Sprint/UserApplication/TakePicture.xscade
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 
-/* xscade source: C:/github/si-lansab/Satellite/TS02/UserApplication/TakePicture.xscade */
+/* xscade source: C:/ITA/TS02_2Sprint/UserApplication/TakePicture.xscade */
 node TakePicture() returns (TakingPicture : bool)
 var
   _L1 : bool;
@@ -418,14 +781,14 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:54
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
-** Command: x2s613 C:/github/si-lansab/Satellite/TS02/UserApplication/controlAlgorithm.xscade
-** Generation date: 2014-11-18T21:38:54
+** Command: x2s613 C:/ITA/TS02_2Sprint/UserApplication/controlAlgorithm.xscade
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 
-/* xscade source: C:/github/si-lansab/Satellite/TS02/UserApplication/controlAlgorithm.xscade */
+/* xscade source: C:/ITA/TS02_2Sprint/UserApplication/controlAlgorithm.xscade */
 node controlAlgorithm() returns (ControlAlgorithmActive : bool)
 var
   _L2 : bool;
@@ -436,11 +799,11 @@ tel
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:54
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libdigital/digital.xscade
-** Generation date: 2014-11-18T21:38:54
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libdigital/digital.xscade */
@@ -826,11 +1189,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libdigital/TruthTables.xscade
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libdigital/TruthTables.xscade */
@@ -989,11 +1352,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:44
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/liblinear/linear.xscade
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/liblinear/linear.xscade */
@@ -1334,11 +1697,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/liblinear/filters.xscade
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/liblinear/filters.xscade */
@@ -2020,11 +2383,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmath/vect.xscade
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmath/vect.xscade */
@@ -2101,11 +2464,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmath/math.xscade
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmath/math.xscade */
@@ -2612,11 +2975,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmathext/mathext.xscade
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libmathext/mathext.xscade */
@@ -2750,11 +3113,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libpwlinear/pwlinear.xscade
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libpwlinear/pwlinear.xscade */
@@ -3118,11 +3481,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libpwlinear/lut.xscade
-** Generation date: 2014-11-18T21:38:55
+** Generation date: 2014-11-23T21:47:45
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libpwlinear/lut.xscade */
@@ -4241,11 +4604,11 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:56
+** Generation date: 2014-11-23T21:47:46
 *************************************************************$ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: x2s613 C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libverif/libverif.xscade
-** Generation date: 2014-11-18T21:38:56
+** Generation date: 2014-11-23T21:47:46
 *************************************************************$ */
 
 /* xscade source: C:/Program Files (x86)/Esterel Technologies/Esterel SCADE 6.4.2/SCADE/libraries/libverif/libverif.xscade */
@@ -4371,5 +4734,5 @@ end;
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** -
-** Generation date: 2014-11-18T21:38:56
+** Generation date: 2014-11-23T21:47:46
 *************************************************************$ */

@@ -73,6 +73,9 @@ typedef struct {
 #define VARC_OperationalScenario_Gyroscopes(context) context.SAO_CTX_inC_OperationalScenario.Gyroscopes  /* OperationalScenario/Gyroscopes */
 #define VAR_OperationalScenario_Gyroscopes VARC_OperationalScenario_Gyroscopes(CTX_OperationalScenario)
 
+#define VARC_OperationalScenario_Input13(context) context.SAO_CTX_inC_OperationalScenario.Input13  /* OperationalScenario/Input13 */
+#define VAR_OperationalScenario_Input13 VARC_OperationalScenario_Input13(CTX_OperationalScenario)
+
 
 /*$**********************************************************
 *                           OUTPUTS
@@ -111,8 +114,8 @@ typedef struct {
 #define VARC_OperationalScenario_NormalPhaseVisible(context) context.SAO_CTX_outC_OperationalScenario.NormalPhaseVisible  /* OperationalScenario/NormalPhaseVisible */
 #define VAR_OperationalScenario_NormalPhaseVisible VARC_OperationalScenario_NormalPhaseVisible(CTX_OperationalScenario)
 
-#define VARC_OperationalScenario_AcRdValue(context) context.SAO_CTX_outC_OperationalScenario.AcRdValue  /* OperationalScenario/AcRdValue */
-#define VAR_OperationalScenario_AcRdValue VARC_OperationalScenario_AcRdValue(CTX_OperationalScenario)
+#define VARC_OperationalScenario_AltitudeValue(context) context.SAO_CTX_outC_OperationalScenario.AltitudeValue  /* OperationalScenario/AltitudeValue */
+#define VAR_OperationalScenario_AltitudeValue VARC_OperationalScenario_AltitudeValue(CTX_OperationalScenario)
 
 #define VARC_OperationalScenario_ColorIndex5(context) context.SAO_CTX_outC_OperationalScenario.ColorIndex5  /* OperationalScenario/ColorIndex5 */
 #define VAR_OperationalScenario_ColorIndex5 VARC_OperationalScenario_ColorIndex5(CTX_OperationalScenario)
@@ -125,6 +128,24 @@ typedef struct {
 
 #define VARC_OperationalScenario_FuelMeterGraphic(context) context.SAO_CTX_outC_OperationalScenario.FuelMeterGraphic  /* OperationalScenario/FuelMeterGraphic */
 #define VAR_OperationalScenario_FuelMeterGraphic VARC_OperationalScenario_FuelMeterGraphic(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SAT_Longitude_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Longitude_Value  /* OperationalScenario/SAT_Longitude_Value */
+#define VAR_OperationalScenario_SAT_Longitude_Value VARC_OperationalScenario_SAT_Longitude_Value(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SAT_Latitude_Value(context) context.SAO_CTX_outC_OperationalScenario.SAT_Latitude_Value  /* OperationalScenario/SAT_Latitude_Value */
+#define VAR_OperationalScenario_SAT_Latitude_Value VARC_OperationalScenario_SAT_Latitude_Value(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SpinRd(context) context.SAO_CTX_outC_OperationalScenario.SpinRd  /* OperationalScenario/SpinRd */
+#define VAR_OperationalScenario_SpinRd VARC_OperationalScenario_SpinRd(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SpinTg(context) context.SAO_CTX_outC_OperationalScenario.SpinTg  /* OperationalScenario/SpinTg */
+#define VAR_OperationalScenario_SpinTg VARC_OperationalScenario_SpinTg(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_TorqueRd(context) context.SAO_CTX_outC_OperationalScenario.TorqueRd  /* OperationalScenario/TorqueRd */
+#define VAR_OperationalScenario_TorqueRd VARC_OperationalScenario_TorqueRd(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_TorqueTg(context) context.SAO_CTX_outC_OperationalScenario.TorqueTg  /* OperationalScenario/TorqueTg */
+#define VAR_OperationalScenario_TorqueTg VARC_OperationalScenario_TorqueTg(CTX_OperationalScenario)
 
 
 /*$**********************************************************
@@ -162,6 +183,8 @@ typedef struct {
 #define CPY_upDateSw(DST, SRC) DST = SRC
 #define T_Gyroscopes kcg_bool
 #define CPY_Gyroscopes(DST, SRC) DST = SRC
+#define T_Input13 kcg_bool
+#define CPY_Input13(DST, SRC) DST = SRC
 #define T_StartLaunchPhase kcg_bool
 #define CPY_StartLaunchPhase(DST, SRC) DST = SRC
 #define T_Layer1Active kcg_bool
@@ -184,8 +207,8 @@ typedef struct {
 #define CPY_AttitudeVisible(DST, SRC) DST = SRC
 #define T_NormalPhaseVisible kcg_bool
 #define CPY_NormalPhaseVisible(DST, SRC) DST = SRC
-#define T_AcRdValue kcg_real
-#define CPY_AcRdValue(DST, SRC) DST = SRC
+#define T_AltitudeValue kcg_real
+#define CPY_AltitudeValue(DST, SRC) DST = SRC
 #define T_ColorIndex5 kcg_int
 #define CPY_ColorIndex5(DST, SRC) DST = SRC
 #define T_LaunchVisible kcg_bool
@@ -194,6 +217,18 @@ typedef struct {
 #define CPY_FuelMeter(DST, SRC) DST = SRC
 #define T_FuelMeterGraphic kcg_int
 #define CPY_FuelMeterGraphic(DST, SRC) DST = SRC
+#define T_SAT_Longitude_Value kcg_real
+#define CPY_SAT_Longitude_Value(DST, SRC) DST = SRC
+#define T_SAT_Latitude_Value kcg_real
+#define CPY_SAT_Latitude_Value(DST, SRC) DST = SRC
+#define T_SpinRd kcg_real
+#define CPY_SpinRd(DST, SRC) DST = SRC
+#define T_SpinTg kcg_real
+#define CPY_SpinTg(DST, SRC) DST = SRC
+#define T_TorqueRd kcg_real
+#define CPY_TorqueRd(DST, SRC) DST = SRC
+#define T_TorqueTg kcg_real
+#define CPY_TorqueTg(DST, SRC) DST = SRC
 
 
 /*$**********************************************************
