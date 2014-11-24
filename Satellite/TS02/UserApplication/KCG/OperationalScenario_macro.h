@@ -147,6 +147,12 @@ typedef struct {
 #define VARC_OperationalScenario_TorqueTg(context) context.SAO_CTX_outC_OperationalScenario.TorqueTg  /* OperationalScenario/TorqueTg */
 #define VAR_OperationalScenario_TorqueTg VARC_OperationalScenario_TorqueTg(CTX_OperationalScenario)
 
+#define VARC_OperationalScenario_SAT_RadialAc(context) context.SAO_CTX_outC_OperationalScenario.SAT_RadialAc  /* OperationalScenario/SAT_RadialAc */
+#define VAR_OperationalScenario_SAT_RadialAc VARC_OperationalScenario_SAT_RadialAc(CTX_OperationalScenario)
+
+#define VARC_OperationalScenario_SAT_SolarRef(context) context.SAO_CTX_outC_OperationalScenario.SAT_SolarRef  /* OperationalScenario/SAT_SolarRef */
+#define VAR_OperationalScenario_SAT_SolarRef VARC_OperationalScenario_SAT_SolarRef(CTX_OperationalScenario)
+
 
 /*$**********************************************************
 *                           ELEMENT ACCESS
@@ -229,6 +235,10 @@ typedef struct {
 #define CPY_TorqueRd(DST, SRC) DST = SRC
 #define T_TorqueTg kcg_real
 #define CPY_TorqueTg(DST, SRC) DST = SRC
+#define T_SAT_RadialAc kcg_real
+#define CPY_SAT_RadialAc(DST, SRC) DST = SRC
+#define T_SAT_SolarRef kcg_real
+#define CPY_SAT_SolarRef(DST, SRC) DST = SRC
 
 
 /*$**********************************************************

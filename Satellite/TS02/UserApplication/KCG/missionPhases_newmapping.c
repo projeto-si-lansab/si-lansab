@@ -31,16 +31,16 @@ MAP_DECL(scope_7, 4);
 MAP_DECL(scope_6, 6);
 MAP_DECL(scope_5, 32);
 MAP_DECL(scope_2, 4);
-MAP_DECL(scope_1, 106);
+MAP_DECL(scope_1, 114);
 MAP_DECL(scope_0, 1);
 
-/* struct__5707 */
+/* struct__5723 */
 static const MappingEntry scope_23_entries[2] = {
-  /* 0 */ { MAP_FIELD, ".idx", NULL, sizeof(kcg_int), offsetof(struct__5707, idx), &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 1 */ { MAP_FIELD, ".items", NULL, sizeof(array_real_4), offsetof(struct__5707, items), &_Type_array_real_4_Utils, NULL, NULL, &scope_22}
+  /* 0 */ { MAP_FIELD, ".idx", NULL, sizeof(kcg_int), offsetof(struct__5723, idx), &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 1 */ { MAP_FIELD, ".items", NULL, sizeof(array_real_4), offsetof(struct__5723, items), &_Type_array_real_4_Utils, NULL, NULL, &scope_22}
 };
 static const MappingScope scope_23 = {
-  "struct__5707",
+  "struct__5723",
   scope_23_entries, 2,
 };
 
@@ -53,13 +53,13 @@ static const MappingScope scope_22 = {
   scope_22_entries, 1,
 };
 
-/* struct__5699 */
+/* struct__5715 */
 static const MappingEntry scope_21_entries[2] = {
-  /* 0 */ { MAP_FIELD, ".idx", NULL, sizeof(kcg_int), offsetof(struct__5699, idx), &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 1 */ { MAP_FIELD, ".items", NULL, sizeof(array_int_4), offsetof(struct__5699, items), &_Type_array_int_4_Utils, NULL, NULL, &scope_20}
+  /* 0 */ { MAP_FIELD, ".idx", NULL, sizeof(kcg_int), offsetof(struct__5715, idx), &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 1 */ { MAP_FIELD, ".items", NULL, sizeof(array_int_4), offsetof(struct__5715, items), &_Type_array_int_4_Utils, NULL, NULL, &scope_20}
 };
 static const MappingScope scope_21 = {
-  "struct__5699",
+  "struct__5715",
   scope_21_entries, 2,
 };
 
@@ -72,13 +72,13 @@ static const MappingScope scope_20 = {
   scope_20_entries, 1,
 };
 
-/* struct__5691 */
+/* struct__5707 */
 static const MappingEntry scope_19_entries[2] = {
-  /* 0 */ { MAP_FIELD, ".f", NULL, sizeof(kcg_real), offsetof(struct__5691, f), &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 1 */ { MAP_FIELD, ".k", NULL, sizeof(kcg_int), offsetof(struct__5691, k), &_Type_kcg_int_Utils, NULL, NULL, NULL}
+  /* 0 */ { MAP_FIELD, ".f", NULL, sizeof(kcg_real), offsetof(struct__5707, f), &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 1 */ { MAP_FIELD, ".k", NULL, sizeof(kcg_int), offsetof(struct__5707, k), &_Type_kcg_int_Utils, NULL, NULL, NULL}
 };
 static const MappingScope scope_19 = {
-  "struct__5691",
+  "struct__5707",
   scope_19_entries, 2,
 };
 
@@ -94,7 +94,7 @@ static const MappingEntry scope_14_entries[49] = {
   /* 7 */ { MAP_LOCAL, "_L28", NULL, sizeof(kcg_real), (int)&outputs_ctx._L28_OpPhases_NormalPhase, &_Type_kcg_real_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 8 */ { MAP_LOCAL, "_L30", NULL, sizeof(kcg_real), (int)&outputs_ctx._L30_OpPhases_NormalPhase, &_Type_kcg_real_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 9 */ { MAP_LOCAL, "_L32", NULL, sizeof(kcg_real), (int)&outputs_ctx._L32_OpPhases_NormalPhase, &_Type_kcg_real_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
-  /* 10 */ { MAP_LOCAL, "_L32@fby", NULL, sizeof(struct__5707), (int)&outputs_ctx.fby__L32_OpPhases_NormalPhase, &_Type_struct__5707_Utils, NULL, NULL, &scope_23},
+  /* 10 */ { MAP_LOCAL, "_L32@fby", NULL, sizeof(struct__5723), (int)&outputs_ctx.fby__L32_OpPhases_NormalPhase, &_Type_struct__5723_Utils, NULL, NULL, &scope_23},
   /* 11 */ { MAP_LOCAL, "_L33", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L33_OpPhases_NormalPhase, &_Type_kcg_bool_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 12 */ { MAP_LOCAL, "_L35", NULL, sizeof(kcg_real), (int)&outputs_ctx._L35_OpPhases_NormalPhase, &_Type_kcg_real_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 13 */ { MAP_LOCAL, "_L36", NULL, sizeof(kcg_real), (int)&outputs_ctx._L36_OpPhases_NormalPhase, &_Type_kcg_real_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
@@ -115,7 +115,7 @@ static const MappingEntry scope_14_entries[49] = {
   /* 28 */ { MAP_LOCAL, "_L60", NULL, sizeof(kcg_real), (int)&outputs_ctx._L60_OpPhases_NormalPhase, &_Type_kcg_real_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 29 */ { MAP_LOCAL, "_L61", NULL, sizeof(kcg_real), (int)&outputs_ctx._L61_OpPhases_NormalPhase, &_Type_kcg_real_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 30 */ { MAP_LOCAL, "_L62", NULL, sizeof(kcg_int), (int)&outputs_ctx._L62_OpPhases_NormalPhase, &_Type_kcg_int_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
-  /* 31 */ { MAP_LOCAL, "_L62@fby", NULL, sizeof(struct__5699), (int)&outputs_ctx.fby__L62_OpPhases_NormalPhase, &_Type_struct__5699_Utils, NULL, NULL, &scope_21},
+  /* 31 */ { MAP_LOCAL, "_L62@fby", NULL, sizeof(struct__5715), (int)&outputs_ctx.fby__L62_OpPhases_NormalPhase, &_Type_struct__5715_Utils, NULL, NULL, &scope_21},
   /* 32 */ { MAP_LOCAL, "_L63", NULL, sizeof(kcg_int), (int)&outputs_ctx._L63_OpPhases_NormalPhase, &_Type_kcg_int_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 33 */ { MAP_LOCAL, "_L64", NULL, sizeof(kcg_int), (int)&outputs_ctx._L64_OpPhases_NormalPhase, &_Type_kcg_int_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 34 */ { MAP_LOCAL, "_L65", NULL, sizeof(kcg_int), (int)&outputs_ctx._L65_OpPhases_NormalPhase, &_Type_kcg_int_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
@@ -411,7 +411,7 @@ static const MappingScope scope_2 = {
 };
 
 /* OperationalScenario/ OperationalScenario */
-static const MappingEntry scope_1_entries[106] = {
+static const MappingEntry scope_1_entries[114] = {
   /* 0 */ { MAP_LOCAL, "@kcg2", NULL, sizeof(kcg_bool), (int)&outputs_ctx.init4, &_Type_kcg_bool_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
   /* 1 */ { MAP_LOCAL, "@kcg3", NULL, sizeof(kcg_bool), (int)&outputs_ctx.init3, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
   /* 2 */ { MAP_LOCAL, "@kcg4", NULL, sizeof(kcg_bool), (int)&outputs_ctx.init2, &_Type_kcg_bool_Utils, NULL, NULL /* CLOCK OpPhases_state_act */, NULL},
@@ -459,69 +459,77 @@ static const MappingEntry scope_1_entries[106] = {
   /* 44 */ { MAP_INPUT, "PassarFaseBtn", NULL, sizeof(kcg_bool), (int)&inputs_ctx.PassarFaseBtn, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
   /* 45 */ { MAP_INPUT, "Power", NULL, sizeof(kcg_bool), (int)&inputs_ctx.Power, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
   /* 46 */ { MAP_LOCAL, "PowerLocal", NULL, sizeof(kcg_bool), (int)&outputs_ctx.PowerLocal, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 47 */ { MAP_INPUT, "Reactionwheels", NULL, sizeof(kcg_bool), (int)&inputs_ctx.Reactionwheels, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 48 */ { MAP_LOCAL, "Reactionwheels@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_Reactionwheels, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 49 */ { MAP_LOCAL, "ReactionwheelsLocal", NULL, sizeof(kcg_bool), (int)&outputs_ctx.ReactionwheelsLocal, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 50 */ { MAP_OUTPUT, "SAT_Latitude_Value", NULL, sizeof(kcg_real), (int)&outputs_ctx.SAT_Latitude_Value, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 51 */ { MAP_OUTPUT, "SAT_Longitude_Value", NULL, sizeof(kcg_real), (int)&outputs_ctx.SAT_Longitude_Value, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 52 */ { MAP_OUTPUT, "SpinRd", NULL, sizeof(kcg_real), (int)&outputs_ctx.SpinRd, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 53 */ { MAP_LOCAL, "SpinRdLocal", NULL, sizeof(kcg_real), (int)&outputs_ctx.SpinRdLocal, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 54 */ { MAP_OUTPUT, "SpinTg", NULL, sizeof(kcg_real), (int)&outputs_ctx.SpinTg, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 55 */ { MAP_LOCAL, "SpinTgLocal", NULL, sizeof(kcg_real), (int)&outputs_ctx.SpinTgLocal, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 56 */ { MAP_OUTPUT, "StartLaunchPhase", NULL, sizeof(kcg_bool), (int)&outputs_ctx.StartLaunchPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 57 */ { MAP_INPUT, "SunSensor", NULL, sizeof(kcg_bool), (int)&inputs_ctx.SunSensor, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 58 */ { MAP_LOCAL, "SunSensor@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_SunSensor, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 59 */ { MAP_LOCAL, "SunSensorLocal", NULL, sizeof(kcg_bool), (int)&outputs_ctx.SunSensorLocal, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 60 */ { MAP_INPUT, "Telemetry", NULL, sizeof(kcg_int), (int)&inputs_ctx.Telemetry, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 61 */ { MAP_LOCAL, "Telemetry@mem", NULL, sizeof(kcg_int), (int)&outputs_ctx.rem_Telemetry, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 62 */ { MAP_OUTPUT, "TorqueRd", NULL, sizeof(kcg_real), (int)&outputs_ctx.TorqueRd, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 63 */ { MAP_LOCAL, "TorqueRdLocal", NULL, sizeof(kcg_real), (int)&outputs_ctx.TorqueRdLocal, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 64 */ { MAP_OUTPUT, "TorqueTg", NULL, sizeof(kcg_real), (int)&outputs_ctx.TorqueTg, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 65 */ { MAP_LOCAL, "TorqueTgLocal", NULL, sizeof(kcg_real), (int)&outputs_ctx.TorqueTgLocal, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 66 */ { MAP_LOCAL, "_L11", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L11, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 67 */ { MAP_LOCAL, "_L12", NULL, sizeof(kcg_int), (int)&outputs_ctx._L12, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 68 */ { MAP_LOCAL, "_L13", NULL, sizeof(kcg_int), (int)&outputs_ctx._L13, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 69 */ { MAP_LOCAL, "_L14", NULL, sizeof(kcg_int), (int)&outputs_ctx._L14, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 70 */ { MAP_LOCAL, "_L15", NULL, sizeof(kcg_int), (int)&outputs_ctx._L15, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 71 */ { MAP_LOCAL, "_L16", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L16, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 72 */ { MAP_LOCAL, "_L19", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L19, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 73 */ { MAP_LOCAL, "_L20", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L20, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 74 */ { MAP_LOCAL, "_L22", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L22, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 75 */ { MAP_LOCAL, "_L31", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L31, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 76 */ { MAP_LOCAL, "_L32", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L32, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 77 */ { MAP_LOCAL, "_L34", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L34, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 78 */ { MAP_LOCAL, "_L36", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L36, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 79 */ { MAP_LOCAL, "_L38", NULL, sizeof(kcg_real), (int)&outputs_ctx._L38, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 80 */ { MAP_LOCAL, "_L41", NULL, sizeof(kcg_int), (int)&outputs_ctx._L41, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 81 */ { MAP_LOCAL, "_L42", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L42, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 82 */ { MAP_LOCAL, "_L43", NULL, sizeof(kcg_real), (int)&outputs_ctx._L43, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 83 */ { MAP_LOCAL, "_L44", NULL, sizeof(kcg_real), (int)&outputs_ctx._L44, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 84 */ { MAP_LOCAL, "_L45", NULL, sizeof(kcg_real), (int)&outputs_ctx._L45, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 85 */ { MAP_LOCAL, "_L46", NULL, sizeof(kcg_int), (int)&outputs_ctx._L46, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 86 */ { MAP_LOCAL, "_L49", NULL, sizeof(kcg_real), (int)&outputs_ctx._L49, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 87 */ { MAP_LOCAL, "_L50", NULL, sizeof(kcg_real), (int)&outputs_ctx._L50, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 88 */ { MAP_LOCAL, "_L51", NULL, sizeof(kcg_real), (int)&outputs_ctx._L51, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 89 */ { MAP_LOCAL, "_L52", NULL, sizeof(kcg_real), (int)&outputs_ctx._L52, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 90 */ { MAP_LOCAL, "_L53", NULL, sizeof(kcg_real), (int)&outputs_ctx._L53, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 91 */ { MAP_LOCAL, "_L54", NULL, sizeof(kcg_real), (int)&outputs_ctx._L54, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 92 */ { MAP_LOCAL, "_L7", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L7, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 93 */ { MAP_LOCAL, "_L8", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L8, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 94 */ { MAP_LOCAL, "_L9", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L9, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 95 */ { MAP_LOCAL, "color", NULL, sizeof(kcg_int), (int)&outputs_ctx.color, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 96 */ { MAP_LOCAL, "color3", NULL, sizeof(kcg_int), (int)&outputs_ctx.color3, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 97 */ { MAP_LOCAL, "color4", NULL, sizeof(kcg_int), (int)&outputs_ctx.color4, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 98 */ { MAP_LOCAL, "color_2", NULL, sizeof(kcg_int), (int)&outputs_ctx.color_2, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 99 */ { MAP_LOCAL, "color_5", NULL, sizeof(kcg_int), (int)&outputs_ctx.color_5, &_Type_kcg_int_Utils, NULL, NULL, NULL},
-  /* 100 */ { MAP_INPUT, "picLocation", NULL, sizeof(kcg_real), (int)&inputs_ctx.picLocation, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 101 */ { MAP_LOCAL, "picLocation@mem", NULL, sizeof(kcg_real), (int)&outputs_ctx.rem_picLocation, &_Type_kcg_real_Utils, NULL, NULL, NULL},
-  /* 102 */ { MAP_INPUT, "takePict", NULL, sizeof(kcg_bool), (int)&inputs_ctx.takePict, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 103 */ { MAP_LOCAL, "takePict@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_takePict, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 104 */ { MAP_INPUT, "upDateSw", NULL, sizeof(kcg_bool), (int)&inputs_ctx.upDateSw, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
-  /* 105 */ { MAP_LOCAL, "upDateSw@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_upDateSw, &_Type_kcg_bool_Utils, NULL, NULL, NULL}
+  /* 47 */ { MAP_LOCAL, "RadialAccelerometer", NULL, sizeof(kcg_real), (int)&outputs_ctx.RadialAccelerometer, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 48 */ { MAP_INPUT, "Reactionwheels", NULL, sizeof(kcg_bool), (int)&inputs_ctx.Reactionwheels, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 49 */ { MAP_LOCAL, "Reactionwheels@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_Reactionwheels, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 50 */ { MAP_LOCAL, "ReactionwheelsLocal", NULL, sizeof(kcg_bool), (int)&outputs_ctx.ReactionwheelsLocal, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 51 */ { MAP_OUTPUT, "SAT_Latitude_Value", NULL, sizeof(kcg_real), (int)&outputs_ctx.SAT_Latitude_Value, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 52 */ { MAP_OUTPUT, "SAT_Longitude_Value", NULL, sizeof(kcg_real), (int)&outputs_ctx.SAT_Longitude_Value, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 53 */ { MAP_OUTPUT, "SAT_RadialAc", NULL, sizeof(kcg_real), (int)&outputs_ctx.SAT_RadialAc, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 54 */ { MAP_OUTPUT, "SAT_SolarRef", NULL, sizeof(kcg_real), (int)&outputs_ctx.SAT_SolarRef, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 55 */ { MAP_LOCAL, "SolarReference", NULL, sizeof(kcg_real), (int)&outputs_ctx.SolarReference, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 56 */ { MAP_OUTPUT, "SpinRd", NULL, sizeof(kcg_real), (int)&outputs_ctx.SpinRd, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 57 */ { MAP_LOCAL, "SpinRdLocal", NULL, sizeof(kcg_real), (int)&outputs_ctx.SpinRdLocal, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 58 */ { MAP_OUTPUT, "SpinTg", NULL, sizeof(kcg_real), (int)&outputs_ctx.SpinTg, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 59 */ { MAP_LOCAL, "SpinTgLocal", NULL, sizeof(kcg_real), (int)&outputs_ctx.SpinTgLocal, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 60 */ { MAP_OUTPUT, "StartLaunchPhase", NULL, sizeof(kcg_bool), (int)&outputs_ctx.StartLaunchPhase, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 61 */ { MAP_INPUT, "SunSensor", NULL, sizeof(kcg_bool), (int)&inputs_ctx.SunSensor, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 62 */ { MAP_LOCAL, "SunSensor@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_SunSensor, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 63 */ { MAP_LOCAL, "SunSensorLocal", NULL, sizeof(kcg_bool), (int)&outputs_ctx.SunSensorLocal, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 64 */ { MAP_INPUT, "Telemetry", NULL, sizeof(kcg_int), (int)&inputs_ctx.Telemetry, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 65 */ { MAP_LOCAL, "Telemetry@mem", NULL, sizeof(kcg_int), (int)&outputs_ctx.rem_Telemetry, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 66 */ { MAP_OUTPUT, "TorqueRd", NULL, sizeof(kcg_real), (int)&outputs_ctx.TorqueRd, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 67 */ { MAP_LOCAL, "TorqueRdLocal", NULL, sizeof(kcg_real), (int)&outputs_ctx.TorqueRdLocal, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 68 */ { MAP_OUTPUT, "TorqueTg", NULL, sizeof(kcg_real), (int)&outputs_ctx.TorqueTg, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 69 */ { MAP_LOCAL, "TorqueTgLocal", NULL, sizeof(kcg_real), (int)&outputs_ctx.TorqueTgLocal, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 70 */ { MAP_LOCAL, "_L11", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L11, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 71 */ { MAP_LOCAL, "_L12", NULL, sizeof(kcg_int), (int)&outputs_ctx._L12, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 72 */ { MAP_LOCAL, "_L13", NULL, sizeof(kcg_int), (int)&outputs_ctx._L13, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 73 */ { MAP_LOCAL, "_L14", NULL, sizeof(kcg_int), (int)&outputs_ctx._L14, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 74 */ { MAP_LOCAL, "_L15", NULL, sizeof(kcg_int), (int)&outputs_ctx._L15, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 75 */ { MAP_LOCAL, "_L16", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L16, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 76 */ { MAP_LOCAL, "_L19", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L19, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 77 */ { MAP_LOCAL, "_L20", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L20, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 78 */ { MAP_LOCAL, "_L22", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L22, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 79 */ { MAP_LOCAL, "_L31", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L31, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 80 */ { MAP_LOCAL, "_L32", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L32, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 81 */ { MAP_LOCAL, "_L34", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L34, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 82 */ { MAP_LOCAL, "_L36", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L36, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 83 */ { MAP_LOCAL, "_L38", NULL, sizeof(kcg_real), (int)&outputs_ctx._L38, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 84 */ { MAP_LOCAL, "_L41", NULL, sizeof(kcg_int), (int)&outputs_ctx._L41, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 85 */ { MAP_LOCAL, "_L42", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L42, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 86 */ { MAP_LOCAL, "_L43", NULL, sizeof(kcg_real), (int)&outputs_ctx._L43, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 87 */ { MAP_LOCAL, "_L44", NULL, sizeof(kcg_real), (int)&outputs_ctx._L44, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 88 */ { MAP_LOCAL, "_L45", NULL, sizeof(kcg_real), (int)&outputs_ctx._L45, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 89 */ { MAP_LOCAL, "_L46", NULL, sizeof(kcg_int), (int)&outputs_ctx._L46, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 90 */ { MAP_LOCAL, "_L49", NULL, sizeof(kcg_real), (int)&outputs_ctx._L49, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 91 */ { MAP_LOCAL, "_L50", NULL, sizeof(kcg_real), (int)&outputs_ctx._L50, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 92 */ { MAP_LOCAL, "_L51", NULL, sizeof(kcg_real), (int)&outputs_ctx._L51, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 93 */ { MAP_LOCAL, "_L52", NULL, sizeof(kcg_real), (int)&outputs_ctx._L52, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 94 */ { MAP_LOCAL, "_L53", NULL, sizeof(kcg_real), (int)&outputs_ctx._L53, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 95 */ { MAP_LOCAL, "_L54", NULL, sizeof(kcg_real), (int)&outputs_ctx._L54, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 96 */ { MAP_LOCAL, "_L57", NULL, sizeof(kcg_real), (int)&outputs_ctx._L57, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 97 */ { MAP_LOCAL, "_L58", NULL, sizeof(kcg_real), (int)&outputs_ctx._L58, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 98 */ { MAP_LOCAL, "_L59", NULL, sizeof(kcg_real), (int)&outputs_ctx._L59, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 99 */ { MAP_LOCAL, "_L61", NULL, sizeof(kcg_real), (int)&outputs_ctx._L61, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 100 */ { MAP_LOCAL, "_L7", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L7, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 101 */ { MAP_LOCAL, "_L8", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L8, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 102 */ { MAP_LOCAL, "_L9", NULL, sizeof(kcg_bool), (int)&outputs_ctx._L9, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 103 */ { MAP_LOCAL, "color", NULL, sizeof(kcg_int), (int)&outputs_ctx.color, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 104 */ { MAP_LOCAL, "color3", NULL, sizeof(kcg_int), (int)&outputs_ctx.color3, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 105 */ { MAP_LOCAL, "color4", NULL, sizeof(kcg_int), (int)&outputs_ctx.color4, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 106 */ { MAP_LOCAL, "color_2", NULL, sizeof(kcg_int), (int)&outputs_ctx.color_2, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 107 */ { MAP_LOCAL, "color_5", NULL, sizeof(kcg_int), (int)&outputs_ctx.color_5, &_Type_kcg_int_Utils, NULL, NULL, NULL},
+  /* 108 */ { MAP_INPUT, "picLocation", NULL, sizeof(kcg_real), (int)&inputs_ctx.picLocation, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 109 */ { MAP_LOCAL, "picLocation@mem", NULL, sizeof(kcg_real), (int)&outputs_ctx.rem_picLocation, &_Type_kcg_real_Utils, NULL, NULL, NULL},
+  /* 110 */ { MAP_INPUT, "takePict", NULL, sizeof(kcg_bool), (int)&inputs_ctx.takePict, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 111 */ { MAP_LOCAL, "takePict@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_takePict, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 112 */ { MAP_INPUT, "upDateSw", NULL, sizeof(kcg_bool), (int)&inputs_ctx.upDateSw, &_Type_kcg_bool_Utils, NULL, NULL, NULL},
+  /* 113 */ { MAP_LOCAL, "upDateSw@mem", NULL, sizeof(kcg_bool), (int)&outputs_ctx.rem_upDateSw, &_Type_kcg_bool_Utils, NULL, NULL, NULL}
 };
 static const MappingScope scope_1 = {
   "OperationalScenario/ OperationalScenario",
-  scope_1_entries, 106,
+  scope_1_entries, 114,
 };
 
 /*  */

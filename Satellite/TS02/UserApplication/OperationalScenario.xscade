@@ -461,6 +461,30 @@
 						<ed:Variable oid="!ed/2c29/1DAA/BC8/547166695ab2"/>
 					</pragmas>
 				</Variable>
+				<Variable name="SAT_RadialAc">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2c84/1A46/2688/54727d18cb2"/>
+					</pragmas>
+				</Variable>
+				<Variable name="SAT_SolarRef">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2c85/1A46/2688/54727d222020"/>
+					</pragmas>
+				</Variable>
 			</outputs>
 			<locals>
 				<Variable name="LaunchPhase">
@@ -794,6 +818,30 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/2c26/1DAA/BC8/5471664641aa"/>
+					</pragmas>
+				</Variable>
+				<Variable name="RadialAccelerometer">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2c2d/1A46/2688/54727c4e385f"/>
+					</pragmas>
+				</Variable>
+				<Variable name="SolarReference">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2c2e/1A46/2688/54727c631854"/>
 					</pragmas>
 				</Variable>
 				<Variable name="_L7">
@@ -1142,6 +1190,54 @@
 					</type>
 					<pragmas>
 						<ed:Variable oid="!ed/2c51/1DAA/BC8/54716745d20"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L57">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2c61/1A46/2688/54727cc06afb"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L58">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2c72/1A46/2688/54727cd327ab"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L59">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2c95/1A46/2688/54727d4575ca"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L61">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="real"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/2cac/1A46/2688/54727de14f94"/>
 					</pragmas>
 				</Variable>
 			</locals>
@@ -14008,6 +14104,126 @@
 						<ed:Equation oid="!ed/2c5b/1DAA/BC8/547167525842"/>
 					</pragmas>
 				</Equation>
+				<!-- RadialAccelerometer = _L57; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="RadialAccelerometer"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L57"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2c2f/1A46/2688/54727c9f86"/>
+					</pragmas>
+				</Equation>
+				<!-- SolarReference = _L58; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SolarReference"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L58"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2c35/1A46/2688/54727ca560c4"/>
+					</pragmas>
+				</Equation>
+				<!-- _L57 = 9.0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L57"/>
+					</lefts>
+					<right>
+						<ConstValue value="9.0"/>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2c60/1A46/2688/54727cc01110"/>
+					</pragmas>
+				</Equation>
+				<!-- _L58 = 0.0; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L58"/>
+					</lefts>
+					<right>
+						<ConstValue value="0.0"/>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2c71/1A46/2688/54727cd368bc"/>
+					</pragmas>
+				</Equation>
+				<!-- _L59 = TorqueRdLocal; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L59"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="TorqueRdLocal"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2c94/1A46/2688/54727d4529ca"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_RadialAc = _L59; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_RadialAc"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L59"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2c9a/1A46/2688/54727d6123a2"/>
+					</pragmas>
+				</Equation>
+				<!-- SAT_SolarRef = _L61; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="SAT_SolarRef"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L61"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2c9f/1A46/2688/54727d632869"/>
+					</pragmas>
+				</Equation>
+				<!-- _L61 = SolarReference; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L61"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="SolarReference"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/2cab/1A46/2688/54727de1229a"/>
+					</pragmas>
+				</Equation>
 			</data>
 			<pragmas>
 				<ed:Operator oid="!ed/20de/4995/1C44/54064c6ca35" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/4">
@@ -14872,6 +15088,102 @@
 										<Point x="22463" y="13361"/>
 										<Point x="22463" y="13361"/>
 										<Point x="23389" y="13361"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/2c2f/1A46/2688/54727c9f86">
+									<position>
+										<Point x="13573" y="13732"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2c35/1A46/2688/54727ca560c4">
+									<position>
+										<Point x="13547" y="14261"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/2c60/1A46/2688/54727cc01110">
+									<position>
+										<Point x="12753" y="13838"/>
+									</position>
+									<size>
+										<Size width="212" height="317"/>
+									</size>
+								</EquationGE>
+								<EquationGE kind="OBJ_LIT" presentable="!ed/2c71/1A46/2688/54727cd368bc">
+									<position>
+										<Point x="12806" y="14367"/>
+									</position>
+									<size>
+										<Size width="211" height="317"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2c60/1A46/2688/54727cc01110" dstEquation="!ed/2c2f/1A46/2688/54727c9f86">
+									<positions>
+										<Point x="12965" y="13996"/>
+										<Point x="13256" y="13996"/>
+										<Point x="13256" y="13996"/>
+										<Point x="13573" y="13996"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2c71/1A46/2688/54727cd368bc" dstEquation="!ed/2c35/1A46/2688/54727ca560c4">
+									<positions>
+										<Point x="13018" y="14526"/>
+										<Point x="13282" y="14526"/>
+										<Point x="13282" y="14526"/>
+										<Point x="13547" y="14526"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/2c94/1A46/2688/54727d4529ca">
+									<position>
+										<Point x="21537" y="13705"/>
+									</position>
+									<size>
+										<Size width="265" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2c9a/1A46/2688/54727d6123a2">
+									<position>
+										<Point x="23495" y="13758"/>
+									</position>
+									<size>
+										<Size width="318" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/2c9f/1A46/2688/54727d632869">
+									<position>
+										<Point x="23416" y="14314"/>
+									</position>
+									<size>
+										<Size width="317" height="503"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2c94/1A46/2688/54727d4529ca" dstEquation="!ed/2c9a/1A46/2688/54727d6123a2">
+									<positions>
+										<Point x="21802" y="13970"/>
+										<Point x="22675" y="13970"/>
+										<Point x="22675" y="14023"/>
+										<Point x="23548" y="14023"/>
+									</positions>
+								</Edge>
+								<EquationGE presentable="!ed/2cab/1A46/2688/54727de1229a">
+									<position>
+										<Point x="21669" y="14473"/>
+									</position>
+									<size>
+										<Size width="264" height="502"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2cab/1A46/2688/54727de1229a" dstEquation="!ed/2c9f/1A46/2688/54727d632869">
+									<positions>
+										<Point x="21934" y="14737"/>
+										<Point x="22701" y="14737"/>
+										<Point x="22701" y="14579"/>
+										<Point x="23469" y="14579"/>
 									</positions>
 								</Edge>
 							</presentationElements>

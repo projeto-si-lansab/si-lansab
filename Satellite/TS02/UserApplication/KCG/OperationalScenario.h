@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/ITA/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-23T21:47:49
+** Generation date: 2014-11-23T22:42:18
 *************************************************************$ */
 #ifndef _OperationalScenario_H_
 #define _OperationalScenario_H_
@@ -49,6 +49,8 @@ typedef struct {
   kcg_real /* OperationalScenario::SpinTg */ SpinTg;
   kcg_real /* OperationalScenario::TorqueRd */ TorqueRd;
   kcg_real /* OperationalScenario::TorqueTg */ TorqueTg;
+  kcg_real /* OperationalScenario::SAT_RadialAc */ SAT_RadialAc;
+  kcg_real /* OperationalScenario::SAT_SolarRef */ SAT_SolarRef;
   /* -----------------------  no local probes  ----------------------- */
   /* -------------------- initialization variables  ------------------ */
   kcg_bool init;
@@ -57,8 +59,8 @@ typedef struct {
   kcg_bool init2;
   kcg_bool init1;
   /* ----------------------- local memories  ------------------------- */
-  struct__5699 /* OperationalScenario::OpPhases::NormalPhase::_L62 */ fby__L62_OpPhases_NormalPhase;
-  struct__5707 /* OperationalScenario::OpPhases::NormalPhase::_L32 */ fby__L32_OpPhases_NormalPhase;
+  struct__5715 /* OperationalScenario::OpPhases::NormalPhase::_L62 */ fby__L62_OpPhases_NormalPhase;
+  struct__5723 /* OperationalScenario::OpPhases::NormalPhase::_L32 */ fby__L32_OpPhases_NormalPhase;
   kcg_bool /* TestActuators::ActuatorsStatus */ ActuatorsStatus_1;
   kcg_bool /* TestActuators::MagneticTorquers */ MagneticTorquers_1;
   kcg_bool /* TestActuators::Reactionwheels */ Reactionwheels_1;
@@ -335,6 +337,8 @@ typedef struct {
   kcg_real /* OperationalScenario::SpinTgLocal */ SpinTgLocal;
   kcg_real /* OperationalScenario::TorqueRdLocal */ TorqueRdLocal;
   kcg_real /* OperationalScenario::TorqueTgLocal */ TorqueTgLocal;
+  kcg_real /* OperationalScenario::RadialAccelerometer */ RadialAccelerometer;
+  kcg_real /* OperationalScenario::SolarReference */ SolarReference;
   kcg_bool /* OperationalScenario::_L7 */ _L7;
   kcg_bool /* OperationalScenario::_L8 */ _L8;
   kcg_bool /* OperationalScenario::_L9 */ _L9;
@@ -364,6 +368,10 @@ typedef struct {
   kcg_real /* OperationalScenario::_L52 */ _L52;
   kcg_real /* OperationalScenario::_L53 */ _L53;
   kcg_real /* OperationalScenario::_L54 */ _L54;
+  kcg_real /* OperationalScenario::_L57 */ _L57;
+  kcg_real /* OperationalScenario::_L58 */ _L58;
+  kcg_real /* OperationalScenario::_L59 */ _L59;
+  kcg_real /* OperationalScenario::_L61 */ _L61;
 } outC_OperationalScenario;
 
 /* ===========  node initialization and cycle functions  =========== */
@@ -377,6 +385,6 @@ extern void OperationalScenario_reset(outC_OperationalScenario *outC);
 #endif /* _OperationalScenario_H_ */
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** OperationalScenario.h
-** Generation date: 2014-11-23T21:47:49
+** Generation date: 2014-11-23T22:42:18
 *************************************************************$ */
 

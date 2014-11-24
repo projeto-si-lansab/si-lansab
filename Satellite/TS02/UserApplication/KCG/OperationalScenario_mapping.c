@@ -310,70 +310,78 @@ void _SCSIM_Mapping_OperationalScenario() {
 	pSimulator->m_pfnAddLocal(pSimulator, "SpinTgLocal", &_SCSIM_kcg_real_Utils, 266, valid, 0, 0);
 	pSimulator->m_pfnAddLocal(pSimulator, "TorqueRdLocal", &_SCSIM_kcg_real_Utils, 267, valid, 0, 0);
 	pSimulator->m_pfnAddLocal(pSimulator, "TorqueTgLocal", &_SCSIM_kcg_real_Utils, 268, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L7", &_SCSIM_kcg_bool_Utils, 269, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L8", &_SCSIM_kcg_bool_Utils, 270, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L9", &_SCSIM_kcg_bool_Utils, 271, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L11", &_SCSIM_kcg_bool_Utils, 272, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L12", &_SCSIM_kcg_int_Utils, 273, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L13", &_SCSIM_kcg_int_Utils, 274, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L14", &_SCSIM_kcg_int_Utils, 275, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L15", &_SCSIM_kcg_int_Utils, 276, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L16", &_SCSIM_kcg_bool_Utils, 277, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L19", &_SCSIM_kcg_bool_Utils, 278, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L20", &_SCSIM_kcg_bool_Utils, 279, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L22", &_SCSIM_kcg_bool_Utils, 280, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L31", &_SCSIM_kcg_bool_Utils, 281, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L32", &_SCSIM_kcg_bool_Utils, 282, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L34", &_SCSIM_kcg_bool_Utils, 283, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L36", &_SCSIM_kcg_bool_Utils, 284, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L38", &_SCSIM_kcg_real_Utils, 285, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L41", &_SCSIM_kcg_int_Utils, 286, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L42", &_SCSIM_kcg_bool_Utils, 287, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L43", &_SCSIM_kcg_real_Utils, 288, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L44", &_SCSIM_kcg_real_Utils, 289, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L45", &_SCSIM_kcg_real_Utils, 290, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L46", &_SCSIM_kcg_int_Utils, 291, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L49", &_SCSIM_kcg_real_Utils, 292, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L50", &_SCSIM_kcg_real_Utils, 293, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L51", &_SCSIM_kcg_real_Utils, 294, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L52", &_SCSIM_kcg_real_Utils, 295, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L53", &_SCSIM_kcg_real_Utils, 296, valid, 0, 0);
-	pSimulator->m_pfnAddLocal(pSimulator, "_L54", &_SCSIM_kcg_real_Utils, 297, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "StartLaunchPhase", &_SCSIM_kcg_bool_Utils, 298, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "Layer1Active", &_SCSIM_kcg_bool_Utils, 299, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "Layer1Visible", &_SCSIM_kcg_bool_Utils, 300, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "Emit2CDS", &_SCSIM_kcg_bool_Utils, 301, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex", &_SCSIM_kcg_int_Utils, 302, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex2", &_SCSIM_kcg_int_Utils, 303, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex3", &_SCSIM_kcg_int_Utils, 304, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex4", &_SCSIM_kcg_int_Utils, 305, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "GroundVisible", &_SCSIM_kcg_bool_Utils, 306, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "AttitudeVisible", &_SCSIM_kcg_bool_Utils, 307, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "NormalPhaseVisible", &_SCSIM_kcg_bool_Utils, 308, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "AltitudeValue", &_SCSIM_kcg_real_Utils, 309, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex5", &_SCSIM_kcg_int_Utils, 310, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "LaunchVisible", &_SCSIM_kcg_bool_Utils, 311, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "FuelMeter", &_SCSIM_kcg_real_Utils, 312, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "FuelMeterGraphic", &_SCSIM_kcg_int_Utils, 313, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "SAT_Longitude_Value", &_SCSIM_kcg_real_Utils, 314, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "SAT_Latitude_Value", &_SCSIM_kcg_real_Utils, 315, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "SpinRd", &_SCSIM_kcg_real_Utils, 316, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "SpinTg", &_SCSIM_kcg_real_Utils, 317, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "TorqueRd", &_SCSIM_kcg_real_Utils, 318, valid, 0, 0);
-	pSimulator->m_pfnAddOutput(pSimulator, "TorqueTg", &_SCSIM_kcg_real_Utils, 319, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Power", &_SCSIM_kcg_bool_Utils, 320, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Telemetry", &_SCSIM_kcg_int_Utils, 321, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "AttitudeReference", &_SCSIM_kcg_int_Utils, 322, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "takePict", &_SCSIM_kcg_bool_Utils, 323, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "picLocation", &_SCSIM_kcg_real_Utils, 324, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "PassarFaseBtn", &_SCSIM_kcg_bool_Utils, 325, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Accelerometers", &_SCSIM_kcg_bool_Utils, 326, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "SunSensor", &_SCSIM_kcg_bool_Utils, 327, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Reactionwheels", &_SCSIM_kcg_bool_Utils, 328, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "MagneticTorquers", &_SCSIM_kcg_bool_Utils, 329, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "upDateSw", &_SCSIM_kcg_bool_Utils, 330, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Gyroscopes", &_SCSIM_kcg_bool_Utils, 331, valid, 0, 0);
-	pSimulator->m_pfnAddInput(pSimulator, "Input13", &_SCSIM_kcg_bool_Utils, 332, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "RadialAccelerometer", &_SCSIM_kcg_real_Utils, 269, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "SolarReference", &_SCSIM_kcg_real_Utils, 270, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L7", &_SCSIM_kcg_bool_Utils, 271, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L8", &_SCSIM_kcg_bool_Utils, 272, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L9", &_SCSIM_kcg_bool_Utils, 273, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L11", &_SCSIM_kcg_bool_Utils, 274, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L12", &_SCSIM_kcg_int_Utils, 275, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L13", &_SCSIM_kcg_int_Utils, 276, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L14", &_SCSIM_kcg_int_Utils, 277, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L15", &_SCSIM_kcg_int_Utils, 278, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L16", &_SCSIM_kcg_bool_Utils, 279, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L19", &_SCSIM_kcg_bool_Utils, 280, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L20", &_SCSIM_kcg_bool_Utils, 281, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L22", &_SCSIM_kcg_bool_Utils, 282, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L31", &_SCSIM_kcg_bool_Utils, 283, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L32", &_SCSIM_kcg_bool_Utils, 284, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L34", &_SCSIM_kcg_bool_Utils, 285, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L36", &_SCSIM_kcg_bool_Utils, 286, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L38", &_SCSIM_kcg_real_Utils, 287, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L41", &_SCSIM_kcg_int_Utils, 288, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L42", &_SCSIM_kcg_bool_Utils, 289, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L43", &_SCSIM_kcg_real_Utils, 290, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L44", &_SCSIM_kcg_real_Utils, 291, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L45", &_SCSIM_kcg_real_Utils, 292, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L46", &_SCSIM_kcg_int_Utils, 293, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L49", &_SCSIM_kcg_real_Utils, 294, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L50", &_SCSIM_kcg_real_Utils, 295, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L51", &_SCSIM_kcg_real_Utils, 296, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L52", &_SCSIM_kcg_real_Utils, 297, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L53", &_SCSIM_kcg_real_Utils, 298, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L54", &_SCSIM_kcg_real_Utils, 299, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L57", &_SCSIM_kcg_real_Utils, 300, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L58", &_SCSIM_kcg_real_Utils, 301, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L59", &_SCSIM_kcg_real_Utils, 302, valid, 0, 0);
+	pSimulator->m_pfnAddLocal(pSimulator, "_L61", &_SCSIM_kcg_real_Utils, 303, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "StartLaunchPhase", &_SCSIM_kcg_bool_Utils, 304, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "Layer1Active", &_SCSIM_kcg_bool_Utils, 305, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "Layer1Visible", &_SCSIM_kcg_bool_Utils, 306, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "Emit2CDS", &_SCSIM_kcg_bool_Utils, 307, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex", &_SCSIM_kcg_int_Utils, 308, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex2", &_SCSIM_kcg_int_Utils, 309, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex3", &_SCSIM_kcg_int_Utils, 310, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex4", &_SCSIM_kcg_int_Utils, 311, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "GroundVisible", &_SCSIM_kcg_bool_Utils, 312, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "AttitudeVisible", &_SCSIM_kcg_bool_Utils, 313, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "NormalPhaseVisible", &_SCSIM_kcg_bool_Utils, 314, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "AltitudeValue", &_SCSIM_kcg_real_Utils, 315, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "ColorIndex5", &_SCSIM_kcg_int_Utils, 316, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "LaunchVisible", &_SCSIM_kcg_bool_Utils, 317, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "FuelMeter", &_SCSIM_kcg_real_Utils, 318, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "FuelMeterGraphic", &_SCSIM_kcg_int_Utils, 319, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "SAT_Longitude_Value", &_SCSIM_kcg_real_Utils, 320, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "SAT_Latitude_Value", &_SCSIM_kcg_real_Utils, 321, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "SpinRd", &_SCSIM_kcg_real_Utils, 322, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "SpinTg", &_SCSIM_kcg_real_Utils, 323, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "TorqueRd", &_SCSIM_kcg_real_Utils, 324, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "TorqueTg", &_SCSIM_kcg_real_Utils, 325, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "SAT_RadialAc", &_SCSIM_kcg_real_Utils, 326, valid, 0, 0);
+	pSimulator->m_pfnAddOutput(pSimulator, "SAT_SolarRef", &_SCSIM_kcg_real_Utils, 327, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Power", &_SCSIM_kcg_bool_Utils, 328, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Telemetry", &_SCSIM_kcg_int_Utils, 329, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "AttitudeReference", &_SCSIM_kcg_int_Utils, 330, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "takePict", &_SCSIM_kcg_bool_Utils, 331, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "picLocation", &_SCSIM_kcg_real_Utils, 332, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "PassarFaseBtn", &_SCSIM_kcg_bool_Utils, 333, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Accelerometers", &_SCSIM_kcg_bool_Utils, 334, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "SunSensor", &_SCSIM_kcg_bool_Utils, 335, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Reactionwheels", &_SCSIM_kcg_bool_Utils, 336, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "MagneticTorquers", &_SCSIM_kcg_bool_Utils, 337, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "upDateSw", &_SCSIM_kcg_bool_Utils, 338, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Gyroscopes", &_SCSIM_kcg_bool_Utils, 339, valid, 0, 0);
+	pSimulator->m_pfnAddInput(pSimulator, "Input13", &_SCSIM_kcg_bool_Utils, 340, valid, 0, 0);
 }
 
 void* _SCSIM_Get_OperationalScenario_Handle(void* pInstance, int nHandleIdent, int* pIteratorFilter, int nSize) {
@@ -915,132 +923,148 @@ void* _SCSIM_Get_OperationalScenario_Handle(void* pInstance, int nHandleIdent, i
 		case 268:
 			return &(outputs_ctx.TorqueTgLocal);
 		case 269:
-			return &(outputs_ctx._L7);
+			return &(outputs_ctx.RadialAccelerometer);
 		case 270:
-			return &(outputs_ctx._L8);
+			return &(outputs_ctx.SolarReference);
 		case 271:
-			return &(outputs_ctx._L9);
+			return &(outputs_ctx._L7);
 		case 272:
-			return &(outputs_ctx._L11);
+			return &(outputs_ctx._L8);
 		case 273:
-			return &(outputs_ctx._L12);
+			return &(outputs_ctx._L9);
 		case 274:
-			return &(outputs_ctx._L13);
+			return &(outputs_ctx._L11);
 		case 275:
-			return &(outputs_ctx._L14);
+			return &(outputs_ctx._L12);
 		case 276:
-			return &(outputs_ctx._L15);
+			return &(outputs_ctx._L13);
 		case 277:
-			return &(outputs_ctx._L16);
+			return &(outputs_ctx._L14);
 		case 278:
-			return &(outputs_ctx._L19);
+			return &(outputs_ctx._L15);
 		case 279:
-			return &(outputs_ctx._L20);
+			return &(outputs_ctx._L16);
 		case 280:
-			return &(outputs_ctx._L22);
+			return &(outputs_ctx._L19);
 		case 281:
-			return &(outputs_ctx._L31);
+			return &(outputs_ctx._L20);
 		case 282:
-			return &(outputs_ctx._L32);
+			return &(outputs_ctx._L22);
 		case 283:
-			return &(outputs_ctx._L34);
+			return &(outputs_ctx._L31);
 		case 284:
-			return &(outputs_ctx._L36);
+			return &(outputs_ctx._L32);
 		case 285:
-			return &(outputs_ctx._L38);
+			return &(outputs_ctx._L34);
 		case 286:
-			return &(outputs_ctx._L41);
+			return &(outputs_ctx._L36);
 		case 287:
-			return &(outputs_ctx._L42);
+			return &(outputs_ctx._L38);
 		case 288:
-			return &(outputs_ctx._L43);
+			return &(outputs_ctx._L41);
 		case 289:
-			return &(outputs_ctx._L44);
+			return &(outputs_ctx._L42);
 		case 290:
-			return &(outputs_ctx._L45);
+			return &(outputs_ctx._L43);
 		case 291:
-			return &(outputs_ctx._L46);
+			return &(outputs_ctx._L44);
 		case 292:
-			return &(outputs_ctx._L49);
+			return &(outputs_ctx._L45);
 		case 293:
-			return &(outputs_ctx._L50);
+			return &(outputs_ctx._L46);
 		case 294:
-			return &(outputs_ctx._L51);
+			return &(outputs_ctx._L49);
 		case 295:
-			return &(outputs_ctx._L52);
+			return &(outputs_ctx._L50);
 		case 296:
-			return &(outputs_ctx._L53);
+			return &(outputs_ctx._L51);
 		case 297:
-			return &(outputs_ctx._L54);
+			return &(outputs_ctx._L52);
 		case 298:
-			return &(outputs_ctx.StartLaunchPhase);
+			return &(outputs_ctx._L53);
 		case 299:
-			return &(outputs_ctx.Layer1Active);
+			return &(outputs_ctx._L54);
 		case 300:
-			return &(outputs_ctx.Layer1Visible);
+			return &(outputs_ctx._L57);
 		case 301:
-			return &(outputs_ctx.Emit2CDS);
+			return &(outputs_ctx._L58);
 		case 302:
-			return &(outputs_ctx.ColorIndex);
+			return &(outputs_ctx._L59);
 		case 303:
-			return &(outputs_ctx.ColorIndex2);
+			return &(outputs_ctx._L61);
 		case 304:
-			return &(outputs_ctx.ColorIndex3);
+			return &(outputs_ctx.StartLaunchPhase);
 		case 305:
-			return &(outputs_ctx.ColorIndex4);
+			return &(outputs_ctx.Layer1Active);
 		case 306:
-			return &(outputs_ctx.GroundVisible);
+			return &(outputs_ctx.Layer1Visible);
 		case 307:
-			return &(outputs_ctx.AttitudeVisible);
+			return &(outputs_ctx.Emit2CDS);
 		case 308:
-			return &(outputs_ctx.NormalPhaseVisible);
+			return &(outputs_ctx.ColorIndex);
 		case 309:
-			return &(outputs_ctx.AltitudeValue);
+			return &(outputs_ctx.ColorIndex2);
 		case 310:
-			return &(outputs_ctx.ColorIndex5);
+			return &(outputs_ctx.ColorIndex3);
 		case 311:
-			return &(outputs_ctx.LaunchVisible);
+			return &(outputs_ctx.ColorIndex4);
 		case 312:
-			return &(outputs_ctx.FuelMeter);
+			return &(outputs_ctx.GroundVisible);
 		case 313:
-			return &(outputs_ctx.FuelMeterGraphic);
+			return &(outputs_ctx.AttitudeVisible);
 		case 314:
-			return &(outputs_ctx.SAT_Longitude_Value);
+			return &(outputs_ctx.NormalPhaseVisible);
 		case 315:
-			return &(outputs_ctx.SAT_Latitude_Value);
+			return &(outputs_ctx.AltitudeValue);
 		case 316:
-			return &(outputs_ctx.SpinRd);
+			return &(outputs_ctx.ColorIndex5);
 		case 317:
-			return &(outputs_ctx.SpinTg);
+			return &(outputs_ctx.LaunchVisible);
 		case 318:
-			return &(outputs_ctx.TorqueRd);
+			return &(outputs_ctx.FuelMeter);
 		case 319:
-			return &(outputs_ctx.TorqueTg);
+			return &(outputs_ctx.FuelMeterGraphic);
 		case 320:
-			return &(inputs_ctx.Power);
+			return &(outputs_ctx.SAT_Longitude_Value);
 		case 321:
-			return &(inputs_ctx.Telemetry);
+			return &(outputs_ctx.SAT_Latitude_Value);
 		case 322:
-			return &(inputs_ctx.AttitudeReference);
+			return &(outputs_ctx.SpinRd);
 		case 323:
-			return &(inputs_ctx.takePict);
+			return &(outputs_ctx.SpinTg);
 		case 324:
-			return &(inputs_ctx.picLocation);
+			return &(outputs_ctx.TorqueRd);
 		case 325:
-			return &(inputs_ctx.PassarFaseBtn);
+			return &(outputs_ctx.TorqueTg);
 		case 326:
-			return &(inputs_ctx.Accelerometers);
+			return &(outputs_ctx.SAT_RadialAc);
 		case 327:
-			return &(inputs_ctx.SunSensor);
+			return &(outputs_ctx.SAT_SolarRef);
 		case 328:
-			return &(inputs_ctx.Reactionwheels);
+			return &(inputs_ctx.Power);
 		case 329:
-			return &(inputs_ctx.MagneticTorquers);
+			return &(inputs_ctx.Telemetry);
 		case 330:
-			return &(inputs_ctx.upDateSw);
+			return &(inputs_ctx.AttitudeReference);
 		case 331:
-			return &(inputs_ctx.Gyroscopes);
+			return &(inputs_ctx.takePict);
 		case 332:
+			return &(inputs_ctx.picLocation);
+		case 333:
+			return &(inputs_ctx.PassarFaseBtn);
+		case 334:
+			return &(inputs_ctx.Accelerometers);
+		case 335:
+			return &(inputs_ctx.SunSensor);
+		case 336:
+			return &(inputs_ctx.Reactionwheels);
+		case 337:
+			return &(inputs_ctx.MagneticTorquers);
+		case 338:
+			return &(inputs_ctx.upDateSw);
+		case 339:
+			return &(inputs_ctx.Gyroscopes);
+		case 340:
 			return &(inputs_ctx.Input13);
 		default:
 			break;

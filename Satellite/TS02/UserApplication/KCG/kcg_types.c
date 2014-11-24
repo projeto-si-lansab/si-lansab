@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/ITA/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-23T21:47:49
+** Generation date: 2014-11-23T22:42:18
 *************************************************************$ */
 
 #include "kcg_types.h"
@@ -29,7 +29,7 @@ kcg_bool kcg_comp_array_real_4(array_real_4 *kcg_c1, array_real_4 *kcg_c2)
   return kcg_equ;
 }
 
-kcg_bool kcg_comp_struct__5691(struct__5691 *kcg_c1, struct__5691 *kcg_c2)
+kcg_bool kcg_comp_struct__5707(struct__5707 *kcg_c1, struct__5707 *kcg_c2)
 {
   kcg_bool kcg_equ;
   
@@ -39,7 +39,7 @@ kcg_bool kcg_comp_struct__5691(struct__5691 *kcg_c1, struct__5691 *kcg_c2)
   return kcg_equ;
 }
 
-kcg_bool kcg_comp_struct__5699(struct__5699 *kcg_c1, struct__5699 *kcg_c2)
+kcg_bool kcg_comp_struct__5715(struct__5715 *kcg_c1, struct__5715 *kcg_c2)
 {
   kcg_bool kcg_equ;
   
@@ -49,7 +49,7 @@ kcg_bool kcg_comp_struct__5699(struct__5699 *kcg_c1, struct__5699 *kcg_c2)
   return kcg_equ;
 }
 
-kcg_bool kcg_comp_struct__5707(struct__5707 *kcg_c1, struct__5707 *kcg_c2)
+kcg_bool kcg_comp_struct__5723(struct__5723 *kcg_c1, struct__5723 *kcg_c2)
 {
   kcg_bool kcg_equ;
   
@@ -61,6 +61,6 @@ kcg_bool kcg_comp_struct__5707(struct__5707 *kcg_c1, struct__5707 *kcg_c2)
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** kcg_types.c
-** Generation date: 2014-11-23T21:47:49
+** Generation date: 2014-11-23T22:42:18
 *************************************************************$ */
 

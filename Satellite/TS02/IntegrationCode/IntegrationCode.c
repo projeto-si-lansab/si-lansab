@@ -36,6 +36,7 @@ void receiveMessage(FRAMEWORK_MESSAGE message) {
             break;
         case TS02ID:
             printf("Received: Message from TS02 to TS02 \n");
+
             break;
         case TS03ID:
             printf("Received: Message from TS03 to TS02 \n");
@@ -62,6 +63,18 @@ void buildMessage(FRAMEWORK_MESSAGE *message) {
         printf("Sent: Message from TS02 to TS02 \n");
         TS02_INPUT_INTERFACE *output2 = &(message->input_interface.ts02_input_interface);
         /*output->SignalFromTeam2 = ua_outputs.SignalToTeam2;*/
+        output2->Altitude_Value = ua_outputs.SignalToTeam2;
+
+        output2->Altitude_Value = ua_outputs.AltitudeValue;
+        output2->Latitude_Value = ua_outputs.SAT_Latitude_Value;
+        output2->Longitude_Value = ua_outputs.SAT_Longitude_Value;
+        output2->Radial_Accelerometer = ua_outputs.SAT_RadialAc;
+        output2->Solar_Reference = ua_outputs.SAT_SolarRef;
+        output2->Radial_Spin = ua_outputs.SpinRd;
+        output2->Tangential_Spin = ua_outputs.SpinTg;
+        output2->Radial_Torque = ua_outputs.TorqueRd;
+        output2->Tangential_Torque = ua_outputs.TorqueTg;
+
         break;
     case TS03ID:
         printf("Sent: Message from TS02 to TS03 \n");

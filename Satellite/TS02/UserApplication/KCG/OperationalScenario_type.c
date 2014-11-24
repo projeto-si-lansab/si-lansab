@@ -57,46 +57,6 @@ TypeUtils _SCSIM_kcg_int_Utils = {kcg_int_to_string,
 	get_kcg_int_filter_utils,
 	kcg_int_filter_size,
 	kcg_int_filter_values};
-TypeUtils _SCSIM_struct__5691_Utils = {struct__5691_to_string,
-	check_struct__5691_string,
-	string_to_struct__5691,
-	is_struct__5691_allow_double_convertion,
-	0,
-	compare_struct__5691_type,
-	get_struct__5691_signature,
-	get_struct__5691_filter_utils,
-	struct__5691_filter_size,
-	struct__5691_filter_values};
-TypeUtils _SCSIM_array_int_4_Utils = {array_int_4_to_string,
-	check_array_int_4_string,
-	string_to_array_int_4,
-	is_array_int_4_allow_double_convertion,
-	0,
-	compare_array_int_4_type,
-	get_array_int_4_signature,
-	get_array_int_4_filter_utils,
-	array_int_4_filter_size,
-	array_int_4_filter_values};
-TypeUtils _SCSIM_struct__5699_Utils = {struct__5699_to_string,
-	check_struct__5699_string,
-	string_to_struct__5699,
-	is_struct__5699_allow_double_convertion,
-	0,
-	compare_struct__5699_type,
-	get_struct__5699_signature,
-	get_struct__5699_filter_utils,
-	struct__5699_filter_size,
-	struct__5699_filter_values};
-TypeUtils _SCSIM_array_real_4_Utils = {array_real_4_to_string,
-	check_array_real_4_string,
-	string_to_array_real_4,
-	is_array_real_4_allow_double_convertion,
-	0,
-	compare_array_real_4_type,
-	get_array_real_4_signature,
-	get_array_real_4_filter_utils,
-	array_real_4_filter_size,
-	array_real_4_filter_values};
 TypeUtils _SCSIM_struct__5707_Utils = {struct__5707_to_string,
 	check_struct__5707_string,
 	string_to_struct__5707,
@@ -107,6 +67,46 @@ TypeUtils _SCSIM_struct__5707_Utils = {struct__5707_to_string,
 	get_struct__5707_filter_utils,
 	struct__5707_filter_size,
 	struct__5707_filter_values};
+TypeUtils _SCSIM_array_int_4_Utils = {array_int_4_to_string,
+	check_array_int_4_string,
+	string_to_array_int_4,
+	is_array_int_4_allow_double_convertion,
+	0,
+	compare_array_int_4_type,
+	get_array_int_4_signature,
+	get_array_int_4_filter_utils,
+	array_int_4_filter_size,
+	array_int_4_filter_values};
+TypeUtils _SCSIM_struct__5715_Utils = {struct__5715_to_string,
+	check_struct__5715_string,
+	string_to_struct__5715,
+	is_struct__5715_allow_double_convertion,
+	0,
+	compare_struct__5715_type,
+	get_struct__5715_signature,
+	get_struct__5715_filter_utils,
+	struct__5715_filter_size,
+	struct__5715_filter_values};
+TypeUtils _SCSIM_array_real_4_Utils = {array_real_4_to_string,
+	check_array_real_4_string,
+	string_to_array_real_4,
+	is_array_real_4_allow_double_convertion,
+	0,
+	compare_array_real_4_type,
+	get_array_real_4_signature,
+	get_array_real_4_filter_utils,
+	array_real_4_filter_size,
+	array_real_4_filter_values};
+TypeUtils _SCSIM_struct__5723_Utils = {struct__5723_to_string,
+	check_struct__5723_string,
+	string_to_struct__5723,
+	is_struct__5723_allow_double_convertion,
+	0,
+	compare_struct__5723_type,
+	get_struct__5723_signature,
+	get_struct__5723_filter_utils,
+	struct__5723_filter_size,
+	struct__5723_filter_values};
 TypeUtils _SCSIM_TruthTableValues_truthtables_Utils = {TruthTableValues_truthtables_to_string,
 	check_TruthTableValues_truthtables_string,
 	string_to_TruthTableValues_truthtables,
@@ -461,9 +461,9 @@ int check_kcg_int_string(const char* strValue) {
 
 
 /****************************************************************
- ** struct__5691
+ ** struct__5707
  ****************************************************************/
-static void Fill_struct__5691_StructSimValue(struct__5691 * pStruct, StructSimValue * pValues) {
+static void Fill_struct__5707_StructSimValue(struct__5707 * pStruct, StructSimValue * pValues) {
 	/*k label.*/
 	pValues[0].m_pPtr = pStruct != 0 ? &(pStruct->k) : 0;
 	pValues[0].m_pTypeUtils = &_SCSIM_kcg_int_Utils;
@@ -474,52 +474,52 @@ static void Fill_struct__5691_StructSimValue(struct__5691 * pStruct, StructSimVa
 	pValues[1].m_pszName = "f";
 }
 
-const char * struct__5691_to_string(const void* pValue) {
+const char * struct__5707_to_string(const void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5691_StructSimValue(((struct__5691*)pValue), values);
+	Fill_struct__5707_StructSimValue(((struct__5707*)pValue), values);
 	return pSimulator->m_pfnStructureToString(values, 2);
 }
 
-int string_to_struct__5691(const char* strValue, void* pValue) {
-	static struct__5691 rTemp;
+int string_to_struct__5707(const char* strValue, void* pValue) {
+	static struct__5707 rTemp;
 	int nResult = 0;
 	static StructSimValue values[2];
-	kcg_copy_struct__5691(&(rTemp), &(*((struct__5691*)pValue)));
-	Fill_struct__5691_StructSimValue(&rTemp, values);
+	kcg_copy_struct__5707(&(rTemp), &(*((struct__5707*)pValue)));
+	Fill_struct__5707_StructSimValue(&rTemp, values);
 	nResult = pSimulator->m_pfnStructureFromString(strValue, values, 2);
 	if (nResult == 1)
-		kcg_copy_struct__5691(&(*((struct__5691*)pValue)), &(rTemp));
+		kcg_copy_struct__5707(&(*((struct__5707*)pValue)), &(rTemp));
 	return nResult;
 }
 
-int compare_struct__5691_type(int* pResult, const char* toCompare, const void* pValue) {
+int compare_struct__5707_type(int* pResult, const char* toCompare, const void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5691_StructSimValue((struct__5691*)pValue, values);
+	Fill_struct__5707_StructSimValue((struct__5707*)pValue, values);
 	return pSimulator->m_pfnStructureComparison(pResult, toCompare, values, 2);
 }
 
 
-int is_struct__5691_allow_double_convertion() {
+int is_struct__5707_allow_double_convertion() {
 	return 0;
 }
 
 
-const char * get_struct__5691_signature() {
+const char * get_struct__5707_signature() {
 	static StructSimValue values[2];
-	Fill_struct__5691_StructSimValue(0, values);
+	Fill_struct__5707_StructSimValue(0, values);
 	return pSimulator->m_pfnStructureSignature(values, 2);
 }
 
-FilterUtils get_struct__5691_filter_utils(const char* strFilter, void* pValue) {
+FilterUtils get_struct__5707_filter_utils(const char* strFilter, void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5691_StructSimValue((struct__5691*)pValue, values);
+	Fill_struct__5707_StructSimValue((struct__5707*)pValue, values);
 	return pSimulator->m_pfnGetStructureFilterUtils(values, 2, strFilter);
 }
 
-const char * struct__5691_filter_values[2] = {"k", "f"};
-int check_struct__5691_string(const char* strValue) {
-	static struct__5691 rTemp;
-	return string_to_struct__5691(strValue, &rTemp);
+const char * struct__5707_filter_values[2] = {"k", "f"};
+int check_struct__5707_string(const char* strValue) {
+	static struct__5707 rTemp;
+	return string_to_struct__5707(strValue, &rTemp);
 }
 
 
@@ -565,9 +565,9 @@ int check_array_int_4_string(const char* strValue) {
 
 
 /****************************************************************
- ** struct__5699
+ ** struct__5715
  ****************************************************************/
-static void Fill_struct__5699_StructSimValue(struct__5699 * pStruct, StructSimValue * pValues) {
+static void Fill_struct__5715_StructSimValue(struct__5715 * pStruct, StructSimValue * pValues) {
 	/*idx label.*/
 	pValues[0].m_pPtr = pStruct != 0 ? &(pStruct->idx) : 0;
 	pValues[0].m_pTypeUtils = &_SCSIM_kcg_int_Utils;
@@ -578,52 +578,52 @@ static void Fill_struct__5699_StructSimValue(struct__5699 * pStruct, StructSimVa
 	pValues[1].m_pszName = "items";
 }
 
-const char * struct__5699_to_string(const void* pValue) {
+const char * struct__5715_to_string(const void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5699_StructSimValue(((struct__5699*)pValue), values);
+	Fill_struct__5715_StructSimValue(((struct__5715*)pValue), values);
 	return pSimulator->m_pfnStructureToString(values, 2);
 }
 
-int string_to_struct__5699(const char* strValue, void* pValue) {
-	static struct__5699 rTemp;
+int string_to_struct__5715(const char* strValue, void* pValue) {
+	static struct__5715 rTemp;
 	int nResult = 0;
 	static StructSimValue values[2];
-	kcg_copy_struct__5699(&(rTemp), &(*((struct__5699*)pValue)));
-	Fill_struct__5699_StructSimValue(&rTemp, values);
+	kcg_copy_struct__5715(&(rTemp), &(*((struct__5715*)pValue)));
+	Fill_struct__5715_StructSimValue(&rTemp, values);
 	nResult = pSimulator->m_pfnStructureFromString(strValue, values, 2);
 	if (nResult == 1)
-		kcg_copy_struct__5699(&(*((struct__5699*)pValue)), &(rTemp));
+		kcg_copy_struct__5715(&(*((struct__5715*)pValue)), &(rTemp));
 	return nResult;
 }
 
-int compare_struct__5699_type(int* pResult, const char* toCompare, const void* pValue) {
+int compare_struct__5715_type(int* pResult, const char* toCompare, const void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5699_StructSimValue((struct__5699*)pValue, values);
+	Fill_struct__5715_StructSimValue((struct__5715*)pValue, values);
 	return pSimulator->m_pfnStructureComparison(pResult, toCompare, values, 2);
 }
 
 
-int is_struct__5699_allow_double_convertion() {
+int is_struct__5715_allow_double_convertion() {
 	return 0;
 }
 
 
-const char * get_struct__5699_signature() {
+const char * get_struct__5715_signature() {
 	static StructSimValue values[2];
-	Fill_struct__5699_StructSimValue(0, values);
+	Fill_struct__5715_StructSimValue(0, values);
 	return pSimulator->m_pfnStructureSignature(values, 2);
 }
 
-FilterUtils get_struct__5699_filter_utils(const char* strFilter, void* pValue) {
+FilterUtils get_struct__5715_filter_utils(const char* strFilter, void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5699_StructSimValue((struct__5699*)pValue, values);
+	Fill_struct__5715_StructSimValue((struct__5715*)pValue, values);
 	return pSimulator->m_pfnGetStructureFilterUtils(values, 2, strFilter);
 }
 
-const char * struct__5699_filter_values[2] = {"idx", "items"};
-int check_struct__5699_string(const char* strValue) {
-	static struct__5699 rTemp;
-	return string_to_struct__5699(strValue, &rTemp);
+const char * struct__5715_filter_values[2] = {"idx", "items"};
+int check_struct__5715_string(const char* strValue) {
+	static struct__5715 rTemp;
+	return string_to_struct__5715(strValue, &rTemp);
 }
 
 
@@ -669,9 +669,9 @@ int check_array_real_4_string(const char* strValue) {
 
 
 /****************************************************************
- ** struct__5707
+ ** struct__5723
  ****************************************************************/
-static void Fill_struct__5707_StructSimValue(struct__5707 * pStruct, StructSimValue * pValues) {
+static void Fill_struct__5723_StructSimValue(struct__5723 * pStruct, StructSimValue * pValues) {
 	/*idx label.*/
 	pValues[0].m_pPtr = pStruct != 0 ? &(pStruct->idx) : 0;
 	pValues[0].m_pTypeUtils = &_SCSIM_kcg_int_Utils;
@@ -682,52 +682,52 @@ static void Fill_struct__5707_StructSimValue(struct__5707 * pStruct, StructSimVa
 	pValues[1].m_pszName = "items";
 }
 
-const char * struct__5707_to_string(const void* pValue) {
+const char * struct__5723_to_string(const void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5707_StructSimValue(((struct__5707*)pValue), values);
+	Fill_struct__5723_StructSimValue(((struct__5723*)pValue), values);
 	return pSimulator->m_pfnStructureToString(values, 2);
 }
 
-int string_to_struct__5707(const char* strValue, void* pValue) {
-	static struct__5707 rTemp;
+int string_to_struct__5723(const char* strValue, void* pValue) {
+	static struct__5723 rTemp;
 	int nResult = 0;
 	static StructSimValue values[2];
-	kcg_copy_struct__5707(&(rTemp), &(*((struct__5707*)pValue)));
-	Fill_struct__5707_StructSimValue(&rTemp, values);
+	kcg_copy_struct__5723(&(rTemp), &(*((struct__5723*)pValue)));
+	Fill_struct__5723_StructSimValue(&rTemp, values);
 	nResult = pSimulator->m_pfnStructureFromString(strValue, values, 2);
 	if (nResult == 1)
-		kcg_copy_struct__5707(&(*((struct__5707*)pValue)), &(rTemp));
+		kcg_copy_struct__5723(&(*((struct__5723*)pValue)), &(rTemp));
 	return nResult;
 }
 
-int compare_struct__5707_type(int* pResult, const char* toCompare, const void* pValue) {
+int compare_struct__5723_type(int* pResult, const char* toCompare, const void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5707_StructSimValue((struct__5707*)pValue, values);
+	Fill_struct__5723_StructSimValue((struct__5723*)pValue, values);
 	return pSimulator->m_pfnStructureComparison(pResult, toCompare, values, 2);
 }
 
 
-int is_struct__5707_allow_double_convertion() {
+int is_struct__5723_allow_double_convertion() {
 	return 0;
 }
 
 
-const char * get_struct__5707_signature() {
+const char * get_struct__5723_signature() {
 	static StructSimValue values[2];
-	Fill_struct__5707_StructSimValue(0, values);
+	Fill_struct__5723_StructSimValue(0, values);
 	return pSimulator->m_pfnStructureSignature(values, 2);
 }
 
-FilterUtils get_struct__5707_filter_utils(const char* strFilter, void* pValue) {
+FilterUtils get_struct__5723_filter_utils(const char* strFilter, void* pValue) {
 	static StructSimValue values[2];
-	Fill_struct__5707_StructSimValue((struct__5707*)pValue, values);
+	Fill_struct__5723_StructSimValue((struct__5723*)pValue, values);
 	return pSimulator->m_pfnGetStructureFilterUtils(values, 2, strFilter);
 }
 
-const char * struct__5707_filter_values[2] = {"idx", "items"};
-int check_struct__5707_string(const char* strValue) {
-	static struct__5707 rTemp;
-	return string_to_struct__5707(strValue, &rTemp);
+const char * struct__5723_filter_values[2] = {"idx", "items"};
+int check_struct__5723_string(const char* strValue) {
+	static struct__5723 rTemp;
+	return string_to_struct__5723(strValue, &rTemp);
 }
 
 
@@ -826,7 +826,7 @@ struct SimTypeVTable* pSimLutIndex_lutVTable;
 const char * LutIndex_lut_to_string(const void* pValue) {
 	if (pSimLutIndex_lutVTable != 0 && pSimLutIndex_lutVTable->m_pfnGetConvInfo(SptString, SptNone) == 1)
 		return *(char**)pSimLutIndex_lutVTable->m_pfnToType(SptString, pValue);
-	return struct__5691_to_string(pValue);
+	return struct__5707_to_string(pValue);
 }
 
 int string_to_LutIndex_lut(const char* strValue, void* pValue) {
@@ -834,10 +834,10 @@ int string_to_LutIndex_lut(const char* strValue, void* pValue) {
 		static LutIndex_lut rTemp;
 		int nResult = pSimLutIndex_lutVTable->m_pfnFromType(SptString, (const void*)&strValue, &rTemp);
 		if (nResult == 1)
-			kcg_copy_struct__5691(&(*((LutIndex_lut*)pValue)), &(rTemp));
+			kcg_copy_struct__5707(&(*((LutIndex_lut*)pValue)), &(rTemp));
 		return nResult;
 	}
-	return string_to_struct__5691(strValue, pValue);
+	return string_to_struct__5707(strValue, pValue);
 }
 
 int is_LutIndex_lut_allow_double_convertion() {
@@ -849,7 +849,7 @@ int is_LutIndex_lut_allow_double_convertion() {
 		nConvertionAllowed |= pSimLutIndex_lutVTable->m_pfnGetConvInfo(SptNone, SptFloat) == 1;
 		return nConvertionAllowed;
 	}
-	return is_struct__5691_allow_double_convertion();
+	return is_struct__5707_allow_double_convertion();
 }
 
 int LutIndex_lut_to_double(double * nValue, const void* pValue) {
@@ -866,8 +866,8 @@ int LutIndex_lut_to_double(double * nValue, const void* pValue) {
 			return 0;
 		return 1;
 	}
-	if (_SCSIM_struct__5691_Utils.m_pfnTypeToDouble != 0)
-		return _SCSIM_struct__5691_Utils.m_pfnTypeToDouble(nValue, pValue);
+	if (_SCSIM_struct__5707_Utils.m_pfnTypeToDouble != 0)
+		return _SCSIM_struct__5707_Utils.m_pfnTypeToDouble(nValue, pValue);
 	return 0;
 }
 

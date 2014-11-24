@@ -1,6 +1,6 @@
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** Command: s2c613 -config C:/ITA/TS02_2Sprint/UserApplication/KCG\kcg_s2c_config.txt
-** Generation date: 2014-11-23T21:47:49
+** Generation date: 2014-11-23T22:42:18
 *************************************************************$ */
 
 #include "kcg_consts.h"
@@ -375,37 +375,10 @@ void OperationalScenario(
   else {
     last_Telemetry = outC->rem_Telemetry;
   }
-  switch (outC->OpPhases_state_act) {
-    case SSM_st_Ground_OpPhases :
-      outC->_L54_OpPhases_Ground = 0.0;
-      _63_TorqueTgLocal = outC->_L54_OpPhases_Ground;
-      outC->TorqueTgLocal = _63_TorqueTgLocal;
-      break;
-    case SSM_st_Launch_OpPhases :
-      outC->_L39_OpPhases_Launch = 0.0;
-      _42_TorqueTgLocal = outC->_L39_OpPhases_Launch;
-      outC->TorqueTgLocal = _42_TorqueTgLocal;
-      break;
-    case SSM_st_AttitudeAcquisition_OpPhases :
-      if (outC->init2) {
-        outC->_L306_OpPhases_AttitudeAcquisition = 0.0;
-      }
-      else {
-        outC->_L306_OpPhases_AttitudeAcquisition =
-          outC->_L130_OpPhases_AttitudeAcquisition;
-      }
-      _21_TorqueTgLocal = outC->_L306_OpPhases_AttitudeAcquisition;
-      outC->TorqueTgLocal = _21_TorqueTgLocal;
-      break;
-    case SSM_st_NormalPhase_OpPhases :
-      outC->_L44_OpPhases_NormalPhase = 0.0;
-      TorqueTgLocal = outC->_L44_OpPhases_NormalPhase;
-      outC->TorqueTgLocal = TorqueTgLocal;
-      break;
-    
-  }
-  outC->_L54 = outC->TorqueTgLocal;
-  outC->TorqueTg = outC->_L54;
+  outC->_L58 = 0.0;
+  outC->SolarReference = outC->_L58;
+  outC->_L61 = outC->SolarReference;
+  outC->SAT_SolarRef = outC->_L61;
   switch (outC->OpPhases_state_act) {
     case SSM_st_Ground_OpPhases :
       outC->_L53_OpPhases_Ground = 0.0;
@@ -471,6 +444,41 @@ void OperationalScenario(
       break;
     
   }
+  outC->_L59 = outC->TorqueRdLocal;
+  outC->SAT_RadialAc = outC->_L59;
+  outC->_L57 = 9.0;
+  outC->RadialAccelerometer = outC->_L57;
+  switch (outC->OpPhases_state_act) {
+    case SSM_st_Ground_OpPhases :
+      outC->_L54_OpPhases_Ground = 0.0;
+      _63_TorqueTgLocal = outC->_L54_OpPhases_Ground;
+      outC->TorqueTgLocal = _63_TorqueTgLocal;
+      break;
+    case SSM_st_Launch_OpPhases :
+      outC->_L39_OpPhases_Launch = 0.0;
+      _42_TorqueTgLocal = outC->_L39_OpPhases_Launch;
+      outC->TorqueTgLocal = _42_TorqueTgLocal;
+      break;
+    case SSM_st_AttitudeAcquisition_OpPhases :
+      if (outC->init2) {
+        outC->_L306_OpPhases_AttitudeAcquisition = 0.0;
+      }
+      else {
+        outC->_L306_OpPhases_AttitudeAcquisition =
+          outC->_L130_OpPhases_AttitudeAcquisition;
+      }
+      _21_TorqueTgLocal = outC->_L306_OpPhases_AttitudeAcquisition;
+      outC->TorqueTgLocal = _21_TorqueTgLocal;
+      break;
+    case SSM_st_NormalPhase_OpPhases :
+      outC->_L44_OpPhases_NormalPhase = 0.0;
+      TorqueTgLocal = outC->_L44_OpPhases_NormalPhase;
+      outC->TorqueTgLocal = TorqueTgLocal;
+      break;
+    
+  }
+  outC->_L54 = outC->TorqueTgLocal;
+  outC->TorqueTg = outC->_L54;
   outC->_L53 = outC->TorqueRdLocal;
   outC->TorqueRd = outC->_L53;
   switch (outC->OpPhases_state_act) {
@@ -1454,6 +1462,6 @@ void OperationalScenario(
 
 /* $*************** KCG Version 6.1.3 (build i6) ****************
 ** OperationalScenario.c
-** Generation date: 2014-11-23T21:47:49
+** Generation date: 2014-11-23T22:42:18
 *************************************************************$ */
 

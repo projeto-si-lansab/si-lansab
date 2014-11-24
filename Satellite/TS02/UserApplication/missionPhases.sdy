@@ -158,6 +158,11 @@
 								<Emit/>
 							</A661Data>
 						</A661_CMD_SET_PARAMETER>
+						<A661_CMD_SET_PARAMETER name="Emit" type="enum {A661_FALSE, A661_TRUE}" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="44" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="RefSolar_EditBoxNumeric">
+							<A661Data>
+								<Emit/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
 					</inputs>
 				</MappingItem>
 				<MappingItem>
@@ -370,6 +375,18 @@
 					</output>
 					<inputs>
 						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="48" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="TqTg_EditBoxNumeric">
+							<A661Data>
+								<DataField value="Value"/>
+							</A661Data>
+						</A661_CMD_SET_PARAMETER>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="SAT_SolarRef" type="real" oid="!ed/2c85/1A46/2688/54727d222020" instancepath="OperationalScenario/"/>
+					</output>
+					<inputs>
+						<A661_CMD_SET_PARAMETER name="Value" type="float" pathname="..\DefinitionFile\SatelliteControlCommunication_DF.sgfx" layer="DF_TS02" LayerIdent="1" WidgetIdent="44" ParameterIdent="A661_VALUE" WidgetType="EditBoxNumeric" WidgetName="RefSolar_EditBoxNumeric">
 							<A661Data>
 								<DataField value="Value"/>
 							</A661Data>
